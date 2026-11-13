@@ -1,0 +1,317 @@
+{
+  "step": 116,
+  "package_id": "H07",
+  "archive_sha256": "a48773b6b044dd2b4f01ddeb62b8ffbacd84f04dba7effd1644f102fb537e159",
+  "python_files_total": 29,
+  "original_syntax_pass": 27,
+  "recovered_syntax_pass": 29,
+  "text_replacements": 4,
+  "records": [
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/create_distributions.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "ccdc891618f3554e8c83ccfdf9dbe059cceaa15c7bb7f7954959f67cedb2d9e6",
+      "recovered_sha256": "ccdc891618f3554e8c83ccfdf9dbe059cceaa15c7bb7f7954959f67cedb2d9e6"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/docs/source/conf.py",
+      "original_status": "FAIL",
+      "original_error": {
+        "message": "invalid syntax",
+        "line": 175
+      },
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 2,
+      "original_sha256": "a0a0c92dedb1634535051a98a348c335011ebead65da5d33619ad64487131552",
+      "recovered_sha256": "f9a203f82df1f4cc5448a07426e2147c153ec28a6f265a68e4e1233198bfc275"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/example_simulation/run_example.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "7ce1030dbe7f1e05d06de4653d9563a330a4f13a52d16ccd4e84aa1036a39818",
+      "recovered_sha256": "7ce1030dbe7f1e05d06de4653d9563a330a4f13a52d16ccd4e84aa1036a39818"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/__init__.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "c767c6ce480c43933f7e3c919af5d288ea98cd872ec363b7db8782d728c5744c",
+      "recovered_sha256": "c767c6ce480c43933f7e3c919af5d288ea98cd872ec363b7db8782d728c5744c"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/__version.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "5f661bbb733217ec0403b62e86f76caaa1e9b5b2daa41742f7c944741890abf2",
+      "recovered_sha256": "5f661bbb733217ec0403b62e86f76caaa1e9b5b2daa41742f7c944741890abf2"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/arcfltgrid.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "65f232e865d97f01d6ef5a285bfd70f6619b9b6aec90c8239238cefd7080d0af",
+      "recovered_sha256": "65f232e865d97f01d6ef5a285bfd70f6619b9b6aec90c8239238cefd7080d0af"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/evap.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "36e4c50777a8b91462325cb75824f3c03851bac57327dbab6b25130e7d58c789",
+      "recovered_sha256": "36e4c50777a8b91462325cb75824f3c03851bac57327dbab6b25130e7d58c789"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/fluxes.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "225d913f2531c3f02e093163930da96d86fe6c1ed8cc135ced6fff901bfb5023",
+      "recovered_sha256": "225d913f2531c3f02e093163930da96d86fe6c1ed8cc135ced6fff901bfb5023"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/infiltration.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "7e5c714801bf4f53490e9ae40676db9c989b07fc232b61f624d0782169d041ee",
+      "recovered_sha256": "7e5c714801bf4f53490e9ae40676db9c989b07fc232b61f624d0782169d041ee"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/interpolation.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "0d4ddfdea75f2981665b0a0bb800b897a88a8f0fb48968d50dfcc07346db1113",
+      "recovered_sha256": "0d4ddfdea75f2981665b0a0bb800b897a88a8f0fb48968d50dfcc07346db1113"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/model.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "5c9f3e164971fb6781cbdb4ab4f2f8cf0940f89048e42a2e6470c8d129c3c2ff",
+      "recovered_sha256": "5c9f3e164971fb6781cbdb4ab4f2f8cf0940f89048e42a2e6470c8d129c3c2ff"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/ode.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "b65f1b12bc79b5821205daca7abcc28090d38837c57cca982fcbf8f2f8ed843d",
+      "recovered_sha256": "b65f1b12bc79b5821205daca7abcc28090d38837c57cca982fcbf8f2f8ed843d"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/GIS_treatment.py",
+      "original_status": "FAIL",
+      "original_error": {
+        "message": "invalid syntax. Perhaps you forgot a comma?",
+        "line": 282
+      },
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 2,
+      "original_sha256": "52d978a0ecfc318ff0eaa487d81e8700ab5fb23ab59db3505ba31e580246bdb9",
+      "recovered_sha256": "6a7dd8cdfaab94fe4f132a9085d99f668252a9e3b09f62358bb78c44264b1bcf"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/__init__.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "80e97b186be1a6c42321b91e58275c4512af0c22ce4e671d44c6933d6504265d",
+      "recovered_sha256": "80e97b186be1a6c42321b91e58275c4512af0c22ce4e671d44c6933d6504265d"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/common.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "fb3f388b5a4633034d8145058a4c5c065e29025b2f73c6d6bc5450bab6c40d58",
+      "recovered_sha256": "fb3f388b5a4633034d8145058a4c5c065e29025b2f73c6d6bc5450bab6c40d58"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/create_file.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "457d59730955082b94169af9d9b562106486f64fa5067544c38b570ab0ed218c",
+      "recovered_sha256": "457d59730955082b94169af9d9b562106486f64fa5067544c38b570ab0ed218c"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/map_param.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "6f2c3d3a2d4da51a2cc42bf591a183db452d319d16ea18f97377ecee86c812e7",
+      "recovered_sha256": "6f2c3d3a2d4da51a2cc42bf591a183db452d319d16ea18f97377ecee86c812e7"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/modify_file.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "bb0ade80c6495e62b84863bddc02ccd54729d891733a8bd370f2bb1f14fd8885",
+      "recovered_sha256": "bb0ade80c6495e62b84863bddc02ccd54729d891733a8bd370f2bb1f14fd8885"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/pretreatment.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "065581ce195fdfa0b73940aa067383e1c500cda36013e74dbd352c0ab5256dcd",
+      "recovered_sha256": "065581ce195fdfa0b73940aa067383e1c500cda36013e74dbd352c0ab5256dcd"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/results_analysis/__init__.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "2088229670e06d5134876d8fde57005312a67cba4dceb09d3b3c19583cf1402a",
+      "recovered_sha256": "2088229670e06d5134876d8fde57005312a67cba4dceb09d3b3c19583cf1402a"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/results_analysis/plot_Qsim_Qobs_Rain.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "1c02041715bdec0e692f28b1293e33678375161ec0ff3dc7c665bb3c09219360",
+      "recovered_sha256": "1c02041715bdec0e692f28b1293e33678375161ec0ff3dc7c665bb3c09219360"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/results_analysis/plot_soil_moisture_maps.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "d59cfdfb24db5abce5615d25ea280bb0a8a6818d6254f6395fbcea20c8e79221",
+      "recovered_sha256": "d59cfdfb24db5abce5615d25ea280bb0a8a6818d6254f6395fbcea20c8e79221"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/results_analysis/sim_result_tools.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "1559d7ca92a0bb81f7f7b5c212653f649350d0f45d1fd04b26d1de2f07f8f95d",
+      "recovered_sha256": "1559d7ca92a0bb81f7f7b5c212653f649350d0f45d1fd04b26d1de2f07f8f95d"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_continuity/continuity_tests.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "617f4753bad82db09d116e3bd5ddc18edfcf67d86af58a6f3a6d1b89050e15c5",
+      "recovered_sha256": "617f4753bad82db09d116e3bd5ddc18edfcf67d86af58a6f3a6d1b89050e15c5"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_infiltration.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "0bda57069eebab077d0138f6c4dad4bbdc18d6a8a31dfc76e566b60f7ef69d42",
+      "recovered_sha256": "0bda57069eebab077d0138f6c4dad4bbdc18d6a8a31dfc76e566b60f7ef69d42"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_parameter_utils.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "d92a83c3433da5404f8fbf192324d36aa588130623de2a432b110381c0d3ef40",
+      "recovered_sha256": "d92a83c3433da5404f8fbf192324d36aa588130623de2a432b110381c0d3ef40"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/utils.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "e832605cc0e2e93174d5a0f78b6a9664612652b8a153d44b09907b9d87e0f96b",
+      "recovered_sha256": "e832605cc0e2e93174d5a0f78b6a9664612652b8a153d44b09907b9d87e0f96b"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/scripts/extract-tertiary.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "fed3e91eb45b177193952c94d743675b0df5a870fd0d6eeb4dfe8b473c067f7d",
+      "recovered_sha256": "fed3e91eb45b177193952c94d743675b0df5a870fd0d6eeb4dfe8b473c067f7d"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/setup.py",
+      "original_status": "PASS",
+      "original_error": null,
+      "recovered_status": "PASS",
+      "recovered_error": null,
+      "replacements_applied": 0,
+      "original_sha256": "308938b35d2d3aecad0c14b4c0f761206fb3c49afa0c713eeb2b629f3ac1cf4a",
+      "recovered_sha256": "308938b35d2d3aecad0c14b4c0f761206fb3c49afa0c713eeb2b629f3ac1cf4a"
+    }
+  ],
+  "generated_at_utc": "2026-11-11T01:24:18.334737+00:00",
+  "original_archive_modified": false,
+  "recovered_source_written": false,
+  "runtime_execution_attempted": false,
+  "limitations": [
+    "Parser success does not demonstrate runtime compatibility.",
+    "No hydrological simulation was executed.",
+    "No scientific results were reproduced.",
+    "Recovery changes were evaluated only in memory."
+  ]
+}

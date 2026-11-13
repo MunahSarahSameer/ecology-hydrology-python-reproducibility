@@ -1,0 +1,16 @@
+[
+  {
+    "file": "permanova_results.csv",
+    "same_shape": true,
+    "same_columns": true,
+    "numerically_equivalent": true,
+    "differences": []
+  },
+  {
+    "file": "perturbation_design_table.csv",
+    "same_shape": true,
+    "same_columns": true,
+    "numerically_equivalent": true,
+    "differences": []
+  }
+]

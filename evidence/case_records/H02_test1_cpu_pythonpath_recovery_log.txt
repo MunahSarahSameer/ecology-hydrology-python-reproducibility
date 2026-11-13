@@ -1,0 +1,32 @@
+H02 CPU TEST: PYTHONPATH RECOVERY
+Python: C:\Users\REDACTED_USER\miniconda3\envs\code_decay\python.exe
+Project: C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265
+Runner SHA256: e53bb491d9d723051bf248c25ef2142eac354547bdf213c9f3b9806438791d98
+PYTHONPATH: C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265
+Exit code: 1
+Elapsed seconds: 12.77
+Forward-pass success: False
+
+STDOUT:
+PyTorch version: 2.15.0+cpu
+Device: cpu
+
+
+STDERR:
+C:\Users\REDACTED_USER\miniconda3\envs\code_decay\Lib\site-packages\timm\models\layers\__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Traceback (most recent call last):
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\h02_cpu_test.py", line 39, in <module>
+    latent = encoder(x)
+             ^^^^^^^^^^
+  File "C:\Users\REDACTED_USER\miniconda3\envs\code_decay\Lib\site-packages\torch\nn\modules\module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\REDACTED_USER\miniconda3\envs\code_decay\Lib\site-packages\torch\nn\modules\module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265\floodsformer\models\VPTR_modules.py", line 31, in forward
+    N, T, _, _, _ = x.shape
+    ^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 5, got 4)
+

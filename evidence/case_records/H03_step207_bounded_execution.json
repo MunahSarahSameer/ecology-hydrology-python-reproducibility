@@ -1,0 +1,40 @@
+{
+  "candidate": "H03",
+  "step": 207,
+  "test_type": "bounded_original_model_component",
+  "full_original_script_executed": false,
+  "original_archive_modified": false,
+  "generated_at_utc": "2026-11-11T23:01:21.978956+00:00",
+  "source_sha256": "8a9e38d303568e3a2b7624c9556cba407527e98f8af2274d9e3ed15aa4a74c51",
+  "dataset_sha256": "246982565ed0be6e8735c56e2dcad5816d19866236670c8add04eeff2670268b",
+  "interventions": [
+    "Corrected dataset reference by loading archived CSV",
+    "Limited training to 2000 observations",
+    "Limited testing to 500 observations",
+    "Changed n_jobs from -1 to 1",
+    "Skipped cross-validation and hyperparameter search"
+  ],
+  "return_code": 0,
+  "timed_out": false,
+  "stdout": "{\"training_rows\": 2000, \"testing_rows\": 500, \"features\": [\"Rainfall\", \"Falda_prev\", \"Storage_prev_6\"], \"target\": \"DS_200H\", \"n_estimators\": 25, \"n_jobs\": 1, \"elapsed_seconds\": 0.1862390000023879, \"rmse\": 0.15126323963665578, \"mae\": 0.08061733920992001, \"r2\": 0.2136199793970024, \"predictions_finite\": true, \"prediction_count\": 500}\n",
+  "stderr": "",
+  "metrics": {
+    "training_rows": 2000,
+    "testing_rows": 500,
+    "features": [
+      "Rainfall",
+      "Falda_prev",
+      "Storage_prev_6"
+    ],
+    "target": "DS_200H",
+    "n_estimators": 25,
+    "n_jobs": 1,
+    "elapsed_seconds": 0.1862390000023879,
+    "rmse": 0.15126323963665578,
+    "mae": 0.08061733920992001,
+    "r2": 0.2136199793970024,
+    "predictions_finite": true,
+    "prediction_count": 500
+  },
+  "outcome": "PASS_LIMITED"
+}

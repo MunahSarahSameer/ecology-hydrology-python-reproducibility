@@ -1,0 +1,25 @@
+H02 CPU TEST: CORRECTED 5D INPUT
+Python: C:\Users\REDACTED_USER\miniconda3\envs\code_decay\python.exe
+Original test runner SHA256: e53bb491d9d723051bf248c25ef2142eac354547bdf213c9f3b9806438791d98
+Updated test runner SHA256: d0bf6db9596656d600bad7a88c7223aec34fcdfc3ed286e724318fc3a39d4f2a
+Input shape: (1, 2, 1, 64, 64)
+Exit code: 0
+Elapsed seconds: 8.62
+Success: True
+
+STDOUT:
+PyTorch version: 2.15.0+cpu
+Device: cpu
+Input shape: (1, 2, 1, 64, 64)
+Latent shape: (1, 2, 32, 16, 16)
+Output shape: (1, 2, 1, 64, 64)
+Forward-pass seconds: 0.0411
+Output finite: True
+Output mean: -0.0006566080264747143
+H02_CPU_FORWARD_PASS_SUCCESS
+
+
+STDERR:
+C:\Users\REDACTED_USER\miniconda3\envs\code_decay\Lib\site-packages\timm\models\layers\__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+

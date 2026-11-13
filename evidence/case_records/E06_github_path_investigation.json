@@ -1,0 +1,221 @@
+{
+  "step": 179,
+  "record": {
+    "candidate": "E06",
+    "repository": "https://github.com/GIS-ZhangZhen/ContinuousGlobalMangroveDynamics",
+    "default_branch": "main",
+    "head_commit_sha": "cdf69eb782a572000d12509aa3a5367ca2efe41e",
+    "repository_notebooks": [
+      "Case studies of tropical cyclone-induced mangrove degradation.ipynb",
+      "Decadal dynamics of global mangrove disturbance rates (1984-2023).ipynb",
+      "Figure 1.ipynb",
+      "Figure 2.ipynb",
+      "Figure 3.ipynb",
+      "Figure 4.ipynb",
+      "Figure 5.ipynb",
+      "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+      "Global trends in mangrove degradation and loss rates (1980s-2023).ipynb",
+      "Local examples of mangrove deforestation events after 2020.ipynb",
+      "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+      "Ten biogeographic regions and classification units.ipynb"
+    ],
+    "local_notebooks": [
+      "Code_Figures/FigS10_MangroveDisturbanceRates.ipynb",
+      "Code_Figures/FigS11_DisturbanceTrends40Years.ipynb",
+      "Code_Figures/FigS12_RecentDisturbanceRates.ipynb",
+      "Code_Figures/FigS13_RecentLoss.ipynb",
+      "Code_Figures/FigS14_RelativeChangeClosedMangrove.ipynb",
+      "Code_Figures/FigS16_ComparisonGMW.ipynb",
+      "Code_Figures/FigS18_LandsatQuantile.ipynb",
+      "Code_Figures/FigS19-S20_CompositeYears.ipynb",
+      "Code_Figures/FigS21_PixelCount1980s.ipynb",
+      "Code_Figures/FigS23_ThinCloudmask.ipynb",
+      "Code_Figures/FigS24-25_FCCvalidation.ipynb",
+      "Code_Figures/FigS26-29_TrainingSamples.ipynb",
+      "Code_Figures/FigS2_4CanopyTypes.ipynb",
+      "Code_Figures/FigS30_ValidRatio.ipynb",
+      "Code_Figures/FigS4_SpatialUnits.ipynb",
+      "Code_Figures/FigS5_Top10TimeSeries.ipynb",
+      "Code_Figures/FigS7_Myanmar.ipynb",
+      "Code_Figures/FigS8_SchematicFigure.ipynb",
+      "Code_Figures/FigS9_CycloneExamples.ipynb",
+      "Code_Figures/Figure 1.ipynb",
+      "Code_Figures/Figure 2.ipynb",
+      "Code_Figures/Figure 3.ipynb",
+      "Code_Figures/Figure 4.ipynb",
+      "Code_Figures/Figure 5.ipynb",
+      "Code_Figures/SummaryFig.ipynb"
+    ],
+    "filename_matches": [
+      {
+        "local_path": "Code_Figures/FigS10_MangroveDisturbanceRates.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS11_DisturbanceTrends40Years.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS12_RecentDisturbanceRates.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS13_RecentLoss.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS14_RelativeChangeClosedMangrove.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS16_ComparisonGMW.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS18_LandsatQuantile.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS19-S20_CompositeYears.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS21_PixelCount1980s.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS23_ThinCloudmask.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS24-25_FCCvalidation.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS26-29_TrainingSamples.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS2_4CanopyTypes.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS30_ValidRatio.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS4_SpatialUnits.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS5_Top10TimeSeries.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS7_Myanmar.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS8_SchematicFigure.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/FigS9_CycloneExamples.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/Figure 1.ipynb",
+        "remote_paths": [
+          "Figure 1.ipynb"
+        ],
+        "filename_found": true,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/Figure 2.ipynb",
+        "remote_paths": [
+          "Figure 2.ipynb"
+        ],
+        "filename_found": true,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/Figure 3.ipynb",
+        "remote_paths": [
+          "Figure 3.ipynb"
+        ],
+        "filename_found": true,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/Figure 4.ipynb",
+        "remote_paths": [
+          "Figure 4.ipynb"
+        ],
+        "filename_found": true,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/Figure 5.ipynb",
+        "remote_paths": [
+          "Figure 5.ipynb"
+        ],
+        "filename_found": true,
+        "content_verified": false
+      },
+      {
+        "local_path": "Code_Figures/SummaryFig.ipynb",
+        "remote_paths": [],
+        "filename_found": false,
+        "content_verified": false
+      }
+    ],
+    "errors": [],
+    "exact_archive_version_verified": false
+  },
+  "notes": [
+    "Repository tree inspected at a recorded commit SHA.",
+    "Filename matches do not establish content identity.",
+    "No archive publication date was inferred.",
+    "Original local ZIP and scientific code were not modified."
+  ],
+  "generated_at_utc": "2026-11-11T03:09:03.989130+00:00"
+}

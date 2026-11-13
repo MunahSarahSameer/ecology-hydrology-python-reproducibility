@@ -1,0 +1,187 @@
+{
+  "step": 134,
+  "package_id": "H08",
+  "experiment": "original_prms_test_repeatability",
+  "repeat_count": 5,
+  "random_seed": 2026,
+  "runs": [
+    {
+      "status": "COMPLETED",
+      "tests": [
+        {
+          "name": "test_empty_parameter_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_empty_control_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_build_parameter_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_build_control_record",
+          "status": "PASS"
+        }
+      ],
+      "supplementary_consistency": {
+        "values_equal": true,
+        "ndim": 1,
+        "datatype": 2,
+        "values": [
+          0.1,
+          0.2,
+          0.3
+        ]
+      },
+      "numpy": "2.4.6",
+      "return_code": 0
+    },
+    {
+      "status": "COMPLETED",
+      "tests": [
+        {
+          "name": "test_empty_parameter_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_empty_control_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_build_parameter_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_build_control_record",
+          "status": "PASS"
+        }
+      ],
+      "supplementary_consistency": {
+        "values_equal": true,
+        "ndim": 1,
+        "datatype": 2,
+        "values": [
+          0.1,
+          0.2,
+          0.3
+        ]
+      },
+      "numpy": "2.4.6",
+      "return_code": 0
+    },
+    {
+      "status": "COMPLETED",
+      "tests": [
+        {
+          "name": "test_empty_parameter_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_empty_control_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_build_parameter_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_build_control_record",
+          "status": "PASS"
+        }
+      ],
+      "supplementary_consistency": {
+        "values_equal": true,
+        "ndim": 1,
+        "datatype": 2,
+        "values": [
+          0.1,
+          0.2,
+          0.3
+        ]
+      },
+      "numpy": "2.4.6",
+      "return_code": 0
+    },
+    {
+      "status": "COMPLETED",
+      "tests": [
+        {
+          "name": "test_empty_parameter_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_empty_control_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_build_parameter_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_build_control_record",
+          "status": "PASS"
+        }
+      ],
+      "supplementary_consistency": {
+        "values_equal": true,
+        "ndim": 1,
+        "datatype": 2,
+        "values": [
+          0.1,
+          0.2,
+          0.3
+        ]
+      },
+      "numpy": "2.4.6",
+      "return_code": 0
+    },
+    {
+      "status": "COMPLETED",
+      "tests": [
+        {
+          "name": "test_empty_parameter_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_empty_control_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_build_parameter_record",
+          "status": "PASS"
+        },
+        {
+          "name": "test_build_control_record",
+          "status": "PASS"
+        }
+      ],
+      "supplementary_consistency": {
+        "values_equal": true,
+        "ndim": 1,
+        "datatype": 2,
+        "values": [
+          0.1,
+          0.2,
+          0.3
+        ]
+      },
+      "numpy": "2.4.6",
+      "return_code": 0
+    }
+  ],
+  "all_original_tests_passed": true,
+  "supplementary_results_identical": true,
+  "archive_sha256": "ebbc960c11470056493b1c82ae461f266f333240e1ec6dcc4c85ba9e0f10568b",
+  "original_archive_modified": false,
+  "original_test_source_modified": false,
+  "scientific_source_modified": false,
+  "limitations": [
+    "Package initialisers were bypassed.",
+    "Supplementary numerical checks are not original tests.",
+    "Only PRMS record functionality was assessed.",
+    "Full model execution and publication reproduction were not assessed."
+  ],
+  "generated_at_utc": "2026-11-11T02:01:59.757312+00:00"
+}

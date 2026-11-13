@@ -1,0 +1,87 @@
+{
+  "step": 142,
+  "package_id": "H09",
+  "package_name": "swatpy",
+  "version": "v0.2",
+  "python_version": "3.11.18",
+  "archive_sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+  "dependencies": [
+    {
+      "module": "numpy",
+      "distribution": "numpy",
+      "origin": "requirements.txt",
+      "version": "2.4.6",
+      "discoverable": true,
+      "status": "DISCOVERABLE",
+      "probe_error": null
+    },
+    {
+      "module": "pandas",
+      "distribution": "pandas",
+      "origin": "requirements.txt",
+      "version": "3.1.0",
+      "discoverable": true,
+      "status": "DISCOVERABLE",
+      "probe_error": null
+    },
+    {
+      "module": "spotpy",
+      "distribution": "spotpy",
+      "origin": "requirements.txt",
+      "version": null,
+      "discoverable": false,
+      "status": "NOT_DISCOVERABLE",
+      "probe_error": null
+    },
+    {
+      "module": "scipy",
+      "distribution": "scipy",
+      "origin": "requirements.txt",
+      "version": "1.17.1",
+      "discoverable": true,
+      "status": "DISCOVERABLE",
+      "probe_error": null
+    },
+    {
+      "module": "mpi4py",
+      "distribution": "mpi4py",
+      "origin": "source imports",
+      "version": null,
+      "discoverable": false,
+      "status": "NOT_DISCOVERABLE",
+      "probe_error": null
+    },
+    {
+      "module": "chardet",
+      "distribution": "chardet",
+      "origin": "source imports",
+      "version": null,
+      "discoverable": false,
+      "status": "NOT_DISCOVERABLE",
+      "probe_error": null
+    },
+    {
+      "module": "setuptools",
+      "distribution": "setuptools",
+      "origin": "setup.py",
+      "version": "84.2.1",
+      "discoverable": true,
+      "status": "DISCOVERABLE",
+      "probe_error": null
+    }
+  ],
+  "dependencies_checked": 7,
+  "discoverable": 4,
+  "not_discoverable": 3,
+  "dependency_imports_executed": false,
+  "dependencies_installed": false,
+  "original_archive_modified": false,
+  "limitations": [
+    "Module discovery does not establish successful import.",
+    "Installed package versions may be incompatible.",
+    "The list covers selected declared and directly imported dependencies.",
+    "External SWAT2012 executables were not checked.",
+    "The archived swatpy package itself was not imported."
+  ],
+  "generated_at_utc": "2026-11-11T02:15:05.297404+00:00"
+}

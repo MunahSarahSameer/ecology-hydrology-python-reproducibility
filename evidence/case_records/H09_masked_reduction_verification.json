@@ -1,0 +1,68 @@
+{
+  "step": 149,
+  "package_id": "H09",
+  "version": "v0.2",
+  "archive_sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+  "source_member": "allixender-swatpy-0d47bfa/swatpy/ReadOut.py",
+  "numpy_version": "2.4.6",
+  "reduction_comparisons": {
+    "squared_errors": {
+      "python_sum": {
+        "type": "MaskedConstant",
+        "status": "MASKED",
+        "value": null
+      },
+      "numpy_sum": {
+        "type": "float64",
+        "status": "FINITE",
+        "value": 0.25
+      }
+    },
+    "nse_denominator": {
+      "python_sum": {
+        "type": "MaskedConstant",
+        "status": "MASKED",
+        "value": null
+      },
+      "numpy_sum": {
+        "type": "float64",
+        "status": "FINITE",
+        "value": 4.666666666666666
+      }
+    },
+    "agr_denominator": {
+      "python_sum": {
+        "type": "MaskedConstant",
+        "status": "MASKED",
+        "value": null
+      },
+      "numpy_sum": {
+        "type": "float64",
+        "status": "FINITE",
+        "value": 19.583333333333336
+      }
+    }
+  },
+  "independent_reference": {
+    "nash": 0.9464285714285714,
+    "agr": 0.9872340425531915
+  },
+  "diagnostic_results": {
+    "nash": 0.9464285714285714,
+    "agr": 0.9872340425531915
+  },
+  "reference_matches": {
+    "nash": true,
+    "agr": true
+  },
+  "original_method_sources": {
+    "nash": "def nash(self):\n        # f = open(os.path.join(self.working_dir, \"output.rch\"), \"r\")\n        # self.textOld = f.readlines()\n        # f.close()\n        \n        # outValues = self.readValues([self.output], [self.area])\n        # outValues = outValues[self.output][self.area]\n        # outValues = self.outValues[self.output][self.area]\n        sim = np.array([float(i) for i in self.outValues[self.daysSkip:]])\n        \n        return (1 - sum((self.obs_masked - sim) ** 2) / sum((self.obs_masked - self.obsMean) ** 2))",
+    "agr": "def agr(self):\n        # f = open(os.path.join(self.working_dir, \"output.rch\"), \"r\")\n        # self.textOld = f.readlines()\n        # f.close()\n        # self.areaSizes = self.readAreaSizes([self.area])\n        # outValues = self.readValues([self.output], [self.area])\n        # outValues = outValues[self.output][self.area]\n        sim = np.array([float(i) for i in self.outValues[self.daysSkip:]])\n\n        return (1 - sum((self.obs_masked - sim) ** 2) / sum((abs(sim - self.obsMean) + abs(self.obs_masked - self.obsMean)) ** 2))"
+  },
+  "conclusion": "In the tested NumPy environment, built-in sum propagates masked values while np.sum performs masked-aware reduction. Historical behaviour and age-related decay remain unverified.",
+  "original_archive_modified": false,
+  "historical_compatibility_tested": false,
+  "full_package_execution_verified": false,
+  "scientific_reproduction_verified": false,
+  "generated_at_utc": "2026-11-11T02:25:14.781034+00:00"
+}

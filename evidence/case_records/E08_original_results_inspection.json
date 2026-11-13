@@ -1,0 +1,48 @@
+{
+  "archive_id": "E08",
+  "test": "Original notebook reported-results inspection",
+  "notebook": "C:\\Users\\MUNAH\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\wsindy_for_dispersal.ipynb",
+  "findings": [
+    {
+      "cell_index": 29,
+      "type": "markdown",
+      "text": "Table of learned diffusion constants by population"
+    },
+    {
+      "cell_index": 33,
+      "type": "markdown",
+      "text": "Diffusion curves with violin plots"
+    },
+    {
+      "cell_index": 36,
+      "type": "markdown",
+      "text": "Comparing $x$ versus $y$ diffusion rates (empirical)"
+    },
+    {
+      "cell_index": 51,
+      "type": "saved_notebook_output",
+      "text": "HYPER-PARAMETERS\nm = [10, 10, 6]\np = [14, 14, 20]\ns = [1, 1, 1]\nNot rescaled.\n\nLIBRARY\nNum. query points = 309600\nNum. terms = 84\ncond(G) = 1.579e+04\n\nRESULTS\nPDE: u_{t} = + 8.61(u)_{xx} + 9.08(u)_{yy} - 5.55∇·(u∇V_{14}) - 7.21∇·(u∇V_{15}) + 0.23∇·(u∇V_{52})\nNonzero terms = 5\nRel. L2 error = 0.575\nR^2 = 0.669\nLambda = 8.685e-02\nLoss = 0.276\n"
+    },
+    {
+      "cell_index": 53,
+      "type": "saved_notebook_output",
+      "text": "Sparse diffusion constants:\nDx = 8.6\nDxy = 0.0\nDy = 9.1\nDx/Dy = 0.95\n"
+    },
+    {
+      "cell_index": 55,
+      "type": "saved_notebook_output",
+      "text": "LS soln R^2: 0.702\nLS diffusion constants:\nDx = 7.4\nDxy = 1.0\nDy = 8.4\nDx/Dy = 0.88\n"
+    },
+    {
+      "cell_index": 59,
+      "type": "markdown",
+      "text": "Standard errors for parameters \\begin{align*}\n\\hat{\\sigma}(w_j) = \\sqrt{\\hat{\\mathbf{S}}_{jj}},\n\\quad \\text{where} \\quad\n\\hat{\\mathbf{S}} = \\mathbf{G}^{\\dagger} \\, \\text{diag}\\big(r^2_1, \\dots, r^2_{\\kappa}\\big) \\big(\\mathbf{G}^{\\dagger}\\big)^T\n\\end{align*}"
+    },
+    {
+      "cell_index": 80,
+      "type": "markdown",
+      "text": "# Sensitivity analysis"
+    }
+  ],
+  "publication_results_compared": false
+}

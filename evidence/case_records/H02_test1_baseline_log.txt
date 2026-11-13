@@ -1,0 +1,21 @@
+H02 FLOODSFORMER ORIGINAL ENTRY-POINT TEST
+Archive SHA256: d2eb9e48371bc33d81a9342caa9a320abde455d311ce9964ea8a34bdcd7ffb24
+Script SHA256: 52d4024a8390170bb9d7a0a7aad8b36cf288f2a64145be53a83334b378a4ea0a
+Python: C:\Users\REDACTED_USER\miniconda3\envs\code_decay\python.exe
+Command: ['C:\\Users\\MUNAH\\miniconda3\\envs\\code_decay\\python.exe', 'C:\\Users\\MUNAH\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\H02\\test1\\source\\mpianforini-FloodSformer-3a06265\\run_test.py', '--help']
+Exit code: 1
+Elapsed seconds: 3.89
+
+STDOUT:
+
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265\run_test.py", line 6, in <module>
+    from floodsformer.utils.misc import launch_job
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265\floodsformer\utils\misc.py", line 11, in <module>
+    import floodsformer.utils.logg as logg
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265\floodsformer\utils\logg.py", line 13, in <module>
+    import simplejson
+ModuleNotFoundError: No module named 'simplejson'
+

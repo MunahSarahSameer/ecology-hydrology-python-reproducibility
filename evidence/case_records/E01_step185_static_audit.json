@@ -1,0 +1,327 @@
+{
+  "candidate": "E01",
+  "step": 185,
+  "archive": "repositories\\E01\\code.zip",
+  "archive_sha256": "5965a9254dfe5aba382f8c6b28508955edae407d1e94e3185c382c8654a4b439",
+  "requirements": "tqdm>=4.60.0\nPyYAML>=5.4.1\npyarrow>=11.0.0\nh5py>=3.7.0\n\nscikit-learn>=1.3.0\nstatsmodels>=0.14.1\njoblib==1.3.0\n\n# for results visualisation\njupyter>=1.0.0\njupyterlab>=3.5.0\nmatplotlib>=3.6.2\n\ngdal>=3.6.0\nrasterio>=1.2.3\nfiona>=1.8.21\nshapely>=1.8.5\n\n# --find-links https://download.pytorch.org/whl/torch_stable.html\n# torch==1.12.1+cu113\n# torchvision==0.13.1+cu113\ntimm>=0.4.12\ntensorboard>=2.10.1\n\n# # for Phylogenetic tree distance calculation\n# dendropy>=4.5.2\n\n# # for Microsoft Planetary Computer API\n# rioxarray>=0.12.2\n# pyproj>=3.4.0\n# pystac-client>=0.5.1\n# planetary-computer>=0.4.7\n# stackstac>=0.4.3\n# dask-gateway>=2022.10.0",
+  "readme_excerpt": "# DeepSDM\n\nSpecies Distribution Modeling (SDM) with deep learning. Work in progress, with many changes to come.\n\n## Installation\n\n### Yale HPC\n\n1. Load Conda module\n```bash\nmodule load miniconda\n```\n\n2. Create environment and install requirements\n\n```bash\nconda create -n deepSDM python=3.8 -y\nconda activate deepSDM\npip install -U -r requirements.txt\nexport PYTHONPATH=.\n```\n\n### Debian-based systems\n\n1. Install [Conda](http://conda.io/)\n\n2. Install dependencies\n\n```bash\nsudo add-apt-repository ppa:ubuntugis/ppa\nsudo apt update && sudo apt install -y gdal-bin\n```\n\n3. Create environment and install requirements\n\n```bash\nconda create -n deepSDM python=3.8 -y\nconda activate deepSDM\n\n# we install PyTorch + related libraries first to ensure proper compilation with CUDA support\nconda install pytorch torchvision pytorch-cuda=11.8 -c pytorch -c nvidia -y\nconda install gdal -c conda-forge -y\npip install -r requirements.txt\nexport PYTHONPATH=.\n```\n\n\n## Dataset creation\n\n### 1. Combine occurrence CSVs into single file\nThis also creates a file `species.csv`, with species name-to-ordinal mapping.\n```bash\npython deepSDM/data_preparation/consolidate_observations.py \\\n        --observations-folder /gpfs/gibbs/pi/jetz/data/species_datasets/NA_30x30/mammals/SpeciesCSVs \\\n        --destination data/taxa/mammals/observations.csv \\\n        --species-file data/taxa/mammals/species.csv \\\n        --min-num-observations 6;\n```\n\nArgument `--species-file` is optional, but can be provided with a path to a file containing species\nnames and optionally indices for subsetting. Argument `--min-num-observations` denotes the minimum\nnumber of observations per species required. If the actual number falls below this specified\nthreshold, the species is skipped.\n\n\n### 2. Create species domain maps\n\nWe calculate expected ranges of species as \"species domain maps\" as the spatial union of a buffered\nexpert-drawn map and buffered occurrence locations:\n```bash\npython deepSDM/data_preparation/create_species_domain_maps.py \\\n        --species-file data/taxa/mammals/species.csv \\\n        --observations-folder /gpfs/gibbs/pi/jetz/data/species_datasets/NA_30x30/mammals/SpeciesCSVs \\\n        --range-map-folder /gpfs/gibbs/pi/jetz/data/species_datasets/NA_30x30/mammals/Expert_Maps/shapes \\\n        --destination data/taxa/mammals/species_domains \\\n        --range-buffer 1.80 \\\n        --simplify-threshold 4096 \\\n        --simplify-tolerance 0.1\n```\n\nArguments:\n* `--range-buffer`: buffer size in map units (usually degrees) around occurrences. 1.80 very roughly\n  corresponds to 200 km.\n* `--simplify-threshold`: number of polygon vertices above which the domain map polygon will be\n  simplified pre-buffer calculation.\n* `--simplify-tolerance`: tolerance factor for polygon simplification (see\n  [documentation](https://shapely.readthedocs.io/en/stable/manual.html#object.simplify))\n\n\n### 3. Sample pseudo-absences\n\nHere we'll start using different seeds in randomisation runs. We first copy the combined\nobservations file to an experiment seed folder:\n```bash\nSEED=45687812\nBASE_FOLDER=data/experiments/seed_$SEED/import\nmkdir -p $BASE_FOLDER\n\ncp data/taxa/mammals/observations.csv $BASE_FOLDER/locations.csv\ncp deepSDM/configs/covariates/mammals.yaml $BASE_FOLDER/covariate_list.yaml\n```\n\nThen, we import existing pseudo-absences and append them to the locations file:\n```bash\npython deepSDM/data_preparation/import_absences.py \\\n        --species-file data/taxa/mammals/species.csv \\\n        --absence-files-folders /gpfs/gibbs/pi/jetz/sdms/mammals/v2.0.1/inputs/bg \\\n                                /gpfs/gibbs/pi/jetz/sdms/mammals/v2.0.2/inputs/bg \\\n        --destination $BASE_FOLDER/locations.csv \\\n        --unique 1\n```\n_Note:_ argument `--unique` ensures only one (the first encountered) absences file will be\nconsidered for the species.\n\nIf none exist, we can also create them ourselves instead:\n```bash\npython deepSDM/data_preparation/sample_pseudo_absences.py \\\n        --species-file data/taxa/mammals/species.csv \\\n        --observations-folder /gpfs/gibbs/pi/jetz/data/species_datasets/NA_30x30/mammals/SpeciesCSVs \\\n        --range-map-folder data/taxa/mammals/species_domains \\\n        --extent -179.99 -10.53 -42.68 87.11 \\\n        --presence-loc-treatment limit \\\n        --clip-layer data/raw/World_Continents_no_NA_lakes.geojson \\\n        --clip-buffer -0.2 \\\n        --destination $BASE_FOLDER/locations.csv \\\n        --seed $SEED \\\n        --min-num-samples 500 \\\n        --max-num-tries 12;\n```\nThis script samples per-species pseudo-absences as follows:\n1. Calculate target number of pseudo-absences\n2. Sample random lon/lat points within provided `--extent`\n3. Filter points as per `--presence-loc-treatment`:\n  * `ignore`: keep all points\n  * `limit`: keep points that are within species domain\n  * `exclude`: keep points that lie outside of species domain. Optional extra argument\n    `--exclude-buffer` can be specified: if set as float, a buffer (size in map units) is drawn\n    around the species domain and points are only sampled from within this buffer zone (_i.e._,\n    neither inside the species domain nor outside the buffer).\n4. Filter points again to lie inside `--clip-layer`, if provided. If argument `--clip-buffer` is\n   provided, the clip layer is buffered first (negative buffers push points away from the coast\n   lines; this is useful to _e.g._ avoid locations with missing covariates)\n5. Repeat steps 4-6, either until the targeted number of points or `--max-num-tries` is reached\n\n\n### 4. Calculate spatial distances to species domain edges\nAs per [Merow et al., 2017](https://doi.org/10.1111/geb.12539), some of our models get trained with\nexpert range maps as offsets. We use an alternative heuristic that replaces the zero-target for the\npseudo-absences with logistically transformed distances from the [species\ndomain](#2-create-species-domain-maps).\n\n1. Create rasters (GeoTIFFs) of per-species, per-pixel distances to range maps:\n```bash\npython deepSDM/data_preparation/calculate_range_distance.py \\\n        --raster-config deepSDM/configs/meta/raster_1km.yaml \\\n        --species-file data/taxa/mammals/species.csv \\\n        --range-map-folder data/taxa/mammals/species_domains \\\n        --destination data/taxa/mammals/range_map_distances\n```\nThis step is experiment-independent and only needs to be done once at the beginning.\n\n\n2. Extract values for locations in dataset:\n```bash\npython deepSDM/data_preparation/extract_range_distances.py \\\n        --loc-file $BASE_FOLDER/locations.csv \\\n        --species-file data/taxa/mammals/species.csv \\\n        --distance-files-folder data/taxa/mammals/range_map_distances \\\n        --destination $BASE_FOLDER/range_map_distances.csv \\\n        --sampling-method read_seq\n```\n_Note:_ `--sampling-method` determines the way values are extracted:\n* `sample` uses [rasterio's sample\n  module](https://rasterio.readthedocs.io/en/latest/api/rasterio.sample.html), which is slow but\n  memory-efficient\n* `read_seq` reads a window of each raster file into memory at a time and extracts coordinates via\n  affine transformations\n* `read_all` does the same, but preloads all raster files at once (fastest, but expensive\n  memory-wise).\n  \nBy default, `read_seq` is recommended, but you may want to switch to `sample` if you run out of\nmemory. The same applies for other scripts down below.\n\n<!-- The following script calculates these distances for all locations:\n```bash\npython deepSDM/data_preparation/calculate_range_distance_old.py \\\n        --obs-file $BASE_FOLDER/locations.csv \\\n        --species-file data/taxa/mammals/species.csv \\\n        --range-map-folder data/taxa/mammals/species_domains \\\n        --destination $BASE_FOLDER/range_map_distances.csv\n``` -->\n\n\n### 5. Extract covariates\nWe'll first do this for occurrences only to speed up multiple random seed runs.\n```bash\npython deepSDM/data_preparation/extract_covariates.py \\\n        --covariates-file data/_layers.yml \\\n        --covariates-folder /gpfs/gibbs/pi/jetz/data/environmental_datasets \\\n        --obs-file data/taxa/mammals/observations.csv \\\n        --destination data/taxa/mammals/covariates.csv \\\n        --chunk-size 65535 \\\n        --sampling-method read_seq\n```\n\nThen, we copy the file and augment it for the seed-specific pseudo-absences:\n```bash\ncp data/taxa/mammals/covariates.csv $BASE_FOLDER/covariates.csv\n\npython deepSDM/data_preparation/extract_covariates.py \\\n        --covariates-file data/_layers.yml \\\n        --covariates-list $BASE_FOLDER/covariate_list.yaml \\\n        --covariates-folder /gpfs/gibbs/pi/jetz/data/environmental_datasets \\\n        --obs-file $BASE_FOLDER/locations.csv \\\n        --destination $BASE_FOLDER/covariates.csv \\\n        --chunk-size 65535 \\\n        --sampling-method read_seq\n```\n\nFinally, we'll also calculate global covariate statistics:\n```bash\npython deepSDM/data_preparation/calculate_covariate_stats.py \\\n        --covariates-file $BASE_FOLDER/covariates.csv \\\n        --destination $BASE_FOLDER/covariates_stats.json\n```\n\n\n### 6. Create train/val/test splits\nNext, we assign occurrences and (pseudo-) absences to train, (val), and test splits:\n```bash\npython deepSDM/data_preparation/create_splits.py \\\n        --loc-file $BASE_FOLDER/locations.csv \\\n        --target-file $BASE_FOLDER/split.csv \\\n        --split-fractions 0.8 0.0 0.2 \\\n        --split-method cluster-spatial \\\n        --cluster-presences 1 \\\n        --cluster-absences 0 \\\n        --covariates-file $BASE_FOLDER/covariates.csv \\\n        --seed $SEED\n```\n\nThis script supports multiple splitting heuristics (`--split-method`):\n* `random`: uniformly random distribution of points to match `--split-fractions` per `species_id`\n  (if present). Note that presence and (pseudo-) absence points are treated individually according\n  to column `is_presence` (if present).\n* `spatial`: splits points at particular coordinate thresholds (`--split-locations` with two floats\n  for borders between train/val and val/test splits). Direction of split can be provided with\n  `--split-direction` (one of `lon`, `lat`).\n* `block-spatial`: assigns points to square blocks of given size in map units (`--block-size`) and\n  distributes entire blocks to train/val/test sets. Parameter `--assignment-heuristic` determines\n  distribution method: `uniform` distributes blocks uniformly at random so that target quote _per\n  block_ is met; `distribute` attempts to distribute blocks so that target quota _per location_ (per\n  species and presence/(pseudo-) absence) is met. Target quota are extracted from\n  `--split-fractions`.\n* `cluster-spatial`: clusters locations by coordinates and assigns locations accordingly. The number\n  of clusters formed is as follows: 5 for up to 15 observations, 10 for up to 30, 15 for up to 45,\n  20 for up to 60, and 25 for more than 60. Parameters:\n    - `--cluster-presences`: set to 1 (default) to apply clustering strategy to occurrences; else\n      occurrences are distributed randomly.\n    - `--cluster-absences`: ditto, but for (pseudo-) absences. Default here is 0 (_i.e._, random\n      assignment).\n    - `--split-fractions`: for this method, the split fractions are valid either for the number of\n      clusters or the number of samples, depending on the settings of the preceding variables. Note\n      that if only two values are provided, no validation set is created. Fractions that do not sum\n      to 1 will be topped up and the remainder assigned to the training set by default.\n* `ecoregions-cluster`: groups locations by ecoregions (read from a GeoTIFF file), clusters them in\n  geographic space and assigns entire clusters to the splits for each ecoregion. This makes sure the\n  three sets well represent each type of ecosystem. What this heuristic cannot guarantee is that\n  each species is present (let alone balanced) in each split. It also completely ignores the\n  presences/pseudo-absences labels. Parameters:\n    - `--ecoregions-file`: path to rasterised ecoregions map (GeoTIFF) to d",
+  "syntax_results": [
+    {
+      "file": "code/deepSDM/predict.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/__init__.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/fit_predict_model.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/evaluate_old.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/train.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/evaluate.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/util/raster_sampling.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/util/__init__.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/util/gumbel_softmax_sampler.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/util/common.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/util/statistics_logger.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/util/helpers.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/util/schedulers.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/extract_phylogenetic_distances.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/import_absences.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/create_pc_image_list.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/create_grid_points.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/aggregate_observations.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/calculate_range_distance_old.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/calculate_range_distance.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/__init__.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/extract_covariates.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/consolidate_experiments.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/sample_pseudo_absences.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/create_splits.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/calculate_range_iou.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/consolidate_observations.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/map_pc_images_to_observations.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/extract_range_distances.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/create_species_domain_maps.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/download_pc_imagery.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/calculate_image_stats.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/download_pc_imagery_composite.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/calculate_covariate_stats.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/prune_split.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_preparation/extract_range_distance_patches.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_postprocessing/extract_predictions_from_raster.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_postprocessing/create_prediction_raster.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_postprocessing/qgis_render_map.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_postprocessing/__init__.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_postprocessing/create_difference_raster.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_postprocessing/create_delta_map.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_postprocessing/create_range_map_sum_raster.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_postprocessing/consolidate_molsdm_results.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/data_postprocessing/create_result_figures.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/criteria.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/metrics.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/metrics_sklearn.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/__init__.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/transform.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/trainer.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/datasets/occurrences_dataset.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/datasets/constants.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/datasets/__init__.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/datasets/patch_dataset.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/models/convnet.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/models/__init__.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/models/inception.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/models/offset.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/models/mlp.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/models/resnet_tabular.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/models/resnet.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "code/deepSDM/engine/models/layers.py",
+      "status": "PASS",
+      "error": null
+    }
+  ],
+  "execution_attempted": false,
+  "generated_at_utc": "2026-11-11T14:34:38.051428+00:00"
+}

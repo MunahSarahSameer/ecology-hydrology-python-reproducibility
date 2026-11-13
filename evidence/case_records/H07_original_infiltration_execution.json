@@ -1,0 +1,39 @@
+{
+  "step": 120,
+  "package_id": "H07",
+  "test_type": "original_archived_infiltration_tests",
+  "process_status": "COMPLETED",
+  "outcome": {
+    "python": "3.11.18",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "tests": [
+      {
+        "test": "test_basic_green_ampt",
+        "status": "PASS",
+        "error": null
+      },
+      {
+        "test": "test_cum_green_ampt_variable_rainfall",
+        "status": "PASS",
+        "error": null
+      }
+    ]
+  },
+  "original_source_sha256": {
+    "implementation": "7e5c714801bf4f53490e9ae40676db9c989b07fc232b61f624d0782169d041ee",
+    "tests": "0bda57069eebab077d0138f6c4dad4bbdc18d6a8a31dfc76e566b60f7ef69d42"
+  },
+  "archive_sha256": "a48773b6b044dd2b4f01ddeb62b8ffbacd84f04dba7effd1644f102fb537e159",
+  "generated_at_utc": "2026-11-11T01:36:44.042436+00:00",
+  "original_archive_modified": false,
+  "archived_test_source_modified": false,
+  "dependencies_installed": false,
+  "execution_method": "Original implementation and tests loaded directly from archived source into an isolated subprocess",
+  "limitations": [
+    "Only two infiltration tests were executed.",
+    "The complete PyTOPKAPI package was not imported.",
+    "No full hydrological simulation was executed.",
+    "Test agreement is not independent scientific validation."
+  ]
+}

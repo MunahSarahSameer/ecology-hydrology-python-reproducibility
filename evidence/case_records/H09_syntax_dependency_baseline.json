@@ -1,0 +1,230 @@
+{
+  "step": 141,
+  "package_id": "H09",
+  "package_name": "swatpy",
+  "version": "v0.2",
+  "python_version": "3.11.18",
+  "archive_sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+  "archive_integrity_verified": true,
+  "python_file_count": 8,
+  "syntax_pass": 8,
+  "syntax_fail": 0,
+  "python_files": [
+    {
+      "file": "allixender-swatpy-0d47bfa/data/scripts/convert_from_swatcup.py",
+      "lines": 176,
+      "sha256": "f6096f24e4792edf63a064ad00e681c37140ed9261c1204f010a9d76fa491093",
+      "syntax": "PASS",
+      "error": null,
+      "imports": [
+        "chardet",
+        "getopt",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "shutil",
+        "swatpy",
+        "sys",
+        "traceback",
+        "uuid"
+      ]
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/data/scripts/main.py",
+      "lines": 513,
+      "sha256": "91c3c1acdd2cf91a919231daf489d882931dbac1b119ba81caa535b3bf7e1c99",
+      "syntax": "PASS",
+      "error": null,
+      "imports": [
+        "mpi4py",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "shutil",
+        "spotpy",
+        "stat",
+        "swatpy",
+        "sys",
+        "traceback",
+        "uuid"
+      ]
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/data/scripts/run_for.py",
+      "lines": 543,
+      "sha256": "3281e523def2626a8f4b9f6e4cdeea51f67ca71a64459037eec43f8d4a66fe2b",
+      "syntax": "PASS",
+      "error": null,
+      "imports": [
+        "datetime",
+        "getopt",
+        "logging",
+        "mpi4py",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "shutil",
+        "spotpy",
+        "stat",
+        "swatpy",
+        "sys",
+        "traceback",
+        "uuid"
+      ]
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/setup.py",
+      "lines": 40,
+      "sha256": "b585d2b12390aff62ad02004feda494c31c2a38acce58ae2f8e7561788638aff",
+      "syntax": "PASS",
+      "error": null,
+      "imports": [
+        "setuptools"
+      ]
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/swatpy/FileEdit.py",
+      "lines": 901,
+      "sha256": "c03f3c6ae7f37a028bf7ed21f2458cae280678b9803b7f9f4a417dad78095c98",
+      "syntax": "PASS",
+      "error": null,
+      "imports": [
+        "numpy",
+        "os"
+      ]
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/swatpy/ReadOut.py",
+      "lines": 439,
+      "sha256": "04ec51f3798d3ec76a72884be683398cba11434c1e420067de0bf936d8de7960",
+      "syntax": "PASS",
+      "error": null,
+      "imports": [
+        "numpy",
+        "os"
+      ]
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/swatpy/SimManage.py",
+      "lines": 458,
+      "sha256": "fb93f7399f15b2115ee871bc3e3970ac94b9b52bedd9a7d124339b71f8255813",
+      "syntax": "PASS",
+      "error": null,
+      "imports": [
+        "FileEdit",
+        "chardet",
+        "datetime",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "shutil",
+        "subprocess",
+        "sys",
+        "traceback",
+        "uuid"
+      ]
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/swatpy/__init__.py",
+      "lines": 8,
+      "sha256": "7e063e742103a42f141e584a842a59428c8df7abf3dafdb1e191c6a755b942b1",
+      "syntax": "PASS",
+      "error": null,
+      "imports": [
+        "FileEdit",
+        "ReadOut",
+        "SimManage"
+      ]
+    }
+  ],
+  "notebooks": [
+    {
+      "file": "allixender-swatpy-0d47bfa/notebooks/analyse_results.ipynb",
+      "valid_json": true,
+      "code_cells": 10,
+      "markdown_cells": 0,
+      "stored_outputs": 36,
+      "kernel": "python3",
+      "error": null
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/notebooks/demo_swat_spotpy.ipynb",
+      "valid_json": true,
+      "code_cells": 23,
+      "markdown_cells": 0,
+      "stored_outputs": 87,
+      "kernel": "daskgeo2020a",
+      "error": null
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/notebooks/prec_obs_sim_plot.ipynb",
+      "valid_json": true,
+      "code_cells": 13,
+      "markdown_cells": 0,
+      "stored_outputs": 19,
+      "kernel": "geopy2020",
+      "error": null
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/notebooks/resteps.ipynb",
+      "valid_json": true,
+      "code_cells": 16,
+      "markdown_cells": 1,
+      "stored_outputs": 12,
+      "kernel": "python3",
+      "error": null
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/notebooks/swat_pymodel_demo_full.ipynb",
+      "valid_json": true,
+      "code_cells": 38,
+      "markdown_cells": 0,
+      "stored_outputs": 28,
+      "kernel": "geopy2021a",
+      "error": null
+    }
+  ],
+  "dependency_declarations": {
+    "allixender-swatpy-0d47bfa/requirements.txt": "numpy\npandas\nspotpy\nscipy\n# gdal>3\n# fiona\n# geopandas\n# fastavro\n# pyarrow\n# parquet\n# dask\n# distributed\n# pylint\n# pytest\n# rasterio\n# xarray\n# pyproj\n"
+  },
+  "top_level_import_frequency": {
+    "getopt": 2,
+    "chardet": 2,
+    "pathlib": 4,
+    "numpy": 6,
+    "sys": 4,
+    "traceback": 4,
+    "shutil": 4,
+    "os": 6,
+    "pandas": 4,
+    "uuid": 4,
+    "swatpy": 3,
+    "stat": 2,
+    "spotpy": 2,
+    "mpi4py": 2,
+    "logging": 1,
+    "datetime": 2,
+    "setuptools": 1,
+    "subprocess": 1,
+    "FileEdit": 2,
+    "json": 1,
+    "ReadOut": 1,
+    "SimManage": 1
+  },
+  "source_executed": false,
+  "dependencies_installed": false,
+  "original_archive_modified": false,
+  "limitations": [
+    "AST syntax success does not establish executability.",
+    "Notebook JSON validity does not establish code validity.",
+    "Stored notebook outputs do not prove reproducibility.",
+    "Import extraction is static and may miss dynamic imports.",
+    "Dependencies have not yet been tested for availability."
+  ],
+  "generated_at_utc": "2026-11-11T02:13:36.810859+00:00"
+}

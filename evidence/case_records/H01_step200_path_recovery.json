@@ -1,0 +1,33 @@
+{
+  "candidate": "H01",
+  "step": 200,
+  "test_type": "controlled_path_recovery",
+  "original_archive_modified": false,
+  "dependency_installation_attempted": false,
+  "generated_at_utc": "2026-11-11T22:54:07.360132+00:00",
+  "original_sha256": "59d527abc3aa5505be3a8ab520941840f2773e069b86bec4b2abd1e5e46d62d2",
+  "path_replacements": [
+    {
+      "original_path": "E:/All1study/1irragation/compute/逐月径流模拟结果_天然.xlsx",
+      "replacement_file": "monthly_streamflow_NAT.xlsx",
+      "occurrences": 1
+    },
+    {
+      "original_path": "E:/All1study/1irragation/compute/逐月径流模拟结果_人类.xlsx",
+      "replacement_file": "monthly_streamflow_HUM.xlsx",
+      "occurrences": 1
+    },
+    {
+      "original_path": "E:/All1study/1irragation/compute/逐月实测径流数据绘图.xlsx",
+      "replacement_file": "monthly_streamflow_OBS.xlsx",
+      "occurrences": 1
+    }
+  ],
+  "working_copy_sha256": "430647febce049454d13e50fbbd67f47e4c924642b552e70e9a9efc6f4b10bb5",
+  "return_code": 1,
+  "timed_out": false,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"pandas/_libs/tslibs/offsets.pyx\", line 7998, in pandas._libs.tslibs.offsets.to_offset\n  File \"pandas/_libs/tslibs/offsets.pyx\", line 7863, in pandas._libs.tslibs.offsets._validate_to_offset_alias\nValueError: 'Y' is no longer supported for offsets. Please use 'YE' instead.\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\MUNAH\\AppData\\Local\\Temp\\tmpwnkco8e0\\recovered_fig2.py\", line 131, in <module>\n    nse_values_natural = annual_nse(obs, sim)\n                         ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\MUNAH\\AppData\\Local\\Temp\\tmpwnkco8e0\\recovered_fig2.py\", line 49, in annual_nse\n    annual_nse_values = df.resample('Y').apply(lambda x: calculate_nse(x['Observed'], x['Simulated']))\n                        ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\MUNAH\\miniconda3\\envs\\code_decay\\Lib\\site-packages\\pandas\\core\\generic.py\", line 9759, in resample\n    return get_resampler(\n           ^^^^^^^^^^^^^^\n  File \"C:\\Users\\MUNAH\\miniconda3\\envs\\code_decay\\Lib\\site-packages\\pandas\\core\\resample.py\", line 2378, in get_resampler\n    tg = TimeGrouper(obj, **kwds)  # type: ignore[arg-type]\n         ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\MUNAH\\miniconda3\\envs\\code_decay\\Lib\\site-packages\\pandas\\core\\resample.py\", line 2464, in __init__\n    freq = to_offset(freq)\n           ^^^^^^^^^^^^^^^\n  File \"pandas/_libs/tslibs/offsets.pyx\", line 7903, in pandas._libs.tslibs.offsets.to_offset\n  File \"pandas/_libs/tslibs/offsets.pyx\", line 8048, in pandas._libs.tslibs.offsets.to_offset\n  File \"pandas/_libs/tslibs/offsets.pyx\", line 7809, in pandas._libs.tslibs.offsets.raise_invalid_freq\nValueError: Invalid frequency: Y. Failed to parse with error message: ValueError(\"'Y' is no longer supported for offsets. Please use 'YE' instead.\")\n",
+  "generated_figures": [],
+  "outcome": "EXECUTION_FAILED"
+}

@@ -1,0 +1,57 @@
+{
+  "step": 110,
+  "candidate_id": "H07",
+  "zenodo_record_id": "820640",
+  "doi": "10.5281/zenodo.820640",
+  "publication_date": "2017-06-28",
+  "archive": "sahg/PyTOPKAPI-v0.4.0.zip",
+  "archive_size": 8000741,
+  "total_entries": 136,
+  "python_files": [
+    "sahg-PyTOPKAPI-6d8183b/create_distributions.py",
+    "sahg-PyTOPKAPI-6d8183b/docs/source/conf.py",
+    "sahg-PyTOPKAPI-6d8183b/example_simulation/run_example.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/__init__.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/__version.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/arcfltgrid.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/evap.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/fluxes.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/infiltration.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/interpolation.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/model.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/ode.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/GIS_treatment.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/__init__.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/common.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/create_file.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/map_param.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/modify_file.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/pretreatment.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/results_analysis/__init__.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/results_analysis/plot_Qsim_Qobs_Rain.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/results_analysis/plot_soil_moisture_maps.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/results_analysis/sim_result_tools.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_continuity/continuity_tests.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_infiltration.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_parameter_utils.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/utils.py",
+    "sahg-PyTOPKAPI-6d8183b/scripts/extract-tertiary.py",
+    "sahg-PyTOPKAPI-6d8183b/setup.py"
+  ],
+  "dependency_files": [
+    "sahg-PyTOPKAPI-6d8183b/setup.py"
+  ],
+  "test_files": [
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_continuity/continuity_tests.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_infiltration.py",
+    "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_parameter_utils.py"
+  ],
+  "source_code_executed": false,
+  "archive_extracted": false,
+  "candidate_status": "screening_only",
+  "limitations": [
+    "ZIP inventory does not establish executability.",
+    "No dependency installation or execution performed.",
+    "Research independence remains unverified."
+  ]
+}

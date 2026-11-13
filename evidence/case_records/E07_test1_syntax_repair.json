@@ -1,0 +1,16 @@
+{
+  "archive_id": "E07",
+  "component": "DetailView",
+  "file": "training.py",
+  "original_sha256": "c16ee7b21c00458726f27d8482f45396d8f1c9ff589dd1831c4fd33d35c6f3c7",
+  "baseline_syntax": "FAIL",
+  "baseline_error": {
+    "message": "'(' was never closed",
+    "line": 311
+  },
+  "candidate_repair_syntax": "PASS",
+  "candidate_repair_error": null,
+  "repair_description": "Close missing parenthesis and replace os.join with os.path.join",
+  "original_archive_modified": false,
+  "runtime_execution_tested": false
+}

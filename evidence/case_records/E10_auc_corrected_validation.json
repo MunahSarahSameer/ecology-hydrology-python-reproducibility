@@ -1,0 +1,37 @@
+{
+  "step": 105,
+  "package_id": "E10",
+  "test_type": "corrected_auc_function_validation",
+  "source_sha256": "72f1cb90ab2d01a7d15ce352edb9cc6951cf59e151c7fb32b47c7f07f70b4bc0",
+  "original_function_source": "def auc_score(y_true, y_pred):\n    if len( np.unique( y_true[:,1]) ) == 1:\n        return 0.5\n    else:\n        return roc_auc_score(y_true, y_pred)",
+  "results": [
+    {
+      "case": "perfect",
+      "expected": 1.0,
+      "actual": 1.0,
+      "status": "PASS"
+    },
+    {
+      "case": "reversed",
+      "expected": 0.0,
+      "actual": 0.0,
+      "status": "PASS"
+    },
+    {
+      "case": "mixed",
+      "expected": 0.75,
+      "actual": 0.75,
+      "status": "PASS"
+    },
+    {
+      "case": "single_class",
+      "expected": 0.5,
+      "actual": 0.5,
+      "status": "PASS"
+    }
+  ],
+  "previous_test_issue": "Step 104 supplied one-dimensional arrays to a function expecting two-dimensional arrays.",
+  "research_source_modified": false,
+  "full_workflow_executed": false,
+  "published_results_reproduced": false
+}

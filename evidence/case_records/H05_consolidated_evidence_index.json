@@ -1,0 +1,28 @@
+{
+  "candidate_id": "H05",
+  "environment_files": {
+    "h05_recovery": {
+      "explicit": "results\\H05_environment_evidence\\h05_recovery_explicit.txt",
+      "pip_freeze": "results\\H05_environment_evidence\\h05_recovery_pip_freeze.txt",
+      "pytest_log": "results\\H05_environment_evidence\\h05_recovery_pytest_log.txt"
+    },
+    "h05_pandas_203": {
+      "explicit": "results\\H05_environment_evidence\\h05_pandas_203_explicit.txt",
+      "pip_freeze": "results\\H05_environment_evidence\\h05_pandas_203_pip_freeze.txt",
+      "pytest_log": "results\\H05_environment_evidence\\h05_pandas_203_pytest_log.txt"
+    },
+    "h05_pandas_control": {
+      "explicit": "results\\H05_environment_evidence\\h05_pandas_control_explicit.txt",
+      "pip_freeze": "results\\H05_environment_evidence\\h05_pandas_control_pip_freeze.txt",
+      "pytest_log": "results\\H05_environment_evidence\\h05_pandas_control_pytest_log.txt"
+    },
+    "code_decay": {
+      "explicit": "results\\H05_environment_evidence\\code_decay_explicit.txt",
+      "pip_freeze": "results\\H05_environment_evidence\\code_decay_pip_freeze.txt",
+      "pytest_log": "results\\H05_environment_evidence\\code_decay_pytest_log.txt"
+    }
+  },
+  "environment_count": 4,
+  "supporting_file_count": 12,
+  "note": "File inventory only; original logs and source unchanged."
+}

@@ -1,0 +1,4 @@
+﻿case_id,stage,exit_code,execution_seconds,observation,evidence_log
+E06,baseline,1,0.92,seaborn missing,E06_test1_baseline_log.txt
+E06,after_seaborn,1,9.34,geopandas missing,E06_test1_after_seaborn_log.txt
+E06,recovery,0,7.13,process completed; scientific scope unverified,E06_test1_recovery_log.txt

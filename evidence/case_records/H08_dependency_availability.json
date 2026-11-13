@@ -1,0 +1,154 @@
+{
+  "step": 128,
+  "package_id": "H08",
+  "package_name": "pyGSFLOW",
+  "python_version": "3.11.18",
+  "dependency_records": [
+    {
+      "package": "numpy",
+      "module": "numpy",
+      "status": "DISCOVERABLE",
+      "version": "2.4.6",
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "pandas",
+      "module": "pandas",
+      "status": "DISCOVERABLE",
+      "version": "3.1.0",
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "flopy",
+      "module": "flopy",
+      "status": "MISSING",
+      "version": null,
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "pyshp",
+      "module": "shapefile",
+      "status": "MISSING",
+      "version": null,
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "pycrs",
+      "module": "pycrs",
+      "status": "MISSING",
+      "version": null,
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "matplotlib",
+      "module": "matplotlib",
+      "status": "DISCOVERABLE",
+      "version": "3.11.2",
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "coverage",
+      "module": "coverage",
+      "status": "MISSING",
+      "version": null,
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "appdirs",
+      "module": "appdirs",
+      "status": "MISSING",
+      "version": null,
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "requests",
+      "module": "requests",
+      "status": "DISCOVERABLE",
+      "version": "2.34.2",
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "affine",
+      "module": "affine",
+      "status": "DISCOVERABLE",
+      "version": "3.0.1",
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "scipy",
+      "module": "scipy",
+      "status": "DISCOVERABLE",
+      "version": "1.17.1",
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "netCDF4",
+      "module": "netCDF4",
+      "status": "MISSING",
+      "version": null,
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "rasterio",
+      "module": "rasterio",
+      "status": "DISCOVERABLE",
+      "version": "1.4.4",
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "fiona",
+      "module": "fiona",
+      "status": "MISSING",
+      "version": null,
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "descartes",
+      "module": "descartes",
+      "status": "MISSING",
+      "version": null,
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "pyproj",
+      "module": "pyproj",
+      "status": "MISSING",
+      "version": null,
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "shapely",
+      "module": "shapely",
+      "status": "MISSING",
+      "version": null,
+      "note": "Metadata and module discovery only; actual import not executed."
+    },
+    {
+      "package": "geos",
+      "module": null,
+      "status": "NOT_ASSESSED",
+      "version": null,
+      "note": "GEOS is a native library; Python module discovery is not a sufficient availability test."
+    },
+    {
+      "package": "simplejson",
+      "module": "simplejson",
+      "status": "DISCOVERABLE",
+      "version": "4.2.0",
+      "note": "Metadata and module discovery only; actual import not executed."
+    }
+  ],
+  "discoverable_count": 8,
+  "missing_count": 10,
+  "source_executed": false,
+  "dependencies_installed": false,
+  "original_archive_modified": false,
+  "limitations": [
+    "Package metadata does not prove runtime compatibility.",
+    "Module discovery does not execute imports.",
+    "GEOS native-library compatibility was not assessed.",
+    "No pyGSFLOW scientific tests were executed.",
+    "Some declared packages may be optional for specific components."
+  ],
+  "generated_at_utc": "2026-11-11T01:52:17.141779+00:00"
+}

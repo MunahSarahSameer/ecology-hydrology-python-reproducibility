@@ -1,0 +1,161 @@
+{
+  "step": 144,
+  "package_id": "H09",
+  "package_name": "swatpy",
+  "version": "v0.2",
+  "archive_sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+  "source_file": "allixender-swatpy-0d47bfa/swatpy/ReadOut.py",
+  "source_sha256": "04ec51f3798d3ec76a72884be683398cba11434c1e420067de0bf936d8de7960",
+  "inspected_classes": [
+    {
+      "class": "OutputFileManipulator",
+      "bases": [
+        "object"
+      ],
+      "methods": [
+        {
+          "name": "__init__",
+          "line_start": 55,
+          "line_end": 81,
+          "arguments": [
+            "self",
+            "outList",
+            "areasList",
+            "method",
+            "onlyStatistics",
+            "daysSkip",
+            "working_dir",
+            "iprint",
+            "stats_dir",
+            "encoding"
+          ],
+          "source": "    def __init__(self, outList, areasList, method, onlyStatistics, daysSkip, working_dir, iprint='day', stats_dir=None, encoding='latin-1'):\n        # set file and folder paths\n        self.working_dir = working_dir\n        self.stats_dir=stats_dir\n        self.iprint=iprint\n        self.file_enc = encoding\n        # read from input file\n        self.textOld = self.inputFile.readlines()\n        self.inputFile.close()\n        # calculate stats\n        self.areaSizes = self.readAreaSizes(areasList)\n        self.outValues = self.readValues(outList, areasList)\n\n        if self.iprint == 'month' or self.iprint == 0:\n            for outName in outList:\n                for area in areasList:\n                    new_list = []\n                    for i in range(len(self.outValues[outName][area])-1):\n                        if (i+1) % 12 == 0 and i+1 > 0:\n                            pass\n                        else:\n                            new_list.append(self.outValues[outName][area][i])\n                    self.outValues[outName][area] = new_list\n\n        # write stats out\n        if not method == 'skip':\n            self.write(method, onlyStatistics, daysSkip)"
+        },
+        {
+          "name": "readAreaSizes",
+          "line_start": 83,
+          "line_end": 97,
+          "arguments": [
+            "self",
+            "areasList"
+          ],
+          "source": "    def readAreaSizes(self, areasList):\n        areaSizes = {}\n        for area in areasList:\n            areaSizes[area] = None\n        row = self.outInfo[\"firstRow\"] - 1\n        for textRow in self.textOld[row:]:\n            col1, col2 = self.outInfo[\"area\"]\n            area = int(textRow[col1:col2])\n            if area in areaSizes:\n                col1, col2 = self.outInfo[\"areaSize\"]\n                if areaSizes[area] == None:\n                    areaSizes[area] = float(textRow[col1:col2])\n                else:\n                    break\n        return areaSizes"
+        },
+        {
+          "name": "readValues",
+          "line_start": 99,
+          "line_end": 113,
+          "arguments": [
+            "self",
+            "outList",
+            "areasList"
+          ],
+          "source": "    def readValues(self, outList, areasList):\n        outValues = {}\n        for outName in outList:\n            outValues[outName] = {}\n            for area in areasList:\n                outValues[outName][area] = []\n        row = self.outInfo[\"firstRow\"] - 1\n        for textRow in self.textOld[row:]:\n            col1, col2 = self.outInfo[\"area\"]\n            area = int(textRow[col1:col2])\n            if area in self.areaSizes:\n                for outName in outValues:\n                    col1, col2 = self.outInfo[outName]\n                    outValues[outName][area].append(float(textRow[col1:col2]))\n        return outValues"
+        },
+        {
+          "name": "write",
+          "line_start": 115,
+          "line_end": 170,
+          "arguments": [
+            "self",
+            "method",
+            "onlyStatistics",
+            "daysSkip"
+          ],
+          "source": "    def write(self, method, onlyStatistics, daysSkip):\n\n        outdir = self.working_dir\n        if not self.stats_dir is None:\n            outdir = self.stats_dir\n\n        # write \"individual\" files\n        if method == \"sum & indi\" or method == \"indi\":\n            for outName in self.outValues:\n                for area in self.outValues[outName]:\n                    # write statistics\n                    numValues = np.array(self.outValues[outName][area])\n                    outText = self.calculateStatistics(numValues, daysSkip)\n                    F = open(os.path.join(outdir,\n                        \"SWAT_readout_\" + str(outName) + \"_\" + \"%4.4i\" % area + \"_statistics\" + self.outInfo[\"type\"]), \"a\", encoding=self.file_enc)\n                    F.writelines(outText)\n                    F.close()\n                    # write values\n                    if onlyStatistics == False:\n                        outText = []\n                        for value in self.outValues[outName][area]:\n                            outText.append(\"%.3E\" % value + \" \")\n                        outText[len(outText) - 1] = outText[len(outText) - 1].replace(\" \", \"\\n\")\n                        F = open(os.path.join(outdir,\"SWAT_readout_\" + str(\n                            outName) + \"_\" + \"%4.4i\" % area + self.outInfo[\"type\"]), \"a\", encoding=self.file_enc)\n                        F.writelines(outText)\n                        F.close()\n\n        # write \"summed\" files\n        if method == \"sum & indi\" or method == \"sum\":\n            key = self.outValues.keys()[0]\n            subkey = self.outValues[key].keys()[0]\n            length = len(self.outValues[key][subkey])\n            for outName in self.outValues:\n                # do summation\n                sumValues = np.zeros(length, float)\n                for area in self.outValues[outName]:\n                    numValues = np.array(self.outValues[outName][area])\n                    numValues *= (self.areaSizes[area] * 1000.0 / 24 / 60 / 60)  # mm/d on km2 to cubic metres per second\n                    sumValues += numValues\n                # write statistics\n                outText = self.calculateStatistics(sumValues, daysSkip)\n                F = open(os.path.join(outdir, \"SWAT_readout_\" + str(\n                    outName) + \"_SUMstatistics\" + self.outInfo[\"type\"]), \"a\", encoding=self.file_enc)\n                F.writelines(outText)\n                F.close()\n                # write values\n                if onlyStatistics == False:\n                    outText = []\n                    for value in sumValues:\n                        outText.append(\"%.3E\" % value + \" \")\n                    outText[len(outText) - 1] = outText[len(outText) - 1].replace(\" \", \"\\n\")\n                    F = open(os.path.join(outdir,\"SWAT_readout_\" + str(\n                        outName) + \"_SUM\" + self.outInfo[\"type\"]), \"a\", encoding=self.file_enc)\n                    F.writelines(outText)\n                    F.close()"
+        },
+        {
+          "name": "calculateStatistics",
+          "line_start": 172,
+          "line_end": 182,
+          "arguments": [
+            "self",
+            "numValues",
+            "daysSkip"
+          ],
+          "source": "    def calculateStatistics(self, numValues, daysSkip):\n        nV = numValues[daysSkip:]\n        outText = []\n        outText.append(\"%.3E\" % np.mean(nV) + \" \")  # mean\n        outText.append(\"%.3E\" % np.median(nV) + \" \")  # median\n        outText.append(\"%.3E\" % np.var(nV) + \"\\n\")  # variation\n        # outText.append(\"%.3E\"%corrcoef(nV[:-1],nV[1:])[0,1] + \" \") # autocorrelation, lag=1\n        # if outText[len(outText)-1] == \"-1.#IOE+000 \":\n        #    outText[len(outText)-1] = \"NA \"\n        # outText[len(outText)-1] = outText[len(outText)-1].replace(\" \", \"\\n\")\n        return outText"
+        }
+      ]
+    },
+    {
+      "class": "rchOutputManipulator",
+      "bases": [
+        "OutputFileManipulator"
+      ],
+      "methods": [
+        {
+          "name": "__init__",
+          "line_start": 236,
+          "line_end": 238,
+          "arguments": [
+            "self",
+            "outList",
+            "areasList",
+            "method",
+            "onlyStatistics",
+            "daysSkip",
+            "working_dir",
+            "iprint",
+            "stats_dir",
+            "encoding"
+          ],
+          "source": "    def __init__(self, outList, areasList, method, onlyStatistics, daysSkip, working_dir, iprint='day', stats_dir=None, encoding='latin-1'):\n        self.inputFile = open(os.path.join(working_dir, \"output.rch\"), \"r\", encoding=encoding)\n        OutputFileManipulator.__init__(self, outList, areasList, method, onlyStatistics, daysSkip, working_dir, iprint, stats_dir, encoding)"
+        }
+      ]
+    },
+    {
+      "class": "efficiency",
+      "bases": [
+        "rchOutputManipulator"
+      ],
+      "methods": [
+        {
+          "name": "__init__",
+          "line_start": 359,
+          "line_end": 394,
+          "arguments": [
+            "self",
+            "output",
+            "area",
+            "observed",
+            "fileColumn",
+            "daysSkip",
+            "working_dir",
+            "iprint",
+            "nodata",
+            "encoding"
+          ],
+          "source": "    def __init__(self, output, area, observed, fileColumn, daysSkip, working_dir, iprint='day', nodata=-9999, encoding='latin-1'):\n        self.area = area\n        self.daysSkip = daysSkip\n        self.output = output\n        self.working_dir = working_dir\n        self.iprint = iprint\n        self.file_enc = encoding\n\n        f = open(observed, \"r\", encoding=encoding)\n        lines = f.readlines()\n        f.close()\n        measured = []\n        for i in lines:\n            measured.append(i.split(\";\")[fileColumn - 1])\n        self.obs = np.array([float(i) for i in measured[daysSkip:]])\n\n        self.obs_masked = np.ma.masked_where(self.obs == nodata, self.obs)\n        self.obsMean = np.mean(self.obs_masked)\n\n        f = open(os.path.join(self.working_dir, \"output.rch\"), \"r\", encoding=encoding)\n        self.textOld = f.readlines()\n        f.close()\n\n        self.areaSizes = self.readAreaSizes([self.area])\n        self.outValues = self.readValues([self.output], [self.area])\n\n        if self.iprint == 'month' or self.iprint == 0:\n            new_list = []\n            for i in range(len(self.outValues[self.output][self.area])-1):\n                if (i+1) % 12 == 0 and i+1 > 0:\n                    pass\n                else:\n                    new_list.append(self.outValues[self.output][self.area][i])\n            self.outValues = new_list\n        else:\n            self.outValues = self.outValues[self.output][self.area]"
+        },
+        {
+          "name": "nash",
+          "line_start": 397,
+          "line_end": 407,
+          "arguments": [
+            "self"
+          ],
+          "source": "    def nash(self):\n        # f = open(os.path.join(self.working_dir, \"output.rch\"), \"r\")\n        # self.textOld = f.readlines()\n        # f.close()\n        \n        # outValues = self.readValues([self.output], [self.area])\n        # outValues = outValues[self.output][self.area]\n        # outValues = self.outValues[self.output][self.area]\n        sim = np.array([float(i) for i in self.outValues[self.daysSkip:]])\n        \n        return (1 - sum((self.obs_masked - sim) ** 2) / sum((self.obs_masked - self.obsMean) ** 2))"
+        },
+        {
+          "name": "agr",
+          "line_start": 409,
+          "line_end": 418,
+          "arguments": [
+            "self"
+          ],
+          "source": "    def agr(self):\n        # f = open(os.path.join(self.working_dir, \"output.rch\"), \"r\")\n        # self.textOld = f.readlines()\n        # f.close()\n        # self.areaSizes = self.readAreaSizes([self.area])\n        # outValues = self.readValues([self.output], [self.area])\n        # outValues = outValues[self.output][self.area]\n        sim = np.array([float(i) for i in self.outValues[self.daysSkip:]])\n\n        return (1 - sum((self.obs_masked - sim) ** 2) / sum((abs(sim - self.obsMean) + abs(self.obs_masked - self.obsMean)) ** 2))"
+        }
+      ]
+    }
+  ],
+  "source_executed": false,
+  "original_archive_modified": false,
+  "assessment": "STATIC_SCIENTIFIC_FUNCTION_INSPECTION",
+  "limitations": [
+    "No hydrological calculation has been executed.",
+    "Class constructors may require external model files.",
+    "Inherited methods may have additional dependencies.",
+    "Mathematical correctness remains unverified."
+  ],
+  "generated_at_utc": "2026-11-11T02:19:49.052103+00:00"
+}

@@ -1,0 +1,37 @@
+E06 ORIGINAL VS RECOVERY RUNNER
+Original SHA256: 2f417d44b1db9cdd600596a878466dec53529c75350d671560ddcc588c539114
+Recovery SHA256: fa6a82a431f5acb90b46cd9fc95c0eda3521c6a80fe85adcf09b88d97445a6e9
+
+--- baseline_runner.py
++++ recovery_runner.py
+@@ -1,7 +1,7 @@
+ import numpy as np
+ import seaborn as sns
+ import matplotlib.pyplot as plt
+-from ZhenPlot import *
++# Recovery: unused ZhenPlot import removed
+ 
+ plt.rcParams.update({'font.family':'arial'})
+ plt.rcParams['font.sans-serif'] = ['arial']
+@@ -47,7 +47,7 @@
+ plt.text(1983,52,'Open mangrove forests',fontsize=11)
+ plt.text(1983,82,'Closed mangrove forests',fontsize=11)
+ 
+-plt.savefig(r"D:\OneDriveFolder\OneDrive\Manuscript\GlobalMangroveDynamics\Draft\Science\Figures\LossExampleDiagram.png", dpi=500, format='png', bbox_inches='tight')
++plt.savefig(r"output/LossExampleDiagram.png", dpi=500, format='png', bbox_inches='tight')
+ 
+ years = np.arange(1988,2024)
+ results_spike = np.ones(len(years))
+@@ -66,3 +66,9 @@
+ plt.annotate('',xy=(2015,0.96),xytext=(2015,0.3),arrowprops=dict(arrowstyle="simple",
+                                                             connectionstyle="arc3",
+                                                             color='#ff8473', lw=2))
++
++plt.savefig(
++    "output/MangroveSpikeDiagram.png",
++    dpi=150,
++    bbox_inches="tight"
++)
+
+Interpretation: Modified runner bypasses ZhenPlot import, changes output path and adds second figure save. Full original workflow and published results remain unverified.
+Human recovery effort: NOT_MEASURED

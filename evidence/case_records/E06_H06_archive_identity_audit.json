@@ -1,0 +1,178 @@
+{
+  "step": 174,
+  "records": {
+    "E06": {
+      "archive": "Code_Figures.zip",
+      "archive_sha256": "aa130db55efdf430f3d603f9e4be1baef8686368d9c9e9718bfbc92bf96392d7",
+      "file_count": 27,
+      "first_35_files": [
+        "Code_Figures/FigS10_MangroveDisturbanceRates.ipynb",
+        "Code_Figures/FigS11_DisturbanceTrends40Years.ipynb",
+        "Code_Figures/FigS12_RecentDisturbanceRates.ipynb",
+        "Code_Figures/FigS13_RecentLoss.ipynb",
+        "Code_Figures/FigS14_RelativeChangeClosedMangrove.ipynb",
+        "Code_Figures/FigS16_ComparisonGMW.ipynb",
+        "Code_Figures/FigS18_LandsatQuantile.ipynb",
+        "Code_Figures/FigS19-S20_CompositeYears.ipynb",
+        "Code_Figures/FigS21_PixelCount1980s.ipynb",
+        "Code_Figures/FigS23_ThinCloudmask.ipynb",
+        "Code_Figures/FigS24-25_FCCvalidation.ipynb",
+        "Code_Figures/FigS26-29_TrainingSamples.ipynb",
+        "Code_Figures/FigS2_4CanopyTypes.ipynb",
+        "Code_Figures/FigS30_ValidRatio.ipynb",
+        "Code_Figures/FigS4_SpatialUnits.ipynb",
+        "Code_Figures/FigS5_Top10TimeSeries.ipynb",
+        "Code_Figures/FigS7_Myanmar.ipynb",
+        "Code_Figures/FigS8_SchematicFigure.ipynb",
+        "Code_Figures/FigS9_CycloneExamples.ipynb",
+        "Code_Figures/Figure 1.ipynb",
+        "Code_Figures/Figure 2.ipynb",
+        "Code_Figures/Figure 3.ipynb",
+        "Code_Figures/Figure 4.ipynb",
+        "Code_Figures/Figure 5.ipynb",
+        "Code_Figures/SummaryFig.ipynb",
+        "Code_Figures/ZhenPlot.py",
+        "Code_Figures/__pycache__/ZhenPlot.cpython-311.pyc"
+      ],
+      "documentation": [],
+      "doi_references": [],
+      "source_urls": [],
+      "source_identity_verified": false,
+      "archive_publication_date_verified": false
+    },
+    "H06": {
+      "archive": "S4D_rainfall_runoff_simulations.zip",
+      "archive_sha256": "cc77736c1b3574fc7b89a4240bb4272a4cbf03e3775f38050f6983419a0f92bc",
+      "file_count": 292,
+      "first_35_files": [
+        "S4D_rainfall_runoff_simulations-main/README.md",
+        "S4D_rainfall_runoff_simulations-main/analysis/combine_sacsma_pkfiles.py",
+        "S4D_rainfall_runoff_simulations-main/analysis/main_performance_ensemble_only.py",
+        "S4D_rainfall_runoff_simulations-main/analysis/performance_functions.py",
+        "S4D_rainfall_runoff_simulations-main/data/basin_list.txt",
+        "S4D_rainfall_runoff_simulations-main/main_pub.py",
+        "S4D_rainfall_runoff_simulations-main/main_with_train_val.py",
+        "S4D_rainfall_runoff_simulations-main/papercode/SSM_test.py",
+        "S4D_rainfall_runoff_simulations-main/papercode/__init__.py",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/SSM_test.cpython-312.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/SSM_test.cpython-39.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/__init__.cpython-312.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/__init__.cpython-39.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/datasets.cpython-312.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/datasets.cpython-39.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/datautils.cpython-312.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/datautils.cpython-39.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/lstm.cpython-312.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/lstm.cpython-39.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/mclstm_modifiedhydrology.cpython-312.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/mclstm_modifiedhydrology.cpython-39.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/nseloss.cpython-312.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/nseloss.cpython-39.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/utils.cpython-312.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/utils.cpython-39.pyc",
+        "S4D_rainfall_runoff_simulations-main/papercode/configs/README.md",
+        "S4D_rainfall_runoff_simulations-main/papercode/configs/callbacks/base.yaml",
+        "S4D_rainfall_runoff_simulations-main/papercode/configs/callbacks/checkpoint.yaml",
+        "S4D_rainfall_runoff_simulations-main/papercode/configs/callbacks/progressive_resizing.yaml",
+        "S4D_rainfall_runoff_simulations-main/papercode/configs/callbacks/rich.yaml",
+        "S4D_rainfall_runoff_simulations-main/papercode/configs/callbacks/swa.yaml",
+        "S4D_rainfall_runoff_simulations-main/papercode/configs/callbacks/wandb.yaml",
+        "S4D_rainfall_runoff_simulations-main/papercode/configs/config.yaml",
+        "S4D_rainfall_runoff_simulations-main/papercode/configs/dataset/aan.yaml",
+        "S4D_rainfall_runoff_simulations-main/papercode/configs/dataset/adding.yaml"
+      ],
+      "documentation": [
+        {
+          "filename": "S4D_rainfall_runoff_simulations-main/README.md",
+          "preview": "\n# **S4D Rainfall-Runoff Simulations**\n\nThis repository contains the code for the paper *\"A Deep State Space Model for Rainfall-Runoff Simulations.\"* It enables the training and evaluation of three models, including **S4D**, **LSTM**, and **MC-LSTM** (Hoedt et al., 2021)(https://arxiv.org/abs/2101.05186), for rainfall-runoff simulations across 531 CAMELS watersheds.\n\nThe code is adapted and organized similarly to [lstm_for_pub](https://github.com/kratzert/lstm_for_pub). As such, many instructions mirror those found in the original repository, with a few modifications specific to this implementation.\n\n---\n\n## **Getting Started**\n\n### **1. Prepare the CAMELS Dataset**\n- Download the CAMELS data from [UCAR](https://ral.ucar.edu/solutions/products/camels).\n- Place the dataset in the following structure:\n  ```\n  ./data/basin_dataset_public_v1p2\n  ./data/basin_dataset_public_v1p2/camels_attributes_v2.0\n  ```\n\n### **2. Update NLDAS Forcings**\n- Download updated NLDAS forcings (including daily min and max temperatures) from [HydroShare](https://www.hydroshare.org/).\n- Replace the default CAMELS NLDAS forcings, which only include daily mean temperature.\n\n---\n\n## **Training the Models**\n\n### **Run Training Scripts**\nTo train models, use the script `train_val_global.sh` or `train_pub.sh` for the global (i.e., in-sample) and PUB (i.e., Prediction in Ungauged Basins) setup, respectively, with the following options:\n1. **Model Type**: `ssm`, `lstm`, or `mclstm`\n2. **Static Input Features**: `static` or `no_static` (include catchment attributes as inputs or not)\n3. **Note/Label**: A custom label to distinguish your trained models.\n\n#### **Examples**\n- **Train S4D with static inputs under the global setup:**\n  ```bash\n  ./train_val_global.sh ssm static ensemble\n  ```\n  Trains an S4D model with 32 inputs (static attributes included). The trained model is labeled as `ensemble`.\n\n- **Train S4D with static inputs under the PUB setup:**\n  ```bash\n  ./train_pub.sh\n  ```\n  Trains an S4D model with 32 inputs (static attributes included) with k-fold cross-validation (k=12). No additional argument needed to run the bash file. The number of GPUs and which model to train and test (LSTM or S4D) can be specified inside the bash file.\n  \n- **Train S4D without static inputs:**\n  ```bash\n  ./train_val_global.sh ssm no_static nostatic\n  ```\n  Trains an S4D model with only 5 hydrometeorological inputs (not used in this study). The trained model is labeled as `nostatic`.\n\n### **Hyperparamete"
+        },
+        {
+          "filename": "S4D_rainfall_runoff_simulations-main/papercode/configs/README.md",
+          "preview": "\n```\nconfig.yaml  Main config\nmodel/       Instantiates a model backbone (see src/models/)\ndataset/     Instantiates a datamodule (see src/dataloaders/)\nloader/      Defines a PyTorch DataLoader\ntask/        Defines loss, metrics, optional encoder/decoder (see src/tasks/)\npipeline/    Combination of dataset/loader/task for convenience\noptimizer/   Instantiates an optimizer\nscheduler/   Instantiates a learning rate scheduler\ntrainer/     Flags for the PyTorch Lightning Trainer class\ncallbacks/   Misc options for the Trainer (see src/callbacks/)\nexperiment/  Defines a full experiment (combination of all of the above configs)\ngenerate/    Additional flags used by the generate.py script\n```\n\nThis README provides a brief overview of the organization of this configs folder. These configs are composed to define a full Hydra config for every experiment.\n\n## Overview\nThe main config is found at `configs/config.yaml`, which is an example experiment for Permuted MNIST. Different combinations of flags can be overridden to define alternate experiments. The config files in this folder define useful combinations of flags that can be composed. Examples of full configs defining end-to-end experiments can be found in [experiment/](experiment/).\n\nFlags can also be passed on the command line.\n\n<!--\nThe end-to-end training pipeline can broken down into the following rough groups, where group XX is found under `configs/XX/`:\n```\nmodel: the sequence-to-sequence model backbone (e.g. a src.models.sequence.SequenceModel)\ndataset: the raw dataset (data/target pairs) (e.g. a pytorch Dataset)\nloader: how the data is loaded (e.g. a pytorch DataLoader)\nencoder: defines a Module that interfaces between data and model backbone\ndecoder: defines a Module that interfaces between model backbone and targets\ntask: specifies loss and metrics\n```\nDefault combinations of dataset+loader+encoder+decoder+task are further consolidated into groups called `pipelines`.\n-->\n\n## Helpful Tips\n\n### Inspect the Config\n- At the beginning of running `train.py`, the full Hydra config is printed. This is very useful for making sure all flags were passed in as intended. Try running `python -m train` and inspecting the full base config.\n\n### Class Instantiation\n- Generally, most dictionaries in the config correspond exactly to the arguments passed into a Python class. For example, the configs in `model/`, `dataset/`, `loader/`, `optimizer/`, `scheduler/`, `trainer/` define dictionaries which each instantiate exactl"
+        },
+        {
+          "filename": "S4D_rainfall_runoff_simulations-main/papercode/configs/experiment/README.md",
+          "preview": "```\naudio/         Audio datasets (all Sashimi experiments are here)\nbidmc/         BIDMC time series regression datasets\ncifar/         CIFAR-10, both sequential and 2d\nconvnext/      ImageNet + ConvNext variants (S4ND paper)\nforecasting/   Monash, ARIMA synthetics, datasets from the Informer paper\nlra/           Long Range Arena\nold/           Deprecated experiment configs (e.g. from original S4 paper that have been improved)\nprogres/       Progressive Resizing (S4ND paper)\nsc/            Speech Commands\nsegmentation/  Segmentation experiments (preliminary)\nsynthetic/     Synthetic experiments (Copying, Delay, Reconstruct)\nts/            Time Series (EEG, impedance)\nvision/        Assorted other image/video datasets (CelebA, ImageNet, HMDB51)\nvit/           ViT experiments\nwt103/         WikiText-103 experiments\n```\n"
+        },
+        {
+          "filename": "S4D_rainfall_runoff_simulations-main/papercode/configs/model/README.md",
+          "preview": "\nThe `model/` configs largely follow the structure of the `src/models/` code folder.\n\n## Backbones\nTop-level configs use the model backbone structure specified by this repository.\nThese models consist of **backbones** that are composed of repeatable blocks of core **layers**.\nThe backbones include a simple isotropic residual backbone (in the style of ResNets and Transformers) (`base.yaml`) and variations of UNet structures (`unet.yaml`, `sashimi.yaml`).\n\n## Layers\nLayers configs are defined in `model/layer/`. Each one of these instantiates a `src.models.sequence.base.SequenceModule` which maps an input sequence to output sequence, and can be passed into the various backbones.\nOlder versions of HiPPO focused on RNNs, and defined a flexible RNN layer in `model/layer/rnn.yaml`. This RNN accepts any RNN cell, with example configs in `model/layer/cell/`.\n\n## Examples\nSome examples of full models are provided which combine a backbone with a choice of inner layer, such as `convnet1d.yaml` (a simple 1D residual convnet), `s4.yaml` (basic isotropic S4 model), and `transformer.yaml` (isotropic Transformer model composed of alternating layers of self-attention and feed-forward network).\n\n## Other Baselines\n\nOther baseline models are included that do not necessarily follow this structure.\n```\nbaseline/      Miscellaneous baselines from the literature\nnonaka/        1-D CNN models ported from the paper [Nonaka, Seita]\n               \"In-depth Benchmarking of Deep Neural Network Architectures for ECG Diagnosis\"\n               (https://github.com/seitalab/dnn_ecg_comparison)\nsegmentation/  Segmentation models (preliminary)\ntimm/          Ports of timm ResNet and ConvNext models\nvit/           Ports of vit models\n```\n"
+        },
+        {
+          "filename": "S4D_rainfall_runoff_simulations-main/papercode/models/s4/README.md",
+          "preview": "## Papers\n\n### S4 (ICLR 2022)\n\n![Structured State Spaces](/assets/s4.png \"Properties of Structured State Spaces\")\n> **Efficiently Modeling Long Sequences with Structured State Spaces**\\\n> Albert Gu, Karan Goel, Christopher Ré\\\n> Paper: https://arxiv.org/abs/2111.00396\n\n### S4D (NeurIPS 2022)\n\n![S4D](/assets/s4d.png \"S4D: The diagonal variant of S4\")\n> **On the Parameterization and Initialization of Diagonal State Space Models**\\\n> Albert Gu, Ankit Gupta, Karan Goel, Christopher Ré\\\n> Paper: https://arxiv.org/abs/2206.11893\n\n## Models\n\nThe core S4 model is a linear sequence-to-sequence transformation.\nIt can be computed in multiple ways; the primary way for training is through the convolution view, which proceeds in two steps.\n\nFirst, S4 generates an explicit convolution kernel which is a function of its SSM parameters $(A, B, C)$.\nDifferent variants of S4 use different parameterizations and algorithms to compute this kernel.\nThe original S4 model has a diagonal plus low-rank (DPLR) $A$, while S4D has a diagonal $A$.\nThese are computed by the `SSKernelDPLR` and `SSKernelDiag` classes in [[/src/models/sequence/kernels/ssm.py](/src/models/sequence/kernels/ssm.py)], which are modules that produce a convolution kernel.\n\nThe S4 kernel can then be used in any vanilla CNN block. It is important to note that *S4 refers only to the core linear model* (e.g. the convolution kernel), not the exact structure of the deep neural network.\nThe CNN block used in the original S4 paper can be found at\n[[/src/models/sequence/modules/s4block.py](/src/models/sequence/modules/s4block.py)], which accepts any type of convolution kernel besides S4.\n\nBeside the convolution mode, S4 has many more properties explained in the papers. Some of these are documented in the next section.\n\n## Experiments\n\n[[experiments.md](experiments.md)] documents reproducible experiments from the above papers.\n\n## Standalone Code\n\nThis folder contains standalone implementations of the full S4 DNN layer, where the above classes are consolidated into one file for ease of exporting.\nThe file [[s4.py](s4.py)] contains the full implementation of S4(D) with almost all available options, which subsumes several variants of S4.\n\nThe corresponding [config](/configs/model/layer/s4.yaml) also lists the available options.\n\n### S4\n\nS4 is characterized by the arguments `mode=nplr` (the Normal Plus Low-Rank kernel described in the original S4 paper) and `init=legs` (the HiPPO-LegS matrix), which are both set by default.\nAl"
+        },
+        {
+          "filename": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/README.md",
+          "preview": "# Overview\n\nBasic datasets including MNIST, CIFAR, and Speech Commands will auto-download. Source code for these datamodules are in [basic.py](basic.py).\n\nBy default, data is downloaded to `./data/`  by default, where `.` is the top level directory of this repository (e.g. 'state-spaces').\n\n- [Data Preparation](#data-preparation) - Instructions for downloading other datasets\n- [Adding a Dataset](#adding-a-dataset-wip) - Basic instructions for adding new datasets\n\n## Advanced Usage\n\nAfter downloading and preparing data, the paths can be configured in several ways.\n\n1. Suppose that it is desired to download all data to a different folder, for example a different disk.\nThe data path can be configured by setting the environment variable `DATA_PATH`, which defaults to `./data`.\n\n2. For fine-grained control over the path of a particular dataset, set `dataset.data_dir` in the config. For example, if the LRA ListOps files are located in `/home/lra/listops-1000/` instead of the default `./data/listops/`,\npass in `+dataset.data_dir=/home/lra/listops-1000` on the command line or modify the config file directly.\n\n3. As a simple workaround, softlinks can be set, e.g. `ln -s /home/lra/listops-1000 ./data/listops`\n\n\n# Data Preparation\n\nDatasets that must be manually downloaded include [LRA](#long-range-arena-lra), [WikiText-103](#wikitext-103), [BIDMC](#bidmc), and [other audio datasets](#other-audio) used in SaShiMi.\n\nBy default, these should go under `$DATA_PATH/`, which defaults to `./data`.  For the remainder of this README, these are used interchangeably.\n\n## Long Range Arena (LRA)\n\nLRA can be downloaded from the [GitHub page](https://github.com/google-research/long-range-arena).\nThese datasets should be organized as follows:\n```\n$DATA_PATH/\n  pathfinder/\n    pathfinder32/\n    pathfinder64/\n    pathfinder128/\n    pathfinder256/\n  aan/\n  listops/\n```\nThe other two datasets in the suite (\"Image\" or grayscale sequential CIFAR-10; \"Text\" or char-level IMDB sentiment classification) are both auto-downloaded.\n\n## Speech Commands (SC)\n\nThe full SC dataset is auto-downloaded into `./data/SpeechCommands/`.\nSpecific subsets such as the SC10 subset can be toggled in the config or command line.\n\nFor the SC09 audio generation dataset, copy the digit subclasses of the `./data/SpeechCommands` folder into `data/sc09/{zero,one,two,three,four,five,six,seven,eight,nine}`. Also copy the `./data/SpeechCommands/{validation_list,test_list}.txt` files.\n\n## WikiText-103\n\nThe WikiText-103 la"
+        },
+        {
+          "filename": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/prepare/bidmc/README.md",
+          "preview": "Respiratory Rate:\nhttps://zenodo.org/record/4001463/files/BIDMC32RR_TRAIN.ts\nhttps://zenodo.org/record/4001463/files/BIDMC32RR_TEST.ts\n\nHeart Rate:\nhttps://zenodo.org/record/4001456/files/BIDMC32HR_TRAIN.ts\nhttps://zenodo.org/record/4001456/files/BIDMC32HR_TEST.ts\n\nBlood Oxygen Saturation:\nhttps://zenodo.org/record/4001464/files/BIDMC32SpO2_TRAIN.ts\nhttps://zenodo.org/record/4001464/files/BIDMC32SpO2_TEST.ts\n\n1. Create folder `data/bidmc` (relative to repo base)\n2. Download the above datasets into `data/bidmc/RR`, `data/bidmc/HR`, `data/bidmc/SpO2`\n3. Copy processing scripts `cp src/dataloaders/prepare/bidmc/{process_data.py,data_loader.py} data/bidmc`\n4. Run script `cd data/bidmc && python process_data.py`\n"
+        },
+        {
+          "filename": "S4D_rainfall_runoff_simulations-main/papercode/src/models/README.md",
+          "preview": "This repository provides a modular and flexible implementation of general deep sequence models.\n\n```\nbaselines/   Ported baseline models\nfunctional/  Mathematical utilities\nhippo/       Utilities for defining HiPPO operators\nnn/          Standalone neural network components (nn.Module)\ns4/          Standalone S4 modules\nsequence/    Modular sequence model interface\n```\n\n<!-- ## HiPPO -->\n<!---->\n<!-- HiPPO is the mathematical framework upon which the papers HiPPO, LSSL, and S4 are built on. -->\n<!-- HiPPO operators are defined in [hippo/hippo.py](hippo/hippo.py). -->\n<!-- Function reconstruction experiments and visualizations are presented in [hippo/visualizations.py](hippo/visualizations.py). -->\n\n## S4\n\nIn v3, a standalone implementation of S4 could be found inside `s4/`. It has been moved to [/models/s4/](/models/s4/).\nThe fully tested S4 implementation is inside [sequence/](sequence/).\n\n## Modular Sequence Model Interface\n\nA general deep sequence model framework can be found in [sequence/](sequence/).\nAll models and experiments that this repository official supports used this framework.\nSee [sequence/README.md](sequence/) for more information.\n\n## Baselines\nOther sequence models are easily incorporated into this repository,\nand several other baselines have been ported.\nThese include CNNs such as [CKConv](https://arxiv.org/abs/2102.02611) and continuous-time/RNN models such as [UnICORNN](https://arxiv.org/abs/2103.05487) and [LipschitzRNN](https://arxiv.org/abs/2006.12070).\n\nModels and datasets can be flexibly interchanged.\nExamples:\n```\npython -m train pipeline=cifar model=ckconv\npython -m train pipeline=mnist model=lipschitzrnn\n```\n\nThe distinction between baselines in `baselines/` and models in `sequence/` is that\nthe baselines do not necessarily subscribe to the modular `SequenceModule` interface,\nand are usually monolithic end-to-end models adapted from other codebases.\n"
+        },
+        {
+          "filename": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/exprnn/README.md",
+          "preview": "Original code from https://github.com/Lezcano/expRNN\n\nThis was extracted around early 2020 and may not be the most recent version, but is compatible with this codebase.\n"
+        },
+        {
+          "filename": "S4D_rainfall_runoff_simulations-main/papercode/src/models/s4/README.md",
+          "preview": "The standalone S4 implementation used to live here, but has been moved to [models/s4](/models/s4).\n"
+        },
+        {
+          "filename": "S4D_rainfall_runoff_simulations-main/papercode/src/models/sequence/README.md",
+          "preview": "This folder contains implementations of a general sequence modeling framework.\n\n```\nbase.py      Base SequenceModule interface\nbackbones/   Modular DNN backbones with flexible configuration\nattention/   Implementations of attention variants\nconvs/       Implementations of basic (local) convolutions\nkernels/     Modules for wide conv kernels that S4 and related works use\nrnns/        Implementations of RNN models\nmodules/     Other sequence-to-sequence modules\n```\n\n# Modular Sequence Model Interface\n\nThis README provides a basic overview of the sequence model source code.\nIt is recommended to see the [config README](/configs/model/README.md) for running experiments with these models.\n\n\n## SequenceModule\nThe SequenceModule class ([base.py](base.py)) is the abstract interface that all sequence models adhere to.\nIn this codebase, sequence models are defined as a sequence-to-sequence map of shape `(batch size, sequence length, model dimension)` to `(batch size, sequence length, output dimension)`.\n\nThe SequenceModule comes with other methods such as `step` which is meant for autoregressive settings, and logic to carry optional hidden states (for stateful models such as RNNs or S4).\n\nTo add a new model to this codebase, subclass `SequenceModule` and implement the required methods.\n\n## SequenceModel\nThe `SequenceModel` class ([model.py](model.py)) is the main backbone with configurable options for residual function, normalization placement, etc.\n\nSequenceModel accepts a black box config for a layer. Compatible layers are SequenceModules (i.e. composable sequence transformations) found under this `sequence/` folder.\n\n## Layers\n\n### S4 (and other convolution kernels)\n\nThe end-to-end S4 model consists of a vanilla convolution block [modules/s4block.py](modules/s4block.py) that accepts any convolution kernel.\nThese kernels are defined under [kernels/](kernels/), including S4 variants ([kernels/ssm.py](./kernels/ssm.py)) and other generic convolution kernels ([kernels/kernel.py](./kernels/kernel.py)).\n\n### Attention and Convolutions\n\nVariants of attention (standard MHA as well as [Linear Attention](https://arxiv.org/abs/2006.16236) and [Performer](https://arxiv.org/abs/2009.14794)) are under [attention/](attention/).\nSimple Conv1D and Conv2D wrappers are under [convs/](convs/).\n\n### RNNs\n\nThis codebase also contains a modular implementation of many RNN cells.\nThese include HiPPO-RNN cells from the original [HiPPO paper](https://arxiv.org/abs/2008.07669).\n\nSome example"
+        }
+      ],
+      "doi_references": [],
+      "source_urls": [
+        "https://arxiv.org/abs/2006.12070).",
+        "https://arxiv.org/abs/2006.16236)",
+        "https://arxiv.org/abs/2008.07669),",
+        "https://arxiv.org/abs/2008.07669).",
+        "https://arxiv.org/abs/2009.14794))",
+        "https://arxiv.org/abs/2101.05186),",
+        "https://arxiv.org/abs/2102.02611)",
+        "https://arxiv.org/abs/2103.05487)",
+        "https://arxiv.org/abs/2110.13985",
+        "https://arxiv.org/abs/2111.00396",
+        "https://arxiv.org/abs/2206.11893",
+        "https://arxiv.org/abs/2206.12037).",
+        "https://arxiv.org/abs/2209.10655)",
+        "https://drive.google.com/file/d/1XqpxE6cthIxKYviSmR703yU45vdQ1oHT/view?usp=sharing)",
+        "https://github.com/HazyResearch/state-spaces/issues/23",
+        "https://github.com/Lezcano/expRNN",
+        "https://github.com/google-research/long-range-arena).",
+        "https://github.com/kimiyoung/transformer-xl).",
+        "https://github.com/kratzert/lstm_for_pub).",
+        "https://github.com/seitalab/dnn_ecg_comparison)",
+        "https://huggingface.co/krandiash/sashimi-release/tree/main/checkpoints).",
+        "https://hydra.cc/docs/advanced/instantiate_objects/overview/)",
+        "https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html)).",
+        "https://pytorch.org/tutorials/beginner/basics/data_tutorial.html),",
+        "https://ral.ucar.edu/solutions/products/camels).",
+        "https://raw.githubusercontent.com/kimiyoung/transformer-xl/master/getdata.sh",
+        "https://www.hydroshare.org/).",
+        "https://zenodo.org/record/4001456/files/BIDMC32HR_TEST.ts",
+        "https://zenodo.org/record/4001456/files/BIDMC32HR_TRAIN.ts",
+        "https://zenodo.org/record/4001463/files/BIDMC32RR_TEST.ts",
+        "https://zenodo.org/record/4001463/files/BIDMC32RR_TRAIN.ts",
+        "https://zenodo.org/record/4001464/files/BIDMC32SpO2_TEST.ts",
+        "https://zenodo.org/record/4001464/files/BIDMC32SpO2_TRAIN.ts"
+      ],
+      "source_identity_verified": false,
+      "archive_publication_date_verified": false
+    }
+  },
+  "notes": [
+    "Original ZIP archives were inspected without extraction.",
+    "No original files were modified.",
+    "Embedded links are candidate references, not verified sources.",
+    "ZIP file timestamps are not authoritative publication dates.",
+    "No scientific execution or reproduction is claimed."
+  ],
+  "generated_at_utc": "2026-11-11T03:01:47.310911+00:00"
+}

@@ -1,0 +1,60 @@
+{
+  "step": 98,
+  "package_id": "E10",
+  "test_type": "isolated_module_import_baseline",
+  "python_executable": "C:\\Users\\MUNAH\\miniconda3\\envs\\code_decay\\python.exe",
+  "results": [
+    {
+      "module": "numpy",
+      "status": "PASS",
+      "return_code": 0,
+      "stdout": "IMPORT_SUCCESS\n",
+      "stderr": ""
+    },
+    {
+      "module": "pandas",
+      "status": "PASS",
+      "return_code": 0,
+      "stdout": "IMPORT_SUCCESS\n",
+      "stderr": ""
+    },
+    {
+      "module": "sklearn",
+      "status": "PASS",
+      "return_code": 0,
+      "stdout": "IMPORT_SUCCESS\n",
+      "stderr": ""
+    },
+    {
+      "module": "tensorflow",
+      "status": "FAIL",
+      "return_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 2, in <module>\n  File \"C:\\Users\\MUNAH\\miniconda3\\envs\\code_decay\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'tensorflow'\n"
+    },
+    {
+      "module": "keras",
+      "status": "FAIL",
+      "return_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 2, in <module>\n  File \"C:\\Users\\MUNAH\\miniconda3\\envs\\code_decay\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'keras'\n"
+    },
+    {
+      "module": "mcfly",
+      "status": "FAIL",
+      "return_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 2, in <module>\n  File \"C:\\Users\\MUNAH\\miniconda3\\envs\\code_decay\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'mcfly'\n"
+    },
+    {
+      "module": "prg",
+      "status": "FAIL",
+      "return_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 2, in <module>\n  File \"C:\\Users\\MUNAH\\miniconda3\\envs\\code_decay\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'prg'\n"
+    }
+  ],
+  "research_scripts_executed": false,
+  "packages_installed": false,
+  "note": "Import failures establish environment readiness barriers, not necessarily incompatibility or code decay."
+}

@@ -1,0 +1,122 @@
+{
+  "step": 103,
+  "package_id": "E10",
+  "test_type": "isolated_original_function_execution",
+  "records": [
+    {
+      "filename": "Deep_learning_loop_all_species.py",
+      "source_sha256": "72f1cb90ab2d01a7d15ce352edb9cc6951cf59e151c7fb32b47c7f07f70b4bc0",
+      "function": "get_shuffled_indices",
+      "tests": [
+        {
+          "input_size": 0,
+          "status": "PASS",
+          "result": []
+        },
+        {
+          "input_size": 1,
+          "status": "PASS",
+          "result": [
+            0
+          ]
+        },
+        {
+          "input_size": 5,
+          "status": "PASS",
+          "result": [
+            4,
+            2,
+            1,
+            0,
+            3
+          ]
+        },
+        {
+          "input_size": 20,
+          "status": "PASS",
+          "result": [
+            16,
+            18,
+            3,
+            8,
+            19,
+            10,
+            7,
+            14,
+            12,
+            1,
+            5,
+            2,
+            15,
+            17,
+            4,
+            6,
+            11,
+            9,
+            0,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "filename": "Raw_preds.py",
+      "source_sha256": "ebc7ce3e5d1b8f84a81d11f0c7c9e0eac45e05aec8ae47039a021253508fd944",
+      "function": "get_shuffled_indices",
+      "tests": [
+        {
+          "input_size": 0,
+          "status": "PASS",
+          "result": []
+        },
+        {
+          "input_size": 1,
+          "status": "PASS",
+          "result": [
+            0
+          ]
+        },
+        {
+          "input_size": 5,
+          "status": "PASS",
+          "result": [
+            4,
+            2,
+            1,
+            0,
+            3
+          ]
+        },
+        {
+          "input_size": 20,
+          "status": "PASS",
+          "result": [
+            16,
+            18,
+            3,
+            8,
+            19,
+            10,
+            7,
+            14,
+            12,
+            1,
+            5,
+            2,
+            15,
+            17,
+            4,
+            6,
+            11,
+            9,
+            0,
+            13
+          ]
+        }
+      ]
+    }
+  ],
+  "full_scientific_workflow_executed": false,
+  "published_results_reproduced": false,
+  "note": "Synthetic-input function testing demonstrates only limited component-level execution."
+}

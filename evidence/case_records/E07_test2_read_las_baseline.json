@@ -1,0 +1,17 @@
+{
+  "archive_id": "E07",
+  "component": "DetailView",
+  "original_file": "read_las.py",
+  "original_sha256": "c169df532786c0e7e014656239218b78ea4fe6b932ca8b3d79aab91a9dbffb88",
+  "dependencies_detected": {
+    "numpy": true,
+    "laspy": false
+  },
+  "test_input": "Synthetic LAS fixture, four points",
+  "original_source_modified": false,
+  "execution_status": "FAIL",
+  "exit_code": 1,
+  "elapsed_seconds": 0.624,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\MUNAH\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E07\\test2\\run_read_las_test.py\", line 3, in <module>\n    import laspy\nModuleNotFoundError: No module named 'laspy'\n"
+}

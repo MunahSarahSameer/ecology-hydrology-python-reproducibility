@@ -1,0 +1,117 @@
+{
+  "step": 119,
+  "package_id": "H07",
+  "test_type": "original_infiltration_source_inspection",
+  "records": [
+    {
+      "filename": "sahg-PyTOPKAPI-6d8183b/pytopkapi/infiltration.py",
+      "sha256": "7e5c714801bf4f53490e9ae40676db9c989b07fc232b61f624d0782169d041ee",
+      "total_lines": 150,
+      "imports": [
+        "numpy",
+        {
+          "module": "scipy.optimize",
+          "level": 0,
+          "names": [
+            "fsolve"
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "_green_ampt_cum_eq",
+          "line": 7,
+          "end_line": 14,
+          "arguments": [
+            "F_t1",
+            "F_t0",
+            "psi",
+            "dtheta",
+            "K",
+            "dt"
+          ]
+        },
+        {
+          "name": "_green_ampt_infiltration_rate",
+          "line": 16,
+          "end_line": 50,
+          "arguments": [
+            "F",
+            "psi",
+            "eff_theta",
+            "eff_sat",
+            "K"
+          ]
+        },
+        {
+          "name": "green_ampt_cum_infiltration",
+          "line": 52,
+          "end_line": 150,
+          "arguments": [
+            "rain",
+            "psi",
+            "eff_theta",
+            "eff_sat",
+            "K",
+            "dt",
+            "F_t0"
+          ]
+        }
+      ],
+      "source_executed": false
+    },
+    {
+      "filename": "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_infiltration.py",
+      "sha256": "0bda57069eebab077d0138f6c4dad4bbdc18d6a8a31dfc76e566b60f7ef69d42",
+      "total_lines": 94,
+      "imports": [
+        "numpy",
+        {
+          "module": "scipy.optimize",
+          "level": 0,
+          "names": [
+            "fsolve"
+          ]
+        },
+        {
+          "module": "pytopkapi.infiltration",
+          "level": 0,
+          "names": [
+            "_green_ampt_cum_eq"
+          ]
+        },
+        {
+          "module": "pytopkapi.infiltration",
+          "level": 0,
+          "names": [
+            "green_ampt_cum_infiltration"
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "test_basic_green_ampt",
+          "line": 10,
+          "end_line": 32,
+          "arguments": []
+        },
+        {
+          "name": "test_cum_green_ampt_variable_rainfall",
+          "line": 34,
+          "end_line": 94,
+          "arguments": []
+        }
+      ],
+      "source_executed": false
+    }
+  ],
+  "original_archive_modified": false,
+  "source_executed": false,
+  "dependencies_installed": false,
+  "limitations": [
+    "Static inspection only.",
+    "Runtime dependencies may exist beyond imports.",
+    "Test expectations have not yet been verified.",
+    "No hydrological model has been executed."
+  ]
+}

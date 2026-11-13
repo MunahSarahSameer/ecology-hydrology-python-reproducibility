@@ -1,0 +1,54 @@
+{
+  "step": 208,
+  "candidate": "H03",
+  "previous_record": {
+    "candidate_id": "H03",
+    "discipline": "Hydrology",
+    "project_name": "Hydrological controls",
+    "baseline_status": "FAIL",
+    "recovered_status": "PARTIAL",
+    "previous_finding": "Partial RMSE output; full hyperparameter search timed out",
+    "evidence_files_found": "repositories\\results\\H03_test1_summary.json",
+    "evidence_files_missing": "",
+    "evidence_reviewed_in_step_182": "NO",
+    "full_scientific_workflow_verified": "NO",
+    "published_results_reproduced": "NOT_VERIFIED",
+    "next_action": "Record timeout and decide on bounded recovery",
+    "testing_review_status": "PENDING_REVIEW"
+  },
+  "updated_record": {
+    "candidate_id": "H03",
+    "discipline": "Hydrology",
+    "project_name": "Hydrological controls",
+    "baseline_status": "FAIL",
+    "recovered_status": "PASS_LIMITED",
+    "previous_finding": "The original H03 script encountered a missing scikit-learn dependency, an archived dataset filename mismatch and computational timeouts. The original source specifies 180 hyperparameter combinations with 10-fold cross-validation, requiring 1800 fits in the grid-search stage alone. A separate bounded runner reproduced the original Model 1 feature selection, target and 25-tree Random Forest configuration using 2000 training and 500 testing observations. The runner completed successfully with finite predictions. The original full script and hyperparameter search were not completed, and published results were not reproduced.",
+    "evidence_files_found": "repositories\\results\\H03_test1_summary.json; results/H03_step204_workload_audit.json; results/H03_step205_workload_estimate.json; results/H03_step206_model_input_inspection.json; results/H03_step207_bounded_execution.json",
+    "evidence_files_missing": "",
+    "evidence_reviewed_in_step_182": "NO",
+    "full_scientific_workflow_verified": "NO",
+    "published_results_reproduced": "NOT_VERIFIED",
+    "next_action": "Document bounded model execution separately from the incomplete original full-script run. Do not classify the 1800-fit grid search as recovered.",
+    "testing_review_status": "H03_BOUNDED_MODEL_COMPONENT_VERIFIED"
+  },
+  "component_metrics": {
+    "training_rows": 2000,
+    "testing_rows": 500,
+    "features": [
+      "Rainfall",
+      "Falda_prev",
+      "Storage_prev_6"
+    ],
+    "target": "DS_200H",
+    "n_estimators": 25,
+    "n_jobs": 1,
+    "elapsed_seconds": 0.1862390000023879,
+    "rmse": 0.15126323963665578,
+    "mae": 0.08061733920992001,
+    "r2": 0.2136199793970024,
+    "predictions_finite": true,
+    "prediction_count": 500
+  },
+  "original_full_script_completed": false,
+  "generated_at_utc": "2026-11-11T23:02:21.328549+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "step": 194,
+  "candidate": "E06",
+  "notebook": "Code_Figures/FigS8_SchematicFigure.ipynb",
+  "cell_index": 0,
+  "execution_scope": "First code cell only",
+  "recovery_action": "Made archived ZhenPlot.py available",
+  "source_modified": false,
+  "notebook_sha256": "3027e7ebbc252bc557bf09fd08b02565864f21788e7752496f0237efddd017b6",
+  "module_sha256": "13081f1073303d61796495a5efdcddfeec5dcc8601ef0ff007b3188f5effe305",
+  "python_executable": "C:\\Users\\MUNAH\\miniconda3\\envs\\code_decay\\python.exe",
+  "timestamp_utc": "2026-11-11T03:44:09.412394+00:00",
+  "execution": {
+    "return_code": 1,
+    "stdout": "\u001b[31m---------------------------------------------------------------------------\u001b[39m\n\u001b[31mModuleNotFoundError\u001b[39m                       Traceback (most recent call last)\n\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[1]\u001b[39m\u001b[32m, line 4\u001b[39m\n\u001b[32m      2\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mseaborn\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;28;01mas\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01msns\u001b[39;00m\n\u001b[32m      3\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mmatplotlib\u001b[39;00m\u001b[34;01m.\u001b[39;00m\u001b[34;01mpyplot\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;28;01mas\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mplt\u001b[39;00m\n\u001b[32m----> \u001b[39m\u001b[32m4\u001b[39m \u001b[38;5;28;01mfrom\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mZhenPlot\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;28;01mimport\u001b[39;00m *\n\u001b[32m      6\u001b[39m plt.rcParams.update({\u001b[33m'\u001b[39m\u001b[33mfont.family\u001b[39m\u001b[33m'\u001b[39m:\u001b[33m'\u001b[39m\u001b[33marial\u001b[39m\u001b[33m'\u001b[39m})\n\u001b[32m      7\u001b[39m plt.rcParams[\u001b[33m'\u001b[39m\u001b[33mfont.sans-serif\u001b[39m\u001b[33m'\u001b[39m] = [\u001b[33m'\u001b[39m\u001b[33marial\u001b[39m\u001b[33m'\u001b[39m]\n\n\u001b[36mFile \u001b[39m\u001b[32m~\\AppData\\Local\\Temp\\E06_recovery_comg2jv8\\ZhenPlot.py:4\u001b[39m\n\u001b[32m      1\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mnumpy\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;28;01mas\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mnp\u001b[39;00m\n\u001b[32m      2\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mmatplotlib\u001b[39;00m\u001b[34;01m.\u001b[39;00m\u001b[34;01mpyplot\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;28;01mas\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mplt\u001b[39;00m\n\u001b[32m----> \u001b[39m\u001b[32m4\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mgeopandas\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;28;01mas\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mgpd\u001b[39;00m\n\u001b[32m      5\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mcartopy\u001b[39;00m\u001b[34;01m.\u001b[39;00m\u001b[34;01mcrs\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;28;01mas\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mccrs\u001b[39;00m\n\u001b[32m      6\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mcartopy\u001b[39;00m\u001b[34;01m.\u001b[39;00m\u001b[34;01mfeature\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;28;01mas\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34;01mcfeature\u001b[39;00m\n\n\u001b[31mModuleNotFoundError\u001b[39m: No module named 'geopandas'\n",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 14, in <module>\n  File \"C:\\Users\\MUNAH\\miniconda3\\envs\\code_decay\\Lib\\site-packages\\IPython\\core\\interactiveshell.py\", line 3823, in run_code\n    exec(code_obj, self.user_global_ns, self.user_ns)\n  File \"<ipython-input-1-c4f558b7a4f9>\", line 4, in <module>\n  File \"C:\\Users\\MUNAH\\AppData\\Local\\Temp\\E06_recovery_comg2jv8\\ZhenPlot.py\", line 4, in <module>\n    import geopandas as gpd\nModuleNotFoundError: No module named 'geopandas'\n",
+    "timed_out": false
+  },
+  "limitations": [
+    "Only the first notebook cell was executed.",
+    "No external scientific datasets were used.",
+    "Full notebook executability is not yet established."
+  ]
+}

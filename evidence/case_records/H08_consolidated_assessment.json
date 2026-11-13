@@ -1,0 +1,64 @@
+{
+  "step": 135,
+  "package_id": "H08",
+  "package_name": "pyGSFLOW",
+  "version": "1.0.2",
+  "archive_year": 2022,
+  "zenodo_record": "6468426",
+  "doi": "10.5281/zenodo.6468426",
+  "archive_sha256": "ebbc960c11470056493b1c82ae461f266f333240e1ec6dcc4c85ba9e0f10568b",
+  "archive_integrity_verified": true,
+  "syntax_assessment": {
+    "python_files": 70,
+    "syntax_pass": 70,
+    "syntax_fail": 0
+  },
+  "dependency_assessment": {
+    "entries_assessed": 19,
+    "discoverable": 8,
+    "missing": 10,
+    "not_assessed": 1,
+    "interpretation": "Missing packages indicate an incomplete current environment, not necessarily code decay."
+  },
+  "original_test_assessment": {
+    "distinct_original_tests_attempted": 4,
+    "initial_passes": 4,
+    "repeat_runs": 5,
+    "repeat_test_executions": 20,
+    "repeat_passes": 20,
+    "all_repeats_passed": true,
+    "supplementary_results_identical": true
+  },
+  "execution_method": "Controlled subprocess execution of unmodified archived PRMS record classes and original tests, with broad package initialisers bypassed.",
+  "classification": "PARTIALLY_EXECUTABLE_COMPONENT_LEVEL",
+  "full_package_execution": "NOT_VERIFIED",
+  "scientific_results_reproduction": "NOT_ATTEMPTED",
+  "recovery_actions": [
+    "Inspected original imports and dependency paths.",
+    "Identified minimal original modules required.",
+    "Constructed a controlled subprocess test harness.",
+    "Bypassed broad package initialisers.",
+    "Repeated four original tests five times."
+  ],
+  "source_modification": false,
+  "dependency_installation_for_test": false,
+  "evidence_files": {
+    "archive": "H08_initial_archive_inspection.json",
+    "syntax": "H08_syntax_dependency_baseline.json",
+    "dependencies": "H08_dependency_availability.json",
+    "test_screening": "H08_original_test_screening.json",
+    "implementation": "H08_prms_implementation_dependency_trace.json",
+    "supporting_modules": "H08_supporting_module_dependency_trace.json",
+    "execution": "H08_original_prms_record_execution.json",
+    "repeatability": "H08_prms_test_repeatability.json"
+  },
+  "limitations": [
+    "Four tests are not representative of all 50 archived tests.",
+    "Normal package import was not demonstrated.",
+    "Full hydrological model execution was not demonstrated.",
+    "Missing dependencies were not tested for compatibility.",
+    "Repeatability does not establish published-result reproduction.",
+    "Source-level independence from other packages remains to be audited."
+  ],
+  "generated_at_utc": "2026-11-11T02:03:43.082804+00:00"
+}

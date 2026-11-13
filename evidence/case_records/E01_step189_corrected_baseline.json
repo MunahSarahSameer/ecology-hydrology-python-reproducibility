@@ -1,0 +1,15 @@
+{
+  "candidate": "E01",
+  "step": 189,
+  "test_type": "original_module_cli_help",
+  "previous_failure": "Missing package context in test harness",
+  "source_modified": false,
+  "packages_installed": false,
+  "generated_at_utc": "2026-11-11T22:35:43.134773+00:00",
+  "return_code": 0,
+  "timed_out": false,
+  "stdout": "usage: consolidate_observations.py [-h]\n                                   [--observations-folder OBSERVATIONS_FOLDER [OBSERVATIONS_FOLDER ...]]\n                                   [--destination DESTINATION]\n                                   [--species-file SPECIES_FILE]\n                                   [--min-num-observations MIN_NUM_OBSERVATIONS]\n\nConsolidate observations into single CSV file\n\noptions:\n  -h, --help            show this help message and exit\n  --observations-folder OBSERVATIONS_FOLDER [OBSERVATIONS_FOLDER ...]\n                        Base folder(s) to look for observation CSV files in\n  --destination DESTINATION\n                        Destination to save CSV file to\n  --species-file SPECIES_FILE\n                        Optional CSV species definition file with species name\n                        (and optional id) to limit to\n  --min-num-observations MIN_NUM_OBSERVATIONS\n                        Minimum number of observations required per species\n                        for it to be considered\n",
+  "stderr": "",
+  "restored_python_files": 63,
+  "outcome": "CLI_HELP_PASS"
+}

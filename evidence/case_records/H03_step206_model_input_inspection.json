@@ -1,0 +1,516 @@
+{
+  "candidate": "H03",
+  "step": 206,
+  "execution_attempted": false,
+  "model_training_attempted": false,
+  "generated_at_utc": "2026-11-11T23:00:18.072989+00:00",
+  "script_path": "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/01_RF_model.py",
+  "total_source_lines": 248,
+  "syntax_status": "PASS",
+  "selected_source_lines": [
+    {
+      "line": 1,
+      "text": ""
+    },
+    {
+      "line": 2,
+      "text": "import numpy as np"
+    },
+    {
+      "line": 3,
+      "text": "import pandas as pd"
+    },
+    {
+      "line": 4,
+      "text": "from matplotlib import pyplot as plt"
+    },
+    {
+      "line": 5,
+      "text": "from sklearn.ensemble import RandomForestRegressor"
+    },
+    {
+      "line": 6,
+      "text": "from sklearn.model_selection import train_test_split"
+    },
+    {
+      "line": 7,
+      "text": "from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error"
+    },
+    {
+      "line": 8,
+      "text": "from sklearn.model_selection import (GridSearchCV, KFold,ShuffleSplit,"
+    },
+    {
+      "line": 9,
+      "text": "                                     cross_val_score,cross_validate)"
+    },
+    {
+      "line": 10,
+      "text": ""
+    },
+    {
+      "line": 11,
+      "text": ""
+    },
+    {
+      "line": 12,
+      "text": "#〈H,θ_6,h_a 〉 MODEL 1"
+    },
+    {
+      "line": 13,
+      "text": "#〈H,θ_100,h_a 〉 MODEL 2"
+    },
+    {
+      "line": 14,
+      "text": "#〈H,θ_6,θ_100 〉 MODEL 3"
+    },
+    {
+      "line": 15,
+      "text": "#〈θ_6,θ_100,h_a 〉 MODEL 4"
+    },
+    {
+      "line": 16,
+      "text": ""
+    },
+    {
+      "line": 17,
+      "text": "input_file='RF_dataset.csv'"
+    },
+    {
+      "line": 18,
+      "text": "features=['H','F','L','S6','S100']"
+    },
+    {
+      "line": 19,
+      "text": "Ylabel=['DS100','DS100H','DS200','DS200H']"
+    },
+    {
+      "line": 20,
+      "text": ""
+    },
+    {
+      "line": 21,
+      "text": "data=pd.read_csv(input_file,delimiter=';')"
+    },
+    {
+      "line": 22,
+      "text": ""
+    },
+    {
+      "line": 23,
+      "text": "####################### MODEL 1 ##############################"
+    },
+    {
+      "line": 24,
+      "text": "matX=np.column_stack([data.Rainfall.to_numpy(),"
+    },
+    {
+      "line": 25,
+      "text": "                        data.Falda_prev.to_numpy(),"
+    },
+    {
+      "line": 26,
+      "text": "                        data.Storage_prev_6.to_numpy()])"
+    },
+    {
+      "line": 27,
+      "text": "                       "
+    },
+    {
+      "line": 28,
+      "text": "####################### MODEL 2 ##############################"
+    },
+    {
+      "line": 29,
+      "text": "# matX=np.column_stack([data.Rainfall.to_numpy(),"
+    },
+    {
+      "line": 30,
+      "text": "#                         data.Falda_prev.to_numpy(),"
+    },
+    {
+      "line": 31,
+      "text": "#                         data.Storage_prev_100.to_numpy()])"
+    },
+    {
+      "line": 32,
+      "text": ""
+    },
+    {
+      "line": 33,
+      "text": "####################### MODEL 3 ##############################"
+    },
+    {
+      "line": 34,
+      "text": "# matX=np.column_stack([data.Rainfall.to_numpy(),"
+    },
+    {
+      "line": 35,
+      "text": "#                        data.Storage_prev_6.to_numpy(),"
+    },
+    {
+      "line": 36,
+      "text": "#                        data.Storage_prev_100.to_numpy()])"
+    },
+    {
+      "line": 37,
+      "text": "                       "
+    },
+    {
+      "line": 38,
+      "text": "####################### MODEL 4 ##############################"
+    },
+    {
+      "line": 39,
+      "text": "# matX=np.column_stack([data.Storage_prev_6.to_numpy(),"
+    },
+    {
+      "line": 40,
+      "text": "#                         data.Falda_prev.to_numpy(),"
+    },
+    {
+      "line": 41,
+      "text": "#                         data.Storage_prev_100.to_numpy()])"
+    },
+    {
+      "line": 42,
+      "text": ""
+    },
+    {
+      "line": 43,
+      "text": "#############################################################"
+    },
+    {
+      "line": 44,
+      "text": "matY=data.DS_200H.to_numpy() "
+    },
+    {
+      "line": 45,
+      "text": ""
+    },
+    {
+      "line": 46,
+      "text": ""
+    },
+    {
+      "line": 47,
+      "text": "####################### RANDOM FOREST##############################"
+    },
+    {
+      "line": 48,
+      "text": "Xtrain0, Xtest0, Ytrain0, Ytest0 = train_test_split(matX,matY,train_size=0.8,test_size=0.2,shuffle=True, random_state=42)"
+    },
+    {
+      "line": 49,
+      "text": ""
+    },
+    {
+      "line": 50,
+      "text": "X=Xtrain0"
+    },
+    {
+      "line": 51,
+      "text": "y=Ytrain0"
+    },
+    {
+      "line": 52,
+      "text": ""
+    },
+    {
+      "line": 53,
+      "text": "skf= KFold(n_splits=10, shuffle=True, random_state=42)"
+    },
+    {
+      "line": 54,
+      "text": ""
+    },
+    {
+      "line": 55,
+      "text": "rfc = RandomForestRegressor(n_estimators=25,random_state=42, n_jobs=-1)"
+    },
+    {
+      "line": 56,
+      "text": ""
+    },
+    {
+      "line": 57,
+      "text": ""
+    },
+    {
+      "line": 58,
+      "text": "scores = cross_val_score(rfc,X, y, cv=skf, scoring='neg_root_mean_squared_error')"
+    },
+    {
+      "line": 59,
+      "text": ""
+    },
+    {
+      "line": 60,
+      "text": "print(\"%0.3f RMSE with a standard deviation of %0.3f\" % (scores.mean(), scores.std()))"
+    },
+    {
+      "line": 61,
+      "text": ""
+    },
+    {
+      "line": 62,
+      "text": "cv_score = cross_validate(rfc,X, y, cv=skf, scoring='neg_root_mean_squared_error',return_estimator =True)"
+    },
+    {
+      "line": 63,
+      "text": ""
+    },
+    {
+      "line": 64,
+      "text": ""
+    },
+    {
+      "line": 65,
+      "text": "# improve by modify the defult parameters:"
+    },
+    {
+      "line": 66,
+      "text": "train_acc = []"
+    },
+    {
+      "line": 67,
+      "text": "test_acc = []"
+    },
+    {
+      "line": 68,
+      "text": "temp_train_acc = []"
+    },
+    {
+      "line": 69,
+      "text": "temp_test_acc = []"
+    },
+    {
+      "line": 70,
+      "text": ""
+    },
+    {
+      "line": 71,
+      "text": "trees_grid = [1,2,3,4,5,6,7,8,9, 10, 15, 20, 25, 30,50,75,100]"
+    },
+    {
+      "line": 72,
+      "text": ""
+    },
+    {
+      "line": 73,
+      "text": "for ntrees in trees_grid:"
+    },
+    {
+      "line": 74,
+      "text": "    rfc = RandomForestRegressor(n_estimators=ntrees, random_state=42, n_jobs=-1)"
+    },
+    {
+      "line": 75,
+      "text": "    temp_train_acc = []"
+    },
+    {
+      "line": 76,
+      "text": "    temp_test_acc = []"
+    },
+    {
+      "line": 77,
+      "text": "    for train_index, test_index in skf.split(X, y):"
+    },
+    {
+      "line": 78,
+      "text": "        X_train, X_test = X[train_index], X[test_index]"
+    },
+    {
+      "line": 79,
+      "text": "        y_train, y_test = y[train_index], y[test_index]"
+    },
+    {
+      "line": 80,
+      "text": "        rfc.fit(X_train, y_train)"
+    },
+    {
+      "line": 81,
+      "text": "        y_train_p  =rfc.predict(X_train)"
+    },
+    {
+      "line": 82,
+      "text": "        y_test_p =rfc.predict(X_test)"
+    },
+    {
+      "line": 83,
+      "text": "        MSE1=mean_squared_error(y_train_p, y_train)"
+    },
+    {
+      "line": 84,
+      "text": "        MSE2=mean_squared_error(y_test_p, y_test)"
+    },
+    {
+      "line": 85,
+      "text": "        temp_train_acc.append(MSE1**0.5)"
+    },
+    {
+      "line": 86,
+      "text": "        temp_test_acc.append(MSE2**0.5)"
+    },
+    {
+      "line": 87,
+      "text": "    train_acc.append(temp_train_acc)"
+    },
+    {
+      "line": 88,
+      "text": "    test_acc.append(temp_test_acc)"
+    },
+    {
+      "line": 89,
+      "text": "    "
+    },
+    {
+      "line": 90,
+      "text": "train_acc, test_acc = np.asarray(train_acc), np.asarray(test_acc)"
+    },
+    {
+      "line": 205,
+      "text": "                                                        max_features_grid[np.argmax(test_acc.mean(axis=1))]))"
+    },
+    {
+      "line": 206,
+      "text": ""
+    },
+    {
+      "line": 207,
+      "text": "fig, ax = plt.subplots(figsize=(8, 4))"
+    },
+    {
+      "line": 208,
+      "text": "ax.plot(max_features_grid, train_acc.mean(axis=1), alpha=0.5, color='blue', label='train')"
+    },
+    {
+      "line": 209,
+      "text": "ax.plot(max_features_grid, test_acc.mean(axis=1), alpha=0.5, color='red', label='cv_test')"
+    },
+    {
+      "line": 210,
+      "text": "ax.legend(loc='best')"
+    },
+    {
+      "line": 211,
+      "text": "ax.set_ylabel(\"Metric\")"
+    },
+    {
+      "line": 212,
+      "text": "ax.set_xlabel(\"Max_features\");"
+    },
+    {
+      "line": 213,
+      "text": ""
+    },
+    {
+      "line": 214,
+      "text": "################################################################################"
+    },
+    {
+      "line": 215,
+      "text": ""
+    },
+    {
+      "line": 216,
+      "text": "parameters = {'n_estimators':[5,10,20,30],"
+    },
+    {
+      "line": 217,
+      "text": "              'max_features': [1,2,3], "
+    },
+    {
+      "line": 218,
+      "text": "              'min_samples_leaf': [15,20,25], "
+    },
+    {
+      "line": 219,
+      "text": "              'max_depth': [3,4, 5, 6,7]}"
+    },
+    {
+      "line": 220,
+      "text": "rfc =  RandomForestRegressor(random_state=42, n_jobs=-1)"
+    },
+    {
+      "line": 221,
+      "text": "gcv = GridSearchCV(rfc, parameters, n_jobs=-1, cv=skf, verbose=1)"
+    },
+    {
+      "line": 222,
+      "text": "gcv.fit(X, y)"
+    },
+    {
+      "line": 223,
+      "text": ""
+    },
+    {
+      "line": 224,
+      "text": "gcv.best_params_, gcv.best_score_"
+    },
+    {
+      "line": 225,
+      "text": ""
+    },
+    {
+      "line": 226,
+      "text": "################################################################################    "
+    },
+    {
+      "line": 227,
+      "text": ""
+    },
+    {
+      "line": 228,
+      "text": "rfc = RandomForestRegressor(n_estimators=gcv.best_params_['n_estimators'],"
+    },
+    {
+      "line": 229,
+      "text": "                            max_features=gcv.best_params_['max_features'],"
+    },
+    {
+      "line": 230,
+      "text": "                            min_samples_leaf=gcv.best_params_['min_samples_leaf'], "
+    },
+    {
+      "line": 231,
+      "text": "                            max_depth=gcv.best_params_['max_depth'],"
+    },
+    {
+      "line": 232,
+      "text": "                            random_state=42, n_jobs=-1)"
+    },
+    {
+      "line": 233,
+      "text": ""
+    },
+    {
+      "line": 234,
+      "text": "cv_score_update = cross_validate(rfc,X, y, cv=skf, scoring='neg_root_mean_squared_error',return_estimator =True)"
+    },
+    {
+      "line": 235,
+      "text": ""
+    },
+    {
+      "line": 236,
+      "text": "RMSE=[]"
+    },
+    {
+      "line": 237,
+      "text": "for i, (train_index, test_index) in enumerate(skf.split(X)):"
+    },
+    {
+      "line": 238,
+      "text": "    "
+    },
+    {
+      "line": 239,
+      "text": "    Ypred=cv_score_update['estimator'][i].predict(Xtest0)"
+    },
+    {
+      "line": 240,
+      "text": "    "
+    }
+  ]
+}

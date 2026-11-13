@@ -1,0 +1,16 @@
+H02 FLOODSFORMER CPU FORWARD-PASS TEST
+Python: C:\Users\REDACTED_USER\miniconda3\envs\code_decay\python.exe
+Runner SHA256: e53bb491d9d723051bf248c25ef2142eac354547bdf213c9f3b9806438791d98
+Exit code: 1
+Runtime seconds: 3.05
+Success: False
+
+STDOUT:
+
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\h02_cpu_test.py", line 6, in <module>
+    from floodsformer.models.VPTR_modules import VPTREnc, VPTRDec
+ModuleNotFoundError: No module named 'floodsformer'
+

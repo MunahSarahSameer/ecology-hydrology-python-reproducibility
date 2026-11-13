@@ -1,0 +1,57 @@
+{
+  "candidate": "H06",
+  "step": 195,
+  "source": "S4D_rainfall_runoff_simulations-main/analysis/performance_functions.py",
+  "original_source_modified": false,
+  "dependencies_installed": false,
+  "return_code": 0,
+  "timed_out": false,
+  "stdout": "{\"checks\": {\"perfect_nse\": {\"actual\": 1.0, \"expected\": 1.0, \"pass\": true}, \"perfect_kge\": {\"actual\": 1.0, \"expected\": 1.0, \"pass\": true}, \"perfect_bias\": {\"actual\": 0.0, \"expected\": 0.0, \"pass\": true}, \"imperfect_nse\": {\"actual\": 0.6, \"expected\": 0.6, \"pass\": true}, \"imperfect_kge\": {\"actual\": 0.6812315526372372, \"expected\": 0.6812315526372372, \"pass\": true}, \"imperfect_bias\": {\"actual\": 0.0, \"expected\": 0.0, \"pass\": true}, \"negative_value_filtering\": {\"actual\": 1.0, \"expected\": 1.0, \"pass\": true}, \"seed_specific_column\": {\"actual\": 1.0, \"expected\": 1.0, \"pass\": true}}, \"passed\": 8, \"total\": 8}\n",
+  "stderr": "",
+  "generated_at_utc": "2026-11-11T22:45:06.926945+00:00",
+  "checks": {
+    "perfect_nse": {
+      "actual": 1.0,
+      "expected": 1.0,
+      "pass": true
+    },
+    "perfect_kge": {
+      "actual": 1.0,
+      "expected": 1.0,
+      "pass": true
+    },
+    "perfect_bias": {
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    "imperfect_nse": {
+      "actual": 0.6,
+      "expected": 0.6,
+      "pass": true
+    },
+    "imperfect_kge": {
+      "actual": 0.6812315526372372,
+      "expected": 0.6812315526372372,
+      "pass": true
+    },
+    "imperfect_bias": {
+      "actual": 0.0,
+      "expected": 0.0,
+      "pass": true
+    },
+    "negative_value_filtering": {
+      "actual": 1.0,
+      "expected": 1.0,
+      "pass": true
+    },
+    "seed_specific_column": {
+      "actual": 1.0,
+      "expected": 1.0,
+      "pass": true
+    }
+  },
+  "passed": 8,
+  "total": 8,
+  "outcome": "PASS"
+}

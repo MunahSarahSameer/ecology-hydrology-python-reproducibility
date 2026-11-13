@@ -1,0 +1,158 @@
+{
+  "step": 132,
+  "package_id": "H08",
+  "package_name": "pyGSFLOW",
+  "inspection_type": "supporting_module_dependency_trace",
+  "modules": {
+    "gsflow/param_base.py": {
+      "status": "INSPECTED",
+      "archive_member": "gsflow/param_base.py",
+      "sha256": "1804e137ce7975cf2f2de0d59581e0f493bba89b84f2135eeb8e091cdd863633",
+      "line_count": 216,
+      "imports": [
+        {
+          "type": "import",
+          "module": "numpy"
+        },
+        {
+          "type": "from",
+          "module": "utils",
+          "level": 1,
+          "names": [
+            "gsflow_io"
+          ]
+        },
+        {
+          "type": "import",
+          "module": "copy"
+        },
+        {
+          "type": "import",
+          "module": "inspect"
+        }
+      ],
+      "classes": [
+        "ParameterBase"
+      ],
+      "functions": [],
+      "source_preview": "import numpy as np\nfrom .utils import gsflow_io\nimport copy\nimport inspect\n\n\nclass ParameterBase(object):\n    \"\"\"\n    Base class for parameter based files within GSFLOW\n\n    Parameters\n    ----------\n    records_list : list\n        list of ParameterRecord objects\n    name : str, optional\n        parameter file name\n    model_dir : str, optional\n        parameter file directory\n    header : str, optional\n        header for the parameter file\n\n    \"\"\"\n\n    def __init__(self, records_list, name=None, model_dir=None, header=None):\n\n        if name is not None:\n            self.name = name\n\n        if model_dir is not None:\n            self.model_dir = model_dir\n\n        if header is not None:\n            self.header = header\n\n        self._records_list = []\n        if records_list is not None:\n            self._records_list = copy.deepcopy(records_list)\n\n    @property\n    def record_names(self):\n        rn = []\n        if self._records_list is not None:\n            if len(self._records_list) > 0:\n                for rec in self._records_list:\n                    rn.append(rec.name.lower())\n        return rn\n\n    def get_record(self, name, rectype):\n        \"\"\"\n        Method to get records\n\n        Parameters\n        ----------\n        name : str\n            name of record\n        rectype : class object\n            ParameterRecord or ControlRecord\n\n        Returns\n        -------\n            RecordBase object\n\n        \"\"\"\n        record = gsflow_io.find_parameter(name, self._records_list)\n\n        if isinstance(record, rectype):\n            return record\n        else:\n            msg = \"The record does not exist...\"\n            gsflow_io._warning(msg, inspect.getframeinfo(inspect.currentframe()))\n            return None\n\n    def get_values(self, name):\n        \"\"\"\n        Method to get record values\n\n        Parameters\n        ----------\n        name : str\n            name of record\n\n        Returns\n        -------\n            np.ndarray\n\n        \"\"\"\n        record = gsflow_io.find_parameter(name, self._records_list)\n\n        if record is None:\n            err = \"The record does not exist...\"\n            warnings.warn_explicit(err, UserWarning, \"param_base.py\", 93)\n            return None\n\n        elif isinstance(record.values, np.ndarray):\n            return record.values\n\n        else:\n            msg = \"The values does not exist...\"\n            gsflow_io._warning(msg, inspect.getframeinfo(inspect.currentframe()))\n            return None"
+    },
+    "gsflow/utils/__init__.py": {
+      "status": "INSPECTED",
+      "archive_member": "gsflow/utils/__init__.py",
+      "sha256": "c901b2c36699c72f177f22404ce5ffff22aabffc552bcd62a074c2baf4af7422",
+      "line_count": 8,
+      "imports": [
+        {
+          "type": "from",
+          "module": "gsflow_io",
+          "level": 1,
+          "names": [
+            "find_parameter",
+            "get_file_abs",
+            "_get_relative_path"
+          ]
+        },
+        {
+          "type": "from",
+          "module": "constants",
+          "level": 1,
+          "names": [
+            "GsConstant"
+          ]
+        },
+        {
+          "type": "from",
+          "module": "rasters",
+          "level": 1,
+          "names": [
+            "Rasters"
+          ]
+        },
+        {
+          "type": "from",
+          "module": "sfr_renumber",
+          "level": 1,
+          "names": [
+            "SfrRenumber"
+          ]
+        },
+        {
+          "type": "from",
+          "module": null,
+          "level": 1,
+          "names": [
+            "mfreadnam"
+          ]
+        },
+        {
+          "type": "from",
+          "module": null,
+          "level": 1,
+          "names": [
+            "gsflow_io"
+          ]
+        },
+        {
+          "type": "from",
+          "module": null,
+          "level": 1,
+          "names": [
+            "vtk"
+          ]
+        },
+        {
+          "type": "from",
+          "module": null,
+          "level": 1,
+          "names": [
+            "netcdf"
+          ]
+        }
+      ],
+      "classes": [],
+      "functions": [],
+      "source_preview": "from .gsflow_io import find_parameter, get_file_abs, _get_relative_path\nfrom .constants import GsConstant\nfrom .rasters import Rasters\nfrom .sfr_renumber import SfrRenumber\nfrom . import mfreadnam\nfrom . import gsflow_io\nfrom . import vtk\nfrom . import netcdf"
+    },
+    "gsflow/utils/gsflow_io.py": {
+      "status": "INSPECTED",
+      "archive_member": "gsflow/utils/gsflow_io.py",
+      "sha256": "f0054fe1dae993c40553f114ffc094d408a22fdeaab34ee539531d989dea4450",
+      "line_count": 163,
+      "imports": [
+        {
+          "type": "import",
+          "module": "os"
+        },
+        {
+          "type": "import",
+          "module": "warnings"
+        },
+        {
+          "type": "import",
+          "module": "inspect"
+        }
+      ],
+      "classes": [],
+      "functions": [
+        "get_file_abs",
+        "_get_relative_path",
+        "find_parameter",
+        "line_strip",
+        "multi_line_strip",
+        "_warning"
+      ],
+      "source_preview": "import os\nimport warnings\nimport inspect\n\nwarnings.simplefilter(\"always\", UserWarning)\nwarnings.simplefilter(\"always\", PendingDeprecationWarning)\nwarnings.simplefilter(\"always\", DeprecationWarning)\n\n\ndef get_file_abs(control_file=None, model_ws=None, fn=None):\n    \"\"\"\n    Utility method to create file's absolute path\n\n    Parameters\n    ----------\n    control_file : str\n        absoulute path to the control file\n    model_ws : str\n        relative path to model_ws\n    fn : str\n        path to file\n\n    Returns\n    -------\n        abs_file : str\n            absolute file path\n\n    \"\"\"\n\n    if fn is not None:\n        fn = os.path.normpath(fn)\n        if os.path.isabs(fn):\n            return fn\n\n    if model_ws is not None:\n        sws = os.path.abspath(os.getcwd())\n        ws = os.path.join(sws, model_ws)\n        if fn is None:\n            abs_file = ws\n        else:\n            abs_file = os.path.join(ws, fn)\n    else:\n        control_folder = os.path.dirname(control_file)\n        abs_file = os.path.abspath(os.path.join(control_folder, fn))\n\n    return abs_file\n\n\ndef _get_relative_path(control, fn):\n    \"\"\"\n    If relative paths are used, they should be relative to the control file\n\n    Parameters\n    ----------\n    control : str\n        control file path and name\n    fn : str\n        file path and name\n\n    Returns\n    -------\n        str : relative path\n\n    \"\"\"\n    control_file_abs = os.path.abspath(control)\n    fn_abs = os.path.abspath(fn)\n    # find common path\n    rel_dir = os.path.relpath(\n        os.path.dirname(fn), os.path.dirname(control_file_abs)\n    )\n    rel_path = os.path.join(rel_dir + os.path.basename(fn))\n    return rel_path\n\n\ndef find_parameter(name, parameters_list):\n    \"\"\"\n    Utility method to loop through parameters to find values\n    etc...\n\n    Parameters\n    ----------\n    name : str\n        parameter name\n    parameters_list : list\n        list of ParameterRecord objects or ControlRecord objects\n\n    Returns\n    -------\n    rec : record object\n\n    \"\"\"\n\n    if len(parameters_list) > 0:\n        for rec in parameters_list:\n            if rec.name.lower() == name.lower():\n                return rec\n        return None\n\n    else:\n        err = \"parameter_list is empty\""
+    }
+  },
+  "source_executed": false,
+  "dependencies_installed": false,
+  "original_archive_modified": false,
+  "limitations": [
+    "Only three selected supporting modules were inspected.",
+    "Function-level and dynamic imports may be missed.",
+    "Transitive imports may require further inspection.",
+    "No original scientific tests were executed."
+  ],
+  "generated_at_utc": "2026-11-11T01:59:27.981778+00:00"
+}

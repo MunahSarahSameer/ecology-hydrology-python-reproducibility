@@ -1,0 +1,49 @@
+{
+  "step": 140,
+  "candidate_id": "H09",
+  "package_name": "swatpy",
+  "version": "v0.2",
+  "zenodo_record": "6322023",
+  "doi": "10.5281/zenodo.6322023",
+  "archive_path": "C:\\Users\\MUNAH\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\H09\\swatpy-v0.2-original.zip",
+  "archive_size_bytes": 2049625,
+  "expected_size_bytes": 2049625,
+  "size_matches": true,
+  "md5": "3a6b85ef18b40093334f62c1d88e6cd9",
+  "expected_md5": "3a6b85ef18b40093334f62c1d88e6cd9",
+  "md5_matches": true,
+  "sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+  "zip_integrity": "PASS",
+  "total_files": 32,
+  "python_file_count": 8,
+  "python_files": [
+    "allixender-swatpy-0d47bfa/data/scripts/convert_from_swatcup.py",
+    "allixender-swatpy-0d47bfa/data/scripts/main.py",
+    "allixender-swatpy-0d47bfa/data/scripts/run_for.py",
+    "allixender-swatpy-0d47bfa/setup.py",
+    "allixender-swatpy-0d47bfa/swatpy/FileEdit.py",
+    "allixender-swatpy-0d47bfa/swatpy/ReadOut.py",
+    "allixender-swatpy-0d47bfa/swatpy/SimManage.py",
+    "allixender-swatpy-0d47bfa/swatpy/__init__.py"
+  ],
+  "test_file_count": 0,
+  "test_files": [],
+  "dependency_files": [
+    "allixender-swatpy-0d47bfa/requirements.txt",
+    "allixender-swatpy-0d47bfa/setup.py"
+  ],
+  "extension_counts": {
+    "(no extension)": 2,
+    ".cff": 1,
+    ".png": 1,
+    ".md": 1,
+    ".txt": 9,
+    ".py": 8,
+    ".sh": 5,
+    ".ipynb": 5
+  },
+  "original_archive_modified": false,
+  "source_executed": false,
+  "candidate_status": "ARCHIVE_VERIFIED_PENDING_ASSESSMENT",
+  "generated_at_utc": "2026-11-11T02:12:09.983793+00:00"
+}

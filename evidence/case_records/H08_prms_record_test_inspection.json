@@ -1,0 +1,196 @@
+{
+  "step": 130,
+  "package_id": "H08",
+  "package_name": "pyGSFLOW",
+  "inspection_type": "original_prms_record_test_and_imports",
+  "files": {
+    "autotest/test_003.py": {
+      "archive_member": "autotest/test_003.py",
+      "sha256": "9788fb83d1fd992ba772c26130e2956eeb85b01e80b723e942c4e6fcefef5565",
+      "line_count": 46,
+      "imports": [
+        {
+          "module": "gsflow",
+          "relative_level": 0,
+          "names": [
+            "ControlRecord",
+            "ParameterRecord"
+          ]
+        },
+        {
+          "module": "gsflow.record_base",
+          "relative_level": 0,
+          "names": [
+            "RecordBase"
+          ]
+        },
+        {
+          "module": "numpy",
+          "relative_level": 0
+        }
+      ],
+      "functions": [
+        "test_build_control_record",
+        "test_build_parameter_record",
+        "test_empty_control_record",
+        "test_empty_parameter_record"
+      ],
+      "classes": [],
+      "source": "from gsflow import ControlRecord, ParameterRecord\nfrom gsflow.record_base import RecordBase\nimport numpy as np\n\n\ndef test_empty_parameter_record():\n    pr = ParameterRecord(name=\"test\", values=[1])\n    assert isinstance(pr, ParameterRecord)\n    assert isinstance(pr, RecordBase)\n\n\ndef test_empty_control_record():\n    cr = ControlRecord(name=\"test\", values=[1])\n    assert isinstance(cr, ControlRecord)\n    assert isinstance(cr, RecordBase)\n\n\ndef test_build_parameter_record():\n    name = \"ssr2gw_rate 0\"\n    values = np.random.randn(128)\n    dimensions = [[\"nssr\", 128]]\n    datatype = 2\n    pr = ParameterRecord(name, values=values, dimensions=dimensions,\n                         datatype=datatype)\n    assert pr.ndim == 1\n    assert pr.name == name\n    assert np.allclose(values, pr.values)\n    assert pr.datatype == datatype\n\n\ndef test_build_control_record():\n    name = \"model_mode\"\n    datatype = 4\n    values = [\"GSFLOW\"]\n    cr = ControlRecord(name=name, values=values, datatype=datatype)\n\n    assert cr.name == name\n    assert cr.nvalues == len(values)\n    assert cr.datatype == datatype\n    assert cr.values[0] == values[0]\n\nif __name__ == \"__main__\":\n    test_empty_parameter_record()\n    test_empty_control_record()\n    test_build_parameter_record()\n    test_build_control_record()\n",
+      "status": "INSPECTED"
+    },
+    "gsflow/__init__.py": {
+      "archive_member": "gsflow/__init__.py",
+      "sha256": "53b59606112a7c873d08d008ab833b201a50147b320c91f3e83fb6e6334f0856",
+      "line_count": 15,
+      "imports": [
+        {
+          "module": "control",
+          "relative_level": 1,
+          "names": [
+            "ControlFile",
+            "ControlRecord"
+          ]
+        },
+        {
+          "module": "prms.prms_model",
+          "relative_level": 1,
+          "names": [
+            "PrmsModel"
+          ]
+        },
+        {
+          "module": "prms.prms_parameter",
+          "relative_level": 1,
+          "names": [
+            "PrmsParameters",
+            "ParameterRecord"
+          ]
+        },
+        {
+          "module": "prms.prms_data",
+          "relative_level": 1,
+          "names": [
+            "PrmsData"
+          ]
+        },
+        {
+          "module": "gsflow",
+          "relative_level": 1,
+          "names": [
+            "GsflowModel"
+          ]
+        },
+        {
+          "module": null,
+          "relative_level": 1,
+          "names": [
+            "utils"
+          ]
+        },
+        {
+          "module": null,
+          "relative_level": 1,
+          "names": [
+            "modflow"
+          ]
+        },
+        {
+          "module": null,
+          "relative_level": 1,
+          "names": [
+            "output"
+          ]
+        },
+        {
+          "module": null,
+          "relative_level": 1,
+          "names": [
+            "prms"
+          ]
+        },
+        {
+          "module": null,
+          "relative_level": 1,
+          "names": [
+            "modsim"
+          ]
+        }
+      ],
+      "functions": [],
+      "classes": [],
+      "source": "# -*- coding: utf-8 -*-\n__author__ = \"\"\"Ayman Alzraiee, Josh Larsen, Rich Niswonger\"\"\"\n__email__ = \"\"\"[REDACTED_EMAIL], [REDACTED_EMAIL], [REDACTED_EMAIL], [REDACTED_EMAIL]\"\"\"\n__version__ = \"1.0.2\"\n\nfrom .control import ControlFile, ControlRecord\nfrom .prms.prms_model import PrmsModel\nfrom .prms.prms_parameter import PrmsParameters, ParameterRecord\nfrom .prms.prms_data import PrmsData\nfrom .gsflow import GsflowModel\nfrom . import utils\nfrom . import modflow\nfrom . import output\nfrom . import prms\nfrom . import modsim\n",
+      "status": "INSPECTED"
+    },
+    "gsflow/prms/__init__.py": {
+      "archive_member": "gsflow/prms/__init__.py",
+      "sha256": "109b049f837e0f5fd44350ec4283848b7f6963f8ac7b67e763139306964afcad",
+      "line_count": 7,
+      "imports": [
+        {
+          "module": "prms_model",
+          "relative_level": 1,
+          "names": [
+            "PrmsModel"
+          ]
+        },
+        {
+          "module": "prms_parameter",
+          "relative_level": 1,
+          "names": [
+            "PrmsParameters"
+          ]
+        },
+        {
+          "module": "prms_parameter",
+          "relative_level": 1,
+          "names": [
+            "ParameterRecord"
+          ]
+        },
+        {
+          "module": "prms_data",
+          "relative_level": 1,
+          "names": [
+            "PrmsData"
+          ]
+        },
+        {
+          "module": "prms_day",
+          "relative_level": 1,
+          "names": [
+            "PrmsDay"
+          ]
+        },
+        {
+          "module": "prms_help",
+          "relative_level": 1,
+          "names": [
+            "Helper"
+          ]
+        },
+        {
+          "module": "prms_dynamic_params",
+          "relative_level": 1,
+          "names": [
+            "Dyn_param"
+          ]
+        }
+      ],
+      "functions": [],
+      "classes": [],
+      "source": "from .prms_model import PrmsModel\nfrom .prms_parameter import PrmsParameters\nfrom .prms_parameter import ParameterRecord\nfrom .prms_data import PrmsData\nfrom .prms_day import PrmsDay\nfrom .prms_help import Helper\nfrom .prms_dynamic_params import Dyn_param\n",
+      "status": "INSPECTED"
+    }
+  },
+  "original_archive_modified": false,
+  "source_executed": false,
+  "dependencies_installed": false,
+  "limitations": [
+    "Import inspection is static.",
+    "Transitive dependencies are not fully resolved.",
+    "No original test was executed.",
+    "PRMS record tests do not establish full model execution."
+  ],
+  "generated_at_utc": "2026-11-11T01:55:33.257088+00:00"
+}

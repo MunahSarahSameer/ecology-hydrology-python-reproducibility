@@ -1,0 +1,30 @@
+{
+  "archive_id": "E10",
+  "record_id": "11552636",
+  "title": "Incorporating environmental time series into species distribution models",
+  "publication_date": "2024-06-10",
+  "doi": "10.5281/zenodo.11552636",
+  "python_files": [
+    {
+      "filename": "Deep_learning_loop_all_species.py",
+      "md5": "966d5b051e55f030793ff732547b0e55",
+      "sha256": "72f1cb90ab2d01a7d15ce352edb9cc6951cf59e151c7fb32b47c7f07f70b4bc0",
+      "size": 26716
+    },
+    {
+      "filename": "Raw_preds.py",
+      "md5": "fe4f38f892c6d99a8cdd4115ca64d179",
+      "sha256": "ebc7ce3e5d1b8f84a81d11f0c7c9e0eac45e05aec8ae47039a021253508fd944",
+      "size": 6103
+    },
+    {
+      "filename": "Best_model_predictions.py",
+      "md5": "11bec2e5ea359c4687b1de2ef1a7a998",
+      "sha256": "4701ff72f3e09d0cf6f106138eb2a4d261f480005f2b2f234b8f8d589b8b50fc",
+      "size": 1401
+    }
+  ],
+  "execution_attempted": false,
+  "independence_verified": false,
+  "eligibility_confirmed": false
+}

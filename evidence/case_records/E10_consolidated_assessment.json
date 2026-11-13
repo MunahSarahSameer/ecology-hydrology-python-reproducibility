@@ -1,0 +1,42 @@
+{
+  "step": 106,
+  "generated_at_utc": "2026-11-11T01:03:33.747527+00:00",
+  "summary": {
+    "package_id": "E10",
+    "doi": "10.5281/zenodo.11552636",
+    "publication_date": "2024-06-10",
+    "domain": "ecology",
+    "source_files": 3,
+    "syntax_pass": 3,
+    "import_pass": 3,
+    "import_fail": 4,
+    "shuffle_tests_pass": 8,
+    "shuffle_tests_total": 8,
+    "auc_tests_pass": 4,
+    "auc_tests_total": 4,
+    "data_files_in_record": 0,
+    "full_workflow_executed": false,
+    "published_results_reproduced": false,
+    "assessment": "Partial component-level executability demonstrated. Full workflow remains untested due to unresolved dependency and research-input requirements.",
+    "limitations": [
+      "Exact file-hash comparison does not establish complete research independence.",
+      "Original datasets and trained models were not found in the examined Zenodo record.",
+      "External data availability beyond record metadata was not exhaustively investigated.",
+      "No full-workflow execution or published-result reproduction was demonstrated.",
+      "Synthetic tests are not equivalent to executing the original ecological experiment."
+    ]
+  },
+  "evidence_files": {
+    "screening": "E10_initial_screening.json",
+    "source_audit": "E10_source_audit.json",
+    "dependency_readiness": "E10_dependency_readiness.json",
+    "import_baseline": "E10_import_baseline.json",
+    "runtime_requirements": "E10_runtime_requirements.json",
+    "data_availability": "E10_data_availability.json",
+    "external_data": "E10_external_data_investigation.json",
+    "function_screening": "E10_function_testability.json",
+    "shuffle_execution": "E10_function_execution.json",
+    "auc_initial": "E10_auc_function_validation.json",
+    "auc_corrected": "E10_auc_corrected_validation.json"
+  }
+}

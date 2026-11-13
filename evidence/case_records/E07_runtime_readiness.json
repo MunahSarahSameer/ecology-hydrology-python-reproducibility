@@ -1,0 +1,25 @@
+{
+  "archive_id": "E07",
+  "component": "DetailView",
+  "import_roots": [
+    "argparse",
+    "augmentation",
+    "concurrent",
+    "datetime",
+    "glob",
+    "laspy",
+    "matplotlib",
+    "numpy",
+    "os",
+    "pandas",
+    "parallel_densenet",
+    "read_las",
+    "sideview",
+    "sklearn",
+    "torch",
+    "torchmetrics",
+    "torchvision",
+    "tqdm"
+  ],
+  "runtime_executed": false
+}

@@ -1,0 +1,712 @@
+{
+  "step": 124,
+  "candidate_id": "H08",
+  "research_domain": "hydrology",
+  "search_queries": [
+    "pyGSFLOW",
+    "pyGSFLOW groundwater surface water",
+    "Python hydrological modelling"
+  ],
+  "records": [
+    {
+      "record_id": "6468426",
+      "title": "Integrated hydrologic model development and postprocessing for GSFLOW using pyGSFLOW",
+      "doi": "10.5281/zenodo.6468426",
+      "publication_date": "2022-04-18",
+      "resource_type": {
+        "title": "Software",
+        "type": "software"
+      },
+      "description": "<p>pyGSFLOW is a Python package designed to create new GSFLOW integrated hydrologic&nbsp;models, read existing models, edit model input data, run GSFLOW models, process&nbsp;output, and visualize model data.</p>\n\n<p>This archive accompanies the Journal of Open Source Software article &quot;Integrated hydrologic model development and postprocessing for GSFLOW using pyGSFLOW&quot;.</p>\n\n<p>Official pyGSFLOW code releases can be found at&nbsp;https://code.usgs.gov/water/pyGSFLOW</p>",
+      "files": [
+        {
+          "name": "pygflow_1.0.2.zip",
+          "size": 23908624,
+          "checksum": "md5:75e7c270dcd85e6a2ad81246663cf56e"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/6468426"
+    },
+    {
+      "record_id": "12643720",
+      "title": "HUMAN HEALTH RISK ASSESSMENT FROM THE CONTAMINANTS OF MAHANANDA RIVER WATER AND ITS ADJACENT GROUNDWATER IN BANGLADESH",
+      "doi": "10.5281/zenodo.12643720",
+      "publication_date": "2024-06-07",
+      "resource_type": {
+        "title": "Journal article",
+        "type": "publication",
+        "subtype": "article"
+      },
+      "description": "<p><span>This study aims to assess the physicochemical parameters of the surface water of the Mahananda River and the concentration of the nutrients of the Mahananda River water and the adjacent groundwater. Among physicochemical parameters, pH, Dissolved Oxygen (DO), and Total Dissolved Solids (TDS) were measured on 18 sampling sites of the river, while Sulfate (SO<sub>4</sub><sup>2-</sup>), Orthophosphate (PO<sub>4</sub><sup>3-</sup>), Arsenic (As), and Manganese (Mn) concentrations were measured on 17 equidistant sampling sites of the river and the adjacent groundwater. The mean pH value wa",
+      "files": [
+        {
+          "name": "HUMAN HEALTH RISK ASSESSMENT FROM THE CONTAMINANTS OF MAHANANDA RIVER WATER AND ITS ADJACENT GROUNDWATER IN BANGLADESH.pdf",
+          "size": 790452,
+          "checksum": "md5:e6cc4463acaec983be2485b21a22b621"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/12643720"
+    },
+    {
+      "record_id": "7130715",
+      "title": "Assessment of Surface and Groundwater Quality in and Around Benue State Brewery Limited (BBL) in Makurdi Town, Benue State, Nigeria.",
+      "doi": "10.5281/zenodo.7130715",
+      "publication_date": "2022-09-30",
+      "resource_type": {
+        "title": "Journal article",
+        "type": "publication",
+        "subtype": "article"
+      },
+      "description": "<p><strong>ABSTRACT</strong></p>\n\n<p>Water quality displays the physical, chemical, and biological characteristics of water. The quality of surface and groundwater is currently an important concern with population growth and industrialization. Over utilization of water resources due to demand is causing the deterioration of surface and groundwater. Periodic water quality testing must be carried out to protect our water resources. The study assessed the concentration levels of physicochemical and bacteriological pollutants in surface water and groundwater in and around BBL Makurdi. The Study se",
+      "files": [
+        {
+          "name": "NAPAS-85-95.pdf",
+          "size": 559040,
+          "checksum": "md5:b4fe43610cd361e334a8217968166996"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/7130715"
+    },
+    {
+      "record_id": "17865474",
+      "title": "QUAlloc v1.0 - water use and allocation model",
+      "doi": "10.5281/zenodo.17865474",
+      "publication_date": "2025-12-09",
+      "resource_type": {
+        "title": "Software",
+        "type": "software"
+      },
+      "description": "<p>Current version has a stand-alone modelling configuration with user-defined water demands, requiring hydrological (<strong>PCR-GLOBWB2</strong>, Sutanudjaja et al., 2018;&nbsp;<a href=\"https://github.com/UU-Hydro/PCR-GLOBWB_model\">https://github.com/UU-Hydro/PCR-GLOBWB_model</a>) and water quality (<strong>DynQual</strong>, Jones et al., 2023;&nbsp;<a href=\"https://github.com/SustainableWaterSystems/DYNQUAL\">https://github.com/SustainableWaterSystems/DYNQUAL</a>) input data. The model input files are:</p>\n<ul>\n<li><strong>water availability</strong>&nbsp;(<em>obtained from PCR-GLOBWB2</em>)",
+      "files": [
+        {
+          "name": "QUAlloc-1.0.zip",
+          "size": 133231,
+          "checksum": "md5:da8fe02f90ba424ed412e971c990009d"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/17865474"
+    },
+    {
+      "record_id": "7315226",
+      "title": "Analysis of Drinking Water treatment costs – with an Application to Groundwater Purification Valuation",
+      "doi": "10.3897/oneeco.7.e82125",
+      "publication_date": "2022-11-10",
+      "resource_type": {
+        "title": "Journal article",
+        "type": "publication",
+        "subtype": "article"
+      },
+      "description": "<p>Understanding the factors affecting drinking water production costs is crucial for choosing a cost-effective solution for public drinking water supply systems. An important determinant of water treatment costs is the purification of raw water. Despite water purification being a well-acknowledged ecosystem service, its monetary value has not been assessed much yet. We present the first study analysing the determinants of drinking water production costs and valuating groundwater purification in the Czech Republic. We tested the impact of the type of raw water, the amount of drinking water pro",
+      "files": [
+        {
+          "name": "OE_article_82125.pdf",
+          "size": 200132,
+          "checksum": "md5:8191ddb00af86589508b33c0b99c5c45"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/7315226"
+    },
+    {
+      "record_id": "575455",
+      "title": "A proposal for a groundwater habitat classification at local scale",
+      "doi": "10.3897/subtbiol.14.5429",
+      "publication_date": "2014-09-24",
+      "resource_type": {
+        "title": "Journal article",
+        "type": "publication",
+        "subtype": "article"
+      },
+      "description": "<p>Distribution of groundwater invertebrate communities in porous aquifers (and their habitats) varies on spatial scales and many attempts have been made to classify these on various scales. The new data-based approach, presented here, classifies the complex distribution of groundwater habitats on a local scale (i.e. along transects of &lt; 100 m) and merges the latest classification approaches at this scale. Data from a regional (i.e. approximately 100 km<sup>2</sup>) biogeographic groundwater survey was analysed in terms of stability of: community structure, different intensities of surface ",
+      "files": [
+        {
+          "name": "SB_article_4103.pdf",
+          "size": 899035,
+          "checksum": "md5:2d592ca284a243bc5e188ac9273ae641"
+        },
+        {
+          "name": "SB_article_4103.xml",
+          "size": 220712,
+          "checksum": "md5:45510da58bb56ed9dcbbee73d8379db4"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/575455"
+    },
+    {
+      "record_id": "3535360",
+      "title": "The Analysis of Seasonally Varying Flow in a Crystalline Rock Watershed Using an Integrated Surface Water and Groundwater Model",
+      "doi": "10.4122/1.1000000383",
+      "publication_date": "2006-06-18",
+      "resource_type": {
+        "title": "Conference paper",
+        "type": "publication",
+        "subtype": "conferencepaper"
+      },
+      "description": "Minimal scientific knowledge is available to describe the interaction of surface\nwater and groundwater flow systems within watersheds in the crystalline rock setting\nof the Canadian Shield.  The surface water and groundwater flow in a small watershed\nare investigated using the fully coupled groundwater / surface water model\nHydroGeoSphere.  The watershed has an area of 6.92 square kilometers and contains\nmultiple lakes, including Bass Lake (the largest lake) with a surface area of 0.94\nsquare kilometers and a maximum depth of 9.0 meters.  The surface water drainage\nsystem includes wetlands, sm",
+      "files": [
+        {
+          "name": "The_Analysis_of_Seasonally_Varying_Flow_in_a_Crystalline_Rock_Watershed_Using_an_Integrated_Surface_Water_and_Groundwater_Model.pdf",
+          "size": 2998274,
+          "checksum": "md5:b257d4edd12d1f1ab202c544aaf9ad76"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/3535360"
+    },
+    {
+      "record_id": "1315471",
+      "title": "G³M 1.0 steady-state model output",
+      "doi": "10.5281/zenodo.1315471",
+      "publication_date": "2018-07-19",
+      "resource_type": {
+        "title": "Dataset",
+        "type": "dataset"
+      },
+      "description": "<p>Steady-state model output of the global gradient-based groundwater model G&sup3;M 1.0. Related to the publication in GMD &quot;Beyond the bucket - Developing a global gradient-based groundwater model (G&sup3;M v1.0) for a global hydrological model from scratch&quot;</p>\n\n<p>Contains the following global outputs:</p>\n\n<p>* hydraulic head</p>\n\n<p>* surface water body to/from groundwater flows</p>\n\n<p>* conductance values for surface water bodies</p>",
+      "files": [
+        {
+          "name": "GMD-data.tar.gz",
+          "size": 163766129,
+          "checksum": "md5:a3ff7d5c8fd59969c8c211f7fd02e068"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/1315471"
+    },
+    {
+      "record_id": "7924816",
+      "title": "Groundwater is a globally-threatened keystone ecosystem",
+      "doi": "10.5281/zenodo.7924816",
+      "publication_date": "2023-05-11",
+      "resource_type": {
+        "title": "Dataset",
+        "type": "dataset"
+      },
+      "description": "<p>Global maps of groundwater diversity, interactions between groundwater and surface water and global surface diversity linked into two maps.</p>",
+      "files": [
+        {
+          "name": "fig3.csv",
+          "size": 103815953,
+          "checksum": "md5:b4edce479f53bbfdfd4c089bed523db1"
+        },
+        {
+          "name": "fig2.csv",
+          "size": 103656747,
+          "checksum": "md5:bffd3c374b42a88ce731603fd0057c28"
+        },
+        {
+          "name": "Readme.txt",
+          "size": 263,
+          "checksum": "md5:989d2cf45d8036982fd539f17c503d78"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/7924816"
+    },
+    {
+      "record_id": "7849026",
+      "title": "Supplementary data for \"Groundwater depletion rate over China during 1965-2016: the long-term trend and inter-annual variation\"",
+      "doi": "10.5281/zenodo.7849026",
+      "publication_date": "2023-04-20",
+      "resource_type": {
+        "title": "Journal article",
+        "type": "publication",
+        "subtype": "article"
+      },
+      "description": "<p>This dataset is the supplementary data for &ldquo;Groundwater depletion rate over China during 1965-2016: the long-term trend and inter-annual variation&rdquo;. The dataset contains surface water availability, groundwater recharge, sectoral water withdrawal, and groundwater depletion rate over mainland China during 1965-2016 at a spatial resolution of 0.25&deg;&times;0.25&deg; grid scale. The surface water availability and groundwater recharge were estimated by the Variable Infiltration Capacity (VIC) hydrological model after bias-correction by using provincial-level survey-based records fr",
+      "files": [
+        {
+          "name": "Provincial-level water withdrawal, water availability, and groundwater depletion in China during 1965-2016.xlsx",
+          "size": 181994,
+          "checksum": "md5:d64c563da03c2a4bece8bbe853023188"
+        },
+        {
+          "name": "water_withdrawal_sources_china.nc",
+          "size": 45063496,
+          "checksum": "md5:05e0f673375b26912fee3d950f83a7da"
+        },
+        {
+          "name": "water_availability_china.nc",
+          "size": 30043952,
+          "checksum": "md5:06a388ed80ea802e3f0be18583b37ec7"
+        },
+        {
+          "name": "water_withdrawal_china.nc",
+          "size": 30043668,
+          "checksum": "md5:f0075dac0b35aaa0f39829fb3db3a885"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/7849026"
+    },
+    {
+      "record_id": "21581195",
+      "title": "Village-Level Assessment of Potential Surface Water Storage Using an Integrated Water Balance Approach in the Ippala Vagu Watershed, India",
+      "doi": "10.58482/ijeresm.v5i3.4",
+      "publication_date": "2026-07-25",
+      "resource_type": {
+        "title": "Journal article",
+        "type": "publication",
+        "subtype": "article"
+      },
+      "description": "<p class=\"MsoNormal\"><span>The management of watersheds requires the planning of surface water resources. For hydrological analysis, runoff estimation is essential. This study aimed to estimate the village-level potential surface water storage by integrating the water balance components, including </span><span>surface runoff, groundwater recharge, and effective rainfall.</span><span> </span><span>Surface runoff was estimated using the Soil Conservation Service Curve Number (SCS-CN), groundwater recharge was estimated by the Rainfall Infiltration Factor (RIF), and effective rainfall was estimat",
+      "files": [
+        {
+          "name": "0530401219.pdf",
+          "size": 941530,
+          "checksum": "md5:3a44c5a8fa358264d01d939ef211510a"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/21581195"
+    },
+    {
+      "record_id": "11347530",
+      "title": "Surface water supply allocation, crop, and disadvantaged community data for the San Joaquin Valley, CA, 2016",
+      "doi": "10.5061/dryad.3xsj3txnw",
+      "publication_date": "2024-05-27",
+      "resource_type": {
+        "title": "Dataset",
+        "type": "dataset"
+      },
+      "description": "<p>Societies globally are struggling to meet freshwater demands while agencies attempt to address water access inequities under a rapidly changing climate and growing population. An understanding of dynamic interactions between people and water, known as sociohydrology, regionally could provide approaches to addressing local water mismanagement and water access inequity. In semi-arid California, local water agencies, primarily agricultural irrigation districts, are at the intersection of rethinking approaches to balance freshwater demands. More than 150 years of complex water governance and ma",
+      "files": [
+        {
+          "name": "README.md",
+          "size": 53695,
+          "checksum": "md5:4b97f8fdc5bedee3dc3e544024c75b6d"
+        },
+        {
+          "name": "EspinozaViers_IrrigDistSupplementalInformation_Table10_CropRevenuePerCropPerCounty.csv",
+          "size": 29911,
+          "checksum": "md5:5ce9e829e616c43bc94adcf0957fe8f4"
+        },
+        {
+          "name": "EspinozaViers_IrrigDistSupplementalInformation_Table7_IrrigationDistricts.csv",
+          "size": 23897,
+          "checksum": "md5:0850e676ac2038924a7d342e53e5b57f"
+        },
+        {
+          "name": "EspinozaViers_Table1_DataSources.xlsx",
+          "size": 12338,
+          "checksum": "md5:f2db8e57e140a43f39a293f3cbe37531"
+        },
+        {
+          "name": "EspinozaViers_IrrigDistSupplementalInformation_Table8_SurfaceWater.csv",
+          "size": 21088,
+          "checksum": "md5:4a1714b67df0db61dcfe1861888b2b42"
+        },
+        {
+          "name": "EspinozaViers_IrrigDistSupplementalInformation_Tables_Feb2023_forDryad.xlsx",
+          "size": 114415,
+          "checksum": "md5:9f850006af0e77b602cfbd01514986cc"
+        },
+        {
+          "name": "EspinozaViers_IrrigDistSupplementalInformation_Table9_CropTypes.csv",
+          "size": 1119,
+          "checksum": "md5:816d502dcf84dfa0d010745092ec05cc"
+        },
+        {
+          "name": "EspinozaViers_Table3_IDDAC-and-GDC.csv",
+          "size": 15326,
+          "checksum": "md5:4112972413a3074d517982aa83d2b128"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/11347530"
+    },
+    {
+      "record_id": "20715536",
+      "title": "Challenges and Countermeasures of Water Resources in Dili, Timor-Leste",
+      "doi": "10.59324/ejsmt.2026.2(2).01",
+      "publication_date": "2026-02-17",
+      "resource_type": {
+        "title": "Journal article",
+        "type": "publication",
+        "subtype": "article"
+      },
+      "description": "<div class=\"page\">\n<div class=\"layoutArea\">\n<div class=\"column\">\n<p>Dili, Timor-Leste, faces significant challenges related to water resources, primarily due to rapid urbanization, growing population, and outdated infrastructure. Groundwater, constituting over 75% of the water supply, presents sustainability issues, while surface water resources contribute minimally, highlighting a critical need for effective water management. The study identifies several key issues affecting water resources in Dili. There is a heavy reliance on groundwater, which poses sustainability risks. The contribution o",
+      "files": [
+        {
+          "name": "108-Article Text-218-1-10-20260217.pdf",
+          "size": 760962,
+          "checksum": "md5:cab374f3e2c08c5bd59f30c611b25c11"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/20715536"
+    },
+    {
+      "record_id": "17238642",
+      "title": "Supplemental Data for the manuscript titled \"California trees seasonally use augmented water sources: water isotope tracking in a groundwater-dependent ecosystem\"",
+      "doi": "10.5281/zenodo.17238642",
+      "publication_date": "2025-10-01",
+      "resource_type": {
+        "title": "Dataset",
+        "type": "dataset"
+      },
+      "description": "<p>This excel file contains the data used in the manuscript titled \"California trees seasonally use augmented water sources: water isotope tracking in a groundwater-dependent ecosystem\". Tabs contain location information, and isotope data for precipitation, surface waters, imported water, regional groundwater, groundwater, tree xylem water, soil cores, and topsoil.&nbsp;</p>",
+      "files": [
+        {
+          "name": "sticks IM.xlsx",
+          "size": 81108,
+          "checksum": "md5:8687e45eb858a0cd7037b7981f26da49"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/17238642"
+    },
+    {
+      "record_id": "16960642",
+      "title": "Monitoring hydrostatic level variability on the banks of several canals in the Danube delta",
+      "doi": "10.3897/saddi.30.160468",
+      "publication_date": "2025-08-25",
+      "resource_type": {
+        "title": "Journal article",
+        "type": "publication",
+        "subtype": "article"
+      },
+      "description": "<p>The Danube Delta is a dynamic wetland system where surface and groundwater are closely interconnected, primarily influenced by the water levels of the Danube River. Given the shallow depth of the water table, the fluctuations in river discharge can impact groundwater levels in the delta. This study shows hydrostatic levels along the banks of several canals in the Danube Delta through field measurements conducted during high-water (spring) and low-water (autumn) periods. Shallow boreholes were drilled using a hand auger manual set to determine groundwater levels and analyze sediment composit",
+      "files": [
+        {
+          "name": "saddi_article_160468.pdf",
+          "size": 7428176,
+          "checksum": "md5:417ea78b7d7b8d8af8ad57499ae71aef"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/16960642"
+    },
+    {
+      "record_id": "20835473",
+      "title": "Data for \"Evolving human and environmental drivers of future water use uncertainty\"",
+      "doi": "10.5281/zenodo.20835473",
+      "publication_date": "2026-09-11",
+      "resource_type": {
+        "title": "Journal article",
+        "type": "publication",
+        "subtype": "article"
+      },
+      "description": "<p class=\"MsoNormal\">This repository contains the data and scripts for Birnbaum et al. (under review) &ldquo;Evolving human and environmental drivers of future<br>water use uncertainty.&rdquo; The repository contains the following zip directories:</p>\n<p>1. data.zip: data used to make the figures in the main manuscript</p>\n<ul>\n<li>shapefiles_for_mapping: directory with basin_to_country_mapping.csv, basin_to_region_mapping.csv, gcam_basins.shp</li>\n<li>contr_var_basin_ww.csv: variance contribution for each basin for total water withdrawals</li>\n<li>contr_var_global_ww.csv: variance contributio",
+      "files": [
+        {
+          "name": "scripts.zip",
+          "size": 27100,
+          "checksum": "md5:712ed92cd6a8cfcd7559ff2caaa44599"
+        },
+        {
+          "name": "supplemental_data.zip",
+          "size": 159841782,
+          "checksum": "md5:43a860539b852766551fd894e26b1d29"
+        },
+        {
+          "name": "data.zip",
+          "size": 28343512,
+          "checksum": "md5:c00976ffb96042c3f92fbfe1ad69a2d7"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/20835473"
+    },
+    {
+      "record_id": "16734446",
+      "title": "New Zealand 8m Nationwide Hydrologically Conditioned DEM and Hydraulic Roughness Map",
+      "doi": "10.5281/zenodo.16734446",
+      "publication_date": "2025-08-03",
+      "resource_type": {
+        "title": "Dataset",
+        "type": "dataset"
+      },
+      "description": "<p>This is an 8m hydraulically conditioned DEM and hydraulic roughness dataset covering the three main islands of New Zealand (North, South and Rakiura Islands) to a minimum distance of 20km offshore. The dataset is separated into 526 30km by 30km tiles included in geofabrics-tiles-2025-04-07-8m.tar. Each tile is stored as netCDF file containing four layers: hydrologically conditioned DEM, hydraulic roughness, data source and LiDAR source. The data source and LiDAR source layers provide pixel-wise metadata about the processes and data contributing to each pixel. The location of these tiles is ",
+      "files": [
+        {
+          "name": "hydrologically_conditioned_DEM.tar",
+          "size": 25533071360,
+          "checksum": "md5:7c7f96b3c7ccffcde89091d54e1c6b6d"
+        },
+        {
+          "name": "LiDAR_source.tar",
+          "size": 182569472,
+          "checksum": "md5:2a271067c7ef01c22d63f1435fa4bfa7"
+        },
+        {
+          "name": "data_source.tar",
+          "size": 190070784,
+          "checksum": "md5:ffe24f8a054a876b1789f6db1a06b3ff"
+        },
+        {
+          "name": "hydraulic_roughness.tar",
+          "size": 11043972096,
+          "checksum": "md5:1c3f21a4c5567cb8a7f1e27bb4b07cc9"
+        },
+        {
+          "name": "tile_index.gpkg",
+          "size": 217088,
+          "checksum": "md5:21c3f4c70bfa232056759fc50ba87ddc"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/16734446"
+    },
+    {
+      "record_id": "6322023",
+      "title": "swatpy: A set of python modules to work with SWAT2012 models",
+      "doi": "10.5281/zenodo.6322023",
+      "publication_date": "2022-03-02",
+      "resource_type": {
+        "title": "Software",
+        "type": "software"
+      },
+      "description": "<p>A set of python modules to work with the Soil and Water Assessment Tool (SWAT2012), including model run, programmatic config edits, simulation readouts and calibration with the fantastic SPOTPY package.</p>",
+      "files": [
+        {
+          "name": "allixender/swatpy-v0.2.zip",
+          "size": 2049625,
+          "checksum": "md5:3a6b85ef18b40093334f62c1d88e6cd9"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/6322023"
+    },
+    {
+      "record_id": "21703379",
+      "title": "HydroEvents",
+      "doi": "10.5281/zenodo.21703379",
+      "publication_date": "2026-07-30",
+      "resource_type": {
+        "title": "Software",
+        "type": "software"
+      },
+      "description": "<p>HydroEvents is an open-source Python package for rainfall&ndash;runoff event extraction and event-based hydrological analysis. The workflow combines streamflow preprocessing, Master Recession Curve (MRC) analysis, baseflow separation, rainfall&ndash;runoff event identification, and event-scale runoff modelling within a single reproducible framework.</p>\n<p><code>hydroevents</code> provides a modular workflow for:</p>\n<p>- streamflow preprocessing<br>- Master Recession Curve (MRC) estimation<br>- baseflow separation<br>- rainfall&ndash;runoff event identification and association</p>\n<p>The p",
+      "files": [
+        {
+          "name": "cnreco-hydrologylab/hydroevents-v0.1.3.zip",
+          "size": 3005974,
+          "checksum": "md5:e929ce98fd726f56afd12388336c1469"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/21703379"
+    },
+    {
+      "record_id": "23599934",
+      "title": "pyhydra: a modular Python library for hydrological and climate analysis",
+      "doi": "10.5281/zenodo.23599934",
+      "publication_date": "2026-10-23",
+      "resource_type": {
+        "title": "Software",
+        "type": "software"
+      },
+      "description": "pyhydra is a modular Python library for hydrological and climate analysis. It covers the full pipeline from raw data acquisition to stochastic analysis, flood modelling and uncertainty quantification, integrating data sources, extreme value analysis, stochastic generation, HEC-HMS, HEC-RAS and SFINCS automation, and Manning roughness Monte Carlo sensitivity.",
+      "files": [
+        {
+          "name": "navass11/pyhydra-v0.3.1.zip",
+          "size": 18109991,
+          "checksum": "md5:50cf1b2f4583ee20ecd84f021ae8839a"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/23599934"
+    },
+    {
+      "record_id": "17316414",
+      "title": "Local and Regional-scale surrogates for rapid flood inundation modelling",
+      "doi": "10.5281/zenodo.17316414",
+      "publication_date": "2025-10-10",
+      "resource_type": {
+        "title": "Computational notebook",
+        "type": "software",
+        "subtype": "computationalnotebook"
+      },
+      "description": "<p>This floder contains the python codes for &ldquo;From Local to Regional-Scale: Developing Scalable Machine Learning-Based Surrogates for Rapid Flood Inundation Modelling in Diverse Hydrological Settings&rdquo;.</p>\n<p>It has four folders, &lsquo;common_data_stats&rsquo; contains the .npz files of standard deviation and mean values for all regions separately and combined.</p>\n<p>The &ldquo;DatasetZoo&rdquo; folder the python codes for data preprocessing for the<span>&nbsp; </span>ML model</p>\n<p>The &ldquo;local_scale&rdquo; folder contains the python codes local-scale model for each flooded",
+      "files": [],
+      "zenodo_url": "https://zenodo.org/records/17316414"
+    },
+    {
+      "record_id": "17086187",
+      "title": "Distributed hydrological modelling and reservoir routing in Python",
+      "doi": "10.5281/zenodo.17086187",
+      "publication_date": "2025-09-09",
+      "resource_type": {
+        "title": "Software",
+        "type": "software"
+      },
+      "description": "<p>Distributed hydrological modelling in Python</p>\n<ul>\n<li>Working with NetCDF files</li>\n<li>River flow routing</li>\n<li>Subbasin modelling</li>\n</ul>",
+      "files": [],
+      "zenodo_url": "https://zenodo.org/records/17086187"
+    },
+    {
+      "record_id": "24115274",
+      "title": "LSDTopoTools3 (lsdtt3): topographic analysis for geomorphology",
+      "doi": "10.5281/zenodo.24115274",
+      "publication_date": "2026-11-10",
+      "resource_type": {
+        "title": "Software",
+        "type": "software"
+      },
+      "description": "lsdtt3 is a C++17 library and set of command-line tools, with Python bindings and a QGIS plugin, for topographic analysis in geomorphology: DEM preprocessing, flow routing, channel and basin extraction, chi and channel-steepness analysis, hillslope and surface metrics, cosmogenic nuclide analysis, hydrological and landscape evolution modelling. It is a redesign of LSDTopoTools2.",
+      "files": [
+        {
+          "name": "LSDtopotools/lsdtt3-v0.9.3.zip",
+          "size": 11151682,
+          "checksum": "md5:cc5151d9c667c4061746c1f6b2ffd249"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/24115274"
+    },
+    {
+      "record_id": "10369455",
+      "title": "FEWS Python and R installation for forecasting testbed",
+      "doi": "10.5281/zenodo.10369455",
+      "publication_date": "2023-12-13",
+      "resource_type": {
+        "title": "Software",
+        "type": "software"
+      },
+      "description": "<p>This software is part of the open and shareable configuration for an operational hydrological forecasting system with <a href=\"https://oss.deltares.nl/web/delft-fews\">Delft-FEWS</a>, which is shared on https://github.com/Deltares/CanOpenFEWS. A complete system configuration is provided for data access, processing, visualization and application in hydrological modelling. The technical focus is on rain and snow for operational forecasting, and applied in a mountainous environment. The data sources are primarily <a href=\"https://eccc-msc.github.io/open-data/readme_en/\">Meteorological Service o",
+      "files": [
+        {
+          "name": "Python311Binaries.zip",
+          "size": 254234243,
+          "checksum": "md5:388a739628b1c3a4c5aadaf527489119"
+        },
+        {
+          "name": "RBinaries.zip",
+          "size": 236991295,
+          "checksum": "md5:6e294c9a7e73c044602471353d753adc"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/10369455"
+    },
+    {
+      "record_id": "7997412",
+      "title": "SPHY-MMF - Coupled Hydrology-Hillslope and Channel Erosion Model",
+      "doi": "10.5281/zenodo.7997412",
+      "publication_date": "2023-06-02",
+      "resource_type": {
+        "title": "Software",
+        "type": "software"
+      },
+      "description": "<p>SPHY-MMF is a spatially distributed model that simulates the most relevant hydrological and erosional processes on a cell-by-cell basis and is applied at a daily time step. The model is written in the Python programming language using the PCRaster dynamic modelling framework (<a href=\"https://pcraster.geo.uu.nl/\">https://pcraster.geo.uu.nl/</a>). This version of the model includes a new water routing algorithm, a modification of the sediment transport module and a novel channel morphodynamics module.&nbsp;<br>\n&nbsp;&nbsp; &nbsp;</p>",
+      "files": [
+        {
+          "name": "SPHY-MMF.zip",
+          "size": 105966,
+          "checksum": "md5:240f768fdbcb0be3e2e6b2de59b63aaf"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/7997412"
+    },
+    {
+      "record_id": "23763056",
+      "title": "Historical and Projected Hydroclimatic Data for Four European Case Studies",
+      "doi": "10.5281/zenodo.23763056",
+      "publication_date": "2026-10-29",
+      "resource_type": {
+        "title": "Dataset",
+        "type": "dataset"
+      },
+      "description": "<p>This dataset contains historical and projected hydroclimatic data developed within Task 1.1 of the Horizon Europe RECREATE project.</p>\n<p>The dataset covers four European case studies: North Holland (Netherlands), Kalundborg (Denmark), Syros (Greece), and Costa Brava (Spain).</p>\n<p>The data are derived from CMIP5/EURO-CORDEX climate projections obtained through the Copernicus Climate Data Store. They include a historical reference period (1971&ndash;2005) and future projections (2006&ndash;2095) under three Representative Concentration Pathway scenarios: RCP2.6, RCP4.5, and RCP8.5.</p>\n<p",
+      "files": [
+        {
+          "name": "WP1_T1.1_CORDEX_hydro_clima_4-CSs.csv",
+          "size": 1353293074,
+          "checksum": "md5:5e2bbbe77992af0ac70d2f8499edd1f3"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/23763056"
+    },
+    {
+      "record_id": "3795444",
+      "title": "jlu-ilr-hydro/pmf: v0.5",
+      "doi": "10.5281/zenodo.3795444",
+      "publication_date": "2020-05-06",
+      "resource_type": {
+        "title": "Software",
+        "type": "software"
+      },
+      "description": "<p>This is the first release of PMF to be shared on ZENODO.</p>",
+      "files": [
+        {
+          "name": "jlu-ilr-hydro/pmf-v0.5.zip",
+          "size": 75665,
+          "checksum": "md5:4671a45e044264d7b37656e50fcaeb5d"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/3795444"
+    },
+    {
+      "record_id": "23238168",
+      "title": "Hydrological Signals and Water–Mining Tensions in Taolagnaro, Madagascar: Data, Code and Reproducible Results",
+      "doi": "10.5281/zenodo.23238168",
+      "publication_date": "2026-10-08",
+      "resource_type": {
+        "title": "Software",
+        "type": "software"
+      },
+      "description": "<p><strong>Overview</strong></p>\n<p>This repository provides the research data, Python scripts, computational workflows and reproducible outputs supporting an integrated assessment of hydrological signals and publicly documented water&ndash;mining tensions in the Taolagnaro&ndash;Mandena coastal region of southeastern Madagascar.</p>\n<p>The package brings together three complementary components: annual hydrological contrasts derived from SWAT+ simulations, hydrological responses to prescribed parameter-change scenarios, and documentary evidence concerning environmental pressures and resource-r",
+      "files": [
+        {
+          "name": "Taolagnaro_Hydrology_Documentary_Evidence_Reproducibility_v1.0.zip",
+          "size": 1396049,
+          "checksum": "md5:90286a0ec6123c1aac521bb3ba07436e"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/23238168"
+    },
+    {
+      "record_id": "20452966",
+      "title": "National Hydrological Services - Post Processing Library (NHS_PostProcessing)",
+      "doi": "10.5281/zenodo.20452966",
+      "publication_date": "2026-05-30",
+      "resource_type": {
+        "title": "Software",
+        "type": "software"
+      },
+      "description": "A Python library to enable the National Hydrological Services of Canada to carry out post-processing operations quickly and efficiently. Provides tools for data processing and manipulation, streamflow prediction model performance evaluation, model diagnostics, multi-model evaluations, and data visualizations.",
+      "files": [
+        {
+          "name": "fuadyassin/NHS_PostProcessing-v1.2.0.zip",
+          "size": 35033531,
+          "checksum": "md5:0e5896b0f09ff90c109727fc0f6c3284"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/20452966"
+    },
+    {
+      "record_id": "7986272",
+      "title": "Connecting hydrological modelling and forecasting from global to local scales: Perspectives from an international joint virtual workshop",
+      "doi": "10.1111/jfr3.12880",
+      "publication_date": "2023-01-17",
+      "resource_type": {
+        "title": "Journal article",
+        "type": "publication",
+        "subtype": "article"
+      },
+      "description": "<p>The unprecedented progress in ensemble hydro-meteorological modelling and forecasting on a range of temporal and spatial scales, raises a variety of new challenges which formed the theme of the Joint Virtual Workshop,&lsquo;Connecting global to local hydrological modelling and forecasting: challenges and scientific advances&rsquo;. Held from 29 June to 1 July 2021, this workshop was co-organised by the European Centre for Medium-Range Weather Forecasts (ECMWF), the Copernicus Emergency Management (CEMS) and Climate Change (C3S) Services, the Hydrological Ensemble Prediction EXperiment (HEPE",
+      "files": [
+        {
+          "name": "J Flood Risk Management - 2023 Connecting hydrological modelling and forecasting from global to local scales.pdf",
+          "size": 9859946,
+          "checksum": "md5:83ac4b7a72dab3ba8772424265c271f2"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/7986272"
+    },
+    {
+      "record_id": "22878049",
+      "title": "Data underlying the publication: Uncertainty in root zone storage capacity estimates and its implications for hydrological modelling",
+      "doi": "10.5281/zenodo.22878049",
+      "publication_date": "2026-09-21",
+      "resource_type": {
+        "title": "Dataset",
+        "type": "dataset"
+      },
+      "description": "<p>This repository contains the processed data used in the study \"<strong>Uncertainty in root zone storage capacity estimates and its implications for hydrological modelling\" </strong>in Excel format. It provides catchment topographic characteristics, climatic indices, uncertainty estimates, and hydrological modelling results.</p>\n<p>The Excel file contains two sheets:</p>\n<p>Sheet1 &ndash; Processed data for 5,717 catchments</p>\n<p>This sheet contains the processed data for all 5717 study catchments, including:</p>\n<p>Catchment IDs and topographic information (country, longitude, latitude, ar",
+      "files": [
+        {
+          "name": "Supplement data.xlsx",
+          "size": 2943366,
+          "checksum": "md5:9758cf90f3d390455f07bcd58c298045"
+        }
+      ],
+      "zenodo_url": "https://zenodo.org/records/22878049"
+    }
+  ],
+  "total_unique_records": 31,
+  "generated_at_utc": "2026-11-11T01:46:36.878894+00:00",
+  "source_code_downloaded": false,
+  "source_code_executed": false,
+  "candidate_selected": false,
+  "limitations": [
+    "Search results do not establish code availability.",
+    "Metadata does not prove archive independence.",
+    "Records require manual eligibility screening.",
+    "Some results may be unrelated to hydrology."
+  ]
+}

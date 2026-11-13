@@ -1,0 +1,59 @@
+{
+  "step": 165,
+  "records": {
+    "H03": {
+      "archive": "repositories\\H03\\Hydrological-controls---Code-and-Data-Hydrology.zip",
+      "documentation_sources": [
+        "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/README.md"
+      ],
+      "urls": [
+        "https://it.mathworks.com/help/stats/kmeans.html",
+        "https://scikit-learn.org/stable/index.html"
+      ],
+      "dois": [],
+      "version_evidence": [],
+      "verified_publication_association": false
+    },
+    "H05": {
+      "archive": "repositories\\H05\\neuralhydrology-v.1.2.3.zip",
+      "documentation_sources": [
+        "neuralhydrology-v.1.2.3/README.md",
+        "neuralhydrology-v.1.2.3/neuralhydrology/__about__.py",
+        "neuralhydrology-v.1.2.3/setup.py",
+        "neuralhydrology-v.1.2.3/test/test_data/camels_us/camels_attributes_v2.0/readme.txt"
+      ],
+      "urls": [
+        "https://doi.org/10.5194/hess-2017-169",
+        "https://github.com/neuralhydrology/neuralhydrology",
+        "https://github.com/neuralhydrology/neuralhydrology/discussions",
+        "https://github.com/neuralhydrology/neuralhydrology/issues",
+        "https://neuralhydrology.github.io",
+        "https://neuralhydrology.github.io/",
+        "https://neuralhydrology.readthedocs.io",
+        "https://pytorch.org/"
+      ],
+      "dois": [
+        "10.5194/hess-19-209-2015",
+        "10.5194/hess-2017-169"
+      ],
+      "version_evidence": [
+        {
+          "source": "neuralhydrology-v.1.2.3/neuralhydrology/__about__.py",
+          "line": "__version__ = \"1.2.3\""
+        },
+        {
+          "source": "neuralhydrology-v.1.2.3/setup.py",
+          "line": "version=about[\"__version__\"],"
+        }
+      ],
+      "verified_publication_association": false
+    }
+  },
+  "limitations": [
+    "Links are extracted from local documentation only.",
+    "A referenced DOI may identify a dependency or dataset rather than the software.",
+    "Source links and release dates require external verification.",
+    "Original archives were not modified."
+  ],
+  "generated_at_utc": "2026-11-11T02:49:06.340960+00:00"
+}

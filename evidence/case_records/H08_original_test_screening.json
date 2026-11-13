@@ -1,0 +1,435 @@
+{
+  "step": 129,
+  "package_id": "H08",
+  "package_name": "pyGSFLOW",
+  "screening_type": "static_original_test_inspection",
+  "test_files": [
+    {
+      "file": "autotest/__init__.py",
+      "lines": 1,
+      "imports": [],
+      "test_functions": [],
+      "file_references": [],
+      "potential_external_calls": [],
+      "source_preview": "# empty init file for coverages"
+    },
+    {
+      "file": "autotest/test_000.py",
+      "lines": 15,
+      "imports": [
+        "os",
+        "shutil"
+      ],
+      "test_functions": [
+        "test_setup"
+      ],
+      "file_references": [],
+      "potential_external_calls": [],
+      "source_preview": "# Remove the temp directory and then create a fresh one\nimport os\nimport shutil\n\n\ndef test_setup():\n    tempdir = os.path.join('.', 'temp')\n    if os.path.isdir(tempdir):\n        shutil.rmtree(tempdir)\n    os.mkdir(tempdir)\n\n\nif __name__ == '__main__':\n    test_setup()\n"
+    },
+    {
+      "file": "autotest/test_001.py",
+      "lines": 12,
+      "imports": [
+        "gsflow"
+      ],
+      "test_functions": [
+        "test_import_gsflow"
+      ],
+      "file_references": [],
+      "potential_external_calls": [],
+      "source_preview": "\ndef test_import_gsflow():\n    success = True\n    try:\n        import gsflow\n    except:\n        success = False\n    assert success\n\n\nif __name__ == \"__main__\":\n    test_import_gsflow()"
+    },
+    {
+      "file": "autotest/test_002.py",
+      "lines": 16,
+      "imports": [
+        "gsflow"
+      ],
+      "test_functions": [
+        "test_import_classes"
+      ],
+      "file_references": [],
+      "potential_external_calls": [],
+      "source_preview": "# test the instantiation of empty classes\nimport gsflow\n\ndef test_import_classes():\n    from gsflow import ParameterRecord\n    from gsflow import ControlRecord\n    from gsflow import PrmsParameters\n    from gsflow import PrmsData\n    from gsflow import PrmsModel\n    from gsflow.modflow import Modflow\n    from gsflow import ControlFile\n    from gsflow import GsflowModel\n\n\nif __name__ == \"__main__\":\n    test_import_classes()"
+    },
+    {
+      "file": "autotest/test_003.py",
+      "lines": 46,
+      "imports": [
+        "gsflow",
+        "numpy"
+      ],
+      "test_functions": [
+        "test_build_control_record",
+        "test_build_parameter_record",
+        "test_empty_control_record",
+        "test_empty_parameter_record"
+      ],
+      "file_references": [],
+      "potential_external_calls": [],
+      "source_preview": "from gsflow import ControlRecord, ParameterRecord\nfrom gsflow.record_base import RecordBase\nimport numpy as np\n\n\ndef test_empty_parameter_record():\n    pr = ParameterRecord(name=\"test\", values=[1])\n    assert isinstance(pr, ParameterRecord)\n    assert isinstance(pr, RecordBase)\n\n\ndef test_empty_control_record():\n    cr = ControlRecord(name=\"test\", values=[1])\n    assert isinstance(cr, ControlRecord)\n    assert isinstance(cr, RecordBase)\n\n\ndef test_build_parameter_record():\n    name = \"ssr2gw_rate 0\"\n    values = np.random.randn(128)\n    dimensions = [[\"nssr\", 128]]\n    datatype = 2\n    pr = ParameterRecord(name, values=values, dimensions=dimensions,\n                         datatype=datatype)\n    assert pr.ndim == 1\n    assert pr.name == name\n    assert np.allclose(values, pr.values)\n    assert pr.datatype == datatype\n\n\ndef test_build_control_record():\n    name = \"model_mode\"\n    datatype = 4\n    values = [\"GSFLOW\"]\n    cr = ControlRecord(name=name, values=values, datatype=datatype)"
+    },
+    {
+      "file": "autotest/test_004.py",
+      "lines": 67,
+      "imports": [
+        "gsflow",
+        "numpy",
+        "os"
+      ],
+      "test_functions": [
+        "test_build_control_file_object",
+        "test_build_prms_parameter_object",
+        "test_empty_control_file_object",
+        "test_empty_prms_parameter_object"
+      ],
+      "file_references": [
+        "test.control"
+      ],
+      "potential_external_calls": [],
+      "source_preview": "from gsflow import PrmsParameters\nfrom gsflow.param_base import ParameterBase\nfrom gsflow import ParameterRecord\nfrom gsflow import ControlFile\nfrom gsflow import ControlRecord\nimport numpy as np\nimport os\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_empty_prms_parameter_object():\n    pp = PrmsParameters([])\n\n    assert isinstance(pp, PrmsParameters)\n    assert isinstance(pp, ParameterBase)\n\n\ndef test_empty_control_file_object():\n    cf = ControlFile([])\n\n    assert isinstance(cf, ControlFile)\n    assert isinstance(cf, ParameterBase)\n\n\ndef test_build_prms_parameter_object():\n    file_name = \"test.param\"\n    name = \"ssr2gw_rate 0\"\n    values = np.random.randn(128)\n    dimensions = [[\"nssr\", 128]]\n    datatype = 2\n    pr = ParameterRecord(name, values=values, dimensions=dimensions,\n                         datatype=datatype, file_name=file_name)\n"
+    },
+    {
+      "file": "autotest/test_005.py",
+      "lines": 55,
+      "imports": [
+        "gsflow",
+        "numpy",
+        "os",
+        "pandas"
+      ],
+      "test_functions": [
+        "test_build_prms_data",
+        "test_empty_prms_data",
+        "test_load_write_prms_day"
+      ],
+      "file_references": [
+        "test.data"
+      ],
+      "potential_external_calls": [],
+      "source_preview": "from gsflow import PrmsData\nfrom gsflow.prms import PrmsDay\nimport pandas as pd\nimport numpy as np\nimport os\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_empty_prms_data():\n    data = PrmsData({})\n\n    assert isinstance(data, PrmsData)\n\n\ndef test_build_prms_data():\n    data_df = pd.DataFrame()\n    name = \"test.data\"\n    model_dir = os.path.join(ws, \".\")\n    header = \"this is a test\"\n    data = PrmsData(data_df, name=name, model_dir=model_dir, header=header)\n\n    assert data.file_name == os.path.join(model_dir, name)\n    assert data.header == header\n    assert isinstance(data.data_df, pd.DataFrame)\n\n\ndef test_load_write_prms_day():\n    model_dir = os.path.join(ws, \"..\", \"examples\", \"data\", \"day\")\n    ows = os.path.join(ws, \"temp\")\n    day_file = os.path.join(model_dir, \"prcp.cbh\")\n    day = PrmsDay.load_from_file(day_file)\n    df = day.dataframe\n    if not isinstance(df, pd.DataFrame):"
+    },
+    {
+      "file": "autotest/test_006.py",
+      "lines": 55,
+      "imports": [
+        "gsflow",
+        "numpy",
+        "os",
+        "pandas"
+      ],
+      "test_functions": [
+        "test_build_prms_model"
+      ],
+      "file_references": [
+        "test.control",
+        "test.data"
+      ],
+      "potential_external_calls": [],
+      "source_preview": "from gsflow import PrmsModel\nfrom gsflow import PrmsData, PrmsParameters, ParameterRecord, ControlRecord, ControlFile\nimport os\nimport numpy as np\nimport pandas as pd\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_build_prms_model():\n    # buld control file object\n    cf_name = \"test.control\"\n    model_dir = os.path.join(ws, \".\")\n    name = \"model_mode\"\n    datatype = 4\n    cr_values = [\"GSFLOW\"]\n    cr = ControlRecord(name=name, values=cr_values, datatype=datatype)\n\n    control = ControlFile([cr], name=cf_name, model_dir=model_dir,\n                          header=\"this is a test\")\n\n    # build parameter object\n    file_name = \"test.param\"\n    name = \"ssr2gw_rate 0\"\n    values = np.random.randn(128)\n    dimensions = [[\"nssr\", 128]]\n    datatype = 2\n    pr = ParameterRecord(name, values=values, dimensions=dimensions,\n                         datatype=datatype, file_name=file_name)\n\n    parameters = PrmsParameters([pr], header=\"this is a test\")\n\n    # build Data object\n    data_df = pd.DataFrame()"
+    },
+    {
+      "file": "autotest/test_007.py",
+      "lines": 14,
+      "imports": [
+        "gsflow"
+      ],
+      "test_functions": [
+        "test_empty_modflow"
+      ],
+      "file_references": [],
+      "potential_external_calls": [],
+      "source_preview": "from gsflow.modflow import Modflow\n\n\ndef test_empty_modflow():\n    modelname = \"gsflow_test\"\n    ml = Modflow(modelname=modelname)\n\n    assert isinstance(ml, Modflow)\n    assert ml.name == modelname\n    assert ml.version == 'mfnwt'\n\n\nif __name__ == \"__main__\":\n    test_empty_modflow()"
+    },
+    {
+      "file": "autotest/test_008.py",
+      "lines": 41,
+      "imports": [
+        "gsflow",
+        "numpy",
+        "os"
+      ],
+      "test_functions": [
+        "test_dis_object_from_flopy",
+        "test_dis_object_from_shp",
+        "test_empty_dis_object"
+      ],
+      "file_references": [
+        "saghen.nam"
+      ],
+      "potential_external_calls": [],
+      "source_preview": "import os\nimport numpy as np\nfrom gsflow.output import PrmsDiscretization\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_empty_dis_object():\n    dis = PrmsDiscretization([])\n    assert isinstance(dis, PrmsDiscretization)\n    assert dis.nhru == 0\n\n\ndef test_dis_object_from_shp():\n    local_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"sagehen\", \"shapefiles\")\n    shp = \"hru_params.shp\"\n\n    dis = PrmsDiscretization.load_from_shapefile(os.path.join(local_ws, shp))\n    assert isinstance(dis, PrmsDiscretization)\n    assert dis.nhru == 6468\n    assert dis.extent is not None\n\n\ndef test_dis_object_from_flopy():\n    from gsflow.modflow import Modflow\n\n    local_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"sagehen\", \"modflow\")\n    nam = \"saghen.nam\"\n\n    ml = Modflow.load(nam, model_ws=local_ws)\n    dis = PrmsDiscretization.load_from_flopy(ml)\n    assert isinstance(dis, PrmsDiscretization)\n    assert dis.nhru == 6468\n    assert dis.extent is not None"
+    },
+    {
+      "file": "autotest/test_009.py",
+      "lines": 157,
+      "imports": [
+        "gsflow",
+        "numpy",
+        "os"
+      ],
+      "test_functions": [
+        "test_load_gsflow_irregular_path_relative_bat",
+        "test_load_modflow_irregular_paths",
+        "test_load_write_gsflow",
+        "test_load_write_gsflow_modflow",
+        "test_load_write_model_prms_only"
+      ],
+      "file_references": [
+        "sagehen.control",
+        "sagehen_with_pumping.nam",
+        "saghen.nam",
+        "saghen_new_cont.control",
+        "saghen_paths_cont.control",
+        "test2_cont.control",
+        "test3_cont.control"
+      ],
+      "potential_external_calls": [],
+      "source_preview": "import gsflow\nimport os\nimport numpy as np\nfrom gsflow import ControlFile, PrmsParameters, PrmsData\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_load_write_model_prms_only():\n    local_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"sagehen\", \"prms\", \"windows\")\n    control_file = \"sagehen.control\"\n    gs = gsflow.GsflowModel.load_from_file(os.path.join(local_ws, control_file))\n    assert isinstance(gs.control, ControlFile)\n    assert isinstance(gs.prms.parameters, PrmsParameters)\n    assert isinstance(gs.prms.data, PrmsData)\n\n    ws2 = os.path.join(ws, \"temp\")\n    gs.write_input(workspace=ws2)\n\n    gs2 = gsflow.GsflowModel.load_from_file(os.path.join(ws2, control_file))\n\n    assert len(gs2.control.record_names) == len(gs.control.record_names)\n    assert len(gs2.prms.parameters.record_names) == len(gs.prms.parameters.record_names)\n\n\ndef test_load_write_gsflow_modflow():\n    local_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"sagehen\", \"modflow\")\n    nam = \"saghen.nam\"\n    ml = gsflow.modflow.Modflow.load(nam, model_ws=local_ws)\n    assert isinstance(ml, gsflow.modflow.Modflow)\n\n    ws2 = os.path.join(ws, \"temp\")\n    ml.change_model_ws(ws2)\n    ml.write_input()"
+    },
+    {
+      "file": "autotest/test_010.py",
+      "lines": 12,
+      "imports": [
+        "gsflow"
+      ],
+      "test_functions": [
+        "test_call_help"
+      ],
+      "file_references": [],
+      "potential_external_calls": [],
+      "source_preview": "import gsflow\n\n\ndef test_call_help():\n    helper = gsflow.prms.Helper()\n    assert(len(helper.prms_dimension_names) > 0)\n    assert(len(helper.prms_output_variables) > 0)\n    assert(len(helper.prms_parameter_names) > 0)\n\n\nif __name__ == \"__main__\":\n    test_call_help()"
+    },
+    {
+      "file": "autotest/test_011.py",
+      "lines": 33,
+      "imports": [
+        "gsflow",
+        "os",
+        "platform"
+      ],
+      "test_functions": [
+        "test_open_write_run"
+      ],
+      "file_references": [
+        "saghen_new_cont.control"
+      ],
+      "potential_external_calls": [
+        "gs2.run_model"
+      ],
+      "source_preview": "from gsflow import GsflowModel\nimport os\nimport platform\n# open, write to new directory, run model\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_open_write_run():\n    local_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"sagehen\", \"gsflow\")\n    control_file = \"saghen_new_cont.control\"\n\n    exe = os.path.join(ws, \"..\", \"bin\", \"gsflow\")\n    if platform.system().lower() == \"windows\":\n        exe = os.path.join(ws, \"..\", \"bin\", \"gsflow.exe\")\n\n    exe = os.path.abspath(exe)\n    gs = GsflowModel.load_from_file(os.path.join(local_ws, control_file),\n                                    gsflow_exe=exe)\n\n    ws2 = os.path.join(ws, \"temp\")\n\n    # change ws only ...\n    gs.write_input(workspace=ws2)\n    gs2 = GsflowModel.load_from_file(os.path.join(ws2, control_file),\n                                     gsflow_exe=exe)\n    success, buff = gs2.run_model(model_ws=ws2)\n    assert success\n\n\nif __name__ == \"__main__\":\n    test_open_write_run()"
+    },
+    {
+      "file": "autotest/test_012.py",
+      "lines": 109,
+      "imports": [
+        "gsflow",
+        "numpy",
+        "os"
+      ],
+      "test_functions": [
+        "test_ModflowAg_load_write",
+        "test_ModflowAg_ponds_load_write"
+      ],
+      "file_references": [],
+      "potential_external_calls": [],
+      "source_preview": "# test ModflowAg package\nimport os\nfrom gsflow.modflow import Modflow, ModflowAwu, ModflowAg\nimport numpy as np\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_ModflowAg_load_write():\n    local_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"sagehen\", \"modflow\")\n    agfile = \"sagehen.awu\"\n    nper = 344\n\n    ml = Modflow(\"agtest\", model_ws=local_ws)\n\n    ag = ModflowAwu.load(os.path.join(local_ws, agfile), ml,\n                         nper=nper, ext_unit_dict={})\n\n    if not isinstance(ag, ModflowAg):\n        raise AssertionError(\"Override of Awu failed\")\n\n    ws2 = os.path.join(ws, \"temp\")\n    ml.change_model_ws(ws2)\n    ag.write_file()\n\n    agfile2 = \"agtest.ag\"\n    ml2 = Modflow(\"agtest2\", model_ws=ws2)\n    ag2 = ModflowAg.load(os.path.join(ws2, agfile2), ml2,\n                          nper=nper, ext_unit_dict={})\n\n    assert repr(ag.options) == repr(ag2.options)\n\n    for ix, rec in enumerate(ag.time_series):\n        assert rec == ag2.time_series[ix]"
+    },
+    {
+      "file": "autotest/test_013.py",
+      "lines": 60,
+      "imports": [
+        "gsflow",
+        "matplotlib",
+        "os"
+      ],
+      "test_functions": [
+        "test_prms_plotting"
+      ],
+      "file_references": [
+        "saghen_new_cont.control"
+      ],
+      "potential_external_calls": [],
+      "source_preview": "# plotting testing\nimport os\nimport matplotlib.pyplot as plt\nfrom matplotlib.collections import PatchCollection\nfrom matplotlib.tri.tricontour import TriContourSet\nfrom matplotlib.figure import Figure\nfrom matplotlib.axes import Axes\nfrom gsflow import GsflowModel\nfrom gsflow.output import PrmsDiscretization, PrmsPlot\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_prms_plotting():\n    local_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"sagehen\", \"gsflow\")\n    control_file = \"saghen_new_cont.control\"\n    gs = GsflowModel.load_from_file(os.path.join(local_ws, control_file))\n\n    shp_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"sagehen\", \"shapefiles\")\n    shp = \"hru_params.shp\"\n\n    dis = PrmsDiscretization.load_from_shapefile(os.path.join(shp_ws, shp))\n    assert isinstance(dis, PrmsDiscretization)\n    assert dis.nhru == 6468\n    assert dis.extent is not None\n\n    plot = PrmsPlot(dis)\n\n    ssr2gw = gs.prms.parameters.get_record(\"ssr2gw_rate\")\n\n    ax = plot.plot_parameter(ssr2gw, masked_values=[0], cmap=\"viridis\")\n    assert isinstance(ax, PatchCollection)\n    plt.close()\n"
+    },
+    {
+      "file": "autotest/test_014.py",
+      "lines": 29,
+      "imports": [
+        "gsflow",
+        "os",
+        "pandas"
+      ],
+      "test_functions": [
+        "test_read_stat_var",
+        "test_read_stat_var_from_control"
+      ],
+      "file_references": [
+        "saghen_new_cont.control",
+        "saghen_new_stat_var.dat"
+      ],
+      "potential_external_calls": [],
+      "source_preview": "import pandas as pd\nimport os\nfrom gsflow import GsflowModel\nfrom gsflow.output import StatVar\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_read_stat_var():\n    local_ws = os.path.join(ws, \"temp\")\n    name = \"saghen_new_stat_var.dat\"\n\n    sv = StatVar(os.path.join(local_ws, name))\n    assert isinstance(sv.stat_df, pd.DataFrame)\n\n\ndef test_read_stat_var_from_control():\n    local_ws = os.path.join(ws, \"temp\")\n    control_file = \"saghen_new_cont.control\"\n\n    gs = GsflowModel.load_from_file(os.path.join(local_ws, control_file))\n    df = gs.prms.get_StatVar()\n    assert isinstance(df, pd.DataFrame)\n\n\nif __name__ == \"__main__\":\n    test_read_stat_var()\n    test_read_stat_var_from_control()"
+    },
+    {
+      "file": "autotest/test_015.py",
+      "lines": 54,
+      "imports": [
+        "gsflow",
+        "numpy",
+        "os"
+      ],
+      "test_functions": [
+        "test_raster_functions"
+      ],
+      "file_references": [],
+      "potential_external_calls": [],
+      "source_preview": "import os\nimport numpy as np\nfrom gsflow.utils import Rasters\nfrom gsflow.output import PrmsDiscretization\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\ndef test_raster_functions():\n\n    # load the PrmsDiscrtization object\n    local_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"sagehen\", \"shapefiles\")\n    shp = \"hru_params.shp\"\n    dis = PrmsDiscretization.load_from_shapefile(os.path.join(local_ws, shp))\n\n    # load a DEM raster of the area\n    path = os.path.join(ws, '..', 'examples', 'data', 'geospatial')\n    name = \"dem.img\"\n    try:\n        x = Rasters.load(os.path.join(path, name))\n    except ImportError:\n        # trap for travis issues with GDAL\n        return\n\n    x.set_raster_band(1)\n\n    # sample the raster using the discretization object\n    dem = x.sample_discretization(dis)\n\n    if not isinstance(dem, np.ndarray):\n        raise AssertionError()\n\n    if len(dem) != len(dis.x_hru_centers):\n        raise AssertionError\n"
+    },
+    {
+      "file": "autotest/test_016.py",
+      "lines": 36,
+      "imports": [
+        "gsflow",
+        "os"
+      ],
+      "test_functions": [
+        "test_sfr_renumber"
+      ],
+      "file_references": [
+        "saghen_new_cont.control"
+      ],
+      "potential_external_calls": [],
+      "source_preview": "# test sfr renumbering schemes and other random utilities\nimport gsflow\nimport os\nfrom gsflow.utils import SfrRenumber\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_sfr_renumber():\n    # simple test to ensure no crashes in the renumbering schemes\n    # expand this later to test LAK, AG, and GAGE\n    local_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"sagehen\", \"gsflow\")\n    control_file = \"saghen_new_cont.control\"\n\n    gsf = gsflow.GsflowModel.load_from_file(os.path.join(local_ws, control_file))\n    ml = gsf.mf\n\n    # renumber by topology\n    sfrenum = SfrRenumber(model=ml)\n    sfrenum.renumber_sfr()\n    sfrenum.renumber_all()\n\n    # renumber by dis\n    sfrenum = SfrRenumber(model=ml, scheme=\"dis\")\n    sfrenum.renumber_sfr()\n    sfrenum.renumber_all()\n\n    # renumber by strtop\n    sfrenum = SfrRenumber(model=ml, scheme=\"sfr\")\n    sfrenum.renumber_sfr()\n    sfrenum.renumber_all()\n\n\nif __name__ == \"__main__\":"
+    },
+    {
+      "file": "autotest/test_017.py",
+      "lines": 115,
+      "imports": [
+        "gsflow",
+        "os",
+        "pycrs",
+        "shapefile"
+      ],
+      "test_functions": [
+        "test_gsflow_modsim_read_write",
+        "test_modsim",
+        "test_modsim_flag_spillway"
+      ],
+      "file_references": [
+        "sagehen_modsim_3lay.control",
+        "saghen_modsim_cont.control"
+      ],
+      "potential_external_calls": [],
+      "source_preview": "# test MODSIM class\nimport gsflow\nimport os\nimport pycrs\nimport shapefile\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_modsim():\n    local_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"sagehen\", \"gsflow-modsim\")\n    control_file = \"saghen_modsim_cont.control\"\n    shp = os.path.join(ws, \"temp\", \"test_modsim_modsim.shp\")\n    prj = os.path.join(ws, \"temp\", \"test_modsim_modsim.prj\")\n    proj4 = \"+proj=utm +zone=10 +ellps=GRS80 +datum=NAD83 +units=m +no_defs \"\n\n    gsf = gsflow.GsflowModel.load_from_file(os.path.join(local_ws, control_file))\n    modsim = gsflow.modsim.Modsim(gsf)\n\n    if not modsim._ready:\n        raise AssertionError\n\n    sfr_topo = modsim.sfr_topology\n    lak_topo = modsim.lake_topology\n\n    modsim.write_modsim_shapefile(shp=shp, proj4=proj4)\n\n    crs = pycrs.parse.from_proj4(proj4)\n\n    sf = shapefile.Reader(shp)\n    if not sf.numRecords == 17:\n        raise AssertionError\n\n    if not sf.shapeType == 3:"
+    },
+    {
+      "file": "autotest/test_018.py",
+      "lines": 24,
+      "imports": [
+        "gsflow",
+        "os"
+      ],
+      "test_functions": [
+        "test_netcdf_export"
+      ],
+      "file_references": [
+        "saghen_modsim_cont.control",
+        "test.nc"
+      ],
+      "potential_external_calls": [],
+      "source_preview": "# test exporting capabilities\nimport gsflow\nimport os\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_netcdf_export():\n    local_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"sagehen\", \"gsflow-modsim\")\n    control_file = \"saghen_modsim_cont.control\"\n\n    gsf = gsflow.GsflowModel.load_from_file(os.path.join(local_ws, control_file))\n    gsf.mf.modelgrid.set_coord_info(\n        xoff=438979.0,\n        yoff=3793007.75,\n        proj4=\"+proj=utm +zone=11 +ellps=GRS80 +datum=NAD83 +units=m +no_defs\"\n    )\n    # gsf.prms.parameters.export_nc(\"test.nc\", gsf.mf)\n    gsf.export_nc(os.path.join(ws, \"temp\", \"test.nc\"))\n\n\nif __name__ == \"__main__\":\n    test_netcdf_export()"
+    },
+    {
+      "file": "autotest/test_019.py",
+      "lines": 17,
+      "imports": [
+        "gsflow",
+        "os"
+      ],
+      "test_functions": [
+        "test_vtk"
+      ],
+      "file_references": [
+        "saghen_new_cont.control"
+      ],
+      "potential_external_calls": [],
+      "source_preview": "# test exporting capabilities\nimport gsflow\nimport os\nfrom gsflow.utils.vtk import Gsflowvtk, Mfvtk\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_vtk():\n    local_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"sagehen\", \"gsflow\")\n    control_file = \"saghen_new_cont.control\"\n    Gsflowvtk.gsflow_to_vtk(control_file=os.path.join(local_ws, control_file))\n\n\nif __name__ == \"__main__\":\n    test_vtk()"
+    },
+    {
+      "file": "autotest/test_020.py",
+      "lines": 79,
+      "imports": [
+        "gsflow",
+        "os"
+      ],
+      "test_functions": [
+        "test_defaults",
+        "test_import_defaults"
+      ],
+      "file_references": [],
+      "potential_external_calls": [],
+      "source_preview": "import os\n\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_import_defaults():\n    from gsflow.builder import Defaults\n    from gsflow.builder import ModflowDefaults\n    from gsflow.builder import PrmsDefaults\n    from gsflow.builder import ControlFileDefaults\n\n\ndef test_defaults():\n    from gsflow.builder import Defaults\n\n    outfile = os.path.join(ws, 'temp', 'test_20.json')\n\n    defaults = Defaults()\n\n    if len(defaults.record_names) != 178:\n        raise AssertionError(\"record_names failed\")\n\n    control = defaults.control\n    r = control.get_default('rpt_days')\n    control.add_default(r.name, r.data + 2)\n\n    r2 = control.get_default('rpt_days')\n    if r2.data != 9:\n        raise AssertionError(\"control.add_default failed\")\n\n    control.delete_default('rpt_days')\n\n    if 'rpt_days' in control.record_names:\n        raise AssertionError(\"control.delete_default failed\")"
+    },
+    {
+      "file": "autotest/test_021.py",
+      "lines": 63,
+      "imports": [
+        "gsflow",
+        "numpy",
+        "os",
+        "platform"
+      ],
+      "test_functions": [
+        "test_crt_parameter_output",
+        "test_crt_vis_output",
+        "test_import_crt",
+        "test_read_write_crt"
+      ],
+      "file_references": [
+        "vis.txt"
+      ],
+      "potential_external_calls": [
+        "crt.run_model"
+      ],
+      "source_preview": "import os\nimport platform\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_import_crt():\n    from gsflow.crt import CRT\n\n\ndef test_read_write_crt():\n    from gsflow.crt import CRT\n    exe_name = os.path.join(ws, \"..\", \"bin\", \"CRT_1.3.1\")\n    if platform.system().lower() == \"windows\":\n        exe_name += \".exe\"\n    model_ws = os.path.join(ws, \"..\", \"examples\", \"data\", \"crt\")\n    out_ws = os.path.join(ws, \"temp\")\n\n    crt = CRT.load(model_ws)\n    crt.write_input(out_ws)\n    success, buff = crt.run_model(exe_name)\n\n    if not success:\n        raise AssertionError(\"CRT run failed\")\n\n\ndef test_crt_parameter_output():\n    from gsflow.crt import CRT\n    from gsflow.prms import ParameterRecord\n\n    model_ws = os.path.join(ws, \"temp\")\n    crt = CRT.load(model_ws)\n    params = crt.load_cascade_parameters_output()\n    if len(params) != 6:\n        raise AssertionError(\"cascade parameters not loaded properly\")"
+    },
+    {
+      "file": "autotest/test_022.py",
+      "lines": 156,
+      "imports": [
+        "flopy",
+        "gsflow",
+        "numpy",
+        "os",
+        "rasterio"
+      ],
+      "test_functions": [
+        "test_controlfile_builder",
+        "test_fishnet_generation",
+        "test_fishnet_import",
+        "test_import_modflow_builder",
+        "test_import_prms_builder",
+        "test_modflow_builder"
+      ],
+      "file_references": [
+        ".nam"
+      ],
+      "potential_external_calls": [],
+      "source_preview": "import os\nimport numpy as np\n\nws = os.path.abspath(os.path.dirname(__file__))\n\n\ndef test_fishnet_import():\n    from gsflow.builder import GenerateFishnet\n\n\ndef test_fishnet_generation():\n    from gsflow.builder import GenerateFishnet\n    from flopy.discretization import StructuredGrid\n    try:\n        import rasterio\n    except ImportError:\n        return\n\n    raster = os.path.join(\n        ws, '..', 'examples', 'data', 'geospatial', 'dem.img'\n    )\n    modelgrid = GenerateFishnet(raster, xcellsize=50, ycellsize=100, buffer=0)\n\n    if not isinstance(modelgrid, StructuredGrid):\n        raise TypeError('GenerateFishnet should return SturcturedGrid object')\n\n    if modelgrid.ncol != 149 or modelgrid.nrow != 69:\n        raise AssertionError(\"DELC and DELR have not been properly calculated\")\n\n\ndef test_import_modflow_builder():\n    from gsflow.builder import ModflowBuilder\n\n\ndef test_modflow_builder():"
+    }
+  ],
+  "test_file_count": 24,
+  "source_executed": false,
+  "dependencies_installed": false,
+  "original_archive_modified": false,
+  "limitations": [
+    "Static screening may miss dynamically invoked tests.",
+    "String-based file references are only indicators.",
+    "External executable detection is heuristic.",
+    "A test function may require fixtures or other setup.",
+    "No scientific test has been executed."
+  ],
+  "generated_at_utc": "2026-11-11T01:53:55.648045+00:00"
+}

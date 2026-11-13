@@ -1,0 +1,19 @@
+H02 RECOVERY 1: INSTALL SIMPLEJSON
+Python: C:\Users\REDACTED_USER\miniconda3\envs\code_decay\python.exe
+simplejson: 4.2.0
+Exit code: 1
+Elapsed seconds: 4.06
+
+STDOUT:
+
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265\run_test.py", line 6, in <module>
+    from floodsformer.utils.misc import launch_job
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265\floodsformer\utils\misc.py", line 11, in <module>
+    import floodsformer.utils.logg as logg
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265\floodsformer\utils\logg.py", line 14, in <module>
+    from fvcore.common.file_io import PathManager
+ModuleNotFoundError: No module named 'fvcore'
+

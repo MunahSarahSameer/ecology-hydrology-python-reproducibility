@@ -1,0 +1,42 @@
+{
+  "candidate": "H01",
+  "step": 201,
+  "test_type": "path_and_pandas_api_recovery",
+  "original_archive_modified": false,
+  "packages_installed": false,
+  "generated_at_utc": "2026-11-11T22:55:00.767285+00:00",
+  "interventions": [
+    {
+      "type": "data_path_redirection",
+      "original": "E:/All1study/1irragation/compute/逐月径流模拟结果_天然.xlsx",
+      "replacement_file": "monthly_streamflow_NAT.xlsx",
+      "count": 1
+    },
+    {
+      "type": "data_path_redirection",
+      "original": "E:/All1study/1irragation/compute/逐月径流模拟结果_人类.xlsx",
+      "replacement_file": "monthly_streamflow_HUM.xlsx",
+      "count": 1
+    },
+    {
+      "type": "data_path_redirection",
+      "original": "E:/All1study/1irragation/compute/逐月实测径流数据绘图.xlsx",
+      "replacement_file": "monthly_streamflow_OBS.xlsx",
+      "count": 1
+    },
+    {
+      "type": "pandas_frequency_compatibility",
+      "original": "resample('Y')",
+      "replacement": "resample('YE')",
+      "count": 1
+    }
+  ],
+  "original_sha256": "59d527abc3aa5505be3a8ab520941840f2773e069b86bec4b2abd1e5e46d62d2",
+  "working_copy_sha256": "2e930ac7ecc380c577f2caf6b7a35679a674482403d0c04381d872f5913be0bc",
+  "return_code": 0,
+  "timed_out": false,
+  "stdout": "xiantao (1991-2000): NAT=-1.2728288071283789, HUM=0.3539549709545131\nxiantao (2001-2012): NAT=-0.11482366856558879, HUM=0.7038936987350153\nxiantao (2013-2022): NAT=-1.777654696000282, HUM=-0.0692994982788453\nyichang (1991-2000): NAT=0.9583869600757011, HUM=0.9620018528049256\nyichang (2001-2012): NAT=0.870660941871966, HUM=0.9283128465725112\nyichang (2013-2022): NAT=0.595718840021378, HUM=0.91262329425915\nwaizhou (1991-2000): NAT=0.9382662502716806, HUM=0.9368303353728548\nwaizhou (2001-2012): NAT=0.9501028644999318, HUM=0.939074936607551\nwaizhou (2013-2022): NAT=0.8951421560845437, HUM=0.8926474178310095\ndatong (1991-2000): NAT=0.9770995246566062, HUM=0.9705019404850651\ndatong (2001-2012): NAT=0.9219291277866988, HUM=0.9476223956266825\ndatong (2013-2022): NAT=0.8510112697809752, HUM=0.9596528522095702\ngaochang (1991-2000): NAT=0.8972494464309724, HUM=0.906081766586789\ngaochang (2001-2012): NAT=0.858436337954127, HUM=0.9052976547199902\ngaochang (2013-2022): NAT=0.6495789034311558, HUM=0.8085182589544497\npingshan (1991-2000): NAT=0.8509750878262607, HUM=0.8649875730507984\npingshan (2001-2012): NAT=0.7771111097114973, HUM=0.8314927006681985\npingshan (2013-2022): NAT=0.08856830726447351, HUM=0.5146301823441304\nbeibei (1991-2000): NAT=0.8700062881599069, HUM=0.8949498425554698\nbeibei (2001-2012): NAT=0.8952706787706901, HUM=0.897701234317607\nbeibei (2013-2022): NAT=0.8795690186426068, HUM=0.9156502240030597\ncuntan (1991-2000): NAT=0.9388790592565047, HUM=0.949597123434227\ncuntan (2001-2012): NAT=0.9154218628678296, HUM=0.9461993935058054\ncuntan (2013-2022): NAT=0.7813022028522588, HUM=0.9149256061984781\nwulong (1991-2000): NAT=0.8966306029779075, HUM=0.8950550199938744\nwulong (2001-2012): NAT=0.8376512935383207, HUM=0.8589389765180426\nwulong (2013-2022): NAT=0.8031533513511435, HUM=0.8654066068764357\nzhutuo (1991-2000): NAT=0.9123386598201044, HUM=0.9263020236426618\nzhutuo (2001-2012): NAT=0.8682842852833781, HUM=0.9129319984531458\nzhutuo (2013-2022): NAT=0.5880427748236141, HUM=0.8374881709895297\n",
+  "stderr": "C:\\Users\\MUNAH\\AppData\\Local\\Temp\\tmpdjmrzom5\\recovered_fig2.py:193: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n",
+  "generated_figures": [],
+  "outcome": "EXECUTED_NO_FIGURE_FILES"
+}

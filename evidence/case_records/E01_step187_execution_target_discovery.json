@@ -1,0 +1,133 @@
+{
+  "candidate": "E01",
+  "step": 187,
+  "execution_attempted": false,
+  "targets": [
+    {
+      "file": "code/deepSDM/data_preparation/consolidate_observations.py",
+      "imports": [
+        "os",
+        "argparse",
+        "typing",
+        "glob",
+        "tqdm",
+        "deepSDM.util"
+      ],
+      "functions": [
+        "consolidate_observation_files"
+      ],
+      "main_guard_detected": true
+    },
+    {
+      "file": "code/deepSDM/data_preparation/create_splits.py",
+      "imports": [
+        "typing",
+        "argparse",
+        "collections",
+        "random",
+        "numpy",
+        "sklearn.cluster",
+        "tqdm",
+        "deepSDM.util",
+        "deepSDM.util.raster_sampling"
+      ],
+      "functions": [
+        "_filter_covariate_nans",
+        "create_split_random",
+        "create_split_block_spatial",
+        "create_split_ecoregions_cluster",
+        "create_split_ecoregions_blockspatial",
+        "create_split_cluster_spatial",
+        "create_split_spatial"
+      ],
+      "main_guard_detected": true
+    },
+    {
+      "file": "code/deepSDM/util/helpers.py",
+      "imports": [
+        "typing",
+        "hashlib",
+        "os",
+        "random",
+        "collections",
+        "collections.abc",
+        "glob",
+        "socket",
+        "numpy",
+        "rasterio",
+        "torch",
+        "torch.backends",
+        "torch",
+        "torch.autograd"
+      ],
+      "functions": [
+        "get_open_port",
+        "init_rng",
+        "array_split",
+        "list_images",
+        "parse_dsv",
+        "coords_to_id",
+        "to_geotiff",
+        "bn_to_in",
+        "bn_set_train",
+        "bn_track_running_stats",
+        "batch_jacobian",
+        "batch_hessian",
+        "batch_third"
+      ],
+      "main_guard_detected": false
+    },
+    {
+      "file": "code/deepSDM/util/common.py",
+      "imports": [
+        "os",
+        "typing",
+        "functools",
+        "collections",
+        "ast",
+        "glob",
+        "json",
+        "yaml",
+        "torch",
+        "torch",
+        "torch.nn.modules",
+        "torch",
+        "torch.optim",
+        "torch.utils.data",
+        "torch.utils.data.distributed",
+        "torch.distributed",
+        "deepSDM.engine",
+        "deepSDM.util"
+      ],
+      "functions": [
+        "load_config",
+        "save_config",
+        "parse_kvp",
+        "parse_override_params",
+        "load_criteria",
+        "load_transform",
+        "load_dataset",
+        "collate",
+        "create_dataloader",
+        "load_model",
+        "load_state_dict",
+        "save_state_dict",
+        "setup_optimizer",
+        "setup_schedulers",
+        "ddp_setup",
+        "ddp_destroy"
+      ],
+      "main_guard_detected": false
+    },
+    {
+      "file": "code/deepSDM/util/schedulers.py",
+      "imports": [
+        "math",
+        "typing"
+      ],
+      "functions": [],
+      "main_guard_detected": false
+    }
+  ],
+  "generated_at_utc": "2026-11-11T22:30:49.407768+00:00"
+}

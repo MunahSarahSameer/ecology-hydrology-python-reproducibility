@@ -1,0 +1,205 @@
+{
+  "step": 131,
+  "package_id": "H08",
+  "package_name": "pyGSFLOW",
+  "inspection_type": "prms_record_class_dependency_trace",
+  "target_classes": [
+    "ControlRecord",
+    "ParameterRecord",
+    "RecordBase"
+  ],
+  "class_locations": [
+    {
+      "class": "ControlRecord",
+      "file": "gsflow/control.py"
+    },
+    {
+      "class": "ParameterRecord",
+      "file": "gsflow/prms/prms_parameter.py"
+    },
+    {
+      "class": "RecordBase",
+      "file": "gsflow/record_base.py"
+    }
+  ],
+  "implementation_files": [
+    {
+      "file": "gsflow/control.py",
+      "sha256": "53672e9150a49a9b10aa01cd92423ff6999f3d2aa5bb161d516b5812368734c2",
+      "line_count": 385,
+      "imports": [
+        {
+          "type": "from",
+          "module": "__future__",
+          "level": 0,
+          "names": [
+            "absolute_import",
+            "division",
+            "print_function"
+          ]
+        },
+        {
+          "type": "import",
+          "module": "os"
+        },
+        {
+          "type": "from",
+          "module": "record_base",
+          "level": 1,
+          "names": [
+            "RecordBase"
+          ]
+        },
+        {
+          "type": "from",
+          "module": "param_base",
+          "level": 1,
+          "names": [
+            "ParameterBase"
+          ]
+        },
+        {
+          "type": "from",
+          "module": "utils",
+          "level": 1,
+          "names": [
+            "GsConstant"
+          ]
+        },
+        {
+          "type": "from",
+          "module": "utils",
+          "level": 1,
+          "names": [
+            "gsflow_io"
+          ]
+        }
+      ],
+      "relevant_classes": [
+        {
+          "name": "ControlRecord",
+          "line_start": 285,
+          "line_end": 385,
+          "methods": [
+            "__init__",
+            "values",
+            "values",
+            "write",
+            "__repr__",
+            "__str__"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "gsflow/prms/prms_parameter.py",
+      "sha256": "69d46a3a85ef9ea09121d8c634330c7d03079cc3c3e2f68060bf82de99107881",
+      "line_count": 691,
+      "imports": [
+        {
+          "type": "from",
+          "module": "__future__",
+          "level": 0,
+          "names": [
+            "absolute_import",
+            "division",
+            "print_function"
+          ]
+        },
+        {
+          "type": "import",
+          "module": "os"
+        },
+        {
+          "type": "import",
+          "module": "numpy"
+        },
+        {
+          "type": "from",
+          "module": "record_base",
+          "level": 2,
+          "names": [
+            "RecordBase"
+          ]
+        },
+        {
+          "type": "from",
+          "module": "param_base",
+          "level": 2,
+          "names": [
+            "ParameterBase"
+          ]
+        }
+      ],
+      "relevant_classes": [
+        {
+          "name": "ParameterRecord",
+          "line_start": 450,
+          "line_end": 691,
+          "methods": [
+            "__init__",
+            "values",
+            "values",
+            "export_nc",
+            "_write_dimension",
+            "_write_parameter",
+            "write",
+            "__repr__",
+            "__str__",
+            "from_dict",
+            "to_dict"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "gsflow/record_base.py",
+      "sha256": "b05525e47b160e4623239d6d7cd215b15724cab1622b8133230f08ab8eb3451e",
+      "line_count": 141,
+      "imports": [
+        {
+          "type": "import",
+          "module": "numpy"
+        },
+        {
+          "type": "from",
+          "module": "utils",
+          "level": 1,
+          "names": [
+            "GsConstant"
+          ]
+        }
+      ],
+      "relevant_classes": [
+        {
+          "name": "RecordBase",
+          "line_start": 5,
+          "line_end": 141,
+          "methods": [
+            "__init__",
+            "_infer_dtype",
+            "_check_values",
+            "values",
+            "nvalues",
+            "_check_dtype",
+            "_force_dtype",
+            "export_nc",
+            "from_dict",
+            "to_dict"
+          ]
+        }
+      ]
+    }
+  ],
+  "missing_classes": [],
+  "original_archive_modified": false,
+  "source_executed": false,
+  "dependencies_installed": false,
+  "limitations": [
+    "Only module-level imports were listed.",
+    "Imports inside functions or methods were not traced.",
+    "Transitive dependencies remain to be assessed.",
+    "No original scientific tests were executed."
+  ],
+  "generated_at_utc": "2026-11-11T01:57:21.241598+00:00"
+}

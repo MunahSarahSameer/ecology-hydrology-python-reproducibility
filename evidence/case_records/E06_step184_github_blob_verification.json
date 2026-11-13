@@ -1,0 +1,25 @@
+{
+  "step": 184,
+  "candidate": "E06",
+  "generated_at_utc": "2026-11-11T03:32:22.668275+00:00",
+  "results": [
+    {
+      "filename": "Case studies of tropical cyclone-induced mangrove degradation.ipynb",
+      "commit": "cdf69eb782a572000d12509aa3a5367ca2efe41e",
+      "http_status": 200,
+      "type": "file",
+      "size": 2,
+      "sha": "d3f5a12faa99758192ecc4ed3fc22c9249232e86",
+      "download_url": "https://raw.githubusercontent.com/GIS-ZhangZhen/ContinuousGlobalMangroveDynamics/cdf69eb782a572000d12509aa3a5367ca2efe41e/Case%20studies%20of%20tropical%20cyclone-induced%20mangrove%20degradation.ipynb"
+    },
+    {
+      "filename": "Local examples of mangrove deforestation events after 2020.ipynb",
+      "commit": "cdf69eb782a572000d12509aa3a5367ca2efe41e",
+      "http_status": 200,
+      "type": "file",
+      "size": 2,
+      "sha": "d3f5a12faa99758192ecc4ed3fc22c9249232e86",
+      "download_url": "https://raw.githubusercontent.com/GIS-ZhangZhen/ContinuousGlobalMangroveDynamics/cdf69eb782a572000d12509aa3a5367ca2efe41e/Local%20examples%20of%20mangrove%20deforestation%20events%20after%202020.ipynb"
+    }
+  ]
+}

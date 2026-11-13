@@ -1,0 +1,18 @@
+{
+  "archive_id": "E07",
+  "component": "DetailView",
+  "function": "read_las",
+  "baseline_status": "FAIL",
+  "baseline_exit_code": 1,
+  "missing_dependency": "laspy",
+  "version_before": null,
+  "version_after": "2.7.0",
+  "installation_exit_code": 0,
+  "recovery_status": "PASS",
+  "recovery_exit_code": 0,
+  "recovery_elapsed_seconds": 1.055,
+  "original_source_modified": false,
+  "input_type": "Synthetic LAS fixture",
+  "stdout": "Fixture points: 4\nOutput type: ndarray\nOutput shape: (4, 3)\nOutput preview: [[0. 1. 2.]\n [1. 2. 3.]\n [2. 3. 4.]\n [3. 4. 5.]]\n=== ORIGINAL FUNCTION EXECUTION COMPLETE ===\n",
+  "stderr": ""
+}

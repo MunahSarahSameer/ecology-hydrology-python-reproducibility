@@ -1,0 +1,31 @@
+{
+  "step": 138,
+  "package_id": "H08",
+  "package_name": "pyGSFLOW",
+  "version": "1.0.2",
+  "doi": "10.5281/zenodo.6468426",
+  "source_independence": {
+    "exact_sha256_matches": 0,
+    "total_ast_matches": 7,
+    "boilerplate_ast_matches": 7,
+    "unresolved_ast_matches": 0,
+    "classification": "PROVISIONALLY_DISTINCT_SOURCE_LEVEL"
+  },
+  "executability": "PARTIALLY_EXECUTABLE_COMPONENT_LEVEL",
+  "candidate_sample_position": 14,
+  "sample_membership": "PROVISIONALLY_INCLUDED",
+  "publication_independence": "NOT_VERIFIED",
+  "limitations": [
+    "Source-level distinctness does not prove publication independence.",
+    "Only locally available ZIP archives were compared.",
+    "Other sample archives may require separate coverage checks.",
+    "AST identity can miss copied fragments or rewritten code.",
+    "Full-package execution and scientific reproduction remain unverified."
+  ],
+  "evidence_files": [
+    "H08_independence_audit.json",
+    "H08_ast_match_investigation.json",
+    "H08_consolidated_assessment.json"
+  ],
+  "generated_at_utc": "2026-11-11T02:08:53.801642+00:00"
+}

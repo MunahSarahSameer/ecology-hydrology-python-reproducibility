@@ -1,0 +1,489 @@
+{
+  "step": 187,
+  "candidate": "E06",
+  "source_archive": "C:\\Users\\MUNAH\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E06\\Code_Figures.zip",
+  "generated_at_utc": "2026-11-11T03:37:33.315673+00:00",
+  "notebooks_inspected": 25,
+  "records": [
+    {
+      "notebook": "Code_Figures/FigS10_MangroveDisturbanceRates.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [
+        "importlib",
+        "matplotlib"
+      ],
+      "external_data_indicators": [
+        "geemap",
+        "os.chdir",
+        "read_csv",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 1,
+          "message": "invalid syntax (<unknown>, line 15)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS11_DisturbanceTrends40Years.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [],
+      "external_data_indicators": [
+        "geemap",
+        "os.chdir",
+        "read_csv",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 16)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS12_RecentDisturbanceRates.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [],
+      "external_data_indicators": [
+        "geemap",
+        "os.chdir",
+        "read_csv",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 15)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS13_RecentLoss.ipynb",
+      "valid_structure": true,
+      "code_cells": 4,
+      "imports": [
+        "cartopy"
+      ],
+      "external_data_indicators": [
+        "ee.Initialize",
+        "os.chdir",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 19)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS14_RelativeChangeClosedMangrove.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [
+        "palettable"
+      ],
+      "external_data_indicators": [
+        "os.chdir",
+        "read_csv",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 11)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS16_ComparisonGMW.ipynb",
+      "valid_structure": true,
+      "code_cells": 2,
+      "imports": [],
+      "external_data_indicators": [
+        "os.chdir",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 11)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS18_LandsatQuantile.ipynb",
+      "valid_structure": true,
+      "code_cells": 2,
+      "imports": [],
+      "external_data_indicators": [
+        "open(",
+        "os.chdir"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 1,
+          "message": "invalid syntax (<unknown>, line 21)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS19-S20_CompositeYears.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [],
+      "external_data_indicators": [
+        "os.chdir",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 14)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS21_PixelCount1980s.ipynb",
+      "valid_structure": true,
+      "code_cells": 2,
+      "imports": [],
+      "external_data_indicators": [],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 5)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS23_ThinCloudmask.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [],
+      "external_data_indicators": [
+        "open(",
+        "os.chdir",
+        "read_csv",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 1,
+          "message": "invalid syntax (<unknown>, line 21)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS24-25_FCCvalidation.ipynb",
+      "valid_structure": true,
+      "code_cells": 5,
+      "imports": [],
+      "external_data_indicators": [
+        "open(",
+        "os.chdir",
+        "rasterio.open",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 22)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS26-29_TrainingSamples.ipynb",
+      "valid_structure": true,
+      "code_cells": 14,
+      "imports": [
+        "matplotlib"
+      ],
+      "external_data_indicators": [
+        "ee.Initialize",
+        "geemap",
+        "open("
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 1,
+          "message": "invalid syntax (<unknown>, line 26)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS2_4CanopyTypes.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [
+        "matplotlib",
+        "palettable"
+      ],
+      "external_data_indicators": [
+        "ee.Initialize",
+        "geemap"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 18)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS30_ValidRatio.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [],
+      "external_data_indicators": [
+        "os.chdir",
+        "read_csv"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 12)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS4_SpatialUnits.ipynb",
+      "valid_structure": true,
+      "code_cells": 2,
+      "imports": [],
+      "external_data_indicators": [
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 15)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS5_Top10TimeSeries.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [],
+      "external_data_indicators": [
+        "os.chdir",
+        "read_csv"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 8)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS7_Myanmar.ipynb",
+      "valid_structure": true,
+      "code_cells": 2,
+      "imports": [],
+      "external_data_indicators": [
+        "os.chdir",
+        "read_csv",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 13)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS8_SchematicFigure.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [],
+      "external_data_indicators": [],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 9)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/FigS9_CycloneExamples.ipynb",
+      "valid_structure": true,
+      "code_cells": 4,
+      "imports": [],
+      "external_data_indicators": [
+        "ee.Initialize",
+        "os.chdir",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 20)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/Figure 1.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [
+        "cartopy",
+        "math",
+        "matplotlib",
+        "matplotlib_scalebar",
+        "shapely"
+      ],
+      "external_data_indicators": [
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 1,
+          "message": "invalid syntax (<unknown>, line 12)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/Figure 2.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [
+        "cartopy",
+        "matplotlib",
+        "seaborn"
+      ],
+      "external_data_indicators": [
+        "os.chdir",
+        "read_csv",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 1,
+          "message": "invalid syntax (<unknown>, line 12)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/Figure 3.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [
+        "cartopy",
+        "importlib",
+        "matplotlib"
+      ],
+      "external_data_indicators": [
+        "ee.Initialize",
+        "geemap",
+        "os.chdir",
+        "read_csv",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 1,
+          "message": "invalid syntax (<unknown>, line 19)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/Figure 4.ipynb",
+      "valid_structure": true,
+      "code_cells": 3,
+      "imports": [],
+      "external_data_indicators": [
+        "os.chdir",
+        "read_csv",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 1,
+          "message": "invalid syntax (<unknown>, line 12)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/Figure 5.ipynb",
+      "valid_structure": true,
+      "code_cells": 6,
+      "imports": [
+        "plotly",
+        "shapely"
+      ],
+      "external_data_indicators": [
+        "ee.Initialize",
+        "geemap",
+        "os.chdir",
+        "read_csv",
+        "read_excel",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 1,
+          "message": "invalid syntax (<unknown>, line 19)"
+        }
+      ],
+      "inspection_error": null
+    },
+    {
+      "notebook": "Code_Figures/SummaryFig.ipynb",
+      "valid_structure": true,
+      "code_cells": 4,
+      "imports": [
+        "palettable"
+      ],
+      "external_data_indicators": [
+        "os.chdir",
+        "read_csv",
+        "read_file"
+      ],
+      "syntax_parse_errors": [
+        {
+          "cell_index": 0,
+          "message": "invalid syntax (<unknown>, line 17)"
+        }
+      ],
+      "inspection_error": null
+    }
+  ],
+  "limitations": [
+    "Static inspection only.",
+    "No research code executed.",
+    "AST parsing may fail on Jupyter magic commands.",
+    "Imports do not establish installed dependencies.",
+    "Archive identity and publication date remain unverified."
+  ]
+}

@@ -1,0 +1,25 @@
+H02 RECOVERY 2: INSTALL FVCORE
+Python: C:\Users\REDACTED_USER\miniconda3\envs\code_decay\python.exe
+fvcore: 0.1.5.post20221221
+Exit code: 1
+Elapsed seconds: 3.73
+
+STDOUT:
+
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265\run_test.py", line 10, in <module>
+    from tools.test_FS import testFS
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265\tools\test_FS.py", line 8, in <module>
+    from floodsformer.models import build_AE_model, build_TS_model, RMSE, class_metrics
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265\floodsformer\models\__init__.py", line 2, in <module>
+    from .VPTR_modules import VPTREnc, VPTRDec, VPTRDisc, VPTRFormerFAR
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265\floodsformer\models\VPTR_modules.py", line 5, in <module>
+    from .VidHRFormer import VidHRFormerFAR
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265\floodsformer\models\VidHRFormer.py", line 5, in <module>
+    from .VidHRFormer_modules import VidHRFormerEncoder, VidHRFormerBlockEnc
+  File "C:\Users\REDACTED_USER\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H02\test1\source\mpianforini-FloodSformer-3a06265\floodsformer\models\VidHRFormer_modules.py", line 5, in <module>
+    from einops import rearrange
+ModuleNotFoundError: No module named 'einops'
+

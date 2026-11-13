@@ -1,0 +1,500 @@
+{
+  "step": 176,
+  "records": {
+    "E06": {
+      "publication_candidates": [
+        {
+          "database": "Crossref",
+          "search_query": "global mangrove changes 1980s 2023 Zhen Zhang",
+          "title": "Zhang Xuecheng Versus Dai Zhen",
+          "doi": "10.7312/columbia/9780231178600.003.0004",
+          "publication_year": 2016,
+          "url": "https://doi.org/10.7312/columbia/9780231178600.003.0004",
+          "authors": [
+            "Ying-shih Yü"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "global mangrove changes 1980s 2023 Zhen Zhang",
+          "title": "Response to SC2 by Zhen Zhang",
+          "doi": "10.5194/bg-2018-304-ac4",
+          "publication_year": 2018,
+          "url": "https://doi.org/10.5194/bg-2018-304-ac4",
+          "authors": [
+            "Hinrich Schaefer"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "global mangrove changes 1980s 2023 Zhen Zhang",
+          "title": "On the Composition of Zhang Hua's “Nüshi Zhen”",
+          "doi": "10.1179/152991004788305765",
+          "publication_year": 2004,
+          "url": "https://doi.org/10.1179/152991004788305765",
+          "authors": [
+            "Michael J. Farmer"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "global mangrove changes 1980s 2023 Zhen Zhang",
+          "title": "First person – Zhen Zhang and Yen Wei Lim",
+          "doi": "10.1242/jcs.213249",
+          "publication_year": 2017,
+          "url": "https://doi.org/10.1242/jcs.213249",
+          "authors": [],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "global mangrove changes 1980s 2023 Zhen Zhang",
+          "title": "Malaria Prevalence Near African Mangroves: Negative Association With Mangrove Extent, but Positive Association With Mangrove Greenness",
+          "doi": "https://doi.org/10.1111/gcb.71058",
+          "publication_year": 2026,
+          "url": "https://openalex.org/W7204999532",
+          "authors": [
+            "Armando J. Cruz‐Laufer",
+            "Farid Dahdouh‐Guebas",
+            "Dakeishla M. Díaz‐Morales",
+            "Olexiy Kyrychenko",
+            "Maarten P. M. Vanhove"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "global mangrove changes 1980s 2023 Zhen Zhang",
+          "title": "Insect Pests and Diseases in Chinese Coastal Mangroves: Challenges and Integrated Control Approaches",
+          "doi": "https://doi.org/10.3390/f17070801",
+          "publication_year": 2026,
+          "url": "https://openalex.org/W7167848939",
+          "authors": [
+            "Liu YouGao",
+            "Z.H. Liu",
+            "Ruihang Cai",
+            "X L Li",
+            "Jinwang Wang"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "global mangrove changes 1980s 2023 Zhen Zhang",
+          "title": "Threat of Alien Species to Native Biodiversity in Mangroves near Latin America’s Largest Port: Pathways for Technological Innovation and Strengthening of Regulations",
+          "doi": "https://doi.org/10.3390/environments12120483",
+          "publication_year": 2025,
+          "url": "https://openalex.org/W4417198613",
+          "authors": [
+            "Sidnei Aranha",
+            "Felipe Rakauskas",
+            "Leonardo Ferreira da Silva",
+            "Caio Fernando Fontana",
+            "Maurício Lamano Ferreira"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "global mangrove changes 1980s 2023 Zhen Zhang",
+          "title": "Accounting intra-tree radial wood density variation estimates more accurate above ground mangrove biomass in the Sundarbans",
+          "doi": "https://doi.org/10.1007/s10342-025-01784-3",
+          "publication_year": 2025,
+          "url": "https://openalex.org/W4409519615",
+          "authors": [
+            "Md. Qumruzzaman Chowdhury",
+            "Swapan Kumar Sarker",
+            "Md. Bishal Ali",
+            "Md. Imam Hossain Imran",
+            "Anup Datta"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "global mangrove disturbance degradation regeneration 1984 2023",
+          "title": "Mapping three decades of mangrove resilience research: Global insights into degradation and regeneration",
+          "doi": "10.64866/j.ijdscr.2025.10012",
+          "publication_year": 2025,
+          "url": "https://doi.org/10.64866/j.ijdscr.2025.10012",
+          "authors": [
+            "Sweta Chatterjee",
+            "Dr. Gupinath Bhandari"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "global mangrove disturbance degradation regeneration 1984 2023",
+          "title": "Global Landsat image acquisition probability: 1984–2023",
+          "doi": "10.1016/j.jag.2025.104928",
+          "publication_year": 2025,
+          "url": "https://doi.org/10.1016/j.jag.2025.104928",
+          "authors": [
+            "Yin Yang",
+            "Peng Li",
+            "Zhiming Feng",
+            "Suresh Chand Rai",
+            "Hong Yang"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "global mangrove disturbance degradation regeneration 1984 2023",
+          "title": "Small‐scale disturbance and regeneration dynamics in a neotropical mangrove forest",
+          "doi": "10.1046/j.1365-2745.2000.00439.x",
+          "publication_year": 2000,
+          "url": "https://doi.org/10.1046/j.1365-2745.2000.00439.x",
+          "authors": [
+            "Ruth E. Sherman",
+            "Timothy J. Fahey",
+            "John J. Battles"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "global mangrove disturbance degradation regeneration 1984 2023",
+          "title": "Global mangrove natural regeneration potential assessment for identifying carbon potentials of natural regeneration and plantation",
+          "doi": "10.1016/j.foreco.2025.123195",
+          "publication_year": 2025,
+          "url": "https://doi.org/10.1016/j.foreco.2025.123195",
+          "authors": [
+            "Guohao Li",
+            "Tianyu Zhuo",
+            "Yifei Ma",
+            "Xinyu Qi",
+            "Xue-yi You"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "global mangrove disturbance degradation regeneration 1984 2023",
+          "title": "Mangrove Forests: One of the World's Threatened Major Tropical Environments",
+          "doi": "https://doi.org/10.1641/0006-3568(2001)051[0807:mfootw]2.0.co;2",
+          "publication_year": 2001,
+          "url": "https://openalex.org/W2261764510",
+          "authors": [
+            "Iván Valiela",
+            "Jennifer L. Bowen",
+            "Joanna K. York"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "global mangrove disturbance degradation regeneration 1984 2023",
+          "title": "Mapping the Link between Climate Change and Mangrove Forest: A Global Overview of the Literature",
+          "doi": "https://doi.org/10.3390/f14020421",
+          "publication_year": 2023,
+          "url": "https://openalex.org/W4321372804",
+          "authors": [
+            "Thirukanthan Chandra Segaran",
+            "Mohamad Nor Azra",
+            "Fathurrahman Lananan",
+            "Juris Burlakovs",
+            "Zane Vincēviča–Gaile"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "global mangrove disturbance degradation regeneration 1984 2023",
+          "title": "Beyond the mangroves: a global synthesis of tidal forested wetland types, drivers and future information needs",
+          "doi": "https://doi.org/10.31223/x5zf2b",
+          "publication_year": 2025,
+          "url": "https://openalex.org/W4414374778",
+          "authors": [
+            "Jeffrey J. Kelleway",
+            "Gregory B. Noe",
+            "Ken W. Krauss",
+            "Laura S. Brophy",
+            "William Connor"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "global mangrove disturbance degradation regeneration 1984 2023",
+          "title": "Ecological restoration at pilot-scale employing site-specific rationales for small-patch degraded mangroves in Indian Sundarbans",
+          "doi": "https://doi.org/10.1038/s41598-024-63281-8",
+          "publication_year": 2024,
+          "url": "https://openalex.org/W4399366965",
+          "authors": [
+            "Krishna Ray",
+            "Sandip Kumar Basak",
+            "Chayan Kumar Giri",
+            "Hemendra Nath Kotal",
+            "Anup Mandal"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        }
+      ],
+      "errors": [],
+      "original_source_verified": false,
+      "archive_publication_date_verified": false
+    },
+    "H06": {
+      "publication_candidates": [
+        {
+          "database": "Crossref",
+          "search_query": "A Deep State Space Model for Rainfall-Runoff Simulations",
+          "title": "A Deep State Space Model for Rainfall‐Runoff Simulations",
+          "doi": "10.1029/2025wr039888",
+          "publication_year": 2025,
+          "url": "https://doi.org/10.1029/2025wr039888",
+          "authors": [
+            "Yihan Wang",
+            "Lujun Zhang",
+            "Annan Yu",
+            "N. Benjamin Erichson",
+            "Tiantian Yang"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "A Deep State Space Model for Rainfall-Runoff Simulations",
+          "title": "State Space Identification of Linear Deterministic Rainfall‐Runoff Models",
+          "doi": "10.1029/95wr00234",
+          "publication_year": 1995,
+          "url": "https://doi.org/10.1029/95wr00234",
+          "authors": [
+            "José Ramos",
+            "Dirk Mallants",
+            "Jan Feyen"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "A Deep State Space Model for Rainfall-Runoff Simulations",
+          "title": "Dynamic averaging of rainfall‐runoff model simulations from complementary model parameterizations",
+          "doi": "10.1029/2005wr004636",
+          "publication_year": 2006,
+          "url": "https://doi.org/10.1029/2005wr004636",
+          "authors": [
+            "Ludovic Oudin",
+            "Vazken Andréassian",
+            "Thibault Mathevet",
+            "Charles Perrin",
+            "Claude Michel"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "A Deep State Space Model for Rainfall-Runoff Simulations",
+          "title": "State-space representation of a bucket-type rainfall-runoff model: a case study with State-Space GR4 (version 1.0)",
+          "doi": "10.5194/gmd-2017-264",
+          "publication_year": 2017,
+          "url": "https://doi.org/10.5194/gmd-2017-264",
+          "authors": [
+            "Léonard Santos",
+            "Guillaume Thirel",
+            "Charles Perrin"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "A Deep State Space Model for Rainfall-Runoff Simulations",
+          "title": "A Deep State Space Model for Rainfall‐Runoff Simulations",
+          "doi": "https://doi.org/10.1029/2025wr039888",
+          "publication_year": 2025,
+          "url": "https://openalex.org/W4417073666",
+          "authors": [
+            "Yihan Wang",
+            "Lujun Zhang",
+            "Annan Yu",
+            "N. Benjamin Erichson",
+            "Tiantian Yang"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "A Deep State Space Model for Rainfall-Runoff Simulations",
+          "title": "Uncertainty estimation with deep learning for rainfall–runoff modeling",
+          "doi": "https://doi.org/10.5194/hess-26-1673-2022",
+          "publication_year": 2022,
+          "url": "https://openalex.org/W4220683755",
+          "authors": [
+            "Daniel Klotz",
+            "Frederik Kratzert",
+            "Martin Gauch",
+            "Alden Keefe Sampson",
+            "J. Brandstetter"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "A Deep State Space Model for Rainfall-Runoff Simulations",
+          "title": "A note on leveraging synergy in multiple meteorological data sets with deep learning for rainfall–runoff modeling",
+          "doi": "https://doi.org/10.5194/hess-25-2685-2021",
+          "publication_year": 2021,
+          "url": "https://openalex.org/W3024402844",
+          "authors": [
+            "Frederik Kratzert",
+            "Daniel Klotz",
+            "Sepp Hochreiter",
+            "Grey Nearing"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "A Deep State Space Model for Rainfall-Runoff Simulations",
+          "title": "Towards a comprehensive physically-based rainfall-runoff model",
+          "doi": "https://doi.org/10.5194/hess-6-859-2002",
+          "publication_year": 2002,
+          "url": "https://openalex.org/W2142757364",
+          "authors": [
+            "Z. Liu",
+            "E. Todini"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "S4D rainfall runoff simulations CAMELS",
+          "title": "Improvement of Rainfall-Runoff Simulations Using the Runoff-Scale Weighting Method",
+          "doi": "10.1061/(asce)he.1943-5584.0000921",
+          "publication_year": 2014,
+          "url": "https://doi.org/10.1061/(asce)he.1943-5584.0000921",
+          "authors": [
+            "Machine Hsie",
+            "Shih-Wei Yan",
+            "Nang-Fei Pan"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "S4D rainfall runoff simulations CAMELS",
+          "title": "Soil moisture and runoff simulations using four catchment rainfall-runoff models",
+          "doi": "10.1016/0022-1694(94)90064-7",
+          "publication_year": 1994,
+          "url": "https://doi.org/10.1016/0022-1694(94)90064-7",
+          "authors": [
+            "D.A. Hughes"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "S4D rainfall runoff simulations CAMELS",
+          "title": "Wavelet-based local mesh refinement for rainfall–runoff simulations",
+          "doi": "10.2166/hydro.2020.198",
+          "publication_year": 2020,
+          "url": "https://doi.org/10.2166/hydro.2020.198",
+          "authors": [
+            "Ilhan Özgen-Xian",
+            "Georges Kesserwani",
+            "Daniel Caviedes-Voullième",
+            "Sergi Molins",
+            "Zexuan Xu"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "Crossref",
+          "search_query": "S4D rainfall runoff simulations CAMELS",
+          "title": "A Deep State Space Model for Rainfall‐Runoff Simulations",
+          "doi": "10.1029/2025wr039888",
+          "publication_year": 2025,
+          "url": "https://doi.org/10.1029/2025wr039888",
+          "authors": [
+            "Yihan Wang",
+            "Lujun Zhang",
+            "Annan Yu",
+            "N. Benjamin Erichson",
+            "Tiantian Yang"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "S4D rainfall runoff simulations CAMELS",
+          "title": "A Deep State Space Model for Rainfall‐Runoff Simulations",
+          "doi": "https://doi.org/10.1029/2025wr039888",
+          "publication_year": 2025,
+          "url": "https://openalex.org/W4417073666",
+          "authors": [
+            "Yihan Wang",
+            "Lujun Zhang",
+            "Annan Yu",
+            "N. Benjamin Erichson",
+            "Tiantian Yang"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "S4D rainfall runoff simulations CAMELS",
+          "title": "HydroDiffusion: Diffusion‐Based Probabilistic Streamflow Forecasting With a State Space Backbone",
+          "doi": "https://doi.org/10.1029/2025wr043158",
+          "publication_year": 2026,
+          "url": "https://openalex.org/W7220672095",
+          "authors": [
+            "Yihan Wang",
+            "Annan Yu",
+            "Lujun Zhang",
+            "Charuleka Varadharajan",
+            "N. Benjamin Erichson"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "S4D rainfall runoff simulations CAMELS",
+          "title": "Bias Correction of Global High-Resolution Precipitation Climatologies Using Streamflow Observations from 9372 Catchments",
+          "doi": "https://doi.org/10.1175/jcli-d-19-0332.1",
+          "publication_year": 2019,
+          "url": "https://openalex.org/W2983970905",
+          "authors": [
+            "Hylke E. Beck",
+            "Eric F. Wood",
+            "Tim R. McVicar",
+            "Mauricio Zambrano‐Bigiarini",
+            "Camila Álvarez-Garretón"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        },
+        {
+          "database": "OpenAlex",
+          "search_query": "S4D rainfall runoff simulations CAMELS",
+          "title": "HydroDiffusion: Diffusion-Based Probabilistic Streamflow Forecasting with a State Space Backbone",
+          "doi": "https://doi.org/10.48550/arxiv.2512.12183",
+          "publication_year": 2025,
+          "url": "https://openalex.org/W4417448117",
+          "authors": [
+            "Yihan Wang",
+            "Annan Yu",
+            "Lujun Zhang",
+            "Charuleka Varadharajan",
+            "N. Benjamin Erichson"
+          ],
+          "verification_status": "CANDIDATE_ONLY"
+        }
+      ],
+      "errors": [],
+      "original_source_verified": false,
+      "archive_publication_date_verified": false
+    }
+  },
+  "notes": [
+    "Search results are publication candidates only.",
+    "A matching paper title does not verify ZIP provenance.",
+    "Paper publication date is not necessarily archive release date.",
+    "Original research archives remain unchanged.",
+    "No execution or scientific reproduction was attempted."
+  ],
+  "generated_at_utc": "2026-11-11T03:05:09.941043+00:00"
+}

@@ -1,0 +1,58 @@
+{
+  "step": 114,
+  "package_id": "H07",
+  "test_type": "in_memory_syntax_recovery",
+  "records": [
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/docs/source/conf.py",
+      "original_sha256": "a0a0c92dedb1634535051a98a348c335011ebead65da5d33619ad64487131552",
+      "recovered_sha256": "09ece859494ebd8cb09d252b4fc518223c315abfa4feef86b6a722360dd0ebca",
+      "status": "FAIL",
+      "remaining_error": "invalid syntax at line 176",
+      "replacement_count": 1,
+      "diff": [
+        "--- original/docs/source/conf.py",
+        "+++ in_memory_recovery/docs/source/conf.py",
+        "@@ -172,7 +172,7 @@",
+        " # Grouping the document tree into LaTeX files. List of tuples",
+        " # (source start file, target name, title, author, document class [howto/manual]).",
+        " latex_documents = [",
+        "-  ('index', 'TOPKAPI.tex', ur'TOPKAPI Documentation',",
+        "+  ('index', 'TOPKAPI.tex', u'TOPKAPI Documentation',",
+        "    ur'Theo Vischel, Scott Sinclair and Geoff Pegram', 'manual'),",
+        " ]",
+        " "
+      ]
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/GIS_treatment.py",
+      "original_sha256": "52d978a0ecfc318ff0eaa487d81e8700ab5fb23ab59db3505ba31e580246bdb9",
+      "recovered_sha256": "fc4212762c3c618603ccb98a601df988389da01cd3ac475de41eff034b3a7a9c",
+      "status": "FAIL",
+      "remaining_error": "unmatched ')' at line 284",
+      "replacement_count": 1,
+      "diff": [
+        "--- original/pytopkapi/parameter_utils/GIS_treatment.py",
+        "+++ in_memory_recovery/pytopkapi/parameter_utils/GIS_treatment.py",
+        "@@ -279,7 +279,7 @@",
+        "                         tab_slope_degree[i,j] = 0.0",
+        "                     if dem[x,y] > dem[i,j]:",
+        "                         print('Negative slope cell', tab_label[i,j], \\",
+        "-                            direction, tab_label[x,y], dem[i,j], dem[x,y]",
+        "+                            direction, tab_label[x,y], dem[i,j], dem[x,y])",
+        "                         tab_slope_degree[i,j] = np.arctan((dem[i,j]-dem[x,y])",
+        "                                                           /dist) * 180./np.pi)",
+        "                 else:"
+      ]
+    }
+  ],
+  "original_archive_modified": false,
+  "patched_files_written": false,
+  "original_code_executed": false,
+  "dependency_installation_attempted": false,
+  "limitations": [
+    "Syntax recovery does not establish runtime execution.",
+    "A repaired parser error may reveal additional errors.",
+    "Historical compatibility and original source defects must be distinguished."
+  ]
+}

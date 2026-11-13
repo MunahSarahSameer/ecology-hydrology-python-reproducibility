@@ -1,0 +1,41 @@
+{
+  "candidate": "H06",
+  "step": 194,
+  "archive": "S4D_rainfall_runoff_simulations.zip",
+  "target": "S4D_rainfall_runoff_simulations-main/analysis/performance_functions.py",
+  "functions": {
+    "nse": {
+      "parameters": [
+        "df",
+        "seed",
+        "obs_col"
+      ],
+      "source": "def nse(df: pd.DataFrame, seed: int = None, obs_col: str = \"qobs\") -> float:\n    sim_col = f\"qsim_{seed}\" if seed is not None else \"qsim\"\n    idex = df.index[(df[sim_col] >= 0) & (df[obs_col] >= 0)].tolist()\n    SSerr = np.mean(np.square(df[sim_col][idex] - df[obs_col][idex]))\n    SStot = np.mean(np.square(df[obs_col][idex] - np.mean(df[obs_col][idex])))\n    return 1 - SSerr / SStot"
+    },
+    "kge": {
+      "parameters": [
+        "df",
+        "seed",
+        "obs_col"
+      ],
+      "source": "def kge(df: pd.DataFrame, seed: int = None, obs_col: str = \"qobs\") -> Tuple[float, float, float, float]:\n    sim_col = f\"qsim_{seed}\" if seed is not None else \"qsim\"\n    idex = df.index[(df[sim_col] >= 0) & (df[obs_col] >= 0)].tolist()\n    qsim = df[sim_col][idex]\n    qobs = df[obs_col][idex]\n    \n    r = np.corrcoef(qsim, qobs)[0, 1]\n    alpha = np.std(qsim) / np.std(qobs)\n    beta = np.mean(qsim) / np.mean(qobs)\n    \n    kge = 1 - np.sqrt((r - 1)**2 + (alpha - 1)**2 + (beta - 1)**2)\n    \n    return kge, r, alpha, beta"
+    },
+    "bias": {
+      "parameters": [
+        "df",
+        "seed",
+        "obs_col"
+      ],
+      "source": "def bias(df: pd.DataFrame, seed: int = None, obs_col: str = \"qobs\") -> float:\n    sim_col = f\"qsim_{seed}\" if seed is not None else \"qsim\"\n    idex = df.index[(df[sim_col] >= 0) & (df[obs_col] >= 0)].tolist()\n    sim = df[sim_col][idex].mean()\n    obs = df[obs_col][idex].mean()\n    return (obs - sim) / obs * 100"
+    },
+    "_validate_inputs": {
+      "parameters": [
+        "obs",
+        "sim"
+      ],
+      "source": "def _validate_inputs(obs: DataArray, sim: DataArray):\n    if obs.shape != sim.shape:\n        raise RuntimeError(\"Shapes of observations and simulations must match\")\n\n    if (len(obs.shape) > 1) and (obs.shape[1] > 1):\n        raise RuntimeError(\"Metrics only defined for time series (1d or 2d with second dimension 1)\")"
+    }
+  },
+  "execution_attempted": false,
+  "generated_at_utc": "2026-11-11T22:43:14.108598+00:00"
+}

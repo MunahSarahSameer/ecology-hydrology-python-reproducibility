@@ -1,0 +1,117 @@
+{
+  "step": 100,
+  "package_id": "E10",
+  "doi": "10.5281/zenodo.11552636",
+  "zenodo_file_inventory": [
+    {
+      "filename": "Manuscript_results.R",
+      "size": 11938,
+      "checksum": "md5:7fc712e63823eb72f16647640bd19ad9"
+    },
+    {
+      "filename": "Deep_learning_loop_all_species.py",
+      "size": 26716,
+      "checksum": "md5:966d5b051e55f030793ff732547b0e55"
+    },
+    {
+      "filename": "Data_prep_presence_absence_AWT.R",
+      "size": 7314,
+      "checksum": "md5:44f80f0657999df340345e590eb813f6"
+    },
+    {
+      "filename": "Data_prep_presence_only.R",
+      "size": 12435,
+      "checksum": "md5:6710640af6b695bc6a90dfec69345144"
+    },
+    {
+      "filename": "Raw_preds.py",
+      "size": 6103,
+      "checksum": "md5:fe4f38f892c6d99a8cdd4115ca64d179"
+    },
+    {
+      "filename": "Supp_results.R",
+      "size": 11397,
+      "checksum": "md5:0ea80d6e91508f6b640fe13b2d1f3983"
+    },
+    {
+      "filename": "Data_prep_background.R",
+      "size": 8766,
+      "checksum": "md5:d9c634f7898e6e02945412d91f1e169f"
+    },
+    {
+      "filename": "Best_model_predictions.py",
+      "size": 1401,
+      "checksum": "md5:11bec2e5ea359c4687b1de2ef1a7a998"
+    },
+    {
+      "filename": "Data_prep_presence_absence.R",
+      "size": 8859,
+      "checksum": "md5:0288988152078f5900617aa767455375"
+    },
+    {
+      "filename": "Fig_spatial_preds_example.R",
+      "size": 4436,
+      "checksum": "md5:77e6f807d9232f2a8ea8d6c6128cc6f4"
+    },
+    {
+      "filename": "Baseline_models.R",
+      "size": 19045,
+      "checksum": "md5:4806e66bad7a02501678578ed6b86dbe"
+    }
+  ],
+  "archived_data_model_files": [],
+  "literal_source_references": [
+    ".csv",
+    "/At_Y_po.csv",
+    "/At_alt_po.csv",
+    "/At_prec_po.csv",
+    "/At_tmax_po.csv",
+    "/At_tmin_po.csv",
+    "/Av_Y_po.csv",
+    "/Av_alt_po.csv",
+    "/Av_prec_po.csv",
+    "/Av_tmax_po.csv",
+    "/Av_tmin_po.csv",
+    "/Bv_Y_po.csv",
+    "/Bv_alt_po.csv",
+    "/Bv_prec_po.csv",
+    "/Bv_tmax_po.csv",
+    "/Bv_tmin_po.csv",
+    "/Candidate_models_comparison.csv",
+    "/T_Y_pa.csv",
+    "/Test_results.csv",
+    "/Trained_model.h5",
+    "/Volumes/Bluebird/Time_series_sdms/Data/NZPred_alt.csv",
+    "/Volumes/Bluebird/Time_series_sdms/Data/NZPred_prec.csv",
+    "/Volumes/Bluebird/Time_series_sdms/Data/NZPred_tmax.csv",
+    "/Volumes/Bluebird/Time_series_sdms/Data/NZPred_tmin.csv",
+    "/Volumes/Bluebird/Time_series_sdms/Prediction_nz08_trial.csv",
+    "/Volumes/Bluebird/Time_series_sdms/Results/nz08/best_candidate_nz08.h5",
+    "At_Y_bg.csv",
+    "At_alt_bg.csv",
+    "At_prec_bg.csv",
+    "At_tmax_bg.csv",
+    "At_tmin_bg.csv",
+    "Av_Y_bg.csv",
+    "Av_alt_bg.csv",
+    "Av_prec_bg.csv",
+    "Av_tmax_bg.csv",
+    "Av_tmin_bg.csv",
+    "Bv_Y_bg.csv",
+    "Bv_alt_bg.csv",
+    "Bv_prec_bg.csv",
+    "Bv_tmax_bg.csv",
+    "Bv_tmin_bg.csv",
+    "T_alt_pa.csv",
+    "T_prec_pa.csv",
+    "T_tmax_pa.csv",
+    "T_tmin_pa.csv",
+    "_preds.csv"
+  ],
+  "execution_attempted": false,
+  "limitations": [
+    "Metadata inspection does not establish whether data is hosted elsewhere.",
+    "Some source references are dynamically constructed.",
+    "Data files may be embedded in archives or available through external links."
+  ]
+}

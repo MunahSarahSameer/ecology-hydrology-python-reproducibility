@@ -1,0 +1,409 @@
+{
+  "step": 127,
+  "package_id": "H08",
+  "package_name": "pyGSFLOW",
+  "archive_version": "1.0.2",
+  "archive_sha256": "ebbc960c11470056493b1c82ae461f266f333240e1ec6dcc4c85ba9e0f10568b",
+  "python_files_total": 70,
+  "syntax_pass": 70,
+  "syntax_fail": 0,
+  "syntax_results": [
+    {
+      "file": "autotest/__init__.py",
+      "status": "PASS",
+      "sha256": "087bc1b5bc94cd81e5c53cebb642926551998e71ee116ccda5ffa482d3db6a06"
+    },
+    {
+      "file": "autotest/test_000.py",
+      "status": "PASS",
+      "sha256": "c0337a1bc7f358c334b2e370722f2d37d0dbd3bece780cf59fa62c7fd78181fe"
+    },
+    {
+      "file": "autotest/test_001.py",
+      "status": "PASS",
+      "sha256": "5586a4b9cdcc922e0fead56916a2d8182d74f1676494bd3993c0b5fbd11c2edd"
+    },
+    {
+      "file": "autotest/test_002.py",
+      "status": "PASS",
+      "sha256": "68268ee94f04a4b8b993d8eedb2ffa10989b9e79526a0447d0a88ef191eeeca9"
+    },
+    {
+      "file": "autotest/test_003.py",
+      "status": "PASS",
+      "sha256": "9788fb83d1fd992ba772c26130e2956eeb85b01e80b723e942c4e6fcefef5565"
+    },
+    {
+      "file": "autotest/test_004.py",
+      "status": "PASS",
+      "sha256": "c460c622e48b90815f6939729db4c82c3b4f690f4c77ccf08c0fdb31335809e9"
+    },
+    {
+      "file": "autotest/test_005.py",
+      "status": "PASS",
+      "sha256": "6c535781a8eeb98a5058b8512b7fdebbfbdd5229fee0cb1f2bb5495fce42d2dc"
+    },
+    {
+      "file": "autotest/test_006.py",
+      "status": "PASS",
+      "sha256": "0c96afdcea40addc3bd76e3d20da4026cbb18da97ee64dc732e20fee6ee1fb3f"
+    },
+    {
+      "file": "autotest/test_007.py",
+      "status": "PASS",
+      "sha256": "a173b45eeb82472da2a1d46fda0fda8b932ebe4e4c85935564b6489b9c5d81ff"
+    },
+    {
+      "file": "autotest/test_008.py",
+      "status": "PASS",
+      "sha256": "e3317bee6959612f9b580c6399b9d18d4e8a568b5beac3526311456f1818b2c4"
+    },
+    {
+      "file": "autotest/test_009.py",
+      "status": "PASS",
+      "sha256": "1ef96efd33b1ac4382d59590573029f2ef07c562c45ab419f36c7ad118587879"
+    },
+    {
+      "file": "autotest/test_010.py",
+      "status": "PASS",
+      "sha256": "0825321b289577afca646ec6ca6716e3aab10075eadc9415977f1995cde0f6e4"
+    },
+    {
+      "file": "autotest/test_011.py",
+      "status": "PASS",
+      "sha256": "a159e1cfd460f5839d7ca6f936420f05157169edc6e55035532fafe04eee4211"
+    },
+    {
+      "file": "autotest/test_012.py",
+      "status": "PASS",
+      "sha256": "0e43acafaecc42b274f10f8495d8bb000f9a1276956ce0c2edd61698db9760b7"
+    },
+    {
+      "file": "autotest/test_013.py",
+      "status": "PASS",
+      "sha256": "6c255211dedf0e8839a9e2b363c3753656994582b7a2f82802a566982f603f39"
+    },
+    {
+      "file": "autotest/test_014.py",
+      "status": "PASS",
+      "sha256": "11b591b1a679c5747a8adbccd69a87de941aa18e460c6c77c64446b9e1bca866"
+    },
+    {
+      "file": "autotest/test_015.py",
+      "status": "PASS",
+      "sha256": "a260192cd7116b35d6419ac1717f098423bdc64571f25ccdfad93f4d51074f77"
+    },
+    {
+      "file": "autotest/test_016.py",
+      "status": "PASS",
+      "sha256": "8634d34fd81cf7c88e670ce9a6d6844d92a174ca7fd7b482f2301d768a46346e"
+    },
+    {
+      "file": "autotest/test_017.py",
+      "status": "PASS",
+      "sha256": "526dce1304537f34788a26ad8b0fb97441484de336e75270e10d3d50efc1fc81"
+    },
+    {
+      "file": "autotest/test_018.py",
+      "status": "PASS",
+      "sha256": "9ca6334ae9138944a842038c4ec30f6887d4bf303f36182e9586dda0d6f0b1ef"
+    },
+    {
+      "file": "autotest/test_019.py",
+      "status": "PASS",
+      "sha256": "9dd7927eb0cbb76d76d3b761f51f0eed3d12c9e86ebc905384e2bf57c5dcf718"
+    },
+    {
+      "file": "autotest/test_020.py",
+      "status": "PASS",
+      "sha256": "101cc2ffadf500f60482c61519369472c6e81ad69d321abe05088ee81a74c0ad"
+    },
+    {
+      "file": "autotest/test_021.py",
+      "status": "PASS",
+      "sha256": "619d872997befc3a87f9642b8ed09014f9408adcad8abb1d9a89912cf1a3c49b"
+    },
+    {
+      "file": "autotest/test_022.py",
+      "status": "PASS",
+      "sha256": "f1c2a14f1b9978c5d4e669e22701cf90b1fef77eef282e4672e31fa344ac1495"
+    },
+    {
+      "file": "examples/rtd_examples/combined_parameters_tutorial.py",
+      "status": "PASS",
+      "sha256": "4258ee03b7e498a4ca880cbe0e059ff0bee6e2eea5466e9c37a39535daedfbd5"
+    },
+    {
+      "file": "examples/rtd_examples/control_parameters.py",
+      "status": "PASS",
+      "sha256": "3f06d1eadb1825321b3809d736334119ae35b569937307760270f1bbfd36151a"
+    },
+    {
+      "file": "examples/rtd_examples/create_tutorials.py",
+      "status": "PASS",
+      "sha256": "eea302e9cfaebbf56976a6771e230fee2b4e4c6c10068120a59f98c52185a10c"
+    },
+    {
+      "file": "examples/rtd_examples/modflow_parameters.py",
+      "status": "PASS",
+      "sha256": "715b691cd2d7ed02dd0a620915952cee6f1653a21e919343a6d3dceba7e55697"
+    },
+    {
+      "file": "examples/rtd_examples/prms_parameters.py",
+      "status": "PASS",
+      "sha256": "88cc087fcc8b3ab3d2c612479f575e10c6633955b6a04da895922feb9bf03b99"
+    },
+    {
+      "file": "examples/rtd_examples/quickstart.py",
+      "status": "PASS",
+      "sha256": "606b7e0fc5aff8ec2fd13749f7e709565e0c31d880400a001bf900dc30efba76"
+    },
+    {
+      "file": "gsflow/__init__.py",
+      "status": "PASS",
+      "sha256": "53b59606112a7c873d08d008ab833b201a50147b320c91f3e83fb6e6334f0856"
+    },
+    {
+      "file": "gsflow/builder/__init__.py",
+      "status": "PASS",
+      "sha256": "0990bc2c473211e36e06beb9942ae1bd0ef688c4ee994e173f77ae7952d680cc"
+    },
+    {
+      "file": "gsflow/builder/builder_defaults.py",
+      "status": "PASS",
+      "sha256": "6406ed75c8cceb6a4cd197a42d2e3ec1066078e1113583b125065e2bab7b3d0d"
+    },
+    {
+      "file": "gsflow/builder/controlfile_builder.py",
+      "status": "PASS",
+      "sha256": "921bc96c2185d034204a2c7966cfc23e10eee68cfc5a00fc4d2419f8b41c59ec"
+    },
+    {
+      "file": "gsflow/builder/fishnet.py",
+      "status": "PASS",
+      "sha256": "b1280de7a8c4634f5cbe27f1b6e42fd8c73ae6de2fd081ec65cd1261a3914f8d"
+    },
+    {
+      "file": "gsflow/builder/make_json_defaults.py",
+      "status": "PASS",
+      "sha256": "07943782623242a9c9f16700c5fd48c2e5d2f26679cee7f042a3d62ee4ca619f"
+    },
+    {
+      "file": "gsflow/builder/modflow_builder.py",
+      "status": "PASS",
+      "sha256": "c75a2001c7187890764e305b1c76fb3e2d635037e4824f625f2bd66c724ce7c7"
+    },
+    {
+      "file": "gsflow/builder/prms_builder.py",
+      "status": "PASS",
+      "sha256": "98bbb7aaf5ab5803a5235134a0de63559bdeab168a5719064bc56f2a0dcdfa83"
+    },
+    {
+      "file": "gsflow/control.py",
+      "status": "PASS",
+      "sha256": "53672e9150a49a9b10aa01cd92423ff6999f3d2aa5bb161d516b5812368734c2"
+    },
+    {
+      "file": "gsflow/crt/__init__.py",
+      "status": "PASS",
+      "sha256": "faa336411aa2aef45891d4c9736e48b46f40f3857af64e210f09efcff4e2cf0c"
+    },
+    {
+      "file": "gsflow/crt/crt.py",
+      "status": "PASS",
+      "sha256": "5d18e660357d05b73dfa371966ca2c34237ccba6fe84ab6f35be68ff1c15adc9"
+    },
+    {
+      "file": "gsflow/gsflow.py",
+      "status": "PASS",
+      "sha256": "e5432fcdee05b664238a4ec336a7fb86c1dc401c8fa037f9716f5a7e32dfeb13"
+    },
+    {
+      "file": "gsflow/modflow/__init__.py",
+      "status": "PASS",
+      "sha256": "0740f8ff5f52281e5466ad6573be30e00b8213d578a68cb99e1a2b18bc1b6db4"
+    },
+    {
+      "file": "gsflow/modflow/mf.py",
+      "status": "PASS",
+      "sha256": "68c920ffaecec19a25074d875632695b413a31d05b5ce8ba51a7df64408f1d1d"
+    },
+    {
+      "file": "gsflow/modflow/mfag.py",
+      "status": "PASS",
+      "sha256": "0f39182491c2c5065a2dea180a6783d76c6e396c8aeb9b5c0aee6f90a3bdc6d8"
+    },
+    {
+      "file": "gsflow/modflow/mfawu.py",
+      "status": "PASS",
+      "sha256": "636de705ec1fcb853471cacec9dc3eb4b092cfa32a68c39f29dc1f852c236dbb"
+    },
+    {
+      "file": "gsflow/modsim/__init__.py",
+      "status": "PASS",
+      "sha256": "11747fcb03ece12c5cd977e481438d2408882224906b06ecbc37c58c10beba4a"
+    },
+    {
+      "file": "gsflow/modsim/modsim.py",
+      "status": "PASS",
+      "sha256": "6c4dc7e6179fc5edf936d3b9a79d3c64bc483685c09c618cf5185a1a945494ca"
+    },
+    {
+      "file": "gsflow/output/__init__.py",
+      "status": "PASS",
+      "sha256": "71ff1ec9a0703c100d1fece653c53a9a9c333b936da4593c1b3281bab7dccc3f"
+    },
+    {
+      "file": "gsflow/output/discretization.py",
+      "status": "PASS",
+      "sha256": "8c48b71bf791473f8d72fe95a6a6af668e2e169fcff135730e4b124dacc95bee"
+    },
+    {
+      "file": "gsflow/output/prms_output.py",
+      "status": "PASS",
+      "sha256": "6d5cea63dfcedf3406a9f086eefb610530a28e4eb96c4236bfcab1a108697c20"
+    },
+    {
+      "file": "gsflow/output/prms_plot.py",
+      "status": "PASS",
+      "sha256": "a88375f8b70e6c00d3372d2af80ce18e0864919bc9b246118377d833a8b937a1"
+    },
+    {
+      "file": "gsflow/param_base.py",
+      "status": "PASS",
+      "sha256": "1804e137ce7975cf2f2de0d59581e0f493bba89b84f2135eeb8e091cdd863633"
+    },
+    {
+      "file": "gsflow/prms/__init__.py",
+      "status": "PASS",
+      "sha256": "109b049f837e0f5fd44350ec4283848b7f6963f8ac7b67e763139306964afcad"
+    },
+    {
+      "file": "gsflow/prms/prms_data.py",
+      "status": "PASS",
+      "sha256": "0fb7fa6b1c80c6e658a0052d9bd14d7807097a7e39fc2eaabe41d6747ee58a01"
+    },
+    {
+      "file": "gsflow/prms/prms_day.py",
+      "status": "PASS",
+      "sha256": "41eba17eecc75945e91c1519be636c43fd21d7fc27cfc2a137da1427edcbe7a4"
+    },
+    {
+      "file": "gsflow/prms/prms_dynamic_params.py",
+      "status": "PASS",
+      "sha256": "3dcb20fcfc60a9f45afec3f1f106027658dfcc2e9dfe16f3701b72ca348770da"
+    },
+    {
+      "file": "gsflow/prms/prms_help.py",
+      "status": "PASS",
+      "sha256": "7ee737d779c71dff413df57fa4ede8c91745d96e8f4867ef4fa42ea0c588a559"
+    },
+    {
+      "file": "gsflow/prms/prms_model.py",
+      "status": "PASS",
+      "sha256": "8130411bf218e108a1e611a35a4ff62b4cd67c0fbb315f41376ac8cdb743ccbc"
+    },
+    {
+      "file": "gsflow/prms/prms_parameter.py",
+      "status": "PASS",
+      "sha256": "69d46a3a85ef9ea09121d8c634330c7d03079cc3c3e2f68060bf82de99107881"
+    },
+    {
+      "file": "gsflow/record_base.py",
+      "status": "PASS",
+      "sha256": "b05525e47b160e4623239d6d7cd215b15724cab1622b8133230f08ab8eb3451e"
+    },
+    {
+      "file": "gsflow/utils/__init__.py",
+      "status": "PASS",
+      "sha256": "c901b2c36699c72f177f22404ce5ffff22aabffc552bcd62a074c2baf4af7422"
+    },
+    {
+      "file": "gsflow/utils/constants.py",
+      "status": "PASS",
+      "sha256": "bce21f08cd59df3387ef0db724f9594d8f156b0db4db87c2970a400804ae4977"
+    },
+    {
+      "file": "gsflow/utils/gsflow_io.py",
+      "status": "PASS",
+      "sha256": "f0054fe1dae993c40553f114ffc094d408a22fdeaab34ee539531d989dea4450"
+    },
+    {
+      "file": "gsflow/utils/mfreadnam.py",
+      "status": "PASS",
+      "sha256": "30a35c304259bb93b0571728490be2fb89463bdb44dc0d347a8f53bcba62f9e7"
+    },
+    {
+      "file": "gsflow/utils/netcdf.py",
+      "status": "PASS",
+      "sha256": "2820dd27d14b7ae91b1063e961aa253871952c5ee82f95fd2c00d0ab5f3e4eae"
+    },
+    {
+      "file": "gsflow/utils/rasters.py",
+      "status": "PASS",
+      "sha256": "f9c80b093451238343f2e3042a729b44626453eb1c292c24d65ea6e3e012eb1c"
+    },
+    {
+      "file": "gsflow/utils/sfr_renumber.py",
+      "status": "PASS",
+      "sha256": "418774b0c7be1b947b3348640fc0ee94674f3c0497b820f94dc7f6b3e9f80bab"
+    },
+    {
+      "file": "gsflow/utils/vtk.py",
+      "status": "PASS",
+      "sha256": "a11a0b0ea04a6ec1691a56dc729de5d9f9a2c4d3f3c0b368475de5c629da6f49"
+    },
+    {
+      "file": "setup.py",
+      "status": "PASS",
+      "sha256": "5f3891cc5baaec3eeb8b6f1374bfcdf43adc143fbe97545471f09cd7116eed97"
+    }
+  ],
+  "absolute_import_frequency": {
+    "os": 41,
+    "shutil": 2,
+    "gsflow": 71,
+    "numpy": 27,
+    "pandas": 8,
+    "platform": 6,
+    "matplotlib": 12,
+    "pycrs": 2,
+    "shapefile": 5,
+    "flopy": 24,
+    "rasterio": 2,
+    "simplejson": 2,
+    "json": 2,
+    "__future__": 3,
+    "subprocess": 1,
+    "inspect": 9,
+    "collections": 2,
+    "datetime": 3,
+    "copy": 1,
+    "warnings": 1,
+    "sys": 2,
+    "setuptools": 1
+  },
+  "dependency_declarations": {
+    "setup.py": {
+      "archive_member": "setup.py",
+      "sha256": "5f3891cc5baaec3eeb8b6f1374bfcdf43adc143fbe97545471f09cd7116eed97",
+      "content": "#!/usr/bin/env python\n# -*- coding: utf-8 -*-\n\n\"\"\"The setup script. \"\"\"\n\nfrom setuptools import setup, find_packages\nimport sys\nimport os\n\n\nwith open('README.md') as readme_file:\n    readme = readme_file.read()\n\nif (3, 7) >= sys.version_info >= (3, 6):\n    requirements = [\"pandas\",\n                    \"numpy\",\n                    \"flopy == 3.3.4\",\n                    \"pyshp\",\n                    \"pycrs\",\n                    \"matplotlib\"]\nelif sys.version_info >= (3, 7):\n    requirements = [\"pandas\",\n                    \"numpy\",\n                    \"flopy >= 3.3.4\",\n                    \"pyshp\",\n                    \"pycrs\",\n                    \"matplotlib\"]\nelse:\n    raise EnvironmentError(\"pyGSFLOW is only supported with python 3.6 and above\")\n\nsetup_requirements = []\n\ntest_requirements = []\n\nwith open(os.path.join(\".\", \"README.md\")) as foo:\n    long_description = foo.read()\n\nsetup(\n    author=\"Ayman Alzraiee, Joshua Larsen, Rich Niswonger, Donald Martin\",\n    author_email='[REDACTED_EMAIL], [REDACTED_EMAIL], [REDACTED_EMAIL], [REDACTED_EMAIL]',\n    classifiers=[\n        'Development Status :: 5 - Production/Stable',\n        'Intended Audience :: Developers',\n        'License :: OSI Approved :: MIT License',\n        'Natural Language :: English',\n        'Programming Language :: Python :: 3 :: Only',\n        'Programming Language :: Python :: 3.5',\n        'Programming Language :: Python :: 3.6',\n        'Programming Language :: Python :: 3.7',\n        'Programming Language :: Python :: 3.8',\n        'Topic :: Scientific/Engineering :: Hydrology',\n        \"Operating System :: OS Independent\"\n    ],\n    python_requires=\">=3.6\",\n    description=\"pyGSFLOW is a python package to create, run, and \" +\n                \"post-process GSFLOW-based models\",\n    install_requires=requirements,\n    license=\"MIT license\",\n    long_description=long_description,\n    long_description_content_type=\"text/markdown\",\n    include_package_data=True,\n    keywords='gsflow',\n    name='pygsflow',\n    packages=find_packages(include=['gsflow',\n                                    'gsflow.prms',\n                                    'gsflow.utils',\n                                    'gsflow.modflow',\n                                    'gsflow.modsim',\n                                    'gsflow.output',\n                                    'gsflow.builder',\n                                    'gsflow.crt']),\n    setup_requires=setup_requirements,\n    test_suite='autotest',\n    tests_require=test_requirements,\n    url='https://github.com/pygsflow/pygsflow',\n    version='1.0.2',\n    zip_safe=False,\n)\n"
+    },
+    "etc/environment.yml": {
+      "archive_member": "etc/environment.yml",
+      "sha256": "6e5393e9e5e5ef89bd2ffb796cf8d4484b2fad5098b691181243b8f5f8b6a499",
+      "content": "name: pygsflow\r\nchannels:\r\n  - conda-forge\r\ndependencies:\r\n  - numpy\r\n  - pandas\r\n  - pyshp\r\n  - pycrs\r\n  - matplotlib\r\n  - coverage\r\n  - appdirs\r\n  - requests\r\n  - affine\r\n  - scipy\r\n  - pandas\r\n  - netcdf4\r\n  - rasterio\r\n  - fiona\r\n  - descartes\r\n  - pyproj\r\n  - shapely\r\n  - pycrs\r\n  - geos=3.8.1"
+    }
+  },
+  "source_executed": false,
+  "dependencies_installed": false,
+  "original_archive_modified": false,
+  "limitations": [
+    "AST parsing checks syntax under the current Python interpreter.",
+    "Syntax validity does not demonstrate successful execution.",
+    "Import frequency does not prove dependency availability.",
+    "Dependency declarations were inspected, not installed.",
+    "Scientific results were not reproduced."
+  ],
+  "generated_at_utc": "2026-11-11T01:51:03.067790+00:00"
+}

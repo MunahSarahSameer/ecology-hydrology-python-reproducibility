@@ -1,0 +1,293 @@
+{
+  "step": 189,
+  "candidate": "E06",
+  "findings": [
+    {
+      "notebook": "Code_Figures/FigS10_MangroveDisturbanceRates.ipynb",
+      "cell_index": 1,
+      "error": "invalid syntax (<unknown>, line 15)",
+      "error_line": 15,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS11_DisturbanceTrends40Years.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 16)",
+      "error_line": 16,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS12_RecentDisturbanceRates.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 15)",
+      "error_line": 15,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS13_RecentLoss.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 19)",
+      "error_line": 19,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS14_RelativeChangeClosedMangrove.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 11)",
+      "error_line": 11,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS16_ComparisonGMW.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 11)",
+      "error_line": 11,
+      "context": [
+        "os.chdir(r\"D:\\OneDriveFolder\\OneDrive\\Manuscript\\GlobalMangroveDynamics\\code\")",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'",
+        "",
+        "gmd_9620 = gpd.read_file('Code_Data\\GMD1996to2020.shp').to_crs(epsg=4326)"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS18_LandsatQuantile.ipynb",
+      "cell_index": 1,
+      "error": "invalid syntax (<unknown>, line 21)",
+      "error_line": 21,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS19-S20_CompositeYears.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 14)",
+      "error_line": 14,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS21_PixelCount1980s.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 5)",
+      "error_line": 5,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'",
+        "",
+        "xds = rioxarray.open_rasterio(\"D:/Data/GMD/Results/Masks/ValidFirstYear_MaskedBy1980s.tif\", chunks='auto')[0]"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS23_ThinCloudmask.ipynb",
+      "cell_index": 1,
+      "error": "invalid syntax (<unknown>, line 21)",
+      "error_line": 21,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS24-25_FCCvalidation.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 22)",
+      "error_line": 22,
+      "context": [
+        "plt.rcParams['font.sans-serif'] = ['arial']",
+        "",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS26-29_TrainingSamples.ipynb",
+      "cell_index": 1,
+      "error": "invalid syntax (<unknown>, line 26)",
+      "error_line": 26,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'",
+        "",
+        "ee.Authenticate()"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS2_4CanopyTypes.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 18)",
+      "error_line": 18,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS30_ValidRatio.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 12)",
+      "error_line": 12,
+      "context": [
+        "plt.rcParams.update({'font.family':'arial'})",
+        "plt.rcParams['font.sans-serif'] = ['arial']",
+        "%config InlineBackend.figure_format = 'retina'",
+        "%matplotlib inline  ",
+        ""
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS4_SpatialUnits.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 15)",
+      "error_line": 15,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS5_Top10TimeSeries.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 8)",
+      "error_line": 8,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS7_Myanmar.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 13)",
+      "error_line": 13,
+      "context": [
+        "import os",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'",
+        "os.chdir(r'D:\\OneDriveFolder\\OneDrive\\Manuscript\\GlobalMangroveDynamics\\code')",
+        ""
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS8_SchematicFigure.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 9)",
+      "error_line": 9,
+      "context": [
+        "plt.rcParams['font.sans-serif'] = ['arial']",
+        "",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/FigS9_CycloneExamples.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 20)",
+      "error_line": 20,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/Figure 1.ipynb",
+      "cell_index": 1,
+      "error": "invalid syntax (<unknown>, line 12)",
+      "error_line": 12,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/Figure 2.ipynb",
+      "cell_index": 1,
+      "error": "invalid syntax (<unknown>, line 12)",
+      "error_line": 12,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/Figure 3.ipynb",
+      "cell_index": 1,
+      "error": "invalid syntax (<unknown>, line 19)",
+      "error_line": 19,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/Figure 4.ipynb",
+      "cell_index": 1,
+      "error": "invalid syntax (<unknown>, line 12)",
+      "error_line": 12,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/Figure 5.ipynb",
+      "cell_index": 1,
+      "error": "invalid syntax (<unknown>, line 19)",
+      "error_line": 19,
+      "context": [
+        "",
+        "plt.rcParams['font.sans-serif'] = ['Arial']",
+        "%config InlineBackend.figure_format = 'retina'"
+      ]
+    },
+    {
+      "notebook": "Code_Figures/SummaryFig.ipynb",
+      "cell_index": 0,
+      "error": "invalid syntax (<unknown>, line 17)",
+      "error_line": 17,
+      "context": [
+        "plt.rcParams.update({'font.family':'arial'})",
+        "plt.rcParams['font.sans-serif'] = ['arial']",
+        "%config InlineBackend.figure_format = 'retina'",
+        "%matplotlib inline  "
+      ]
+    }
+  ],
+  "execution_attempted": false
+}

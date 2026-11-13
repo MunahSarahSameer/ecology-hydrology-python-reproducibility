@@ -1,0 +1,67 @@
+[
+  {
+    "model_archive": "DetailView.zip",
+    "zip_valid": true,
+    "python_scripts": 10,
+    "notebooks": 1,
+    "dependency_manifests": [],
+    "potential_data_files": 0,
+    "sha256": "409b15aeed28a3b93a2bbce3f2cb547948669196f36fa4a8b16d5d94b4d6c935"
+  },
+  {
+    "model_archive": "Ensemble_PointNet.zip",
+    "zip_valid": true,
+    "python_scripts": 6,
+    "notebooks": 0,
+    "dependency_manifests": [],
+    "potential_data_files": 1,
+    "sha256": "ec89d0f1ed79007c88832f4a0fca3e22490a85f20265223319bd1b672bfdc469"
+  },
+  {
+    "model_archive": "MinkNet.zip",
+    "zip_valid": true,
+    "python_scripts": 4,
+    "notebooks": 0,
+    "dependency_manifests": [],
+    "potential_data_files": 0,
+    "sha256": "ea9b4811aeba608a5fe4f3d6c8eebe362f704337130c0125952c27df17aca2a5"
+  },
+  {
+    "model_archive": "PointAugment_DGCNN.zip",
+    "zip_valid": true,
+    "python_scripts": 13,
+    "notebooks": 0,
+    "dependency_manifests": [],
+    "potential_data_files": 3,
+    "sha256": "a9cac5ce613a7eff2eb09540507327d94f75c1c6018974677f7847700bedba1b"
+  },
+  {
+    "model_archive": "PointMixer.zip",
+    "zip_valid": true,
+    "python_scripts": 20,
+    "notebooks": 0,
+    "dependency_manifests": [
+      "utils/progress/setup.py"
+    ],
+    "potential_data_files": 0,
+    "sha256": "76b7313002a8de96c3876fd69930e2d3c050a06ca9d60e80c7152f53f4fd3f82"
+  },
+  {
+    "model_archive": "SimpleView.zip",
+    "zip_valid": true,
+    "python_scripts": 5,
+    "notebooks": 1,
+    "dependency_manifests": [],
+    "potential_data_files": 0,
+    "sha256": "079d1d6125b00afdab10da984dad3e197f8814d1c4c94d491268820a20245af9"
+  },
+  {
+    "model_archive": "Yolov5.zip",
+    "zip_valid": true,
+    "python_scripts": 42,
+    "notebooks": 1,
+    "dependency_manifests": [],
+    "potential_data_files": 1,
+    "sha256": "f42065d6d4ae75caab7ba61da6cb4508dce9bf29c603302523ad1ee3614f5b67"
+  }
+]

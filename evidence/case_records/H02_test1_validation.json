@@ -1,0 +1,59 @@
+{
+  "archive_id": "H02",
+  "project": "FloodSformer",
+  "domain": "hydrology",
+  "publication_year": 2024,
+  "archive_sha256": "d2eb9e48371bc33d81a9342caa9a320abde455d311ce9964ea8a34bdcd7ffb24",
+  "test_runner_sha256": "d0bf6db9596656d600bad7a88c7223aec34fcdfc3ed286e724318fc3a39d4f2a",
+  "original_model_source_unchanged": true,
+  "python_executable": "C:\\Users\\MUNAH\\miniconda3\\envs\\code_decay\\python.exe",
+  "pytorch_version": "2.15.0+cpu",
+  "execution_device": "cpu",
+  "baseline_cli_success": false,
+  "recovered_cli_success": true,
+  "selected_workflow": "Autoencoder synthetic forward pass",
+  "selected_workflow_success": true,
+  "input_shape": [
+    1,
+    2,
+    1,
+    64,
+    64
+  ],
+  "latent_shape": [
+    1,
+    2,
+    32,
+    16,
+    16
+  ],
+  "output_shape": [
+    1,
+    2,
+    1,
+    64,
+    64
+  ],
+  "output_values_finite": true,
+  "forward_pass_seconds": 0.0411,
+  "total_subprocess_seconds": 8.62,
+  "dependency_interventions": [
+    "Installed simplejson",
+    "Installed fvcore",
+    "Installed remaining missing README packages"
+  ],
+  "test_harness_corrections": [
+    "Configured PYTHONPATH",
+    "Corrected synthetic input from 4D to 5D"
+  ],
+  "limitations": [
+    "Synthetic data only",
+    "Randomly initialised model weights",
+    "No pretrained checkpoint validation",
+    "No original flood dataset evaluation",
+    "No comparison with published forecast results",
+    "Shared Python environment used",
+    "Human remediation time not measured"
+  ],
+  "evidence_log": "results\\H02_test1_cpu_5d_recovery_log.txt"
+}

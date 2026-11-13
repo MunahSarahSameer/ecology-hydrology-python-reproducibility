@@ -1,0 +1,50 @@
+{
+  "step": 139,
+  "candidate_id": "H09",
+  "candidate_name": "swatpy",
+  "zenodo_record_id": "6322023",
+  "zenodo_api_url": "https://zenodo.org/api/records/6322023",
+  "record_title": "swatpy: A set of python modules to work with SWAT2012 models",
+  "doi": "10.5281/zenodo.6322023",
+  "publication_date": "2022-03-02",
+  "version": "v0.2",
+  "resource_type": {
+    "title": "Software",
+    "type": "software"
+  },
+  "creators": [
+    {
+      "name": "Kmoch, Alexander",
+      "affiliation": "University of Tartu",
+      "orcid": "0000-0003-4386-4450"
+    }
+  ],
+  "description": "<p>A set of python modules to work with the Soil and Water Assessment Tool (SWAT2012), including model run, programmatic config edits, simulation readouts and calibration with the fantastic SPOTPY package.</p>",
+  "files": [
+    {
+      "filename": "allixender/swatpy-v0.2.zip",
+      "size_bytes": 2049625,
+      "checksum": "md5:3a6b85ef18b40093334f62c1d88e6cd9",
+      "download_url": "https://zenodo.org/api/records/6322023/files/allixender/swatpy-v0.2.zip/content"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/allixender/swatpy/tree/v0.2",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.3390/w14131988",
+      "relation": "isSupplementTo",
+      "resource_type": "publication",
+      "scheme": "doi"
+    }
+  ],
+  "candidate_status": "METADATA_SCREENING_ONLY",
+  "archive_downloaded": false,
+  "source_executed": false,
+  "publication_independence": "NOT_VERIFIED",
+  "generated_at_utc": "2026-11-11T02:10:04.275341+00:00"
+}

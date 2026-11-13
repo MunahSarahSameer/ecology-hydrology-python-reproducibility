@@ -1,0 +1,707 @@
+{
+  "total_files": 100,
+  "syntax_pass": 99,
+  "syntax_fail": 1,
+  "records": [
+    {
+      "model": "DetailView.zip",
+      "file": "augmentation.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "DetailView.zip",
+      "file": "balancing.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "DetailView.zip",
+      "file": "balancing_orig.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "DetailView.zip",
+      "file": "downsampling.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "DetailView.zip",
+      "file": "eval.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "DetailView.zip",
+      "file": "parallel_densenet.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "DetailView.zip",
+      "file": "predict.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "DetailView.zip",
+      "file": "read_las.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "DetailView.zip",
+      "file": "sideview.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "DetailView.zip",
+      "file": "training.py",
+      "syntax_valid": false,
+      "error": "'(' was never closed",
+      "line": 311
+    },
+    {
+      "model": "Ensemble_PointNet.zip",
+      "file": "plot_cm.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Ensemble_PointNet.zip",
+      "file": "pn2_classifier.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Ensemble_PointNet.zip",
+      "file": "pn2_regressor.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Ensemble_PointNet.zip",
+      "file": "pointcloud_dataset.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Ensemble_PointNet.zip",
+      "file": "tree_classification.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Ensemble_PointNet.zip",
+      "file": "tree_classification_inference.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "MinkNet.zip",
+      "file": "data.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "MinkNet.zip",
+      "file": "minkowskifcnn.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "MinkNet.zip",
+      "file": "predict.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "MinkNet.zip",
+      "file": "train.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointAugment_DGCNN.zip",
+      "file": "augment/augmentor.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointAugment_DGCNN.zip",
+      "file": "augment/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointAugment_DGCNN.zip",
+      "file": "common/loss_utils.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointAugment_DGCNN.zip",
+      "file": "common/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointAugment_DGCNN.zip",
+      "file": "main.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointAugment_DGCNN.zip",
+      "file": "models/dgcnn.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointAugment_DGCNN.zip",
+      "file": "models/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointAugment_DGCNN.zip",
+      "file": "utils/augmentation.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointAugment_DGCNN.zip",
+      "file": "utils/resample_point_clouds.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointAugment_DGCNN.zip",
+      "file": "utils/send_telegram.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointAugment_DGCNN.zip",
+      "file": "utils/tools.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointAugment_DGCNN.zip",
+      "file": "utils/train.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointAugment_DGCNN.zip",
+      "file": "utils/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "data.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "helper.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "models/base.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "models/pointmixer.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "models/pointmlp.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "models/pointtransformer.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "models/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "test.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "train.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "utils/logger.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "utils/misc.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "utils/progress/progress/bar.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "utils/progress/progress/counter.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "utils/progress/progress/helpers.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "utils/progress/progress/spinner.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "utils/progress/progress/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "utils/progress/setup.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "utils/progress/test_progress.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "utils/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "PointMixer.zip",
+      "file": "voting.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "SimpleView.zip",
+      "file": "utils/dataset.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "SimpleView.zip",
+      "file": "utils/test.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "SimpleView.zip",
+      "file": "utils/train.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "SimpleView.zip",
+      "file": "utils/utils.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "SimpleView.zip",
+      "file": "utils/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/classify/predict.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/classify/train.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/classify/val.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/models/common.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/models/experimental.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/models/tf.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/models/yolo.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/models/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/activations.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/augmentations.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/autoanchor.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/autobatch.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/aws/resume.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/aws/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/callbacks.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/dataloaders.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/downloads.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/flask_rest_api/example_request.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/flask_rest_api/restapi.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/general.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/loggers/clearml/clearml_utils.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/loggers/clearml/hpo.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/loggers/clearml/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/loggers/comet/comet_utils.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/loggers/comet/hpo.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/loggers/comet/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/loggers/wandb/wandb_utils.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/loggers/wandb/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/loggers/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/loss.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/metrics.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/plots.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/segment/augmentations.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/segment/dataloaders.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/segment/general.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/segment/loss.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/segment/metrics.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/segment/plots.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/segment/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/torch_utils.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/triton.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    },
+    {
+      "model": "Yolov5.zip",
+      "file": "yolo_classification/utils/__init__.py",
+      "syntax_valid": true,
+      "error": null,
+      "line": null
+    }
+  ]
+}
