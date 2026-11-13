@@ -1,0 +1,22 @@
+Bottleneck @ file:///C:/Users/task_VvYuZJmrQrWAq_0/croot/bottleneck_1783928196673/work
+colorama==0.4.6
+exceptiongroup==1.3.1
+iniconfig==2.3.1
+mkl-service @ file:///C:/Users/task_179140494701603/croot/mkl-service_1791405092826/work
+mkl_fft @ file:///C:/Users/task_179249798929271/croot/mkl_fft_1792498141016/work
+mkl_random @ file:///C:/Users/task_179140427626839/croot/mkl_random_1791404765176/work
+numexpr @ file:///C:/Users/task_177627002151243/croot/numexpr_1776270132838/work
+numpy @ file:///C:/b/abs_81ri0q57xq/croot/numpy_and_numpy_base_1755590863635/work/dist/numpy-1.26.4-cp310-cp310-win_amd64.whl#sha256=b6162b3d8f61a8b10293d275d39feb04e0969ade6c6fdf4251eb84d35b403681
+packaging==26.3
+pandas==2.3.3
+pluggy==1.7.0
+Pygments==2.21.0
+pytest==9.2.0
+python-dateutil @ file:///C:/b/abs_3au_koqnbs/croot/python-dateutil_1716495777160/work
+pytz @ file:///C:/Users/task_179215204915686/croot/pytz_1792152182227/work
+ruamel.yaml==0.19.1
+six @ file:///C:/b/abs_149wuyuo1o/croot/six_1744271521515/work
+tomli==2.5.0
+typing_extensions==4.16.0
+tzdata==2026.6
+xarray==2024.3.0

@@ -1,0 +1,101 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.18, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\MUNAH\miniconda3\envs\code_decay\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\MUNAH\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H05\test1\source
+plugins: anyio-4.15.1, platformdirs-4.14.4
+collecting ... collected 3 items
+
+test/test_datautils.py::test_sort_frequencies FAILED                     [ 33%]
+test/test_datautils.py::test_infer_frequency FAILED                      [ 66%]
+test/test_datautils.py::test_get_frequency_factor FAILED                 [100%]
+
+================================== FAILURES ===================================
+____________________________ test_sort_frequencies ____________________________
+pandas/_libs/tslibs/offsets.pyx:7998: in pandas._libs.tslibs.offsets.to_offset
+    ???
+pandas/_libs/tslibs/offsets.pyx:7859: in pandas._libs.tslibs.offsets._validate_to_offset_alias
+    ???
+pandas/_libs/tslibs/offsets.pyx:7809: in pandas._libs.tslibs.offsets.raise_invalid_freq
+    ???
+E   ValueError: Invalid frequency: H. Did you mean h?
+
+During handling of the above exception, another exception occurred:
+test\test_datautils.py:10: in test_sort_frequencies
+    assert sort_frequencies(['1D', '1H', '2D', '3H']) == ['2D', '1D', '3H', '1H']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+neuralhydrology\datautils\utils.py:148: in sort_frequencies
+    return sorted(frequencies, key=functools.cmp_to_key(compare_frequencies))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+neuralhydrology\datautils\utils.py:234: in compare_frequencies
+    freq_factor = get_frequency_factor(freq_one, freq_two)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+neuralhydrology\datautils\utils.py:268: in get_frequency_factor
+    offset_one = to_offset(freq_one)
+                 ^^^^^^^^^^^^^^^^^^^
+pandas/_libs/tslibs/offsets.pyx:7903: in pandas._libs.tslibs.offsets.to_offset
+    ???
+pandas/_libs/tslibs/offsets.pyx:8048: in pandas._libs.tslibs.offsets.to_offset
+    ???
+pandas/_libs/tslibs/offsets.pyx:7809: in pandas._libs.tslibs.offsets.raise_invalid_freq
+    ???
+E   ValueError: Invalid frequency: 1H. Failed to parse with error message: ValueError('Invalid frequency: H. Did you mean h?')
+____________________________ test_infer_frequency _____________________________
+pandas/_libs/tslibs/offsets.pyx:7998: in pandas._libs.tslibs.offsets.to_offset
+    ???
+pandas/_libs/tslibs/offsets.pyx:7859: in pandas._libs.tslibs.offsets._validate_to_offset_alias
+    ???
+pandas/_libs/tslibs/offsets.pyx:7809: in pandas._libs.tslibs.offsets.raise_invalid_freq
+    ???
+E   ValueError: Invalid frequency: H. Did you mean h?
+
+During handling of the above exception, another exception occurred:
+test\test_datautils.py:22: in test_infer_frequency
+    assert infer_frequency(pd.date_range('2000-01-01', '2000-01-10', freq='48H')) == '2D'
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\MUNAH\miniconda3\envs\code_decay\Lib\site-packages\pandas\core\indexes\datetimes.py:2727: in date_range
+    freq = to_offset(freq)
+           ^^^^^^^^^^^^^^^
+pandas/_libs/tslibs/offsets.pyx:7903: in pandas._libs.tslibs.offsets.to_offset
+    ???
+pandas/_libs/tslibs/offsets.pyx:8048: in pandas._libs.tslibs.offsets.to_offset
+    ???
+pandas/_libs/tslibs/offsets.pyx:7809: in pandas._libs.tslibs.offsets.raise_invalid_freq
+    ???
+E   ValueError: Invalid frequency: 48H. Failed to parse with error message: ValueError('Invalid frequency: H. Did you mean h?')
+__________________________ test_get_frequency_factor __________________________
+pandas/_libs/tslibs/offsets.pyx:7998: in pandas._libs.tslibs.offsets.to_offset
+    ???
+pandas/_libs/tslibs/offsets.pyx:7859: in pandas._libs.tslibs.offsets._validate_to_offset_alias
+    ???
+pandas/_libs/tslibs/offsets.pyx:7809: in pandas._libs.tslibs.offsets.raise_invalid_freq
+    ???
+E   ValueError: Invalid frequency: A. Did you mean Y?
+
+During handling of the above exception, another exception occurred:
+test\test_datautils.py:42: in test_get_frequency_factor
+    assert get_frequency_factor('1A', '1Y') == 1
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+neuralhydrology\datautils\utils.py:268: in get_frequency_factor
+    offset_one = to_offset(freq_one)
+                 ^^^^^^^^^^^^^^^^^^^
+pandas/_libs/tslibs/offsets.pyx:7903: in pandas._libs.tslibs.offsets.to_offset
+    ???
+pandas/_libs/tslibs/offsets.pyx:8048: in pandas._libs.tslibs.offsets.to_offset
+    ???
+pandas/_libs/tslibs/offsets.pyx:7809: in pandas._libs.tslibs.offsets.raise_invalid_freq
+    ???
+E   ValueError: Invalid frequency: 1A. Failed to parse with error message: ValueError('Invalid frequency: A. Did you mean Y?')
+============================== warnings summary ===============================
+test/test_datautils.py::test_infer_frequency
+  C:\Users\MUNAH\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H05\test1\source\neuralhydrology\datautils\utils.py:170: Pandas4Warning: A future version of pandas will return a BaseOffset object instead of a string from infer_freq. Use pd.set_option('future.infer_freq_returns_offset', True) to get the future behavior, or set to False to keep the old behavior and silence this warning. To preserve the string representation, use ``infer_freq(...).freqstr``.
+    native_frequency = pd.infer_freq(index)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ==============================
+
+(9 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ===========================
+FAILED test/test_datautils.py::test_sort_frequencies - ValueError: Invalid fr...
+FAILED test/test_datautils.py::test_infer_frequency - ValueError: Invalid fre...
+FAILED test/test_datautils.py::test_get_frequency_factor - ValueError: Invali...
+======================== 3 failed, 1 warning in 0.46s =========================

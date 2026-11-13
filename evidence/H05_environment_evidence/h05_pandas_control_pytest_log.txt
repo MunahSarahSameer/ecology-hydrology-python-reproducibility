@@ -1,0 +1,104 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.22, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\MUNAH\miniconda3\envs\h05_pandas_control\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\MUNAH\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H05\test1\source
+collecting ... collected 3 items
+
+test/test_datautils.py::test_sort_frequencies FAILED                     [ 33%]
+test/test_datautils.py::test_infer_frequency PASSED                      [ 66%]
+test/test_datautils.py::test_get_frequency_factor FAILED                 [100%]
+
+================================== FAILURES ===================================
+____________________________ test_sort_frequencies ____________________________
+neuralhydrology\datautils\utils.py:309: in get_frequency_factor
+    factor = pd.to_timedelta(freq_one) / pd.to_timedelta(freq_two)
+C:\Users\MUNAH\miniconda3\envs\h05_pandas_control\lib\site-packages\pandas\core\tools\timedeltas.py:223: in to_timedelta
+    return _coerce_scalar_to_timedelta_type(arg, unit=unit, errors=errors)
+C:\Users\MUNAH\miniconda3\envs\h05_pandas_control\lib\site-packages\pandas\core\tools\timedeltas.py:233: in _coerce_scalar_to_timedelta_type
+    result = Timedelta(r, unit)
+pandas/_libs/tslibs/timedeltas.pyx:1844: in pandas._libs.tslibs.timedeltas.Timedelta.__new__
+    ???
+pandas/_libs/tslibs/timedeltas.pyx:644: in pandas._libs.tslibs.timedeltas.parse_timedelta_string
+    ???
+pandas/_libs/tslibs/timedeltas.pyx:692: in pandas._libs.tslibs.timedeltas.timedelta_from_spec
+    ???
+E   ValueError: Units 'M', 'Y' and 'y' do not represent unambiguous timedelta values and are not supported.
+
+The above exception was the direct cause of the following exception:
+test\test_datautils.py:11: in test_sort_frequencies
+    assert sort_frequencies(['1M', '1Y']) == ['1Y', '1M']
+neuralhydrology\datautils\utils.py:148: in sort_frequencies
+    return sorted(frequencies, key=functools.cmp_to_key(compare_frequencies))
+neuralhydrology\datautils\utils.py:234: in compare_frequencies
+    freq_factor = get_frequency_factor(freq_one, freq_two)
+neuralhydrology\datautils\utils.py:311: in get_frequency_factor
+    raise ValueError(f'Frequencies {freq_one} and/or {freq_two} are not comparable.') from err
+E   ValueError: Frequencies 1Y and/or 1M are not comparable.
+__________________________ test_get_frequency_factor __________________________
+neuralhydrology\datautils\utils.py:309: in get_frequency_factor
+    factor = pd.to_timedelta(freq_one) / pd.to_timedelta(freq_two)
+C:\Users\MUNAH\miniconda3\envs\h05_pandas_control\lib\site-packages\pandas\core\tools\timedeltas.py:223: in to_timedelta
+    return _coerce_scalar_to_timedelta_type(arg, unit=unit, errors=errors)
+C:\Users\MUNAH\miniconda3\envs\h05_pandas_control\lib\site-packages\pandas\core\tools\timedeltas.py:233: in _coerce_scalar_to_timedelta_type
+    result = Timedelta(r, unit)
+pandas/_libs/tslibs/timedeltas.pyx:1844: in pandas._libs.tslibs.timedeltas.Timedelta.__new__
+    ???
+pandas/_libs/tslibs/timedeltas.pyx:644: in pandas._libs.tslibs.timedeltas.parse_timedelta_string
+    ???
+pandas/_libs/tslibs/timedeltas.pyx:692: in pandas._libs.tslibs.timedeltas.timedelta_from_spec
+    ???
+E   ValueError: Units 'M', 'Y' and 'y' do not represent unambiguous timedelta values and are not supported.
+
+The above exception was the direct cause of the following exception:
+test\test_datautils.py:43: in test_get_frequency_factor
+    assert get_frequency_factor('1Y', '4Q') == 1
+neuralhydrology\datautils\utils.py:311: in get_frequency_factor
+    raise ValueError(f'Frequencies {freq_one} and/or {freq_two} are not comparable.') from err
+E   ValueError: Frequencies 1Y and/or 4Q are not comparable.
+============================== warnings summary ===============================
+test/test_datautils.py::test_sort_frequencies
+  C:\Users\MUNAH\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H05\test1\source\neuralhydrology\datautils\utils.py:268: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    offset_one = to_offset(freq_one)
+
+test/test_datautils.py::test_sort_frequencies
+  C:\Users\MUNAH\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H05\test1\source\neuralhydrology\datautils\utils.py:309: FutureWarning: 'H' is deprecated and will be removed in a future version. Please use 'h' instead of 'H'.
+    factor = pd.to_timedelta(freq_one) / pd.to_timedelta(freq_two)
+
+test/test_datautils.py::test_sort_frequencies
+  C:\Users\MUNAH\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H05\test1\source\neuralhydrology\datautils\utils.py:269: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    offset_two = to_offset(freq_two)
+
+test/test_datautils.py::test_sort_frequencies
+test/test_datautils.py::test_get_frequency_factor
+  C:\Users\MUNAH\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H05\test1\source\neuralhydrology\datautils\utils.py:268: FutureWarning: 'Y' is deprecated and will be removed in a future version, please use 'YE' instead.
+    offset_one = to_offset(freq_one)
+
+test/test_datautils.py::test_sort_frequencies
+  C:\Users\MUNAH\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H05\test1\source\neuralhydrology\datautils\utils.py:269: FutureWarning: 'M' is deprecated and will be removed in a future version, please use 'ME' instead.
+    offset_two = to_offset(freq_two)
+
+test/test_datautils.py::test_infer_frequency
+  C:\Users\MUNAH\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H05\test1\source\test\test_datautils.py:22: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    assert infer_frequency(pd.date_range('2000-01-01', '2000-01-10', freq='48H')) == '2D'
+
+test/test_datautils.py::test_get_frequency_factor
+  C:\Users\MUNAH\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H05\test1\source\neuralhydrology\datautils\utils.py:268: FutureWarning: 'A' is deprecated and will be removed in a future version, please use 'YE' instead.
+    offset_one = to_offset(freq_one)
+
+test/test_datautils.py::test_get_frequency_factor
+  C:\Users\MUNAH\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H05\test1\source\neuralhydrology\datautils\utils.py:269: FutureWarning: 'Y' is deprecated and will be removed in a future version, please use 'YE' instead.
+    offset_two = to_offset(freq_two)
+
+test/test_datautils.py::test_get_frequency_factor
+  C:\Users\MUNAH\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H05\test1\source\neuralhydrology\datautils\utils.py:269: FutureWarning: 'Q' is deprecated and will be removed in a future version, please use 'QE' instead.
+    offset_two = to_offset(freq_two)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================== slowest durations ==============================
+0.01s call     test/test_datautils.py::test_infer_frequency
+
+(8 durations < 0.005s hidden.  Use -vv to show these durations.)
+=========================== short test summary info ===========================
+FAILED test/test_datautils.py::test_sort_frequencies - ValueError: Frequencie...
+FAILED test/test_datautils.py::test_get_frequency_factor - ValueError: Freque...
+================== 2 failed, 1 passed, 10 warnings in 0.34s ===================
