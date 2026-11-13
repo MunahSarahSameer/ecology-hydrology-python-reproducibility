@@ -1,0 +1,19 @@
+{
+  "step": 192,
+  "candidate": "E06",
+  "notebook": "Code_Figures/FigS8_SchematicFigure.ipynb",
+  "timestamp_utc": "2026-11-11T03:42:47.321351+00:00",
+  "source_sha256": "3027e7ebbc252bc557bf09fd08b02565864f21788e7752496f0237efddd017b6",
+  "custom_module_files_in_zip": [
+    "Code_Figures/ZhenPlot.py",
+    "Code_Figures/__pycache__/ZhenPlot.cpython-311.pyc"
+  ],
+  "dependencies": {
+    "numpy": true,
+    "seaborn": true,
+    "matplotlib": true,
+    "ZhenPlot": false
+  },
+  "original_output_directory_exists": false,
+  "execution_attempted": false
+}

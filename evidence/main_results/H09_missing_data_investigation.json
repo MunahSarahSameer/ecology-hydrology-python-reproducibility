@@ -1,0 +1,92 @@
+{
+  "step": 147,
+  "package_id": "H09",
+  "package_name": "swatpy",
+  "version": "v0.2",
+  "archive_sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+  "original_source_member": "allixender-swatpy-0d47bfa/swatpy/ReadOut.py",
+  "execution_method": "Unmodified archived ReadOut.py loaded in isolated subprocess; file-reading constructor bypassed",
+  "results": {
+    "module_load": "PASS",
+    "numpy_version": "2.4.6",
+    "conditions": [
+      {
+        "condition": "original_masked_input",
+        "observations": [
+          1.0,
+          "NaN",
+          3.0,
+          4.0
+        ],
+        "simulations": [
+          1.0,
+          2.0,
+          3.5,
+          4.0
+        ],
+        "mask": [
+          false,
+          true,
+          false,
+          false
+        ],
+        "observed_mean": 2.6666666666666665,
+        "methods": {
+          "nash": {
+            "execution": "PASS",
+            "result": "NaN",
+            "finite": false
+          },
+          "agr": {
+            "execution": "PASS",
+            "result": "NaN",
+            "finite": false
+          }
+        }
+      },
+      {
+        "condition": "filtered_valid_pairs",
+        "observations": [
+          1.0,
+          3.0,
+          4.0
+        ],
+        "simulations": [
+          1.0,
+          3.5,
+          4.0
+        ],
+        "mask": [
+          false,
+          false,
+          false
+        ],
+        "observed_mean": 2.6666666666666665,
+        "methods": {
+          "nash": {
+            "execution": "PASS",
+            "result": 0.9464285714285714,
+            "finite": true
+          },
+          "agr": {
+            "execution": "PASS",
+            "result": 0.9872340425531915,
+            "finite": true
+          }
+        }
+      }
+    ],
+    "errors": []
+  },
+  "subprocess_returncode": 0,
+  "subprocess_stderr": "<string>:11: UserWarning: Warning: converting a masked element to nan.\n<string>:100: UserWarning: Warning: converting a masked element to nan.\n",
+  "original_archive_modified": false,
+  "full_package_execution_verified": false,
+  "scientific_reproduction_verified": false,
+  "limitations": [
+    "Synthetic inputs do not establish published-results reproduction.",
+    "The original file-reading constructor was not executed.",
+    "This experiment does not determine whether behaviour changed across NumPy versions."
+  ],
+  "generated_at_utc": "2026-11-11T02:22:57.695938+00:00"
+}

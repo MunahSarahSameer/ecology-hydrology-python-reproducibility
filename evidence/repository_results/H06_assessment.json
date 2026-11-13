@@ -1,0 +1,29 @@
+{
+  "repository_id": "H06",
+  "domain": "Hydrology",
+  "repository_name": "S4D Rainfall-Runoff Simulations",
+  "archive_files": 292,
+  "python_files": 96,
+  "dependency_manifest_found": false,
+  "research_dataset_files_detected": 0,
+  "model_checkpoints_detected": 0,
+  "external_inputs_required": [
+    "CAMELS watershed dataset",
+    "Updated NLDAS meteorological forcings"
+  ],
+  "models": [
+    "S4D",
+    "LSTM",
+    "MC-LSTM"
+  ],
+  "execution_attempted": false,
+  "full_workflow_completed": false,
+  "published_results_reproduced": false,
+  "classification": "not_tested_external_data_dependency",
+  "limitations": [
+    "Required research datasets not included in archive",
+    "Pretrained model checkpoints not detected",
+    "No dependency manifest detected",
+    "Potential CUDA requirements not experimentally verified"
+  ]
+}

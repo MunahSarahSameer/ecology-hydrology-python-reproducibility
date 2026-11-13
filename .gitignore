@@ -1,0 +1,15 @@
+*.bak
+*.ipynb.bak
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.zip
+*.7z
+*.tar
+*.gz
+*.exe
+*.dll
+*.pkl
+*.joblib

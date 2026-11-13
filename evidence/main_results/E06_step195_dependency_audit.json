@@ -1,0 +1,60 @@
+{
+  "step": 195,
+  "candidate": "E06",
+  "source_module": "Code_Figures/ZhenPlot.py",
+  "timestamp_utc": "2026-11-11T03:44:54.935603+00:00",
+  "imports": [
+    {
+      "module": "cartopy",
+      "available": false,
+      "status": "MISSING"
+    },
+    {
+      "module": "ee",
+      "available": false,
+      "status": "MISSING"
+    },
+    {
+      "module": "geemap",
+      "available": false,
+      "status": "MISSING"
+    },
+    {
+      "module": "geopandas",
+      "available": false,
+      "status": "MISSING"
+    },
+    {
+      "module": "matplotlib",
+      "available": true,
+      "status": "AVAILABLE"
+    },
+    {
+      "module": "matplotlib_scalebar",
+      "available": false,
+      "status": "MISSING"
+    },
+    {
+      "module": "numpy",
+      "available": true,
+      "status": "AVAILABLE"
+    },
+    {
+      "module": "pysal",
+      "available": false,
+      "status": "MISSING"
+    },
+    {
+      "module": "warnings",
+      "available": true,
+      "status": "AVAILABLE"
+    }
+  ],
+  "execution_attempted": false,
+  "limitations": [
+    "Static import audit only.",
+    "Import availability does not guarantee successful import.",
+    "Conditional and dynamic imports may not be fully captured.",
+    "No packages were installed."
+  ]
+}

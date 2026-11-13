@@ -1,0 +1,35 @@
+{
+  "repository_id": "H05",
+  "test_id": "H05_test1",
+  "repository": "NeuralHydrology v1.2.3",
+  "selected_workflow": "Archived data-utility unit tests",
+  "original_source_sha256": "b25fcd2fb66e9633bb28b892d6b23ebac9c57189caa86f70197acc642a0eecb3",
+  "source_modified": false,
+  "modern_environment": {
+    "python": "3.11.18",
+    "pandas": "3.1.0",
+    "tests_passed": 0,
+    "tests_failed": 3,
+    "failure": "Legacy pandas frequency aliases rejected"
+  },
+  "recovery_environment": {
+    "python": "3.10.22",
+    "pandas": "1.5.3",
+    "xarray": "2024.3.0",
+    "pytest": "9.2.0",
+    "ruamel.yaml": "0.19.1",
+    "tests_passed": 3,
+    "tests_failed": 0,
+    "exit_code": 0
+  },
+  "recovery_method": "Isolated environment reconstruction",
+  "environment_creation_seconds": 47.95,
+  "dependency_installation_seconds": 16.52,
+  "final_test_execution_seconds": 2.8,
+  "recorded_machine_seconds": 67.27,
+  "human_remediation_time_measured": false,
+  "selected_tests_recovered": true,
+  "full_repository_reproduced": false,
+  "published_research_results_reproduced": false,
+  "causal_limitation": "Multiple environment components changed; pandas-specific causality not isolated."
+}

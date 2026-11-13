@@ -1,0 +1,17 @@
+{
+  "archive_id": "E08",
+  "test": "Independent WSINDy library matrix validation",
+  "source_script_sha256": "cfca74d66688df621712b913f0c7e162730a58dba39f7e791782926ac130bf98",
+  "validation_script_sha256": "f01ff5937ebd7ee0b63d5b6d28fcc4246d45b0b87064c3163837b16944349d5c",
+  "execution": {
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 9.844,
+    "stdout": "Scientific imports: PASS\nSTART CELL 8\nData-frame shape: (964, 12)\nTimes, t = [ 0  1  2  4  8 16 24 48]\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\nEND CELL 8\nSTART CELL 10\nEND CELL 10\nSTART CELL 13\nShape of U_h: torch.Size([80, 80, 8])\nEND CELL 13\nSTART CELL 17\nEND CELL 17\nSTART CELL 18\nShape of U: torch.Size([80, 80, 8])\nEND CELL 18\nSTART CELL 22\nEND CELL 22\nSTART CELL 23\n0.9999999999999989\ntorch.Size([80, 80, 8])\ntorch.Size([80, 80, 98])\nEND CELL 23\nSTART CELL 39\nEND CELL 39\nSTART CELL 41\nEND CELL 41\nSTART CELL 42\n<IPython.core.display.Math object>\nLibrary shape: G = (309600, 6)\nCondition number: K(G) = 5.10e+02\n\nEND CELL 42\n\n=== LIBRARY VALIDATION ===\nModel: WSINDy\nG_mat shape: torch.Size([309600, 6])\nVALIDATION: PASS\n\n=== INDEPENDENT LIBRARY VALIDATION ===\nMatrix shape: (309600, 6)\nAll values finite: True\nColumn minimums: [9.229120888976643e-15, -0.00712006000202364, -0.0013387725572444604, -0.005650441270567483, -0.0009541095314237363, -0.0003890470727088054]\nColumn maximums: [0.11772786450499625, 0.007116503919701505, 0.0005332415791727452, 0.005065124719885426, 0.00035231413147127967, 0.0003868770594509953]\nColumn nonzero counts: [309600, 309600, 309600, 309600, 309600, 309600]\nLargest singular value: 5.484720910880584\nSmallest singular value: 0.010763261737461938\nIndependent condition number: 509.577955517964\nLIBRARY VALIDATION: PASS\n",
+    "stderr": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\test12\\wsindy.py:106: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\nC:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\test12\\wsindy.py:213: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n\n  0%|          | 0/6 [00:00<?, ?it/s]\n 17%|#6        | 1/6 [00:00<00:00,  6.65it/s]\n 50%|#####     | 3/6 [00:00<00:00,  9.66it/s]\n 83%|########3 | 5/6 [00:00<00:00, 12.93it/s]\n100%|##########| 6/6 [00:00<00:00, 12.00it/s]\n"
+  },
+  "original_notebook_modified": false,
+  "scientific_calculations_modified": false,
+  "model_fitting_executed": false,
+  "published_results_reproduced": false
+}

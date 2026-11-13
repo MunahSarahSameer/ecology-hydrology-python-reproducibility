@@ -1,0 +1,1246 @@
+{
+  "step": 156,
+  "assessment_type": "EXPERIMENTAL_EVIDENCE_EXTRACTION",
+  "packages": [
+    {
+      "package_id": "E01",
+      "domain": "ecology",
+      "structured_findings": [],
+      "log_findings": [],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "E02",
+      "domain": "ecology",
+      "structured_findings": [],
+      "log_findings": [
+        {
+          "source": "repositories\\results\\E02_test1_baseline_log.txt",
+          "total_lines": 15,
+          "matched_line_count": 0,
+          "matched_lines": []
+        }
+      ],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "E03",
+      "domain": "ecology",
+      "structured_findings": [],
+      "log_findings": [
+        {
+          "source": "repositories\\results\\E03_test1_packages.txt",
+          "total_lines": 5,
+          "matched_line_count": 0,
+          "matched_lines": []
+        }
+      ],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "E06",
+      "domain": "ecology",
+      "structured_findings": [],
+      "log_findings": [
+        {
+          "source": "repositories\\results\\E06_test1_after_seaborn_log.txt",
+          "total_lines": 11,
+          "matched_line_count": 2,
+          "matched_lines": [
+            {
+              "line": 6,
+              "text": "Traceback (most recent call last):"
+            },
+            {
+              "line": 11,
+              "text": "ModuleNotFoundError: No module named 'geopandas'"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\E06_test1_baseline_log.txt",
+          "total_lines": 10,
+          "matched_line_count": 2,
+          "matched_lines": [
+            {
+              "line": 7,
+              "text": "Traceback (most recent call last):"
+            },
+            {
+              "line": 10,
+              "text": "ModuleNotFoundError: No module named 'seaborn'"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\E06_test1_recovery_log.txt",
+          "total_lines": 6,
+          "matched_line_count": 0,
+          "matched_lines": []
+        }
+      ],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "E07",
+      "domain": "ecology",
+      "structured_findings": [
+        {
+          "source": "repositories\\results\\E07_consolidated_evidence.json",
+          "fields": {
+            "baseline_status": "FAIL",
+            "baseline_failure": "Missing laspy dependency",
+            "recovery_status": "PASS",
+            "recovered_dependency": "laspy",
+            "separate_training_syntax_repair": "PASS",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E07_download_record.json",
+          "fields": {
+            "screening_status": "pending"
+          }
+        },
+        {
+          "source": "repositories\\results\\E07_original_source_syntax_audit.json",
+          "fields": {
+            "syntax_pass": 99,
+            "syntax_fail": 1
+          }
+        },
+        {
+          "source": "repositories\\results\\E07_test1_syntax_repair.json",
+          "fields": {
+            "baseline_syntax": "FAIL",
+            "baseline_error": "{\"message\": \"'(' was never closed\", \"line\": 311}",
+            "candidate_repair_syntax": "PASS",
+            "candidate_repair_error": null,
+            "runtime_execution_tested": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E07_test2_read_las_baseline.json",
+          "fields": {
+            "execution_status": "FAIL"
+          }
+        },
+        {
+          "source": "repositories\\results\\E07_test2_read_las_recovery.json",
+          "fields": {
+            "baseline_status": "FAIL",
+            "missing_dependency": "laspy",
+            "recovery_status": "PASS",
+            "recovery_exit_code": 0,
+            "recovery_elapsed_seconds": 1.055
+          }
+        }
+      ],
+      "log_findings": [],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "E08",
+      "domain": "ecology",
+      "structured_findings": [
+        {
+          "source": "results\\E08_original_results_inspection.json",
+          "fields": {
+            "publication_results_compared": false
+          }
+        },
+        {
+          "source": "results\\E08_recovered_scientific_results.json",
+          "fields": {
+            "execution_status": "PASS",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "results\\E08_reproduction_comparison.json",
+          "fields": {
+            "all_displayed_results_match": true
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_candidate_metadata.json",
+          "fields": {
+            "eligibility_status": "pending_content_inspection"
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_helper_source_investigation.json",
+          "fields": {
+            "repository_status": 200,
+            "errors": "[]"
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_kde_import_order_test.json",
+          "fields": {
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_kde_operation_diagnostic.json",
+          "fields": {
+            "execution": "{\"status\": \"FAIL\", \"exit_code\": 3, \"elapsed_seconds\": 7.283, \"stdout\": \"Scientific imports complete\\nSTART CELL 8\\nData-frame shape: (964, 12)\\nTimes, t = [ 0  1  2  4  8 16 24 48]\\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\\nEND CELL 8\\nSTART CELL 10\\nEND CELL 10\\nSTART CELL 13\\nShape of U_h: torch.Size([80, 80, 8])\\nEND CELL 13\\nSTART CELL 17\\nEND CELL 17\\nSTART CELL 18\\nKDE CHECKPOINT 1: cell 18 line 17\\n\", \"stderr\": \"OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.\\nOMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the prog",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_model_fitting_inspection.json",
+          "fields": {
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_notebook_screening.json",
+          "fields": {
+            "syntax_failures": "[{\"cell_index\": 3, \"error\": \"invalid syntax (<unknown>, line 1)\"}, {\"cell_index\": 5, \"error\": \"invalid syntax (<unknown>, line 3)\"}]",
+            "eligibility_status": "pending_workflow_assessment"
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_numerical_runtime_isolation.json",
+          "fields": {
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_openmp_failure_isolation.json",
+          "fields": {
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test10_potential_library.json",
+          "fields": {
+            "execution": "{\"status\": \"PASS\", \"exit_code\": 0, \"seconds\": 23.635, \"stdout\": \"Scientific imports: PASS\\nSTART CELL 8\\nData-frame shape: (964, 12)\\nTimes, t = [ 0  1  2  4  8 16 24 48]\\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\\nEND CELL 8\\nSTART CELL 10\\nEND CELL 10\\nSTART CELL 13\\nShape of U_h: torch.Size([80, 80, 8])\\nEND CELL 13\\nSTART CELL 17\\nEND CELL 17\\nSTART CELL 18\\nShape of U: torch.Size([80, 80, 8])\\nEND CELL 18\\nSTART CELL 22\\nEND CELL 22\\nSTART CELL 23\\n0.9999999999999989\\ntorch.Size([80, 80, 8])\\ntorch.Size([80, 80, 98])\\nEND CELL 23\\nSTART CELL 39\\nEND CELL 39\\nSTART CELL 41\\nEND CELL 41\\nSTART CELL 4",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test11_sparse_model_fitting.json",
+          "fields": {
+            "execution": "{\"status\": \"FAIL\", \"exit_code\": 1, \"seconds\": 147.561, \"stdout\": \"Scientific imports: PASS\\nSTART CELL 8\\nData-frame shape: (964, 12)\\nTimes, t = [ 0  1  2  4  8 16 24 48]\\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\\nEND CELL 8\\nSTART CELL 10\\nEND CELL 10\\nSTART CELL 13\\nShape of U_h: torch.Size([80, 80, 8])\\nEND CELL 13\\nSTART CELL 17\\nEND CELL 17\\nSTART CELL 18\\nShape of U: torch.Size([80, 80, 8])\\nEND CELL 18\\nSTART CELL 22\\nEND CELL 22\\nSTART CELL 23\\n0.9999999999999989\\ntorch.Size([80, 80, 8])\\ntorch.Size([80, 80, 98])\\nEND CELL 23\\nSTART CELL 39\\nEND CELL 39\\nSTART CELL 41\\nEND CELL 41\\nSTART CELL ",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test12_utf8_model_fitting.json",
+          "fields": {
+            "status": "PASS",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test1_data_path_recovery.json",
+          "fields": {
+            "local_path_recovery": "{\"status\": \"PASS\", \"exit_code\": 0, \"elapsed_seconds\": 1.123, \"stdout\": \"Data-frame shape: (964, 12)\\nColumns: ['Run', 'Plot', 'Infection', 'G/S', 'Check', 'Time', 'Individual', 'X', 'Y', 'Z', 'location', 'horizontal']\\nRuns: ['Apr-16', 'Mar-16']\\n\", \"stderr\": \"\"}",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test2_dependency_import.json",
+          "fields": {
+            "recovery": "{\"status\": \"PASS\", \"exit_code\": 0, \"elapsed_seconds\": 7.036, \"stdout\": \"symengine: PASS\\nhelper_fcns: PASS\\nwsindy: PASS\\nWSINDy class: True\\n\", \"stderr\": \"\"}",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test3_data_preparation.json",
+          "fields": {
+            "execution": "{\"status\": \"FAIL\", \"exit_code\": 1, \"elapsed_seconds\": 5.212, \"stdout\": \"Data-frame shape: (964, 12)\\nTimes, t = [ 0  1  2  4  8 16 24 48]\\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\\nShape of U_h: torch.Size([80, 80, 8])\\n\\n=== SCIENTIFIC DATA VALIDATION ===\\nFiltered observations: 964\\n\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"C:\\\\Users/REDACTED\\\\Downloads\\\\Computer Science Project testing for ecology and Hydrology Code Decay\\\\repositories\\\\E08\\\\test3\\\\run_original_data_cells.py\\\", line 133, in <module>\\n    print(\\\"Histogram count:\\\", len(hists))\\n                                  ^^^^^\\",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test3_data_preparation_corrected.json",
+          "fields": {
+            "previous_failure_classification": "Test-harness validation error",
+            "execution": "{\"status\": \"PASS\", \"exit_code\": 0, \"elapsed_seconds\": 5.267, \"stdout\": \"Data-frame shape: (964, 12)\\nTimes, t = [ 0  1  2  4  8 16 24 48]\\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\\nShape of U_h: torch.Size([80, 80, 8])\\n\\n=== SCIENTIFIC DATA VALIDATION V2 ===\\nFiltered observations: 964\\nDensity tensor shape: (80, 80, 8)\\nAll values finite: True\\nAll densities nonnegative: True\\nDensity integrals: [1.0254766864284568, 1.0254766864284568, 1.0254766864284568, 1.0254766864284566, 1.0254766864284566, 1.0254766864284568, 1.0254766864284568, 1.0254766864284568]\\nVALIDATION: PASS\\n\", \"stderr\": \"\"}",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test4_kde_interpolation.json",
+          "fields": {
+            "execution": "{\"status\": \"FAIL\", \"exit_code\": 3, \"elapsed_seconds\": 7.533, \"stdout\": \"\", \"stderr\": \"OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.\\nOMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. As an unsafe, unsupported, undocumented workaround you can set the environmen",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test5_original_kde_recovery.json",
+          "fields": {
+            "recovery": "Sequential MKL numerical runtime",
+            "execution": "{\"status\": \"PASS\", \"exit_code\": 0, \"seconds\": 9.671, \"stdout\": \"Scientific imports: PASS\\nSTART CELL 8\\nData-frame shape: (964, 12)\\nTimes, t = [ 0  1  2  4  8 16 24 48]\\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\\nEND CELL 8\\nSTART CELL 10\\nEND CELL 10\\nSTART CELL 13\\nShape of U_h: torch.Size([80, 80, 8])\\nEND CELL 13\\nSTART CELL 17\\nEND CELL 17\\nSTART CELL 18\\nShape of U: torch.Size([80, 80, 8])\\nEND CELL 18\\nSTART CELL 22\\nEND CELL 22\\nSTART CELL 23\\n0.9999999999999989\\ntorch.Size([80, 80, 8])\\ntorch.Size([80, 80, 98])\\nEND CELL 23\\n\\n=== SCIENTIFIC OUTPUT VALIDATION ===\\nOriginal KDE tensor: (80, 80,",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test6_wsindy_initialization.json",
+          "fields": {
+            "execution": "{\"status\": \"PASS\", \"exit_code\": 0, \"seconds\": 10.297, \"stdout\": \"Scientific imports: PASS\\nSTART CELL 8\\nData-frame shape: (964, 12)\\nTimes, t = [ 0  1  2  4  8 16 24 48]\\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\\nEND CELL 8\\nSTART CELL 10\\nEND CELL 10\\nSTART CELL 13\\nShape of U_h: torch.Size([80, 80, 8])\\nEND CELL 13\\nSTART CELL 17\\nEND CELL 17\\nSTART CELL 18\\nShape of U: torch.Size([80, 80, 8])\\nEND CELL 18\\nSTART CELL 22\\nEND CELL 22\\nSTART CELL 23\\n0.9999999999999989\\ntorch.Size([80, 80, 8])\\ntorch.Size([80, 80, 98])\\nEND CELL 23\\nSTART CELL 39\\nEND CELL 39\\nSTART CELL 41\\nEND CELL 41\\n\\n=== MODEL ",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test7_library_construction.json",
+          "fields": {
+            "execution": "{\"status\": \"FAIL\", \"exit_code\": 1, \"seconds\": 10.139, \"stdout\": \"Scientific imports: PASS\\nSTART CELL 8\\nData-frame shape: (964, 12)\\nTimes, t = [ 0  1  2  4  8 16 24 48]\\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\\nEND CELL 8\\nSTART CELL 10\\nEND CELL 10\\nSTART CELL 13\\nShape of U_h: torch.Size([80, 80, 8])\\nEND CELL 13\\nSTART CELL 17\\nEND CELL 17\\nSTART CELL 18\\nShape of U: torch.Size([80, 80, 8])\\nEND CELL 18\\nSTART CELL 22\\nEND CELL 22\\nSTART CELL 23\\n0.9999999999999989\\ntorch.Size([80, 80, 8])\\ntorch.Size([80, 80, 98])\\nEND CELL 23\\nSTART CELL 39\\nEND CELL 39\\nSTART CELL 41\\nEND CELL 41\\nSTART CELL 4",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test7_library_construction_corrected.json",
+          "fields": {
+            "execution": "{\"status\": \"PASS\", \"exit_code\": 0, \"seconds\": 8.981, \"stdout\": \"Scientific imports: PASS\\nSTART CELL 8\\nData-frame shape: (964, 12)\\nTimes, t = [ 0  1  2  4  8 16 24 48]\\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\\nEND CELL 8\\nSTART CELL 10\\nEND CELL 10\\nSTART CELL 13\\nShape of U_h: torch.Size([80, 80, 8])\\nEND CELL 13\\nSTART CELL 17\\nEND CELL 17\\nSTART CELL 18\\nShape of U: torch.Size([80, 80, 8])\\nEND CELL 18\\nSTART CELL 22\\nEND CELL 22\\nSTART CELL 23\\n0.9999999999999989\\ntorch.Size([80, 80, 8])\\ntorch.Size([80, 80, 98])\\nEND CELL 23\\nSTART CELL 39\\nEND CELL 39\\nSTART CELL 41\\nEND CELL 41\\nSTART CELL 42",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test8_library_matrix_validation.json",
+          "fields": {
+            "execution": "{\"status\": \"PASS\", \"exit_code\": 0, \"seconds\": 9.844, \"stdout\": \"Scientific imports: PASS\\nSTART CELL 8\\nData-frame shape: (964, 12)\\nTimes, t = [ 0  1  2  4  8 16 24 48]\\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\\nEND CELL 8\\nSTART CELL 10\\nEND CELL 10\\nSTART CELL 13\\nShape of U_h: torch.Size([80, 80, 8])\\nEND CELL 13\\nSTART CELL 17\\nEND CELL 17\\nSTART CELL 18\\nShape of U: torch.Size([80, 80, 8])\\nEND CELL 18\\nSTART CELL 22\\nEND CELL 22\\nSTART CELL 23\\n0.9999999999999989\\ntorch.Size([80, 80, 8])\\ntorch.Size([80, 80, 98])\\nEND CELL 23\\nSTART CELL 39\\nEND CELL 39\\nSTART CELL 41\\nEND CELL 41\\nSTART CELL 42",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_test9_trimmed_library.json",
+          "fields": {
+            "execution": "{\"status\": \"PASS\", \"exit_code\": 0, \"seconds\": 12.155, \"stdout\": \"Scientific imports: PASS\\nSTART CELL 8\\nData-frame shape: (964, 12)\\nTimes, t = [ 0  1  2  4  8 16 24 48]\\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\\nEND CELL 8\\nSTART CELL 10\\nEND CELL 10\\nSTART CELL 13\\nShape of U_h: torch.Size([80, 80, 8])\\nEND CELL 13\\nSTART CELL 17\\nEND CELL 17\\nSTART CELL 18\\nShape of U: torch.Size([80, 80, 8])\\nEND CELL 18\\nSTART CELL 22\\nEND CELL 22\\nSTART CELL 23\\n0.9999999999999989\\ntorch.Size([80, 80, 8])\\ntorch.Size([80, 80, 98])\\nEND CELL 23\\nSTART CELL 39\\nEND CELL 39\\nSTART CELL 41\\nEND CELL 41\\nSTART CELL 4",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\E08_threading_recovery_test.json",
+          "fields": {
+            "published_results_reproduced": false
+          }
+        }
+      ],
+      "log_findings": [],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "E10",
+      "domain": "ecology",
+      "structured_findings": [
+        {
+          "source": "results\\E10_auc_corrected_validation.json",
+          "fields": {
+            "results": "[{\"case\": \"perfect\", \"expected\": 1.0, \"actual\": 1.0, \"status\": \"PASS\"}, {\"case\": \"reversed\", \"expected\": 0.0, \"actual\": 0.0, \"status\": \"PASS\"}, {\"case\": \"mixed\", \"expected\": 0.75, \"actual\": 0.75, \"status\": \"PASS\"}, {\"case\": \"single_class\", \"expected\": 0.5, \"actual\": 0.5, \"status\": \"PASS\"}]",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "results\\E10_auc_function_validation.json",
+          "fields": {
+            "results": "[{\"case\": \"perfect\", \"expected\": 1.0, \"error\": \"IndexError('too many indices for array: array is 1-dimensional, but 2 were indexed')\", \"status\": \"ERROR\"}, {\"case\": \"reversed\", \"expected\": 0.0, \"error\": \"IndexError('too many indices for array: array is 1-dimensional, but 2 were indexed')\", \"status\": \"ERROR\"}, {\"case\": \"mixed\", \"expected\": 0.75, \"error\": \"IndexError('too many indices for array: array is 1-dimensional, but 2 were indexed')\", \"status\": \"ERROR\"}, {\"case\": \"single_class\", \"expected\": null, \"error\": \"IndexError('too many indices for array: array is 1-dimensional, but 2 were indexed')",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "results\\E10_data_availability.json",
+          "fields": {
+            "execution_attempted": false,
+            "limitations": "[\"Metadata inspection does not establish whether data is hosted elsewhere.\", \"Some source references are dynamically constructed.\", \"Data files may be embedded in archives or available through external links.\"]"
+          }
+        },
+        {
+          "source": "results\\E10_dependency_readiness.json",
+          "fields": {
+            "execution_attempted": false,
+            "limitations": "[\"Installed distributions do not guarantee successful imports.\", \"Static literal scanning cannot detect all dynamically built paths.\", \"Data references are not proof that corresponding files are absent.\", \"No package installation or scientific execution performed.\"]"
+          }
+        },
+        {
+          "source": "results\\E10_external_data_investigation.json",
+          "fields": {
+            "execution_attempted": false
+          }
+        },
+        {
+          "source": "results\\E10_function_execution.json",
+          "fields": {
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "results\\E10_function_testability.json",
+          "fields": {
+            "limitations": "[\"Function presence does not prove independent testability.\", \"Functions may depend on global variables or external files.\", \"No scientific results were reproduced.\"]"
+          }
+        },
+        {
+          "source": "results\\E10_import_baseline.json",
+          "fields": {
+            "results": "[{\"module\": \"numpy\", \"status\": \"PASS\", \"return_code\": 0, \"stdout\": \"IMPORT_SUCCESS\\n\", \"stderr\": \"\"}, {\"module\": \"pandas\", \"status\": \"PASS\", \"return_code\": 0, \"stdout\": \"IMPORT_SUCCESS\\n\", \"stderr\": \"\"}, {\"module\": \"sklearn\", \"status\": \"PASS\", \"return_code\": 0, \"stdout\": \"IMPORT_SUCCESS\\n\", \"stderr\": \"\"}, {\"module\": \"tensorflow\", \"status\": \"FAIL\", \"return_code\": 1, \"stdout\": \"\", \"stderr\": \"Traceback (most recent call last):\\n  File \\\"<string>\\\", line 2, in <module>\\n  File \\\"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\importlib\\\\__init__.py\\\", line 126, in import_module\\n    return _b"
+          }
+        },
+        {
+          "source": "results\\E10_independence_audit.json",
+          "fields": {
+            "limitations": "[\"No matching fingerprints does not prove research independence.\", \"Shared algorithms may exist without identical AST fingerprints.\", \"Non-Python files and publication relationships are not assessed.\", \"Matching utility functions do not necessarily imply duplicate research packages.\"]"
+          }
+        },
+        {
+          "source": "results\\E10_initial_screening.json",
+          "fields": {
+            "execution_attempted": false
+          }
+        },
+        {
+          "source": "results\\E10_runtime_requirements.json",
+          "fields": {
+            "limitations": "[\"Keyword scanning is not a complete dependency analysis.\", \"Top-level statement classification does not prove execution safety.\", \"Required external datasets and model weights remain unverified.\"]"
+          }
+        },
+        {
+          "source": "results\\E10_source_audit.json",
+          "fields": {
+            "all_syntax_pass": true,
+            "execution_attempted": false
+          }
+        }
+      ],
+      "log_findings": [],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "H01",
+      "domain": "hydrology",
+      "structured_findings": [],
+      "log_findings": [
+        {
+          "source": "repositories\\results\\H01_test1_baseline_log.txt",
+          "total_lines": 4,
+          "matched_line_count": 2,
+          "matched_lines": [
+            {
+              "line": 1,
+              "text": "Traceback (most recent call last):"
+            },
+            {
+              "line": 4,
+              "text": "ModuleNotFoundError: No module named 'matplotlib'"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H01_test1_packages.txt",
+          "total_lines": 14,
+          "matched_line_count": 0,
+          "matched_lines": []
+        },
+        {
+          "source": "repositories\\results\\H01_test1_with_dependencies_log.txt",
+          "total_lines": 17,
+          "matched_line_count": 2,
+          "matched_lines": [
+            {
+              "line": 1,
+              "text": "Traceback (most recent call last):"
+            },
+            {
+              "line": 17,
+              "text": "FileNotFoundError: [Errno 2] No such file or directory: 'E:/All1study/1irragation/compute/ΘÇÉµ£êσ╛äµ╡üµ¿íµïƒτ╗ôµ₧£_σñ⌐τä╢.xlsx'"
+            }
+          ]
+        }
+      ],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "H02",
+      "domain": "hydrology",
+      "structured_findings": [
+        {
+          "source": "repositories\\results\\H02_test1_validation.json",
+          "fields": {
+            "execution_device": "cpu",
+            "baseline_cli_success": false,
+            "recovered_cli_success": true,
+            "selected_workflow_success": true,
+            "forward_pass_seconds": 0.0411,
+            "dependency_interventions": "[\"Installed simplejson\", \"Installed fvcore\", \"Installed remaining missing README packages\"]",
+            "limitations": "[\"Synthetic data only\", \"Randomly initialised model weights\", \"No pretrained checkpoint validation\", \"No original flood dataset evaluation\", \"No comparison with published forecast results\", \"Shared Python environment used\", \"Human remediation time not measured\"]"
+          }
+        }
+      ],
+      "log_findings": [
+        {
+          "source": "repositories\\results\\H02_test1_after_fvcore_log.txt",
+          "total_lines": 25,
+          "matched_line_count": 2,
+          "matched_lines": [
+            {
+              "line": 11,
+              "text": "Traceback (most recent call last):"
+            },
+            {
+              "line": 24,
+              "text": "ModuleNotFoundError: No module named 'einops'"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H02_test1_after_simplejson_log.txt",
+          "total_lines": 19,
+          "matched_line_count": 2,
+          "matched_lines": [
+            {
+              "line": 11,
+              "text": "Traceback (most recent call last):"
+            },
+            {
+              "line": 18,
+              "text": "ModuleNotFoundError: No module named 'fvcore'"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H02_test1_baseline_log.txt",
+          "total_lines": 21,
+          "matched_line_count": 2,
+          "matched_lines": [
+            {
+              "line": 13,
+              "text": "Traceback (most recent call last):"
+            },
+            {
+              "line": 20,
+              "text": "ModuleNotFoundError: No module named 'simplejson'"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H02_test1_cpu_5d_recovery_log.txt",
+          "total_lines": 25,
+          "matched_line_count": 2,
+          "matched_lines": [
+            {
+              "line": 8,
+              "text": "Success: True"
+            },
+            {
+              "line": 16,
+              "text": "Forward-pass seconds: 0.0411"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H02_test1_cpu_forward_pass_log.txt",
+          "total_lines": 16,
+          "matched_line_count": 4,
+          "matched_lines": [
+            {
+              "line": 1,
+              "text": "H02 FLOODSFORMER CPU FORWARD-PASS TEST"
+            },
+            {
+              "line": 6,
+              "text": "Success: False"
+            },
+            {
+              "line": 12,
+              "text": "Traceback (most recent call last):"
+            },
+            {
+              "line": 15,
+              "text": "ModuleNotFoundError: No module named 'floodsformer'"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H02_test1_cpu_pythonpath_recovery_log.txt",
+          "total_lines": 32,
+          "matched_line_count": 2,
+          "matched_lines": [
+            {
+              "line": 8,
+              "text": "Forward-pass success: False"
+            },
+            {
+              "line": 18,
+              "text": "Traceback (most recent call last):"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H02_test1_readme_recovery_log.txt",
+          "total_lines": 197,
+          "matched_line_count": 0,
+          "matched_lines": []
+        }
+      ],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "H03",
+      "domain": "hydrology",
+      "structured_findings": [
+        {
+          "source": "repositories\\results\\H03_test1_summary.json",
+          "fields": {
+            "missing_values": 0,
+            "baseline_status": "failed_missing_dependency",
+            "dependency_recovery_status": "failed_filename_mismatch",
+            "filename_recovery_status": "timeout_30_seconds",
+            "resource_limited_status": "timeout_180_seconds",
+            "result_reproduced": false,
+            "classification": "partial_execution_computational_limit",
+            "recovery_interventions": "[\"Installed scikit-learn\", \"Provided CSV under filename expected by original script\", \"Changed n_jobs=-1 to n_jobs=2 in separate recovery copy\"]",
+            "limitations": "[\"Full hyperparameter search did not complete\", \"No published-result comparison\", \"Recovery effort in minutes not measured\"]"
+          }
+        }
+      ],
+      "log_findings": [
+        {
+          "source": "repositories\\results\\H03_test1_after_sklearn_log.txt",
+          "total_lines": 25,
+          "matched_line_count": 2,
+          "matched_lines": [
+            {
+              "line": 6,
+              "text": "Traceback (most recent call last):"
+            },
+            {
+              "line": 25,
+              "text": "FileNotFoundError: [Errno 2] No such file or directory: 'RF_dataset.csv'"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H03_test1_baseline_log.txt",
+          "total_lines": 11,
+          "matched_line_count": 2,
+          "matched_lines": [
+            {
+              "line": 8,
+              "text": "Traceback (most recent call last):"
+            },
+            {
+              "line": 11,
+              "text": "ModuleNotFoundError: No module named 'sklearn'"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H03_test1_filename_recovery_probe.txt",
+          "total_lines": 7,
+          "matched_line_count": 1,
+          "matched_lines": [
+            {
+              "line": 3,
+              "text": "Exit code: TIMEOUT"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H03_test1_resource_limited_log.txt",
+          "total_lines": 7,
+          "matched_line_count": 1,
+          "matched_lines": [
+            {
+              "line": 1,
+              "text": "Status: TIMEOUT"
+            }
+          ]
+        }
+      ],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "H05",
+      "domain": "hydrology",
+      "structured_findings": [
+        {
+          "source": "repositories\\results\\H05_pandas_203_summary.json",
+          "fields": {
+            "tests_passed": 3,
+            "tests_failed": 0,
+            "published_results_reproduced": false,
+            "human_recovery_time_measured": false
+          }
+        },
+        {
+          "source": "repositories\\results\\H05_pandas_control_summary.json",
+          "fields": {
+            "recovery_environment": "{\"python\": \"3.10.22\", \"pandas\": \"1.5.3\", \"passed\": 3, \"failed\": 0}",
+            "failed_tests": "[\"test_sort_frequencies\", \"test_get_frequency_factor\"]",
+            "passed_tests": "[\"test_infer_frequency\"]",
+            "confirmed_error": "Units 'M', 'Y' and 'y' do not represent unambiguous timedelta values",
+            "classification": "dependency_api_incompatibility",
+            "published_results_reproduced": false
+          }
+        },
+        {
+          "source": "repositories\\results\\H05_test1_compatibility_assessment.json",
+          "fields": {
+            "tests_passed": 0,
+            "tests_failed": 3,
+            "baseline_failure": "pytest not installed",
+            "confirmed_compatibility_errors": "[\"Invalid frequency: 1H\", \"Invalid frequency: 48H\", \"Invalid frequency: 1A\"]",
+            "classification": "dependency_api_incompatibility",
+            "recovery_status": "pending",
+            "published_results_reproduced": false,
+            "human_recovery_time_measured": false
+          }
+        },
+        {
+          "source": "repositories\\results\\H05_test1_final_summary.json",
+          "fields": {
+            "recovery_environment": "{\"python\": \"3.10.22\", \"pandas\": \"1.5.3\", \"xarray\": \"2024.3.0\", \"pytest\": \"9.2.0\", \"ruamel.yaml\": \"0.19.1\", \"tests_passed\": 3, \"tests_failed\": 0, \"exit_code\": 0}",
+            "recovery_method": "Isolated environment reconstruction",
+            "dependency_installation_seconds": 16.52,
+            "final_test_execution_seconds": 2.8,
+            "full_repository_reproduced": false,
+            "published_research_results_reproduced": false,
+            "causal_limitation": "Multiple environment components changed; pandas-specific causality not isolated."
+          }
+        }
+      ],
+      "log_findings": [
+        {
+          "source": "repositories\\results\\H05_control_environment_creation_log.txt",
+          "total_lines": 118,
+          "matched_line_count": 0,
+          "matched_lines": []
+        },
+        {
+          "source": "repositories\\results\\H05_environment_creation_log.txt",
+          "total_lines": 115,
+          "matched_line_count": 0,
+          "matched_lines": []
+        },
+        {
+          "source": "repositories\\results\\H05_pandas_203_clone_log.txt",
+          "total_lines": 118,
+          "matched_line_count": 0,
+          "matched_lines": []
+        },
+        {
+          "source": "repositories\\results\\H05_pandas_203_install_log.txt",
+          "total_lines": 145,
+          "matched_line_count": 0,
+          "matched_lines": []
+        },
+        {
+          "source": "repositories\\results\\H05_pandas_203_packages.txt",
+          "total_lines": 22,
+          "matched_line_count": 0,
+          "matched_lines": []
+        },
+        {
+          "source": "repositories\\results\\H05_pandas_203_test_log.txt",
+          "total_lines": 15,
+          "matched_line_count": 1,
+          "matched_lines": [
+            {
+              "line": 14,
+              "text": "\u001b[32m============================== \u001b[32m\u001b[1m3 passed\u001b[0m\u001b[32m in 0.24s\u001b[0m\u001b[32m ==============================\u001b[0m"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H05_pandas_control_install_log.txt",
+          "total_lines": 153,
+          "matched_line_count": 0,
+          "matched_lines": []
+        },
+        {
+          "source": "repositories\\results\\H05_pandas_control_packages.txt",
+          "total_lines": 22,
+          "matched_line_count": 0,
+          "matched_lines": []
+        },
+        {
+          "source": "repositories\\results\\H05_pandas_control_test_log.txt",
+          "total_lines": 104,
+          "matched_line_count": 1,
+          "matched_lines": [
+            {
+              "line": 103,
+              "text": "\u001b[31m================== \u001b[31m\u001b[1m2 failed\u001b[0m, \u001b[32m1 passed\u001b[0m, \u001b[33m10 warnings\u001b[0m\u001b[31m in 0.63s\u001b[0m\u001b[31m ===================\u001b[0m"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H05_recovery_dependencies_log.txt",
+          "total_lines": 104,
+          "matched_line_count": 0,
+          "matched_lines": []
+        },
+        {
+          "source": "repositories\\results\\H05_recovery_packages.txt",
+          "total_lines": 21,
+          "matched_line_count": 0,
+          "matched_lines": []
+        },
+        {
+          "source": "repositories\\results\\H05_test1_after_pytest_log.txt",
+          "total_lines": 10,
+          "matched_line_count": 1,
+          "matched_lines": [
+            {
+              "line": 10,
+              "text": "\u001b[31m\u001b[1m\u001b[31mE   ModuleNotFoundError: No module named 'ruamel'\u001b[0m\u001b[0m"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H05_test1_after_ruamel_log.txt",
+          "total_lines": 27,
+          "matched_line_count": 6,
+          "matched_lines": [
+            {
+              "line": 8,
+              "text": "\u001b[1mcollecting ... \u001b[0mcollected 0 items / 1 error"
+            },
+            {
+              "line": 11,
+              "text": "\u001b[31m\u001b[1m___________________ ERROR collecting test/test_datautils.py ___________________\u001b[0m"
+            },
+            {
+              "line": 14,
+              "text": "Traceback:"
+            },
+            {
+              "line": 22,
+              "text": "\u001b[1m\u001b[31mE   ModuleNotFoundError: No module named 'xarray'\u001b[0m\u001b[0m"
+            },
+            {
+              "line": 25,
+              "text": "!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!"
+            },
+            {
+              "line": 26,
+              "text": "\u001b[31m============================== \u001b[31m\u001b[1m1 error\u001b[0m\u001b[31m in 0.42s\u001b[0m\u001b[31m ===============================\u001b[0m"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H05_test1_after_xarray_log.txt",
+          "total_lines": 103,
+          "matched_line_count": 7,
+          "matched_lines": [
+            {
+              "line": 45,
+              "text": "\u001b[1m\u001b[31mE   ValueError: Invalid frequency: 1H. Failed to parse with error message: ValueError('Invalid frequency: H. Did you mean h?')\u001b[0m"
+            },
+            {
+              "line": 68,
+              "text": "\u001b[1m\u001b[31mE   ValueError: Invalid frequency: 48H. Failed to parse with error message: ValueError('Invalid frequency: H. Did you mean h?')\u001b[0m"
+            },
+            {
+              "line": 91,
+              "text": "\u001b[1m\u001b[31mE   ValueError: Invalid frequency: 1A. Failed to parse with error message: ValueError('Invalid frequency: A. Did you mean Y?')\u001b[0m"
+            },
+            {
+              "line": 99,
+              "text": "\u001b[31mFAILED\u001b[0m test/test_datautils.py::\u001b[1mtest_sort_frequencies\u001b[0m - ValueError: Invalid frequency: 1H. Failed to parse with error message: Valu..."
+            },
+            {
+              "line": 100,
+              "text": "\u001b[31mFAILED\u001b[0m test/test_datautils.py::\u001b[1mtest_infer_frequency\u001b[0m - ValueError: Invalid frequency: 48H. Failed to parse with error message: Val..."
+            },
+            {
+              "line": 101,
+              "text": "\u001b[31mFAILED\u001b[0m test/test_datautils.py::\u001b[1mtest_get_frequency_factor\u001b[0m - ValueError: Invalid frequency: 1A. Failed to parse with error message: Valu..."
+            },
+            {
+              "line": 102,
+              "text": "\u001b[31m======================== \u001b[31m\u001b[1m3 failed\u001b[0m, \u001b[33m1 warning\u001b[0m\u001b[31m in 0.77s\u001b[0m\u001b[31m =========================\u001b[0m"
+            }
+          ]
+        },
+        {
+          "source": "repositories\\results\\H05_test1_baseline_log.txt",
+          "total_lines": 6,
+          "matched_line_count": 0,
+          "matched_lines": []
+        },
+        {
+          "source": "repositories\\results\\H05_test1_recovery_environment_log.txt",
+          "total_lines": 15,
+          "matched_line_count": 1,
+          "matched_lines": [
+            {
+              "line": 14,
+              "text": "\u001b[32m============================== \u001b[32m\u001b[1m3 passed\u001b[0m\u001b[32m in 0.36s\u001b[0m\u001b[32m ==============================\u001b[0m"
+            }
+          ]
+        }
+      ],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "H06",
+      "domain": "hydrology",
+      "structured_findings": [
+        {
+          "source": "repositories\\results\\H06_assessment.json",
+          "fields": {
+            "dependency_manifest_found": false,
+            "execution_attempted": false,
+            "published_results_reproduced": false,
+            "classification": "not_tested_external_data_dependency",
+            "limitations": "[\"Required research datasets not included in archive\", \"Pretrained model checkpoints not detected\", \"No dependency manifest detected\", \"Potential CUDA requirements not experimentally verified\"]"
+          }
+        }
+      ],
+      "log_findings": [],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "H07",
+      "domain": "hydrology",
+      "structured_findings": [
+        {
+          "source": "results\\H07_complete_syntax_recovery.json",
+          "fields": {
+            "original_syntax_pass": 27,
+            "recovered_syntax_pass": 29,
+            "runtime_execution_attempted": false,
+            "limitations": "[\"Parser success does not demonstrate runtime compatibility.\", \"No hydrological simulation was executed.\", \"No scientific results were reproduced.\", \"Recovery changes were evaluated only in memory.\"]"
+          }
+        },
+        {
+          "source": "results\\H07_consolidated_assessment.json",
+          "fields": {
+            "syntax": "{\"python_files_total\": 29, \"original_pass\": 27, \"original_fail\": 2, \"recovered_pass\": 29, \"recovery_text_replacements\": 4, \"files_requiring_recovery\": 2}",
+            "scientific_execution": "{\"component\": \"Green-Ampt infiltration\", \"original_tests_passed\": 2, \"original_tests_total\": 2, \"source_modified\": false, \"basic_infiltration_value\": 3.167213728940331, \"basic_absolute_error\": 1.0596687971542451e-09, \"variable_rainfall_max_absolute_error\": 8.881784197001252e-16, \"variable_rainfall_matches_expected\": true, \"repeatability_runs\": 3, \"numerically_identical_across_runs\": true}",
+            "classification": "{\"code_available\": true, \"original_archive_fully_syntax_valid\": false, \"syntax_recovery_demonstrated\": true, \"scientific_component_executable\": true, \"whole_package_executable\": \"NOT VERIFIED\", \"published_results_reproduced\": \"NOT VERIFIED\", \"temporal_code_decay_proven\": false}",
+            "limitations": "[\"Only two original infiltration tests were executed.\", \"The complete PyTOPKAPI package was not imported.\", \"No complete hydrological simulation was performed.\", \"The three runs used the same software environment.\", \"The numerical expectations came from archived tests.\", \"The source syntax defects cannot automatically be attributed to age-related code decay.\", \"The four syntax corrections were tested in memory only.\"]"
+          }
+        },
+        {
+          "source": "results\\H07_independence_audit.json",
+          "fields": {
+            "limitations": "[\"Only ZIP archives under repositories were compared.\", \"Source fingerprints do not prove publication independence.\", \"Shared algorithms may have different source fingerprints.\", \"Syntax-invalid files cannot receive AST fingerprints.\", \"Non-ZIP archives and extracted-only repositories are excluded.\"]"
+          }
+        },
+        {
+          "source": "results\\H07_infiltration_numerical_repeatability.json",
+          "fields": {
+            "limitations": "[\"Only infiltration calculations were tested.\", \"Repeated runs used the same software environment.\", \"Expected values came from archived tests.\", \"No full hydrological simulation was reproduced.\"]"
+          }
+        },
+        {
+          "source": "results\\H07_infiltration_source_inspection.json",
+          "fields": {
+            "limitations": "[\"Static inspection only.\", \"Runtime dependencies may exist beyond imports.\", \"Test expectations have not yet been verified.\", \"No hydrological model has been executed.\"]"
+          }
+        },
+        {
+          "source": "results\\H07_initial_screening.json",
+          "fields": {
+            "dependency_files": "[\"sahg-PyTOPKAPI-6d8183b/setup.py\"]",
+            "candidate_status": "screening_only",
+            "limitations": "[\"ZIP inventory does not establish executability.\", \"No dependency installation or execution performed.\", \"Research independence remains unverified.\"]"
+          }
+        },
+        {
+          "source": "results\\H07_original_infiltration_execution.json",
+          "fields": {
+            "process_status": "COMPLETED",
+            "outcome": "{\"python\": \"3.11.18\", \"numpy\": \"2.4.6\", \"scipy\": \"1.17.1\", \"tests\": [{\"test\": \"test_basic_green_ampt\", \"status\": \"PASS\", \"error\": null}, {\"test\": \"test_cum_green_ampt_variable_rainfall\", \"status\": \"PASS\", \"error\": null}]}",
+            "execution_method": "Original implementation and tests loaded directly from archived source into an isolated subprocess",
+            "limitations": "[\"Only two infiltration tests were executed.\", \"The complete PyTOPKAPI package was not imported.\", \"No full hydrological simulation was executed.\", \"Test agreement is not independent scientific validation.\"]"
+          }
+        },
+        {
+          "source": "results\\H07_runtime_dependency_baseline.json",
+          "fields": {
+            "imports_passed": 3,
+            "limitations": "[\"Successful imports do not prove API compatibility.\", \"Missing modules do not prove historical code decay.\", \"The archived PyTOPKAPI package was not imported.\", \"No hydrological simulation or result reproduction was attempted.\"]"
+          }
+        },
+        {
+          "source": "results\\H07_scientific_test_screening.json",
+          "fields": {
+            "limitations": "[\"Static inspection cannot establish test executability.\", \"Functions may depend on global state or external data.\", \"File-reference detection is not exhaustive.\", \"Scientific correctness has not been verified.\"]"
+          }
+        },
+        {
+          "source": "results\\H07_syntax_dependency_baseline.json",
+          "fields": {
+            "syntax_results": "[{\"file\": \"sahg-PyTOPKAPI-6d8183b/create_distributions.py\", \"status\": \"PASS\", \"error\": null}, {\"file\": \"sahg-PyTOPKAPI-6d8183b/docs/source/conf.py\", \"status\": \"FAIL\", \"error\": \"invalid syntax at line 175\"}, {\"file\": \"sahg-PyTOPKAPI-6d8183b/example_simulation/run_example.py\", \"status\": \"PASS\", \"error\": null}, {\"file\": \"sahg-PyTOPKAPI-6d8183b/pytopkapi/__init__.py\", \"status\": \"PASS\", \"error\": null}, {\"file\": \"sahg-PyTOPKAPI-6d8183b/pytopkapi/__version.py\", \"status\": \"PASS\", \"error\": null}, {\"file\": \"sahg-PyTOPKAPI-6d8183b/pytopkapi/arcfltgrid.py\", \"status\": \"PASS\", \"error\": null}, {\"file\": \"sahg",
+            "syntax_pass": 27,
+            "syntax_total": 29,
+            "limitations": "[\"Syntax validation does not establish runtime compatibility.\", \"Distribution metadata does not establish import success.\", \"Missing dependencies are not proof of code decay.\", \"Full hydrological simulation was not attempted.\"]"
+          }
+        },
+        {
+          "source": "results\\H07_syntax_recovery.json",
+          "fields": {
+            "dependency_installation_attempted": false,
+            "limitations": "[\"Syntax recovery does not establish runtime execution.\", \"A repaired parser error may reveal additional errors.\", \"Historical compatibility and original source defects must be distinguished.\"]"
+          }
+        },
+        {
+          "source": "results\\H07_syntax_recovery_step115.json",
+          "fields": {
+            "limitations": "[\"Syntax recovery does not prove runtime executability.\", \"Changes have not been tested against scientific outputs.\", \"Other syntax problems may remain.\", \"The original archive remains unchanged.\"]"
+          }
+        }
+      ],
+      "log_findings": [],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "H08",
+      "domain": "hydrology",
+      "structured_findings": [
+        {
+          "source": "results\\H08_archive_metadata_screening.json",
+          "fields": {
+            "candidate_status": "ARCHIVE_AVAILABLE",
+            "limitations": "[\"Archive contents have not yet been inspected.\", \"Code availability within the ZIP is unverified.\", \"Scientific executability has not been tested.\", \"Publication-level independence remains unverified.\"]"
+          }
+        },
+        {
+          "source": "results\\H08_ast_match_investigation.json",
+          "fields": {
+            "limitations": "[\"Small file size alone does not prove a match is unimportant.\", \"Only the first 12 source lines are displayed.\", \"AST identity does not establish publication duplication.\", \"Publication-level independence requires separate evidence.\"]"
+          }
+        },
+        {
+          "source": "results\\H08_candidate_discovery.json",
+          "fields": {
+            "limitations": "[\"Search results do not establish code availability.\", \"Metadata does not prove archive independence.\", \"Records require manual eligibility screening.\", \"Some results may be unrelated to hydrology.\"]"
+          }
+        },
+        {
+          "source": "results\\H08_consolidated_assessment.json",
+          "fields": {
+            "syntax_assessment": "{\"python_files\": 70, \"syntax_pass\": 70, \"syntax_fail\": 0}",
+            "dependency_assessment": "{\"entries_assessed\": 19, \"discoverable\": 8, \"missing\": 10, \"not_assessed\": 1, \"interpretation\": \"Missing packages indicate an incomplete current environment, not necessarily code decay.\"}",
+            "execution_method": "Controlled subprocess execution of unmodified archived PRMS record classes and original tests, with broad package initialisers bypassed.",
+            "classification": "PARTIALLY_EXECUTABLE_COMPONENT_LEVEL",
+            "full_package_execution": "NOT_VERIFIED",
+            "scientific_results_reproduction": "NOT_ATTEMPTED",
+            "recovery_actions": "[\"Inspected original imports and dependency paths.\", \"Identified minimal original modules required.\", \"Constructed a controlled subprocess test harness.\", \"Bypassed broad package initialisers.\", \"Repeated four original tests five times.\"]",
+            "dependency_installation_for_test": false,
+            "limitations": "[\"Four tests are not representative of all 50 archived tests.\", \"Normal package import was not demonstrated.\", \"Full hydrological model execution was not demonstrated.\", \"Missing dependencies were not tested for compatibility.\", \"Repeatability does not establish published-result reproduction.\", \"Source-level independence from other packages remains to be audited.\"]"
+          }
+        },
+        {
+          "source": "results\\H08_dependency_availability.json",
+          "fields": {
+            "dependency_records": "[{\"package\": \"numpy\", \"module\": \"numpy\", \"status\": \"DISCOVERABLE\", \"version\": \"2.4.6\", \"note\": \"Metadata and module discovery only; actual import not executed.\"}, {\"package\": \"pandas\", \"module\": \"pandas\", \"status\": \"DISCOVERABLE\", \"version\": \"3.1.0\", \"note\": \"Metadata and module discovery only; actual import not executed.\"}, {\"package\": \"flopy\", \"module\": \"flopy\", \"status\": \"MISSING\", \"version\": null, \"note\": \"Metadata and module discovery only; actual import not executed.\"}, {\"package\": \"pyshp\", \"module\": \"shapefile\", \"status\": \"MISSING\", \"version\": null, \"note\": \"Metadata and module discover",
+            "missing_count": 10,
+            "limitations": "[\"Package metadata does not prove runtime compatibility.\", \"Module discovery does not execute imports.\", \"GEOS native-library compatibility was not assessed.\", \"No pyGSFLOW scientific tests were executed.\", \"Some declared packages may be optional for specific components.\"]"
+          }
+        },
+        {
+          "source": "results\\H08_final_independence_classification.json",
+          "fields": {
+            "limitations": "[\"Source-level distinctness does not prove publication independence.\", \"Only locally available ZIP archives were compared.\", \"Other sample archives may require separate coverage checks.\", \"AST identity can miss copied fragments or rewritten code.\", \"Full-package execution and scientific reproduction remain unverified.\"]"
+          }
+        },
+        {
+          "source": "results\\H08_independence_audit.json",
+          "fields": {
+            "limitations": "[\"Zero matching files does not prove independent research.\", \"AST comparison does not detect semantically equivalent rewrites.\", \"Common libraries or copied fragments may be missed.\", \"The audit only covers locally available ZIP archives.\", \"An archive with a read error is excluded from comparisons.\", \"AST fingerprints exclude Python files that cannot be parsed.\"]"
+          }
+        },
+        {
+          "source": "results\\H08_initial_archive_inspection.json",
+          "fields": {
+            "zip_integrity_pass": true,
+            "dependency_files": "[\"etc/environment.yml\", \"setup.py\"]"
+          }
+        },
+        {
+          "source": "results\\H08_original_prms_record_execution.json",
+          "fields": {
+            "outcome": "{\"process_status\": \"COMPLETED\", \"python\": \"3.11.18\", \"numpy\": \"2.4.6\", \"tests\": [{\"test\": \"test_empty_parameter_record\", \"status\": \"PASS\", \"error\": null}, {\"test\": \"test_empty_control_record\", \"status\": \"PASS\", \"error\": null}, {\"test\": \"test_build_parameter_record\", \"status\": \"PASS\", \"error\": null}, {\"test\": \"test_build_control_record\", \"status\": \"PASS\", \"error\": null}]}",
+            "execution_method": "Original archived modules loaded directly into an isolated subprocess with minimal package containers",
+            "limitations": "[\"Only four PRMS record tests were attempted.\", \"Normal gsflow package initialisation was bypassed.\", \"The complete package was not imported.\", \"No full hydrological model was executed.\", \"Successful tests would not reproduce published results.\"]"
+          }
+        },
+        {
+          "source": "results\\H08_original_test_screening.json",
+          "fields": {
+            "limitations": "[\"Static screening may miss dynamically invoked tests.\", \"String-based file references are only indicators.\", \"External executable detection is heuristic.\", \"A test function may require fixtures or other setup.\", \"No scientific test has been executed.\"]"
+          }
+        },
+        {
+          "source": "results\\H08_prms_implementation_dependency_trace.json",
+          "fields": {
+            "missing_classes": "[]",
+            "limitations": "[\"Only module-level imports were listed.\", \"Imports inside functions or methods were not traced.\", \"Transitive dependencies remain to be assessed.\", \"No original scientific tests were executed.\"]"
+          }
+        },
+        {
+          "source": "results\\H08_prms_record_test_inspection.json",
+          "fields": {
+            "limitations": "[\"Import inspection is static.\", \"Transitive dependencies are not fully resolved.\", \"No original test was executed.\", \"PRMS record tests do not establish full model execution.\"]"
+          }
+        },
+        {
+          "source": "results\\H08_prms_test_repeatability.json",
+          "fields": {
+            "all_original_tests_passed": true,
+            "supplementary_results_identical": true,
+            "limitations": "[\"Package initialisers were bypassed.\", \"Supplementary numerical checks are not original tests.\", \"Only PRMS record functionality was assessed.\", \"Full model execution and publication reproduction were not assessed.\"]"
+          }
+        },
+        {
+          "source": "results\\H08_supporting_module_dependency_trace.json",
+          "fields": {
+            "limitations": "[\"Only three selected supporting modules were inspected.\", \"Function-level and dynamic imports may be missed.\", \"Transitive imports may require further inspection.\", \"No original scientific tests were executed.\"]"
+          }
+        },
+        {
+          "source": "results\\H08_syntax_dependency_baseline.json",
+          "fields": {
+            "syntax_pass": 70,
+            "syntax_fail": 0,
+            "syntax_results": "[{\"file\": \"autotest/__init__.py\", \"status\": \"PASS\", \"sha256\": \"087bc1b5bc94cd81e5c53cebb642926551998e71ee116ccda5ffa482d3db6a06\"}, {\"file\": \"autotest/test_000.py\", \"status\": \"PASS\", \"sha256\": \"c0337a1bc7f358c334b2e370722f2d37d0dbd3bece780cf59fa62c7fd78181fe\"}, {\"file\": \"autotest/test_001.py\", \"status\": \"PASS\", \"sha256\": \"5586a4b9cdcc922e0fead56916a2d8182d74f1676494bd3993c0b5fbd11c2edd\"}, {\"file\": \"autotest/test_002.py\", \"status\": \"PASS\", \"sha256\": \"68268ee94f04a4b8b993d8eedb2ffa10989b9e79526a0447d0a88ef191eeeca9\"}, {\"file\": \"autotest/test_003.py\", \"status\": \"PASS\", \"sha256\": \"9788fb83d1fd992ba",
+            "dependency_declarations": "{\"setup.py\": {\"archive_member\": \"setup.py\", \"sha256\": \"5f3891cc5baaec3eeb8b6f1374bfcdf43adc143fbe97545471f09cd7116eed97\", \"content\": \"#!/usr/bin/env python\\n# -*- coding: utf-8 -*-\\n\\n\\\"\\\"\\\"The setup script. \\\"\\\"\\\"\\n\\nfrom setuptools import setup, find_packages\\nimport sys\\nimport os\\n\\n\\nwith open('README.md') as readme_file:\\n    readme = readme_file.read()\\n\\nif (3, 7) >= sys.version_info >= (3, 6):\\n    requirements = [\\\"pandas\\\",\\n                    \\\"numpy\\\",\\n                    \\\"flopy == 3.3.4\\\",\\n                    \\\"pyshp\\\",\\n                    \\\"pycrs\\\",\\n                    \\\"m",
+            "limitations": "[\"AST parsing checks syntax under the current Python interpreter.\", \"Syntax validity does not demonstrate successful execution.\", \"Import frequency does not prove dependency availability.\", \"Dependency declarations were inspected, not installed.\", \"Scientific results were not reproduced.\"]"
+          }
+        }
+      ],
+      "log_findings": [],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    },
+    {
+      "package_id": "H09",
+      "domain": "hydrology",
+      "structured_findings": [
+        {
+          "source": "results\\H09_archive_metadata_screening.json",
+          "fields": {
+            "candidate_status": "METADATA_SCREENING_ONLY"
+          }
+        },
+        {
+          "source": "results\\H09_consolidated_assessment.json",
+          "fields": {
+            "python_syntax": "{\"files_checked\": 8, \"passed\": 8, \"failed\": 0}",
+            "dependency_availability": "{\"checked\": 7, \"discoverable\": 4, \"not_discoverable\": 3, \"note\": \"Availability does not establish runtime compatibility.\"}",
+            "original_component_execution": "{\"methods\": [\"efficiency.nash\", \"efficiency.agr\"], \"repeat_runs\": 5, \"method_executions\": 10, \"repeatability_pass\": true, \"constructor_bypassed\": true, \"synthetic_inputs\": true}",
+            "missing_data_limitation": "{\"observed\": true, \"description\": \"Original methods return masked results for missing observations under NumPy 2.4.6.\", \"age_related_decay_proven\": false}",
+            "execution_classification": "PARTIALLY_EXECUTABLE_COMPONENT_LEVEL",
+            "full_package_execution_verified": false,
+            "scientific_reproduction_verified": false,
+            "dependency_recovery_performed": false,
+            "missing_optional_evidence": "[]",
+            "limitations": "[\"Full SWAT2012 simulation was not executed.\", \"Archived scientific methods were tested in isolation.\", \"Original file-reading constructor was bypassed.\", \"Missing-data behaviour was not compared across historical NumPy versions.\", \"Source-level uniqueness does not establish publication independence.\", \"The 15-candidate sample requires a final eligibility audit.\"]"
+          }
+        },
+        {
+          "source": "results\\H09_dependency_availability.json",
+          "fields": {
+            "dependency_imports_executed": false,
+            "limitations": "[\"Module discovery does not establish successful import.\", \"Installed package versions may be incompatible.\", \"The list covers selected declared and directly imported dependencies.\", \"External SWAT2012 executables were not checked.\", \"The archived swatpy package itself was not imported.\"]"
+          }
+        },
+        {
+          "source": "results\\H09_hydrological_efficiency_inspection.json",
+          "fields": {
+            "limitations": "[\"No hydrological calculation has been executed.\", \"Class constructors may require external model files.\", \"Inherited methods may have additional dependencies.\", \"Mathematical correctness remains unverified.\"]"
+          }
+        },
+        {
+          "source": "results\\H09_initial_archive_inspection.json",
+          "fields": {
+            "dependency_files": "[\"allixender-swatpy-0d47bfa/requirements.txt\", \"allixender-swatpy-0d47bfa/setup.py\"]",
+            "candidate_status": "ARCHIVE_VERIFIED_PENDING_ASSESSMENT"
+          }
+        },
+        {
+          "source": "results\\H09_masked_array_numerical_diagnostic.json",
+          "fields": {
+            "results": "{\"module_load\": \"PASS\", \"numpy_version\": \"2.4.6\", \"intermediate_values\": {\"observed_mask\": [0.0, 1.0, 0.0, 0.0], \"observed_mean\": 2.6666666666666665, \"squared_errors\": \"MASKED\", \"squared_deviations\": \"MASKED\", \"agreement_terms\": \"MASKED\", \"python_sum_errors\": \"MASKED\", \"numpy_sum_errors\": 0.25, \"python_sum_deviations\": \"MASKED\", \"numpy_sum_deviations\": 4.666666666666666, \"python_sum_agreement\": \"MASKED\", \"numpy_sum_agreement\": 19.583333333333336}, \"errors\": [], \"original_methods\": {\"nash\": \"MASKED\", \"agr\": \"MASKED\"}, \"diagnostic_only\": {\"nash_using_numpy_sum\": 0.9464285714285714, \"agr_using_nu",
+            "full_package_execution_verified": false
+          }
+        },
+        {
+          "source": "results\\H09_masked_reduction_verification.json",
+          "fields": {
+            "diagnostic_results": "{\"nash\": 0.9464285714285714, \"agr\": 0.9872340425531915}",
+            "historical_compatibility_tested": false,
+            "full_package_execution_verified": false,
+            "scientific_reproduction_verified": false
+          }
+        },
+        {
+          "source": "results\\H09_missing_data_investigation.json",
+          "fields": {
+            "execution_method": "Unmodified archived ReadOut.py loaded in isolated subprocess; file-reading constructor bypassed",
+            "results": "{\"module_load\": \"PASS\", \"numpy_version\": \"2.4.6\", \"conditions\": [{\"condition\": \"original_masked_input\", \"observations\": [1.0, \"NaN\", 3.0, 4.0], \"simulations\": [1.0, 2.0, 3.5, 4.0], \"mask\": [false, true, false, false], \"observed_mean\": 2.6666666666666665, \"methods\": {\"nash\": {\"execution\": \"PASS\", \"result\": \"NaN\", \"finite\": false}, \"agr\": {\"execution\": \"PASS\", \"result\": \"NaN\", \"finite\": false}}}, {\"condition\": \"filtered_valid_pairs\", \"observations\": [1.0, 3.0, 4.0], \"simulations\": [1.0, 3.5, 4.0], \"mask\": [false, false, false], \"observed_mean\": 2.6666666666666665, \"methods\": {\"nash\": {\"execution",
+            "full_package_execution_verified": false,
+            "scientific_reproduction_verified": false,
+            "limitations": "[\"Synthetic inputs do not establish published-results reproduction.\", \"The original file-reading constructor was not executed.\", \"This experiment does not determine whether behaviour changed across NumPy versions.\"]"
+          }
+        },
+        {
+          "source": "results\\H09_original_efficiency_execution.json",
+          "fields": {
+            "execution_method": "Unmodified archived ReadOut.py loaded in isolated subprocess; constructor bypassed for controlled inputs",
+            "result": "{\"module_load\": \"FAIL\", \"error\": \"Traceback (most recent call last):\\n  File \\\"<string>\\\", line 141, in <module>\\n  File \\\"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\json\\\\__init__.py\\\", line 238, in dumps\\n    **kw).encode(obj)\\n          ^^^^^^^^^^^\\n  File \\\"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\json\\\\encoder.py\\\", line 200, in encode\\n    chunks = self.iterencode(o, _one_shot=True)\\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\json\\\\encoder.py\\\", line 258, in iterencode\\n    return _iterencode(o, 0)\\",
+            "full_package_execution_verified": false,
+            "scientific_reproduction_verified": false
+          }
+        },
+        {
+          "source": "results\\H09_original_efficiency_execution_recheck.json",
+          "fields": {
+            "results": "{\"module_load\": \"PASS\", \"numpy_version\": \"2.4.6\", \"cases\": [{\"case\": \"perfect_match\", \"original_methods\": {\"nash\": {\"execution\": \"PASS\", \"value\": 1.0, \"finite\": true}, \"agr\": {\"execution\": \"PASS\", \"value\": 1.0, \"finite\": true}}, \"reference_values\": {\"nash\": 1.0, \"agr\": 1.0}, \"comparison\": {\"nash\": {\"matches_reference\": true, \"original_finite\": true, \"reference_finite\": true}, \"agr\": {\"matches_reference\": true, \"original_finite\": true, \"reference_finite\": true}}, \"errors\": []}, {\"case\": \"imperfect_match\", \"original_methods\": {\"nash\": {\"execution\": \"PASS\", \"value\": 0.9, \"finite\": true}, \"agr\": {",
+            "method_executions": 6,
+            "full_package_execution_verified": false,
+            "scientific_reproduction_verified": false
+          }
+        },
+        {
+          "source": "results\\H09_original_efficiency_repeatability.json",
+          "fields": {
+            "successful_runs": 5,
+            "full_package_execution_verified": false,
+            "scientific_reproduction_verified": false,
+            "limitations": "[\"Two distinct original methods were repeated five times.\", \"Tests used synthetic complete observations.\", \"The file-reading constructor was bypassed.\", \"Repeatability does not establish full SWAT2012 model reproduction.\"]"
+          }
+        },
+        {
+          "source": "results\\H09_original_function_screening.json",
+          "fields": {
+            "limitations": "[\"Function presence does not establish executability.\", \"Methods may require external model files.\", \"Some functions may depend on unavailable packages.\", \"Dynamic dependencies and runtime behaviour are not assessed.\"]"
+          }
+        },
+        {
+          "source": "results\\H09_source_independence_audit.json",
+          "fields": {
+            "archive_errors": "[]",
+            "limitations": "[\"File-level comparison cannot detect copied code fragments.\", \"Matching ASTs may represent trivial or empty modules.\", \"No file matches does not prove publication independence.\", \"Archive errors may limit comparison coverage.\"]"
+          }
+        },
+        {
+          "source": "results\\H09_syntax_dependency_baseline.json",
+          "fields": {
+            "syntax_pass": 8,
+            "syntax_fail": 0,
+            "dependency_declarations": "{\"allixender-swatpy-0d47bfa/requirements.txt\": \"numpy\\npandas\\nspotpy\\nscipy\\n# gdal>3\\n# fiona\\n# geopandas\\n# fastavro\\n# pyarrow\\n# parquet\\n# dask\\n# distributed\\n# pylint\\n# pytest\\n# rasterio\\n# xarray\\n# pyproj\\n\"}",
+            "limitations": "[\"AST syntax success does not establish executability.\", \"Notebook JSON validity does not establish code validity.\", \"Stored notebook outputs do not prove reproducibility.\", \"Import extraction is static and may miss dynamic imports.\", \"Dependencies have not yet been tested for availability.\"]"
+          }
+        }
+      ],
+      "log_findings": [],
+      "interpretation_status": "PENDING_MANUAL_REVIEW"
+    }
+  ],
+  "limitations": [
+    "Keyword extraction is not a final scientific interpretation.",
+    "Log matches may contain historical errors that were later resolved.",
+    "A PASS string alone does not establish scientific reproduction.",
+    "Nested JSON fields may not be fully represented.",
+    "Missing keyword matches do not imply absent evidence.",
+    "Original files were not modified."
+  ],
+  "generated_at_utc": "2026-11-11T02:35:40.419154+00:00"
+}

@@ -1,0 +1,351 @@
+{
+  "step": 221,
+  "generated_at_utc": "2026-11-11T23:34:57.012174+00:00",
+  "candidate_count": 9,
+  "original_archives_modified": false,
+  "existing_classifications_modified": false,
+  "review_status": "EVIDENCE_INSPECTED_NOT_YET_CLASSIFIED",
+  "candidates": [
+    {
+      "candidate_id": "E01",
+      "baseline_status": "UNKNOWN",
+      "later_test_status": "PASS_LIMITED",
+      "evidence": [
+        {
+          "path": "results\\E01_step185_static_audit.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [
+            "candidate",
+            "step",
+            "archive",
+            "archive_sha256",
+            "requirements",
+            "readme_excerpt",
+            "syntax_results",
+            "execution_attempted",
+            "generated_at_utc"
+          ],
+          "excerpt": "{\n  \"candidate\": \"E01\",\n  \"step\": 185,\n  \"archive\": \"repositories\\\\E01\\\\code.zip\",\n  \"archive_sha256\": \"5965a9254dfe5aba382f8c6b28508955edae407d1e94e3185c382c8654a4b439\",\n  \"requirements\": \"tqdm>=4.60.0\\nPyYAML>=5.4.1\\npyarrow>=11.0.0\\nh5py>=3.7.0\\n\\nscikit-learn>=1.3.0\\nstatsmodels>=0.14.1\\njoblib==1.3.0\\n\\n# for results visualisation\\njupyter>=1.0.0\\njupyterlab>=3.5.0\\nmatplotlib>=3.6.2\\n\\ngdal>=3.6.0\\nrasterio>=1.2.3\\nfiona>=1.8.21\\nshapely>=1.8.5\\n\\n# --find-links https://download.pytorch.org/whl/torch_stable.html\\n# torch==1.12.1+cu113\\n# torchvision==0.13.1+cu113\\ntimm>=0.4.12\\ntensorboard>=2.10.1\\n\\n# # for Phylogenetic tree distance calculation\\n# dendropy>=4.5.2\\n\\n# # for Microsoft Planetary Computer API\\n# rioxarray>=0.12.2\\n# pyproj>=3.4.0\\n# pystac-client>=0.5.1\\n# planetary-computer>=0.4.7\\n# stackstac>=0.4.3\\n# dask-gateway>=2022.10.0\",\n  \"readme_excerpt\": \"# DeepSDM\\n\\nSpecies Distribution Modeling (SDM) with deep learning. Work in progress, with many changes to come.\\n\\n## Installation\\n\\n### Yale HPC\\n\\n1. Load Conda module\\n```bash\\nmodule load miniconda\\n```\\n\\n2. Create environment and install requirements\\n\\n```bash\\nconda create -n deepSDM python=3.8 -y\\nconda activate deepSDM\\npip install -U -r requirements.txt\\nexport PYTHONPATH=.\\n```\\n\\n### Debian-based systems\\n\\n1. Install [Conda](http://conda.io/)\\n\\n2. Install dependencies\\n\\n```bash\\nsudo add-apt-repository ppa:ubuntugis/ppa\\nsudo apt update && sudo apt install -y gdal-bin\\n```\\n\\n3. Create environment and install requirements\\n\\n```bash\\nconda create -n deepSDM python=3.8 -y\\nconda activate deepSDM\\n\\n# we install PyTorch + related libraries first to ensure proper compilation with CUDA support\\nconda install pytorch torchvision pytorch-cuda=11.8 -c pytorch -c nvidia -y\\nconda install gdal -c conda-forge -y\\npip install -r requirements.txt\\nexport PYTHONPATH=.\\n```\\n\\n\\n## Dataset creation\\n\\n### 1. Combine occurrence CSVs into single file\\nThis also creates a file `species.csv`, with species name-to-ordinal mapping.\\n```bash\\npython deepSDM/data_preparation/consolidate_observations.py \\\\\\n        --observations-folder /gpfs/gibbs/pi/jetz/data/species_datasets/NA_30x30/mammals/SpeciesCSVs \\\\\\n        --destination data/taxa/mammals/observations.csv \\\\\\n        --species-file data/taxa/mammals/species.csv \\\\\\n        --min-num-observations 6;\\n```\\n\\nArgument `--species-file` is optional, but can be provided with a path to a file containing species\\nnames and optionally indic"
+        },
+        {
+          "path": "results\\E01_step186_dependency_audit.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [
+            "step",
+            "candidate",
+            "python_version",
+            "environment",
+            "dependencies_checked",
+            "available",
+            "missing",
+            "records",
+            "notes",
+            "generated_at_utc"
+          ],
+          "excerpt": "{\n  \"step\": 186,\n  \"candidate\": \"E01\",\n  \"python_version\": \"3.11.18\",\n  \"environment\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\",\n  \"dependencies_checked\": 18,\n  \"available\": 12,\n  \"missing\": 6,\n  \"records\": {\n    \"item_count\": 18,\n    \"first_item\": \"{'package': 'tqdm', 'module': 'tqdm', 'version': '4.70.1', 'module_found': True, 'status': 'AVAILABLE'}\"\n  },\n  \"notes\": {\n    \"item_count\": 5,\n    \"first_item\": \"Package discovery only; imports were not executed.\"\n  },\n  \"generated_at_utc\": \"2026-11-11T22:27:09.428288+00:00\"\n}"
+        },
+        {
+          "path": "results\\E01_step189_corrected_baseline.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [
+            "candidate",
+            "step",
+            "test_type",
+            "previous_failure",
+            "source_modified",
+            "packages_installed",
+            "generated_at_utc",
+            "return_code",
+            "timed_out",
+            "stdout",
+            "stderr",
+            "restored_python_files",
+            "outcome"
+          ],
+          "excerpt": "{\n  \"candidate\": \"E01\",\n  \"step\": 189,\n  \"test_type\": \"original_module_cli_help\",\n  \"previous_failure\": \"Missing package context in test harness\",\n  \"source_modified\": false,\n  \"packages_installed\": false,\n  \"generated_at_utc\": \"2026-11-11T22:35:43.134773+00:00\",\n  \"return_code\": 0,\n  \"timed_out\": false,\n  \"stdout\": \"usage: consolidate_observations.py [-h]\\n                                   [--observations-folder OBSERVATIONS_FOLDER [OBSERVATIONS_FOLDER ...]]\\n                                   [--destination DESTINATION]\\n                                   [--species-file SPECIES_FILE]\\n                                   [--min-num-observations MIN_NUM_OBSERVATIONS]\\n\\nConsolidate observations into single CSV file\\n\\noptions:\\n  -h, --help            show this help message and exit\\n  --observations-folder OBSERVATIONS_FOLDER [OBSERVATIONS_FOLDER ...]\\n                        Base folder(s) to look for observation CSV files in\\n  --destination DESTINATION\\n                        Destination to save CSV file to\\n  --species-file SPECIES_FILE\\n                        Optional CSV species definition file with species name\\n                        (and optional id) to limit to\\n  --min-num-observations MIN_NUM_OBSERVATIONS\\n                        Minimum number of observations required per species\\n                        for it to be considered\\n\",\n  \"stderr\": \"\",\n  \"restored_python_files\": 63,\n  \"outcome\": \"CLI_HELP_PASS\"\n}"
+        },
+        {
+          "path": "results\\E01_step191_functional_test.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [
+            "candidate",
+            "step",
+            "test_type",
+            "source_modified",
+            "packages_installed",
+            "generated_at_utc",
+            "return_code",
+            "timed_out",
+            "stdout",
+            "stderr",
+            "checks",
+            "observation_rows",
+            "species_rows",
+            "passed_checks",
+            "total_checks",
+            "outcome"
+          ],
+          "excerpt": "{\n  \"candidate\": \"E01\",\n  \"step\": 191,\n  \"test_type\": \"synthetic_observation_consolidation\",\n  \"source_modified\": false,\n  \"packages_installed\": false,\n  \"generated_at_utc\": \"2026-11-11T22:39:26.851297+00:00\",\n  \"return_code\": 0,\n  \"timed_out\": false,\n  \"stdout\": \"[species Species_C] WARNING: 2 observations required, only 1 available; species skipped.\\n\",\n  \"stderr\": \"\\n  0%|          | 0/3 [00:00<?, ?it/s]\\n100%|##########| 3/3 [00:00<00:00, 47.89it/s]\\n\",\n  \"checks\": {\n    \"command_success\": true,\n    \"observations_file_created\": true,\n    \"species_file_created\": true,\n    \"five_observations\": true,\n    \"two_species\": true,\n    \"correct_observation_ids\": true,\n    \"correct_species_names\": true,\n    \"correct_species_mapping\": true\n  },\n  \"observation_rows\": {\n    \"item_count\": 5,\n    \"first_item\": \"{'id': 'A001', 'lon': '120.1', 'lat': '14.1', 'species_id': '0', 'is_presence': '1'}\"\n  },\n  \"species_rows\": {\n    \"item_count\": 2,\n    \"first_item\": \"{'id': '0', 'species_name': 'Species_A'}\"\n  },\n  \"passed_checks\": 8,\n  \"total_checks\": 8,\n  \"outcome\": \"PASS\"\n}"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E03",
+      "baseline_status": "UNKNOWN",
+      "later_test_status": "PASS",
+      "evidence": [
+        {
+          "path": "repositories\\results\\E03_test1_comparison.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [],
+          "excerpt": "[{'file': 'permanova_results.csv', 'same_shape': True, 'same_columns': True, 'numerically_equivalent': True, 'differences': []}, {'file': 'perturbation_design_table.csv', 'same_shape': True, 'same_columns': True, 'numerically_equivalent': True, 'differences': []}]"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E06",
+      "baseline_status": "FAIL",
+      "later_test_status": "PASS_LIMITED",
+      "evidence": [
+        {
+          "path": "repositories\\results\\E06_test1_recovery_log.txt",
+          "found": true,
+          "format": "TEXT",
+          "excerpt": "Exit code: 0\nElapsed seconds: 7.13\nOriginal SHA256: 2f417d44b1db9cdd600596a878466dec53529c75350d671560ddcc588c539114\nRecovery SHA256: fa6a82a431f5acb90b46cd9fc95c0eda3521c6a80fe85adcf09b88d97445a6e9\n\n\n"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E08",
+      "baseline_status": "FAIL",
+      "later_test_status": "PASS_LIMITED",
+      "evidence": [
+        {
+          "path": "results\\E08_reproduction_comparison.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "notebook_sha256",
+            "comparison",
+            "all_displayed_results_match",
+            "comparison_basis",
+            "published_paper_independently_verified",
+            "original_notebook_modified"
+          ],
+          "excerpt": "{\n  \"archive_id\": \"E08\",\n  \"test\": \"Archived notebook output reproduction\",\n  \"notebook_sha256\": \"7b393428100cbea66b84cce4401f38f50d6eb7d5f3127b8580ba661b397abf93\",\n  \"comparison\": {},\n  \"all_displayed_results_match\": true,\n  \"comparison_basis\": \"saved notebook cell 51 output\",\n  \"published_paper_independently_verified\": false,\n  \"original_notebook_modified\": false\n}"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E10",
+      "baseline_status": "UNKNOWN",
+      "later_test_status": "PASS_LIMITED",
+      "evidence": [
+        {
+          "path": "results\\E10_consolidated_assessment.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [
+            "step",
+            "generated_at_utc",
+            "summary",
+            "evidence_files"
+          ],
+          "excerpt": "{\n  \"step\": 106,\n  \"generated_at_utc\": \"2026-11-11T01:03:33.747527+00:00\",\n  \"summary\": {\n    \"package_id\": \"E10\",\n    \"doi\": \"10.5281/zenodo.11552636\",\n    \"publication_date\": \"2024-06-10\",\n    \"domain\": \"ecology\",\n    \"source_files\": 3,\n    \"syntax_pass\": 3,\n    \"import_pass\": 3,\n    \"import_fail\": 4,\n    \"shuffle_tests_pass\": 8,\n    \"shuffle_tests_total\": 8,\n    \"auc_tests_pass\": 4,\n    \"auc_tests_total\": 4,\n    \"data_files_in_record\": 0,\n    \"full_workflow_executed\": false,\n    \"published_results_reproduced\": false,\n    \"assessment\": \"Partial component-level executability demonstrated. Full workflow remains untested due to unresolved dependency and research-input requirements.\"\n  },\n  \"evidence_files\": {\n    \"screening\": \"E10_initial_screening.json\",\n    \"source_audit\": \"E10_source_audit.json\",\n    \"dependency_readiness\": \"E10_dependency_readiness.json\",\n    \"import_baseline\": \"E10_import_baseline.json\",\n    \"runtime_requirements\": \"E10_runtime_requirements.json\",\n    \"data_availability\": \"E10_data_availability.json\",\n    \"external_data\": \"E10_external_data_investigation.json\",\n    \"function_screening\": \"E10_function_testability.json\",\n    \"shuffle_execution\": \"E10_function_execution.json\",\n    \"auc_initial\": \"E10_auc_function_validation.json\",\n    \"auc_corrected\": \"E10_auc_corrected_validation.json\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "candidate_id": "H06",
+      "baseline_status": "NOT_ATTEMPTED",
+      "later_test_status": "PASS_LIMITED",
+      "evidence": [
+        {
+          "path": "repositories\\results\\H06_assessment.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [
+            "repository_id",
+            "domain",
+            "repository_name",
+            "archive_files",
+            "python_files",
+            "dependency_manifest_found",
+            "research_dataset_files_detected",
+            "model_checkpoints_detected",
+            "external_inputs_required",
+            "models",
+            "execution_attempted",
+            "full_workflow_completed",
+            "published_results_reproduced",
+            "classification",
+            "limitations"
+          ],
+          "excerpt": "{\n  \"repository_id\": \"H06\",\n  \"domain\": \"Hydrology\",\n  \"repository_name\": \"S4D Rainfall-Runoff Simulations\",\n  \"archive_files\": 292,\n  \"python_files\": 96,\n  \"dependency_manifest_found\": false,\n  \"research_dataset_files_detected\": 0,\n  \"model_checkpoints_detected\": 0,\n  \"external_inputs_required\": {\n    \"item_count\": 2,\n    \"first_item\": \"CAMELS watershed dataset\"\n  },\n  \"models\": {\n    \"item_count\": 3,\n    \"first_item\": \"S4D\"\n  },\n  \"execution_attempted\": false,\n  \"full_workflow_completed\": false,\n  \"published_results_reproduced\": false,\n  \"classification\": \"not_tested_external_data_dependency\",\n  \"limitations\": {\n    \"item_count\": 4,\n    \"first_item\": \"Required research datasets not included in archive\"\n  }\n}"
+        },
+        {
+          "path": "results/H06_step193_execution_target_discovery.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [
+            "candidate",
+            "step",
+            "execution_attempted",
+            "archives",
+            "generated_at_utc"
+          ],
+          "excerpt": "{\n  \"candidate\": \"H06\",\n  \"step\": 193,\n  \"execution_attempted\": false,\n  \"archives\": {\n    \"item_count\": 1,\n    \"first_item\": \"{'archive': 'S4D_rainfall_runoff_simulations.zip', 'python_files': [{'file': 'S4D_rainfall_runoff_simulations-main/analysis/combine_sacsma_pkfiles.py', 'syntax': 'PASS', 'imports': ['os', 'pickle', 'pandas'], 'functions': [], 'classes': []}, {'file':\"\n  },\n  \"generated_at_utc\": \"2026-11-11T22:41:47.926091+00:00\"\n}"
+        },
+        {
+          "path": "results/H06_step194_metric_inspection.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [
+            "candidate",
+            "step",
+            "archive",
+            "target",
+            "functions",
+            "execution_attempted",
+            "generated_at_utc"
+          ],
+          "excerpt": "{\n  \"candidate\": \"H06\",\n  \"step\": 194,\n  \"archive\": \"S4D_rainfall_runoff_simulations.zip\",\n  \"target\": \"S4D_rainfall_runoff_simulations-main/analysis/performance_functions.py\",\n  \"functions\": {},\n  \"execution_attempted\": false,\n  \"generated_at_utc\": \"2026-11-11T22:43:14.108598+00:00\"\n}"
+        },
+        {
+          "path": "results/H06_step195_metric_execution.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [
+            "candidate",
+            "step",
+            "source",
+            "original_source_modified",
+            "dependencies_installed",
+            "return_code",
+            "timed_out",
+            "stdout",
+            "stderr",
+            "generated_at_utc",
+            "checks",
+            "passed",
+            "total",
+            "outcome"
+          ],
+          "excerpt": "{\n  \"candidate\": \"H06\",\n  \"step\": 195,\n  \"source\": \"S4D_rainfall_runoff_simulations-main/analysis/performance_functions.py\",\n  \"original_source_modified\": false,\n  \"dependencies_installed\": false,\n  \"return_code\": 0,\n  \"timed_out\": false,\n  \"stdout\": \"{\\\"checks\\\": {\\\"perfect_nse\\\": {\\\"actual\\\": 1.0, \\\"expected\\\": 1.0, \\\"pass\\\": true}, \\\"perfect_kge\\\": {\\\"actual\\\": 1.0, \\\"expected\\\": 1.0, \\\"pass\\\": true}, \\\"perfect_bias\\\": {\\\"actual\\\": 0.0, \\\"expected\\\": 0.0, \\\"pass\\\": true}, \\\"imperfect_nse\\\": {\\\"actual\\\": 0.6, \\\"expected\\\": 0.6, \\\"pass\\\": true}, \\\"imperfect_kge\\\": {\\\"actual\\\": 0.6812315526372372, \\\"expected\\\": 0.6812315526372372, \\\"pass\\\": true}, \\\"imperfect_bias\\\": {\\\"actual\\\": 0.0, \\\"expected\\\": 0.0, \\\"pass\\\": true}, \\\"negative_value_filtering\\\": {\\\"actual\\\": 1.0, \\\"expected\\\": 1.0, \\\"pass\\\": true}, \\\"seed_specific_column\\\": {\\\"actual\\\": 1.0, \\\"expected\\\": 1.0, \\\"pass\\\": true}}, \\\"passed\\\": 8, \\\"total\\\": 8}\\n\",\n  \"stderr\": \"\",\n  \"generated_at_utc\": \"2026-11-11T22:45:06.926945+00:00\",\n  \"checks\": {},\n  \"passed\": 8,\n  \"total\": 8,\n  \"outcome\": \"PASS\"\n}"
+        }
+      ]
+    },
+    {
+      "candidate_id": "H07",
+      "baseline_status": "UNKNOWN",
+      "later_test_status": "PASS_LIMITED",
+      "evidence": [
+        {
+          "path": "results\\H07_consolidated_assessment.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "archived_version",
+            "archive_year",
+            "archive_doi",
+            "research_domain",
+            "syntax",
+            "dependencies",
+            "scientific_execution",
+            "classification",
+            "research_interpretation",
+            "evidence_files",
+            "limitations",
+            "generated_at_utc"
+          ],
+          "excerpt": "{\n  \"step\": 122,\n  \"package_id\": \"H07\",\n  \"package_name\": \"PyTOPKAPI\",\n  \"archived_version\": \"0.4.0\",\n  \"archive_year\": 2017,\n  \"archive_doi\": \"10.5281/zenodo.820640\",\n  \"research_domain\": \"hydrology\",\n  \"syntax\": {\n    \"python_files_total\": 29,\n    \"original_pass\": 27,\n    \"original_fail\": 2,\n    \"recovered_pass\": 29,\n    \"recovery_text_replacements\": 4,\n    \"files_requiring_recovery\": 2\n  },\n  \"dependencies\": {\n    \"tested\": 5,\n    \"note\": \"Missing dependencies are environment gaps, not confirmed incompatibilities.\"\n  },\n  \"scientific_execution\": {\n    \"component\": \"Green-Ampt infiltration\",\n    \"original_tests_passed\": 2,\n    \"original_tests_total\": 2,\n    \"source_modified\": false,\n    \"basic_infiltration_value\": 3.167213728940331,\n    \"basic_absolute_error\": 1.0596687971542451e-09,\n    \"variable_rainfall_max_absolute_error\": 8.881784197001252e-16,\n    \"variable_rainfall_matches_expected\": true,\n    \"repeatability_runs\": 3,\n    \"numerically_identical_across_runs\": true\n  },\n  \"classification\": {\n    \"code_available\": true,\n    \"original_archive_fully_syntax_valid\": false,\n    \"syntax_recovery_demonstrated\": true,\n    \"scientific_component_executable\": true,\n    \"whole_package_executable\": \"NOT VERIFIED\",\n    \"published_results_reproduced\": \"NOT VERIFIED\",\n    \"temporal_code_decay_proven\": false\n  },\n  \"research_interpretation\": \"The archived PyTOPKAPI package contains Python syntax failures and has missing dependencies in the current environment. Nevertheless, its original Green-Ampt infiltration implementation passed two archived scientific tests without source modifications and produced identical numerical results across three independent subprocess executions. This demonstrates component-level executability, not whole-package executability or reproduction of published results.\",\n  \"evidence_files\": {\n    \"dependency_audit\": \"H07_dependency_audit.json\",\n    \"syntax_baseline\": \"H07_syntax_dependency_baseline.json\",\n    \"syntax_recovery\": \"H07_complete_syntax_recovery.json\",\n    \"runtime_dependencies\": \"H07_runtime_dependency_baseline.json\",\n    \"test_screening\": \"H07_scientific_test_screening.json\",\n    \"original_execution\": \"H07_original_infiltration_execution.json\",\n    \"repeatability\": \"H07_infiltration_numerical_repeatability.json\"\n  },\n  \"limitations\": {\n    \"item_count\": 7,\n    \"first_item\": \"Only two original infiltration tests were executed.\"\n  },\n  \"generated_at_utc\": \"2026-11-11T01:43:08.654308+00:00\"\n}"
+        }
+      ]
+    },
+    {
+      "candidate_id": "H08",
+      "baseline_status": "UNKNOWN",
+      "later_test_status": "PASS_LIMITED",
+      "evidence": [
+        {
+          "path": "results\\H08_consolidated_assessment.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "archive_year",
+            "zenodo_record",
+            "doi",
+            "archive_sha256",
+            "archive_integrity_verified",
+            "syntax_assessment",
+            "dependency_assessment",
+            "original_test_assessment",
+            "execution_method",
+            "classification",
+            "full_package_execution",
+            "scientific_results_reproduction",
+            "recovery_actions",
+            "source_modification",
+            "dependency_installation_for_test",
+            "evidence_files",
+            "limitations",
+            "generated_at_utc"
+          ],
+          "excerpt": "{\n  \"step\": 135,\n  \"package_id\": \"H08\",\n  \"package_name\": \"pyGSFLOW\",\n  \"version\": \"1.0.2\",\n  \"archive_year\": 2022,\n  \"zenodo_record\": \"6468426\",\n  \"doi\": \"10.5281/zenodo.6468426\",\n  \"archive_sha256\": \"ebbc960c11470056493b1c82ae461f266f333240e1ec6dcc4c85ba9e0f10568b\",\n  \"archive_integrity_verified\": true,\n  \"syntax_assessment\": {\n    \"python_files\": 70,\n    \"syntax_pass\": 70,\n    \"syntax_fail\": 0\n  },\n  \"dependency_assessment\": {\n    \"entries_assessed\": 19,\n    \"discoverable\": 8,\n    \"missing\": 10,\n    \"not_assessed\": 1,\n    \"interpretation\": \"Missing packages indicate an incomplete current environment, not necessarily code decay.\"\n  },\n  \"original_test_assessment\": {\n    \"distinct_original_tests_attempted\": 4,\n    \"initial_passes\": 4,\n    \"repeat_runs\": 5,\n    \"repeat_test_executions\": 20,\n    \"repeat_passes\": 20,\n    \"all_repeats_passed\": true,\n    \"supplementary_results_identical\": true\n  },\n  \"execution_method\": \"Controlled subprocess execution of unmodified archived PRMS record classes and original tests, with broad package initialisers bypassed.\",\n  \"classification\": \"PARTIALLY_EXECUTABLE_COMPONENT_LEVEL\",\n  \"full_package_execution\": \"NOT_VERIFIED\",\n  \"scientific_results_reproduction\": \"NOT_ATTEMPTED\",\n  \"recovery_actions\": {\n    \"item_count\": 5,\n    \"first_item\": \"Inspected original imports and dependency paths.\"\n  },\n  \"source_modification\": false,\n  \"dependency_installation_for_test\": false,\n  \"evidence_files\": {\n    \"archive\": \"H08_initial_archive_inspection.json\",\n    \"syntax\": \"H08_syntax_dependency_baseline.json\",\n    \"dependencies\": \"H08_dependency_availability.json\",\n    \"test_screening\": \"H08_original_test_screening.json\",\n    \"implementation\": \"H08_prms_implementation_dependency_trace.json\",\n    \"supporting_modules\": \"H08_supporting_module_dependency_trace.json\",\n    \"execution\": \"H08_original_prms_record_execution.json\",\n    \"repeatability\": \"H08_prms_test_repeatability.json\"\n  },\n  \"limitations\": {\n    \"item_count\": 6,\n    \"first_item\": \"Four tests are not representative of all 50 archived tests.\"\n  },\n  \"generated_at_utc\": \"2026-11-11T02:03:43.082804+00:00\"\n}"
+        }
+      ]
+    },
+    {
+      "candidate_id": "H09",
+      "baseline_status": "UNKNOWN",
+      "later_test_status": "PASS_LIMITED",
+      "evidence": [
+        {
+          "path": "results\\H09_consolidated_assessment.json",
+          "found": true,
+          "format": "JSON",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "domain",
+            "archive_sha256",
+            "archive_integrity",
+            "python_syntax",
+            "dependency_availability",
+            "original_component_execution",
+            "missing_data_limitation",
+            "source_independence",
+            "execution_classification",
+            "sample_inclusion",
+            "full_package_execution_verified",
+            "scientific_reproduction_verified",
+            "dependency_recovery_performed",
+            "original_archive_modified",
+            "evidence_files",
+            "missing_optional_evidence",
+            "limitations",
+            "generated_at_utc"
+          ],
+          "excerpt": "{\n  \"step\": 152,\n  \"package_id\": \"H09\",\n  \"package_name\": \"swatpy\",\n  \"version\": \"v0.2\",\n  \"domain\": \"hydrology\",\n  \"archive_sha256\": \"880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce\",\n  \"archive_integrity\": \"PASS\",\n  \"python_syntax\": {\n    \"files_checked\": 8,\n    \"passed\": 8,\n    \"failed\": 0\n  },\n  \"dependency_availability\": {\n    \"checked\": 7,\n    \"discoverable\": 4,\n    \"not_discoverable\": 3,\n    \"note\": \"Availability does not establish runtime compatibility.\"\n  },\n  \"original_component_execution\": {\n    \"repeat_runs\": 5,\n    \"method_executions\": 10,\n    \"repeatability_pass\": true,\n    \"constructor_bypassed\": true,\n    \"synthetic_inputs\": true\n  },\n  \"missing_data_limitation\": {\n    \"observed\": true,\n    \"description\": \"Original methods return masked results for missing observations under NumPy 2.4.6.\",\n    \"age_related_decay_proven\": false\n  },\n  \"source_independence\": {\n    \"comparison_archives\": 16,\n    \"comparison_python_files\": 685,\n    \"exact_matches\": 0,\n    \"ast_matches\": 0,\n    \"assessment\": \"PROVISIONALLY_DISTINCT_SOURCE_LEVEL\",\n    \"publication_independence_verified\": false\n  },\n  \"execution_classification\": \"PARTIALLY_EXECUTABLE_COMPONENT_LEVEL\",\n  \"sample_inclusion\": \"PROVISIONALLY_INCLUDED\",\n  \"full_package_execution_verified\": false,\n  \"scientific_reproduction_verified\": false,\n  \"dependency_recovery_performed\": false,\n  \"original_archive_modified\": false,\n  \"evidence_files\": {\n    \"metadata\": \"H09_archive_metadata_screening.json\",\n    \"archive\": \"H09_initial_archive_inspection.json\",\n    \"syntax\": \"H09_syntax_dependency_baseline.json\",\n    \"dependencies\": \"H09_dependency_availability.json\",\n    \"functions\": \"H09_original_function_screening.json\",\n    \"efficiency_inspection\": \"H09_hydrological_efficiency_inspection.json\",\n    \"execution\": \"H09_original_efficiency_execution_recheck.json\",\n    \"missing_data\": \"H09_missing_data_investigation.json\",\n    \"numerical_diagnostic\": \"H09_masked_reduction_verification.json\",\n    \"repeatability\": \"H09_original_efficiency_repeatability.json\",\n    \"independence\": \"H09_source_independence_audit.json\"\n  },\n  \"missing_optional_evidence\": {\n    \"item_count\": 0,\n    \"first_item\": null\n  },\n  \"limitations\": {\n    \"item_count\": 6,\n    \"first_item\": \"Full SWAT2012 simulation was not executed.\"\n  },\n  \"generated_at_utc\": \"2026-11-11T02:29:26.153835+00:00\"\n}"
+        }
+      ]
+    }
+  ],
+  "missing_evidence_files": []
+}

@@ -1,0 +1,40 @@
+{
+  "step": 167,
+  "records": [
+    {
+      "package_id": "H03",
+      "project": "Hydrological controls of slope response to precipitation - Code and Data",
+      "local_archive": "repositories\\H03\\Hydrological-controls---Code-and-Data-Hydrology.zip",
+      "correct_doi": "10.5281/zenodo.10107351",
+      "authoritative_url": "https://zenodo.org/records/10107351",
+      "archive_date": "2023-11-10",
+      "expected_md5": "aec52470fca4a6c4be611bbae415c8d6",
+      "observed_md5": "aec52470fca4a6c4be611bbae415c8d6",
+      "observed_sha256": "b1161def37fee0e68ec7d5981c0f67840a06ba420776adb13e0346886938cc30",
+      "exact_archive_match": true,
+      "verification_status": "CHECKSUM_MATCH"
+    },
+    {
+      "package_id": "H05",
+      "project": "NeuralHydrology v1.2.3",
+      "local_archive": "repositories\\H05\\neuralhydrology-v.1.2.3.zip",
+      "correct_doi": "10.5281/zenodo.6326394",
+      "authoritative_url": "https://zenodo.org/records/6326394",
+      "archive_date": "2022-03-03",
+      "expected_md5": "cf66c64c57cfd8857313b8089e100d76",
+      "observed_md5": "cf66c64c57cfd8857313b8089e100d76",
+      "observed_sha256": "9506b996065c52a60bc4a74797069f9be603d1e6a39e2a3514c5133b67891e5b",
+      "exact_archive_match": true,
+      "verification_status": "CHECKSUM_MATCH"
+    }
+  ],
+  "verification_method": "Compare locally computed MD5 against checksums published on the specified Zenodo records.",
+  "notes": [
+    "Original ZIP files were not modified.",
+    "Matching MD5 supports byte-level identity with the published archive checksum.",
+    "Dates describe the cited Zenodo versions, not necessarily the associated papers.",
+    "No full scientific workflow reproduction is implied.",
+    "Other candidate provenance remains under review."
+  ],
+  "generated_at_utc": "2026-11-11T02:55:06.504197+00:00"
+}

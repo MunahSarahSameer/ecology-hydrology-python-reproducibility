@@ -1,0 +1,543 @@
+{
+  "step": 175,
+  "records": {
+    "E06": {
+      "archive": "Code_Figures.zip",
+      "notebooks_inspected": 18,
+      "documentation_inspected": 0,
+      "notebook_titles": [
+        {
+          "filename": "Code_Figures/FigS10_MangroveDisturbanceRates.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": "# Decadal dynamics of global mangrove disturbance rates (1984-2023)\n\nDisturbance includes degradation and loss."
+        },
+        {
+          "filename": "Code_Figures/FigS11_DisturbanceTrends40Years.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": ""
+        },
+        {
+          "filename": "Code_Figures/FigS12_RecentDisturbanceRates.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": ""
+        },
+        {
+          "filename": "Code_Figures/FigS14_RelativeChangeClosedMangrove.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": ""
+        },
+        {
+          "filename": "Code_Figures/FigS18_LandsatQuantile.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": "# Landsat percentile composites\n\n90th percentile: low tide;\n\n10th percentile: high tide"
+        },
+        {
+          "filename": "Code_Figures/FigS19-S20_CompositeYears.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": ""
+        },
+        {
+          "filename": "Code_Figures/FigS21_PixelCount1980s.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": ""
+        },
+        {
+          "filename": "Code_Figures/FigS2_4CanopyTypes.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": ""
+        },
+        {
+          "filename": "Code_Figures/FigS30_ValidRatio.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": ""
+        },
+        {
+          "filename": "Code_Figures/FigS4_SpatialUnits.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": ""
+        },
+        {
+          "filename": "Code_Figures/FigS5_Top10TimeSeries.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": ""
+        },
+        {
+          "filename": "Code_Figures/FigS8_SchematicFigure.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": ""
+        },
+        {
+          "filename": "Code_Figures/Figure 1.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": "# Figure 1 |  Global pattern of mangrove changes during 1980s-2023. \n\nThe color scale, shown on the bottom left, indicates the rate of change in terms of both deforestation (red) and expansion (blue), with 0% change represented by grey. The rate is calculated as (Δarea/original area)×100%. Inset regional maps provide detailed examples of change patterns for Ecuador, the Niger Delta, Nigeria, and the Mahakam Delta, Indonesia, where blue patches indicate mangrove expansion, red patches signify def"
+        },
+        {
+          "filename": "Code_Figures/Figure 2.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": "# Figure 2 |  Regional mangrove area dynamics and country-level change rates. \n\n- Panel **a–d**: Time series of mangrove area (km²) from the late 1980s to 2023 for (**a**) Asia, (**b**) Americas, (**c**) Africa, and (**d**) Oceania. Within each continental plot, individual lines represent distinct biogeographical regions, with corresponding geographical extents shown in the inset maps in matching colors. For enhanced visualization, the Middle East is grouped with Africa. \n\n- Panel **e**: Mangrov"
+        },
+        {
+          "filename": "Code_Figures/Figure 3.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": "# Figure 3 | Global patterns and regional examples of mangrove expansion consisting of expansion and regeneration\n\n- Expansion means mangroves gain from new area that not occupied by mangroves in 1980s.\n- Regeneration means mangroves occur back in their historical areas, compared to 1980s."
+        },
+        {
+          "filename": "Code_Figures/Figure 4.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": "# Figure 4 |  Global and regional rates of mangrove disturbance consisting of deforestation and degradation.\n\n- Panel **A**: Global pattern of long-term average annual disturbance rates. The color key indicates the mean annual rate, with increasing degradation towards blue and increasing deforestation towards red, while grey represents low rates for both. \n- Panel **B**: Temporal profiles of annual rates for ten biogeographical regions. Individual points and thin lines show the annual rates of d"
+        },
+        {
+          "filename": "Code_Figures/Figure 5.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": "# Figure 5 |  Dynamics of mangrove canopy cover. \n\n- Panel **A**, Global pattern of area change (km2) of closed mangrove forests from the 1980s to 2023. The color map indicates the magnitude of change, with blue representing increases and red representing decreases in area. The two red circles highlight the locations of the regional examples detailed in panels b and c (Amazon Macrotidal Mangrove Coast and southwestern Papua, respectively). \n\n- Panel **B and C**, Regional examples illustrating ma"
+        },
+        {
+          "filename": "Code_Figures/SummaryFig.ipynb",
+          "metadata": {
+            "kernelspec": {
+              "display_name": "base",
+              "language": "python",
+              "name": "python3"
+            },
+            "language_info": {
+              "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+              },
+              "file_extension": ".py",
+              "mimetype": "text/x-python",
+              "name": "python",
+              "nbconvert_exporter": "python",
+              "pygments_lexer": "ipython3",
+              "version": "3.11.7"
+            }
+          },
+          "first_markdown": ""
+        }
+      ],
+      "source_clues": [
+        {
+          "file": "Code_Figures/FigS10_MangroveDisturbanceRates.ipynb",
+          "matches": {
+            "doi": [],
+            "github": [],
+            "zenodo": [],
+            "paper": [
+              "# Decadal dynamics of global mangrove disturbance rates (1984-2023)",
+              "Disturbance includes degradation and loss."
+            ]
+          }
+        },
+        {
+          "file": "Code_Figures/Figure 1.ipynb",
+          "matches": {
+            "doi": [],
+            "github": [],
+            "zenodo": [],
+            "paper": [
+              "# Figure 1 |  Global pattern of mangrove changes during 1980s-2023. ",
+              "or Ecuador, the Niger Delta, Nigeria, and the Mahakam Delta, Indonesia, where blue patches indicate mangrove expansion, red patches signify deforestation, and grey patches indicate persistent mangrove areas. An online interactive map for mangrove extents and",
+              "ge area is available through the following link: https://zhenzhang.users.earthengine.app/view/globalmangrovedynamic."
+            ]
+          }
+        },
+        {
+          "file": "Code_Figures/Figure 2.ipynb",
+          "matches": {
+            "doi": [],
+            "github": [],
+            "zenodo": [],
+            "paper": [
+              "# Figure 2 |  Regional mangrove area dynamics and country-level change rates. ",
+              "- Panel **a–d**: Time series of mangrove area (km²) from the late 1980s to 2023 for (**a**) Asia, (**b**) Americas, (**c**) Africa, and (**d**) Oceania. Within each continental plot, individ",
+              "- Panel **e**: Mangrove change rates for the top-10 mangrove-rich nations in the 1980s, ordered by their mangrove extent. Teal bars indicate expansion rates, pink bars show deforestation rates, and grey bars re"
+            ]
+          }
+        },
+        {
+          "file": "Code_Figures/Figure 3.ipynb",
+          "matches": {
+            "doi": [],
+            "github": [],
+            "zenodo": [],
+            "paper": [
+              "# Figure 3 | Global patterns and regional examples of mangrove expansion consisting of expansion and regeneration",
+              "- Expansion means mangroves gain from new area that not occupied by mangroves in 1980s.",
+              "- Regeneration means mangroves occur back in their historical areas, compared to 1980s."
+            ]
+          }
+        },
+        {
+          "file": "Code_Figures/Figure 4.ipynb",
+          "matches": {
+            "doi": [],
+            "github": [],
+            "zenodo": [],
+            "paper": [
+              "# Figure 4 |  Global and regional rates of mangrove disturbance consisting of deforestation and degradation.",
+              "- Panel **A**: Global pattern of long-term average annual disturbance rates. The color key indicates the mean annual rate, with increasing degradation towards blue and increasing deforestation towards red, while grey re"
+            ]
+          }
+        },
+        {
+          "file": "Code_Figures/Figure 5.ipynb",
+          "matches": {
+            "doi": [],
+            "github": [],
+            "zenodo": [],
+            "paper": [
+              "# Figure 5 |  Dynamics of mangrove canopy cover. ",
+              "- Panel **A**, Global pattern of area change (km2) of closed mangrove forests from the 1980s to 2023. The color map indicates the magnitude of change, with blue representing increases and red representing decreases in a",
+              "cles highlight the locations of the regional examples detailed in panels b and c (Amazon Macrotidal Mangrove Coast and southwestern Papua, respectively). ",
+              "- Panel **B and C**, Regional examples illustrating mangrove change. For each region, the left and middle sub-panels display FCC images from the 1980s and 2023, respectively, where darker green indicates higher",
+              "the change in FCC (ΔFCC = 2023 FCC - 1980s FCC), with greener areas indicating increased FCC (i.e., mangrove growth). ",
+              "- Panel **D**, Sankey diagram illustrating the flow and area (km2) of different mangrove canopy types across four time points: 1980s, 2000, 2010, and 2023, which highlights the overall increase in closed mangrove forest area, primarily tr",
+              "ansferred from open mangrove forests."
+            ]
+          }
+        }
+      ],
+      "source_identity_verified": false,
+      "publication_date_verified": false
+    },
+    "H06": {
+      "archive": "S4D_rainfall_runoff_simulations.zip",
+      "notebooks_inspected": 0,
+      "documentation_inspected": 1,
+      "notebook_titles": [],
+      "source_clues": [
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/README.md",
+          "matches": {
+            "doi": [],
+            "github": [
+              "https://github.com/kratzert/lstm_for_pub"
+            ],
+            "zenodo": [],
+            "paper": [
+              "# **S4D Rainfall-Runoff Simulations**",
+              "This repository contains the code for the paper *\"A Deep State Space Model for Rainfall-Runoff Simulations.\"* It enables the training and evaluation of three models, including **S4D**, **LSTM**, and **MC-LSTM** (Hoedt et al., 2021)(https://arxi",
+              "v.org/abs/2101.05186), for rainfall-runoff simulations across 531 CAMELS watersheds."
+            ]
+          }
+        }
+      ],
+      "source_identity_verified": false,
+      "publication_date_verified": false
+    }
+  },
+  "limitations": [
+    "Only selected notebook markdown and main README content were inspected.",
+    "Notebook outputs and executable code were not used for publication identification.",
+    "Extracted references are clues, not verified source identities.",
+    "Original ZIP archives were not modified.",
+    "Publication dates remain unverified."
+  ],
+  "generated_at_utc": "2026-11-11T03:03:45.509112+00:00"
+}

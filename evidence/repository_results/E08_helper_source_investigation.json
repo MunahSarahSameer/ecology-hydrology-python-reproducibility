@@ -1,0 +1,51 @@
+{
+  "archive_id": "E08",
+  "repository": "SethMinor/PyWSINDy-for-PDEs",
+  "repository_status": 200,
+  "default_branch": "main",
+  "current_commit": "4c5765bc7948ae3409bea6c40f320d95ac1de74d",
+  "matching_files": [
+    "dev/helper_fcns_dev.py",
+    "dev/wsindy_dev.ipynb",
+    "dev/wsindy_dev.py",
+    "dev/wsindy_dev_test.py",
+    "wsindy.py",
+    "wsindy_examples.ipynb",
+    "wsindy_ode.py",
+    "wsindy_ode_examples.ipynb"
+  ],
+  "helper_history": [
+    {
+      "sha": "105c2330847a4e2cae05b1fe8ec1d4f1926d5474",
+      "date": "2026-10-21T22:00:03Z",
+      "message": "dev work"
+    },
+    {
+      "sha": "55ebe84af234ce0f844f8cd3360b626243439b9e",
+      "date": "2026-07-21T15:07:54Z",
+      "message": "Add files via upload"
+    },
+    {
+      "sha": "d43b25a6106b0d459f44948b1f05e3e6e162312e",
+      "date": "2025-06-09T21:56:10Z",
+      "message": "composite term"
+    },
+    {
+      "sha": "1f9f98ce7db44f0ad6758a1e1d6de4c3f1fd3d21",
+      "date": "2025-03-31T01:51:07Z",
+      "message": "jacobians"
+    },
+    {
+      "sha": "aec48f789e7f33ce2cd7a655ddf773020c024461",
+      "date": "2025-03-28T04:27:06Z",
+      "message": "dependencies"
+    },
+    {
+      "sha": "f7b3db52aa53db07278fbea44f9993c3d1e14db9",
+      "date": "2025-03-28T03:28:03Z",
+      "message": "update"
+    }
+  ],
+  "errors": [],
+  "external_code_executed": false
+}

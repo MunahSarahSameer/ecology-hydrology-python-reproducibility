@@ -1,0 +1,72 @@
+{
+  "candidate": "E01",
+  "step": 191,
+  "test_type": "synthetic_observation_consolidation",
+  "source_modified": false,
+  "packages_installed": false,
+  "generated_at_utc": "2026-11-11T22:39:26.851297+00:00",
+  "return_code": 0,
+  "timed_out": false,
+  "stdout": "[species Species_C] WARNING: 2 observations required, only 1 available; species skipped.\n",
+  "stderr": "\n  0%|          | 0/3 [00:00<?, ?it/s]\n100%|##########| 3/3 [00:00<00:00, 47.89it/s]\n",
+  "checks": {
+    "command_success": true,
+    "observations_file_created": true,
+    "species_file_created": true,
+    "five_observations": true,
+    "two_species": true,
+    "correct_observation_ids": true,
+    "correct_species_names": true,
+    "correct_species_mapping": true
+  },
+  "observation_rows": [
+    {
+      "id": "A001",
+      "lon": "120.1",
+      "lat": "14.1",
+      "species_id": "0",
+      "is_presence": "1"
+    },
+    {
+      "id": "A002",
+      "lon": "120.2",
+      "lat": "14.2",
+      "species_id": "0",
+      "is_presence": "1"
+    },
+    {
+      "id": "A003",
+      "lon": "120.3",
+      "lat": "14.3",
+      "species_id": "0",
+      "is_presence": "1"
+    },
+    {
+      "id": "B001",
+      "lon": "121.1",
+      "lat": "15.1",
+      "species_id": "1",
+      "is_presence": "1"
+    },
+    {
+      "id": "B002",
+      "lon": "121.2",
+      "lat": "15.2",
+      "species_id": "1",
+      "is_presence": "1"
+    }
+  ],
+  "species_rows": [
+    {
+      "id": "0",
+      "species_name": "Species_A"
+    },
+    {
+      "id": "1",
+      "species_name": "Species_B"
+    }
+  ],
+  "passed_checks": 8,
+  "total_checks": 8,
+  "outcome": "PASS"
+}

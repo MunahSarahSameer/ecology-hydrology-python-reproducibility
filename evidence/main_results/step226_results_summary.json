@@ -1,0 +1,43 @@
+{
+  "step": 226,
+  "generated_at_utc": "2026-11-11T23:51:56.014811+00:00",
+  "sample_size": 15,
+  "domain_counts": {
+    "Ecology": 7,
+    "Hydrology": 8
+  },
+  "baseline_counts": {
+    "UNKNOWN": 6,
+    "PASS": 1,
+    "FAIL": 7,
+    "NOT_ATTEMPTED": 1
+  },
+  "later_status_counts": {
+    "PASS_LIMITED": 13,
+    "PASS": 2
+  },
+  "review_counts": {
+    "PROVISIONAL": 9,
+    "EVIDENCE_REVIEWED": 6
+  },
+  "verified_archive_age_count": 11,
+  "binary_baseline_and_age_count": 6,
+  "full_scientific_reproductions_verified": 0,
+  "human_recovery_time_measured": false,
+  "age_failure_correlation_established": false,
+  "tables": [
+    "results\\step226_table1_sample_baseline.csv",
+    "results\\step226_table2_execution_recovery.csv",
+    "results\\step226_table3_archive_age.csv",
+    "results\\step226_table4_evidence_limitations.csv"
+  ],
+  "limitations": [
+    "Purposive sample; no population generalisation.",
+    "Baseline test scopes are heterogeneous.",
+    "Seven baselines are unknown or not attempted.",
+    "Nine barrier classifications remain provisional.",
+    "Dependency absence does not prove temporal decay.",
+    "No full published-paper reproduction verified.",
+    "Human recovery time not reliably measured."
+  ]
+}

@@ -1,0 +1,2705 @@
+{
+  "step": 155,
+  "assessment_type": "HISTORICAL_EVIDENCE_REGISTER",
+  "evidence_directories": [
+    "results",
+    "repositories\\results"
+  ],
+  "candidate_count": 15,
+  "candidates_with_evidence": 14,
+  "total_candidate_json_files": 107,
+  "total_candidate_logs": 35,
+  "packages": [
+    {
+      "package_id": "E01",
+      "domain": "ecology",
+      "evidence_count": 0,
+      "json_count": 0,
+      "text_log_count": 0,
+      "csv_count": 0,
+      "evidence_files": [],
+      "evidence_present": false,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "E02",
+      "domain": "ecology",
+      "evidence_count": 2,
+      "json_count": 1,
+      "text_log_count": 1,
+      "csv_count": 0,
+      "evidence_files": [
+        {
+          "path": "repositories\\results\\E02_test1_baseline_log.txt",
+          "filename": "E02_test1_baseline_log.txt",
+          "extension": ".txt",
+          "size_bytes": 512
+        },
+        {
+          "path": "repositories\\results\\E02_test1_validation.json",
+          "filename": "E02_test1_validation.json",
+          "extension": ".json",
+          "size_bytes": 560,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive",
+            "workflow",
+            "baseline_exit_code",
+            "rank_count",
+            "finite_observations",
+            "finite_lognormal_predictions",
+            "finite_powerlaw_predictions",
+            "lognormal_parameters",
+            "powerlaw_parameters",
+            "lognormal_rmse",
+            "powerlaw_rmse"
+          ]
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "E03",
+      "domain": "ecology",
+      "evidence_count": 3,
+      "json_count": 1,
+      "text_log_count": 1,
+      "csv_count": 1,
+      "evidence_files": [
+        {
+          "path": "repositories\\results\\E03_test1_comparison.json",
+          "filename": "E03_test1_comparison.json",
+          "extension": ".json",
+          "size_bytes": 333,
+          "json_valid": true,
+          "json_type": "list"
+        },
+        {
+          "path": "repositories\\results\\E03_test1_manifest.csv",
+          "filename": "E03_test1_manifest.csv",
+          "extension": ".csv",
+          "size_bytes": 718
+        },
+        {
+          "path": "repositories\\results\\E03_test1_packages.txt",
+          "filename": "E03_test1_packages.txt",
+          "extension": ".txt",
+          "size_bytes": 86
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "E06",
+      "domain": "ecology",
+      "evidence_count": 4,
+      "json_count": 0,
+      "text_log_count": 3,
+      "csv_count": 1,
+      "evidence_files": [
+        {
+          "path": "repositories\\results\\E06_notebook_feasibility.csv",
+          "filename": "E06_notebook_feasibility.csv",
+          "extension": ".csv",
+          "size_bytes": 4881
+        },
+        {
+          "path": "repositories\\results\\E06_test1_after_seaborn_log.txt",
+          "filename": "E06_test1_after_seaborn_log.txt",
+          "extension": ".txt",
+          "size_bytes": 600
+        },
+        {
+          "path": "repositories\\results\\E06_test1_baseline_log.txt",
+          "filename": "E06_test1_baseline_log.txt",
+          "extension": ".txt",
+          "size_bytes": 424
+        },
+        {
+          "path": "repositories\\results\\E06_test1_recovery_log.txt",
+          "filename": "E06_test1_recovery_log.txt",
+          "extension": ".txt",
+          "size_bytes": 207
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "E07",
+      "domain": "ecology",
+      "evidence_count": 9,
+      "json_count": 8,
+      "text_log_count": 0,
+      "csv_count": 1,
+      "evidence_files": [
+        {
+          "path": "repositories\\results\\E07_consolidated_evidence.json",
+          "filename": "E07_consolidated_evidence.json",
+          "extension": ".json",
+          "size_bytes": 622,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "component",
+            "test",
+            "baseline_status",
+            "baseline_failure",
+            "recovery_status",
+            "recovered_dependency",
+            "installed_version",
+            "synthetic_fixture_points",
+            "output_shape",
+            "shape_validation",
+            "coordinate_validation",
+            "original_source_unchanged",
+            "overall_function_validation",
+            "separate_training_syntax_repair",
+            "full_training_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_download_record.json",
+          "filename": "E07_download_record.json",
+          "extension": ".json",
+          "size_bytes": 327,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "title",
+            "doi",
+            "filename",
+            "sha256",
+            "md5",
+            "integrity_verified",
+            "screening_status"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_master_evidence_row.csv",
+          "filename": "E07_master_evidence_row.csv",
+          "extension": ".csv",
+          "size_bytes": 411
+        },
+        {
+          "path": "repositories\\results\\E07_original_source_syntax_audit.json",
+          "filename": "E07_original_source_syntax_audit.json",
+          "extension": ".json",
+          "size_bytes": 16756,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "total_files",
+            "syntax_pass",
+            "syntax_fail",
+            "records"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_runtime_readiness.json",
+          "filename": "E07_runtime_readiness.json",
+          "extension": ".json",
+          "size_bytes": 417,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "component",
+            "import_roots",
+            "runtime_executed"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_test1_syntax_repair.json",
+          "filename": "E07_test1_syntax_repair.json",
+          "extension": ".json",
+          "size_bytes": 531,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "component",
+            "file",
+            "original_sha256",
+            "baseline_syntax",
+            "baseline_error",
+            "candidate_repair_syntax",
+            "candidate_repair_error",
+            "repair_description",
+            "original_archive_modified",
+            "runtime_execution_tested"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_test2_read_las_baseline.json",
+          "filename": "E07_test2_read_las_baseline.json",
+          "extension": ".json",
+          "size_bytes": 744,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "component",
+            "original_file",
+            "original_sha256",
+            "dependencies_detected",
+            "test_input",
+            "original_source_modified",
+            "execution_status",
+            "exit_code",
+            "elapsed_seconds",
+            "stdout",
+            "stderr"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_test2_read_las_recovery.json",
+          "filename": "E07_test2_read_las_recovery.json",
+          "extension": ".json",
+          "size_bytes": 652,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "component",
+            "function",
+            "baseline_status",
+            "baseline_exit_code",
+            "missing_dependency",
+            "version_before",
+            "version_after",
+            "installation_exit_code",
+            "recovery_status",
+            "recovery_exit_code",
+            "recovery_elapsed_seconds",
+            "original_source_modified",
+            "input_type",
+            "stdout",
+            "stderr"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_third_layer_screening.json",
+          "filename": "E07_third_layer_screening.json",
+          "extension": ".json",
+          "size_bytes": 1937,
+          "json_valid": true,
+          "json_type": "list"
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "E08",
+      "domain": "ecology",
+      "evidence_count": 34,
+      "json_count": 33,
+      "text_log_count": 0,
+      "csv_count": 1,
+      "evidence_files": [
+        {
+          "path": "results\\E08_original_results_inspection.json",
+          "filename": "E08_original_results_inspection.json",
+          "extension": ".json",
+          "size_bytes": 2017,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "notebook",
+            "findings",
+            "publication_results_compared"
+          ]
+        },
+        {
+          "path": "results\\E08_recovered_coefficients.csv",
+          "filename": "E08_recovered_coefficients.csv",
+          "extension": ".csv",
+          "size_bytes": 704
+        },
+        {
+          "path": "results\\E08_recovered_scientific_results.json",
+          "filename": "E08_recovered_scientific_results.json",
+          "extension": ".json",
+          "size_bytes": 1365,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "execution_status",
+            "scientific_stage",
+            "pde",
+            "metrics",
+            "library_terms",
+            "coefficients",
+            "original_scientific_code_modified",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "results\\E08_reproduction_comparison.json",
+          "filename": "E08_reproduction_comparison.json",
+          "extension": ".json",
+          "size_bytes": 1199,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "notebook_sha256",
+            "comparison",
+            "all_displayed_results_match",
+            "comparison_basis",
+            "published_paper_independently_verified",
+            "original_notebook_modified"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_candidate_metadata.json",
+          "filename": "E08_candidate_metadata.json",
+          "extension": ".json",
+          "size_bytes": 1327,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "candidate_id",
+            "zenodo_record_id",
+            "title",
+            "publication_date",
+            "doi",
+            "files",
+            "eligibility_status"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_external_source_availability.json",
+          "filename": "E08_external_source_availability.json",
+          "extension": ".json",
+          "size_bytes": 837,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "external_sources",
+            "original_notebook_modified",
+            "external_code_executed",
+            "external_code_downloaded_to_disk"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_helper_source_investigation.json",
+          "filename": "E08_helper_source_investigation.json",
+          "extension": ".json",
+          "size_bytes": 1395,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "repository",
+            "repository_status",
+            "default_branch",
+            "current_commit",
+            "matching_files",
+            "helper_history",
+            "errors",
+            "external_code_executed"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_historical_helper_recovery.json",
+          "filename": "E08_historical_helper_recovery.json",
+          "extension": ".json",
+          "size_bytes": 837,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "repository",
+            "requested_commit",
+            "resolved_commit",
+            "historical_files",
+            "recovered_helper",
+            "source_executed",
+            "original_notebook_modified"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_historical_source_compatibility.json",
+          "filename": "E08_historical_source_compatibility.json",
+          "extension": ".json",
+          "size_bytes": 2700,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "historical_commit",
+            "historical_sources",
+            "wsindy_version_comparison",
+            "source_executed",
+            "original_notebook_modified"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_kde_import_order_test.json",
+          "filename": "E08_kde_import_order_test.json",
+          "extension": ".json",
+          "size_bytes": 3478,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "orders",
+            "original_data_sha256",
+            "scientific_operation",
+            "original_notebook_modified",
+            "environment_modified",
+            "unsafe_duplicate_runtime_override_used",
+            "full_notebook_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_kde_operation_diagnostic.json",
+          "filename": "E08_kde_operation_diagnostic.json",
+          "extension": ".json",
+          "size_bytes": 1646,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "selected_cells",
+            "instrumented_kde_call_sites",
+            "notebook_sha256",
+            "execution",
+            "original_notebook_modified",
+            "environment_modified",
+            "unsafe_openmp_override_used",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_model_fitting_inspection.json",
+          "filename": "E08_model_fitting_inspection.json",
+          "extension": ".json",
+          "size_bytes": 8454,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "notebook_sha256",
+            "inspected_cells",
+            "scientific_code_executed",
+            "original_notebook_modified",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_model_prerequisite_inspection.json",
+          "filename": "E08_model_prerequisite_inspection.json",
+          "extension": ".json",
+          "size_bytes": 26163,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "notebook_cells_inspected",
+            "matching_cells",
+            "original_notebook_modified",
+            "scientific_code_executed"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_notebook_screening.json",
+          "filename": "E08_notebook_screening.json",
+          "extension": ".json",
+          "size_bytes": 1527,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "zenodo_record_id",
+            "files",
+            "all_checksums_verified",
+            "notebook_total_cells",
+            "code_cells",
+            "markdown_cells",
+            "import_roots",
+            "syntax_failures",
+            "runtime_executed",
+            "eligibility_status"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_numerical_runtime_isolation.json",
+          "filename": "E08_numerical_runtime_isolation.json",
+          "extension": ".json",
+          "size_bytes": 2878,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "tests",
+            "original_notebook_modified",
+            "environment_modified",
+            "unsafe_openmp_override_used",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_openmp_diagnostic.json",
+          "filename": "E08_openmp_diagnostic.json",
+          "extension": ".json",
+          "size_bytes": 7243,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "python",
+            "packages",
+            "diagnostics",
+            "environment_modified",
+            "unsafe_duplicate_runtime_override_used",
+            "scientific_model_executed"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_openmp_failure_isolation.json",
+          "filename": "E08_openmp_failure_isolation.json",
+          "extension": ".json",
+          "size_bytes": 2327,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "stages",
+            "original_notebook_modified",
+            "environment_modified",
+            "unsafe_openmp_override_used",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_runtime_readiness.json",
+          "filename": "E08_runtime_readiness.json",
+          "extension": ".json",
+          "size_bytes": 3121,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "python_version",
+            "python_executable",
+            "dependencies",
+            "code_cells",
+            "external_resource_references",
+            "original_notebook_modified",
+            "notebook_executed",
+            "assessment"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_scientific_workflow_inspection.json",
+          "filename": "E08_scientific_workflow_inspection.json",
+          "extension": ".json",
+          "size_bytes": 50589,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "workflow_cells",
+            "notebook_executed",
+            "original_notebook_modified"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test10_potential_library.json",
+          "filename": "E08_test10_potential_library.json",
+          "extension": ".json",
+          "size_bytes": 2997,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "executed_additional_cell",
+            "expected_terms",
+            "notebook_sha256",
+            "execution",
+            "original_notebook_modified",
+            "scientific_calculations_modified",
+            "model_fitting_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test11_sparse_model_fitting.json",
+          "filename": "E08_test11_sparse_model_fitting.json",
+          "extension": ".json",
+          "size_bytes": 4014,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "additional_cells",
+            "notebook_sha256",
+            "execution",
+            "original_notebook_modified",
+            "scientific_calculations_modified",
+            "model_fitting_attempted",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test12_utf8_model_fitting.json",
+          "filename": "E08_test12_utf8_model_fitting.json",
+          "extension": ".json",
+          "size_bytes": 4255,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "test",
+            "status",
+            "exit_code",
+            "elapsed_seconds",
+            "stdout",
+            "stderr",
+            "scientific_code_modified",
+            "published_results_reproduced"
+          ],
+          "status": "PASS"
+        },
+        {
+          "path": "repositories\\results\\E08_test1_data_path_recovery.json",
+          "filename": "E08_test1_data_path_recovery.json",
+          "extension": ".json",
+          "size_bytes": 2349,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "original_notebook_sha256",
+            "original_notebook_modified",
+            "baseline",
+            "local_path_recovery",
+            "source_change",
+            "full_notebook_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test2_dependency_import.json",
+          "filename": "E08_test2_dependency_import.json",
+          "extension": ".json",
+          "size_bytes": 2691,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "python_version",
+            "historical_commit",
+            "source_copies",
+            "baseline",
+            "installation",
+            "recovery",
+            "symengine_version_after_test",
+            "original_notebook_modified",
+            "full_notebook_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test3_data_preparation.json",
+          "filename": "E08_test3_data_preparation.json",
+          "extension": ".json",
+          "size_bytes": 1109,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "selected_cells",
+            "modification",
+            "notebook_sha256",
+            "original_notebook_modified",
+            "execution",
+            "wsindy_model_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test3_data_preparation_corrected.json",
+          "filename": "E08_test3_data_preparation_corrected.json",
+          "extension": ".json",
+          "size_bytes": 1160,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "selected_notebook_cells",
+            "scientific_code_changed_from_previous_test",
+            "validation_changed",
+            "previous_failure_classification",
+            "corrected_script_sha256",
+            "execution",
+            "original_notebook_modified",
+            "wsindy_model_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test4_kde_interpolation.json",
+          "filename": "E08_test4_kde_interpolation.json",
+          "extension": ".json",
+          "size_bytes": 1331,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "selected_notebook_cells",
+            "modification",
+            "notebook_sha256",
+            "execution",
+            "original_notebook_modified",
+            "wsindy_model_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test5_original_kde_recovery.json",
+          "filename": "E08_test5_original_kde_recovery.json",
+          "extension": ".json",
+          "size_bytes": 1626,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "selected_original_cells",
+            "recovery",
+            "environment_settings",
+            "original_notebook_sha256",
+            "original_data_sha256",
+            "execution",
+            "original_notebook_modified",
+            "scientific_calculations_modified",
+            "unsafe_duplicate_runtime_override_used",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test6_wsindy_initialization.json",
+          "filename": "E08_test6_wsindy_initialization.json",
+          "extension": ".json",
+          "size_bytes": 1763,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "selected_cells",
+            "historical_source_commit",
+            "notebook_sha256",
+            "data_sha256",
+            "execution",
+            "original_notebook_modified",
+            "scientific_model_fitting_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test7_library_construction.json",
+          "filename": "E08_test7_library_construction.json",
+          "extension": ".json",
+          "size_bytes": 2150,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "selected_cells",
+            "notebook_sha256",
+            "data_sha256",
+            "execution",
+            "original_notebook_modified",
+            "model_fitting_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test7_library_construction_corrected.json",
+          "filename": "E08_test7_library_construction_corrected.json",
+          "extension": ".json",
+          "size_bytes": 2082,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "correction",
+            "original_script_sha256",
+            "corrected_script_sha256",
+            "execution",
+            "archived_notebook_modified",
+            "scientific_calculations_modified",
+            "model_fitting_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test8_library_matrix_validation.json",
+          "filename": "E08_test8_library_matrix_validation.json",
+          "extension": ".json",
+          "size_bytes": 2664,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "source_script_sha256",
+            "validation_script_sha256",
+            "execution",
+            "original_notebook_modified",
+            "scientific_calculations_modified",
+            "model_fitting_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test9_trimmed_library.json",
+          "filename": "E08_test9_trimmed_library.json",
+          "extension": ".json",
+          "size_bytes": 2445,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "executed_additional_cells",
+            "notebook_sha256",
+            "execution",
+            "original_notebook_modified",
+            "scientific_calculations_modified",
+            "model_fitting_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_threading_recovery_test.json",
+          "filename": "E08_threading_recovery_test.json",
+          "extension": ".json",
+          "size_bytes": 3050,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "test",
+            "original_data_sha256",
+            "configurations",
+            "original_notebook_modified",
+            "packages_modified",
+            "unsafe_duplicate_runtime_override_used",
+            "published_results_reproduced"
+          ]
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "E10",
+      "domain": "ecology",
+      "evidence_count": 13,
+      "json_count": 13,
+      "text_log_count": 0,
+      "csv_count": 0,
+      "evidence_files": [
+        {
+          "path": "results\\E10_auc_corrected_validation.json",
+          "filename": "E10_auc_corrected_validation.json",
+          "extension": ".json",
+          "size_bytes": 1076,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "test_type",
+            "source_sha256",
+            "original_function_source",
+            "results",
+            "previous_test_issue",
+            "research_source_modified",
+            "full_workflow_executed",
+            "published_results_reproduced"
+          ]
+        },
+        {
+          "path": "results\\E10_auc_function_validation.json",
+          "filename": "E10_auc_function_validation.json",
+          "extension": ".json",
+          "size_bytes": 1354,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "source_sha256",
+            "function",
+            "original_function_source",
+            "results",
+            "full_workflow_executed",
+            "published_results_reproduced",
+            "note"
+          ]
+        },
+        {
+          "path": "results\\E10_consolidated_assessment.json",
+          "filename": "E10_consolidated_assessment.json",
+          "extension": ".json",
+          "size_bytes": 1852,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "generated_at_utc",
+            "summary",
+            "evidence_files"
+          ]
+        },
+        {
+          "path": "results\\E10_data_availability.json",
+          "filename": "E10_data_availability.json",
+          "extension": ".json",
+          "size_bytes": 3336,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "doi",
+            "zenodo_file_inventory",
+            "archived_data_model_files",
+            "literal_source_references",
+            "execution_attempted",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\E10_dependency_readiness.json",
+          "filename": "E10_dependency_readiness.json",
+          "extension": ".json",
+          "size_bytes": 3703,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "python_version",
+            "operating_system",
+            "dependencies",
+            "source_reports",
+            "execution_attempted",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\E10_external_data_investigation.json",
+          "filename": "E10_external_data_investigation.json",
+          "extension": ".json",
+          "size_bytes": 1602,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "doi",
+            "description",
+            "related_identifiers",
+            "external_links",
+            "access_right",
+            "license",
+            "keywords",
+            "execution_attempted",
+            "note"
+          ]
+        },
+        {
+          "path": "results\\E10_function_execution.json",
+          "filename": "E10_function_execution.json",
+          "extension": ".json",
+          "size_bytes": 2504,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "test_type",
+            "records",
+            "full_scientific_workflow_executed",
+            "published_results_reproduced",
+            "note"
+          ]
+        },
+        {
+          "path": "results\\E10_function_testability.json",
+          "filename": "E10_function_testability.json",
+          "extension": ".json",
+          "size_bytes": 1560,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "assessment",
+            "files",
+            "research_code_executed",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\E10_import_baseline.json",
+          "filename": "E10_import_baseline.json",
+          "extension": ".json",
+          "size_bytes": 3739,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "test_type",
+            "python_executable",
+            "results",
+            "research_scripts_executed",
+            "packages_installed",
+            "note"
+          ]
+        },
+        {
+          "path": "results\\E10_independence_audit.json",
+          "filename": "E10_independence_audit.json",
+          "extension": ".json",
+          "size_bytes": 500,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "target_python_files",
+            "comparison_python_files",
+            "matches",
+            "exact_or_ast_duplicate_detected",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\E10_initial_screening.json",
+          "filename": "E10_initial_screening.json",
+          "extension": ".json",
+          "size_bytes": 996,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "record_id",
+            "title",
+            "publication_date",
+            "doi",
+            "python_files",
+            "execution_attempted",
+            "independence_verified",
+            "eligibility_confirmed"
+          ]
+        },
+        {
+          "path": "results\\E10_runtime_requirements.json",
+          "filename": "E10_runtime_requirements.json",
+          "extension": ".json",
+          "size_bytes": 20287,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "test_type",
+            "files",
+            "research_scripts_executed",
+            "packages_installed",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\E10_source_audit.json",
+          "filename": "E10_source_audit.json",
+          "extension": ".json",
+          "size_bytes": 4010,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "doi",
+            "source_files_audited",
+            "files",
+            "all_syntax_pass",
+            "all_files_distinct_by_sha256",
+            "execution_attempted",
+            "note"
+          ]
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "H01",
+      "domain": "hydrology",
+      "evidence_count": 3,
+      "json_count": 0,
+      "text_log_count": 3,
+      "csv_count": 0,
+      "evidence_files": [
+        {
+          "path": "repositories\\results\\H01_test1_baseline_log.txt",
+          "filename": "H01_test1_baseline_log.txt",
+          "extension": ".txt",
+          "size_bytes": 190
+        },
+        {
+          "path": "repositories\\results\\H01_test1_packages.txt",
+          "filename": "H01_test1_packages.txt",
+          "extension": ".txt",
+          "size_bytes": 248
+        },
+        {
+          "path": "repositories\\results\\H01_test1_with_dependencies_log.txt",
+          "filename": "H01_test1_with_dependencies_log.txt",
+          "extension": ".txt",
+          "size_bytes": 1165
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "H02",
+      "domain": "hydrology",
+      "evidence_count": 8,
+      "json_count": 1,
+      "text_log_count": 7,
+      "csv_count": 0,
+      "evidence_files": [
+        {
+          "path": "repositories\\results\\H02_test1_after_fvcore_log.txt",
+          "filename": "H02_test1_after_fvcore_log.txt",
+          "extension": ".txt",
+          "size_bytes": 1935
+        },
+        {
+          "path": "repositories\\results\\H02_test1_after_simplejson_log.txt",
+          "filename": "H02_test1_after_simplejson_log.txt",
+          "extension": ".txt",
+          "size_bytes": 1045
+        },
+        {
+          "path": "repositories\\results\\H02_test1_baseline_log.txt",
+          "filename": "H02_test1_baseline_log.txt",
+          "extension": ".txt",
+          "size_bytes": 1439
+        },
+        {
+          "path": "repositories\\results\\H02_test1_cpu_5d_recovery_log.txt",
+          "filename": "H02_test1_cpu_5d_recovery_log.txt",
+          "extension": ".txt",
+          "size_bytes": 951
+        },
+        {
+          "path": "repositories\\results\\H02_test1_cpu_forward_pass_log.txt",
+          "filename": "H02_test1_cpu_forward_pass_log.txt",
+          "extension": ".txt",
+          "size_bytes": 583
+        },
+        {
+          "path": "repositories\\results\\H02_test1_cpu_pythonpath_recovery_log.txt",
+          "filename": "H02_test1_cpu_pythonpath_recovery_log.txt",
+          "extension": ".txt",
+          "size_bytes": 1963
+        },
+        {
+          "path": "repositories\\results\\H02_test1_readme_recovery_log.txt",
+          "filename": "H02_test1_readme_recovery_log.txt",
+          "extension": ".txt",
+          "size_bytes": 13509
+        },
+        {
+          "path": "repositories\\results\\H02_test1_validation.json",
+          "filename": "H02_test1_validation.json",
+          "extension": ".json",
+          "size_bytes": 1614,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "archive_id",
+            "project",
+            "domain",
+            "publication_year",
+            "archive_sha256",
+            "test_runner_sha256",
+            "original_model_source_unchanged",
+            "python_executable",
+            "pytorch_version",
+            "execution_device",
+            "baseline_cli_success",
+            "recovered_cli_success",
+            "selected_workflow",
+            "selected_workflow_success",
+            "input_shape",
+            "latent_shape",
+            "output_shape",
+            "output_values_finite",
+            "forward_pass_seconds",
+            "total_subprocess_seconds",
+            "dependency_interventions",
+            "test_harness_corrections",
+            "limitations",
+            "evidence_log"
+          ]
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "H03",
+      "domain": "hydrology",
+      "evidence_count": 5,
+      "json_count": 1,
+      "text_log_count": 4,
+      "csv_count": 0,
+      "evidence_files": [
+        {
+          "path": "repositories\\results\\H03_test1_after_sklearn_log.txt",
+          "filename": "H03_test1_after_sklearn_log.txt",
+          "extension": ".txt",
+          "size_bytes": 1553
+        },
+        {
+          "path": "repositories\\results\\H03_test1_baseline_log.txt",
+          "filename": "H03_test1_baseline_log.txt",
+          "extension": ".txt",
+          "size_bytes": 462
+        },
+        {
+          "path": "repositories\\results\\H03_test1_filename_recovery_probe.txt",
+          "filename": "H03_test1_filename_recovery_probe.txt",
+          "extension": ".txt",
+          "size_bytes": 211
+        },
+        {
+          "path": "repositories\\results\\H03_test1_resource_limited_log.txt",
+          "filename": "H03_test1_resource_limited_log.txt",
+          "extension": ".txt",
+          "size_bytes": 260
+        },
+        {
+          "path": "repositories\\results\\H03_test1_summary.json",
+          "filename": "H03_test1_summary.json",
+          "extension": ".json",
+          "size_bytes": 1129,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "repository_id",
+            "domain",
+            "script",
+            "dataset_rows",
+            "dataset_columns",
+            "missing_values",
+            "original_script_sha256",
+            "resource_limited_script_sha256",
+            "baseline_status",
+            "dependency_recovery_status",
+            "filename_recovery_status",
+            "resource_limited_status",
+            "partial_output",
+            "workflow_completed",
+            "result_reproduced",
+            "classification",
+            "recovery_interventions",
+            "limitations"
+          ],
+          "classification": "partial_execution_computational_limit"
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "H05",
+      "domain": "hydrology",
+      "evidence_count": 21,
+      "json_count": 5,
+      "text_log_count": 16,
+      "csv_count": 0,
+      "evidence_files": [
+        {
+          "path": "repositories\\results\\H05_control_environment_creation_log.txt",
+          "filename": "H05_control_environment_creation_log.txt",
+          "extension": ".txt",
+          "size_bytes": 6840
+        },
+        {
+          "path": "repositories\\results\\H05_environment_creation_log.txt",
+          "filename": "H05_environment_creation_log.txt",
+          "extension": ".txt",
+          "size_bytes": 5195
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_203_clone_log.txt",
+          "filename": "H05_pandas_203_clone_log.txt",
+          "extension": ".txt",
+          "size_bytes": 6828
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_203_install_log.txt",
+          "filename": "H05_pandas_203_install_log.txt",
+          "extension": ".txt",
+          "size_bytes": 8581
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_203_packages.txt",
+          "filename": "H05_pandas_203_packages.txt",
+          "extension": ".txt",
+          "size_bytes": 1091
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_203_summary.json",
+          "filename": "H05_pandas_203_summary.json",
+          "extension": ".json",
+          "size_bytes": 609,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "repository_id",
+            "experiment_id",
+            "repository",
+            "selected_test",
+            "python",
+            "pandas",
+            "pytest",
+            "tests_collected",
+            "tests_passed",
+            "tests_failed",
+            "exit_code",
+            "elapsed_seconds",
+            "source_modified",
+            "published_results_reproduced",
+            "human_recovery_time_measured",
+            "interpretation"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_203_test_log.txt",
+          "filename": "H05_pandas_203_test_log.txt",
+          "extension": ".txt",
+          "size_bytes": 910
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_control_install_log.txt",
+          "filename": "H05_pandas_control_install_log.txt",
+          "extension": ".txt",
+          "size_bytes": 9058
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_control_packages.txt",
+          "filename": "H05_pandas_control_packages.txt",
+          "extension": ".txt",
+          "size_bytes": 1091
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_control_summary.json",
+          "filename": "H05_pandas_control_summary.json",
+          "extension": ".json",
+          "size_bytes": 1044,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "repository_id",
+            "experiment_id",
+            "repository",
+            "selected_test",
+            "intervention",
+            "recovery_environment",
+            "controlled_environment",
+            "failed_tests",
+            "passed_tests",
+            "confirmed_error",
+            "classification",
+            "interpretation",
+            "published_results_reproduced",
+            "human_remediation_time_measured"
+          ],
+          "classification": "dependency_api_incompatibility"
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_control_test_log.txt",
+          "filename": "H05_pandas_control_test_log.txt",
+          "extension": ".txt",
+          "size_bytes": 9909
+        },
+        {
+          "path": "repositories\\results\\H05_recovery_dependencies_log.txt",
+          "filename": "H05_recovery_dependencies_log.txt",
+          "extension": ".txt",
+          "size_bytes": 7080
+        },
+        {
+          "path": "repositories\\results\\H05_recovery_packages.txt",
+          "filename": "H05_recovery_packages.txt",
+          "extension": ".txt",
+          "size_bytes": 1130
+        },
+        {
+          "path": "repositories\\results\\H05_test1_after_pytest_log.txt",
+          "filename": "H05_test1_after_pytest_log.txt",
+          "extension": ".txt",
+          "size_bytes": 867
+        },
+        {
+          "path": "repositories\\results\\H05_test1_after_ruamel_log.txt",
+          "filename": "H05_test1_after_ruamel_log.txt",
+          "extension": ".txt",
+          "size_bytes": 2265
+        },
+        {
+          "path": "repositories\\results\\H05_test1_after_xarray_log.txt",
+          "filename": "H05_test1_after_xarray_log.txt",
+          "extension": ".txt",
+          "size_bytes": 9569
+        },
+        {
+          "path": "repositories\\results\\H05_test1_baseline_log.txt",
+          "filename": "H05_test1_baseline_log.txt",
+          "extension": ".txt",
+          "size_bytes": 190
+        },
+        {
+          "path": "repositories\\results\\H05_test1_compatibility_assessment.json",
+          "filename": "H05_test1_compatibility_assessment.json",
+          "extension": ".json",
+          "size_bytes": 778,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "repository_id",
+            "test_id",
+            "repository",
+            "selected_test",
+            "python_version",
+            "pandas_version",
+            "xarray_version",
+            "pytest_version",
+            "tests_collected",
+            "tests_passed",
+            "tests_failed",
+            "baseline_failure",
+            "subsequent_barriers",
+            "confirmed_compatibility_errors",
+            "classification",
+            "recovery_status",
+            "published_results_reproduced",
+            "human_recovery_time_measured"
+          ],
+          "classification": "dependency_api_incompatibility"
+        },
+        {
+          "path": "repositories\\results\\H05_test1_final_summary.json",
+          "filename": "H05_test1_final_summary.json",
+          "extension": ".json",
+          "size_bytes": 1217,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "repository_id",
+            "test_id",
+            "repository",
+            "selected_workflow",
+            "original_source_sha256",
+            "source_modified",
+            "modern_environment",
+            "recovery_environment",
+            "recovery_method",
+            "environment_creation_seconds",
+            "dependency_installation_seconds",
+            "final_test_execution_seconds",
+            "recorded_machine_seconds",
+            "human_remediation_time_measured",
+            "selected_tests_recovered",
+            "full_repository_reproduced",
+            "published_research_results_reproduced",
+            "causal_limitation"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_test1_recovery_environment_log.txt",
+          "filename": "H05_test1_recovery_environment_log.txt",
+          "extension": ".txt",
+          "size_bytes": 914
+        },
+        {
+          "path": "repositories\\results\\H05_version_comparison.json",
+          "filename": "H05_version_comparison.json",
+          "extension": ".json",
+          "size_bytes": 387,
+          "json_valid": true,
+          "json_type": "list"
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "H06",
+      "domain": "hydrology",
+      "evidence_count": 1,
+      "json_count": 1,
+      "text_log_count": 0,
+      "csv_count": 0,
+      "evidence_files": [
+        {
+          "path": "repositories\\results\\H06_assessment.json",
+          "filename": "H06_assessment.json",
+          "extension": ".json",
+          "size_bytes": 865,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "repository_id",
+            "domain",
+            "repository_name",
+            "archive_files",
+            "python_files",
+            "dependency_manifest_found",
+            "research_dataset_files_detected",
+            "model_checkpoints_detected",
+            "external_inputs_required",
+            "models",
+            "execution_attempted",
+            "full_workflow_completed",
+            "published_results_reproduced",
+            "classification",
+            "limitations"
+          ],
+          "classification": "not_tested_external_data_dependency"
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "H07",
+      "domain": "hydrology",
+      "evidence_count": 14,
+      "json_count": 14,
+      "text_log_count": 0,
+      "csv_count": 0,
+      "evidence_files": [
+        {
+          "path": "results\\H07_complete_syntax_recovery.json",
+          "filename": "H07_complete_syntax_recovery.json",
+          "extension": ".json",
+          "size_bytes": 13655,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "archive_sha256",
+            "python_files_total",
+            "original_syntax_pass",
+            "recovered_syntax_pass",
+            "text_replacements",
+            "records",
+            "generated_at_utc",
+            "original_archive_modified",
+            "recovered_source_written",
+            "runtime_execution_attempted",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\H07_consolidated_assessment.json",
+          "filename": "H07_consolidated_assessment.json",
+          "extension": ".json",
+          "size_bytes": 3021,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "archived_version",
+            "archive_year",
+            "archive_doi",
+            "research_domain",
+            "syntax",
+            "dependencies",
+            "scientific_execution",
+            "classification",
+            "research_interpretation",
+            "evidence_files",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H07_dependency_audit.json",
+          "filename": "H07_dependency_audit.json",
+          "extension": ".json",
+          "size_bytes": 4469,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "doi",
+            "publication_date",
+            "archive_filename",
+            "archive_sha256",
+            "archive_md5",
+            "archive_size",
+            "zenodo_checksum",
+            "setup_source",
+            "test_imports",
+            "archive_extracted",
+            "research_code_executed",
+            "dependencies_installed",
+            "note"
+          ]
+        },
+        {
+          "path": "results\\H07_independence_audit.json",
+          "filename": "H07_independence_audit.json",
+          "extension": ".json",
+          "size_bytes": 1413,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "audit_type",
+            "h07_python_files",
+            "other_archives_checked",
+            "other_python_files_compared",
+            "exact_matches",
+            "structural_matches",
+            "source_level_distinctness_supported",
+            "original_archives_modified",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H07_infiltration_numerical_repeatability.json",
+          "filename": "H07_infiltration_numerical_repeatability.json",
+          "extension": ".json",
+          "size_bytes": 4915,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "test_type",
+            "runs",
+            "repeatability_identical",
+            "source_sha256",
+            "original_archive_modified",
+            "scientific_source_modified",
+            "generated_at_utc",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\H07_infiltration_source_inspection.json",
+          "filename": "H07_infiltration_source_inspection.json",
+          "extension": ".json",
+          "size_bytes": 2842,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "test_type",
+            "records",
+            "original_archive_modified",
+            "source_executed",
+            "dependencies_installed",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\H07_initial_screening.json",
+          "filename": "H07_initial_screening.json",
+          "extension": ".json",
+          "size_bytes": 2696,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "candidate_id",
+            "zenodo_record_id",
+            "doi",
+            "publication_date",
+            "archive",
+            "archive_size",
+            "total_entries",
+            "python_files",
+            "dependency_files",
+            "test_files",
+            "source_code_executed",
+            "archive_extracted",
+            "candidate_status",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\H07_original_infiltration_execution.json",
+          "filename": "H07_original_infiltration_execution.json",
+          "extension": ".json",
+          "size_bytes": 1340,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "test_type",
+            "process_status",
+            "outcome",
+            "original_source_sha256",
+            "archive_sha256",
+            "generated_at_utc",
+            "original_archive_modified",
+            "archived_test_source_modified",
+            "dependencies_installed",
+            "execution_method",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\H07_runtime_dependency_baseline.json",
+          "filename": "H07_runtime_dependency_baseline.json",
+          "extension": ".json",
+          "size_bytes": 2586,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "test_type",
+            "python_version",
+            "dependencies",
+            "imports_passed",
+            "imports_total",
+            "generated_at_utc",
+            "original_archive_modified",
+            "pytopkapi_imported",
+            "dependencies_installed",
+            "scientific_workflow_executed",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\H07_scientific_test_screening.json",
+          "filename": "H07_scientific_test_screening.json",
+          "extension": ".json",
+          "size_bytes": 6513,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "test_type",
+            "test_files",
+            "original_archive_modified",
+            "original_code_executed",
+            "dependencies_installed",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\H07_syntax_dependency_baseline.json",
+          "filename": "H07_syntax_dependency_baseline.json",
+          "extension": ".json",
+          "size_bytes": 5193,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "python_version",
+            "syntax_results",
+            "syntax_pass",
+            "syntax_total",
+            "dependencies",
+            "source_code_executed",
+            "dependencies_installed",
+            "generated_at_utc",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\H07_syntax_failure_investigation.json",
+          "filename": "H07_syntax_failure_investigation.json",
+          "extension": ".json",
+          "size_bytes": 6291,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "investigation",
+            "records",
+            "source_modified",
+            "source_executed",
+            "dependencies_installed",
+            "note"
+          ]
+        },
+        {
+          "path": "results\\H07_syntax_recovery.json",
+          "filename": "H07_syntax_recovery.json",
+          "extension": ".json",
+          "size_bytes": 2678,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "test_type",
+            "records",
+            "original_archive_modified",
+            "patched_files_written",
+            "original_code_executed",
+            "dependency_installation_attempted",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\H07_syntax_recovery_step115.json",
+          "filename": "H07_syntax_recovery_step115.json",
+          "extension": ".json",
+          "size_bytes": 3652,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "test_type",
+            "records",
+            "original_archive_modified",
+            "patched_files_written",
+            "source_code_executed",
+            "dependencies_installed",
+            "limitations"
+          ]
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "H08",
+      "domain": "hydrology",
+      "evidence_count": 15,
+      "json_count": 15,
+      "text_log_count": 0,
+      "csv_count": 0,
+      "evidence_files": [
+        {
+          "path": "results\\H08_archive_metadata_screening.json",
+          "filename": "H08_archive_metadata_screening.json",
+          "extension": ".json",
+          "size_bytes": 1598,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "candidate_id",
+            "record_id",
+            "title",
+            "doi",
+            "publication_date",
+            "resource_type",
+            "creators",
+            "description",
+            "files",
+            "candidate_status",
+            "generated_at_utc",
+            "archive_downloaded",
+            "source_executed",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\H08_ast_match_investigation.json",
+          "filename": "H08_ast_match_investigation.json",
+          "extension": ".json",
+          "size_bytes": 6299,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "audit_type",
+            "matches",
+            "total_matches",
+            "small_trivial_candidates",
+            "other_matches",
+            "independence_decision",
+            "limitations",
+            "original_archives_modified",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H08_candidate_discovery.json",
+          "filename": "H08_candidate_discovery.json",
+          "extension": ".json",
+          "size_bytes": 38745,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "candidate_id",
+            "research_domain",
+            "search_queries",
+            "records",
+            "total_unique_records",
+            "generated_at_utc",
+            "source_code_downloaded",
+            "source_code_executed",
+            "candidate_selected",
+            "limitations"
+          ]
+        },
+        {
+          "path": "results\\H08_consolidated_assessment.json",
+          "filename": "H08_consolidated_assessment.json",
+          "extension": ".json",
+          "size_bytes": 2634,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "archive_year",
+            "zenodo_record",
+            "doi",
+            "archive_sha256",
+            "archive_integrity_verified",
+            "syntax_assessment",
+            "dependency_assessment",
+            "original_test_assessment",
+            "execution_method",
+            "classification",
+            "full_package_execution",
+            "scientific_results_reproduction",
+            "recovery_actions",
+            "source_modification",
+            "dependency_installation_for_test",
+            "evidence_files",
+            "limitations",
+            "generated_at_utc"
+          ],
+          "classification": "PARTIALLY_EXECUTABLE_COMPONENT_LEVEL"
+        },
+        {
+          "path": "results\\H08_dependency_availability.json",
+          "filename": "H08_dependency_availability.json",
+          "extension": ".json",
+          "size_bytes": 4656,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "python_version",
+            "dependency_records",
+            "discoverable_count",
+            "missing_count",
+            "source_executed",
+            "dependencies_installed",
+            "original_archive_modified",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H08_final_independence_classification.json",
+          "filename": "H08_final_independence_classification.json",
+          "extension": ".json",
+          "size_bytes": 1127,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "doi",
+            "source_independence",
+            "executability",
+            "candidate_sample_position",
+            "sample_membership",
+            "publication_independence",
+            "limitations",
+            "evidence_files",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H08_independence_audit.json",
+          "filename": "H08_independence_audit.json",
+          "extension": ".json",
+          "size_bytes": 5383,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "audit_type",
+            "target_archive",
+            "target_python_files",
+            "other_archives_compared",
+            "other_python_files_compared",
+            "exact_matches",
+            "ast_matches",
+            "comparisons",
+            "source_level_distinctness_supported",
+            "publication_level_independence",
+            "limitations",
+            "original_archives_modified",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H08_initial_archive_inspection.json",
+          "filename": "H08_initial_archive_inspection.json",
+          "extension": ".json",
+          "size_bytes": 4704,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "zenodo_record",
+            "doi",
+            "archive_path",
+            "archive_size_bytes",
+            "archive_md5",
+            "archive_sha256",
+            "size_matches_zenodo",
+            "md5_matches_zenodo",
+            "zip_integrity_pass",
+            "total_files",
+            "python_files",
+            "test_files",
+            "dependency_files",
+            "extension_counts",
+            "archive_extracted",
+            "source_executed",
+            "original_archive_modified",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H08_original_prms_record_execution.json",
+          "filename": "H08_original_prms_record_execution.json",
+          "extension": ".json",
+          "size_bytes": 2204,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "test_type",
+            "process_return_code",
+            "outcome",
+            "source_sha256",
+            "archive_sha256",
+            "execution_method",
+            "original_archive_modified",
+            "archived_test_source_modified",
+            "scientific_source_modified",
+            "dependencies_installed",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H08_original_test_screening.json",
+          "filename": "H08_original_test_screening.json",
+          "extension": ".json",
+          "size_bytes": 28907,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "screening_type",
+            "test_files",
+            "test_file_count",
+            "source_executed",
+            "dependencies_installed",
+            "original_archive_modified",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H08_prms_implementation_dependency_trace.json",
+          "filename": "H08_prms_implementation_dependency_trace.json",
+          "extension": ".json",
+          "size_bytes": 4783,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "inspection_type",
+            "target_classes",
+            "class_locations",
+            "implementation_files",
+            "missing_classes",
+            "original_archive_modified",
+            "source_executed",
+            "dependencies_installed",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H08_prms_record_test_inspection.json",
+          "filename": "H08_prms_record_test_inspection.json",
+          "extension": ".json",
+          "size_bytes": 6864,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "inspection_type",
+            "files",
+            "original_archive_modified",
+            "source_executed",
+            "dependencies_installed",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H08_prms_test_repeatability.json",
+          "filename": "H08_prms_test_repeatability.json",
+          "extension": ".json",
+          "size_bytes": 4389,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "experiment",
+            "repeat_count",
+            "random_seed",
+            "runs",
+            "all_original_tests_passed",
+            "supplementary_results_identical",
+            "archive_sha256",
+            "original_archive_modified",
+            "original_test_source_modified",
+            "scientific_source_modified",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H08_supporting_module_dependency_trace.json",
+          "filename": "H08_supporting_module_dependency_trace.json",
+          "extension": ".json",
+          "size_bytes": 9030,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "inspection_type",
+            "modules",
+            "source_executed",
+            "dependencies_installed",
+            "original_archive_modified",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H08_syntax_dependency_baseline.json",
+          "filename": "H08_syntax_dependency_baseline.json",
+          "extension": ".json",
+          "size_bytes": 16472,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "archive_version",
+            "archive_sha256",
+            "python_files_total",
+            "syntax_pass",
+            "syntax_fail",
+            "syntax_results",
+            "absolute_import_frequency",
+            "dependency_declarations",
+            "source_executed",
+            "dependencies_installed",
+            "original_archive_modified",
+            "limitations",
+            "generated_at_utc"
+          ]
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    },
+    {
+      "package_id": "H09",
+      "domain": "hydrology",
+      "evidence_count": 14,
+      "json_count": 14,
+      "text_log_count": 0,
+      "csv_count": 0,
+      "evidence_files": [
+        {
+          "path": "results\\H09_archive_metadata_screening.json",
+          "filename": "H09_archive_metadata_screening.json",
+          "extension": ".json",
+          "size_bytes": 1680,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "candidate_id",
+            "candidate_name",
+            "zenodo_record_id",
+            "zenodo_api_url",
+            "record_title",
+            "doi",
+            "publication_date",
+            "version",
+            "resource_type",
+            "creators",
+            "description",
+            "files",
+            "related_identifiers",
+            "candidate_status",
+            "archive_downloaded",
+            "source_executed",
+            "publication_independence",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H09_consolidated_assessment.json",
+          "filename": "H09_consolidated_assessment.json",
+          "extension": ".json",
+          "size_bytes": 2761,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "domain",
+            "archive_sha256",
+            "archive_integrity",
+            "python_syntax",
+            "dependency_availability",
+            "original_component_execution",
+            "missing_data_limitation",
+            "source_independence",
+            "execution_classification",
+            "sample_inclusion",
+            "full_package_execution_verified",
+            "scientific_reproduction_verified",
+            "dependency_recovery_performed",
+            "original_archive_modified",
+            "evidence_files",
+            "missing_optional_evidence",
+            "limitations",
+            "generated_at_utc"
+          ],
+          "execution_classification": "PARTIALLY_EXECUTABLE_COMPONENT_LEVEL",
+          "sample_inclusion": "PROVISIONALLY_INCLUDED"
+        },
+        {
+          "path": "results\\H09_dependency_availability.json",
+          "filename": "H09_dependency_availability.json",
+          "extension": ".json",
+          "size_bytes": 2431,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "python_version",
+            "archive_sha256",
+            "dependencies",
+            "dependencies_checked",
+            "discoverable",
+            "not_discoverable",
+            "dependency_imports_executed",
+            "dependencies_installed",
+            "original_archive_modified",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H09_hydrological_efficiency_inspection.json",
+          "filename": "H09_hydrological_efficiency_inspection.json",
+          "extension": ".json",
+          "size_bytes": 12975,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "archive_sha256",
+            "source_file",
+            "source_sha256",
+            "inspected_classes",
+            "source_executed",
+            "original_archive_modified",
+            "assessment",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H09_initial_archive_inspection.json",
+          "filename": "H09_initial_archive_inspection.json",
+          "extension": ".json",
+          "size_bytes": 1697,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "candidate_id",
+            "package_name",
+            "version",
+            "zenodo_record",
+            "doi",
+            "archive_path",
+            "archive_size_bytes",
+            "expected_size_bytes",
+            "size_matches",
+            "md5",
+            "expected_md5",
+            "md5_matches",
+            "sha256",
+            "zip_integrity",
+            "total_files",
+            "python_file_count",
+            "python_files",
+            "test_file_count",
+            "test_files",
+            "dependency_files",
+            "extension_counts",
+            "original_archive_modified",
+            "source_executed",
+            "candidate_status",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H09_masked_array_numerical_diagnostic.json",
+          "filename": "H09_masked_array_numerical_diagnostic.json",
+          "extension": ".json",
+          "size_bytes": 1291,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "archive_sha256",
+            "source_member",
+            "results",
+            "subprocess_returncode",
+            "subprocess_stderr",
+            "original_archive_modified",
+            "original_source_modified",
+            "full_package_execution_verified",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H09_masked_reduction_verification.json",
+          "filename": "H09_masked_reduction_verification.json",
+          "extension": ".json",
+          "size_bytes": 2952,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "version",
+            "archive_sha256",
+            "source_member",
+            "numpy_version",
+            "reduction_comparisons",
+            "independent_reference",
+            "diagnostic_results",
+            "reference_matches",
+            "original_method_sources",
+            "conclusion",
+            "original_archive_modified",
+            "historical_compatibility_tested",
+            "full_package_execution_verified",
+            "scientific_reproduction_verified",
+            "generated_at_utc"
+          ],
+          "conclusion": "In the tested NumPy environment, built-in sum propagates masked values while np.sum performs masked-aware reduction. Historical behaviour and age-related decay remain unverified."
+        },
+        {
+          "path": "results\\H09_missing_data_investigation.json",
+          "filename": "H09_missing_data_investigation.json",
+          "extension": ".json",
+          "size_bytes": 2538,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "archive_sha256",
+            "original_source_member",
+            "execution_method",
+            "results",
+            "subprocess_returncode",
+            "subprocess_stderr",
+            "original_archive_modified",
+            "full_package_execution_verified",
+            "scientific_reproduction_verified",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H09_original_efficiency_execution.json",
+          "filename": "H09_original_efficiency_execution.json",
+          "extension": ".json",
+          "size_bytes": 1435,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "archive_sha256",
+            "original_source_member",
+            "execution_method",
+            "result",
+            "subprocess_returncode",
+            "subprocess_stderr",
+            "original_archive_modified",
+            "full_package_execution_verified",
+            "scientific_reproduction_verified",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H09_original_efficiency_execution_recheck.json",
+          "filename": "H09_original_efficiency_execution_recheck.json",
+          "extension": ".json",
+          "size_bytes": 3493,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "archive_sha256",
+            "source_file",
+            "test_harness_correction",
+            "results",
+            "method_executions",
+            "method_attempts",
+            "reference_matches",
+            "subprocess_returncode",
+            "subprocess_stderr",
+            "original_archive_modified",
+            "full_package_execution_verified",
+            "scientific_reproduction_verified",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H09_original_efficiency_repeatability.json",
+          "filename": "H09_original_efficiency_repeatability.json",
+          "extension": ".json",
+          "size_bytes": 2208,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "archive_sha256",
+            "source_member",
+            "runs",
+            "successful_runs",
+            "total_runs",
+            "identical_across_runs",
+            "matches_reference",
+            "original_archive_modified",
+            "full_package_execution_verified",
+            "scientific_reproduction_verified",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H09_original_function_screening.json",
+          "filename": "H09_original_function_screening.json",
+          "extension": ".json",
+          "size_bytes": 49261,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "source_inventory",
+            "python_files",
+            "top_level_functions",
+            "classes",
+            "class_methods",
+            "source_executed",
+            "original_archive_modified",
+            "assessment",
+            "limitations",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H09_source_independence_audit.json",
+          "filename": "H09_source_independence_audit.json",
+          "extension": ".json",
+          "size_bytes": 3290,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "archive_sha256",
+            "target_python_files",
+            "comparison_archives",
+            "comparison_python_files",
+            "exact_matches",
+            "ast_matches",
+            "archive_errors",
+            "target_files",
+            "source_independence_assessment",
+            "limitations",
+            "original_archives_modified",
+            "generated_at_utc"
+          ]
+        },
+        {
+          "path": "results\\H09_syntax_dependency_baseline.json",
+          "filename": "H09_syntax_dependency_baseline.json",
+          "extension": ".json",
+          "size_bytes": 6030,
+          "json_valid": true,
+          "json_type": "dict",
+          "top_level_keys": [
+            "step",
+            "package_id",
+            "package_name",
+            "version",
+            "python_version",
+            "archive_sha256",
+            "archive_integrity_verified",
+            "python_file_count",
+            "syntax_pass",
+            "syntax_fail",
+            "python_files",
+            "notebooks",
+            "dependency_declarations",
+            "top_level_import_frequency",
+            "source_executed",
+            "dependencies_installed",
+            "original_archive_modified",
+            "limitations",
+            "generated_at_utc"
+          ]
+        }
+      ],
+      "evidence_present": true,
+      "interpretation_pending": true
+    }
+  ],
+  "limitations": [
+    "Evidence is matched by filename prefix.",
+    "Logs are indexed but not interpreted.",
+    "JSON fields are inventoried, not independently verified.",
+    "Missing candidate-prefixed evidence does not prove testing was absent.",
+    "Notebook outputs may contain additional historical evidence.",
+    "No final execution classifications are inferred."
+  ],
+  "generated_at_utc": "2026-11-11T02:33:23.942072+00:00"
+}

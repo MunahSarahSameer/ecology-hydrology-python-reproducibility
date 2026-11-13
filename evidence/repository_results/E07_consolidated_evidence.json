@@ -1,0 +1,22 @@
+{
+  "archive_id": "E07",
+  "component": "DetailView",
+  "test": "Original LAS-reading function",
+  "baseline_status": "FAIL",
+  "baseline_failure": "Missing laspy dependency",
+  "recovery_status": "PASS",
+  "recovered_dependency": "laspy",
+  "installed_version": "2.7.0",
+  "synthetic_fixture_points": 4,
+  "output_shape": [
+    4,
+    3
+  ],
+  "shape_validation": true,
+  "coordinate_validation": true,
+  "original_source_unchanged": true,
+  "overall_function_validation": true,
+  "separate_training_syntax_repair": "PASS",
+  "full_training_executed": false,
+  "published_results_reproduced": false
+}

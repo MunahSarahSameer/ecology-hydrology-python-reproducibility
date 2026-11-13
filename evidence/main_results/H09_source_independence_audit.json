@@ -1,0 +1,80 @@
+{
+  "step": 151,
+  "package_id": "H09",
+  "package_name": "swatpy",
+  "version": "v0.2",
+  "archive_sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+  "target_python_files": 8,
+  "comparison_archives": 16,
+  "comparison_python_files": 685,
+  "exact_matches": [],
+  "ast_matches": [],
+  "archive_errors": [],
+  "target_files": [
+    {
+      "file": "allixender-swatpy-0d47bfa/data/scripts/convert_from_swatcup.py",
+      "sha256": "f6096f24e4792edf63a064ad00e681c37140ed9261c1204f010a9d76fa491093",
+      "ast_sha256": "9c5faa834f7af8c01e3cb18abba9233994a2fb7dadb97f12cef359ba19b440de",
+      "ast_status": "PASS",
+      "size_bytes": 6377
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/data/scripts/main.py",
+      "sha256": "91c3c1acdd2cf91a919231daf489d882931dbac1b119ba81caa535b3bf7e1c99",
+      "ast_sha256": "685acafa36400e5997a88066bb6da24e2b8775f2bd71aaad09ce7979504b5a01",
+      "ast_status": "PASS",
+      "size_bytes": 16466
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/data/scripts/run_for.py",
+      "sha256": "3281e523def2626a8f4b9f6e4cdeea51f67ca71a64459037eec43f8d4a66fe2b",
+      "ast_sha256": "8773963d37cb6f67940cf25fc265af78ed0de3855419dafcdb6f9ef22017cd02",
+      "ast_status": "PASS",
+      "size_bytes": 17505
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/setup.py",
+      "sha256": "b585d2b12390aff62ad02004feda494c31c2a38acce58ae2f8e7561788638aff",
+      "ast_sha256": "299092df030811038f73e20aa7b17c873c7b7d524927cf812cbd1c7fee6ea62f",
+      "ast_status": "PASS",
+      "size_bytes": 1533
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/swatpy/FileEdit.py",
+      "sha256": "c03f3c6ae7f37a028bf7ed21f2458cae280678b9803b7f9f4a417dad78095c98",
+      "ast_sha256": "69d607516d357e982afccd912f4173afe8001df7f34866f64639b3cb19048efb",
+      "ast_status": "PASS",
+      "size_bytes": 36243
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/swatpy/ReadOut.py",
+      "sha256": "04ec51f3798d3ec76a72884be683398cba11434c1e420067de0bf936d8de7960",
+      "ast_sha256": "54445b5819959e8d7996ec1713dd5accda1403c0df58cdab27e4f548e05113f0",
+      "ast_status": "PASS",
+      "size_bytes": 18181
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/swatpy/SimManage.py",
+      "sha256": "fb93f7399f15b2115ee871bc3e3970ac94b9b52bedd9a7d124339b71f8255813",
+      "ast_sha256": "1e59133980f8ef7da4e4f2c3430b2548140d845fdb3182ecfe137582cf84a059",
+      "ast_status": "PASS",
+      "size_bytes": 18207
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/swatpy/__init__.py",
+      "sha256": "7e063e742103a42f141e584a842a59428c8df7abf3dafdb1e191c6a755b942b1",
+      "ast_sha256": "f9f59573e94e51b2e92379b61389d2c0c4ac8b15ba7de08b20213775bf393f10",
+      "ast_status": "PASS",
+      "size_bytes": 338
+    }
+  ],
+  "source_independence_assessment": "PENDING_MATCH_INTERPRETATION",
+  "limitations": [
+    "File-level comparison cannot detect copied code fragments.",
+    "Matching ASTs may represent trivial or empty modules.",
+    "No file matches does not prove publication independence.",
+    "Archive errors may limit comparison coverage."
+  ],
+  "original_archives_modified": false,
+  "generated_at_utc": "2026-11-11T02:28:28.449363+00:00"
+}

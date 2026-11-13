@@ -1,0 +1,119 @@
+{
+  "step": 211,
+  "generated_at_utc": "2026-11-11T23:05:12.292089+00:00",
+  "checklist_modified": false,
+  "candidates": {
+    "E01": {
+      "evidence": [
+        {
+          "file": "E01_step189_corrected_baseline.json",
+          "found": true,
+          "summary": {
+            "candidate": "E01",
+            "step": 189,
+            "test_type": "original_module_cli_help",
+            "previous_failure": "Missing package context in test harness",
+            "source_modified": false,
+            "packages_installed": false,
+            "generated_at_utc": "2026-11-11T22:35:43.134773+00:00",
+            "return_code": 0,
+            "timed_out": false,
+            "stdout": "usage: consolidate_observations.py [-h]\n                                   [--observations-folder OBSERVATIONS_FOLDER [OBSERVATIONS_FOLDER ...]]\n                                   [--destination DESTINATION]\n                                   [--species-file SPECIES_FILE]\n                                   [--min-num-observations MIN_NUM_OBSERVATIONS]\n\nConsolidate observations into single CSV file\n\noptions:\n  -h, --help            show this help message and exit\n  --observations-folder OBSERVATIONS_FOLDER [OBSERVATIONS_FOLDER ...]\n                        Base folder(s) to look for observation CSV files in\n  --destination DESTINATION\n                        Destination to save CSV file to\n  --species-file SPECIES_FILE\n                        Optional CSV species definition file with species name\n                        (and optional id) to limit to\n  --min-num-observations MIN_NUM_OBSERVATIONS\n                        Minimum number of observations required per species\n                        for it to be considered\n",
+            "stderr": "",
+            "restored_python_files": 63,
+            "outcome": "CLI_HELP_PASS"
+          }
+        },
+        {
+          "file": "E01_step191_functional_test.json",
+          "found": true,
+          "summary": {
+            "candidate": "E01",
+            "step": 191,
+            "test_type": "synthetic_observation_consolidation",
+            "source_modified": false,
+            "packages_installed": false,
+            "generated_at_utc": "2026-11-11T22:39:26.851297+00:00",
+            "return_code": 0,
+            "timed_out": false,
+            "stdout": "[species Species_C] WARNING: 2 observations required, only 1 available; species skipped.\n",
+            "stderr": "\n  0%|          | 0/3 [00:00<?, ?it/s]\n100%|##########| 3/3 [00:00<00:00, 47.89it/s]\n",
+            "checks": {
+              "command_success": true,
+              "observations_file_created": true,
+              "species_file_created": true,
+              "five_observations": true,
+              "two_species": true,
+              "correct_observation_ids": true,
+              "correct_species_names": true,
+              "correct_species_mapping": true
+            },
+            "passed_checks": 8,
+            "total_checks": 8,
+            "outcome": "PASS"
+          }
+        },
+        {
+          "file": "E01_step190_function_inspection.json",
+          "found": true,
+          "summary": {
+            "candidate": "E01",
+            "step": 190,
+            "target": "code/deepSDM/data_preparation/consolidate_observations.py",
+            "function": "consolidate_observation_files",
+            "function_source": "def consolidate_observation_files(observation_files: list,\n                                    destination: str,\n                                    species_file: Optional[str]=None,\n                                    min_num_observations: int=1) -> None:\n    '''\n        Receives a list of \"observation_files\" (paths to CSV files) and consolidates them into a\n        single CSV file. Also saves a file \"species.csv\" into the same \"destination\" folder.\n\n        If \"species_file\" is provided and pointing to a CSV file with columns \"species_name\" and\n        (optional) \"id\", consolidation will be limited to species therein. If \"id\" column is\n        missing, ids will be assigned as per position in the CSV file.\n    '''\n    parent, _ = os.path.split(destination)\n    if len(parent) > 0:\n        os.makedirs(parent, exist_ok=True)\n\n    observation_files = dict(zip(\n        [os.path.splitext(os.path.split(file)[1])[0] for file in observation_files],\n        observation_files\n    ))\n\n    # check if species file has been provided\n    manual_species_idx = None\n    if isinstance(species_file, str) and os.path.exists(species_file):\n        species_info = helpers.parse_dsv(species_file, output_format=dict)\n        assert 'species_name' in species_info, \\\n            f'ERROR: missing column \"species_name_ in file \"{species_file}\".'\n        if 'id' in species_info:\n            species_info = dict(zip(species_info['id'], species_info['species_name']))\n        else:\n            species_info = dict(zip(list(range(len(species_info['species_name']))), \\\n                                    species_info['species_name']))\n    else:\n        species_names = list(observation_files.keys())\n        species_names.sort()\n        species_info = dict(zip(list(range(len(species_names))), species_names))\n        manual_species_idx = 0\n    species_indices = list(species_info.keys())\n    species_indices.sort()\n\n\n    with open(destination, 'w', encoding='utf-8') as f_cons, \\\n        open(os.path.join(parent, 'species.csv'), 'w', encoding='utf-8') as f_s:\n        f_cons.write('id,lon,lat,species_id,is_presence\\n')\n        f_s.write('id,species_name\\n')\n\n        for species_idx in tqdm(species_indices):\n            species_name = species_info[species_idx]\n            file = observation_files[species_name]\n            species_obs = helpers.parse_dsv(file, output_format=dict)\n            species_obs = dict([key.lower(), value] for key, value in species_obs.items())\n            obs_ids = species_obs.get('id', species_obs.get('gbifid',\n                        species_obs.get('uuid', species_obs.get('gbifid_unique'))))\n            if len(obs_ids) < min_num_observations:\n                print(f'[species {species_name}] WARNING: {min_num_observations} observations ' + \\\n                      f'required, only {len(obs_ids)} available; species skipped.')\n                continue\n            final_idx = species_idx\n            if manual_species_idx is not None:\n                final_idx = manual_species_idx\n                manual_species_idx += 1\n            f_s.write(f'{final_idx},{species_name}\\n')\n            for l_idx, obs_id in enumerate(obs_ids):\n                f_cons.write(f'{obs_id},{species_obs[\"lon\"][l_idx]},' + \\\n                    f'{species_obs[\"lat\"][l_idx]},{final_idx},1\\n')",
+            "execution_attempted": false,
+            "generated_at_utc": "2026-11-11T22:37:44.782748+00:00"
+          }
+        }
+      ],
+      "historical_baseline": "UNKNOWN"
+    },
+    "H06": {
+      "evidence": [
+        {
+          "file": "H06_step193_execution_target_discovery.json",
+          "found": true,
+          "summary": {
+            "candidate": "H06",
+            "step": 193,
+            "execution_attempted": false,
+            "generated_at_utc": "2026-11-11T22:41:47.926091+00:00"
+          }
+        },
+        {
+          "file": "H06_step194_metric_inspection.json",
+          "found": true,
+          "summary": {
+            "candidate": "H06",
+            "step": 194,
+            "archive": "S4D_rainfall_runoff_simulations.zip",
+            "target": "S4D_rainfall_runoff_simulations-main/analysis/performance_functions.py",
+            "execution_attempted": false,
+            "generated_at_utc": "2026-11-11T22:43:14.108598+00:00"
+          }
+        },
+        {
+          "file": "H06_step195_metric_execution.json",
+          "found": true,
+          "summary": {
+            "candidate": "H06",
+            "step": 195,
+            "source": "S4D_rainfall_runoff_simulations-main/analysis/performance_functions.py",
+            "original_source_modified": false,
+            "dependencies_installed": false,
+            "return_code": 0,
+            "timed_out": false,
+            "stdout": "{\"checks\": {\"perfect_nse\": {\"actual\": 1.0, \"expected\": 1.0, \"pass\": true}, \"perfect_kge\": {\"actual\": 1.0, \"expected\": 1.0, \"pass\": true}, \"perfect_bias\": {\"actual\": 0.0, \"expected\": 0.0, \"pass\": true}, \"imperfect_nse\": {\"actual\": 0.6, \"expected\": 0.6, \"pass\": true}, \"imperfect_kge\": {\"actual\": 0.6812315526372372, \"expected\": 0.6812315526372372, \"pass\": true}, \"imperfect_bias\": {\"actual\": 0.0, \"expected\": 0.0, \"pass\": true}, \"negative_value_filtering\": {\"actual\": 1.0, \"expected\": 1.0, \"pass\": true}, \"seed_specific_column\": {\"actual\": 1.0, \"expected\": 1.0, \"pass\": true}}, \"passed\": 8, \"total\": 8}\n",
+            "stderr": "",
+            "generated_at_utc": "2026-11-11T22:45:06.926945+00:00",
+            "passed": 8,
+            "total": 8,
+            "outcome": "PASS"
+          }
+        }
+      ],
+      "historical_baseline": "NOT_ATTEMPTED"
+    }
+  }
+}

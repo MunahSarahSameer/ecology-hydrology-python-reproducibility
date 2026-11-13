@@ -1,0 +1,84 @@
+{
+  "step": 150,
+  "package_id": "H09",
+  "package_name": "swatpy",
+  "version": "v0.2",
+  "archive_sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+  "source_member": "allixender-swatpy-0d47bfa/swatpy/ReadOut.py",
+  "runs": [
+    {
+      "run": 1,
+      "returncode": 0,
+      "stderr": "",
+      "module_load": "PASS",
+      "numpy_version": "2.4.6",
+      "nash": 0.9,
+      "agr": 0.972972972972973,
+      "nash_finite": true,
+      "agr_finite": true,
+      "execution": "PASS"
+    },
+    {
+      "run": 2,
+      "returncode": 0,
+      "stderr": "",
+      "module_load": "PASS",
+      "numpy_version": "2.4.6",
+      "nash": 0.9,
+      "agr": 0.972972972972973,
+      "nash_finite": true,
+      "agr_finite": true,
+      "execution": "PASS"
+    },
+    {
+      "run": 3,
+      "returncode": 0,
+      "stderr": "",
+      "module_load": "PASS",
+      "numpy_version": "2.4.6",
+      "nash": 0.9,
+      "agr": 0.972972972972973,
+      "nash_finite": true,
+      "agr_finite": true,
+      "execution": "PASS"
+    },
+    {
+      "run": 4,
+      "returncode": 0,
+      "stderr": "",
+      "module_load": "PASS",
+      "numpy_version": "2.4.6",
+      "nash": 0.9,
+      "agr": 0.972972972972973,
+      "nash_finite": true,
+      "agr_finite": true,
+      "execution": "PASS"
+    },
+    {
+      "run": 5,
+      "returncode": 0,
+      "stderr": "",
+      "module_load": "PASS",
+      "numpy_version": "2.4.6",
+      "nash": 0.9,
+      "agr": 0.972972972972973,
+      "nash_finite": true,
+      "agr_finite": true,
+      "execution": "PASS"
+    }
+  ],
+  "successful_runs": 5,
+  "total_runs": 5,
+  "identical_across_runs": true,
+  "matches_reference": true,
+  "original_archive_modified": false,
+  "full_package_execution_verified": false,
+  "scientific_reproduction_verified": false,
+  "limitations": [
+    "Two distinct original methods were repeated five times.",
+    "Tests used synthetic complete observations.",
+    "The file-reading constructor was bypassed.",
+    "Repeatability does not establish full SWAT2012 model reproduction."
+  ],
+  "generated_at_utc": "2026-11-11T02:27:13.374176+00:00"
+}

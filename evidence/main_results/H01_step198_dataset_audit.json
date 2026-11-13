@@ -1,0 +1,219 @@
+{
+  "candidate": "H01",
+  "step": 198,
+  "execution_attempted": false,
+  "archives": [
+    {
+      "archive": "Data and codes.zip",
+      "data_files": [
+        {
+          "path": "Data and codes/data/daily_streamflow_HUM.xlsx",
+          "size_bytes": 296564
+        },
+        {
+          "path": "Data and codes/data/daily_streamflow_NAT.xlsx",
+          "size_bytes": 368825
+        },
+        {
+          "path": "Data and codes/data/daily_streamflow_OBS.xlsx",
+          "size_bytes": 271627
+        },
+        {
+          "path": "Data and codes/data/daily_streamflow_RES.xlsx",
+          "size_bytes": 284212
+        },
+        {
+          "path": "Data and codes/data/Irrigation.xlsx",
+          "size_bytes": 13384
+        },
+        {
+          "path": "Data and codes/data/monthly_streamflow_HUM.xlsx",
+          "size_bytes": 37029
+        },
+        {
+          "path": "Data and codes/data/monthly_streamflow_NAT.xlsx",
+          "size_bytes": 48543
+        },
+        {
+          "path": "Data and codes/data/monthly_streamflow_OBS.xlsx",
+          "size_bytes": 45605
+        },
+        {
+          "path": "Data and codes/data/monthly_streamflow_RES.xlsx",
+          "size_bytes": 48510
+        },
+        {
+          "path": "Data and codes/data/Xingzi_station_water_level.xlsx",
+          "size_bytes": 26523
+        },
+        {
+          "path": "Data and codes/readme_说明.txt",
+          "size_bytes": 657
+        }
+      ],
+      "external_path_references": [
+        {
+          "source_file": "Data and codes/codes/Fig. 11_poyang_impact.py",
+          "reference": "E:/All1study/1irragation/compute/星子水位变化模拟.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 11_poyang_impact.py",
+          "reference": "E:/All1study/1irragation/compute/星子水位变化模拟.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 2_monthly_streamflow.py",
+          "reference": "E:/All1study/1irragation/compute/逐月径流模拟结果_天然.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 2_monthly_streamflow.py",
+          "reference": "E:/All1study/1irragation/compute/逐月径流模拟结果_人类.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 2_monthly_streamflow.py",
+          "reference": "E:/All1study/1irragation/compute/逐月实测径流数据绘图.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 2_monthly_streamflow.py",
+          "reference": "E:/All1study/1irragation/compute/逐月径流模拟结果_天然.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 2_monthly_streamflow.py",
+          "reference": "E:/All1study/1irragation/compute/逐月径流模拟结果_人类.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 2_monthly_streamflow.py",
+          "reference": "E:/All1study/1irragation/compute/逐月实测径流数据绘图.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 3_daily_streamflow.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_天然.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 3_daily_streamflow.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_人类.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 3_daily_streamflow.py",
+          "reference": "E:/All1study/1irragation/compute/逐日实测径流数据绘图.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 3_daily_streamflow.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_天然.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 3_daily_streamflow.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_人类.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 3_daily_streamflow.py",
+          "reference": "E:/All1study/1irragation/compute/逐日实测径流数据绘图.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 6_irrigation.py",
+          "reference": "E:/All1study/1irragation/compute/灌溉水量模拟结果.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 6_irrigation.py",
+          "reference": "E:/All1study/1irragation/compute/灌溉水量模拟结果.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 7_poyang_simulation.py",
+          "reference": "E:/All1study/paper/1irrigation_WRRnew/compute/星子水位变化模拟.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 7_poyang_simulation.py",
+          "reference": "E:/All1study/paper/1irrigation_WRRnew/compute/星子水位变化模拟.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 8_multiyear_streamflow_impact.py",
+          "reference": "E:/All1study/1irragation/compute/逐月径流模拟结果_天然.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 8_multiyear_streamflow_impact.py",
+          "reference": "E:/All1study/1irragation/compute/逐月径流模拟结果_人类.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 8_multiyear_streamflow_impact.py",
+          "reference": "E:/All1study/1irragation/compute/逐月径流模拟结果_水库.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 8_multiyear_streamflow_impact.py",
+          "reference": "E:/All1study/1irragation/compute/逐月实测径流数据绘图.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 8_multiyear_streamflow_impact.py",
+          "reference": "E:/All1study/1irragation/compute/逐月径流模拟结果_天然.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 8_multiyear_streamflow_impact.py",
+          "reference": "E:/All1study/1irragation/compute/逐月径流模拟结果_人类.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 8_multiyear_streamflow_impact.py",
+          "reference": "E:/All1study/1irragation/compute/逐月径流模拟结果_水库.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 8_multiyear_streamflow_impact.py",
+          "reference": "E:/All1study/1irragation/compute/逐月实测径流数据绘图.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 9_flood.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_天然.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 9_flood.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_人类.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 9_flood.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_水库.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 9_flood.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_天然.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 9_flood.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_人类.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. 9_flood.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_水库.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. S5_flood_events.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_天然.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. S5_flood_events.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_人类.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. S5_flood_events.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_水库.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. S5_flood_events.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_天然.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. S5_flood_events.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_人类.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. S5_flood_events.py",
+          "reference": "E:/All1study/1irragation/compute/逐日径流模拟结果_水库.xls"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. S5_flood_impact.py",
+          "reference": "E:/All1study/1irragation/compute/大通洪水统计值.xlsx"
+        },
+        {
+          "source_file": "Data and codes/codes/Fig. S5_flood_impact.py",
+          "reference": "E:/All1study/1irragation/compute/大通洪水统计值.xls"
+        }
+      ]
+    }
+  ],
+  "generated_at_utc": "2026-11-11T22:50:35.590576+00:00"
+}

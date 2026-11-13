@@ -1,0 +1,22 @@
+{
+  "archive_id": "E08",
+  "repository": "SethMinor/PyWSINDy-for-PDEs",
+  "requested_commit": "d43b25a6106b",
+  "resolved_commit": "d43b25a6106b0d459f44948b1f05e3e6e162312e",
+  "historical_files": [
+    "Deprecated/WSINDy.ipynb",
+    "Deprecated/wsindy.py",
+    "helper_fcns.py",
+    "wsindy.py",
+    "wsindy_examples.ipynb"
+  ],
+  "recovered_helper": {
+    "historical_path": "helper_fcns.py",
+    "commit": "d43b25a6106b0d459f44948b1f05e3e6e162312e",
+    "sha256": "05d813af6b1f87d3d05ea4f9dc060ee5b0a70302751c7f5f6186028e97f30796",
+    "size_bytes": 4782,
+    "local_file": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\external_sources\\helper_fcns_d43b25a6106b.py"
+  },
+  "source_executed": false,
+  "original_notebook_modified": false
+}

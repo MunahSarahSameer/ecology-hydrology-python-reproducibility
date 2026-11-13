@@ -1,0 +1,271 @@
+{
+  "step": 171,
+  "records": [
+    {
+      "package_id": "E01",
+      "candidate_doi": "10.5281/zenodo.13986364",
+      "local_filename": "code.zip",
+      "local_md5": "f44cfdb2eeb9c60f3b3643341f44540d",
+      "local_sha256": "5965a9254dfe5aba382f8c6b28508955edae407d1e94e3185c382c8654a4b439",
+      "zenodo_record_id": "13986364",
+      "zenodo_title": "Data and code for manuscript: The performance and potential of deep learning for predicting species distributions",
+      "zenodo_publication_date": "2024-10-24",
+      "zenodo_doi": "10.5281/zenodo.13986364",
+      "zenodo_files": [
+        {
+          "filename": "data.zip",
+          "checksum": "md5:f5ded5e23fafbf5b60dea0a27e8ff2c1",
+          "size": 82450220
+        },
+        {
+          "filename": "code.zip",
+          "checksum": "md5:f44cfdb2eeb9c60f3b3643341f44540d",
+          "size": 3687724
+        }
+      ],
+      "matching_zenodo_files": [
+        {
+          "filename": "code.zip",
+          "checksum": "md5:f44cfdb2eeb9c60f3b3643341f44540d",
+          "size": 3687724
+        }
+      ],
+      "checksum_match": true,
+      "verification_status": "ZENODO_CHECKSUM_MATCH",
+      "error": null
+    },
+    {
+      "package_id": "E02",
+      "candidate_doi": "10.5281/zenodo.20623700",
+      "local_filename": "is_niches.zip",
+      "local_md5": "911c397405dd3fcd6bd9607c89b4261e",
+      "local_sha256": "2d59a8fbd841d0685a23f4849b70e5127df14b876457d9395b5292075d55b7f5",
+      "zenodo_record_id": "20623700",
+      "zenodo_title": "Characterizing the ecological niche of insertion sequences",
+      "zenodo_publication_date": "2026-06-10",
+      "zenodo_doi": "10.5281/zenodo.20623700",
+      "zenodo_files": [
+        {
+          "filename": "is_niches.zip",
+          "checksum": "md5:911c397405dd3fcd6bd9607c89b4261e",
+          "size": 66293378
+        }
+      ],
+      "matching_zenodo_files": [
+        {
+          "filename": "is_niches.zip",
+          "checksum": "md5:911c397405dd3fcd6bd9607c89b4261e",
+          "size": 66293378
+        }
+      ],
+      "checksum_match": true,
+      "verification_status": "ZENODO_CHECKSUM_MATCH",
+      "error": null
+    },
+    {
+      "package_id": "E03",
+      "candidate_doi": "10.5281/zenodo.21440293",
+      "local_filename": "FermentomeII_package_code.zip",
+      "local_md5": "7fe33f4cc681380e16014e491f6376ad",
+      "local_sha256": "e68a186a507d8036b7b63f750c702ba3f780fcc7724be2fc19cb4f09097349b3",
+      "zenodo_record_id": "21440293",
+      "zenodo_title": "Ecological role structures community function more than species identity in synthetic sourdough communities",
+      "zenodo_publication_date": "2026-07-19",
+      "zenodo_doi": "10.5281/zenodo.21440293",
+      "zenodo_files": [
+        {
+          "filename": "FermentomeII_package_code.zip",
+          "checksum": "md5:7fe33f4cc681380e16014e491f6376ad",
+          "size": 11379435
+        }
+      ],
+      "matching_zenodo_files": [
+        {
+          "filename": "FermentomeII_package_code.zip",
+          "checksum": "md5:7fe33f4cc681380e16014e491f6376ad",
+          "size": 11379435
+        }
+      ],
+      "checksum_match": true,
+      "verification_status": "ZENODO_CHECKSUM_MATCH",
+      "error": null
+    },
+    {
+      "package_id": "E07",
+      "candidate_doi": "10.5281/zenodo.14650218",
+      "local_filename": "FORspecies20K.zip",
+      "local_md5": "89d21d969c2c113a43a5d23e3e928e74",
+      "local_sha256": "d92ba64f52d6ee2c3927c21926adf1d6878438da46445f0b5f6370fb5a762300",
+      "zenodo_record_id": "14650218",
+      "zenodo_title": "FOR-species20K code",
+      "zenodo_publication_date": "2025-01-15",
+      "zenodo_doi": "10.5281/zenodo.14650218",
+      "zenodo_files": [
+        {
+          "filename": "FORspecies20K.zip",
+          "checksum": "md5:89d21d969c2c113a43a5d23e3e928e74",
+          "size": 20117984
+        }
+      ],
+      "matching_zenodo_files": [
+        {
+          "filename": "FORspecies20K.zip",
+          "checksum": "md5:89d21d969c2c113a43a5d23e3e928e74",
+          "size": 20117984
+        }
+      ],
+      "checksum_match": true,
+      "verification_status": "ZENODO_CHECKSUM_MATCH",
+      "error": null
+    },
+    {
+      "package_id": "H01",
+      "candidate_doi": "10.5281/zenodo.13756951",
+      "local_filename": "Data and codes.zip",
+      "local_md5": "dc01eba075f26841eb077fb5448026e0",
+      "local_sha256": "c2d553af0e4e09c48b295861da6afc95afa051adeb46371abaa035b65d5eb4ac",
+      "zenodo_record_id": "13756951",
+      "zenodo_title": "Data and codes",
+      "zenodo_publication_date": "2024-09-13",
+      "zenodo_doi": "10.5281/zenodo.13756951",
+      "zenodo_files": [
+        {
+          "filename": "Data and codes.zip",
+          "checksum": "md5:dc01eba075f26841eb077fb5448026e0",
+          "size": 1399022
+        }
+      ],
+      "matching_zenodo_files": [
+        {
+          "filename": "Data and codes.zip",
+          "checksum": "md5:dc01eba075f26841eb077fb5448026e0",
+          "size": 1399022
+        }
+      ],
+      "checksum_match": true,
+      "verification_status": "ZENODO_CHECKSUM_MATCH",
+      "error": null
+    },
+    {
+      "package_id": "H02",
+      "candidate_doi": "10.5281/zenodo.10953060",
+      "local_filename": "FloodSformer-v1.0.1.zip",
+      "local_md5": "abe91a55e889febd6cc47af06a943fde",
+      "local_sha256": "d2eb9e48371bc33d81a9342caa9a320abde455d311ce9964ea8a34bdcd7ffb24",
+      "zenodo_record_id": "10953060",
+      "zenodo_title": "FloodSformer: Python code",
+      "zenodo_publication_date": "2024-04-10",
+      "zenodo_doi": "10.5281/zenodo.10953060",
+      "zenodo_files": [
+        {
+          "filename": "mpianforini/FloodSformer-v1.0.1.zip",
+          "checksum": "md5:abe91a55e889febd6cc47af06a943fde",
+          "size": 3753224
+        }
+      ],
+      "matching_zenodo_files": [
+        {
+          "filename": "mpianforini/FloodSformer-v1.0.1.zip",
+          "checksum": "md5:abe91a55e889febd6cc47af06a943fde",
+          "size": 3753224
+        }
+      ],
+      "checksum_match": true,
+      "verification_status": "ZENODO_CHECKSUM_MATCH",
+      "error": null
+    },
+    {
+      "package_id": "H07",
+      "candidate_doi": "10.5281/zenodo.820640",
+      "local_filename": "PyTOPKAPI-v0.4.0-original.zip",
+      "local_md5": "3bb8903df5b7a30a8dd9d4cdf0d74459",
+      "local_sha256": "a48773b6b044dd2b4f01ddeb62b8ffbacd84f04dba7effd1644f102fb537e159",
+      "zenodo_record_id": "820640",
+      "zenodo_title": "PyTOPKAPI v0.4.0",
+      "zenodo_publication_date": "2017-06-28",
+      "zenodo_doi": "10.5281/zenodo.820640",
+      "zenodo_files": [
+        {
+          "filename": "sahg/PyTOPKAPI-v0.4.0.zip",
+          "checksum": "md5:3bb8903df5b7a30a8dd9d4cdf0d74459",
+          "size": 8000741
+        }
+      ],
+      "matching_zenodo_files": [
+        {
+          "filename": "sahg/PyTOPKAPI-v0.4.0.zip",
+          "checksum": "md5:3bb8903df5b7a30a8dd9d4cdf0d74459",
+          "size": 8000741
+        }
+      ],
+      "checksum_match": true,
+      "verification_status": "ZENODO_CHECKSUM_MATCH",
+      "error": null
+    },
+    {
+      "package_id": "H08",
+      "candidate_doi": "10.5281/zenodo.6468426",
+      "local_filename": "pygflow_1.0.2-original.zip",
+      "local_md5": "75e7c270dcd85e6a2ad81246663cf56e",
+      "local_sha256": "ebbc960c11470056493b1c82ae461f266f333240e1ec6dcc4c85ba9e0f10568b",
+      "zenodo_record_id": "6468426",
+      "zenodo_title": "Integrated hydrologic model development and postprocessing for GSFLOW using pyGSFLOW",
+      "zenodo_publication_date": "2022-04-18",
+      "zenodo_doi": "10.5281/zenodo.6468426",
+      "zenodo_files": [
+        {
+          "filename": "pygflow_1.0.2.zip",
+          "checksum": "md5:75e7c270dcd85e6a2ad81246663cf56e",
+          "size": 23908624
+        }
+      ],
+      "matching_zenodo_files": [
+        {
+          "filename": "pygflow_1.0.2.zip",
+          "checksum": "md5:75e7c270dcd85e6a2ad81246663cf56e",
+          "size": 23908624
+        }
+      ],
+      "checksum_match": true,
+      "verification_status": "ZENODO_CHECKSUM_MATCH",
+      "error": null
+    },
+    {
+      "package_id": "H09",
+      "candidate_doi": "10.5281/zenodo.6322023",
+      "local_filename": "swatpy-v0.2-original.zip",
+      "local_md5": "3a6b85ef18b40093334f62c1d88e6cd9",
+      "local_sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+      "zenodo_record_id": "6322023",
+      "zenodo_title": "swatpy: A set of python modules to work with SWAT2012 models",
+      "zenodo_publication_date": "2022-03-02",
+      "zenodo_doi": "10.5281/zenodo.6322023",
+      "zenodo_files": [
+        {
+          "filename": "allixender/swatpy-v0.2.zip",
+          "checksum": "md5:3a6b85ef18b40093334f62c1d88e6cd9",
+          "size": 2049625
+        }
+      ],
+      "matching_zenodo_files": [
+        {
+          "filename": "allixender/swatpy-v0.2.zip",
+          "checksum": "md5:3a6b85ef18b40093334f62c1d88e6cd9",
+          "size": 2049625
+        }
+      ],
+      "checksum_match": true,
+      "verification_status": "ZENODO_CHECKSUM_MATCH",
+      "error": null
+    }
+  ],
+  "notes": [
+    "Records retrieved from the public Zenodo API.",
+    "Checksum matches are based on exact local and published MD5 values.",
+    "DOI metadata alone does not establish source identity.",
+    "An unmatched checksum does not necessarily mean unrelated code.",
+    "No original ZIP files or metadata were modified.",
+    "Archive publication dates are not dates of scientific-result reproduction."
+  ],
+  "generated_at_utc": "2026-11-11T02:58:47.003057+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "archive_id": "E08",
+  "test": "External research source availability",
+  "external_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/main/wsindy.py",
+      "cell_index": 3,
+      "available": true,
+      "http_status": 200,
+      "size_bytes": 13619,
+      "sha256": "336df558ff0ced7023c123e9c86627b7bb09907a97eb6e7ef9bd3e1f90976092",
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/main/helper_fcns.py",
+      "cell_index": 3,
+      "available": false,
+      "http_status": 404,
+      "size_bytes": null,
+      "sha256": null,
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "original_notebook_modified": false,
+  "external_code_executed": false,
+  "external_code_downloaded_to_disk": false
+}

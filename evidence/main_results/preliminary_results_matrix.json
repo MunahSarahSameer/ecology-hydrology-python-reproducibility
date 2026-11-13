@@ -1,0 +1,166 @@
+{
+  "step": 158,
+  "sample_size": 15,
+  "ecology_candidates": 7,
+  "hydrology_candidates": 8,
+  "records": [
+    {
+      "package_id": "E01",
+      "domain": "ecology",
+      "repository_name": "DeepSDM",
+      "preliminary_classification": "NOT_VERIFIED",
+      "evidence_basis": "No candidate-prefixed test evidence located",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "E02",
+      "domain": "ecology",
+      "repository_name": "is_niches",
+      "preliminary_classification": "SELECTED_CELLS_EXECUTABLE",
+      "evidence_basis": "First four notebook code cells executed successfully",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "E03",
+      "domain": "ecology",
+      "repository_name": "FermentomeII",
+      "preliminary_classification": "OUTPUT_AGREEMENT_DEMONSTRATED",
+      "evidence_basis": "Two generated CSV files matched saved reference outputs",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "E06",
+      "domain": "ecology",
+      "repository_name": "Code_Figures",
+      "preliminary_classification": "RECOVERED_RUNNER_SCOPE_UNVERIFIED",
+      "evidence_basis": "Recovery log exit code 0; scientific output not yet assessed",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "E07",
+      "domain": "ecology",
+      "repository_name": "FORspecies20K",
+      "preliminary_classification": "RECOVERED_COMPONENT_EXECUTION",
+      "evidence_basis": "laspy recovery and separate syntax repair demonstrated",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "E08",
+      "domain": "ecology",
+      "repository_name": "WSINDy",
+      "preliminary_classification": "RECOVERED_NOTEBOOK_OUTPUTS",
+      "evidence_basis": "Six saved notebook outputs matched after helper recovery",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "E10",
+      "domain": "ecology",
+      "repository_name": "Environmental models",
+      "preliminary_classification": "PARTIAL_COMPONENT_EXECUTION",
+      "evidence_basis": "Selected functions passed; full workflow unverified",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H01",
+      "domain": "hydrology",
+      "repository_name": "Hydrology plotting code",
+      "preliminary_classification": "BLOCKED_EXTERNAL_DATA_PATH",
+      "evidence_basis": "Missing Excel file after matplotlib dependency recovery",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H02",
+      "domain": "hydrology",
+      "repository_name": "FloodSformer",
+      "preliminary_classification": "RECOVERED_COMPONENT_EXECUTION",
+      "evidence_basis": "Synthetic CPU autoencoder forward pass successful",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H03",
+      "domain": "hydrology",
+      "repository_name": "Hydrological controls",
+      "preliminary_classification": "PARTIAL_EXECUTION_TIMEOUT",
+      "evidence_basis": "Dependency and filename recovery; full search timed out",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H05",
+      "domain": "hydrology",
+      "repository_name": "NeuralHydrology",
+      "preliminary_classification": "DEPENDENCY_API_INCOMPATIBILITY",
+      "evidence_basis": "Controlled pandas version comparison demonstrated",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H06",
+      "domain": "hydrology",
+      "repository_name": "S4D",
+      "preliminary_classification": "EXECUTION_NOT_ATTEMPTED",
+      "evidence_basis": "Required datasets and checkpoints not available",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H07",
+      "domain": "hydrology",
+      "repository_name": "PyTOPKAPI",
+      "preliminary_classification": "PARTIAL_COMPONENT_EXECUTION",
+      "evidence_basis": "Two original Green-Ampt infiltration tests passed",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H08",
+      "domain": "hydrology",
+      "repository_name": "pyGSFLOW",
+      "preliminary_classification": "PARTIAL_COMPONENT_EXECUTION",
+      "evidence_basis": "Four original PRMS record tests passed",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H09",
+      "domain": "hydrology",
+      "repository_name": "swatpy",
+      "preliminary_classification": "PARTIAL_COMPONENT_EXECUTION",
+      "evidence_basis": "Two original efficiency methods passed repeated tests",
+      "classification_final": false,
+      "full_workflow_reproduced": "NOT_VERIFIED",
+      "published_results_reproduced": "NOT_VERIFIED"
+    }
+  ],
+  "limitations": [
+    "All classifications are provisional.",
+    "The classification categories are descriptive, not mutually exclusive.",
+    "Full-workflow execution and published-results reproduction are not established by component tests.",
+    "Human recovery effort has not been measured consistently.",
+    "Repository age has not been linked statistically to execution outcomes."
+  ],
+  "generated_at_utc": "2026-11-11T02:38:40.312948+00:00"
+}

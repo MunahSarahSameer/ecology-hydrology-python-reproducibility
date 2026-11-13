@@ -1,0 +1,27 @@
+{
+  "repository_id": "H05",
+  "test_id": "H05_test1",
+  "repository": "NeuralHydrology v1.2.3",
+  "selected_test": "test/test_datautils.py",
+  "python_version": "3.11.18",
+  "pandas_version": "3.1.0",
+  "xarray_version": "2026.9.0",
+  "pytest_version": "9.2.0",
+  "tests_collected": 3,
+  "tests_passed": 0,
+  "tests_failed": 3,
+  "baseline_failure": "pytest not installed",
+  "subsequent_barriers": [
+    "Missing ruamel.yaml",
+    "Missing xarray"
+  ],
+  "confirmed_compatibility_errors": [
+    "Invalid frequency: 1H",
+    "Invalid frequency: 48H",
+    "Invalid frequency: 1A"
+  ],
+  "classification": "dependency_api_incompatibility",
+  "recovery_status": "pending",
+  "published_results_reproduced": false,
+  "human_recovery_time_measured": false
+}

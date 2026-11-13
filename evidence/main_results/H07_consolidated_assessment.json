@@ -1,0 +1,71 @@
+{
+  "step": 122,
+  "package_id": "H07",
+  "package_name": "PyTOPKAPI",
+  "archived_version": "0.4.0",
+  "archive_year": 2017,
+  "archive_doi": "10.5281/zenodo.820640",
+  "research_domain": "hydrology",
+  "syntax": {
+    "python_files_total": 29,
+    "original_pass": 27,
+    "original_fail": 2,
+    "recovered_pass": 29,
+    "recovery_text_replacements": 4,
+    "files_requiring_recovery": 2
+  },
+  "dependencies": {
+    "tested": 5,
+    "available": [
+      "numpy",
+      "scipy",
+      "networkx"
+    ],
+    "unavailable": [
+      "h5py",
+      "GDAL (osgeo)"
+    ],
+    "note": "Missing dependencies are environment gaps, not confirmed incompatibilities."
+  },
+  "scientific_execution": {
+    "component": "Green-Ampt infiltration",
+    "original_tests_passed": 2,
+    "original_tests_total": 2,
+    "source_modified": false,
+    "basic_infiltration_value": 3.167213728940331,
+    "basic_absolute_error": 1.0596687971542451e-09,
+    "variable_rainfall_max_absolute_error": 8.881784197001252e-16,
+    "variable_rainfall_matches_expected": true,
+    "repeatability_runs": 3,
+    "numerically_identical_across_runs": true
+  },
+  "classification": {
+    "code_available": true,
+    "original_archive_fully_syntax_valid": false,
+    "syntax_recovery_demonstrated": true,
+    "scientific_component_executable": true,
+    "whole_package_executable": "NOT VERIFIED",
+    "published_results_reproduced": "NOT VERIFIED",
+    "temporal_code_decay_proven": false
+  },
+  "research_interpretation": "The archived PyTOPKAPI package contains Python syntax failures and has missing dependencies in the current environment. Nevertheless, its original Green-Ampt infiltration implementation passed two archived scientific tests without source modifications and produced identical numerical results across three independent subprocess executions. This demonstrates component-level executability, not whole-package executability or reproduction of published results.",
+  "evidence_files": {
+    "dependency_audit": "H07_dependency_audit.json",
+    "syntax_baseline": "H07_syntax_dependency_baseline.json",
+    "syntax_recovery": "H07_complete_syntax_recovery.json",
+    "runtime_dependencies": "H07_runtime_dependency_baseline.json",
+    "test_screening": "H07_scientific_test_screening.json",
+    "original_execution": "H07_original_infiltration_execution.json",
+    "repeatability": "H07_infiltration_numerical_repeatability.json"
+  },
+  "limitations": [
+    "Only two original infiltration tests were executed.",
+    "The complete PyTOPKAPI package was not imported.",
+    "No complete hydrological simulation was performed.",
+    "The three runs used the same software environment.",
+    "The numerical expectations came from archived tests.",
+    "The source syntax defects cannot automatically be attributed to age-related code decay.",
+    "The four syntax corrections were tested in memory only."
+  ],
+  "generated_at_utc": "2026-11-11T01:43:08.654308+00:00"
+}

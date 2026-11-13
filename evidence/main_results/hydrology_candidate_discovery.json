@@ -1,0 +1,388 @@
+{
+  "step": 109,
+  "domain": "hydrology",
+  "queries": [
+    "hydrology Python",
+    "rainfall runoff Python",
+    "streamflow modelling Python"
+  ],
+  "candidates": [
+    {
+      "record_id": "47209",
+      "title": "ulmo",
+      "date": "2016-02-02",
+      "doi": "10.5281/zenodo.47209",
+      "python_files": [],
+      "archives": [
+        "ulmo-0.8.2.zip"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "15498851",
+      "title": "SMASH v1.1.0",
+      "date": "2025-05-23",
+      "doi": "10.5281/zenodo.15498851",
+      "python_files": [],
+      "archives": [
+        "smash-1.1.0.zip"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "14841726",
+      "title": "SMASH v1.0.2",
+      "date": "2025-02-09",
+      "doi": "10.5281/zenodo.14841726",
+      "python_files": [],
+      "archives": [
+        "smash-v1.0.2.zip"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "820640",
+      "title": "PyTOPKAPI v0.4.0",
+      "date": "2017-06-28",
+      "doi": "10.5281/zenodo.820640",
+      "python_files": [],
+      "archives": [
+        "sahg/PyTOPKAPI-v0.4.0.zip"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "14649383",
+      "title": "PyGEM WBM Data for Sea Level Rise Analyses",
+      "date": "2025-01-15",
+      "doi": "10.5281/zenodo.14649383",
+      "python_files": [],
+      "archives": [
+        "pygem_wbm_data.zip"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "20049800",
+      "title": "Rameau: a software dedicated to the modelling of river flows and/or groundwater levels in watersheds of various scales",
+      "date": "2026-05-06",
+      "doi": "10.5281/zenodo.20049800",
+      "python_files": [],
+      "archives": [
+        "rameau-0.3.0.zip"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "10018301",
+      "title": "Analysis scripts and data for paper \"Surging of a Hudson Strait Scale Ice Stream: Subglacial hydrology matters but the process details mostly don't\"",
+      "date": "2023-10-18",
+      "doi": "10.5281/zenodo.10018301",
+      "python_files": [],
+      "archives": [
+        "subglacHydroMattersTC.tar.gz"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "7099512",
+      "title": "Incorporating plant access to groundwater in existing global, satellite-based evaporation estimates",
+      "date": "2022-09-21",
+      "doi": "10.5281/zenodo.7099512",
+      "python_files": [],
+      "archives": [
+        "E_GLEAM_v3.tar.gz",
+        "E_GLEAM_Hydro.tar.gz"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "18254583",
+      "title": "Hydrological Analysis Stream Network - QGIS Plugin",
+      "date": "2026-01-15",
+      "doi": "10.5281/zenodo.18254583",
+      "python_files": [
+        "hydrological_analysis_algorithm.py",
+        "hydrological_analysis.py"
+      ],
+      "archives": [],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "580779",
+      "title": "InVEST 3.3.3 Nutrient Delivery Ratio Model",
+      "date": "2017-05-17",
+      "doi": "10.5281/zenodo.580779",
+      "python_files": [
+        "ndr.py"
+      ],
+      "archives": [],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "7703008",
+      "title": "loggertools: a Python port of the Control File Functions of Logtools, the Logger Tools Software of Olaf Kolle, MPI-BGC Jena, (c) 2012.",
+      "date": "2023-03-06",
+      "doi": "10.5281/zenodo.7703008",
+      "python_files": [],
+      "archives": [
+        "mcuntz/loggertools-v1.0.zip"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "20083515",
+      "title": "GRASS",
+      "date": "2026-05-08",
+      "doi": "10.5281/zenodo.20083515",
+      "python_files": [],
+      "archives": [
+        "OSGeo/grass-8.5.0.zip"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "23762006",
+      "title": "Sanxipu Reservoir intake daily water-quality and hydrology analysis tables (2023–2024)",
+      "date": "2026-10-29",
+      "doi": "10.5281/zenodo.23762006",
+      "python_files": [],
+      "archives": [
+        "sanxipu_submission_data_code.zip"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "12784407",
+      "title": "BerkayYorulmaz/spah4: SPAH4 version 1.0",
+      "date": "2024-07-19",
+      "doi": "10.5281/zenodo.12784407",
+      "python_files": [],
+      "archives": [
+        "BerkayYorulmaz/spah4-v1.0.zip"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "6468426",
+      "title": "Integrated hydrologic model development and postprocessing for GSFLOW using pyGSFLOW",
+      "date": "2022-04-18",
+      "doi": "10.5281/zenodo.6468426",
+      "python_files": [],
+      "archives": [
+        "pygflow_1.0.2.zip"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "20479712",
+      "title": "NeuralHydrology --- A Python library for Deep Learning research in hydrology",
+      "date": "2026-05-31",
+      "doi": "10.5281/zenodo.20479712",
+      "python_files": [],
+      "archives": [
+        "majid828/neuralhydrology-persistent-v1.0.0.zip"
+      ],
+      "search_query": "hydrology Python"
+    },
+    {
+      "record_id": "17976557",
+      "title": "Hydrological data from an urban runoff infiltration swale in Skellefteå, Sweden",
+      "date": "2025-12-18",
+      "doi": "10.5281/zenodo.17976557",
+      "python_files": [],
+      "archives": [
+        "03_plots_event.zip",
+        "02_data_compiled.zip",
+        "Photos.zip"
+      ],
+      "search_query": "rainfall runoff Python"
+    },
+    {
+      "record_id": "10474320",
+      "title": "High-resolution Annual Dynamic dataset of Curve Number from 2008 to 2021 over Conterminous United States",
+      "date": "2024-01-09",
+      "doi": "10.5281/zenodo.10474320",
+      "python_files": [],
+      "archives": [
+        "ARCII2015.zip",
+        "ARCII2009.zip",
+        "ARCII2013.zip",
+        "ARCII2014.zip",
+        "ARCII2012.zip",
+        "ARCII2020.zip",
+        "ARCII2008.zip",
+        "ARCII2011.zip",
+        "ARCII2021.zip",
+        "ARCII2019.zip",
+        "ARCII2016.zip",
+        "ARCII2017.zip",
+        "ARCII2018.zip",
+        "ARCII2010.zip"
+      ],
+      "search_query": "rainfall runoff Python"
+    },
+    {
+      "record_id": "3925024",
+      "title": "Supporting data for \"Reducing uncertainties in urban drainage models by explicitly accounting for timing errors in objective functions\"",
+      "date": "2020-07-01",
+      "doi": "10.5281/zenodo.3925024",
+      "python_files": [],
+      "archives": [
+        "study_data.zip"
+      ],
+      "search_query": "rainfall runoff Python"
+    },
+    {
+      "record_id": "15101164",
+      "title": "Delaware River Basin Probabilistic Daily Streamflow Reconstruction Ensemble and Water Systems Model Data 1945-2023 (Amestoy, Hamilton and Reed, 2026)",
+      "date": "2025-04-03",
+      "doi": "10.5281/zenodo.15101164",
+      "python_files": [],
+      "archives": [
+        "drb_historic_streamflow_ensemble_data.zip",
+        "pywrdrb_data.zip"
+      ],
+      "search_query": "streamflow modelling Python"
+    },
+    {
+      "record_id": "21703379",
+      "title": "HydroEvents",
+      "date": "2026-07-30",
+      "doi": "10.5281/zenodo.21703379",
+      "python_files": [],
+      "archives": [
+        "cnreco-hydrologylab/hydroevents-v0.1.3.zip"
+      ],
+      "search_query": "streamflow modelling Python"
+    },
+    {
+      "record_id": "8092323",
+      "title": "Training and validation dataset",
+      "date": "2023-06-28",
+      "doi": "10.5281/zenodo.8092323",
+      "python_files": [],
+      "archives": [
+        "data.zip"
+      ],
+      "search_query": "streamflow modelling Python"
+    },
+    {
+      "record_id": "4721439",
+      "title": "eflowcalc: a streamflow characteristics calculator in Python",
+      "date": "2021-04-26",
+      "doi": "10.5281/zenodo.4721439",
+      "python_files": [],
+      "archives": [
+        "ThibHlln/eflowcalc-v0.1.0.zip"
+      ],
+      "search_query": "streamflow modelling Python"
+    },
+    {
+      "record_id": "7999873",
+      "title": "andersonsam/heat_wave: First release",
+      "date": "2023-06-02",
+      "doi": "10.5281/zenodo.7999873",
+      "python_files": [],
+      "archives": [
+        "andersonsam/heat_wave-v1.0.zip"
+      ],
+      "search_query": "streamflow modelling Python"
+    },
+    {
+      "record_id": "6976782",
+      "title": "Modelling dataset of the São Sepé River watershed, RS, Brazil",
+      "date": "2022-08-09",
+      "doi": "10.5281/zenodo.6976782",
+      "python_files": [],
+      "archives": [
+        "saosepe_window_et24h.zip",
+        "saosepe_window_ndvi.zip",
+        "saosepe_dem.zip",
+        "saosepe_lulc.zip",
+        "saosepe_window_lstDem.zip"
+      ],
+      "search_query": "streamflow modelling Python"
+    },
+    {
+      "record_id": "6587601",
+      "title": "andersonsam/cnn_lstm_interpret: First release",
+      "date": "2022-05-27",
+      "doi": "10.5281/zenodo.6587601",
+      "python_files": [],
+      "archives": [
+        "andersonsam/cnn_lstm_interpret-v1.0.0.zip"
+      ],
+      "search_query": "streamflow modelling Python"
+    },
+    {
+      "record_id": "8097461",
+      "title": "Raw and pre-processed dataset",
+      "date": "2023-06-29",
+      "doi": "10.5281/zenodo.8097461",
+      "python_files": [],
+      "archives": [
+        "raw_data.zip"
+      ],
+      "search_query": "streamflow modelling Python"
+    },
+    {
+      "record_id": "21207279",
+      "title": "Processed Hydroclimatic Dataset for Hourly Rainfall–Runoff Modelling across Canada",
+      "date": "2026-07-05",
+      "doi": "10.5281/zenodo.21207279",
+      "python_files": [],
+      "archives": [
+        "lumped_forcings.zip",
+        "hourly_flow.zip"
+      ],
+      "search_query": "streamflow modelling Python"
+    },
+    {
+      "record_id": "14633154",
+      "title": "Data supporting GRL submission",
+      "date": "2024",
+      "doi": "10.5281/zenodo.14633154",
+      "python_files": [],
+      "archives": [
+        "basinaverage_timeseries.zip"
+      ],
+      "search_query": "streamflow modelling Python"
+    },
+    {
+      "record_id": "8097495",
+      "title": "Output - Results of Random Forest and Multiple Linear regression analysis.",
+      "date": "2023-06-29",
+      "doi": "10.5281/zenodo.8097495",
+      "python_files": [],
+      "archives": [
+        "output.zip"
+      ],
+      "search_query": "streamflow modelling Python"
+    },
+    {
+      "record_id": "23611899",
+      "title": "Python workflow for Indicators of Hydrologic Alteration across climate-model scenarios",
+      "date": "2026-10-24",
+      "doi": "10.5281/zenodo.23611899",
+      "python_files": [
+        "IHApy v2.py"
+      ],
+      "archives": [],
+      "search_query": "streamflow modelling Python"
+    },
+    {
+      "record_id": "10670292",
+      "title": "Data Supplement to \"A large-sample modelling approach towards integrating streamflow and evaporation data for the Spanish catchments\"",
+      "date": "2024-02-24",
+      "doi": "10.5281/zenodo.10670292",
+      "python_files": [],
+      "archives": [
+        "vic_simulations.zip"
+      ],
+      "search_query": "streamflow modelling Python"
+    }
+  ],
+  "execution_attempted": false,
+  "note": "Search results are unverified candidates. Hydrology relevance, Python content, publication relationship and independence require manual review."
+}

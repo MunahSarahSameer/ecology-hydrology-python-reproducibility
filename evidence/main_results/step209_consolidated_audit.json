@@ -1,0 +1,184 @@
+{
+  "step": 209,
+  "candidate_count": 15,
+  "generated_at_utc": "2026-11-11T23:03:26.532922+00:00",
+  "candidates": [
+    {
+      "candidate_id": "E01",
+      "baseline_status": "PASS_LIMITED",
+      "recovered_status": "PASS_LIMITED",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 4,
+      "evidence_files_found": 4,
+      "evidence_files_missing": [],
+      "testing_review_status": "E01_COMPONENT_VERIFIED"
+    },
+    {
+      "candidate_id": "E02",
+      "baseline_status": "PASS",
+      "recovered_status": "PASS",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 1,
+      "evidence_files_found": 1,
+      "evidence_files_missing": [],
+      "testing_review_status": "PENDING_REVIEW"
+    },
+    {
+      "candidate_id": "E03",
+      "baseline_status": "UNKNOWN",
+      "recovered_status": "PASS",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 1,
+      "evidence_files_found": 1,
+      "evidence_files_missing": [],
+      "testing_review_status": "PENDING_REVIEW"
+    },
+    {
+      "candidate_id": "E06",
+      "baseline_status": "FAIL",
+      "recovered_status": "PASS_LIMITED",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 1,
+      "evidence_files_found": 1,
+      "evidence_files_missing": [],
+      "testing_review_status": "PENDING_REVIEW"
+    },
+    {
+      "candidate_id": "E07",
+      "baseline_status": "FAIL",
+      "recovered_status": "PASS_LIMITED",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 1,
+      "evidence_files_found": 1,
+      "evidence_files_missing": [],
+      "testing_review_status": "PENDING_REVIEW"
+    },
+    {
+      "candidate_id": "E08",
+      "baseline_status": "FAIL",
+      "recovered_status": "PASS_LIMITED",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 1,
+      "evidence_files_found": 1,
+      "evidence_files_missing": [],
+      "testing_review_status": "PENDING_REVIEW"
+    },
+    {
+      "candidate_id": "E10",
+      "baseline_status": "UNKNOWN",
+      "recovered_status": "PASS_LIMITED",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 1,
+      "evidence_files_found": 1,
+      "evidence_files_missing": [],
+      "testing_review_status": "PENDING_REVIEW"
+    },
+    {
+      "candidate_id": "H01",
+      "baseline_status": "FAIL",
+      "recovered_status": "PASS_LIMITED",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 6,
+      "evidence_files_found": 6,
+      "evidence_files_missing": [],
+      "testing_review_status": "H01_FIGURE_SCRIPT_RECOVERED_AND_NUMERICALLY_VALIDATED"
+    },
+    {
+      "candidate_id": "H02",
+      "baseline_status": "FAIL",
+      "recovered_status": "PASS_LIMITED",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 1,
+      "evidence_files_found": 1,
+      "evidence_files_missing": [],
+      "testing_review_status": "PENDING_REVIEW"
+    },
+    {
+      "candidate_id": "H03",
+      "baseline_status": "FAIL",
+      "recovered_status": "PASS_LIMITED",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 5,
+      "evidence_files_found": 5,
+      "evidence_files_missing": [],
+      "testing_review_status": "H03_BOUNDED_MODEL_COMPONENT_VERIFIED"
+    },
+    {
+      "candidate_id": "H05",
+      "baseline_status": "FAIL",
+      "recovered_status": "PASS_LIMITED",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 1,
+      "evidence_files_found": 1,
+      "evidence_files_missing": [],
+      "testing_review_status": "PENDING_REVIEW"
+    },
+    {
+      "candidate_id": "H06",
+      "baseline_status": "PASS_LIMITED",
+      "recovered_status": "PASS_LIMITED",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 4,
+      "evidence_files_found": 4,
+      "evidence_files_missing": [],
+      "testing_review_status": "H06_COMPONENT_VERIFIED"
+    },
+    {
+      "candidate_id": "H07",
+      "baseline_status": "UNKNOWN",
+      "recovered_status": "PASS_LIMITED",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 1,
+      "evidence_files_found": 1,
+      "evidence_files_missing": [],
+      "testing_review_status": "PENDING_REVIEW"
+    },
+    {
+      "candidate_id": "H08",
+      "baseline_status": "UNKNOWN",
+      "recovered_status": "PASS_LIMITED",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 1,
+      "evidence_files_found": 1,
+      "evidence_files_missing": [],
+      "testing_review_status": "PENDING_REVIEW"
+    },
+    {
+      "candidate_id": "H09",
+      "baseline_status": "UNKNOWN",
+      "recovered_status": "PASS_LIMITED",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "evidence_references": 1,
+      "evidence_files_found": 1,
+      "evidence_files_missing": [],
+      "testing_review_status": "PENDING_REVIEW"
+    }
+  ],
+  "missing_evidence": [],
+  "warnings": [],
+  "baseline_counts": {
+    "PASS_LIMITED": 2,
+    "PASS": 1,
+    "UNKNOWN": 5,
+    "FAIL": 7
+  },
+  "recovered_counts": {
+    "PASS_LIMITED": 13,
+    "PASS": 2
+  }
+}

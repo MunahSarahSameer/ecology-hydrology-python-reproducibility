@@ -1,0 +1,25 @@
+{
+  "archive_id": "E08",
+  "test": "Original KDE and temporal interpolation",
+  "selected_notebook_cells": [
+    8,
+    10,
+    13,
+    17,
+    18,
+    22,
+    23
+  ],
+  "modification": "Archived Google Drive path replaced only",
+  "notebook_sha256": "7b393428100cbea66b84cce4401f38f50d6eb7d5f3127b8580ba661b397abf93",
+  "execution": {
+    "status": "FAIL",
+    "exit_code": 3,
+    "elapsed_seconds": 7.533,
+    "stdout": "",
+    "stderr": "OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.\nOMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. As an unsafe, unsupported, undocumented workaround you can set the environment variable KMP_DUPLICATE_LIB_OK=TRUE to allow the program to continue to execute, but that may cause crashes or silently produce incorrect results. For more information, please see http://www.intel.com/software/products/support/.\n"
+  },
+  "original_notebook_modified": false,
+  "wsindy_model_executed": false,
+  "published_results_reproduced": false
+}

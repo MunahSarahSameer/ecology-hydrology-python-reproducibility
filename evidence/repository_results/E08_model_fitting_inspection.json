@@ -1,0 +1,55 @@
+{
+  "archive_id": "E08",
+  "test": "Original model fitting static inspection",
+  "notebook_sha256": "7b393428100cbea66b84cce4401f38f50d6eb7d5f3127b8580ba661b397abf93",
+  "inspected_cells": [
+    {
+      "cell_index": 39,
+      "line_count": 35,
+      "source": "# PICK DATASET\nU_ws = U_interp.clone() # Ensemble\n\n# Grouped by plant type or infection status\n#U_ws = US_interp.clone() # Plant type = S\n#U_ws = UG_interp.clone() # Plant type = G\n#U_ws = UN_interp.clone() # Infection = N\n#U_ws = UI_interp.clone() # Infection = I\n\n# Separate control populations\n#U_ws = U1_interp.clone() # S,N\n#U_ws = U2_interp.clone() # G,N\n#U_ws = U3_interp.clone() # S,I\n#U_ws = U4_interp.clone() # G,I\n\n# Separate control populations by run\n#U_ws = U1_march_interp.clone() # S,N (march)\n#U_ws = U2_march_interp.clone() # G,N (march)\n#U_ws = U3_march_interp.clone() # S,I (march)\n#U_ws = U4_march_interp.clone() # G,I (march)\n\n#U_ws = U1_april_interp.clone() # S,N (april)\n#U_ws = U2_april_interp.clone() # G,N (april)\n#U_ws = U3_april_interp.clone() # S,I (april)\n#U_ws = U4_april_interp.clone() # G,I (april)\n\n# Grid\ntry:\n  t = torch.from_numpy(t)\n  t_new = torch.from_numpy(t_new)\nexcept:\n  pass\n\nX2,Y2 = torch.meshgrid(x,y, indexing='ij')\nX,Y,T = torch.meshgrid(x,y,t_new, indexing='ij')"
+    },
+    {
+      "cell_index": 41,
+      "line_count": 23,
+      "source": "coords = [x, y, t_new]\nvars = []\nnames = ['u']\n\nm = [10, 10, 6]\ns = [1, 1, 1]\n\n# Derivatives for test fcns\nalpha = [[0,0,1], # d/dt (lhs)\n         [0,0,0], # 1\n         [1,0,0], # d/dx\n         [2,0,0], # d^2/dx^2\n         [0,1,0], # d/dy\n         [0,2,0], # d^2/dy^2\n         [1,1,0]] # d^2/dxdy\n\n# Powers for homogeneous fcns\nbeta = [[0],[1]]\n\n# Hyper-params\nparams = {'V':vars, 'names':names, 'm':m, 's':s, 'rescale':False}\n\nmodel = WSINDy(U_ws, alpha, beta, coords, **params)"
+    },
+    {
+      "cell_index": 42,
+      "line_count": 15,
+      "source": "# Set lhs\nlhs_name = 'u' + model.derivative_names[0]\nmodel.build_lhs(lhs_name)\n\n# Create standard library terms\n[G, powers, derivs, rhs_names] = model.create_default_library()\n[G, powers, derivs, rhs_names] = [G[1:], powers[1:], derivs[1:], rhs_names[1:]]\nG_mat = torch.stack(G).T\n\n# Print out symbolic library\nlib_string = r'\\Theta=' + r'\\{' + r',\\,'.join(rhs_names) + r'\\}'\ndisplay(Math(lib_string))\n\nprint(f'Library shape: G = {G_mat.numpy().shape}')\nprint(f'Condition number: K(G) = {la.cond(G_mat):.2e}\\n')"
+    },
+    {
+      "cell_index": 44,
+      "line_count": 20,
+      "source": "# Trim out (u, u_x, u_y) terms?\nremove_cols = [0,1,3]\nprint(f'Removing: {rhs_names[0], rhs_names[1], rhs_names[3]}\\n')\n\n# Trim out (u, u_x, u_y, u_xy) terms?\n# remove_cols = [0,1,3,5]\n# print(f'Removing: {rhs_names[0], rhs_names[1], rhs_names[3], rhs_names[5]}\\n')\n\nfor column in sorted(remove_cols, reverse=True):\n  G.pop(column)\n  powers.pop(column)\n  derivs.pop(column)\n  rhs_names.pop(column)\nG_mat = torch.stack(G).T\n\ndisplay(Math(r'\\Theta=' + r'\\{' + r',\\,'.join(rhs_names) + r'\\}'))\nprint(f'Library shape: G = {G_mat.numpy().shape}')\nprint(f'Condition number: K(G) = {la.cond(G_mat):.2e}\\n')\n\ndel remove_cols,column"
+    },
+    {
+      "cell_index": 45,
+      "line_count": 16,
+      "source": "# Augment the library to include a single Laplacian term?\nLAPLACIAN = False\n\nif LAPLACIAN:\n  print(f'Combining: {rhs_names[0]}, {rhs_names[1]}\\n')\n  columns = [0,1]\n  coeffs = [1,1]\n  name = '\u0394u'\n  info = [G, powers, derivs, rhs_names]\n\n  [G,powers,derivs,rhs_names] = composite_term(columns, coeffs, name, model, info)\n  G_mat = torch.stack(G).T\n\n  display(Math(r'\\Theta=' + r'\\{' + r',\\,'.join(rhs_names) + r'\\}'))\n  print(f'Library shape: G = {G_mat.numpy().shape}')\n  print(f'Condition number: K(G) = {la.cond(G_mat):.2e}\\n')"
+    },
+    {
+      "cell_index": 47,
+      "line_count": 47,
+      "source": "# MAKE V TERMS?\nV_TERMS = True\n\nif V_TERMS:\n  freq = 2*np.pi/175\n\n  # Form 2D cosine series terms\n  V_nm = lambda n,m: torch.cos(freq*n*X2) * torch.cos(freq*m*Y2)\n  Vx_nm = lambda n,m: -(freq*n) * torch.sin(freq*n*X2) * torch.cos(freq*m*Y2)\n  Vy_nm = lambda n,m: -(freq*m) * torch.cos(freq*n*X2) * torch.sin(freq*m*Y2)\n\n  # Build weak gradients\n  kernel_x = model.kernels[2]\n  kernel_y = model.kernels[4]\n\n  UVx_nm = lambda n,m: U_ws * Vx_nm(n,m).unsqueeze(2)\n  UVy_nm = lambda n,m: U_ws * Vy_nm(n,m).unsqueeze(2)\n  psix_UVx_nm = lambda n,m: compute_weak_poly(UVx_nm(n,m), kernel_x, model.spacing)\n  psiy_UVy_nm = lambda n,m: compute_weak_poly(UVy_nm(n,m), kernel_y, model.spacing)\n\n  weak_Vnm_term = lambda n,m: psix_UVx_nm(n,m) + psix_UVx_nm(n,m)\n\n  # Construct Vnm terms and add to library\n  [N,M] = [9,9]\n  NMs = list(itertools.product(range(1,N+1), range(1,M+1)))\n\n  for n,m in NMs:\n    term = weak_Vnm_term(n,m)\n    G.append(term[model.conv_mask])\n    name = '\u2207\u00b7(u\u2207V_{' + f'{n}{m}' + '})'\n    rhs_names.append(name)\n\n  # Print out new symbolic library\n  lib_string = r'\\Theta='+r'\\{'+r',\\,'.join(rhs_names[:-len(NMs)+2])+r',\\,\\dots\\,\\}'\n  display(Math(lib_string))\n\n  G_mat = torch.stack(G).T\n  print(f'Library shape: G = {G_mat.numpy().shape}')\n  print(f'Condition number: K(G) = {la.cond(G_mat):.2e}\\n')\n\n  # Check aliasing?\n  plt.figure(figsize=(3,2.5))\n  plt.pcolormesh(X2, Y2, V_nm(9,5), cmap='coolwarm')\n  plt.xlabel('$x$')\n  plt.ylabel('$y$')\n  plt.colorbar(shrink=0.9)\n  plt.show()"
+    },
+    {
+      "cell_index": 49,
+      "line_count": 65,
+      "source": "from scipy.special import spherical_jn\n\n# MAKE K TERMS?\nK_TERMS = False\n\nif K_TERMS:\n  # Pick a U-scale\n  slicer = (slice(model.m[0],-model.m[0]),\n            slice(model.m[1],-model.m[1]),\n            slice(model.m[2],-model.m[2]))\n  Uc = U_ws[slicer].max().item()\n  print(f'Uc = {Uc:.2e}')\n\n  scale = 6 # scale (s) for j_n(r/s)\n  mult = 1/Uc\n\n  # Radial grid for K(|x-x0|)\n  K_slice = (slice(30,-30,None), slice(30,-30,None))\n\n  XK = (X2[K_slice] - Nx*dx/2).numpy()\n  YK = (Y2[K_slice] - Ny*dy/2).numpy()\n  RK = np.sqrt(XK**2 + YK**2)\n  RK_inv = np.minimum(1/RK, 1)\n\n  # Form spherical Bessel terms\n  K_n = lambda n: mult*spherical_jn(n, RK/scale)\n  Kx_n = lambda n: mult*(XK*RK_inv/scale) * spherical_jn(n, RK/scale, derivative=True)\n  Ky_n = lambda n: mult*(YK*RK_inv/scale) * spherical_jn(n, RK/scale, derivative=True)\n\n  # Build convolution terms\n  KxU_n = lambda n: convolve(U_ws, Kx_n(n)[:,:,np.newaxis], mode='same')\n  KyU_n = lambda n: convolve(U_ws, Ky_n(n)[:,:,np.newaxis], mode='same')\n\n  # Build weak gradients\n  UKxU_n = lambda n: U_ws * torch.from_numpy(KxU_n(n))\n  UKyU_n = lambda n: U_ws * torch.from_numpy(KyU_n(n))\n  psix_UKxU_n = lambda n: compute_weak_poly(UKxU_n(n), kernel_x, model.spacing)\n  psiy_UKyU_n = lambda n: compute_weak_poly(UKyU_n(n), kernel_y, model.spacing)\n\n  weak_Kn_term = lambda n: psix_UKxU_n(n) + psiy_UKyU_n(n)\n\n  # Construct Kn terms and add to library\n  NK = 5\n  for n in range(NK):\n    term = weak_Kn_term(n)\n    G.append(term[model.conv_mask])\n    name = '\u2207\u00b7u(\u2207K_{' + f'{n}' + '}*u)'\n    rhs_names.append(name)\n\n  # Print out new symbolic library\n  lib_string = lib_string[:-2]+','+r',\\,'.join(rhs_names[-NK:-NK+2])+r',\\dots\\}'\n  display(Math(lib_string))\n\n  G_mat = torch.stack(G).T\n  print(f'Library shape: G = {G_mat.numpy().shape}')\n  print(f'Condition number: K(G) = {la.cond(G_mat):.2e}\\n')\n\n  # Check it out\n  plt.figure(figsize=(3,2.5))\n  plt.pcolormesh(XK, YK, K_n(0), cmap='coolwarm')\n  plt.xlabel('$x$')\n  plt.ylabel('$y$')\n  plt.title('$U^{-1}_c j_0(r/s)$')\n  plt.colorbar(shrink=0.9)\n  plt.show()"
+    },
+    {
+      "cell_index": 51,
+      "line_count": 6,
+      "source": "# Set library\nmodel.set_library(G, powers, derivs, rhs_names)\n\n# Find sparse weights\nw = model.MSTLS()\nmodel.print_report()"
+    },
+    {
+      "cell_index": 53,
+      "line_count": 8,
+      "source": "print('Sparse diffusion constants:')\nif len(w) == 1:\n  print(f'Deff = {w[0].item():.1f}')\nelse:\n  print(f'Dx = {w[0].item():.1f}')\n  print(f'Dxy = {(w[2]/2).item():.1f}')\n  print(f'Dy = {w[1].item():.1f}')\n  print(f'Dx/Dy = {(w[0]/w[1]).item():.2f}')"
+    }
+  ],
+  "scientific_code_executed": false,
+  "original_notebook_modified": false,
+  "published_results_reproduced": false
+}

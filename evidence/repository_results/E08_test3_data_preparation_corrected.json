@@ -1,0 +1,23 @@
+{
+  "archive_id": "E08",
+  "test": "Corrected original data-preparation validation",
+  "selected_notebook_cells": [
+    8,
+    10,
+    13
+  ],
+  "scientific_code_changed_from_previous_test": false,
+  "validation_changed": true,
+  "previous_failure_classification": "Test-harness validation error",
+  "corrected_script_sha256": "7c7534ee4d59076f5e7eb83972ae7b76a092f9899ab5e1f3fb4a02b349a86b18",
+  "execution": {
+    "status": "PASS",
+    "exit_code": 0,
+    "elapsed_seconds": 5.267,
+    "stdout": "Data-frame shape: (964, 12)\nTimes, t = [ 0  1  2  4  8 16 24 48]\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\nShape of U_h: torch.Size([80, 80, 8])\n\n=== SCIENTIFIC DATA VALIDATION V2 ===\nFiltered observations: 964\nDensity tensor shape: (80, 80, 8)\nAll values finite: True\nAll densities nonnegative: True\nDensity integrals: [1.0254766864284568, 1.0254766864284568, 1.0254766864284568, 1.0254766864284566, 1.0254766864284566, 1.0254766864284568, 1.0254766864284568, 1.0254766864284568]\nVALIDATION: PASS\n",
+    "stderr": ""
+  },
+  "original_notebook_modified": false,
+  "wsindy_model_executed": false,
+  "published_results_reproduced": false
+}

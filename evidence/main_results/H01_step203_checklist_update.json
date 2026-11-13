@@ -1,0 +1,37 @@
+{
+  "step": 203,
+  "candidate": "H01",
+  "previous_record": {
+    "candidate_id": "H01",
+    "discipline": "Hydrology",
+    "project_name": "Data and codes",
+    "baseline_status": "FAIL",
+    "recovered_status": "BLOCKED",
+    "previous_finding": "Missing external Excel dataset after dependency recovery",
+    "evidence_files_found": "repositories\\results\\H01_test1_with_dependencies_log.txt",
+    "evidence_files_missing": "",
+    "evidence_reviewed_in_step_182": "NO",
+    "full_scientific_workflow_verified": "NO",
+    "published_results_reproduced": "NOT_VERIFIED",
+    "next_action": "Check dataset availability without altering original code",
+    "testing_review_status": "PENDING_REVIEW"
+  },
+  "updated_record": {
+    "candidate_id": "H01",
+    "discipline": "Hydrology",
+    "project_name": "Data and codes",
+    "baseline_status": "FAIL",
+    "recovered_status": "PASS_LIMITED",
+    "previous_finding": "Original H01 monthly streamflow script initially failed because of a missing dependency and hardcoded Excel file paths. The archived datasets were available. After redirecting three paths, execution exposed an obsolete pandas annual resampling alias ('Y'). Replacing it with 'YE' in a temporary working copy enabled successful execution (return code 0). Independent NSE calculations matched 18 of 18 selected values. No figure file was generated; full workflow and published figure reproduction remain unverified.",
+    "evidence_files_found": "repositories\\results\\H01_test1_with_dependencies_log.txt; results/H01_step198_dataset_audit.json; results/H01_step199_workbook_inspection.json; results/H01_step200_path_recovery.json; results/H01_step201_pandas_recovery.json; results/H01_step202_nse_validation.json",
+    "evidence_files_missing": "",
+    "evidence_reviewed_in_step_182": "NO",
+    "full_scientific_workflow_verified": "NO",
+    "published_results_reproduced": "NOT_VERIFIED",
+    "next_action": "Optionally validate additional stations and capture the generated plot in a temporary working copy. Do not classify as full published-result reproduction.",
+    "testing_review_status": "H01_FIGURE_SCRIPT_RECOVERED_AND_NUMERICALLY_VALIDATED"
+  },
+  "numerical_checks_passed": 18,
+  "numerical_checks_total": 18,
+  "generated_at_utc": "2026-11-11T22:58:07.054090+00:00"
+}

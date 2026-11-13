@@ -1,0 +1,209 @@
+{
+  "step": 183,
+  "generated_at_utc": "2026-11-11T14:32:36.605394+00:00",
+  "records": [
+    {
+      "candidate_id": "E01",
+      "files": [],
+      "evidence_found": false,
+      "all_files_accessible": false
+    },
+    {
+      "candidate_id": "E02",
+      "files": [
+        {
+          "file": "repositories\\results\\E02_test1_validation.json",
+          "exists": true,
+          "size_bytes": 560,
+          "json_readable": true,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    },
+    {
+      "candidate_id": "E03",
+      "files": [
+        {
+          "file": "repositories\\results\\E03_test1_comparison.json",
+          "exists": true,
+          "size_bytes": 333,
+          "json_readable": true,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    },
+    {
+      "candidate_id": "E06",
+      "files": [
+        {
+          "file": "repositories\\results\\E06_test1_recovery_log.txt",
+          "exists": true,
+          "size_bytes": 207,
+          "json_readable": null,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    },
+    {
+      "candidate_id": "E07",
+      "files": [
+        {
+          "file": "repositories\\results\\E07_consolidated_evidence.json",
+          "exists": true,
+          "size_bytes": 622,
+          "json_readable": true,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    },
+    {
+      "candidate_id": "E08",
+      "files": [
+        {
+          "file": "results\\E08_reproduction_comparison.json",
+          "exists": true,
+          "size_bytes": 1199,
+          "json_readable": true,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    },
+    {
+      "candidate_id": "E10",
+      "files": [
+        {
+          "file": "results\\E10_consolidated_assessment.json",
+          "exists": true,
+          "size_bytes": 1852,
+          "json_readable": true,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    },
+    {
+      "candidate_id": "H01",
+      "files": [
+        {
+          "file": "repositories\\results\\H01_test1_with_dependencies_log.txt",
+          "exists": true,
+          "size_bytes": 1165,
+          "json_readable": null,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    },
+    {
+      "candidate_id": "H02",
+      "files": [
+        {
+          "file": "repositories\\results\\H02_test1_validation.json",
+          "exists": true,
+          "size_bytes": 1614,
+          "json_readable": true,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    },
+    {
+      "candidate_id": "H03",
+      "files": [
+        {
+          "file": "repositories\\results\\H03_test1_summary.json",
+          "exists": true,
+          "size_bytes": 1129,
+          "json_readable": true,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    },
+    {
+      "candidate_id": "H05",
+      "files": [
+        {
+          "file": "repositories\\results\\H05_pandas_control_summary.json",
+          "exists": true,
+          "size_bytes": 1044,
+          "json_readable": true,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    },
+    {
+      "candidate_id": "H06",
+      "files": [
+        {
+          "file": "repositories\\results\\H06_assessment.json",
+          "exists": true,
+          "size_bytes": 865,
+          "json_readable": true,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    },
+    {
+      "candidate_id": "H07",
+      "files": [
+        {
+          "file": "results\\H07_consolidated_assessment.json",
+          "exists": true,
+          "size_bytes": 3021,
+          "json_readable": true,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    },
+    {
+      "candidate_id": "H08",
+      "files": [
+        {
+          "file": "results\\H08_consolidated_assessment.json",
+          "exists": true,
+          "size_bytes": 2634,
+          "json_readable": true,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    },
+    {
+      "candidate_id": "H09",
+      "files": [
+        {
+          "file": "results\\H09_consolidated_assessment.json",
+          "exists": true,
+          "size_bytes": 2761,
+          "json_readable": true,
+          "error": null
+        }
+      ],
+      "evidence_found": true,
+      "all_files_accessible": true
+    }
+  ],
+  "note": "File accessibility and JSON parsing only. Scientific findings have not been independently revalidated."
+}

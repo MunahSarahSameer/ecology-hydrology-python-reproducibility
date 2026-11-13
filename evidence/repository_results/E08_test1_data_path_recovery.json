@@ -1,0 +1,23 @@
+{
+  "archive_id": "E08",
+  "test": "Notebook cell 8 data-loading operation",
+  "original_notebook_sha256": "7b393428100cbea66b84cce4401f38f50d6eb7d5f3127b8580ba661b397abf93",
+  "original_notebook_modified": false,
+  "baseline": {
+    "status": "FAIL",
+    "exit_code": 1,
+    "elapsed_seconds": 1.596,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\test1\\baseline_data_path.py\", line 3, in <module>\n    cats = pd.read_csv(file_path)\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users/REDACTED\\miniconda3\\envs\\code_decay\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py\", line 1866, in read_csv\n    return _read(filepath_or_buffer, kwds)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users/REDACTED\\miniconda3\\envs\\code_decay\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py\", line 423, in _read\n    parser = TextFileReader(filepath_or_buffer, **kwds)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users/REDACTED\\miniconda3\\envs\\code_decay\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py\", line 2721, in __init__\n    self._engine = self._make_engine(f, self.engine)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users/REDACTED\\miniconda3\\envs\\code_decay\\Lib\\site-packages\\pandas\\io\\parsers\\readers.py\", line 2988, in _make_engine\n    self.handles = get_handle(\n                   ^^^^^^^^^^^\n  File \"C:\\Users/REDACTED\\miniconda3\\envs\\code_decay\\Lib\\site-packages\\pandas\\io\\common.py\", line 948, in get_handle\n    handle = open(handle, ioargs.mode)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/content/drive/My Drive/WSINDy/Caterpillar/caterpillars.csv'\n"
+  },
+  "local_path_recovery": {
+    "status": "PASS",
+    "exit_code": 0,
+    "elapsed_seconds": 1.123,
+    "stdout": "Data-frame shape: (964, 12)\nColumns: ['Run', 'Plot', 'Infection', 'G/S', 'Check', 'Time', 'Individual', 'X', 'Y', 'Z', 'location', 'horizontal']\nRuns: ['Apr-16', 'Mar-16']\n",
+    "stderr": ""
+  },
+  "source_change": "Input path only, in separate test harness",
+  "full_notebook_executed": false,
+  "published_results_reproduced": false
+}

@@ -1,0 +1,82 @@
+{
+  "step": 115,
+  "package_id": "H07",
+  "test_type": "second_in_memory_syntax_recovery",
+  "records": [
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/docs/source/conf.py",
+      "status": "PASS",
+      "remaining_error": null,
+      "changes_applied": [
+        {
+          "original": "ur'TOPKAPI Documentation'",
+          "replacement": "u'TOPKAPI Documentation'"
+        },
+        {
+          "original": "ur'Theo Vischel, Scott Sinclair and Geoff Pegram'",
+          "replacement": "u'Theo Vischel, Scott Sinclair and Geoff Pegram'"
+        }
+      ],
+      "original_sha256": "a0a0c92dedb1634535051a98a348c335011ebead65da5d33619ad64487131552",
+      "recovered_sha256": "f9a203f82df1f4cc5448a07426e2147c153ec28a6f265a68e4e1233198bfc275",
+      "diff": [
+        "--- original/docs/source/conf.py",
+        "+++ in_memory_recovery/docs/source/conf.py",
+        "@@ -172,8 +172,8 @@",
+        " # Grouping the document tree into LaTeX files. List of tuples",
+        " # (source start file, target name, title, author, document class [howto/manual]).",
+        " latex_documents = [",
+        "-  ('index', 'TOPKAPI.tex', ur'TOPKAPI Documentation',",
+        "-   ur'Theo Vischel, Scott Sinclair and Geoff Pegram', 'manual'),",
+        "+  ('index', 'TOPKAPI.tex', u'TOPKAPI Documentation',",
+        "+   u'Theo Vischel, Scott Sinclair and Geoff Pegram', 'manual'),",
+        " ]",
+        " ",
+        " # The name of an image file (relative to this directory) to place at the top of"
+      ]
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/GIS_treatment.py",
+      "status": "PASS",
+      "remaining_error": null,
+      "changes_applied": [
+        {
+          "original": "direction, tab_label[x,y], dem[i,j], dem[x,y]\n",
+          "replacement": "direction, tab_label[x,y], dem[i,j], dem[x,y])\n"
+        },
+        {
+          "original": "/dist) * 180./np.pi)",
+          "replacement": "/dist) * 180./np.pi"
+        }
+      ],
+      "original_sha256": "52d978a0ecfc318ff0eaa487d81e8700ab5fb23ab59db3505ba31e580246bdb9",
+      "recovered_sha256": "6a7dd8cdfaab94fe4f132a9085d99f668252a9e3b09f62358bb78c44264b1bcf",
+      "diff": [
+        "--- original/pytopkapi/parameter_utils/GIS_treatment.py",
+        "+++ in_memory_recovery/pytopkapi/parameter_utils/GIS_treatment.py",
+        "@@ -279,9 +279,9 @@",
+        "                         tab_slope_degree[i,j] = 0.0",
+        "                     if dem[x,y] > dem[i,j]:",
+        "                         print('Negative slope cell', tab_label[i,j], \\",
+        "-                            direction, tab_label[x,y], dem[i,j], dem[x,y]",
+        "+                            direction, tab_label[x,y], dem[i,j], dem[x,y])",
+        "                         tab_slope_degree[i,j] = np.arctan((dem[i,j]-dem[x,y])",
+        "-                                                          /dist) * 180./np.pi)",
+        "+                                                          /dist) * 180./np.pi",
+        "                 else:",
+        "                     tab_slope_degree[i,j] = -9999",
+        "                     print('Downslope cell external to the catchment...')"
+      ]
+    }
+  ],
+  "original_archive_modified": false,
+  "patched_files_written": false,
+  "source_code_executed": false,
+  "dependencies_installed": false,
+  "limitations": [
+    "Syntax recovery does not prove runtime executability.",
+    "Changes have not been tested against scientific outputs.",
+    "Other syntax problems may remain.",
+    "The original archive remains unchanged."
+  ]
+}

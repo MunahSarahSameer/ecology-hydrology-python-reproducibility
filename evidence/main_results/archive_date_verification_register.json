@@ -1,0 +1,389 @@
+{
+  "step": 162,
+  "records": [
+    {
+      "package_id": "E01",
+      "domain": "ecology",
+      "candidate_dates": [
+        {
+          "field": "created",
+          "value": "2024-10-24T10:31:46.507801+00:00",
+          "year": 2024,
+          "source": "repositories\\E01\\metadata.json"
+        }
+      ],
+      "metadata_years": [
+        2024
+      ],
+      "zip_internal_timestamps": [
+        {
+          "archive": "code.zip",
+          "earliest": "2024-10-24T11:05:48",
+          "latest": "2024-10-24T11:28:34"
+        }
+      ],
+      "review_status": "SINGLE_METADATA_YEAR_UNVERIFIED",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "E02",
+      "domain": "ecology",
+      "candidate_dates": [
+        {
+          "field": "created",
+          "value": "2026-06-11T08:43:36.324736+00:00",
+          "year": 2026,
+          "source": "repositories\\E02\\metadata.json"
+        }
+      ],
+      "metadata_years": [
+        2026
+      ],
+      "zip_internal_timestamps": [
+        {
+          "archive": "is_niches.zip",
+          "earliest": "2025-02-25T09:54:06",
+          "latest": "2026-06-10T17:57:38"
+        }
+      ],
+      "review_status": "SINGLE_METADATA_YEAR_UNVERIFIED",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "E03",
+      "domain": "ecology",
+      "candidate_dates": [
+        {
+          "field": "created",
+          "value": "2026-08-03T10:17:56.703728+00:00",
+          "year": 2026,
+          "source": "repositories\\E03\\metadata.json"
+        }
+      ],
+      "metadata_years": [
+        2026
+      ],
+      "zip_internal_timestamps": [
+        {
+          "archive": "FermentomeII_package_code.zip",
+          "earliest": "2026-07-19T09:56:18",
+          "latest": "2026-07-19T09:56:18"
+        }
+      ],
+      "review_status": "SINGLE_METADATA_YEAR_UNVERIFIED",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "E06",
+      "domain": "ecology",
+      "candidate_dates": [],
+      "metadata_years": [],
+      "zip_internal_timestamps": [
+        {
+          "archive": "Code_Figures.zip",
+          "earliest": "2025-09-26T12:59:38",
+          "latest": "2026-01-06T05:56:02"
+        }
+      ],
+      "review_status": "MISSING_DATE_METADATA",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "E07",
+      "domain": "ecology",
+      "candidate_dates": [],
+      "metadata_years": [],
+      "zip_internal_timestamps": [
+        {
+          "archive": "FORspecies20K.zip",
+          "earliest": "2023-12-14T06:11:56",
+          "latest": "2024-08-21T11:55:46"
+        }
+      ],
+      "review_status": "MISSING_DATE_METADATA",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "E08",
+      "domain": "ecology",
+      "candidate_dates": [
+        {
+          "field": "publication_date",
+          "value": "2025-09-19",
+          "year": 2025,
+          "source": "repositories\\results\\E08_candidate_metadata.json"
+        }
+      ],
+      "metadata_years": [
+        2025
+      ],
+      "zip_internal_timestamps": [],
+      "review_status": "SINGLE_METADATA_YEAR_UNVERIFIED",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "E10",
+      "domain": "ecology",
+      "candidate_dates": [
+        {
+          "field": "publication_date",
+          "value": "2024-06-10",
+          "year": 2024,
+          "source": "results\\E10_initial_screening.json"
+        }
+      ],
+      "metadata_years": [
+        2024
+      ],
+      "zip_internal_timestamps": [],
+      "review_status": "SINGLE_METADATA_YEAR_UNVERIFIED",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "H01",
+      "domain": "hydrology",
+      "candidate_dates": [
+        {
+          "field": "created",
+          "value": "2024-09-13T08:36:26.542258+00:00",
+          "year": 2024,
+          "source": "repositories\\H01\\metadata.json"
+        }
+      ],
+      "metadata_years": [
+        2024
+      ],
+      "zip_internal_timestamps": [
+        {
+          "archive": "Data and codes.zip",
+          "earliest": "2024-03-18T10:23:10",
+          "latest": "2024-09-13T16:25:02"
+        }
+      ],
+      "review_status": "SINGLE_METADATA_YEAR_UNVERIFIED",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "H02",
+      "domain": "hydrology",
+      "candidate_dates": [
+        {
+          "field": "created",
+          "value": "2024-04-10T09:39:37.708759+00:00",
+          "year": 2024,
+          "source": "repositories\\H02\\metadata.json"
+        },
+        {
+          "field": "publication_year",
+          "value": "2024",
+          "year": 2024,
+          "source": "repositories\\results\\H02_test1_validation.json"
+        }
+      ],
+      "metadata_years": [
+        2024
+      ],
+      "zip_internal_timestamps": [
+        {
+          "archive": "FloodSformer-v1.0.1.zip",
+          "earliest": "2024-04-10T02:07:18",
+          "latest": "2024-04-10T02:07:18"
+        }
+      ],
+      "review_status": "SINGLE_METADATA_YEAR_UNVERIFIED",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "H03",
+      "domain": "hydrology",
+      "candidate_dates": [
+        {
+          "field": "created",
+          "value": "2024-08-04T21:00:25.689505+00:00",
+          "year": 2024,
+          "source": "repositories\\H03\\metadata.json"
+        }
+      ],
+      "metadata_years": [
+        2024
+      ],
+      "zip_internal_timestamps": [
+        {
+          "archive": "Hydrological-controls---Code-and-Data-Hydrology.zip",
+          "earliest": "2023-11-10T09:51:50",
+          "latest": "2023-11-10T09:51:50"
+        }
+      ],
+      "review_status": "SINGLE_METADATA_YEAR_UNVERIFIED",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "H05",
+      "domain": "hydrology",
+      "candidate_dates": [
+        {
+          "field": "created",
+          "value": "2025-11-24T13:04:22.012387+00:00",
+          "year": 2025,
+          "source": "repositories\\H05\\metadata.json"
+        }
+      ],
+      "metadata_years": [
+        2025
+      ],
+      "zip_internal_timestamps": [
+        {
+          "archive": "neuralhydrology-v.1.2.3.zip",
+          "earliest": "2022-03-03T12:51:34",
+          "latest": "2022-03-03T12:51:34"
+        }
+      ],
+      "review_status": "SINGLE_METADATA_YEAR_UNVERIFIED",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "H06",
+      "domain": "hydrology",
+      "candidate_dates": [],
+      "metadata_years": [],
+      "zip_internal_timestamps": [
+        {
+          "archive": "S4D_rainfall_runoff_simulations.zip",
+          "earliest": "2025-08-28T10:50:24",
+          "latest": "2025-08-28T10:50:24"
+        }
+      ],
+      "review_status": "MISSING_DATE_METADATA",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "H07",
+      "domain": "hydrology",
+      "candidate_dates": [
+        {
+          "field": "archive_year",
+          "value": "2017",
+          "year": 2017,
+          "source": "results\\H07_consolidated_assessment.json"
+        },
+        {
+          "field": "publication_date",
+          "value": "2017-06-28",
+          "year": 2017,
+          "source": "results\\H07_dependency_audit.json"
+        },
+        {
+          "field": "publication_date",
+          "value": "2017-06-28",
+          "year": 2017,
+          "source": "results\\H07_initial_screening.json"
+        }
+      ],
+      "metadata_years": [
+        2017
+      ],
+      "zip_internal_timestamps": [
+        {
+          "archive": "PyTOPKAPI-v0.4.0-original.zip",
+          "earliest": "2017-06-28T09:12:00",
+          "latest": "2017-06-28T09:12:00"
+        }
+      ],
+      "review_status": "SINGLE_METADATA_YEAR_UNVERIFIED",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "H08",
+      "domain": "hydrology",
+      "candidate_dates": [
+        {
+          "field": "publication_date",
+          "value": "2022-04-18",
+          "year": 2022,
+          "source": "results\\H08_archive_metadata_screening.json"
+        },
+        {
+          "field": "archive_year",
+          "value": "2022",
+          "year": 2022,
+          "source": "results\\H08_consolidated_assessment.json"
+        }
+      ],
+      "metadata_years": [
+        2022
+      ],
+      "zip_internal_timestamps": [
+        {
+          "archive": "pygflow_1.0.2-original.zip",
+          "earliest": "2022-03-24T12:49:50",
+          "latest": "2022-04-18T12:08:48"
+        }
+      ],
+      "review_status": "SINGLE_METADATA_YEAR_UNVERIFIED",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    },
+    {
+      "package_id": "H09",
+      "domain": "hydrology",
+      "candidate_dates": [
+        {
+          "field": "publication_date",
+          "value": "2022-03-02",
+          "year": 2022,
+          "source": "results\\H09_archive_metadata_screening.json"
+        }
+      ],
+      "metadata_years": [
+        2022
+      ],
+      "zip_internal_timestamps": [
+        {
+          "archive": "swatpy-v0.2-original.zip",
+          "earliest": "2022-01-28T11:29:36",
+          "latest": "2022-01-28T11:29:36"
+        }
+      ],
+      "review_status": "SINGLE_METADATA_YEAR_UNVERIFIED",
+      "verified_archive_date": null,
+      "archive_age_years": null,
+      "external_verification_completed": false
+    }
+  ],
+  "notes": [
+    "Metadata dates are candidate evidence only.",
+    "A metadata creation date may differ from the code release date.",
+    "ZIP internal timestamps are not authoritative archive dates.",
+    "Publication and archive dates must be distinguished.",
+    "No archive age is calculated until a date is verified.",
+    "External verification remains outstanding."
+  ],
+  "generated_at_utc": "2026-11-11T02:45:25.062630+00:00"
+}

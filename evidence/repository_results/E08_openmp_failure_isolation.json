@@ -1,0 +1,31 @@
+{
+  "archive_id": "E08",
+  "test": "OpenMP scientific-operation failure isolation",
+  "stages": {
+    "histogram_baseline": {
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 5.192,
+      "stdout": "Python scientific imports: PASS\nSTART CELL 8\nData-frame shape: (964, 12)\nTimes, t = [ 0  1  2  4  8 16 24 48]\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\nEND CELL 8\nSTART CELL 10\nEND CELL 10\nSTART CELL 13\nShape of U_h: torch.Size([80, 80, 8])\nEND CELL 13\nSTAGE COMPLETE\n",
+      "stderr": ""
+    },
+    "kde_function_definition": {
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 7.343,
+      "stdout": "Python scientific imports: PASS\nSTART CELL 8\nData-frame shape: (964, 12)\nTimes, t = [ 0  1  2  4  8 16 24 48]\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\nEND CELL 8\nSTART CELL 10\nEND CELL 10\nSTART CELL 13\nShape of U_h: torch.Size([80, 80, 8])\nEND CELL 13\nSTART CELL 17\nEND CELL 17\nSTAGE COMPLETE\n",
+      "stderr": ""
+    },
+    "kde_execution": {
+      "status": "FAIL",
+      "exit_code": 3,
+      "seconds": 6.911,
+      "stdout": "Python scientific imports: PASS\nSTART CELL 8\nData-frame shape: (964, 12)\nTimes, t = [ 0  1  2  4  8 16 24 48]\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\nEND CELL 8\nSTART CELL 10\nEND CELL 10\nSTART CELL 13\nShape of U_h: torch.Size([80, 80, 8])\nEND CELL 13\nSTART CELL 17\nEND CELL 17\nSTART CELL 18\n",
+      "stderr": "OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.\nOMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. As an unsafe, unsupported, undocumented workaround you can set the environment variable KMP_DUPLICATE_LIB_OK=TRUE to allow the program to continue to execute, but that may cause crashes or silently produce incorrect results. For more information, please see http://www.intel.com/software/products/support/.\n"
+    }
+  },
+  "original_notebook_modified": false,
+  "environment_modified": false,
+  "unsafe_openmp_override_used": false,
+  "published_results_reproduced": false
+}

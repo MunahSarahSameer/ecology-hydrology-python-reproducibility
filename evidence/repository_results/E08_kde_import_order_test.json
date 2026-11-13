@@ -1,0 +1,34 @@
+{
+  "archive_id": "E08",
+  "test": "Safe import-order recovery of first KDE calculation",
+  "orders": {
+    "torch_first": {
+      "status": "FAIL",
+      "exit_code": 3,
+      "seconds": 7.603,
+      "stdout": "IMPORTS COMPLETE\nObservations: 964\nFirst time: 0\nParticles: (2, 130)\nSTART gaussian_kde constructor\n",
+      "stderr": "OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.\nOMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. As an unsafe, unsupported, undocumented workaround you can set the environment variable KMP_DUPLICATE_LIB_OK=TRUE to allow the program to continue to execute, but that may cause crashes or silently produce incorrect results. For more information, please see http://www.intel.com/software/products/support/.\n"
+    },
+    "scipy_first": {
+      "status": "FAIL",
+      "exit_code": 3,
+      "seconds": 6.292,
+      "stdout": "IMPORTS COMPLETE\nObservations: 964\nFirst time: 0\nParticles: (2, 130)\nSTART gaussian_kde constructor\n",
+      "stderr": "OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.\nOMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. As an unsafe, unsupported, undocumented workaround you can set the environment variable KMP_DUPLICATE_LIB_OK=TRUE to allow the program to continue to execute, but that may cause crashes or silently produce incorrect results. For more information, please see http://www.intel.com/software/products/support/.\n"
+    },
+    "numpy_scipy_torch": {
+      "status": "FAIL",
+      "exit_code": 3,
+      "seconds": 7.06,
+      "stdout": "IMPORTS COMPLETE\nObservations: 964\nFirst time: 0\nParticles: (2, 130)\nSTART gaussian_kde constructor\n",
+      "stderr": "OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.\nOMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. As an unsafe, unsupported, undocumented workaround you can set the environment variable KMP_DUPLICATE_LIB_OK=TRUE to allow the program to continue to execute, but that may cause crashes or silently produce incorrect results. For more information, please see http://www.intel.com/software/products/support/.\n"
+    }
+  },
+  "original_data_sha256": "b6a7a16cf59535cb0c7eb8cdb27565b02b35a5feeec1e34aeaf9a87acf46cecc",
+  "scientific_operation": "Gaussian KDE on original first-time observations",
+  "original_notebook_modified": false,
+  "environment_modified": false,
+  "unsafe_duplicate_runtime_override_used": false,
+  "full_notebook_executed": false,
+  "published_results_reproduced": false
+}

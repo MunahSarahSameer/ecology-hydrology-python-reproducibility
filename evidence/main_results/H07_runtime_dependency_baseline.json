@@ -1,0 +1,56 @@
+{
+  "step": 117,
+  "package_id": "H07",
+  "test_type": "isolated_dependency_import_baseline",
+  "python_version": "3.11.18",
+  "dependencies": [
+    {
+      "dependency": "numpy",
+      "module": "numpy",
+      "status": "PASS",
+      "version": "2.4.6",
+      "error": null
+    },
+    {
+      "dependency": "scipy",
+      "module": "scipy",
+      "status": "PASS",
+      "version": "1.17.1",
+      "error": null
+    },
+    {
+      "dependency": "h5py",
+      "module": "h5py",
+      "status": "FAIL",
+      "version": null,
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 5, in <module>\n  File \"C:\\Users/REDACTED\\miniconda3\\envs\\code_decay\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'h5py'"
+    },
+    {
+      "dependency": "networkx",
+      "module": "networkx",
+      "status": "PASS",
+      "version": "3.6.1",
+      "error": null
+    },
+    {
+      "dependency": "GDAL (osgeo)",
+      "module": "osgeo",
+      "status": "FAIL",
+      "version": null,
+      "error": "Traceback (most recent call last):\n  File \"<string>\", line 5, in <module>\n  File \"C:\\Users/REDACTED\\miniconda3\\envs\\code_decay\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'osgeo'"
+    }
+  ],
+  "imports_passed": 3,
+  "imports_total": 5,
+  "generated_at_utc": "2026-11-11T01:25:28.310512+00:00",
+  "original_archive_modified": false,
+  "pytopkapi_imported": false,
+  "dependencies_installed": false,
+  "scientific_workflow_executed": false,
+  "limitations": [
+    "Successful imports do not prove API compatibility.",
+    "Missing modules do not prove historical code decay.",
+    "The archived PyTOPKAPI package was not imported.",
+    "No hydrological simulation or result reproduction was attempted."
+  ]
+}

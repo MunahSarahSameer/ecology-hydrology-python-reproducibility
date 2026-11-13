@@ -1,0 +1,73 @@
+{
+  "step": 152,
+  "package_id": "H09",
+  "package_name": "swatpy",
+  "version": "v0.2",
+  "domain": "hydrology",
+  "archive_sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+  "archive_integrity": "PASS",
+  "python_syntax": {
+    "files_checked": 8,
+    "passed": 8,
+    "failed": 0
+  },
+  "dependency_availability": {
+    "checked": 7,
+    "discoverable": 4,
+    "not_discoverable": 3,
+    "note": "Availability does not establish runtime compatibility."
+  },
+  "original_component_execution": {
+    "methods": [
+      "efficiency.nash",
+      "efficiency.agr"
+    ],
+    "repeat_runs": 5,
+    "method_executions": 10,
+    "repeatability_pass": true,
+    "constructor_bypassed": true,
+    "synthetic_inputs": true
+  },
+  "missing_data_limitation": {
+    "observed": true,
+    "description": "Original methods return masked results for missing observations under NumPy 2.4.6.",
+    "age_related_decay_proven": false
+  },
+  "source_independence": {
+    "comparison_archives": 16,
+    "comparison_python_files": 685,
+    "exact_matches": 0,
+    "ast_matches": 0,
+    "assessment": "PROVISIONALLY_DISTINCT_SOURCE_LEVEL",
+    "publication_independence_verified": false
+  },
+  "execution_classification": "PARTIALLY_EXECUTABLE_COMPONENT_LEVEL",
+  "sample_inclusion": "PROVISIONALLY_INCLUDED",
+  "full_package_execution_verified": false,
+  "scientific_reproduction_verified": false,
+  "dependency_recovery_performed": false,
+  "original_archive_modified": false,
+  "evidence_files": {
+    "metadata": "H09_archive_metadata_screening.json",
+    "archive": "H09_initial_archive_inspection.json",
+    "syntax": "H09_syntax_dependency_baseline.json",
+    "dependencies": "H09_dependency_availability.json",
+    "functions": "H09_original_function_screening.json",
+    "efficiency_inspection": "H09_hydrological_efficiency_inspection.json",
+    "execution": "H09_original_efficiency_execution_recheck.json",
+    "missing_data": "H09_missing_data_investigation.json",
+    "numerical_diagnostic": "H09_masked_reduction_verification.json",
+    "repeatability": "H09_original_efficiency_repeatability.json",
+    "independence": "H09_source_independence_audit.json"
+  },
+  "missing_optional_evidence": [],
+  "limitations": [
+    "Full SWAT2012 simulation was not executed.",
+    "Archived scientific methods were tested in isolation.",
+    "Original file-reading constructor was bypassed.",
+    "Missing-data behaviour was not compared across historical NumPy versions.",
+    "Source-level uniqueness does not establish publication independence.",
+    "The 15-candidate sample requires a final eligibility audit."
+  ],
+  "generated_at_utc": "2026-11-11T02:29:26.153835+00:00"
+}

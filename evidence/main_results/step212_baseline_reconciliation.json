@@ -1,0 +1,75 @@
+{
+  "step": 212,
+  "reason": "Reconcile historical baseline with later component tests",
+  "previous_records": {
+    "E01": {
+      "candidate_id": "E01",
+      "discipline": "Ecology",
+      "project_name": "DeepSDM",
+      "baseline_status": "PASS_LIMITED",
+      "recovered_status": "PASS_LIMITED",
+      "previous_finding": "Original DeepSDM CLI started successfully; synthetic observation consolidation passed 8/8 checks. 63/63 Python files passed syntax checking. No dependency installation or source repair was required for the tested component.",
+      "evidence_files_found": "results\\E01_step185_static_audit.json; results\\E01_step186_dependency_audit.json; results\\E01_step189_corrected_baseline.json; results\\E01_step191_functional_test.json",
+      "evidence_files_missing": "",
+      "evidence_reviewed_in_step_182": "NO",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "next_action": "Document component-level success and assess whether full model training is feasible.",
+      "testing_review_status": "E01_COMPONENT_VERIFIED"
+    },
+    "H06": {
+      "candidate_id": "H06",
+      "discipline": "Hydrology",
+      "project_name": "S4D rainfall-runoff",
+      "baseline_status": "PASS_LIMITED",
+      "recovered_status": "PASS_LIMITED",
+      "previous_finding": "Original H06 hydrological evaluation functions nse, kge and bias executed successfully using synthetic discharge data. Eight of eight validation checks passed. All 96 archived Python files passed syntax inspection. No source modification or dependency installation was required for these tests. Full S4D model training and published scientific result reproduction remain unverified.",
+      "evidence_files_found": "repositories\\results\\H06_assessment.json; results/H06_step193_execution_target_discovery.json; results/H06_step194_metric_inspection.json; results/H06_step195_metric_execution.json",
+      "evidence_files_missing": "",
+      "evidence_reviewed_in_step_182": "NO",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "next_action": "Document component-level metric execution; assess whether original S4D model execution is feasible without external CAMELS data.",
+      "testing_review_status": "H06_COMPONENT_VERIFIED"
+    }
+  },
+  "updated_records": {
+    "E01": {
+      "candidate_id": "E01",
+      "discipline": "Ecology",
+      "project_name": "DeepSDM",
+      "baseline_status": "UNKNOWN",
+      "recovered_status": "PASS_LIMITED",
+      "previous_finding": "Original DeepSDM CLI started successfully; synthetic observation consolidation passed 8/8 checks. 63/63 Python files passed syntax checking. No dependency installation or source repair was required for the tested component.",
+      "evidence_files_found": "results\\E01_step185_static_audit.json; results\\E01_step186_dependency_audit.json; results\\E01_step189_corrected_baseline.json; results\\E01_step191_functional_test.json",
+      "evidence_files_missing": "",
+      "evidence_reviewed_in_step_182": "NO",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "next_action": "Document component-level success and assess whether full model training is feasible.",
+      "testing_review_status": "E01_COMPONENT_VERIFIED",
+      "baseline_interpretation": "Historical baseline UNKNOWN. An earlier failure was caused by incorrect package context in the test harness. A later corrected CLI test passed without source changes or dependency installation.",
+      "component_execution_evidence": "Original observation-consolidation component executed on synthetic data with 8/8 validation checks passing."
+    },
+    "H06": {
+      "candidate_id": "H06",
+      "discipline": "Hydrology",
+      "project_name": "S4D rainfall-runoff",
+      "baseline_status": "NOT_ATTEMPTED",
+      "recovered_status": "PASS_LIMITED",
+      "previous_finding": "Original H06 hydrological evaluation functions nse, kge and bias executed successfully using synthetic discharge data. Eight of eight validation checks passed. All 96 archived Python files passed syntax inspection. No source modification or dependency installation was required for these tests. Full S4D model training and published scientific result reproduction remain unverified.",
+      "evidence_files_found": "repositories\\results\\H06_assessment.json; results/H06_step193_execution_target_discovery.json; results/H06_step194_metric_inspection.json; results/H06_step195_metric_execution.json",
+      "evidence_files_missing": "",
+      "evidence_reviewed_in_step_182": "NO",
+      "full_scientific_workflow_verified": "NO",
+      "published_results_reproduced": "NOT_VERIFIED",
+      "next_action": "Document component-level metric execution; assess whether original S4D model execution is feasible without external CAMELS data.",
+      "testing_review_status": "H06_COMPONENT_VERIFIED",
+      "baseline_interpretation": "Historical baseline NOT_ATTEMPTED. The later isolated execution of original hydrological metric functions succeeded without source changes or dependency installation.",
+      "component_execution_evidence": "Original NSE, KGE and bias-related functions executed successfully with 8/8 validation checks passing."
+    }
+  },
+  "backup_json": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\results\\testing_checklist_before_step212_20261111_230722.json",
+  "backup_csv": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\results\\testing_checklist_before_step212_20261111_230722.csv",
+  "generated_at_utc": "2026-11-11T23:07:22.767548+00:00"
+}

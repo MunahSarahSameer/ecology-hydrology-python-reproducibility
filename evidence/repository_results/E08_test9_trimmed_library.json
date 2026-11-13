@@ -1,0 +1,20 @@
+{
+  "archive_id": "E08",
+  "test": "Original trimmed WSINDy library",
+  "executed_additional_cells": [
+    44,
+    45
+  ],
+  "notebook_sha256": "7b393428100cbea66b84cce4401f38f50d6eb7d5f3127b8580ba661b397abf93",
+  "execution": {
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 12.155,
+    "stdout": "Scientific imports: PASS\nSTART CELL 8\nData-frame shape: (964, 12)\nTimes, t = [ 0  1  2  4  8 16 24 48]\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\nEND CELL 8\nSTART CELL 10\nEND CELL 10\nSTART CELL 13\nShape of U_h: torch.Size([80, 80, 8])\nEND CELL 13\nSTART CELL 17\nEND CELL 17\nSTART CELL 18\nShape of U: torch.Size([80, 80, 8])\nEND CELL 18\nSTART CELL 22\nEND CELL 22\nSTART CELL 23\n0.9999999999999989\ntorch.Size([80, 80, 8])\ntorch.Size([80, 80, 98])\nEND CELL 23\nSTART CELL 39\nEND CELL 39\nSTART CELL 41\nEND CELL 41\nSTART CELL 42\n<IPython.core.display.Math object>\nLibrary shape: G = (309600, 6)\nCondition number: K(G) = 5.10e+02\n\nEND CELL 42\n\n=== LIBRARY VALIDATION ===\nModel: WSINDy\nG_mat shape: torch.Size([309600, 6])\nVALIDATION: PASS\nSTART CELL 44\nRemoving: ('(u)', '(u)_{x}', '(u)_{y}')\n\n<IPython.core.display.Math object>\nLibrary shape: G = (309600, 3)\nCondition number: K(G) = 2.29e+00\n\nEND CELL 44\nSTART CELL 45\nEND CELL 45\n\n=== TRIMMED LIBRARY VALIDATION ===\nMatrix shape: (309600, 3)\nRemaining terms: ['(u)_{xx}', '(u)_{yy}', '(u)_{xy}']\nNonzero counts: [309600, 309600, 309600]\nCondition number: 2.286981548873428\nTRIMMED LIBRARY VALIDATION: PASS\n",
+    "stderr": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\test12\\wsindy.py:106: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\nC:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\test12\\wsindy.py:213: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n\n  0%|          | 0/6 [00:00<?, ?it/s]\n 17%|#6        | 1/6 [00:00<00:00,  5.82it/s]\n 50%|#####     | 3/6 [00:00<00:00,  8.87it/s]\n 67%|######6   | 4/6 [00:00<00:00,  9.17it/s]\n100%|##########| 6/6 [00:00<00:00, 10.11it/s]\n100%|##########| 6/6 [00:00<00:00,  9.26it/s]\n"
+  },
+  "original_notebook_modified": false,
+  "scientific_calculations_modified": false,
+  "model_fitting_executed": false,
+  "published_results_reproduced": false
+}

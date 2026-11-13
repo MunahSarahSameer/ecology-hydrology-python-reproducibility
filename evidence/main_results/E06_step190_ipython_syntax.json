@@ -1,0 +1,167 @@
+{
+  "step": 190,
+  "candidate": "E06",
+  "generated_at_utc": "2026-11-11T03:41:36.841454+00:00",
+  "notebooks_checked": 25,
+  "notebooks_static_parse_passed": 25,
+  "notebooks_requiring_review": 0,
+  "execution_attempted": false,
+  "limitations": [
+    "IPython-aware static syntax inspection only.",
+    "No notebook code was executed.",
+    "Passing AST parsing does not establish executability.",
+    "Missing dependencies and datasets are not tested."
+  ],
+  "records": [
+    {
+      "notebook": "Code_Figures/FigS10_MangroveDisturbanceRates.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS11_DisturbanceTrends40Years.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS12_RecentDisturbanceRates.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS13_RecentLoss.ipynb",
+      "code_cells_checked": 4,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS14_RelativeChangeClosedMangrove.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS16_ComparisonGMW.ipynb",
+      "code_cells_checked": 2,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS18_LandsatQuantile.ipynb",
+      "code_cells_checked": 2,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS19-S20_CompositeYears.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS21_PixelCount1980s.ipynb",
+      "code_cells_checked": 2,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS23_ThinCloudmask.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS24-25_FCCvalidation.ipynb",
+      "code_cells_checked": 5,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS26-29_TrainingSamples.ipynb",
+      "code_cells_checked": 14,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS2_4CanopyTypes.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS30_ValidRatio.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS4_SpatialUnits.ipynb",
+      "code_cells_checked": 2,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS5_Top10TimeSeries.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS7_Myanmar.ipynb",
+      "code_cells_checked": 2,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS8_SchematicFigure.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/FigS9_CycloneExamples.ipynb",
+      "code_cells_checked": 4,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/Figure 1.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/Figure 2.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/Figure 3.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/Figure 4.ipynb",
+      "code_cells_checked": 3,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/Figure 5.ipynb",
+      "code_cells_checked": 6,
+      "static_parse_pass": true,
+      "failures": []
+    },
+    {
+      "notebook": "Code_Figures/SummaryFig.ipynb",
+      "code_cells_checked": 4,
+      "static_parse_pass": true,
+      "failures": []
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "archive_id": "E08",
+  "historical_commit": "d43b25a6106b0d459f44948b1f05e3e6e162312e",
+  "historical_sources": {
+    "wsindy.py": {
+      "url": "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/d43b25a6106b0d459f44948b1f05e3e6e162312e/wsindy.py",
+      "commit": "d43b25a6106b0d459f44948b1f05e3e6e162312e",
+      "local_file": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\external_sources\\wsindy_d43b25a6106b.py",
+      "sha256": "1b74dfa508b84381a786aad24f9b616cbe0d66d919fbb9cff72b59afab2a859a",
+      "size_bytes": 13616,
+      "syntax_status": "PASS",
+      "syntax_error": null,
+      "functions": [
+        "__init__",
+        "compute_m",
+        "compute_p",
+        "optimal_support",
+        "compute_query_points",
+        "compute_u_scale",
+        "compute_spatial_scales",
+        "compute_scale_matrix",
+        "get_derivative_names",
+        "get_weight_fcns",
+        "build_axes",
+        "build_test_fcns",
+        "build_lhs",
+        "create_default_library",
+        "format_monomial",
+        "set_library",
+        "MSTLS",
+        "MSTLS_iterate",
+        "print_report"
+      ],
+      "classes": [
+        "WSINDy"
+      ]
+    },
+    "helper_fcns.py": {
+      "url": "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/d43b25a6106b0d459f44948b1f05e3e6e162312e/helper_fcns.py",
+      "commit": "d43b25a6106b0d459f44948b1f05e3e6e162312e",
+      "local_file": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\external_sources\\helper_fcns_d43b25a6106b.py",
+      "sha256": "05d813af6b1f87d3d05ea4f9dc060ee5b0a70302751c7f5f6186028e97f30796",
+      "size_bytes": 4782,
+      "syntax_status": "PASS",
+      "syntax_error": null,
+      "functions": [
+        "changepoint",
+        "F_root",
+        "compute_degrees",
+        "subsample",
+        "reshape_subsampled_tensor",
+        "my_nchoosek",
+        "D_phibar",
+        "sep_convolve",
+        "compute_weak_poly",
+        "compute_weak_multipoly",
+        "compute_weak_trig",
+        "loss",
+        "symbolic_pde",
+        "compute_residuals",
+        "add_noise",
+        "composite_term"
+      ],
+      "classes": []
+    }
+  },
+  "wsindy_version_comparison": {
+    "identical": false,
+    "historical_sha256": "1b74dfa508b84381a786aad24f9b616cbe0d66d919fbb9cff72b59afab2a859a",
+    "current_sha256": "336df558ff0ced7023c123e9c86627b7bb09907a97eb6e7ef9bd3e1f90976092",
+    "diff_line_count": 29
+  },
+  "source_executed": false,
+  "original_notebook_modified": false
+}

@@ -1,0 +1,125 @@
+{
+  "step": 97,
+  "package_id": "E10",
+  "python_version": "3.11.18",
+  "operating_system": "Windows-10-10.0.26200-SP0",
+  "dependencies": {
+    "tensorflow": {
+      "status": "NOT INSTALLED",
+      "version": null
+    },
+    "keras": {
+      "status": "NOT INSTALLED",
+      "version": null
+    },
+    "mcfly": {
+      "status": "NOT INSTALLED",
+      "version": null
+    },
+    "numpy": {
+      "status": "INSTALLED",
+      "version": "2.4.6"
+    },
+    "pandas": {
+      "status": "INSTALLED",
+      "version": "3.1.0"
+    },
+    "scikit-learn": {
+      "status": "INSTALLED",
+      "version": "1.9.1"
+    },
+    "prg": {
+      "status": "NOT INSTALLED",
+      "version": null
+    }
+  },
+  "source_reports": [
+    {
+      "filename": "Best_model_predictions.py",
+      "literal_data_references": [
+        "/Volumes/Bluebird/Time_series_sdms/Data/NZPred_alt.csv",
+        "/Volumes/Bluebird/Time_series_sdms/Data/NZPred_prec.csv",
+        "/Volumes/Bluebird/Time_series_sdms/Data/NZPred_tmax.csv",
+        "/Volumes/Bluebird/Time_series_sdms/Data/NZPred_tmin.csv",
+        "/Volumes/Bluebird/Time_series_sdms/Prediction_nz08_trial.csv",
+        "/Volumes/Bluebird/Time_series_sdms/Results/nz08/best_candidate_nz08.h5"
+      ],
+      "machine_specific_paths": [
+        "/Volumes/Bluebird/Time_series_sdms/Data/NZPred_alt.csv",
+        "/Volumes/Bluebird/Time_series_sdms/Data/NZPred_prec.csv",
+        "/Volumes/Bluebird/Time_series_sdms/Data/NZPred_tmax.csv",
+        "/Volumes/Bluebird/Time_series_sdms/Data/NZPred_tmin.csv",
+        "/Volumes/Bluebird/Time_series_sdms/Prediction_nz08_trial.csv",
+        "/Volumes/Bluebird/Time_series_sdms/Results/nz08/best_candidate_nz08.h5"
+      ]
+    },
+    {
+      "filename": "Deep_learning_loop_all_species.py",
+      "literal_data_references": [
+        "/At_Y_po.csv",
+        "/At_alt_po.csv",
+        "/At_prec_po.csv",
+        "/At_tmax_po.csv",
+        "/At_tmin_po.csv",
+        "/Av_Y_po.csv",
+        "/Av_alt_po.csv",
+        "/Av_prec_po.csv",
+        "/Av_tmax_po.csv",
+        "/Av_tmin_po.csv",
+        "/Bv_Y_po.csv",
+        "/Bv_alt_po.csv",
+        "/Bv_prec_po.csv",
+        "/Bv_tmax_po.csv",
+        "/Bv_tmin_po.csv",
+        "/Candidate_models_comparison.csv",
+        "/T_Y_pa.csv",
+        "/Test_results.csv",
+        "At_Y_bg.csv",
+        "At_alt_bg.csv",
+        "At_prec_bg.csv",
+        "At_tmax_bg.csv",
+        "At_tmin_bg.csv",
+        "Av_Y_bg.csv",
+        "Av_alt_bg.csv",
+        "Av_prec_bg.csv",
+        "Av_tmax_bg.csv",
+        "Av_tmin_bg.csv",
+        "Bv_Y_bg.csv",
+        "Bv_alt_bg.csv",
+        "Bv_prec_bg.csv",
+        "Bv_tmax_bg.csv",
+        "Bv_tmin_bg.csv",
+        "T_alt_pa.csv",
+        "T_prec_pa.csv",
+        "T_tmax_pa.csv",
+        "T_tmin_pa.csv",
+        "_preds.csv"
+      ],
+      "machine_specific_paths": [
+        "/Volumes/Bluebird/Time_series_sdms_cnn"
+      ]
+    },
+    {
+      "filename": "Raw_preds.py",
+      "literal_data_references": [
+        ".csv",
+        "/T_Y_pa.csv",
+        "/Trained_model.h5",
+        "T_alt_pa.csv",
+        "T_prec_pa.csv",
+        "T_tmax_pa.csv",
+        "T_tmin_pa.csv"
+      ],
+      "machine_specific_paths": [
+        "/Volumes/Bluebird/Time_series_sdms_cnn"
+      ]
+    }
+  ],
+  "execution_attempted": false,
+  "limitations": [
+    "Installed distributions do not guarantee successful imports.",
+    "Static literal scanning cannot detect all dynamically built paths.",
+    "Data references are not proof that corresponding files are absent.",
+    "No package installation or scientific execution performed."
+  ]
+}

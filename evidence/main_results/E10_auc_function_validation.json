@@ -1,0 +1,36 @@
+{
+  "step": 104,
+  "package_id": "E10",
+  "source_sha256": "72f1cb90ab2d01a7d15ce352edb9cc6951cf59e151c7fb32b47c7f07f70b4bc0",
+  "function": "auc_score",
+  "original_function_source": "def auc_score(y_true, y_pred):\n    if len( np.unique( y_true[:,1]) ) == 1:\n        return 0.5\n    else:\n        return roc_auc_score(y_true, y_pred)",
+  "results": [
+    {
+      "case": "perfect",
+      "expected": 1.0,
+      "error": "IndexError('too many indices for array: array is 1-dimensional, but 2 were indexed')",
+      "status": "ERROR"
+    },
+    {
+      "case": "reversed",
+      "expected": 0.0,
+      "error": "IndexError('too many indices for array: array is 1-dimensional, but 2 were indexed')",
+      "status": "ERROR"
+    },
+    {
+      "case": "mixed",
+      "expected": 0.75,
+      "error": "IndexError('too many indices for array: array is 1-dimensional, but 2 were indexed')",
+      "status": "ERROR"
+    },
+    {
+      "case": "single_class",
+      "expected": null,
+      "error": "IndexError('too many indices for array: array is 1-dimensional, but 2 were indexed')",
+      "status": "ERROR"
+    }
+  ],
+  "full_workflow_executed": false,
+  "published_results_reproduced": false,
+  "note": "Controlled synthetic-data test of an extracted original function. Single-class behaviour is recorded separately."
+}

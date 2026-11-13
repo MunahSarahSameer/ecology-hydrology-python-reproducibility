@@ -1,0 +1,180 @@
+{
+  "step": 137,
+  "package_id": "H08",
+  "audit_type": "ast_match_content_investigation",
+  "matches": [
+    {
+      "other_archive": "repositories\\H02\\FloodSformer-v1.0.1.zip",
+      "h08_file": "autotest/__init__.py",
+      "other_file": "mpianforini-FloodSformer-3a06265/floodsformer/config/__init__.py",
+      "h08_info": {
+        "bytes": 33,
+        "lines": 1,
+        "sha256": "087bc1b5bc94cd81e5c53cebb642926551998e71ee116ccda5ffa482d3db6a06",
+        "classes": [],
+        "functions": [],
+        "preview": "# empty init file for coverages"
+      },
+      "other_info": {
+        "bytes": 0,
+        "lines": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "classes": [],
+        "functions": [],
+        "preview": ""
+      },
+      "exact_bytes_identical": false,
+      "small_no_top_level_classes_or_functions": true
+    },
+    {
+      "other_archive": "repositories\\H02\\FloodSformer-v1.0.1.zip",
+      "h08_file": "autotest/__init__.py",
+      "other_file": "mpianforini-FloodSformer-3a06265/floodsformer/utils/__init__.py",
+      "h08_info": {
+        "bytes": 33,
+        "lines": 1,
+        "sha256": "087bc1b5bc94cd81e5c53cebb642926551998e71ee116ccda5ffa482d3db6a06",
+        "classes": [],
+        "functions": [],
+        "preview": "# empty init file for coverages"
+      },
+      "other_info": {
+        "bytes": 0,
+        "lines": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "classes": [],
+        "functions": [],
+        "preview": ""
+      },
+      "exact_bytes_identical": false,
+      "small_no_top_level_classes_or_functions": true
+    },
+    {
+      "other_archive": "repositories\\H02\\FloodSformer-v1.0.1.zip",
+      "h08_file": "autotest/__init__.py",
+      "other_file": "mpianforini-FloodSformer-3a06265/floodsformer/visualization/__init__.py",
+      "h08_info": {
+        "bytes": 33,
+        "lines": 1,
+        "sha256": "087bc1b5bc94cd81e5c53cebb642926551998e71ee116ccda5ffa482d3db6a06",
+        "classes": [],
+        "functions": [],
+        "preview": "# empty init file for coverages"
+      },
+      "other_info": {
+        "bytes": 0,
+        "lines": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "classes": [],
+        "functions": [],
+        "preview": ""
+      },
+      "exact_bytes_identical": false,
+      "small_no_top_level_classes_or_functions": true
+    },
+    {
+      "other_archive": "repositories\\H05\\neuralhydrology-v.1.2.3.zip",
+      "h08_file": "autotest/__init__.py",
+      "other_file": "neuralhydrology-v.1.2.3/neuralhydrology/__init__.py",
+      "h08_info": {
+        "bytes": 33,
+        "lines": 1,
+        "sha256": "087bc1b5bc94cd81e5c53cebb642926551998e71ee116ccda5ffa482d3db6a06",
+        "classes": [],
+        "functions": [],
+        "preview": "# empty init file for coverages"
+      },
+      "other_info": {
+        "bytes": 0,
+        "lines": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "classes": [],
+        "functions": [],
+        "preview": ""
+      },
+      "exact_bytes_identical": false,
+      "small_no_top_level_classes_or_functions": true
+    },
+    {
+      "other_archive": "repositories\\H05\\neuralhydrology-v.1.2.3.zip",
+      "h08_file": "autotest/__init__.py",
+      "other_file": "neuralhydrology-v.1.2.3/neuralhydrology/datautils/__init__.py",
+      "h08_info": {
+        "bytes": 33,
+        "lines": 1,
+        "sha256": "087bc1b5bc94cd81e5c53cebb642926551998e71ee116ccda5ffa482d3db6a06",
+        "classes": [],
+        "functions": [],
+        "preview": "# empty init file for coverages"
+      },
+      "other_info": {
+        "bytes": 0,
+        "lines": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "classes": [],
+        "functions": [],
+        "preview": ""
+      },
+      "exact_bytes_identical": false,
+      "small_no_top_level_classes_or_functions": true
+    },
+    {
+      "other_archive": "repositories\\H05\\neuralhydrology-v.1.2.3.zip",
+      "h08_file": "autotest/__init__.py",
+      "other_file": "neuralhydrology-v.1.2.3/neuralhydrology/utils/__init__.py",
+      "h08_info": {
+        "bytes": 33,
+        "lines": 1,
+        "sha256": "087bc1b5bc94cd81e5c53cebb642926551998e71ee116ccda5ffa482d3db6a06",
+        "classes": [],
+        "functions": [],
+        "preview": "# empty init file for coverages"
+      },
+      "other_info": {
+        "bytes": 0,
+        "lines": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "classes": [],
+        "functions": [],
+        "preview": ""
+      },
+      "exact_bytes_identical": false,
+      "small_no_top_level_classes_or_functions": true
+    },
+    {
+      "other_archive": "repositories\\H06\\S4D_rainfall_runoff_simulations.zip",
+      "h08_file": "autotest/__init__.py",
+      "other_file": "S4D_rainfall_runoff_simulations-main/papercode/__init__.py",
+      "h08_info": {
+        "bytes": 33,
+        "lines": 1,
+        "sha256": "087bc1b5bc94cd81e5c53cebb642926551998e71ee116ccda5ffa482d3db6a06",
+        "classes": [],
+        "functions": [],
+        "preview": "# empty init file for coverages"
+      },
+      "other_info": {
+        "bytes": 0,
+        "lines": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "classes": [],
+        "functions": [],
+        "preview": ""
+      },
+      "exact_bytes_identical": false,
+      "small_no_top_level_classes_or_functions": true
+    }
+  ],
+  "total_matches": 7,
+  "small_trivial_candidates": 7,
+  "other_matches": 0,
+  "independence_decision": "PENDING_REVIEW",
+  "limitations": [
+    "Small file size alone does not prove a match is unimportant.",
+    "Only the first 12 source lines are displayed.",
+    "AST identity does not establish publication duplication.",
+    "Publication-level independence requires separate evidence."
+  ],
+  "original_archives_modified": false,
+  "generated_at_utc": "2026-11-11T02:07:28.735439+00:00"
+}

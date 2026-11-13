@@ -1,0 +1,1978 @@
+{
+  "candidate": "H06",
+  "step": 193,
+  "execution_attempted": false,
+  "archives": [
+    {
+      "archive": "S4D_rainfall_runoff_simulations.zip",
+      "python_files": [
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/analysis/combine_sacsma_pkfiles.py",
+          "syntax": "PASS",
+          "imports": [
+            "os",
+            "pickle",
+            "pandas"
+          ],
+          "functions": [],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/analysis/main_performance_ensemble_only.py",
+          "syntax": "PASS",
+          "imports": [
+            "pickle",
+            "sys",
+            "numpy",
+            "pandas",
+            "os",
+            "performance_functions"
+          ],
+          "functions": [],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/analysis/performance_functions.py",
+          "syntax": "PASS",
+          "imports": [
+            "numpy",
+            "pandas",
+            "xarray",
+            "xarray",
+            "typing"
+          ],
+          "functions": [
+            "nse",
+            "alpha_nse",
+            "beta_nse",
+            "kge",
+            "get_quant",
+            "bias",
+            "stdev_rat",
+            "zero_freq",
+            "flow_duration_curve",
+            "baseflow_index",
+            "high_flows",
+            "low_flows",
+            "FHV",
+            "_get_fdc",
+            "_validate_inputs",
+            "_mask_valid",
+            "FLV",
+            "mass_balance",
+            "tc_analysis"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/main_pub.py",
+          "syntax": "PASS",
+          "imports": [
+            "argparse",
+            "json",
+            "pickle",
+            "random",
+            "sys",
+            "collections",
+            "datetime",
+            "pathlib",
+            "typing",
+            "numpy",
+            "pandas",
+            "torch",
+            "torch.nn",
+            "sklearn.model_selection",
+            "torch.utils.data",
+            "tqdm",
+            "papercode.datasets",
+            "papercode.datautils",
+            "papercode.lstm",
+            "papercode.nseloss",
+            "papercode.utils",
+            "papercode.SSM_test"
+          ],
+          "functions": [
+            "str2bool",
+            "get_args",
+            "create_splits",
+            "_setup_run",
+            "_prepare_data",
+            "train",
+            "train_epoch",
+            "evaluate",
+            "evaluate_basin",
+            "_store_results"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/main_with_train_val.py",
+          "syntax": "PASS",
+          "imports": [
+            "argparse",
+            "json",
+            "pickle",
+            "random",
+            "sys",
+            "collections",
+            "datetime",
+            "pathlib",
+            "typing",
+            "pdb",
+            "os",
+            "numpy",
+            "pandas",
+            "torch",
+            "torch.nn",
+            "torch.utils.data",
+            "tqdm",
+            "papercode.datasets",
+            "papercode.datautils",
+            "papercode.lstm",
+            "papercode.nseloss",
+            "papercode.utils",
+            "papercode.SSM_test"
+          ],
+          "functions": [
+            "str2bool",
+            "get_args",
+            "_setup_run",
+            "_prepare_data",
+            "train",
+            "evaluate",
+            "evaluate_basin",
+            "_store_results"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/SSM_test.py",
+          "syntax": "PASS",
+          "imports": [
+            "math",
+            "sys",
+            "torch",
+            "torch.nn",
+            "numpy",
+            "tqdm",
+            "typing",
+            "copy",
+            "torch",
+            "torch.nn",
+            "torch.optim",
+            "torch.backends.cudnn",
+            "torchvision",
+            "torchvision.transforms",
+            "os",
+            "argparse",
+            "numpy",
+            "torch.nn.functional",
+            "models.s4.s4d"
+          ],
+          "functions": [
+            "_noise",
+            "warmup_cosine_annealing_lr",
+            "setup_optimizer"
+          ],
+          "classes": [
+            "SelfAttentionLayer",
+            "HOPE"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/__init__.py",
+          "syntax": "PASS",
+          "imports": [],
+          "functions": [],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/datasets.py",
+          "syntax": "PASS",
+          "imports": [
+            "pathlib",
+            "typing",
+            "h5py",
+            "numpy",
+            "pandas",
+            "torch",
+            "torch.utils.data",
+            "datautils"
+          ],
+          "functions": [],
+          "classes": [
+            "CamelsTXT",
+            "CamelsH5"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/datautils.py",
+          "syntax": "PASS",
+          "imports": [
+            "sqlite3",
+            "pathlib",
+            "typing",
+            "numpy",
+            "pandas",
+            "numba"
+          ],
+          "functions": [
+            "add_camels_attributes",
+            "load_attributes",
+            "normalize_features",
+            "rescale_features",
+            "reshape_data",
+            "load_forcing",
+            "load_discharge"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/evalutils.py",
+          "syntax": "PASS",
+          "imports": [
+            "json",
+            "pickle",
+            "collections",
+            "pathlib",
+            "typing",
+            "numpy",
+            "tqdm",
+            "xarray",
+            "scipy.stats"
+          ],
+          "functions": [
+            "get_run_dirs",
+            "eval_benchmark_models",
+            "eval_lstm_models",
+            "get_pvals"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/lstm.py",
+          "syntax": "PASS",
+          "imports": [
+            "typing",
+            "torch",
+            "torch.nn"
+          ],
+          "functions": [],
+          "classes": [
+            "LSTM",
+            "LSTM_Model"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/mclstm_modifiedhydrology.py",
+          "syntax": "PASS",
+          "imports": [
+            "pdb",
+            "numpy",
+            "torch",
+            "torch",
+            "typing",
+            "tqdm"
+          ],
+          "functions": [
+            "eval_model"
+          ],
+          "classes": [
+            "MassConservingLSTM",
+            "_Gate",
+            "_NormalizedGate"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/metrics.py",
+          "syntax": "PASS",
+          "imports": [
+            "numpy"
+          ],
+          "functions": [
+            "calc_nse",
+            "calc_alpha_nse",
+            "calc_beta_nse",
+            "calc_fdc_fms",
+            "calc_fdc_fhv",
+            "calc_fdc_flv"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/models/s4/HOPE_SSM.py",
+          "syntax": "PASS",
+          "imports": [
+            "math",
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "einops",
+            "src.models.nn",
+            "scipy.io"
+          ],
+          "functions": [],
+          "classes": [
+            "HOPE_SSM_Kernel",
+            "HOPE_SSM"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/models/s4/s4d.py",
+          "syntax": "PASS",
+          "imports": [
+            "math",
+            "numpy",
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "einops",
+            "src.models.nn",
+            "scipy.io"
+          ],
+          "functions": [],
+          "classes": [
+            "S4DKernel",
+            "S4D"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/nseloss.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch"
+          ],
+          "functions": [],
+          "classes": [
+            "NSELoss"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/plotutils.py",
+          "syntax": "PASS",
+          "imports": [
+            "typing",
+            "numpy",
+            "matplotlib.collections",
+            "matplotlib.patches"
+          ],
+          "functions": [
+            "ecdf",
+            "get_shape_collections"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/callbacks/norms.py",
+          "syntax": "PASS",
+          "imports": [
+            "pytorch_lightning",
+            "pytorch_lightning.utilities",
+            "pytorch_lightning.utilities.parsing",
+            "omegaconf"
+          ],
+          "functions": [],
+          "classes": [
+            "TrackNorms"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/callbacks/params.py",
+          "syntax": "PASS",
+          "imports": [
+            "typing",
+            "pytorch_lightning",
+            "pytorch_lightning.utilities",
+            "pytorch_lightning.utilities.parsing"
+          ],
+          "functions": [],
+          "classes": [
+            "ParamsLog"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/callbacks/progressive_resizing.py",
+          "syntax": "PASS",
+          "imports": [
+            "numpy",
+            "pytorch_lightning.callbacks",
+            "src.utils",
+            "src.utils"
+          ],
+          "functions": [],
+          "classes": [
+            "ProgressiveResizing"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/callbacks/timer.py",
+          "syntax": "PASS",
+          "imports": [
+            "time",
+            "typing",
+            "pytorch_lightning",
+            "pytorch_lightning.utilities",
+            "pytorch_lightning.utilities.parsing",
+            "pytorch_lightning.utilities.types"
+          ],
+          "functions": [],
+          "classes": [
+            "Timer"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/callbacks/wandb.py",
+          "syntax": "PASS",
+          "imports": [
+            "glob",
+            "os",
+            "typing",
+            "matplotlib.pyplot",
+            "pandas",
+            "seaborn",
+            "torch",
+            "wandb",
+            "pytorch_lightning",
+            "pytorch_lightning.loggers",
+            "pytorch_lightning.utilities",
+            "sklearn",
+            "sklearn.metrics"
+          ],
+          "functions": [
+            "get_wandb_logger"
+          ],
+          "classes": [
+            "WatchModel",
+            "UploadCodeAsArtifact",
+            "UploadCheckpointsAsArtifact",
+            "LogConfusionMatrix",
+            "LogF1PrecRecHeatmap",
+            "LogImagePredictions",
+            "LogDT"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/__init__.py",
+          "syntax": "PASS",
+          "imports": [
+            "(relative)",
+            "base"
+          ],
+          "functions": [],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/audio.py",
+          "syntax": "PASS",
+          "imports": [
+            "os",
+            "os",
+            "os.path",
+            "torch",
+            "torchaudio",
+            "torch",
+            "torch.nn",
+            "src.dataloaders.base"
+          ],
+          "functions": [
+            "minmax_scale",
+            "quantize",
+            "dequantize",
+            "mu_law_encode",
+            "mu_law_decode",
+            "linear_encode",
+            "linear_decode",
+            "q_zero"
+          ],
+          "classes": [
+            "AbstractAudioDataset",
+            "QuantizedAudioDataset",
+            "QuantizedAutoregressiveAudio",
+            "SpeechCommands09",
+            "SpeechCommands09Autoregressive",
+            "MaestroDataset",
+            "MaestroAutoregressive",
+            "LJSpeech",
+            "LJSpeechAutoregressive",
+            "_SpeechCommands09Classification",
+            "SpeechCommands09Classification",
+            "SpeechCommandsGeneration",
+            "Music"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/base.py",
+          "syntax": "PASS",
+          "imports": [
+            "os",
+            "pickle",
+            "functools",
+            "pathlib",
+            "numpy",
+            "torch",
+            "torchaudio.functional",
+            "torchvision",
+            "einops",
+            "einops.layers.torch",
+            "src.utils",
+            "torch.nn"
+          ],
+          "functions": [
+            "deprecated"
+          ],
+          "classes": [
+            "DefaultCollateMixin",
+            "SequenceResolutionCollateMixin",
+            "ImageResolutionCollateMixin",
+            "TBPTTDataLoader",
+            "SequenceDataset",
+            "ResolutionSequenceDataset",
+            "ImageResolutionSequenceDataset"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/basic.py",
+          "syntax": "PASS",
+          "imports": [
+            "numpy",
+            "torch",
+            "torchvision",
+            "einops.layers.torch",
+            "src.utils",
+            "src.dataloaders.base"
+          ],
+          "functions": [],
+          "classes": [
+            "MNIST",
+            "CIFAR10",
+            "SpeechCommands"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/datasets/adding.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn",
+            "torch.nn.functional"
+          ],
+          "functions": [
+            "torch_adding_data",
+            "adding_static_dataset"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/datasets/celeba.py",
+          "syntax": "PASS",
+          "imports": [
+            "functools",
+            "torch",
+            "os",
+            "PIL",
+            "typing",
+            "torchvision.datasets",
+            "numpy"
+          ],
+          "functions": [],
+          "classes": [
+            "_CelebA"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/datasets/copying.py",
+          "syntax": "PASS",
+          "imports": [
+            "random",
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "numpy",
+            "src.utils"
+          ],
+          "functions": [
+            "np_copying_data",
+            "torch_copying_data",
+            "torch_copying_lag_data",
+            "copying_static_dataset"
+          ],
+          "classes": [
+            "CopyingTrainDataset",
+            "CopyingEvalDataset"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/datasets/delay.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "src.dataloaders.utils.signal"
+          ],
+          "functions": [],
+          "classes": [
+            "DelayTrainDataset",
+            "DelayEvalDataset"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/datasets/music.py",
+          "syntax": "PASS",
+          "imports": [
+            "numpy",
+            "random",
+            "time",
+            "os",
+            "glob",
+            "torch",
+            "sklearn",
+            "scipy.io"
+          ],
+          "functions": [
+            "normalize01",
+            "mu_law_encode",
+            "mu_law_decode",
+            "minmax_scale",
+            "linear_quantize",
+            "linear_dequantize",
+            "q_zero",
+            "download_all_data"
+          ],
+          "classes": [
+            "_Music",
+            "MusicTensorDataset"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/datasets/reconstruct.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "src.dataloaders.utils.signal"
+          ],
+          "functions": [],
+          "classes": [
+            "ReconstructTrainDataset",
+            "ReconstructEvalDataset"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/datasets/sc.py",
+          "syntax": "PASS",
+          "imports": [
+            "os",
+            "pathlib",
+            "tarfile",
+            "urllib.request",
+            "sklearn.model_selection",
+            "torch",
+            "torch.nn.functional",
+            "torchaudio"
+          ],
+          "functions": [
+            "pad",
+            "subsample",
+            "save_data",
+            "load_data",
+            "normalise_data",
+            "normalize_all_data",
+            "minmax_scale",
+            "mu_law_encode",
+            "mu_law_decode",
+            "split_data"
+          ],
+          "classes": [
+            "_SpeechCommands",
+            "_SpeechCommandsGeneration"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/et.py",
+          "syntax": "PASS",
+          "imports": [
+            "typing",
+            "os",
+            "numpy",
+            "pandas",
+            "pandas.tseries",
+            "pandas.tseries.frequencies",
+            "torch",
+            "torch.utils",
+            "torch.utils.data",
+            "warnings",
+            "src.dataloaders.base"
+          ],
+          "functions": [
+            "time_features_from_frequency_str",
+            "time_features"
+          ],
+          "classes": [
+            "TimeFeature",
+            "SecondOfMinute",
+            "MinuteOfHour",
+            "HourOfDay",
+            "DayOfWeek",
+            "DayOfMonth",
+            "DayOfYear",
+            "MonthOfYear",
+            "WeekOfYear",
+            "StandardScaler",
+            "InformerDataset",
+            "_Dataset_ETT_hour",
+            "_Dataset_ETT_minute",
+            "_Dataset_Weather",
+            "_Dataset_ECL",
+            "InformerSequenceDataset",
+            "ETTHour",
+            "ETTMinute",
+            "Weather",
+            "ECL"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/lm.py",
+          "syntax": "PASS",
+          "imports": [
+            "logging",
+            "os",
+            "subprocess",
+            "pathlib",
+            "typing",
+            "math",
+            "numpy",
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "src.utils",
+            "src.utils.train",
+            "src.dataloaders.base",
+            "src.dataloaders.utils.vocabulary",
+            "src.utils",
+            "sys"
+          ],
+          "functions": [],
+          "classes": [
+            "LMOrderedIterator",
+            "LMShuffledIterator",
+            "LMMultiFileIterator",
+            "WikiText2",
+            "WikiText103",
+            "PennTreeBank",
+            "EnWik8",
+            "Text8",
+            "LM1B",
+            "Corpus"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/lra.py",
+          "syntax": "PASS",
+          "imports": [
+            "io",
+            "logging",
+            "os",
+            "pickle",
+            "pathlib",
+            "torch",
+            "torch",
+            "torch.nn.functional",
+            "torchtext",
+            "torchvision",
+            "einops.layers.torch",
+            "PIL",
+            "datasets",
+            "src.dataloaders.base"
+          ],
+          "functions": [
+            "listops_tokenizer"
+          ],
+          "classes": [
+            "IMDB",
+            "TabularDataset",
+            "ListOps",
+            "PathFinderDataset",
+            "PathFinder",
+            "AAN"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/prepare/bidmc/data_loader.py",
+          "syntax": "PASS",
+          "imports": [
+            "numpy",
+            "pandas",
+            "tqdm"
+          ],
+          "functions": [
+            "load_from_tsfile_to_dataframe"
+          ],
+          "classes": [
+            "TsFileParseException"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/prepare/bidmc/process_data.py",
+          "syntax": "PASS",
+          "imports": [
+            "os",
+            "numpy",
+            "pandas",
+            "sklearn.model_selection",
+            "sktime",
+            "sktime.datasets",
+            "data_loader"
+          ],
+          "functions": [
+            "split_data",
+            "_to_numpy",
+            "process_data"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/synthetic.py",
+          "syntax": "PASS",
+          "imports": [
+            "numpy",
+            "torch",
+            "torchvision",
+            "einops.layers.torch",
+            "src.utils",
+            "src.dataloaders.base"
+          ],
+          "functions": [],
+          "classes": [
+            "Copying",
+            "Adding",
+            "Reconstruct",
+            "Delay",
+            "MackeyGlass"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/ts.py",
+          "syntax": "PASS",
+          "imports": [
+            "numpy",
+            "torch",
+            "torch",
+            "torch.nn",
+            "src.dataloaders.base"
+          ],
+          "functions": [],
+          "classes": [
+            "BIDMC",
+            "EegDataset",
+            "PTBXL",
+            "IMU"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/utils/cifar_augmentations.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "numpy",
+            "PIL",
+            "PIL.Image",
+            "PIL.Image"
+          ],
+          "functions": [],
+          "classes": [
+            "NpNormalize",
+            "Cutout",
+            "RandomErasing"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/utils/signal.py",
+          "syntax": "PASS",
+          "imports": [
+            "numpy"
+          ],
+          "functions": [
+            "whitesignal"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/utils/timm_mixup.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "timm.data",
+            "timm.data.mixup"
+          ],
+          "functions": [],
+          "classes": [
+            "TimmMixup"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/utils/video_loader.py",
+          "syntax": "PASS",
+          "imports": [
+            "cv2",
+            "torch",
+            "torch.utils.data",
+            "torchvision.datasets.folder",
+            "PIL",
+            "os",
+            "os.path",
+            "sys"
+          ],
+          "functions": [],
+          "classes": [
+            "VideoFolder"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/utils/vocabulary.py",
+          "syntax": "PASS",
+          "imports": [
+            "contextlib",
+            "os",
+            "collections",
+            "collections",
+            "torch",
+            "src.utils"
+          ],
+          "functions": [],
+          "classes": [
+            "Vocab",
+            "OpenAIVocab"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/dataloaders/vision.py",
+          "syntax": "PASS",
+          "imports": [
+            "os",
+            "torch",
+            "torch",
+            "torch.nn",
+            "torchvision",
+            "src.dataloaders.base"
+          ],
+          "functions": [],
+          "classes": [
+            "CIFAR100",
+            "CIFAR10C",
+            "CIFAR10Generation",
+            "CIFAR10GenerationFactored",
+            "HMDB51",
+            "ImageNet",
+            "ImageNetA",
+            "ImageNetR",
+            "ImageNetC",
+            "ImageNetP"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/functional/cauchy.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "einops"
+          ],
+          "functions": [
+            "_broadcast_dims",
+            "_c2r",
+            "_r2c",
+            "cauchy_naive",
+            "cauchy_lazy",
+            "cauchy",
+            "cauchy_real",
+            "cauchy_conj",
+            "cauchy_conj_components",
+            "cauchy_conj_components_lazy",
+            "cauchy_conj2"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/functional/krylov.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn.functional",
+            "einops",
+            "src.models.functional.toeplitz"
+          ],
+          "functions": [
+            "krylov_sequential",
+            "krylov",
+            "power",
+            "krylov_toeplitz",
+            "krylov_toeplitz_"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/functional/toeplitz.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn",
+            "torch.nn.functional"
+          ],
+          "functions": [
+            "construct_toeplitz",
+            "triangular_toeplitz_multiply_",
+            "triangular_toeplitz_multiply_padded_",
+            "causal_convolution",
+            "_fft",
+            "_ifft",
+            "causal_convolution_inverse"
+          ],
+          "classes": [
+            "TriangularToeplitzMult",
+            "TriangularToeplitzMultFast",
+            "TriangularToeplitzMultPadded",
+            "TriangularToeplitzMultPaddedFast"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/functional/unroll.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "numpy",
+            "math",
+            "src.models.functional.toeplitz",
+            "src.utils.permutations"
+          ],
+          "functions": [
+            "shift_up",
+            "interleave",
+            "batch_mult",
+            "unroll",
+            "parallel_unroll_recursive",
+            "parallel_unroll_recursive_br",
+            "parallel_unroll_iterative",
+            "variable_unroll_sequential",
+            "variable_unroll",
+            "variable_unroll_general_sequential",
+            "variable_unroll_matrix_sequential",
+            "variable_unroll_toeplitz_sequential",
+            "variable_unroll_general",
+            "variable_unroll_matrix",
+            "variable_unroll_toeplitz"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/functional/vandermonde.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "einops"
+          ],
+          "functions": [
+            "_broadcast_dims",
+            "_c2r",
+            "_r2c",
+            "vandermonde_naive",
+            "log_vandermonde_naive",
+            "log_vandermonde_lazy",
+            "log_vandermonde",
+            "log_vandermonde_transpose_naive",
+            "log_vandermonde_transpose",
+            "_log_vandermonde_matmul",
+            "log_vandermonde_matmul"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/hippo/hippo.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "numpy",
+            "scipy",
+            "einops"
+          ],
+          "functions": [
+            "embed_c2r",
+            "transition",
+            "rank_correction",
+            "initial_C",
+            "nplr"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/hippo/transition.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "numpy",
+            "scipy",
+            "einops",
+            "src.models.hippo.hippo",
+            "src.models.functional.toeplitz"
+          ],
+          "functions": [
+            "_diag"
+          ],
+          "classes": [
+            "AdaptiveTransition",
+            "ManualAdaptiveTransition",
+            "OPManualAdaptiveTransition",
+            "LegSAdaptiveTransitionManual",
+            "LegTAdaptiveTransitionManual",
+            "LagTAdaptiveTransitionManual",
+            "TLagTAdaptiveTransitionManual",
+            "GLagTAdaptiveTransitionManual",
+            "CumsumAdaptiveTransition",
+            "LagTCumsumAdaptiveTransition",
+            "TLagTCumsumAdaptiveTransition",
+            "GLagTCumsumAdaptiveTransition",
+            "LegTAdaptiveTransition",
+            "TriDInverseAdaptiveTransition",
+            "LegTTriDInverseAdaptiveTransition",
+            "LagTTriDInverseAdaptiveTransition",
+            "LegSTriDInverseAdaptiveTransition",
+            "JacTriDInverseAdaptiveTransition",
+            "ChebITriDInverseAdaptiveTransition",
+            "ChebIITriDInverseAdaptiveTransition",
+            "ToeplitzAdaptiveTransition",
+            "LagTToeplitzAdaptiveTransition",
+            "GLagTToeplitzAdaptiveTransition"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/hippo/visualizations.py",
+          "syntax": "PASS",
+          "imports": [
+            "functools",
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "torch.utils.data",
+            "numpy",
+            "scipy",
+            "scipy",
+            "scipy",
+            "einops",
+            "src.models.functional.unroll",
+            "matplotlib.pyplot",
+            "matplotlib.animation",
+            "seaborn"
+          ],
+          "functions": [
+            "transition",
+            "measure",
+            "basis",
+            "whitesignal",
+            "plot",
+            "plt_lines",
+            "update_lines",
+            "animate_hippo"
+          ],
+          "classes": [
+            "HiPPOScale",
+            "HiPPO"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/__init__.py",
+          "syntax": "PASS",
+          "imports": [
+            "linear",
+            "activation",
+            "normalization",
+            "dropout"
+          ],
+          "functions": [],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/activation.py",
+          "syntax": "PASS",
+          "imports": [
+            "math",
+            "torch",
+            "torch.nn",
+            "torch.nn.functional"
+          ],
+          "functions": [
+            "Activation",
+            "laplace"
+          ],
+          "classes": [
+            "GLU",
+            "ModReLU",
+            "SquaredReLU",
+            "Laplace"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/adaptive_softmax.py",
+          "syntax": "PASS",
+          "imports": [
+            "typing",
+            "functools",
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "src.models.nn.utils"
+          ],
+          "functions": [
+            "_init_weight"
+          ],
+          "classes": [
+            "OptionalParameterList",
+            "ProjectedAdaptiveLogSoftmax",
+            "AdaptiveEmbedding"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/dropout.py",
+          "syntax": "PASS",
+          "imports": [
+            "functools",
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "einops"
+          ],
+          "functions": [
+            "stochastic_depth"
+          ],
+          "classes": [
+            "StochasticDepth",
+            "DropoutNd"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/dxt.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn",
+            "numpy",
+            "scipy.fft",
+            "einops"
+          ],
+          "functions": [],
+          "classes": [
+            "DCT",
+            "IDCT"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/exprnn/expm32.py",
+          "syntax": "PASS",
+          "imports": [
+            "__future__",
+            "math",
+            "numpy",
+            "torch",
+            "scipy.special"
+          ],
+          "functions": [
+            "_onenorm_matrix_power_nnm",
+            "_onenorm",
+            "_ident_like",
+            "expm32",
+            "_expm",
+            "_solve_P_Q",
+            "_ell",
+            "differential"
+          ],
+          "classes": [
+            "_ExpmPadeHelper"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/exprnn/initialization.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "numpy",
+            "scipy.linalg"
+          ],
+          "functions": [
+            "henaff_init_",
+            "cayley_init_",
+            "haar_init_",
+            "haar_diag_init_",
+            "normal_squeeze_diag_init_",
+            "normal_diag_init_",
+            "create_diag_"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/exprnn/orthogonal.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn",
+            "parametrization",
+            "src.models.nn.activation"
+          ],
+          "functions": [],
+          "classes": [
+            "Orthogonal",
+            "OrthogonalRNN"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/exprnn/parametrization.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn"
+          ],
+          "functions": [
+            "get_parameters"
+          ],
+          "classes": [
+            "Parametrization"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/exprnn/trivializations.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "expm32"
+          ],
+          "functions": [
+            "cayley_map"
+          ],
+          "classes": [
+            "expm_class"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/gate.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn"
+          ],
+          "functions": [],
+          "classes": [
+            "Gate"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/initialization.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch"
+          ],
+          "functions": [
+            "init_weight",
+            "init_bias",
+            "weights_init",
+            "weights_init_embedding"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/linear.py",
+          "syntax": "PASS",
+          "imports": [
+            "math",
+            "functools",
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "einops",
+            "src.models.nn.activation"
+          ],
+          "functions": [
+            "get_initializer",
+            "LinearActivation"
+          ],
+          "classes": [
+            "TransposedLinear"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/normalization.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "einops"
+          ],
+          "functions": [],
+          "classes": [
+            "Normalization",
+            "TransposedLN",
+            "TSNormalization",
+            "TSInverseNormalization",
+            "ReversibleInstanceNorm1dInput",
+            "ReversibleInstanceNorm1dOutput"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/orthogonal.py",
+          "syntax": "PASS",
+          "imports": [
+            "exprnn.orthogonal",
+            "exprnn.trivializations",
+            "exprnn.initialization"
+          ],
+          "functions": [],
+          "classes": [
+            "OrthogonalLinear"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/residual.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch"
+          ],
+          "functions": [],
+          "classes": [
+            "Residual",
+            "Affine",
+            "Feedforward",
+            "Highway",
+            "DecayResidual"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/nn/utils.py",
+          "syntax": "PASS",
+          "imports": [
+            "inspect",
+            "functools",
+            "torch",
+            "torch"
+          ],
+          "functions": [
+            "wrap_kwargs",
+            "discard_kwargs",
+            "PassthroughSequential"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/sequence/__init__.py",
+          "syntax": "PASS",
+          "imports": [
+            "base"
+          ],
+          "functions": [],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/sequence/backbones/block.py",
+          "syntax": "PASS",
+          "imports": [
+            "functools",
+            "torch",
+            "torch",
+            "src.utils.registry",
+            "src.utils",
+            "src.models.nn",
+            "src.models.sequence",
+            "src.models.sequence.modules.pool",
+            "src.models.nn.residual"
+          ],
+          "functions": [],
+          "classes": [
+            "SequenceResidualBlock"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/sequence/backbones/model.py",
+          "syntax": "PASS",
+          "imports": [
+            "functools",
+            "typing",
+            "torch",
+            "torch.nn",
+            "einops",
+            "src.utils.config",
+            "src.models.sequence.backbones.block",
+            "src.models.sequence.base",
+            "src.models.nn"
+          ],
+          "functions": [],
+          "classes": [
+            "SequenceModel"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/sequence/base.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "functools"
+          ],
+          "functions": [
+            "TransposedModule"
+          ],
+          "classes": [
+            "SequenceModule",
+            "SequenceIdentity"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/sequence/convs/conv1d.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn.functional",
+            "torch",
+            "hydra",
+            "models.sequence.base",
+            "einops",
+            "src.models.nn.utils",
+            "src.models.nn"
+          ],
+          "functions": [],
+          "classes": [
+            "Conv1d"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/sequence/convs/conv2d.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch",
+            "src.models.sequence.base",
+            "src.models.nn"
+          ],
+          "functions": [],
+          "classes": [
+            "Conv2d"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/sequence/modules/pool.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch",
+            "torch.nn.functional",
+            "einops",
+            "src.models.sequence",
+            "src.models.nn"
+          ],
+          "functions": [],
+          "classes": [
+            "DownSample",
+            "DownAvgPool",
+            "DownSpectralPool",
+            "UpSample",
+            "UpAvgPool",
+            "DownLinearPool",
+            "UpLinearPool",
+            "DownPool2d",
+            "DownPool",
+            "UpPool"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/models/sequence/modules/s4block.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "torch.nn.utils",
+            "functools",
+            "einops",
+            "scipy.io",
+            "src.models.nn",
+            "src.models.sequence.base",
+            "src.utils.train",
+            "time",
+            "typing",
+            "collections",
+            "math",
+            "torch",
+            "torch.optim",
+            "numpy",
+            "os",
+            "src.models.hippo.hippo",
+            "src.models.functional.krylov",
+            "src.utils.train",
+            "scipy.io",
+            "src.models.functional.cauchy",
+            "src.models.functional.vandermonde",
+            "src.models.functional.vandermonde"
+          ],
+          "functions": [
+            "inv_transform",
+            "param_transform"
+          ],
+          "classes": [
+            "Kernel",
+            "SSMKernel",
+            "perturbation",
+            "perturbation_trainer",
+            "SSMKernelDiag",
+            "FFTConv",
+            "S4Block"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/tasks/decoders.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "einops",
+            "src.models.nn.utils",
+            "src.utils"
+          ],
+          "functions": [
+            "_instantiate",
+            "instantiate"
+          ],
+          "classes": [
+            "Decoder",
+            "SequenceDecoder",
+            "NDDecoder",
+            "StateDecoder",
+            "RetrievalHead",
+            "RetrievalDecoder",
+            "PackedDecoder"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/tasks/encoders.py",
+          "syntax": "PASS",
+          "imports": [
+            "datetime",
+            "math",
+            "typing",
+            "torch",
+            "torch",
+            "torch.nn.functional",
+            "einops",
+            "src.models.nn.utils",
+            "src.utils",
+            "src.utils.config",
+            "src.models.sequence.backbones.block",
+            "src.models.nn"
+          ],
+          "functions": [
+            "_instantiate",
+            "instantiate"
+          ],
+          "classes": [
+            "Encoder",
+            "PositionalEncoder",
+            "ClassEmbedding",
+            "Conv1DEncoder",
+            "LayerEncoder",
+            "TimestampEmbeddingEncoder",
+            "TSIndexEmbeddingEncoder",
+            "TimeEncoder",
+            "EEGAgeEncoder",
+            "PackedEncoder",
+            "OneHotEncoder",
+            "Conv3DPatchEncoder",
+            "Conv2DPatchEncoder",
+            "TextConditionalEncoder"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/tasks/metrics.py",
+          "syntax": "PASS",
+          "imports": [
+            "math",
+            "torch",
+            "torch.nn.functional",
+            "sklearn.metrics",
+            "functools"
+          ],
+          "functions": [
+            "_student_t_map",
+            "student_t_loss",
+            "gaussian_ll_loss",
+            "binary_cross_entropy",
+            "binary_accuracy",
+            "cross_entropy",
+            "soft_cross_entropy",
+            "accuracy",
+            "accuracy_at_k",
+            "f1_binary",
+            "f1_macro",
+            "f1_micro",
+            "roc_auc_macro",
+            "roc_auc_micro",
+            "mse",
+            "forecast_rmse",
+            "mae",
+            "loss",
+            "bpb",
+            "ppl"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/tasks/tasks.py",
+          "syntax": "PASS",
+          "imports": [
+            "typing",
+            "math",
+            "functools",
+            "collections",
+            "torch",
+            "torch.nn",
+            "torch.nn.functional",
+            "einops",
+            "omegaconf",
+            "src.models.nn.normalization",
+            "src.models.nn.adaptive_softmax",
+            "src.tasks.metrics",
+            "src.models.nn.utils",
+            "torchmetrics",
+            "src.utils.config"
+          ],
+          "functions": [],
+          "classes": [
+            "BaseTask",
+            "Scalar",
+            "LMTask",
+            "ForecastingTask",
+            "VideoTask",
+            "AdaptiveLMTask",
+            "ImageNetTask"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/utils/__init__.py",
+          "syntax": "PASS",
+          "imports": [
+            "config"
+          ],
+          "functions": [],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/utils/config.py",
+          "syntax": "PASS",
+          "imports": [
+            "typing",
+            "functools",
+            "hydra",
+            "omegaconf"
+          ],
+          "functions": [
+            "is_list",
+            "is_dict",
+            "to_dict",
+            "to_list",
+            "extract_attrs_from_obj",
+            "instantiate",
+            "get_class",
+            "omegaconf_filter_keys"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/utils/distributed.py",
+          "syntax": "PASS",
+          "imports": [
+            "os",
+            "contextlib",
+            "torch"
+          ],
+          "functions": [
+            "init_distributed",
+            "barrier",
+            "get_rank",
+            "get_world_size",
+            "all_reduce_item",
+            "all_reduce_tensor",
+            "sync_workers"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/utils/optim/ema.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch"
+          ],
+          "functions": [
+            "build_ema_optimizer"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/utils/optim/lamb.py",
+          "syntax": "PASS",
+          "imports": [
+            "torch",
+            "torch.optim"
+          ],
+          "functions": [
+            "lamb_kernel"
+          ],
+          "classes": [
+            "Lamb",
+            "JITLamb"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/utils/optim/schedulers.py",
+          "syntax": "PASS",
+          "imports": [
+            "math",
+            "warnings",
+            "torch",
+            "timm.scheduler"
+          ],
+          "functions": [
+            "InvSqrt",
+            "Constant"
+          ],
+          "classes": [
+            "CosineWarmup",
+            "TimmCosineLRScheduler"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/utils/optim_groups.py",
+          "syntax": "PASS",
+          "imports": [
+            "inspect",
+            "torch.nn",
+            "hydra"
+          ],
+          "functions": [
+            "add_optimizer_hooks",
+            "group_parameters_for_optimizer"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/utils/permutations.py",
+          "syntax": "PASS",
+          "imports": [
+            "math",
+            "numpy",
+            "torch"
+          ],
+          "functions": [
+            "bitreversal_po2",
+            "bitreversal_permutation",
+            "transpose_permutation",
+            "snake_permutation",
+            "hilbert_permutation",
+            "decode",
+            "right_shift",
+            "binary2gray"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/utils/registry.py",
+          "syntax": "PASS",
+          "imports": [],
+          "functions": [],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/src/utils/train.py",
+          "syntax": "PASS",
+          "imports": [
+            "logging",
+            "os",
+            "warnings",
+            "typing",
+            "pytorch_lightning",
+            "rich.syntax",
+            "rich.tree",
+            "omegaconf",
+            "pytorch_lightning.utilities",
+            "src.utils.config"
+          ],
+          "functions": [
+            "get_logger",
+            "process_config",
+            "print_config",
+            "log_optimizer"
+          ],
+          "classes": [
+            "LoggingContext"
+          ]
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/papercode/utils.py",
+          "syntax": "PASS",
+          "imports": [
+            "sys",
+            "pathlib",
+            "typing",
+            "h5py",
+            "numpy",
+            "pandas",
+            "tqdm",
+            "datasets"
+          ],
+          "functions": [
+            "create_h5_files",
+            "get_basin_list"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/run_global_parallel.py",
+          "syntax": "PASS",
+          "imports": [
+            "glob",
+            "os",
+            "pickle",
+            "sys",
+            "multiprocessing",
+            "pandas"
+          ],
+          "functions": [
+            "run_evaluation",
+            "merge_dicts"
+          ],
+          "classes": []
+        },
+        {
+          "file": "S4D_rainfall_runoff_simulations-main/run_pub_parallel.py",
+          "syntax": "PASS",
+          "imports": [
+            "glob",
+            "os",
+            "pickle",
+            "sys",
+            "multiprocessing",
+            "pdb",
+            "pandas"
+          ],
+          "functions": [
+            "run_evaluation",
+            "merge_dicts"
+          ],
+          "classes": []
+        }
+      ]
+    }
+  ],
+  "generated_at_utc": "2026-11-11T22:41:47.926091+00:00"
+}

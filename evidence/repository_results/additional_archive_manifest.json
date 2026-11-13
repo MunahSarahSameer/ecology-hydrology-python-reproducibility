@@ -1,0 +1,26 @@
+{
+  "E07": {
+    "domain": "ecology",
+    "status": "awaiting_download"
+  },
+  "E08": {
+    "domain": "ecology",
+    "status": "awaiting_download"
+  },
+  "E09": {
+    "domain": "ecology",
+    "status": "awaiting_download"
+  },
+  "E10": {
+    "domain": "ecology",
+    "status": "awaiting_download"
+  },
+  "H07": {
+    "domain": "hydrology",
+    "status": "awaiting_download"
+  },
+  "H08": {
+    "domain": "hydrology",
+    "status": "awaiting_download"
+  }
+}

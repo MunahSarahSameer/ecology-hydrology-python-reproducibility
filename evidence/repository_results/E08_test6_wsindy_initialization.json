@@ -1,0 +1,28 @@
+{
+  "archive_id": "E08",
+  "test": "WSINDy model initialization",
+  "selected_cells": [
+    8,
+    10,
+    13,
+    17,
+    18,
+    22,
+    23,
+    39,
+    41
+  ],
+  "historical_source_commit": "d43b25a6106b0d459f44948b1f05e3e6e162312e",
+  "notebook_sha256": "7b393428100cbea66b84cce4401f38f50d6eb7d5f3127b8580ba661b397abf93",
+  "data_sha256": "b6a7a16cf59535cb0c7eb8cdb27565b02b35a5feeec1e34aeaf9a87acf46cecc",
+  "execution": {
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 10.297,
+    "stdout": "Scientific imports: PASS\nSTART CELL 8\nData-frame shape: (964, 12)\nTimes, t = [ 0  1  2  4  8 16 24 48]\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\nEND CELL 8\nSTART CELL 10\nEND CELL 10\nSTART CELL 13\nShape of U_h: torch.Size([80, 80, 8])\nEND CELL 13\nSTART CELL 17\nEND CELL 17\nSTART CELL 18\nShape of U: torch.Size([80, 80, 8])\nEND CELL 18\nSTART CELL 22\nEND CELL 22\nSTART CELL 23\n0.9999999999999989\ntorch.Size([80, 80, 8])\ntorch.Size([80, 80, 98])\nEND CELL 23\nSTART CELL 39\nEND CELL 39\nSTART CELL 41\nEND CELL 41\n\n=== MODEL VALIDATION ===\nU_ws shape: (80, 80, 98)\nModel type: WSINDy\nVALIDATION: PASS\n",
+    "stderr": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\test11\\wsindy.py:106: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\nC:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\test11\\wsindy.py:213: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown\n  plt.show()\n"
+  },
+  "original_notebook_modified": false,
+  "scientific_model_fitting_executed": false,
+  "published_results_reproduced": false
+}

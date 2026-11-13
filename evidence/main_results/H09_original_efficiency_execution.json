@@ -1,0 +1,19 @@
+{
+  "step": 145,
+  "package_id": "H09",
+  "package_name": "swatpy",
+  "version": "v0.2",
+  "archive_sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+  "original_source_member": "allixender-swatpy-0d47bfa/swatpy/ReadOut.py",
+  "execution_method": "Unmodified archived ReadOut.py loaded in isolated subprocess; constructor bypassed for controlled inputs",
+  "result": {
+    "module_load": "FAIL",
+    "error": "Traceback (most recent call last):\n  File \"<string>\", line 141, in <module>\n  File \"C:\\Users/REDACTED\\miniconda3\\envs\\code_decay\\Lib\\json\\__init__.py\", line 238, in dumps\n    **kw).encode(obj)\n          ^^^^^^^^^^^\n  File \"C:\\Users/REDACTED\\miniconda3\\envs\\code_decay\\Lib\\json\\encoder.py\", line 200, in encode\n    chunks = self.iterencode(o, _one_shot=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users/REDACTED\\miniconda3\\envs\\code_decay\\Lib\\json\\encoder.py\", line 258, in iterencode\n    return _iterencode(o, 0)\n           ^^^^^^^^^^^^^^^^^\nValueError: Out of range float values are not JSON compliant\n"
+  },
+  "subprocess_returncode": 0,
+  "subprocess_stderr": "<string>:79: UserWarning: Warning: converting a masked element to nan.\n",
+  "original_archive_modified": false,
+  "full_package_execution_verified": false,
+  "scientific_reproduction_verified": false,
+  "generated_at_utc": "2026-11-11T02:20:46.057704+00:00"
+}

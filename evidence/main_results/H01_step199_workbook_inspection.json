@@ -1,0 +1,372 @@
+{
+  "candidate": "H01",
+  "step": 199,
+  "execution_attempted": false,
+  "workbooks": [
+    {
+      "path": "Data and codes/data/monthly_streamflow_HUM.xlsx",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 385,
+          "columns": 11,
+          "sample": [
+            [
+              "日期",
+              "xiantao",
+              "yichang",
+              "waizhou",
+              "datong",
+              "gaochang",
+              "pingshan",
+              "beibei",
+              "cuntan",
+              "wulong",
+              "zhutuo"
+            ],
+            [
+              "1991-01-01 00:00:00",
+              "807",
+              "3664",
+              "1577",
+              "13581",
+              "468",
+              "1157",
+              "390",
+              "2706",
+              "893",
+              "2236"
+            ],
+            [
+              "1991-02-01 00:00:00",
+              "858",
+              "4044",
+              "1763",
+              "18753",
+              "466",
+              "954",
+              "431",
+              "2584",
+              "1092",
+              "2056"
+            ],
+            [
+              "1991-03-01 00:00:00",
+              "1146",
+              "3545",
+              "3823",
+              "21922",
+              "610",
+              "943",
+              "443",
+              "2430",
+              "766",
+              "1941"
+            ],
+            [
+              "1991-04-01 00:00:00",
+              "1353",
+              "5756",
+              "4707",
+              "32586",
+              "1357",
+              "1426",
+              "805",
+              "4104",
+              "1348",
+              "3219"
+            ],
+            [
+              "1991-05-01 00:00:00",
+              "1344",
+              "11186",
+              "3047",
+              "32069",
+              "2839",
+              "3291",
+              "2004",
+              "8856",
+              "1883",
+              "6705"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "Data and codes/data/monthly_streamflow_NAT.xlsx",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 385,
+          "columns": 11,
+          "sample": [
+            [
+              "日期",
+              "xiantao",
+              "yichang",
+              "waizhou",
+              "datong",
+              "gaochang",
+              "pingshan",
+              "beibei",
+              "cuntan",
+              "wulong",
+              "zhutuo"
+            ],
+            [
+              "1991-01-01 00:00:00",
+              "368.741935483871",
+              "4148.83870967742",
+              "1744.838709677419",
+              "13993.64516129032",
+              "544.0645161290323",
+              "1273.161290322581",
+              "459.9354838709677",
+              "3058.741935483871",
+              "988.1935483870968",
+              "2499"
+            ],
+            [
+              "1991-02-01 00:00:00",
+              "532",
+              "4514.107142857143",
+              "1646.178571428571",
+              "19132.5",
+              "542.2142857142857",
+              "1056.321428571429",
+              "504.4285714285714",
+              "2923.321428571428",
+              "1180.857142857143",
+              "2301.607142857143"
+            ],
+            [
+              "1991-03-01 00:00:00",
+              "1016.387096774194",
+              "4081.741935483871",
+              "3883.322580645161",
+              "22167.41935483871",
+              "705.2258064516129",
+              "1045.838709677419",
+              "520.9354838709677",
+              "2789.677419354839",
+              "907.4193548387096",
+              "2205.612903225806"
+            ],
+            [
+              "1991-04-01 00:00:00",
+              "1290.666666666667",
+              "6087.066666666667",
+              "4593.433333333333",
+              "32401.3",
+              "1470.533333333333",
+              "1531.166666666667",
+              "891.1",
+              "4496.866666666667",
+              "1160.466666666667",
+              "3501.766666666667"
+            ],
+            [
+              "1991-05-01 00:00:00",
+              "1067.032258064516",
+              "11840.25806451613",
+              "3022.129032258064",
+              "31666.22580645161",
+              "2941.516129032258",
+              "3404.870967741936",
+              "2215.548387096774",
+              "9478",
+              "1944.225806451613",
+              "7083.967741935484"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "Data and codes/data/monthly_streamflow_OBS.xlsx",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 385,
+          "columns": 11,
+          "sample": [
+            [
+              "日期",
+              "xiantao",
+              "yichang",
+              "waizhou",
+              "datong",
+              "gaochang",
+              "pingshan",
+              "beibei",
+              "cuntan",
+              "wulong",
+              "zhutuo"
+            ],
+            [
+              "1991-01-01 00:00:00",
+              "700.1935483870968",
+              "4351.935483870968",
+              "1483.064516129032",
+              "13825.8064516129",
+              "910.0645161290323",
+              "1807.096774193548",
+              "438.8064516129032",
+              "3748.064516129032",
+              "438.258064516129",
+              "3244.83870967742"
+            ],
+            [
+              "1991-02-01 00:00:00",
+              "628.3571428571429",
+              "4415",
+              "1355.714285714286",
+              "18792.85714285714",
+              "823.3928571428571",
+              "1497.857142857143",
+              "366.9285714285714",
+              "3499.642857142857",
+              "591.9285714285714",
+              "3077.142857142857"
+            ],
+            [
+              "1991-03-01 00:00:00",
+              "809.4516129032259",
+              "4001.612903225806",
+              "2943.548387096774",
+              "20212.90322580645",
+              "804.1612903225806",
+              "1339.032258064516",
+              "385.8709677419355",
+              "2993.870967741936",
+              "565.7096774193549",
+              "2610.645161290322"
+            ],
+            [
+              "1991-04-01 00:00:00",
+              "941.7666666666667",
+              "5440.666666666667",
+              "4053.666666666667",
+              "30950",
+              "1032.3",
+              "1422.333333333333",
+              "604.0333333333333",
+              "3684.666666666667",
+              "837.4333333333333",
+              "3001"
+            ],
+            [
+              "1991-05-01 00:00:00",
+              "901.3870967741935",
+              "10114.51612903226",
+              "3188.387096774194",
+              "33435.48387096774",
+              "1943.225806451613",
+              "2186.774193548387",
+              "1571.451612903226",
+              "6452.580645161291",
+              "1994.193548387097",
+              "4545.16129032258"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "path": "Data and codes/data/monthly_streamflow_RES.xlsx",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 385,
+          "columns": 11,
+          "sample": [
+            [
+              "日期",
+              "xiantao",
+              "yichang",
+              "waizhou",
+              "datong",
+              "gaochang",
+              "pingshan",
+              "beibei",
+              "cuntan",
+              "wulong",
+              "zhutuo"
+            ],
+            [
+              "1991-01-01 00:00:00",
+              "836.516129032258",
+              "4159.064516129032",
+              "1588.193548387097",
+              "14637.51612903226",
+              "544",
+              "1280.935483870968",
+              "458.9354838709677",
+              "3061.741935483871",
+              "961.9032258064516",
+              "2503.709677419355"
+            ],
+            [
+              "1991-02-01 00:00:00",
+              "911.0357142857143",
+              "4454.214285714285",
+              "1837.214285714286",
+              "19912.28571428571",
+              "542.6071428571429",
+              "1072.678571428571",
+              "505.3214285714286",
+              "2942.035714285714",
+              "1123.75",
+              "2319.321428571428"
+            ],
+            [
+              "1991-03-01 00:00:00",
+              "1220.41935483871",
+              "4182.193548387097",
+              "3827.387096774194",
+              "23012.54838709677",
+              "703.741935483871",
+              "1066.870967741935",
+              "521.4516129032259",
+              "2810.645161290322",
+              "997.8709677419355",
+              "2225.709677419355"
+            ],
+            [
+              "1991-04-01 00:00:00",
+              "1391.666666666667",
+              "6373.833333333333",
+              "4682.933333333333",
+              "33478.73333333333",
+              "1471.1",
+              "1558.6",
+              "888.2333333333333",
+              "4522",
+              "1406.1",
+              "3530"
+            ],
+            [
+              "1991-05-01 00:00:00",
+              "1419.41935483871",
+              "11864.29032258065",
+              "3075.935483870968",
+              "32712.41935483871",
+              "2927.83870967742",
+              "3430.741935483871",
+              "2203.41935483871",
+              "9482.709677419354",
+              "1918.064516129032",
+              "7099"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "script": {
+    "path": "Data and codes/codes/Fig. 2_monthly_streamflow.py",
+    "source": "import pandas as pd\r\nimport matplotlib.pyplot as plt\r\nimport numpy as np\r\n\r\nplt.rcParams[\"font.family\"] = \"Times New Roman\"\r\nplt.rcParams[\"font.size\"] = 10\r\n\r\ndef calculate_nse(observed, simulated):\r\n    if len(observed) == 0 or len(simulated) == 0:\r\n        return np.nan\r\n    observed_mean = observed.mean()\r\n    numerator = ((observed - simulated) ** 2).sum()\r\n    denominator = ((observed - observed_mean) ** 2).sum()\r\n    if denominator == 0:\r\n        return np.nan\r\n    return 1 - numerator / denominator\r\n\r\nsimulated = pd.read_excel('E:/All1study/1irragation/compute/逐月径流模拟结果_天然.xlsx', index_col=0)\r\nsimulated_human = pd.read_excel('E:/All1study/1irragation/compute/逐月径流模拟结果_人类.xlsx', index_col=0)\r\nobserved = pd.read_excel('E:/All1study/1irragation/compute/逐月实测径流数据绘图.xlsx', index_col=0)\r\n\r\ndef annual_nse(observed, simulated):\r\n    df = pd.concat([observed, simulated], axis=1)\r\n    df.columns = ['Observed', 'Simulated']\r\n    annual_nse_values = df.resample('Y').apply(lambda x: calculate_nse(x['Observed'], x['Simulated']))\r\n    return annual_nse_values\r\n\r\ndef calculate_period_nse(observed, simulated, start_year, end_year):\r\n    start_date = f\"{start_year}-01-01\"\r\n    end_date = f\"{end_year}-12-31\"\r\n    observed_period = observed.loc[start_date:end_date]\r\n    simulated_period = simulated.loc[start_date:end_date]\r\n    return calculate_nse(observed_period, simulated_period)\r\n\r\n\r\ncommon_sites = simulated.columns.intersection(observed.columns)\r\n\r\nnum_sites = len(common_sites)\r\nnum_cols = 2\r\nnum_rows = int(np.ceil(num_sites / num_cols))\r\n\r\nfig_width = 10\r\nfig_height = 20\r\nplt.figure(figsize=(fig_width, fig_height))\r\n\r\nend_date = pd.to_datetime('2022-12-31')\r\n\r\nfor i, site in enumerate(common_sites, start=1):\r\n    ax1 = plt.subplot(num_rows, num_cols, i)\r\n    \r\n    obs = observed[site].dropna()\r\n    sim = simulated[site]\r\n    sim_human = simulated_human[site]\r\n    \r\n    ax1.plot(obs.index, obs, label='OBS', linestyle='--', color='black', linewidth=0.5)\r\n    ax1.plot(sim.index, sim, label='NAT', color='blue', linewidth=0.5)\r\n    ax1.plot(sim_human.index, sim_human, label='HUM', color='red', linewidth=0.5)\r\n\r\n    ax1_min, ax1_max = ax1.get_ylim()\r\n    ax1.set_ylim(ax1_min, ax1_max + (ax1_max - ax1_min) * 0.5)\r\n    ax1.set_xlabel(site.title(), labelpad=0)\r\n    ax1.set_xlim(obs.index.min(), end_date)\r\n    ax1.tick_params(axis='y', labelcolor='black')\r\n\r\n    ax2 = ax1.twinx()  \r\n    nse_values_natural = annual_nse(obs, sim)\r\n    nse_values_human = annual_nse(obs, sim_human)\r\n    \r\n    ax2.plot(nse_values_natural.index, nse_values_natural, linestyle='--', marker='o', color='blue', markersize=1, linewidth=1, label='NSE (NAT)')\r\n    ax2.plot(nse_values_human.index,nse_values_human, linestyle='--', marker='^', color='red', markersize=1, linewidth=1, label='NSE (HUM)')\r\n    \r\n    periods = [(1991, 2000), (2001, 2012), (2013, 2022)]\r\n    for period in periods:\r\n        avg_nse_natural = calculate_period_nse(obs, sim, *period)\r\n        avg_nse_human = calculate_period_nse(obs, sim_human, *period)\r\n        print(f\"{site} ({period[0]}-{period[1]}): NAT={avg_nse_natural}, HUM={avg_nse_human}\")\r\n    \r\n    ax2_min, ax2_max = ax2.get_ylim()\r\n    ax2.set_ylim(ax2_min - (ax2_max - ax2_min)*2.5, 1)\r\n    ax2.tick_params(axis='y', labelcolor='black')\r\n\r\n    nse_values = annual_nse(observed[site].dropna(), simulated[site])\r\n    min_nse_value = min(nse_values.min(), -1)\r\n    \r\n    if site == 'xiantao':      \r\n        ax2.set_yticks([-100, 1])\r\n        ax2.set_yticklabels([f'{-100:.0f}', '1'])\r\n    else:\r\n        ax2.set_yticks([min_nse_value, 1])\r\n        ax2.set_yticklabels([f'{min_nse_value:.0f}', '1'])        \r\n\r\n    lines, labels = ax1.get_legend_handles_labels()\r\n    lines2, labels2 = ax2.get_legend_handles_labels()\r\n\r\nplt.subplots_adjust(hspace=0.3, wspace=0.1)\r\nplt.tight_layout(pad=3.0)\r\nplt.show()"
+  },
+  "generated_at_utc": "2026-11-11T22:52:03.800777+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "archive_id": "E08",
+  "test": "Original scientific data-preparation cells",
+  "selected_cells": [
+    8,
+    10,
+    13
+  ],
+  "modification": "Google Drive data path only",
+  "notebook_sha256": "7b393428100cbea66b84cce4401f38f50d6eb7d5f3127b8580ba661b397abf93",
+  "original_notebook_modified": false,
+  "execution": {
+    "status": "FAIL",
+    "exit_code": 1,
+    "elapsed_seconds": 5.212,
+    "stdout": "Data-frame shape: (964, 12)\nTimes, t = [ 0  1  2  4  8 16 24 48]\nTau = [0. 1. 2. 3. 4. 5. 6. 7.]\nShape of U_h: torch.Size([80, 80, 8])\n\n=== SCIENTIFIC DATA VALIDATION ===\nFiltered observations: 964\n",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\test3\\run_original_data_cells.py\", line 133, in <module>\n    print(\"Histogram count:\", len(hists))\n                                  ^^^^^\nNameError: name 'hists' is not defined. Did you mean: 'list'?\n"
+  },
+  "wsindy_model_executed": false,
+  "published_results_reproduced": false
+}

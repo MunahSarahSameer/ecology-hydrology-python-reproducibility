@@ -1,0 +1,663 @@
+{
+  "step": 99,
+  "package_id": "E10",
+  "test_type": "static_runtime_requirements_inspection",
+  "files": [
+    {
+      "filename": "Best_model_predictions.py",
+      "relevant_lines": [
+        {
+          "line": 24,
+          "text": "import tensorflow as tf"
+        },
+        {
+          "line": 25,
+          "text": "import keras"
+        },
+        {
+          "line": 26,
+          "text": "from keras import backend as K"
+        },
+        {
+          "line": 28,
+          "text": "# mcfly"
+        },
+        {
+          "line": 29,
+          "text": "from mcfly import modelgen, find_architecture, storage, train_models_on_samples"
+        },
+        {
+          "line": 30,
+          "text": "from keras.models import load_model"
+        },
+        {
+          "line": 38,
+          "text": "T_tmax = np.loadtxt( open( \"/Volumes/Bluebird/Time_series_sdms/Data/NZPred_tmax.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 39,
+          "text": "T_tmin = np.loadtxt( open( \"/Volumes/Bluebird/Time_series_sdms/Data/NZPred_tmin.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 40,
+          "text": "T_prec = np.loadtxt( open( \"/Volumes/Bluebird/Time_series_sdms/Data/NZPred_prec.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 41,
+          "text": "T_alt = np.loadtxt( open( \"/Volumes/Bluebird/Time_series_sdms/Data/NZPred_alt.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 46,
+          "text": "best_model = tf.keras.models.load_model(\"/Volumes/Bluebird/Time_series_sdms/Results/nz08/best_candidate_nz08.h5\")"
+        },
+        {
+          "line": 48,
+          "text": "full_pred = best_model.predict(X_stack)"
+        }
+      ],
+      "top_level_executable_statements": [
+        {
+          "line": 3,
+          "type": "Expr"
+        },
+        {
+          "line": 38,
+          "type": "Assign"
+        },
+        {
+          "line": 39,
+          "type": "Assign"
+        },
+        {
+          "line": 40,
+          "type": "Assign"
+        },
+        {
+          "line": 41,
+          "type": "Assign"
+        },
+        {
+          "line": 43,
+          "type": "Assign"
+        },
+        {
+          "line": 46,
+          "type": "Assign"
+        },
+        {
+          "line": 48,
+          "type": "Assign"
+        },
+        {
+          "line": 50,
+          "type": "Expr"
+        }
+      ]
+    },
+    {
+      "filename": "Deep_learning_loop_all_species.py",
+      "relevant_lines": [
+        {
+          "line": 11,
+          "text": "Parts of the script are adapted from code made available by the 'mcfly' team (https://github.com/NLeSC/mcfly)"
+        },
+        {
+          "line": 12,
+          "text": "Software versions:  Ubuntu 20.04 OS; Python 3.10.10, running on Anaconda; Tensorflow v2.9.2; mcfly v.3.1.0"
+        },
+        {
+          "line": 58,
+          "text": "import tensorflow as tf"
+        },
+        {
+          "line": 59,
+          "text": "import keras"
+        },
+        {
+          "line": 60,
+          "text": "from keras import backend as K"
+        },
+        {
+          "line": 62,
+          "text": "import prg"
+        },
+        {
+          "line": 65,
+          "text": "# mcfly"
+        },
+        {
+          "line": 66,
+          "text": "from mcfly import modelgen, find_architecture, storage, train_models_on_samples"
+        },
+        {
+          "line": 67,
+          "text": "#from keras.models import load_model"
+        },
+        {
+          "line": 74,
+          "text": "print( \"TensorFlow GPU memory usage:     \", tf.config.experimental.get_memory_info('GPU:0') )"
+        },
+        {
+          "line": 100,
+          "text": "# roc_auc = tf.keras.metrics.AUC("
+        },
+        {
+          "line": 114,
+          "text": "# pr_auc = tf.keras.metrics.AUC("
+        },
+        {
+          "line": 128,
+          "text": "es = tf.keras.callbacks.EarlyStopping("
+        },
+        {
+          "line": 168,
+          "text": "print( \"TensorFlow GPU memory usage:     \", tf.config.experimental.get_memory_info('GPU:0') )"
+        },
+        {
+          "line": 174,
+          "text": "keras.backend.clear_session()"
+        },
+        {
+          "line": 181,
+          "text": "os.chdir( ''.join([ computer_path, \"/Data/\", region ]) )"
+        },
+        {
+          "line": 193,
+          "text": "At_tmax_bg = np.loadtxt( open( \"At_tmax_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 194,
+          "text": "At_tmin_bg = np.loadtxt( open( \"At_tmin_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 195,
+          "text": "At_prec_bg = np.loadtxt( open( \"At_prec_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 196,
+          "text": "At_alt_bg = np.loadtxt( open( \"At_alt_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 197,
+          "text": "At_Y_bg = np.loadtxt( open( \"At_Y_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 207,
+          "text": "Av_tmax_bg = np.loadtxt( open( \"Av_tmax_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 208,
+          "text": "Av_tmin_bg = np.loadtxt( open( \"Av_tmin_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 209,
+          "text": "Av_prec_bg = np.loadtxt( open( \"Av_prec_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 210,
+          "text": "Av_alt_bg = np.loadtxt( open( \"Av_alt_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 211,
+          "text": "Av_Y_bg = np.loadtxt( open( \"Av_Y_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 220,
+          "text": "Bv_tmax_bg = np.loadtxt( open( \"Bv_tmax_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 221,
+          "text": "Bv_tmin_bg = np.loadtxt( open( \"Bv_tmin_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 222,
+          "text": "Bv_prec_bg = np.loadtxt( open( \"Bv_prec_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 223,
+          "text": "Bv_alt_bg = np.loadtxt( open( \"Bv_alt_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 224,
+          "text": "Bv_Y_bg = np.loadtxt( open( \"Bv_Y_bg.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 233,
+          "text": "T_tmax = np.loadtxt( open( \"T_tmax_pa.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 234,
+          "text": "T_tmin = np.loadtxt( open( \"T_tmin_pa.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 235,
+          "text": "T_prec = np.loadtxt( open( \"T_prec_pa.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 236,
+          "text": "T_alt = np.loadtxt( open( \"T_alt_pa.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 263,
+          "text": "keras.backend.clear_session()"
+        },
+        {
+          "line": 269,
+          "text": "print( \"TensorFlow GPU memory usage:     \", tf.config.experimental.get_memory_info('GPU:0') )"
+        },
+        {
+          "line": 281,
+          "text": "At_tmax_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region ,\"/\" , species , \"/At_tmax_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 282,
+          "text": "At_tmin_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region ,\"/\" , species , \"/At_tmin_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 283,
+          "text": "At_prec_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region ,\"/\" , species , \"/At_prec_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 284,
+          "text": "At_alt_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region ,\"/\" , species , \"/At_alt_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 285,
+          "text": "At_Y_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region ,\"/\" , species , \"/At_Y_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 308,
+          "text": "Av_tmax_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region , \"/\" , species , \"/Av_tmax_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 309,
+          "text": "Av_tmin_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region , \"/\" , species , \"/Av_tmin_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 310,
+          "text": "Av_prec_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region , \"/\" , species , \"/Av_prec_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 311,
+          "text": "Av_alt_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region , \"/\" , species , \"/Av_alt_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 312,
+          "text": "Av_Y_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region , \"/\" , species , \"/Av_Y_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 357,
+          "text": "Bv_tmax_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region , \"/\" , species , \"/Bv_tmax_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 358,
+          "text": "Bv_tmin_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region , \"/\" , species , \"/Bv_tmin_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 359,
+          "text": "Bv_prec_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region , \"/\" , species , \"/Bv_prec_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 360,
+          "text": "Bv_alt_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region , \"/\" , species , \"/Bv_alt_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 361,
+          "text": "Bv_Y_po = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region , \"/\" , species , \"/Bv_Y_po.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 384,
+          "text": "T_Y = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region , \"/\" , species , \"/T_Y_pa.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 435,
+          "text": "#Because mcfly uses random search, you will get better results when using more models."
+        },
+        {
+          "line": 480,
+          "text": "#Note: ['acc'] and ['val_acc']' were changed to ['accuracy'] and ['val_accuracy'], respectively for compatibility with current mcfly version"
+        },
+        {
+          "line": 493,
+          "text": "modelcomparisons.to_csv( os.path.join(''.join([ resultpath, \"/Candidate_models_comparison.csv\" ]) ))"
+        },
+        {
+          "line": 507,
+          "text": "# os.chdir(resultpath)"
+        },
+        {
+          "line": 512,
+          "text": "print( \"TensorFlow GPU memory usage:     \", tf.config.experimental.get_memory_info('GPU:0') )"
+        },
+        {
+          "line": 518,
+          "text": "keras.backend.clear_session()"
+        },
+        {
+          "line": 529,
+          "text": "print( \"TensorFlow GPU memory usage:     \", tf.config.experimental.get_memory_info('GPU:0') )"
+        },
+        {
+          "line": 540,
+          "text": "#best_model = tf.keras.models.load_model(''.join([resultpath, \"/Best_candidate.h5\" ]))"
+        },
+        {
+          "line": 543,
+          "text": "epoch_histories = best_model.fit( Bt_X_stack[Bt_indices], Bt_Y[Bt_indices],"
+        },
+        {
+          "line": 563,
+          "text": "#epoch_histories_df.to_csv(os.path.join(''.join([ resultpath, '/Epoch_history.csv' ]) ))"
+        },
+        {
+          "line": 570,
+          "text": "test_pred = best_model.predict(T_X_stack)"
+        },
+        {
+          "line": 592,
+          "text": "summ.to_csv(os.path.join(''.join([ resultpath, '/Test_results.csv' ])))"
+        },
+        {
+          "line": 604,
+          "text": "print( \"TensorFlow GPU memory usage:     \", tf.config.experimental.get_memory_info('GPU:0') )"
+        },
+        {
+          "line": 610,
+          "text": "# keras.backend.clear_session()"
+        },
+        {
+          "line": 621,
+          "text": "m = tf.keras.metrics.AUC(num_thresholds = 500, multi_label = True )"
+        },
+        {
+          "line": 628,
+          "text": "# m = tf.keras.metrics.AUC(num_thresholds = 500 )"
+        },
+        {
+          "line": 632,
+          "text": "# mm = tf.keras.metrics.AUC(num_thresholds = 500,   multi_label = True )"
+        },
+        {
+          "line": 636,
+          "text": "# zz = tf.keras.metrics.AUC( num_thresholds = 500 , curve = 'ROC' )"
+        },
+        {
+          "line": 641,
+          "text": "# mmpr = tf.keras.metrics.AUC( num_thresholds = 500 , curve = 'PR' )"
+        }
+      ],
+      "top_level_executable_statements": [
+        {
+          "line": 3,
+          "type": "Expr"
+        },
+        {
+          "line": 22,
+          "type": "Assign"
+        },
+        {
+          "line": 27,
+          "type": "Assign"
+        },
+        {
+          "line": 35,
+          "type": "Assign"
+        },
+        {
+          "line": 72,
+          "type": "Expr"
+        },
+        {
+          "line": 73,
+          "type": "Expr"
+        },
+        {
+          "line": 74,
+          "type": "Expr"
+        },
+        {
+          "line": 75,
+          "type": "Expr"
+        },
+        {
+          "line": 76,
+          "type": "Expr"
+        },
+        {
+          "line": 128,
+          "type": "Assign"
+        },
+        {
+          "line": 142,
+          "type": "Assign"
+        },
+        {
+          "line": 145,
+          "type": "Assign"
+        },
+        {
+          "line": 148,
+          "type": "Assign"
+        },
+        {
+          "line": 151,
+          "type": "Assign"
+        },
+        {
+          "line": 154,
+          "type": "Assign"
+        },
+        {
+          "line": 162,
+          "type": "For"
+        },
+        {
+          "line": 618,
+          "type": "Expr"
+        },
+        {
+          "line": 619,
+          "type": "Expr"
+        },
+        {
+          "line": 620,
+          "type": "Expr"
+        },
+        {
+          "line": 621,
+          "type": "Assign"
+        },
+        {
+          "line": 622,
+          "type": "Expr"
+        },
+        {
+          "line": 623,
+          "type": "Expr"
+        },
+        {
+          "line": 624,
+          "type": "Expr"
+        },
+        {
+          "line": 625,
+          "type": "Expr"
+        },
+        {
+          "line": 626,
+          "type": "Expr"
+        },
+        {
+          "line": 648,
+          "type": "Assign"
+        },
+        {
+          "line": 650,
+          "type": "Expr"
+        },
+        {
+          "line": 652,
+          "type": "Expr"
+        },
+        {
+          "line": 654,
+          "type": "Expr"
+        },
+        {
+          "line": 656,
+          "type": "Expr"
+        }
+      ]
+    },
+    {
+      "filename": "Raw_preds.py",
+      "relevant_lines": [
+        {
+          "line": 49,
+          "text": "import tensorflow as tf"
+        },
+        {
+          "line": 50,
+          "text": "import keras"
+        },
+        {
+          "line": 51,
+          "text": "from keras import backend as K"
+        },
+        {
+          "line": 53,
+          "text": "# mcfly"
+        },
+        {
+          "line": 54,
+          "text": "from mcfly import modelgen, find_architecture, storage, train_models_on_samples"
+        },
+        {
+          "line": 55,
+          "text": "#from keras.models import load_model"
+        },
+        {
+          "line": 62,
+          "text": "print( \"TensorFlow GPU memory usage:     \", tf.config.experimental.get_memory_info('GPU:0') )"
+        },
+        {
+          "line": 76,
+          "text": "roc_auc = tf.keras.metrics.AUC("
+        },
+        {
+          "line": 90,
+          "text": "pr_auc = tf.keras.metrics.AUC("
+        },
+        {
+          "line": 104,
+          "text": "es = tf.keras.callbacks.EarlyStopping("
+        },
+        {
+          "line": 132,
+          "text": "print( \"TensorFlow GPU memory usage:     \", tf.config.experimental.get_memory_info('GPU:0') )"
+        },
+        {
+          "line": 138,
+          "text": "keras.backend.clear_session()"
+        },
+        {
+          "line": 145,
+          "text": "os.chdir( ''.join([ computer_path, \"/Data/\", region ]) )"
+        },
+        {
+          "line": 153,
+          "text": "T_tmax = np.loadtxt( open( \"T_tmax_pa.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 154,
+          "text": "T_tmin = np.loadtxt( open( \"T_tmin_pa.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 155,
+          "text": "T_prec = np.loadtxt( open( \"T_prec_pa.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 156,
+          "text": "T_alt = np.loadtxt( open( \"T_alt_pa.csv\" ) , delimiter = \",\" , skiprows = 1 )"
+        },
+        {
+          "line": 184,
+          "text": "T_Y = np.loadtxt( open( ''.join([ computer_path, \"/Data/\", region , \"/\" , species , \"/T_Y_pa.csv\" ]), \"rb\"), delimiter=\",\", skiprows=1)"
+        },
+        {
+          "line": 201,
+          "text": "best_model = tf.keras.models.load_model(''.join([resultpath, \"/Trained_model.h5\" ]))"
+        },
+        {
+          "line": 203,
+          "text": "test_pred = best_model.predict(T_X_stack)"
+        }
+      ],
+      "top_level_executable_statements": [
+        {
+          "line": 3,
+          "type": "Expr"
+        },
+        {
+          "line": 14,
+          "type": "Assign"
+        },
+        {
+          "line": 19,
+          "type": "Assign"
+        },
+        {
+          "line": 27,
+          "type": "Assign"
+        },
+        {
+          "line": 60,
+          "type": "Expr"
+        },
+        {
+          "line": 61,
+          "type": "Expr"
+        },
+        {
+          "line": 62,
+          "type": "Expr"
+        },
+        {
+          "line": 63,
+          "type": "Expr"
+        },
+        {
+          "line": 64,
+          "type": "Expr"
+        },
+        {
+          "line": 76,
+          "type": "Assign"
+        },
+        {
+          "line": 90,
+          "type": "Assign"
+        },
+        {
+          "line": 104,
+          "type": "Assign"
+        },
+        {
+          "line": 115,
+          "type": "Assign"
+        },
+        {
+          "line": 126,
+          "type": "For"
+        }
+      ]
+    }
+  ],
+  "research_scripts_executed": false,
+  "packages_installed": false,
+  "limitations": [
+    "Keyword scanning is not a complete dependency analysis.",
+    "Top-level statement classification does not prove execution safety.",
+    "Required external datasets and model weights remain unverified."
+  ]
+}

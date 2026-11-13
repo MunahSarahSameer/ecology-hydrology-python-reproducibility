@@ -1,0 +1,145 @@
+{
+  "step": 186,
+  "candidate": "E01",
+  "python_version": "3.11.18",
+  "environment": "C:\\Users/REDACTED\\miniconda3\\envs\\code_decay",
+  "dependencies_checked": 18,
+  "available": 12,
+  "missing": 6,
+  "records": [
+    {
+      "package": "tqdm",
+      "module": "tqdm",
+      "version": "4.70.1",
+      "module_found": true,
+      "status": "AVAILABLE"
+    },
+    {
+      "package": "PyYAML",
+      "module": "yaml",
+      "version": "6.0.3",
+      "module_found": true,
+      "status": "AVAILABLE"
+    },
+    {
+      "package": "pyarrow",
+      "module": "pyarrow",
+      "version": null,
+      "module_found": false,
+      "status": "MISSING"
+    },
+    {
+      "package": "h5py",
+      "module": "h5py",
+      "version": null,
+      "module_found": false,
+      "status": "MISSING"
+    },
+    {
+      "package": "scikit-learn",
+      "module": "sklearn",
+      "version": "1.9.1",
+      "module_found": true,
+      "status": "AVAILABLE"
+    },
+    {
+      "package": "statsmodels",
+      "module": "statsmodels",
+      "version": null,
+      "module_found": false,
+      "status": "MISSING"
+    },
+    {
+      "package": "joblib",
+      "module": "joblib",
+      "version": "1.6.0",
+      "module_found": true,
+      "status": "AVAILABLE"
+    },
+    {
+      "package": "jupyter",
+      "module": "jupyter",
+      "version": null,
+      "module_found": true,
+      "status": "AVAILABLE"
+    },
+    {
+      "package": "jupyterlab",
+      "module": "jupyterlab",
+      "version": "4.6.4",
+      "module_found": true,
+      "status": "AVAILABLE"
+    },
+    {
+      "package": "matplotlib",
+      "module": "matplotlib",
+      "version": "3.11.2",
+      "module_found": true,
+      "status": "AVAILABLE"
+    },
+    {
+      "package": "gdal",
+      "module": "osgeo",
+      "version": null,
+      "module_found": false,
+      "status": "MISSING"
+    },
+    {
+      "package": "rasterio",
+      "module": "rasterio",
+      "version": "1.4.4",
+      "module_found": true,
+      "status": "AVAILABLE"
+    },
+    {
+      "package": "fiona",
+      "module": "fiona",
+      "version": null,
+      "module_found": false,
+      "status": "MISSING"
+    },
+    {
+      "package": "shapely",
+      "module": "shapely",
+      "version": null,
+      "module_found": false,
+      "status": "MISSING"
+    },
+    {
+      "package": "timm",
+      "module": "timm",
+      "version": "1.0.31",
+      "module_found": true,
+      "status": "AVAILABLE"
+    },
+    {
+      "package": "tensorboard",
+      "module": "tensorboard",
+      "version": "2.21.0",
+      "module_found": true,
+      "status": "AVAILABLE"
+    },
+    {
+      "package": "torch",
+      "module": "torch",
+      "version": "2.15.0+cpu",
+      "module_found": true,
+      "status": "AVAILABLE"
+    },
+    {
+      "package": "torchvision",
+      "module": "torchvision",
+      "version": "0.29.2",
+      "module_found": true,
+      "status": "AVAILABLE"
+    }
+  ],
+  "notes": [
+    "Package discovery only; imports were not executed.",
+    "Availability does not establish version compatibility.",
+    "Torch and torchvision were included because the README uses them.",
+    "No packages were installed or modified.",
+    "Scientific workflow execution has not been attempted."
+  ],
+  "generated_at_utc": "2026-11-11T22:27:09.428288+00:00"
+}

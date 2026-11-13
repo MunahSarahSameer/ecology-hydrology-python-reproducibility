@@ -1,0 +1,271 @@
+{
+  "archive_id": "E08",
+  "test": "Scientific workflow static inspection",
+  "workflow_cells": [
+    {
+      "cell_index": 6,
+      "matched_keywords": [
+        "params"
+      ],
+      "line_count": 9,
+      "source": "# Plot settings\nplt.rcParams['mathtext.fontset'] = 'cm'\nplt.rcParams['font.family'] = 'STIXGeneral'\nplt.rcParams['font.size'] = 12\nplt.rcParams['figure.dpi'] = 100\n#plt.rcParams['figure.dpi'] = 300\n\nmatplotlib.rc('xtick', labelsize=10, direction='out')\nmatplotlib.rc('ytick', labelsize=10, direction='out')"
+    },
+    {
+      "cell_index": 8,
+      "matched_keywords": [
+        "cats",
+        "cats_march",
+        "cats_april",
+        "read_csv"
+      ],
+      "line_count": 19,
+      "source": "# Empirical dataset\nfile_path = '/content/drive/My Drive/WSINDy/Caterpillar/caterpillars.csv'\ncats = pd.read_csv(file_path)\n\n# Exclude the trial run (June 15)\ncats = cats[cats['Run'] != 'Jun-15']\nprint(f\"Data-frame shape: {cats.shape}\")\n\n# Run-specific datasets\ncats_march = cats[cats['Run'] == 'Mar-16']\ncats_april = cats[cats['Run'] == 'Apr-16']\n\n# Time\nt = cats['Time'].unique()\ntau = np.linspace(0, 7, 8)\nprint(f'Times, t = {t}')\nprint(f'Tau = {tau}')\n\ndel file_path"
+    },
+    {
+      "cell_index": 10,
+      "matched_keywords": [
+        "cats",
+        "cats_march",
+        "cats_april"
+      ],
+      "line_count": 30,
+      "source": "# Which experiments?\nrun = ['Mar-16', 'Apr-16'] # 'Mar-16' and/or 'Apr-16'\ncats = cats[cats['Run'].isin(run)]\n\n# Grouped by common plant type\ncats_S = cats[(cats['Run'].isin(run)) & ((cats['Plot'] == 1) | (cats['Plot'] == 3))]\ncats_G = cats[(cats['Run'].isin(run)) & ((cats['Plot'] == 2) | (cats['Plot'] == 4))]\n\n# Grouped by common infection statu\ncats_N = cats[(cats['Run'].isin(run)) & ((cats['Plot'] == 1) | (cats['Plot'] == 2))]\ncats_I = cats[(cats['Run'].isin(run)) & ((cats['Plot'] == 3) | (cats['Plot'] == 4))]\n\n# Separate control populations\ncats1 = cats[(cats['Run'].isin(run)) & (cats['Plot'] == 1)]\ncats2 = cats[(cats['Run'].isin(run)) & (cats['Plot'] == 2)]\ncats3 = cats[(cats['Run'].isin(run)) & (cats['Plot'] == 3)]\ncats4 = cats[(cats['Run'].isin(run)) & (cats['Plot'] == 4)]\n\n# Separate control populations by run\ncats1_march = cats_march[cats_march['Plot'] == 1]\ncats2_march = cats_march[cats_march['Plot'] == 2]\ncats3_march = cats_march[cats_march['Plot'] == 3]\ncats4_march = cats_march[cats_march['Plot'] == 4]\n\ncats1_april = cats_april[cats_april['Plot'] == 1]\ncats2_april = cats_april[cats_april['Plot'] == 2]\ncats3_april = cats_april[cats_april['Plot'] == 3]\ncats4_april = cats_april[cats_april['Plot'] == 4]\n\ndel run"
+    },
+    {
+      "cell_index": 13,
+      "matched_keywords": [
+        "cats"
+      ],
+      "line_count": 69,
+      "source": "# Bins in (x,y)\n#(Nx, Ny) = (40, 40)\n#(Nx, Ny) = (50, 50)\n(Nx, Ny) = (80, 80)\n\n# Create a 2D histogram for each time\nhists = []\nhists_SG = [[] for _ in range(2)]\nhists_NI = [[] for _ in range(2)]\nhists_n = [[] for _ in range(4)]\n\nfor tn in t:\n  df = cats[cats['Time'] == tn]\n  hist,_ = np.histogramdd(\n    df[['X', 'Y']].to_numpy(),\n    bins = (Nx, Ny),\n    range = ((0,175),(0,175)),\n    #density = False)\n    density = True)\n  hists.append(hist)\n\n  # Different plant types\n  for n,cats_n in enumerate([cats_S, cats_G]):\n    df = cats_n[cats_n['Time'] == tn]\n    hist,_ = np.histogramdd(\n      df[['X', 'Y']].to_numpy(),\n      bins = (Nx, Ny),\n      range = ((0, 175), (0, 175)),\n      #density = False)\n      density = True)\n    hists_SG[n].append(hist)\n\n  # Infection status\n  for n,cats_n in enumerate([cats_N, cats_I]):\n    df = cats_n[cats_n['Time'] == tn]\n    hist,_ = np.histogramdd(\n      df[['X', 'Y']].to_numpy(),\n      bins = (Nx, Ny),\n      range = ((0, 175), (0, 175)),\n      #density = False)\n      density = True)\n    hists_NI[n].append(hist)\n\n  # Separate control populations\n  for n,cats_n in enumerate([cats1, cats2, cats3, cats4]):\n    df = cats_n[cats_n['Time'] == tn]\n    hist,_ = np.histogramdd(\n      df[['X', 'Y']].to_numpy(),\n      bins = (Nx, Ny),\n      range = ((0, 175), (0, 175)),\n      #density = False)\n      density = True)\n    hists_n[n].append(hist)\n\n# Convert to torch tensor\nU_h = torch.tensor(np.array(hists)).permute(1,2,0)\n[UN_h, UI_h] = [torch.tensor(np.array(hists_NI[n])).permute(1,2,0) for n in range(2)]\n[US_h, UG_h] = [torch.tensor(np.array(hists_SG[n])).permute(1,2,0) for n in range(2)]\n[U1_h, U2_h, U3_h, U4_h] = [torch.tensor(np.array(hists_n[n])).permute(1,2,0) for n in range(4)]\nprint(\"Shape of U_h:\", U_h.shape)\n\n# Space and time\nx = torch.linspace(0, 175, Nx, dtype=torch.float64)\ny = torch.linspace(0, 175, Ny, dtype=torch.float64)\nX,Y = np.meshgrid(x, y, indexing='ij')\n[dx, dy] = [x.diff()[0], y.diff()[0]]\ndtau = np.diff(tau)[0]\n\ndel tn, df, hist, _, hists, hists_SG, hists_NI, hists_n, n, cats_n"
+    },
+    {
+      "cell_index": 14,
+      "matched_keywords": [
+        "cats"
+      ],
+      "line_count": 14,
+      "source": "# Check normalization\nprint((dx*dy*U_h[:,:,0]).sum().item())\n\nplt.figure(figsize=(3,4))\nplt.pcolormesh(X, Y, U_h[:,:,0], cmap='Reds')\nplt.colorbar(orientation='horizontal')\nplt.scatter(cats[cats['Time'] == 0]['X'], cats[cats['Time'] == 0]['Y'], s=1, color='k')\nplt.show()\n\nplt.figure(figsize=(3,4))\nplt.pcolormesh(X, Y, U_h[:,:,-1], cmap='Reds')\nplt.colorbar(orientation='horizontal')\nplt.scatter(cats[cats['Time'] == 48]['X'], cats[cats['Time'] == 48]['Y'], s=1, color='k')\nplt.show()"
+    },
+    {
+      "cell_index": 18,
+      "matched_keywords": [
+        "cats"
+      ],
+      "line_count": 63,
+      "source": "# GAUSSIAN KDE\n# Bins in (x,y)\n#(Nx, Ny) = (50, 50)\n(Nx, Ny) = (80, 80)\n\n# KDE evaluation at each time\nkdes = []\nkdes_SG = [[] for _ in range(2)]\nkdes_NI = [[] for _ in range(2)]\nkdes_n = [[] for _ in range(4)]\nkdes_n_march = [[] for _ in range(4)]\nkdes_n_april = [[] for _ in range(4)]\n\nfor tn in t:\n  df = cats[cats['Time'] == tn]\n  particles = np.vstack([df['X'], df['Y']])\n  G = Gaussian_KDE(X, Y, particles)\n  kdes.append(G)\n\n  # Plant type\n  for n,cats_n in enumerate([cats_S, cats_G]):\n    df = cats_n[cats_n['Time'] == tn]\n    particles = np.vstack([df['X'], df['Y']])\n    G = Gaussian_KDE(X, Y, particles)\n    kdes_SG[n].append(G)\n\n  # Infection status\n  for n,cats_n in enumerate([cats_N, cats_I]):\n    df = cats_n[cats_n['Time'] == tn]\n    particles = np.vstack([df['X'], df['Y']])\n    G = Gaussian_KDE(X, Y, particles)\n    kdes_NI[n].append(G)\n\n  # Separate control populations\n  for n,cats_n in enumerate([cats1, cats2, cats3, cats4]):\n    df = cats_n[cats_n['Time'] == tn]\n    particles = np.vstack([df['X'], df['Y']])\n    G = Gaussian_KDE(X, Y, particles)\n    kdes_n[n].append(G)\n\n  # Separate control populations by run\n  for n,cats_n in enumerate([cats1_march, cats2_march, cats3_march, cats4_march]):\n    df = cats_n[cats_n['Time'] == tn]\n    particles = np.vstack([df['X'], df['Y']])\n    G = Gaussian_KDE(X, Y, particles)\n    kdes_n_march[n].append(G)\n\n  for n,cats_n in enumerate([cats1_april, cats2_april, cats3_april, cats4_april]):\n    df = cats_n[cats_n['Time'] == tn]\n    particles = np.vstack([df['X'], df['Y']])\n    G = Gaussian_KDE(X, Y, particles)\n    kdes_n_april[n].append(G)\n\n# Convert to torch tensor\nU = torch.tensor(np.array(kdes)).permute(1,2,0)\n[US, UG] = [torch.tensor(np.array(kdes_SG[n])).permute(1,2,0) for n in range(2)]\n[UN, UI] = [torch.tensor(np.array(kdes_NI[n])).permute(1,2,0) for n in range(2)]\n[U1, U2, U3, U4] = [torch.tensor(np.array(kdes_n[n])).permute(1,2,0) for n in range(4)]\n[U1_march, U2_march, U3_march, U4_march] = [torch.tensor(np.array(kdes_n_march[n])).permute(1,2,0) for n in range(4)]\n[U1_april, U2_april, U3_april, U4_april] = [torch.tensor(np.array(kdes_n_april[n])).permute(1,2,0) for n in range(4)]\nprint(f'Shape of U: {U.shape}')\n\ndel G, kdes, kdes_SG, kdes_NI, kdes_n, kdes_n_march, kdes_n_april, particles, tn, df, n, cats_n"
+    },
+    {
+      "cell_index": 28,
+      "matched_keywords": [
+        "cats",
+        "coords",
+        "params"
+      ],
+      "line_count": 62,
+      "source": "# Make a density plot of the data?\nPLOTME = False\n\nif PLOTME == True:\n  from mpl_toolkits.mplot3d import Axes3D\n  from scipy.stats import gaussian_kde\n\n  plt.rcParams['mathtext.fontset'] = 'cm'\n  plt.rcParams['font.family'] = 'STIXGeneral'\n  fig = plt.figure(figsize=(16, 10))\n\n  # Loop through each time and create a subplot\n  for i, thyme in enumerate(t.tolist()):\n\n    # Extract (x,y,z) coords\n    df = cats[cats['Time'] == thyme]\n    X = df['X']\n    Y = df['Y']\n    Z = df['Z']\n\n    # Create a grid for KDE\n    (Nx, Ny, Nz) = (80, 80, 61)\n    xgrid = np.linspace(0, 175, Nx)\n    ygrid = np.linspace(0, 175, Ny)\n    zgrid = np.linspace(0, 60, Nz)\n    xmesh, ymesh, zmesh = np.meshgrid(xgrid, ygrid, zgrid)\n    grid_coords = np.vstack([xmesh.ravel(), ymesh.ravel(), zmesh.ravel()])\n\n    # KDE evaluation\n    kde = gaussian_kde(np.vstack([X, Y, Z]), bw_method=0.25)\n    density = kde(grid_coords).reshape((Nx, Ny, Nz))\n    density_threshold = 1e-7\n    x_dense, y_dense, z_dense = xmesh[density > density_threshold], \\\n                                ymesh[density > density_threshold], \\\n                                zmesh[density > density_threshold]\n    density = density[density > density_threshold]\n\n    # Scatter plot\n    ax = fig.add_subplot(2,4, i+1, projection='3d')\n    ax.scatter(x_dense, y_dense, z_dense, c=density, cmap='Reds', alpha=0.02,\n               s=5, vmin=density_threshold, vmax=5e-5)\n    ax.scatter(X, Y, Z, '.', color='black', s=10, linewidth=0.5)\n\n    ax.set_xlim(0, 175)\n    ax.set_ylim(0, 175)\n    ax.set_zlim(0, 60)\n    ax.set_xlabel('$x$', fontsize=20)\n    ax.set_ylabel('$y$', fontsize=20)\n    ax.set_title(f'$t = {thyme}$ hr', pad=0, fontsize=20)\n\n    ax.xaxis.pane.fill = False\n    ax.yaxis.pane.fill = False\n    ax.zaxis.pane.fill = False\n    ax.xaxis.pane.set_edgecolor('w')\n    ax.yaxis.pane.set_edgecolor('w')\n    ax.zaxis.pane.set_edgecolor('w')\n    ax.tick_params(axis='both', which='major', labelsize=13)\n\n  plt.tight_layout()\n  plt.show()\n\ndel PLOTME"
+    },
+    {
+      "cell_index": 34,
+      "matched_keywords": [
+        "params"
+      ],
+      "line_count": 17,
+      "source": "# Fcn to fit empirical diffusion constants\nfrom scipy.optimize import curve_fit\n\ndef diffusion_fit(t, y, CIs, C0, model='sqrt'):\n  # Extract errors\n  [CIs_low, CIs_high] = CIs\n  error_y = (np.array(CIs_high) + np.array(CIs_low))/4\n  params = {'sigma':error_y, 'absolute_sigma':True}\n\n  # Fit diffusion curve\n  if model == 'sqrt':\n    model = lambda tn,D: np.sqrt(C0*D*tn)\n  elif model == '2Dt':\n    model = lambda tn,D: 2*D*tn\n\n  D_fit, var_D = curve_fit(model, t, y, **params)\n  return D_fit[0], np.sqrt(var_D[0,0])"
+    },
+    {
+      "cell_index": 35,
+      "matched_keywords": [
+        "cats",
+        "params"
+      ],
+      "line_count": 205,
+      "source": "# DIFFUSION CURVES AND FITS\nfrom scipy import stats\n\n# Choose from: ['horizontal', 'X', 'Y', 'XY' 'Z']\ndirection = 'horizontal'\n\n# Choose from: [Deffs, DXs, DYs, DXYs]\nD_list = Deffs\n\n# Make plot?\nPLOTME = False\n\nif PLOTME:\n  datasets = [cats1, cats2, cats3, cats4]\n  titles   = ['Not Infected (Stonewall)', 'Not Infected (Gasoy)',\n              'Infected (Stonewall)', 'Infected (Gasoy)']\n  colors = ['Blue', 'Blue', 'Green', 'Green']\n  styles = ['-', '--', '-', '--']\n\n  fig, axes = plt.subplots(2,2, figsize=(10,6), sharex=True, sharey=True)\n  zipper = zip(axes.flat, datasets, titles, colors, styles, D_list)\n\n  for ax, df, title, color, style, D_pm in zipper:\n    df = df.sort_values('Time')\n    means = []\n    CIs_low = []\n    CIs_high = []\n\n    # Compute means and bootstrapped CIs\n    for ti in t:\n      if direction == 'horizontal':\n        data = df[df['Time']==ti][direction].dropna().values\n      elif (direction == 'X') or (direction == 'Y'):\n        data = np.abs(df[df['Time'] == ti][direction].dropna() - 175/2)\n      elif direction == 'XY':\n        data_x = df[df['Time']==ti]['X'].dropna() - 175/2\n        data_y = df[df['Time']==ti]['Y'].dropna() - 175/2\n        data = data_x * data_y\n      elif direction == 'Z':\n        data = df[(df['Time'] == ti) & (df['Z'] <= 70)]['Z'].dropna()\n      m = data.mean()\n      means.append(m)\n\n      # Bootstrap\n      boots = 1000\n      samp = np.random.choice(data, (len(data), boots))\n      boot_means = samp.mean(axis=0)\n      low, high = np.percentile(boot_means, [2.5, 97.5])\n      CIs_low.append(m - low)\n      CIs_high.append(high - m)\n\n    # Multiplication factor\n    if direction == 'horizontal':\n      C0 = np.pi\n    else:\n      C0 = 4/np.pi\n\n    # Fit empirical diffusion coefficients\n    errs = np.vstack([CIs_low, CIs_high])\n    if direction == 'XY':\n      D_fit,sigma_D = diffusion_fit(t, means-means[0], errs.tolist(), C0, model='2Dt')\n      print(f'Direction = {direction}, Case = {title}')\n      print(f'Fitted Dij = {D_fit:.3f} \u00b1 {sigma_D:.3e}\\n')\n    elif direction != 'Z':\n      D_fit,sigma_D = diffusion_fit(t, means-means[0], errs.tolist(), C0)\n      print(f'Direction = {direction}, Case = {title}')\n      print(f'Fitted Dij = {D_fit:.3f} \u00b1 {sigma_D:.3e}\\n')\n\n    # Diffusion curves (main panel)\n    ax.axhline(y=0, ls='--', color='gray', alpha=0.8, label='Mean ($t=0$)')\n    ax.errorbar(t, means-means[0], yerr=errs, fmt='o'+style, color=color, capsize=2,\n                linewidth=1, markersize=5, ecolor='gray', label='Data $\\pm\\,2\\sigma$')\n\n    # Plot continuous fitted models\n    if (direction=='horizontal') or (direction=='X') or ((direction=='Y')):\n\n      # Fitted empirical model\n      y_c = np.sqrt(C0*D_fit*t_new)\n      y_high = np.sqrt(C0*(D_fit+sigma_D)*t_new)\n      y_low = np.sqrt(C0*(D_fit-sigma_D)*t_new)\n      ax.plot(t_new, y_c, color='gray', lw=1)\n      ax.fill_between(t_new, y_low, y_high, color=color, alpha=0.3, label='Empirical Model')\n\n      # Weak-form PDE model\n      [Di, two_sigma] = D_pm\n      y_c = np.sqrt(C0*Di*t_new)\n      y_high = np.sqrt(C0*(Di+two_sigma)*t_new)\n      y_low = np.sqrt(C0*(Di-two_sigma)*t_new)\n      ax.plot(t_new, y_c, color='gray', lw=1)\n      ax.fill_between(t_new, y_low, y_high, color='orange', alpha=0.6, label='PDE Model')\n\n    elif direction == 'XY':\n\n      # Fitted empirical model\n      y_c = 2*D_fit*t_new\n      y_high = 2*(D_fit+sigma_D)*t_new\n      y_low = 2*(D_fit-sigma_D)*t_new\n      ax.plot(t_new, y_c, color='gray', lw=1)\n      ax.fill_between(t_new, y_low, y_high, color=color, alpha=0.3, label='Empirical Model')\n\n      # Weak-form PDE model\n      [Di, two_sigma] = D_pm\n      y_c = 2*Di*t_new\n      y_high = 2*(Di+two_sigma)*t_new\n      y_low = 2*(Di-two_sigma)*t_new\n      ax.plot(t_new, y_c, color='gray', lw=1)\n      ax.fill_between(t_new, y_low, y_high, color='orange', alpha=0.6, label='PDE Model')\n\n    ax.grid(True, which='both', linestyle='-', lw=0.5, alpha=0.4)\n    ax.set_xlim(-1, max(t)+3)\n    ax.legend(loc='upper right', framealpha=0.4, fontsize=10)\n\n    # Print case\n    bbox=dict(facecolor='white', edgecolor='k', boxstyle='round,pad=0.3', alpha=0.7)\n    ax.text(0.98, 0.09, title, transform=ax.transAxes, fontsize=10,\n            va='top', ha='right', bbox=bbox)\n\n    # Violin plots (inset panel)\n    inset_ax = ax.inset_axes([0.014, 0.68, 0.55, 0.3]) # [x0, y0, W, H]\n    inset_ax.axhline(y=means[0], ls='--', lw=0.7, color='gray', alpha=0.8)\n\n    for i, ti in enumerate(t):\n      if direction == 'horizontal':\n        data = df[df['Time']==ti][direction].dropna().values\n      elif (direction == 'X') or (direction == 'Y'):\n        data = np.abs(df[df['Time'] == ti][direction].dropna() - 175/2)\n      elif direction == 'XY':\n        data_x = df[df['Time']==ti]['X'].dropna() - 175/2\n        data_y = df[df['Time']==ti]['Y'].dropna() - 175/2\n        data = data_x * data_y\n      elif direction == 'Z':\n        data = df[(df['Time'] == ti) & (df['Z'] <= 70)]['Z'].dropna()\n\n      # Clip outliers?\n      lower, upper = np.percentile(data, [0, 99.5])\n      clean = data[(data>=lower) & (data<=upper)]\n      parts = inset_ax.violinplot(clean, [tau[i]], widths=1, showmeans=True,\n                                  showextrema=True, side='high', points=20)\n      for pc in parts['bodies']:\n        pc.set_facecolor(color)\n        pc.set_edgecolor('gray')\n        pc.set_alpha(0.6)\n      for key in ['cmins','cmeans','cmaxes','cbars']:\n        parts[key].set_color('gray')\n        parts[key].set_alpha(0.6)\n\n    inset_ax.grid(True, alpha=0.3)\n    inset_ax.set_xlim(min(tau)-0.2, max(tau)+0.7)\n    inset_ax.set_xticks([])\n    inset_ax.yaxis.tick_right()\n    if direction == 'XY':\n      inset_ax.yaxis.set_tick_params(labelsize=6)\n      inset_ax.set_yscale('symlog')\n    else:\n      inset_ax.yaxis.set_tick_params(labelsize=9)\n    inset_ax.set_xlabel('Snapshot, $n$', fontsize=9, loc='left')\n\n    if direction == 'horizontal':\n      ax.set_ylim(-2.5, 75)\n      inset_ax.set_ylim(-1, 90)\n    elif direction == 'X':\n      ax.set_ylim(-2.5, 50)\n      inset_ax.set_ylim(-1, 75)\n    elif direction == 'Y':\n      ax.set_ylim(-2.5, 50)\n      inset_ax.set_ylim(-1, 75)\n    elif direction == 'XY':\n      ax.set_ylim(-1.2e3, 1.5e3)\n      inset_ax.set_ylim(-4.5e3, 4.5e3)\n    elif direction == 'Z':\n      ax.set_ylim(-8, 30)\n      inset_ax.set_ylim(-2, 60)\n\n  # Global labels\n  if direction == 'horizontal':\n    s1 = r'$\\langle|\\mathbf{x}_t-\\boldsymbol{\\mu}|\\rangle$'\n    s2 = r'$-\\langle|\\mathbf{x}_0-\\boldsymbol{\\mu}|\\rangle$'\n    fig.text(0.035, 0.5, 'Average Displacement, '+s1+s2+' (cm)',\n            va='center', rotation='vertical')\n  elif direction == 'X':\n    s1 = r'$\\langle|x_t-\\mu_x|\\rangle$'\n    s2 = r'$-\\langle|x_0-\\mu_x|\\rangle$'\n    fig.text(0.035, 0.5, 'Average Displacement, '+s1+s2+' (cm)',\n            va='center', rotation='vertical')\n  elif direction == 'Y':\n    s1 = r'$\\langle|y_t-\\mu_y|\\rangle$'\n    s2 = r'$-\\langle|y_0-\\mu_y|\\rangle$'\n    fig.text(0.035, 0.5, 'Average Displacement, '+s1+s2+' (cm)',\n            va='center', rotation='vertical')\n  elif direction == 'XY':\n    s1 = r'$\\langle(x_t-\\mu_x)(y_t-\\mu_y)\\rangle$'\n    s2 = r'$-\\langle(x_0-\\mu_x)(y_0-\\mu_y)\\rangle$'\n    fig.text(0.035, 0.53, 'Average Displacement, '+s1+s2+r' $(\\text{cm}^2)$',\n            va='center', rotation='vertical')\n  elif direction == 'Z':\n    s1 = r'$\\langle|z_t-\\mu_z|\\rangle$'\n    s2 = r'$-\\langle|z_0-\\mu_z|\\rangle$'\n    fig.text(0.035, 0.5, 'Average Displacement, '+s1+s2+' (cm)',\n            va='center', rotation='vertical')\n\n  fig.text(0.53, 0.04, 'Time, $t_n$ (hours)', ha='center')\n  plt.tight_layout(rect=[0.05, 0.05, 1, 1])\n  plt.show()\n\ndel PLOTME"
+    },
+    {
+      "cell_index": 37,
+      "matched_keywords": [
+        "cats"
+      ],
+      "line_count": 85,
+      "source": "# Make plot?\nPLOTME = False\n\nif PLOTME:\n  datasets = [cats1, cats2, cats3, cats4]\n  titles = ['Not Infected (Stonewall)', 'Not Infected (Gasoy)',\n            'Infected (Stonewall)', 'Infected (Gasoy)']\n  #styles = ['-', '--', '-', '--']\n\n  fig, axes = plt.subplots(2,2, figsize=(10,6), sharex=True, sharey=True)\n\n  for ax, df, title in zip(axes.flat, datasets, titles):\n    df = df.sort_values('Time')\n\n    means_x = []\n    CIs_low_x = []\n    CIs_high_x = []\n\n    means_y = []\n    CIs_low_y = []\n    CIs_high_y = []\n\n    for i, ti in enumerate(t):\n      data_x = np.abs(df[df['Time'] == ti]['X'].dropna() - 175/2)\n      data_y = np.abs(df[df['Time'] == ti]['Y'].dropna() - 175/2)\n\n      m_x = data_x.mean()\n      m_y = data_y.mean()\n      means_x.append(m_x)\n      means_y.append(m_y)\n\n      # Boostrap confidence intervals\n      boots = 1000\n\n      samp_x = np.random.choice(data_x, (len(data_x), boots))\n      boot_means_x = samp_x.mean(axis=0)\n      low_x, high_x = np.percentile(boot_means_x, [2.5, 97.5])\n      CIs_low_x.append(m_x - low_x)\n      CIs_high_x.append(high_x - m_x)\n\n      samp_y = np.random.choice(data_y, (len(data_y), boots))\n      boot_means_y = samp_y.mean(axis=0)\n      low_y, high_y = np.percentile(boot_means_y, [2.5, 97.5])\n      CIs_low_y.append(m_y - low_y)\n      CIs_high_y.append(high_y - m_y)\n\n    # Fit empirical diffusion coefficients\n    C0 = 4/np.pi\n    errs_x = np.vstack([CIs_low_x, CIs_high_x])\n    errs_y = np.vstack([CIs_low_y, CIs_high_y])\n    Dx_fit,sigma_Dx = diffusion_fit(t, means_x-means_x[0], errs_x.tolist(), C0)\n    Dy_fit,sigma_Dy = diffusion_fit(t, means_y-means_y[0], errs_y.tolist(), C0)\n\n    # Plot diffusion curves\n    y_c = np.sqrt(C0*Dx_fit*t_new)\n    y_high = np.sqrt(C0*(Dx_fit + sigma_Dx)*t_new)\n    y_low = np.sqrt(C0*(Dx_fit - sigma_Dx)*t_new)\n    ax.plot(t_new, y_c, color='blue', lw=1, alpha=0.6)\n    ax.fill_between(t_new, y_low, y_high, color='blue', alpha=0.3, label='Empirical Model ($x$)')\n\n    y_c = np.sqrt(C0*Dy_fit*t_new)\n    y_high = np.sqrt(C0*(Dy_fit + sigma_Dy)*t_new)\n    y_low = np.sqrt(C0*(Dy_fit - sigma_Dy)*t_new)\n    ax.plot(t_new, y_c, color='green', lw=1, alpha=0.6)\n    ax.fill_between(t_new, y_low, y_high, color='green', alpha=0.3, label='Empirical Model ($y$)')\n\n    # Plot fitted empirical models\n    ax.axhline(y=0, ls='--', color='gray', alpha=0.8)\n    ax.errorbar(t-0.25, means_x-means_x[0], yerr=errs_x, fmt='o', color='blue', capsize=1.5,\n                lw=1, ms=4, ecolor='gray', label='Data $\\pm\\, 2\\sigma$ $(x)$')\n    ax.errorbar(t+0.25, means_y-means_y[0], yerr=errs_y, fmt='^', color='green', capsize=1.5,\n                lw=1, ms=4, ecolor='gray', label='Data $\\pm\\, 2\\sigma$ $(y)$')\n\n    # Print case\n    bbox=dict(facecolor='white', edgecolor='k', boxstyle='round,pad=0.3', alpha=0.7)\n    ax.text(0.98, 0.09, title, transform=ax.transAxes, fontsize=10, va='top', ha='right', bbox=bbox)\n    ax.grid(True, which='both', linestyle='-', lw=0.5, alpha=0.4)\n\n    if title == 'Not Infected (Stonewall)':\n      ax.legend(loc='upper left', framealpha=0.6, fontsize=9)\n\n  fig.text(0.04, 0.5, r'Average Displacement, $x$ vs. $y$ (cm)', va='center', rotation='vertical')\n  fig.text(0.5, 0.04, r'Time, $t_n$ (hours)', va='center')\n  plt.tight_layout(rect=[0.05, 0.05, 1, 1])\n  plt.show()"
+    },
+    {
+      "cell_index": 39,
+      "matched_keywords": [
+        "U_ws"
+      ],
+      "line_count": 35,
+      "source": "# PICK DATASET\nU_ws = U_interp.clone() # Ensemble\n\n# Grouped by plant type or infection status\n#U_ws = US_interp.clone() # Plant type = S\n#U_ws = UG_interp.clone() # Plant type = G\n#U_ws = UN_interp.clone() # Infection = N\n#U_ws = UI_interp.clone() # Infection = I\n\n# Separate control populations\n#U_ws = U1_interp.clone() # S,N\n#U_ws = U2_interp.clone() # G,N\n#U_ws = U3_interp.clone() # S,I\n#U_ws = U4_interp.clone() # G,I\n\n# Separate control populations by run\n#U_ws = U1_march_interp.clone() # S,N (march)\n#U_ws = U2_march_interp.clone() # G,N (march)\n#U_ws = U3_march_interp.clone() # S,I (march)\n#U_ws = U4_march_interp.clone() # G,I (march)\n\n#U_ws = U1_april_interp.clone() # S,N (april)\n#U_ws = U2_april_interp.clone() # G,N (april)\n#U_ws = U3_april_interp.clone() # S,I (april)\n#U_ws = U4_april_interp.clone() # G,I (april)\n\n# Grid\ntry:\n  t = torch.from_numpy(t)\n  t_new = torch.from_numpy(t_new)\nexcept:\n  pass\n\nX2,Y2 = torch.meshgrid(x,y, indexing='ij')\nX,Y,T = torch.meshgrid(x,y,t_new, indexing='ij')"
+    },
+    {
+      "cell_index": 40,
+      "matched_keywords": [
+        "cats"
+      ],
+      "line_count": 23,
+      "source": "N_data = cats.shape[0]\n\n#N_data = cats_S.shape[0]\n#N_data = cats_G.shape[0]\n#N_data = cats_N.shape[0]\n#N_data = cats_I.shape[0]\n\n#N_data = cats1.shape[0]\n#N_data = cats2.shape[0]\n#N_data = cats3.shape[0]\n#N_data = cats4.shape[0]\n\n#N_data = cats1_march.shape[0]\n#N_data = cats2_march.shape[0]\n#N_data = cats3_march.shape[0]\n#N_data = cats4_march.shape[0]\n\n#N_data = cats1_april.shape[0]\n#N_data = cats2_april.shape[0]\n#N_data = cats3_april.shape[0]\n#N_data = cats4_april.shape[0]\n\nprint(f'Number of cat. counts = {N_data}')"
+    },
+    {
+      "cell_index": 41,
+      "matched_keywords": [
+        "U_ws",
+        "WSINDy(",
+        "coords",
+        "params"
+      ],
+      "line_count": 23,
+      "source": "coords = [x, y, t_new]\nvars = []\nnames = ['u']\n\nm = [10, 10, 6]\ns = [1, 1, 1]\n\n# Derivatives for test fcns\nalpha = [[0,0,1], # d/dt (lhs)\n         [0,0,0], # 1\n         [1,0,0], # d/dx\n         [2,0,0], # d^2/dx^2\n         [0,1,0], # d/dy\n         [0,2,0], # d^2/dy^2\n         [1,1,0]] # d^2/dxdy\n\n# Powers for homogeneous fcns\nbeta = [[0],[1]]\n\n# Hyper-params\nparams = {'V':vars, 'names':names, 'm':m, 's':s, 'rescale':False}\n\nmodel = WSINDy(U_ws, alpha, beta, coords, **params)"
+    },
+    {
+      "cell_index": 42,
+      "matched_keywords": [
+        "model."
+      ],
+      "line_count": 15,
+      "source": "# Set lhs\nlhs_name = 'u' + model.derivative_names[0]\nmodel.build_lhs(lhs_name)\n\n# Create standard library terms\n[G, powers, derivs, rhs_names] = model.create_default_library()\n[G, powers, derivs, rhs_names] = [G[1:], powers[1:], derivs[1:], rhs_names[1:]]\nG_mat = torch.stack(G).T\n\n# Print out symbolic library\nlib_string = r'\\Theta=' + r'\\{' + r',\\,'.join(rhs_names) + r'\\}'\ndisplay(Math(lib_string))\n\nprint(f'Library shape: G = {G_mat.numpy().shape}')\nprint(f'Condition number: K(G) = {la.cond(G_mat):.2e}\\n')"
+    },
+    {
+      "cell_index": 47,
+      "matched_keywords": [
+        "U_ws",
+        "model."
+      ],
+      "line_count": 47,
+      "source": "# MAKE V TERMS?\nV_TERMS = True\n\nif V_TERMS:\n  freq = 2*np.pi/175\n\n  # Form 2D cosine series terms\n  V_nm = lambda n,m: torch.cos(freq*n*X2) * torch.cos(freq*m*Y2)\n  Vx_nm = lambda n,m: -(freq*n) * torch.sin(freq*n*X2) * torch.cos(freq*m*Y2)\n  Vy_nm = lambda n,m: -(freq*m) * torch.cos(freq*n*X2) * torch.sin(freq*m*Y2)\n\n  # Build weak gradients\n  kernel_x = model.kernels[2]\n  kernel_y = model.kernels[4]\n\n  UVx_nm = lambda n,m: U_ws * Vx_nm(n,m).unsqueeze(2)\n  UVy_nm = lambda n,m: U_ws * Vy_nm(n,m).unsqueeze(2)\n  psix_UVx_nm = lambda n,m: compute_weak_poly(UVx_nm(n,m), kernel_x, model.spacing)\n  psiy_UVy_nm = lambda n,m: compute_weak_poly(UVy_nm(n,m), kernel_y, model.spacing)\n\n  weak_Vnm_term = lambda n,m: psix_UVx_nm(n,m) + psix_UVx_nm(n,m)\n\n  # Construct Vnm terms and add to library\n  [N,M] = [9,9]\n  NMs = list(itertools.product(range(1,N+1), range(1,M+1)))\n\n  for n,m in NMs:\n    term = weak_Vnm_term(n,m)\n    G.append(term[model.conv_mask])\n    name = '\u2207\u00b7(u\u2207V_{' + f'{n}{m}' + '})'\n    rhs_names.append(name)\n\n  # Print out new symbolic library\n  lib_string = r'\\Theta='+r'\\{'+r',\\,'.join(rhs_names[:-len(NMs)+2])+r',\\,\\dots\\,\\}'\n  display(Math(lib_string))\n\n  G_mat = torch.stack(G).T\n  print(f'Library shape: G = {G_mat.numpy().shape}')\n  print(f'Condition number: K(G) = {la.cond(G_mat):.2e}\\n')\n\n  # Check aliasing?\n  plt.figure(figsize=(3,2.5))\n  plt.pcolormesh(X2, Y2, V_nm(9,5), cmap='coolwarm')\n  plt.xlabel('$x$')\n  plt.ylabel('$y$')\n  plt.colorbar(shrink=0.9)\n  plt.show()"
+    },
+    {
+      "cell_index": 49,
+      "matched_keywords": [
+        "U_ws",
+        "model."
+      ],
+      "line_count": 65,
+      "source": "from scipy.special import spherical_jn\n\n# MAKE K TERMS?\nK_TERMS = False\n\nif K_TERMS:\n  # Pick a U-scale\n  slicer = (slice(model.m[0],-model.m[0]),\n            slice(model.m[1],-model.m[1]),\n            slice(model.m[2],-model.m[2]))\n  Uc = U_ws[slicer].max().item()\n  print(f'Uc = {Uc:.2e}')\n\n  scale = 6 # scale (s) for j_n(r/s)\n  mult = 1/Uc\n\n  # Radial grid for K(|x-x0|)\n  K_slice = (slice(30,-30,None), slice(30,-30,None))\n\n  XK = (X2[K_slice] - Nx*dx/2).numpy()\n  YK = (Y2[K_slice] - Ny*dy/2).numpy()\n  RK = np.sqrt(XK**2 + YK**2)\n  RK_inv = np.minimum(1/RK, 1)\n\n  # Form spherical Bessel terms\n  K_n = lambda n: mult*spherical_jn(n, RK/scale)\n  Kx_n = lambda n: mult*(XK*RK_inv/scale) * spherical_jn(n, RK/scale, derivative=True)\n  Ky_n = lambda n: mult*(YK*RK_inv/scale) * spherical_jn(n, RK/scale, derivative=True)\n\n  # Build convolution terms\n  KxU_n = lambda n: convolve(U_ws, Kx_n(n)[:,:,np.newaxis], mode='same')\n  KyU_n = lambda n: convolve(U_ws, Ky_n(n)[:,:,np.newaxis], mode='same')\n\n  # Build weak gradients\n  UKxU_n = lambda n: U_ws * torch.from_numpy(KxU_n(n))\n  UKyU_n = lambda n: U_ws * torch.from_numpy(KyU_n(n))\n  psix_UKxU_n = lambda n: compute_weak_poly(UKxU_n(n), kernel_x, model.spacing)\n  psiy_UKyU_n = lambda n: compute_weak_poly(UKyU_n(n), kernel_y, model.spacing)\n\n  weak_Kn_term = lambda n: psix_UKxU_n(n) + psiy_UKyU_n(n)\n\n  # Construct Kn terms and add to library\n  NK = 5\n  for n in range(NK):\n    term = weak_Kn_term(n)\n    G.append(term[model.conv_mask])\n    name = '\u2207\u00b7u(\u2207K_{' + f'{n}' + '}*u)'\n    rhs_names.append(name)\n\n  # Print out new symbolic library\n  lib_string = lib_string[:-2]+','+r',\\,'.join(rhs_names[-NK:-NK+2])+r',\\dots\\}'\n  display(Math(lib_string))\n\n  G_mat = torch.stack(G).T\n  print(f'Library shape: G = {G_mat.numpy().shape}')\n  print(f'Condition number: K(G) = {la.cond(G_mat):.2e}\\n')\n\n  # Check it out\n  plt.figure(figsize=(3,2.5))\n  plt.pcolormesh(XK, YK, K_n(0), cmap='coolwarm')\n  plt.xlabel('$x$')\n  plt.ylabel('$y$')\n  plt.title('$U^{-1}_c j_0(r/s)$')\n  plt.colorbar(shrink=0.9)\n  plt.show()"
+    },
+    {
+      "cell_index": 51,
+      "matched_keywords": [
+        "model."
+      ],
+      "line_count": 6,
+      "source": "# Set library\nmodel.set_library(G, powers, derivs, rhs_names)\n\n# Find sparse weights\nw = model.MSTLS()\nmodel.print_report()"
+    },
+    {
+      "cell_index": 54,
+      "matched_keywords": [
+        "model."
+      ],
+      "line_count": 31,
+      "source": "# Print sparse PDE\npde = symbolic_pde(model.lhs_name, model.rhs_names, model.coeffs)\ndisplay(Math(pde))\n\n# Plot the sparse coefficients\ncoeffs = model.coeffs.clone().numpy()\nterm_names = model.rhs_names\n\nplt.figure(figsize=(15, 4))\nbars = plt.bar(range(len(coeffs)), np.abs(coeffs))\nplt.ylabel('Learned Coefficient, $w_i$')\n#plt.title('PDE Model (Sparse)')\nplt.title(f'PDE Model (Sparse): ${pde}$')\nplt.xticks(range(len(term_names)), [f'${name}$' for name in term_names],\n           rotation=90, fontsize=9)\nplt.xlim(-0.6, len(coeffs) - 0.5)\n\nfor i,(bar,coeff) in enumerate(zip(bars,coeffs)):\n  if coeff >= 0:\n    bar.set_color('blue')\n  else:\n    bar.set_color('red')\n\nfor i,(bar,coeff) in enumerate(zip(bars,coeffs)):\n  if abs(coeff) > 1e-6:\n    plt.text(bar.get_x()+bar.get_width()/2, bar.get_height()+0.01,\n             f'{coeff:.1f}', ha='center', va='bottom', fontsize=7)\n\nplt.tight_layout()\nplt.grid(axis='y', alpha=0.3)\nplt.show()"
+    },
+    {
+      "cell_index": 55,
+      "matched_keywords": [
+        "model."
+      ],
+      "line_count": 15,
+      "source": "# Compare to LS solution\nw_LS = la.lstsq(torch.stack(G).T, model.lhs).solution\nr_LS = (model.lhs - model.library @ w_LS).clone()\nbbar = model.lhs.mean().clone()\nR2_LS = 1 - (r_LS @ r_LS) / ((model.lhs - bbar) @ (model.lhs - bbar))\nprint(f'LS soln R^2: {R2_LS:.3f}')\n\nprint('LS diffusion constants:')\nif len(w_LS) == 1:\n  print(f'Deff = {w_LS[0].item():.1f}')\nelse:\n  print(f'Dx = {w_LS[0].item():.1f}')\n  print(f'Dxy = {(w_LS[2]/2).item():.1f}')\n  print(f'Dy = {w_LS[1].item():.1f}')\n  print(f'Dx/Dy = {(w_LS[0]/w_LS[1]).item():.2f}')"
+    },
+    {
+      "cell_index": 56,
+      "matched_keywords": [
+        "model."
+      ],
+      "line_count": 26,
+      "source": "# Plot the LS coefficients\ncoeffs = w_LS.clone().numpy()\nterm_names = model.rhs_names\n\nplt.figure(figsize=(15, 4))\nbars = plt.bar(range(len(coeffs)), np.abs(coeffs))\nplt.ylabel('Learned Coefficient, $w_i$')\nplt.title('PDE Model (Least Squares)')\nplt.xticks(range(len(term_names)), [f'${name}$' for name in term_names],\n           rotation=90, fontsize=9)\nplt.xlim(-0.6, len(coeffs) - 0.5)\n\nfor i,(bar,coeff) in enumerate(zip(bars,coeffs)):\n  if coeff >= 0:\n    bar.set_color('blue')\n  else:\n    bar.set_color('red')\n\nfor i,(bar,coeff) in enumerate(zip(bars,coeffs)):\n  if abs(coeff) > 1e-2:\n    plt.text(bar.get_x()+bar.get_width()/2, bar.get_height()+0.01,\n             f'{coeff:.1f}', ha='center', va='bottom', fontsize=7)\n\nplt.tight_layout()\nplt.grid(axis='y', alpha=0.3)\nplt.show()"
+    },
+    {
+      "cell_index": 58,
+      "matched_keywords": [
+        "model."
+      ],
+      "line_count": 16,
+      "source": "# Nonzero parameters\nws_terms = w.nonzero().shape[0]\nLS_terms = w_LS.nonzero().shape[0]\n\n# Sparse AIC\nr_ws = (model.lhs - model.library @ model.coeffs).clone()\nAIC_ws = 2*ws_terms + N_data*np.log((r_ws@r_ws).item())\nprint(f'Sparse AIC = {AIC_ws:.1f}')\n\n# Least squares AIC\nAIC_LS = 2*LS_terms + N_data*np.log((r_LS@r_LS).item())\nprint(f'LS AIC = {AIC_LS:.1f}')\n\n# Comparative AIC\nprint(f'Delta AIC = {AIC_ws - AIC_LS:.2f}')\nprint(f'Rel. likelihood = {np.exp((AIC_ws - AIC_LS)/2):.3e}')"
+    },
+    {
+      "cell_index": 60,
+      "matched_keywords": [
+        "model."
+      ],
+      "line_count": 62,
+      "source": "# PROPAGATE UNCERTAINTY\nfor choice in ['WSINDy', 'LS']:\n\n  # Full parameter covariance matrix\n  if choice == 'WSINDy':\n    print('Sparse uncertainties:')\n    nonzero_inds = w.nonzero().reshape(-1).tolist()\n    w_prime = w.clone()\n    G_prime = model.library[:,nonzero_inds].clone()\n    r_prime = r_ws.clone()\n  elif choice == 'LS':\n    print('\\nLS uncertainties:')\n    nonzero_inds = w_LS.nonzero().reshape(-1).tolist()\n    w_prime = w_LS.clone()\n    G_prime = model.library[:,nonzero_inds].clone()\n    r_prime = r_LS.clone()\n\n  G_dagger = la.pinv(G_prime)\n  S = G_dagger @ ((r_prime**2).unsqueeze(1) * G_dagger.T)\n  sigmas = torch.sqrt(torch.diag(S))\n\n  # Effective model\n  if len(model.rhs_names) == 1:\n    print(f'{model.rhs_names[0]} = {w[0].item():.1f} +/- {2*sigmas[0].item():.1f}')\n    break\n\n  # Anisotropic model\n  if len(model.rhs_names) == 3:\n    print(f'{model.rhs_names[0]} = {w[0].item():.1f} +/- {2*sigmas[0].item():.1f}')\n    print(f'{model.rhs_names[1]} = {w[1].item():.1f} +/- {2*sigmas[1].item():.1f}')\n    print(f'{model.rhs_names[2]} = {w[2].item()/2:.1f} +/- {2*sigmas[2].item():.1f}')\n    break\n\n  # Full model\n  if len(model.rhs_names) >= 3 + (N*M):\n    print(f'{model.rhs_names[0]} = {w[0].item():.1f} +/- {2*sigmas[0].item():.1f}')\n    print(f'{model.rhs_names[1]} = {w[1].item():.1f} +/- {2*sigmas[1].item():.1f}')\n    print(f'{model.rhs_names[2]} = {w[2].item()/2:.1f} +/- {2*sigmas[2].item():.1f}')\n\n    if V_TERMS:\n      dV_x = torch.zeros_like(X2)\n      dV_y = torch.zeros_like(Y2)\n      for i,ind in enumerate(w_prime[3:3+(N*M)].nonzero().reshape(-1).tolist()):\n        nm = NMs[ind]\n        s0 = len(w_prime[0:3].nonzero())\n        dV_x += 2*sigmas[s0+i]*Vx_nm(*nm)\n        dV_y += 2*sigmas[s0+i]*Vy_nm(*nm)\n      dVc = torch.sqrt(dV_x**2 + dV_y**2)\n      dVc = dVc[model.m[0]:-model.m[0], model.m[1]:-model.m[1]].max().item()\n      print(f'Vc uncertainty = +/- {dVc:.1f}')\n\n    if K_TERMS:\n      dK_x = torch.zeros(20,20)\n      dK_y = torch.zeros(20,20)\n      for i,ind in enumerate(w_prime[3+(N*M):].nonzero().reshape(-1).tolist()):\n        n = [n for n in range(NK)][ind]\n        s0 = len(w_prime[0:3+(N*M)].nonzero())\n        dK_x += 2*sigmas[s0+i]*torch.from_numpy(Kx_n(n))\n        dK_y += 2*sigmas[s0+i]*torch.from_numpy(Ky_n(n))\n      dKc = torch.sqrt((Uc*dK_x)**2 + (Uc*dK_y)**2)\n      dKc = dKc.max().item()\n      print(f'Kc uncertainty = +/- {dKc:.1f}')"
+    },
+    {
+      "cell_index": 63,
+      "matched_keywords": [
+        "model."
+      ],
+      "line_count": 12,
+      "source": "# Plot residuals, r = b - G*w\nb_inf = abs(model.lhs).max().item()\nweights = 100*torch.ones_like(r_ws)/len(r_ws)\n\nplt.figure(figsize=(6,3))\nplt.hist(r_ws/b_inf, bins=60, edgecolor='k', alpha=0.7, weights=weights)\nplt.xlabel(r'Normalized Residuals, $r_k/|\\!|\\mathbf{b}|\\!|_{\\infty}$')\nplt.ylabel('Percentage')\nplt.title('Weak SINDy Residuals')\nplt.grid(True, alpha=0.5)\n#plt.yscale('log')\nplt.show()"
+    },
+    {
+      "cell_index": 65,
+      "matched_keywords": [
+        "U_ws",
+        "model.",
+        "coords"
+      ],
+      "line_count": 28,
+      "source": "# Weak form representations\nthyme = 1\nm = model.m\nslicer = tuple([U_ws.shape[i] - 2*m[i] for i in range(len(m))])\n\n# Original data\nplt.figure(figsize=(3,2.4))\ncoords = (X[:,:,0], Y[:,:,0])\nplt.pcolormesh(*coords, U_ws[:,:,m[2]+thyme], cmap='gnuplot')\n\nxbox = [x[m[0]].item()/175, x[-m[0]].item()/175]\nybox = [y[m[1]].item()/175, y[-m[1]].item()/175]\nplt.axhline(y=y[m[1]], xmin=xbox[0], xmax=xbox[1], color='red')\nplt.axhline(y=y[-m[1]], xmin=xbox[0], xmax=xbox[1], color='red')\nplt.axvline(x=x[m[0]], ymin=ybox[0], ymax=ybox[1], color='red')\nplt.axvline(x=x[-m[0]], ymin=ybox[0], ymax=ybox[1], color='red')\n\nplt.title(f'$u$')\nplt.colorbar(shrink=0.8)\nplt.show()\n\n# Weak form\nplt.figure(figsize=(3,2.4))\ncoords = (X[m[0]:-m[0], m[1]:-m[1], 0], Y[m[0]:-m[0], m[1]:-m[1], 0])\nplt.pcolormesh(*coords, G[0].reshape(slicer)[:,:,thyme], cmap='gnuplot')\nplt.title(f'$\\\\psi * {model.rhs_names[0]}$')\nplt.colorbar(shrink=0.8)\nplt.show()"
+    },
+    {
+      "cell_index": 66,
+      "matched_keywords": [
+        "model."
+      ],
+      "line_count": 15,
+      "source": "# More weak form features\nlib_index = 0\nthyme = 1\n\nplt.figure(figsize=(3,3))\nplt.imshow(model.lhs.reshape(slicer)[:,:,thyme], cmap='coolwarm')\nplt.title(f'$\\\\psi * {model.lhs_name}$')\nplt.colorbar(shrink=0.6)\nplt.show()\n\nplt.figure(figsize=(3,3))\nplt.imshow(G[lib_index].reshape(slicer)[:,:,thyme], cmap='coolwarm')\nplt.title(f'$\\\\psi * {model.rhs_names[lib_index]}$')\nplt.colorbar(shrink=0.6)\nplt.show()"
+    },
+    {
+      "cell_index": 67,
+      "matched_keywords": [
+        "model."
+      ],
+      "line_count": 25,
+      "source": "# Weak form model\nRHS = (model.library @ model.coeffs)\nthyme = 1\n\nplotz = {'cmap': 'coolwarm',\n         'vmin': model.lhs.reshape(slicer)[:,:,thyme].min(),\n         'vmax': model.lhs.reshape(slicer)[:,:,thyme].max()}\n\nplt.figure(figsize=(3,3))\nplt.imshow(model.lhs.reshape(slicer)[:,:,thyme], **plotz)\nplt.title(f'$(\\\\psi * {model.lhs_name})$ at $t={t_new[thyme]:.1f}$')\nplt.colorbar(shrink=0.6)\nplt.show()\n\nplt.figure(figsize=(3,3))\nplt.imshow(RHS.reshape(slicer)[:,:,thyme], **plotz)\nplt.title(f'Learned RHS at $t={t_new[thyme]:.1f}$')\nplt.colorbar(shrink=0.6)\nplt.show()\n\nplt.figure(figsize=(3,3))\nplt.imshow(abs(model.lhs-RHS).reshape(slicer)[:,:,thyme], cmap='gnuplot')\nplt.title(f'Absolute Error')\nplt.colorbar(shrink=0.6)\nplt.show()"
+    },
+    {
+      "cell_index": 76,
+      "matched_keywords": [
+        "params"
+      ],
+      "line_count": 222,
+      "source": "from scipy.special import spherical_jn\n\nclass McKeanVlasovSimulator:\n  def __init__(self, N=100, L=175, A=1.0, B=1.0):\n    self.N = N\n    self.L = L\n    self.A = A\n    self.B = B\n\n    self.ks = [(1,4), (1,5), (5,2)] # (kx,ky) pairs for Vnm modes\n    self.V_coeffs = [-5.55/12.53, -7.21/12.53, 0.23/12.53] # V14, V15, V52\n    self.K_coeffs = [0.0, -1.0, 0.0] # j0, j1, j2\n\n    rng = np.random.default_rng(42)\n    #self.positions = rng.normal(self.L/2, 5, (N,2))\n    self.positions = rng.normal(self.L/2, 8, (N,2))\n    self.trajectory = []\n\n  # ------------------ TERMS ------------------\n  def potential_V(self, x, y):\n    V = 0\n    for i,(kx,ky) in enumerate(self.ks):\n      Anm = self.V_coeffs[i]\n      V += Anm * np.cos(2*np.pi*kx*x/self.L) * np.cos(2*np.pi*ky*y/self.L)\n    return self.A * V\n\n  def gradient_V(self, x, y):\n    dVdx = 0\n    dVdy = 0\n    for i,(kx,ky) in enumerate(self.ks):\n      Anm = self.V_coeffs[i]\n      dVdx += -Anm*kx * np.sin(2*np.pi*kx*x/self.L) * np.cos(2*np.pi*ky*y/self.L)\n      dVdy += -Anm*ky * np.cos(2*np.pi*kx*x/self.L) * np.sin(2*np.pi*ky*y/self.L)\n    return self.A * np.array([dVdx, dVdy])\n\n  def potential_K(self, r, r0=6):\n    if r == 0:\n      return 0\n    K_val = 0\n    for n, a_n in enumerate(self.K_coeffs):\n      K_val += a_n * spherical_jn(n, r/r0)\n    return self.B * K_val\n\n  def K_prime(self, r, r0=6):\n    if r == 0:\n      return 0\n    dKdr_val = 0\n    for n, a_n in enumerate(self.K_coeffs):\n      dKdr_val += (a_n/r0) * spherical_jn(n, r/r0, derivative=True)\n    return self.B * dKdr_val\n\n  def gradient_K(self, i):\n    xi = self.positions[i]\n    force = np.zeros(2)\n\n    for j in range(self.N):\n      if j != i:\n        xj = self.positions[j]\n        diff = xi - xj\n        r = np.linalg.norm(diff)\n        if r > 0:\n          dKdr_val = self.K_prime(r)\n          force += (diff/r) * dKdr_val\n    return force\n\n  # ------------------ SIMULATION ------------------\n  def euler_step(self, dt=0.01):\n    new_positions = np.zeros_like(self.positions)\n\n    for i in range(self.N):\n      x, y = self.positions[i]\n      grad_V = self.gradient_V(x, y)\n      grad_K = self.gradient_K(i)\n      dB = np.random.normal(0, np.sqrt(dt), 2) # sigma = sqrt(dt)\n\n      # SDE: dx = -(A*grad_V + B*sum(grad_K)) + sqrt(2)*dB\n      drift = -(grad_V + grad_K)\n      diffusion = np.sqrt(2)*dB\n      new_positions[i] = self.positions[i] + drift*dt + diffusion\n\n    # Apply periodic BCs\n    self.positions = new_positions\n    self.positions = np.mod(self.positions + self.L, self.L)\n\n  def simulate(self, T=10, dt=0.01, save_interval=10):\n    n_steps = int(T / dt)\n    self.trajectory = [self.positions.copy()]\n\n    print(f\"Running simulation for {n_steps} steps...\")\n\n    for step in range(n_steps):\n      self.euler_step(dt)\n      if step % save_interval == 0:\n        self.trajectory.append(self.positions.copy())\n      if step % 1000 == 0:\n        print(f\"Step {step}/{n_steps}\")\n\n    print(\"Simulation complete!\")\n\n  # ------------------ PLOTTING ------------------\n  def plot_V_potential(self, ax, resolution=200, cbar=True):\n    x = np.linspace(0, self.L, resolution)\n    y = np.linspace(0, self.L, resolution)\n    X,Y = np.meshgrid(x, y)\n\n    # Scalar field\n    V = self.potential_V(X,Y)\n    extent = [0, self.L]\n    im = ax.imshow(V, extent=2*extent, origin='lower', cmap='RdBu', alpha=0.8,\n                   #vmin=-self.A, vmax=self.A)\n                   vmin=-1.0, vmax=1.0)\n\n    # Vector field\n    arrow_spacing = 45\n    x_arrows = np.linspace(0, self.L, arrow_spacing)\n    y_arrows = np.linspace(0, self.L, arrow_spacing)\n    X_arrows, Y_arrows = np.meshgrid(x_arrows, y_arrows)\n\n    grad_V = self.gradient_V(X_arrows, Y_arrows)\n    grad_x = grad_V[0]\n    grad_y = grad_V[1]\n    ax.quiver(X_arrows, Y_arrows, -grad_x, -grad_y,\n              angles='xy', scale_units='xy', scale=1/2,\n              color='gray', alpha=0.7, label=r'$-\\nabla\\mathcal{V}$')\n    ax.set_xlim(0, self.L)\n    ax.set_ylim(0, self.L)\n    if cbar:\n      ax.set_xlabel('$x$ (cm)')\n      ax.set_ylabel('$y$ (cm)')\n      ax.legend(fontsize=10)\n      cbar = plt.colorbar(im, ax=ax, shrink=0.72)\n      cbar.set_label(r'External Potential, $\\mathcal{V}$ ($\\text{cm}^2/s$)')\n    return im\n\n  def plot_K_potential(self, ax, r_max=30, resolution=1000, cbar=True):\n    r = np.linspace(0.1, r_max, resolution)\n    K_vals = [self.potential_K(r_i) for r_i in r]\n    K_prime_vals = [-self.K_prime(r_i) for r_i in r]\n\n    ax.plot(r, K_vals, 'b-', linewidth=2, zorder=2,\n            label=r'$+\\mathcal{K}(\\rho)$ ($\\text{cm}^2/s$)')\n    ax.plot(r, K_prime_vals, 'r-', linewidth=2, zorder=2,\n            label=r\"$-\\mathcal{K}'(\\rho)$ ($\\text{cm}/s$)\")\n    ax.axhline(y=0, color='k', linestyle='--', alpha=0.3, zorder=1)\n\n    # 1D vector field of -K'(r)\n    step = max(1, resolution//12)\n    rs = r[::step]\n    Kps = K_prime_vals[::step]\n\n    ax.quiver(rs, np.zeros_like(rs), Kps, np.zeros_like(rs),\n              scale=1/1e3, angles='xy', scale_units='xy',\n              width=0.012, headwidth=4, headlength=6,\n              color='dimgrey', alpha=0.7, zorder=10)\n    ax.set_ylim([-0.025, 0.006])\n    ax.grid(True, alpha=0.6)\n    if cbar:\n      ax.set_xlabel(r'Distance, $\\rho$ (cm)')\n      ax.legend(loc='lower right')\n    plt.tight_layout()\n    plt.show()\n\n  def plot_final_state(self, ax, show_trajectories=True, cbar=True):\n    im = self.plot_V_potential(ax, cbar=cbar)\n\n    if show_trajectories and len(self.trajectory) > 1:\n      for i in range(self.N):\n        trajectory = np.array([pos[i] for pos in self.trajectory])\n        ax.plot(trajectory[:,0], trajectory[:,1], 'k-', alpha=0.5, lw=1.5)\n\n    ax.scatter(self.positions[:,0], self.positions[:,1], c='k', s=15, alpha=0.8)\n    ax.set_title(f'$\\\\Pi_V = {self.A:.1f}$ and $\\\\Pi_K={self.B:.1e}$')\n\n    # Inset panel ----\n    bbox = [0.02, 0.76, 0.65, 0.22]  # [x0, y0, W, H]\n    inset_ax = ax.inset_axes(bbox)\n\n    r_max = 30\n    resolution = 800\n    r = np.linspace(0.1, r_max, resolution)\n    K_vals = np.array([self.potential_K(r_i) for r_i in r])\n    K_prime_vals = np.array([-self.K_prime(r_i) for r_i in r])\n\n    # Plot K and -K'\n    #inset_ax.plot(r, K_vals, '-', lw=1.6, zorder=2,\n    #              label=r'$+\\mathcal{K}(\\rho)$ ($\\text{cm}^2/s$)')\n    inset_ax.plot(r, K_prime_vals, '-', lw=1.6, zorder=2,\n                  label=r\"$-\\mathcal{K}'(\\rho)$ ($\\text{cm}/s$)\")\n    inset_ax.axhline(y=0, color='k', linestyle='--', alpha=0.3, zorder=1)\n\n    # 1D vector field arrows (subsample)\n    step = max(1, resolution//12)\n    rs = r[::step]\n    Kps = K_prime_vals[::step]\n    inset_ax.quiver(rs, np.zeros_like(rs), Kps, np.zeros_like(rs),\n                    #scale=1/(1e3), angles='xy', scale_units='xy',\n                    scale=0.003, angles='xy', scale_units='xy',\n                    width=0.012, headwidth=4, headlength=6,\n                    color='dimgrey', alpha=0.7, zorder=10)\n\n    # if cbar:\n    #   inset_ax.set_xlabel(r'Distance, $\\rho$ (cm)', fontsize=10)\n    #   inset_ax.legend(fontsize=9, loc='lower right', framealpha=0.7)\n    inset_ax.set_xlabel(r'Distance, $\\rho$ (cm)', fontsize=10)\n    inset_ax.legend(fontsize=9, loc='upper right', framealpha=0.7)\n    inset_ax.set_yscale('symlog', linthresh=5e-1)\n    #inset_ax.set_ylim([-self.B/2, self.B/2])\n    #inset_ax.set_ylim([-0.025, 0.006])\n    inset_ax.set_ylim([-3*0.004, 3*0.004])\n    inset_ax.set_xlim(0, min(r_max, r.max()))\n    inset_ax.grid(True, alpha=0.5)\n    inset_ax.tick_params(axis='both', which='major', labelsize=9)\n\n    # Move axis ticks etc.\n    inset_ax.yaxis.set_ticks_position('right')\n    inset_ax.yaxis.set_label_position('right')\n    inset_ax.tick_params(axis='y', labelleft=False, labelright=True, direction='in')\n    inset_ax.tick_params(axis='x', direction='in')\n    # ------------------\n\n    plt.tight_layout()\n    plt.show()"
+    },
+    {
+      "cell_index": 81,
+      "matched_keywords": [
+        "cats",
+        "U_ws"
+      ],
+      "line_count": 13,
+      "source": "# PICK ENSEMBLE DATASET\nU_ws = U_interp.clone()\nN_data = cats.shape[0]\nprint(f'Number of cat. counts = {N_data}')\n\n# Grid\ntry:\n  t = torch.from_numpy(t)\n  t_new = torch.from_numpy(t_new)\nexcept:\n  pass\n\nX,Y,T = torch.meshgrid(x,y,t_new, indexing='ij')"
+    },
+    {
+      "cell_index": 82,
+      "matched_keywords": [
+        "coords",
+        "params"
+      ],
+      "line_count": 18,
+      "source": "# PICK OTHER WSINDY PARAMS\ncoords = [x, y, t_new]\nvars = []\nnames = ['u']\n\n# Query-point frequency\ns = [1, 1, 1]\n\n# Derivatives for test fcns\nalpha = [[0,0,1], # d/dt (lhs)\n         [2,0,0], # d^2/dx^2\n         [0,2,0]] # d^2/dy^2\n\n# Powers for homogeneous fcns\nbeta = [[0],[1]]\n\n# Hyper-params\nparams = {'V':vars, 'names':names, 's':s, 'rescale':False, 'verbosity':False}"
+    },
+    {
+      "cell_index": 83,
+      "matched_keywords": [
+        "U_ws",
+        "WSINDy(",
+        "model.",
+        "coords",
+        "params",
+        "sensitivity_analysis",
+        "to_csv"
+      ],
+      "line_count": 57,
+      "source": "# SENSITIVITY ANALYSIS\nimport os\n\nPERFORM_SA = False\nWRITE_CSV = False\ncsv_path = \"sensitivity_analysis.csv\"\n\nif PERFORM_SA:\n  results = []\n\n  # Loop over test fcn support radii\n  [max_mxy, max_mt] = [20, 20]\n\n  #for mxy in [mxy for mxy in range(2, max_mxy+1)]:\n  for mxy in tqdm(range(2, max_mxy + 1), desc=\"mxy\"):\n    for mt in [my for my in range(2, max_mt+1)]:\n\n      # Set test fcn support\n      params['m'] = [mxy, mxy, mt]\n      model = WSINDy(U_ws, alpha, beta, coords, **params)\n\n      # Set lhs\n      lhs_name = 'u' + model.derivative_names[0]\n      model.build_lhs(lhs_name)\n\n      # Create library with single Laplacian term\n      info = model.create_default_library()\n      [G,powers,derivs,rhs_names] = composite_term([0,1], [1,1], '\u0394u', model, info)\n      model.set_library(G, powers, derivs, rhs_names)\n\n      # Find sparse weights\n      w = model.MSTLS()\n      Deff = w[0].item()\n\n      # Compute R^2 and AIC\n      r = (model.lhs - model.library @ model.coeffs).clone()\n      bbar = model.lhs.mean().clone()\n      R2 = 1 - (r@r)/((model.lhs-bbar)@(model.lhs-bbar))\n      R2 = R2.item()\n\n      AIC = 2*1 + N_data*np.log((r@r).item())\n      AIC = AIC.item()\n\n      # Parameter variance\n      G_dagger = la.pinv(model.library.clone())\n      S = G_dagger @ ((r.clone()**2).unsqueeze(1) * G_dagger.T)\n      sigma = torch.sqrt(torch.diag(S))[0].item()\n\n      # Append results\n      results.append({\"mxy\":mxy, \"mt\":mt, \"Deff\":Deff, \"R2\": R2, \"AIC\": AIC, \"sigma\": sigma})\n\n  # Write out results\n  df = pd.DataFrame(results, columns=[\"mxy\", \"mt\", \"Deff\", \"R2\", \"AIC\", \"sigma\"])\n  print('\\n\\nFINSIHED:\\n', df.head())\n  if WRITE_CSV:\n    df.to_csv(csv_path, index=False)\n    print(f\"\\nSensitivity results saved to: {os.path.abspath(csv_path)}\")"
+    }
+  ],
+  "notebook_executed": false,
+  "original_notebook_modified": false
+}

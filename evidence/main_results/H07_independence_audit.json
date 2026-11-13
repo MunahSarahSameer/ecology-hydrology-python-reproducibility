@@ -1,0 +1,35 @@
+{
+  "step": 123,
+  "package_id": "H07",
+  "audit_type": "cross_archive_python_source_independence",
+  "h07_python_files": 29,
+  "other_archives_checked": [
+    "repositories\\code.zip",
+    "repositories\\E01\\code.zip",
+    "repositories\\E02\\is_niches.zip",
+    "repositories\\E03\\FermentomeII_package_code.zip",
+    "repositories\\E04\\code.zip",
+    "repositories\\E04\\data.zip",
+    "repositories\\E06\\Code_Figures.zip",
+    "repositories\\E07\\FORspecies20K.zip",
+    "repositories\\E09\\code.zip",
+    "repositories\\H01\\Data and codes.zip",
+    "repositories\\H02\\FloodSformer-v1.0.1.zip",
+    "repositories\\H03\\Hydrological-controls---Code-and-Data-Hydrology.zip",
+    "repositories\\H05\\neuralhydrology-v.1.2.3.zip",
+    "repositories\\H06\\S4D_rainfall_runoff_simulations.zip"
+  ],
+  "other_python_files_compared": 586,
+  "exact_matches": [],
+  "structural_matches": [],
+  "source_level_distinctness_supported": true,
+  "original_archives_modified": false,
+  "limitations": [
+    "Only ZIP archives under repositories were compared.",
+    "Source fingerprints do not prove publication independence.",
+    "Shared algorithms may have different source fingerprints.",
+    "Syntax-invalid files cannot receive AST fingerprints.",
+    "Non-ZIP archives and extracted-only repositories are excluded."
+  ],
+  "generated_at_utc": "2026-11-11T01:45:32.970870+00:00"
+}

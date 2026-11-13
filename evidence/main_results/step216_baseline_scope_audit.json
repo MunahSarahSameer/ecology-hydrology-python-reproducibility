@@ -1,0 +1,115 @@
+{
+  "step": 216,
+  "generated_at_utc": "2026-11-11T23:15:41.122012+00:00",
+  "original_archives_modified": false,
+  "execution_attempted": false,
+  "scope_comparability_verified": false,
+  "candidates": [
+    {
+      "candidate_id": "E02",
+      "archive_age_years": 0.424,
+      "current_baseline": "PASS",
+      "historical_baseline": "PASS",
+      "historical_tested_scope": "SELECTED_NOTEBOOK_CELLS",
+      "historical_explanation": "First four notebook code cells executed",
+      "historical_intervention": "NONE_DOCUMENTED",
+      "current_testing_review_status": "PENDING_REVIEW",
+      "current_previous_finding": "Four original notebook code cells passed",
+      "evidence_files": [
+        "repositories\\results\\E02_test1_validation.json"
+      ],
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "E07",
+      "archive_age_years": 1.823,
+      "current_baseline": "FAIL",
+      "historical_baseline": "FAIL",
+      "historical_tested_scope": "SOURCE_COMPONENT",
+      "historical_explanation": "laspy recovery; separate syntax repair",
+      "historical_intervention": "DEPENDENCY_RECOVERY",
+      "current_testing_review_status": "PENDING_REVIEW",
+      "current_previous_finding": "Syntax repair and synthetic LAS component test passed",
+      "evidence_files": [
+        "repositories\\results\\E07_consolidated_evidence.json"
+      ],
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "H01",
+      "archive_age_years": 2.163,
+      "current_baseline": "FAIL",
+      "historical_baseline": "FAIL",
+      "historical_tested_scope": "SELECTED_SCRIPT",
+      "historical_explanation": "Missing external Excel file",
+      "historical_intervention": "DEPENDENCY_INSTALLATION",
+      "current_testing_review_status": "H01_FIGURE_SCRIPT_RECOVERED_AND_NUMERICALLY_VALIDATED",
+      "current_previous_finding": "Original H01 monthly streamflow script initially failed because of a missing dependency and hardcoded Excel file paths. The archived datasets were available. After redirecting three paths, execution exposed an obsolete pandas annual resampling alias ('Y'). Replacing it with 'YE' in a temporary working copy enabled successful execution (return code 0). Independent NSE calculations matched 18 of 18 selected values. No figure file was generated; full workflow and published figure reproduction remain unverified.",
+      "evidence_files": [
+        "repositories\\results\\H01_test1_with_dependencies_log.txt",
+        "results/H01_step198_dataset_audit.json",
+        "results/H01_step199_workbook_inspection.json",
+        "results/H01_step200_path_recovery.json",
+        "results/H01_step201_pandas_recovery.json",
+        "results/H01_step202_nse_validation.json"
+      ],
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "H02",
+      "archive_age_years": 2.59,
+      "current_baseline": "FAIL",
+      "historical_baseline": "FAIL",
+      "historical_tested_scope": "SYNTHETIC_MODEL_FORWARD_PASS",
+      "historical_explanation": "CPU autoencoder forward pass completed",
+      "historical_intervention": "DEPENDENCIES_AND_HARNESS",
+      "current_testing_review_status": "PENDING_REVIEW",
+      "current_previous_finding": "Synthetic CPU autoencoder forward pass succeeded",
+      "evidence_files": [
+        "repositories\\results\\H02_test1_validation.json"
+      ],
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "H03",
+      "archive_age_years": 3.006,
+      "current_baseline": "FAIL",
+      "historical_baseline": "FAIL",
+      "historical_tested_scope": "SELECTED_MODEL_SCRIPT",
+      "historical_explanation": "Partial RMSE output; full search timed out",
+      "historical_intervention": "DEPENDENCY_FILENAME_AND_RESOURCE",
+      "current_testing_review_status": "H03_BOUNDED_MODEL_COMPONENT_VERIFIED",
+      "current_previous_finding": "The original H03 script encountered a missing scikit-learn dependency, an archived dataset filename mismatch and computational timeouts. The original source specifies 180 hyperparameter combinations with 10-fold cross-validation, requiring 1800 fits in the grid-search stage alone. A separate bounded runner reproduced the original Model 1 feature selection, target and 25-tree Random Forest configuration using 2000 training and 500 testing observations. The runner completed successfully with finite predictions. The original full script and hyperparameter search were not completed, and published results were not reproduced.",
+      "evidence_files": [
+        "repositories\\results\\H03_test1_summary.json",
+        "results/H03_step204_workload_audit.json",
+        "results/H03_step205_workload_estimate.json",
+        "results/H03_step206_model_input_inspection.json",
+        "results/H03_step207_bounded_execution.json"
+      ],
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "H05",
+      "archive_age_years": 4.696,
+      "current_baseline": "FAIL",
+      "historical_baseline": "FAIL",
+      "historical_tested_scope": "SELECTED_LIBRARY_TESTS",
+      "historical_explanation": "Tests passed in compatible pandas environments",
+      "historical_intervention": "DEPENDENCY_VERSION_CONTROL",
+      "current_testing_review_status": "PENDING_REVIEW",
+      "current_previous_finding": "Controlled pandas compatibility tests completed",
+      "evidence_files": [
+        "repositories\\results\\H05_pandas_control_summary.json"
+      ],
+      "scope_comparability_verified": false
+    }
+  ],
+  "limitations": [
+    "Baseline PASS/FAIL labels do not establish test equivalence.",
+    "A syntax test is not equivalent to model execution.",
+    "A CLI help test is not equivalent to scientific reproduction.",
+    "An import failure differs from a runtime or timeout failure.",
+    "Age-executability association remains unverified."
+  ]
+}

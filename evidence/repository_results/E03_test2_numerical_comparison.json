@@ -1,0 +1,24 @@
+{
+  "case": "E03",
+  "comparison": "test2_vs_archived_reference",
+  "rtol": 1e-08,
+  "atol": 1e-10,
+  "results": [
+    {
+      "file": "permanova_results.csv",
+      "same_shape": true,
+      "same_columns": true,
+      "exact_dataframe_match": false,
+      "numerically_equivalent": true,
+      "text_values_match": true
+    },
+    {
+      "file": "perturbation_design_table.csv",
+      "same_shape": true,
+      "same_columns": true,
+      "exact_dataframe_match": true,
+      "numerically_equivalent": true,
+      "text_values_match": true
+    }
+  ]
+}

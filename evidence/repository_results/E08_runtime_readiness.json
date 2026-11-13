@@ -1,0 +1,133 @@
+{
+  "archive_id": "E08",
+  "python_version": "3.11.18",
+  "python_executable": "C:\\Users/REDACTED\\miniconda3\\envs\\code_decay\\python.exe",
+  "dependencies": {
+    "numpy": {
+      "available": true,
+      "version": "2.4.6"
+    },
+    "pandas": {
+      "available": true,
+      "version": "3.1.0"
+    },
+    "scipy": {
+      "available": true,
+      "version": "1.17.1"
+    },
+    "matplotlib": {
+      "available": true,
+      "version": "3.11.2"
+    },
+    "symengine": {
+      "available": false,
+      "version": null
+    },
+    "torch": {
+      "available": true,
+      "version": "2.15.0+cpu"
+    },
+    "tqdm": {
+      "available": true,
+      "version": "4.70.1"
+    },
+    "IPython": {
+      "available": true,
+      "version": "9.17.1"
+    },
+    "wsindy": {
+      "available": false,
+      "version": null
+    },
+    "helper_fcns": {
+      "available": false,
+      "version": null
+    }
+  },
+  "code_cells": 58,
+  "external_resource_references": [
+    {
+      "cell_index": 3,
+      "line_number": 1,
+      "text": "%pip install symengine"
+    },
+    {
+      "cell_index": 3,
+      "line_number": 3,
+      "text": "!wget -q https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/main/wsindy.py"
+    },
+    {
+      "cell_index": 3,
+      "line_number": 4,
+      "text": "!wget -q https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/main/helper_fcns.py"
+    },
+    {
+      "cell_index": 4,
+      "line_number": 19,
+      "text": "from wsindy import *"
+    },
+    {
+      "cell_index": 4,
+      "line_number": 20,
+      "text": "from helper_fcns import *"
+    },
+    {
+      "cell_index": 5,
+      "line_number": 1,
+      "text": "from google.colab import drive"
+    },
+    {
+      "cell_index": 5,
+      "line_number": 2,
+      "text": "drive.mount('/content/drive')"
+    },
+    {
+      "cell_index": 5,
+      "line_number": 3,
+      "text": "%cd /content/drive/My Drive/WSINDy"
+    },
+    {
+      "cell_index": 8,
+      "line_number": 2,
+      "text": "file_path = '/content/drive/My Drive/WSINDy/Caterpillar/caterpillars.csv'"
+    },
+    {
+      "cell_index": 8,
+      "line_number": 3,
+      "text": "cats = pd.read_csv(file_path)"
+    },
+    {
+      "cell_index": 41,
+      "line_number": 23,
+      "text": "model = WSINDy(U_ws, alpha, beta, coords, **params)"
+    },
+    {
+      "cell_index": 60,
+      "line_number": 2,
+      "text": "for choice in ['WSINDy', 'LS']:"
+    },
+    {
+      "cell_index": 60,
+      "line_number": 5,
+      "text": "if choice == 'WSINDy':"
+    },
+    {
+      "cell_index": 82,
+      "line_number": 1,
+      "text": "# PICK OTHER WSINDY PARAMS"
+    },
+    {
+      "cell_index": 83,
+      "line_number": 6,
+      "text": "csv_path = \"sensitivity_analysis.csv\""
+    },
+    {
+      "cell_index": 83,
+      "line_number": 20,
+      "text": "model = WSINDy(U_ws, alpha, beta, coords, **params)"
+    }
+  ],
+  "original_notebook_modified": false,
+  "notebook_executed": false,
+  "assessment": "Static runtime-readiness inspection"
+}

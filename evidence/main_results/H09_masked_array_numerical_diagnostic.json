@@ -1,0 +1,43 @@
+{
+  "step": 148,
+  "package_id": "H09",
+  "archive_sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+  "source_member": "allixender-swatpy-0d47bfa/swatpy/ReadOut.py",
+  "results": {
+    "module_load": "PASS",
+    "numpy_version": "2.4.6",
+    "intermediate_values": {
+      "observed_mask": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "observed_mean": 2.6666666666666665,
+      "squared_errors": "MASKED",
+      "squared_deviations": "MASKED",
+      "agreement_terms": "MASKED",
+      "python_sum_errors": "MASKED",
+      "numpy_sum_errors": 0.25,
+      "python_sum_deviations": "MASKED",
+      "numpy_sum_deviations": 4.666666666666666,
+      "python_sum_agreement": "MASKED",
+      "numpy_sum_agreement": 19.583333333333336
+    },
+    "errors": [],
+    "original_methods": {
+      "nash": "MASKED",
+      "agr": "MASKED"
+    },
+    "diagnostic_only": {
+      "nash_using_numpy_sum": 0.9464285714285714,
+      "agr_using_numpy_sum": 0.9872340425531915
+    }
+  },
+  "subprocess_returncode": 0,
+  "subprocess_stderr": "",
+  "original_archive_modified": false,
+  "original_source_modified": false,
+  "full_package_execution_verified": false,
+  "generated_at_utc": "2026-11-11T02:24:22.677059+00:00"
+}

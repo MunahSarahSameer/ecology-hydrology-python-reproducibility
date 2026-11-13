@@ -1,0 +1,115 @@
+{
+  "step": 107,
+  "target_sample_size": 15,
+  "previously_examined_independent_cases": 11,
+  "new_candidate": "E10",
+  "candidate_count": 12,
+  "domain_counts": {
+    "ecology": 7,
+    "hydrology": 5
+  },
+  "records": [
+    {
+      "package_id": "E01",
+      "domain": "ecology",
+      "name": "DeepSDM",
+      "repository_folder_exists": true,
+      "python_files": 0,
+      "status": "previously_examined"
+    },
+    {
+      "package_id": "E02",
+      "domain": "ecology",
+      "name": "is_niches",
+      "repository_folder_exists": true,
+      "python_files": 1,
+      "status": "previously_examined"
+    },
+    {
+      "package_id": "E03",
+      "domain": "ecology",
+      "name": "FermentomeII",
+      "repository_folder_exists": true,
+      "python_files": 2,
+      "status": "previously_examined"
+    },
+    {
+      "package_id": "E06",
+      "domain": "ecology",
+      "name": "Code_Figures",
+      "repository_folder_exists": true,
+      "python_files": 3,
+      "status": "previously_examined"
+    },
+    {
+      "package_id": "E07",
+      "domain": "ecology",
+      "name": "FORspecies20K",
+      "repository_folder_exists": true,
+      "python_files": 3,
+      "status": "previously_examined"
+    },
+    {
+      "package_id": "E08",
+      "domain": "ecology",
+      "name": "WSINDy caterpillar movement",
+      "repository_folder_exists": true,
+      "python_files": 35,
+      "status": "previously_examined"
+    },
+    {
+      "package_id": "E10",
+      "domain": "ecology",
+      "name": "Environmental time-series SDM",
+      "repository_folder_exists": true,
+      "python_files": 3,
+      "status": "candidate_pending_independence_review"
+    },
+    {
+      "package_id": "H01",
+      "domain": "hydrology",
+      "name": "H01",
+      "repository_folder_exists": true,
+      "python_files": 2,
+      "status": "previously_examined"
+    },
+    {
+      "package_id": "H02",
+      "domain": "hydrology",
+      "name": "H02",
+      "repository_folder_exists": true,
+      "python_files": 43,
+      "status": "previously_examined"
+    },
+    {
+      "package_id": "H03",
+      "domain": "hydrology",
+      "name": "H03",
+      "repository_folder_exists": true,
+      "python_files": 3,
+      "status": "previously_examined"
+    },
+    {
+      "package_id": "H05",
+      "domain": "hydrology",
+      "name": "NeuralHydrology",
+      "repository_folder_exists": true,
+      "python_files": 61,
+      "status": "previously_examined"
+    },
+    {
+      "package_id": "H06",
+      "domain": "hydrology",
+      "name": "H06",
+      "repository_folder_exists": true,
+      "python_files": 0,
+      "status": "previously_examined"
+    }
+  ],
+  "limitations": [
+    "This is an inventory audit, not proof of independence.",
+    "Folder existence does not prove successful execution.",
+    "E10 requires a final independence assessment.",
+    "Previously excluded duplicates E04 and E09 are not counted."
+  ]
+}

@@ -1,0 +1,1079 @@
+{
+  "step": 224,
+  "generated_at_utc": "2026-11-11T23:45:47.099016+00:00",
+  "original_archives_modified": false,
+  "classification_matrix_modified": false,
+  "targets": [
+    {
+      "candidate_id": "E06",
+      "files": [
+        {
+          "path": "repositories\\results\\E06_test1_after_seaborn_log.txt",
+          "size_bytes": 600,
+          "excerpt": "Exit code: 1\nElapsed seconds: 9.34\nPython executable: C:\\Users/REDACTED\\miniconda3\\envs\\code_decay\\python.exe\n\n\nTraceback (most recent call last):\n  File \"C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E06\\test1\\source\\baseline_runner.py\", line 4, in <module>\n    from ZhenPlot import *\n  File \"C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E06\\test1\\source\\ZhenPlot.py\", line 4, in <module>\n    import geopandas as gpd\nModuleNotFoundError: No module named 'geopandas'\n"
+        },
+        {
+          "path": "repositories\\results\\E06_test1_baseline_log.txt",
+          "size_bytes": 424,
+          "excerpt": "Experiment: E06 Test 1\nPython executable: C:\\Users/REDACTED\\miniconda3\\envs\\code_decay\\python.exe\nExit code: 1\nElapsed seconds: 0.92\n\n\nTraceback (most recent call last):\n  File \"C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E06\\test1\\source\\baseline_runner.py\", line 2, in <module>\n    import seaborn as sns\nModuleNotFoundError: No module named 'seaborn'\n"
+        },
+        {
+          "path": "repositories\\results\\E06_test1_recovery_log.txt",
+          "size_bytes": 207,
+          "excerpt": "Exit code: 0\nElapsed seconds: 7.13\nOriginal SHA256: 2f417d44b1db9cdd600596a878466dec53529c75350d671560ddcc588c539114\nRecovery SHA256: fa6a82a431f5acb90b46cd9fc95c0eda3521c6a80fe85adcf09b88d97445a6e9\n\n\n"
+        },
+        {
+          "path": "results\\E06_github_path_investigation.json",
+          "size_bytes": 7396,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "record",
+              "notes",
+              "generated_at_utc"
+            ],
+            "relevant_values": {}
+          }
+        },
+        {
+          "path": "results\\E06_H06_archive_identity_audit.json",
+          "size_bytes": 27602,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "records",
+              "notes",
+              "generated_at_utc"
+            ],
+            "relevant_values": {}
+          }
+        },
+        {
+          "path": "results\\E06_H06_github_file_verification.json",
+          "size_bytes": 11943,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "records",
+              "notes",
+              "generated_at_utc"
+            ],
+            "relevant_values": {}
+          }
+        },
+        {
+          "path": "results\\E06_H06_publication_discovery.json",
+          "size_bytes": 20243,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "records",
+              "notes",
+              "generated_at_utc"
+            ],
+            "relevant_values": {}
+          }
+        },
+        {
+          "path": "results\\E06_H06_repository_discovery.json",
+          "size_bytes": 2755,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "records",
+              "notes",
+              "generated_at_utc"
+            ],
+            "relevant_values": {}
+          }
+        },
+        {
+          "path": "results\\E06_H06_scientific_source_clues.json",
+          "size_bytes": 21761,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "records",
+              "limitations",
+              "generated_at_utc"
+            ],
+            "relevant_values": {
+              "limitations": "['Only selected notebook markdown and main README content were inspected.', 'Notebook outputs and executable code were not used for publication identification.', 'Extracted references are clues, not verified source identities.', 'Original ZIP archives were not modified.', 'Publication dates remain unverified.']"
+            }
+          }
+        },
+        {
+          "path": "results\\E06_notebook_content_comparison.json",
+          "size_bytes": 20776,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "candidate",
+              "github_commit",
+              "local_notebooks",
+              "remote_notebooks",
+              "exact_byte_matches",
+              "exact_source_matches",
+              "comparisons",
+              "errors",
+              "source_archive_version_verified",
+              "archive_publication_date_verified",
+              "notes",
+              "generated_at_utc"
+            ],
+            "relevant_values": {
+              "comparisons": "[{'local_path': 'Code_Figures/FigS10_MangroveDisturbanceRates.ipynb', 'top_matches': [{'remote_path': 'Decadal dynamics of global mangrove disturbance rates (1984-2023).ipynb', 'exact_bytes': False, 'exact_notebook_source': False, 'source_similarity': 0.9941}, {'remote_path': 'Figure 4.ipynb', 'exact_bytes': False, 'exact_notebook_source': False, 'source_similarity': 0.4867}, {'remote_path': 'Global average annual rates of mangrove degradation and loss (2018-2023).ipynb', 'exact_bytes': False, '"
+            }
+          }
+        },
+        {
+          "path": "results\\E06_step183_notebook_verification.json",
+          "size_bytes": 1364,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "candidate",
+              "github_commit",
+              "generated_at_utc",
+              "results"
+            ],
+            "relevant_values": {}
+          }
+        },
+        {
+          "path": "results\\E06_step184_github_blob_verification.json",
+          "size_bytes": 1156,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "candidate",
+              "generated_at_utc",
+              "results"
+            ],
+            "relevant_values": {}
+          }
+        },
+        {
+          "path": "results\\E06_step185_source_artifact_classification.json",
+          "size_bytes": 1276,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "candidate",
+              "classification_scope",
+              "generated_at_utc",
+              "source_evidence",
+              "records",
+              "notes"
+            ],
+            "relevant_values": {
+              "classification_scope": "two_remote_notebook_artifacts"
+            }
+          }
+        },
+        {
+          "path": "results\\E06_step187_zip_readiness.json",
+          "size_bytes": 12177,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "candidate",
+              "source_archive",
+              "generated_at_utc",
+              "notebooks_inspected",
+              "records",
+              "limitations"
+            ],
+            "relevant_values": {
+              "limitations": "['Static inspection only.', 'No research code executed.', 'AST parsing may fail on Jupyter magic commands.', 'Imports do not establish installed dependencies.', 'Archive identity and publication date remain unverified.']"
+            }
+          }
+        },
+        {
+          "path": "results\\E06_step189_syntax_context.json",
+          "size_bytes": 9145,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "candidate",
+              "findings",
+              "execution_attempted"
+            ],
+            "relevant_values": {}
+          }
+        },
+        {
+          "path": "results\\E06_step190_ipython_syntax.json",
+          "size_bytes": 4601,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "candidate",
+              "generated_at_utc",
+              "notebooks_checked",
+              "notebooks_static_parse_passed",
+              "notebooks_requiring_review",
+              "execution_attempted",
+              "limitations",
+              "records"
+            ],
+            "relevant_values": {
+              "limitations": "['IPython-aware static syntax inspection only.', 'No notebook code was executed.', 'Passing AST parsing does not establish executability.', 'Missing dependencies and datasets are not tested.']"
+            }
+          }
+        },
+        {
+          "path": "results\\E06_step192_execution_precheck.json",
+          "size_bytes": 572,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "candidate",
+              "notebook",
+              "timestamp_utc",
+              "source_sha256",
+              "custom_module_files_in_zip",
+              "dependencies",
+              "original_output_directory_exists",
+              "execution_attempted"
+            ],
+            "relevant_values": {}
+          }
+        },
+        {
+          "path": "results\\E06_step193_baseline_execution.json",
+          "size_bytes": 2673,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "candidate",
+              "notebook",
+              "cell_index",
+              "execution_scope",
+              "source_modified",
+              "source_sha256",
+              "python_executable",
+              "timestamp_utc",
+              "execution",
+              "limitations"
+            ],
+            "relevant_values": {
+              "execution_scope": "First code cell only",
+              "source_modified": "False",
+              "limitations": "['Only the first notebook cell was executed.', 'Execution was performed in a temporary working directory.', 'This is not a full notebook execution test.', 'No dependency recovery was attempted.']"
+            }
+          }
+        },
+        {
+          "path": "results\\E06_step194_module_recovery.json",
+          "size_bytes": 4438,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "candidate",
+              "notebook",
+              "cell_index",
+              "execution_scope",
+              "recovery_action",
+              "source_modified",
+              "notebook_sha256",
+              "module_sha256",
+              "python_executable",
+              "timestamp_utc",
+              "execution",
+              "limitations"
+            ],
+            "relevant_values": {
+              "execution_scope": "First code cell only",
+              "source_modified": "False",
+              "limitations": "['Only the first notebook cell was executed.', 'No external scientific datasets were used.', 'Full notebook executability is not yet established.']"
+            }
+          }
+        },
+        {
+          "path": "results\\E06_step195_dependency_audit.json",
+          "size_bytes": 1312,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "step",
+              "candidate",
+              "source_module",
+              "timestamp_utc",
+              "imports",
+              "execution_attempted",
+              "limitations"
+            ],
+            "relevant_values": {
+              "limitations": "['Static import audit only.', 'Import availability does not guarantee successful import.', 'Conditional and dynamic imports may not be fully captured.', 'No packages were installed.']"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "candidate_id": "E08",
+      "files": [
+        {
+          "path": "repositories\\results\\E08_candidate_metadata.json",
+          "size_bytes": 1327,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "candidate_id",
+              "zenodo_record_id",
+              "title",
+              "publication_date",
+              "doi",
+              "files",
+              "eligibility_status"
+            ],
+            "relevant_values": {
+              "eligibility_status": "pending_content_inspection"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_external_source_availability.json",
+          "size_bytes": 837,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "external_sources",
+              "original_notebook_modified",
+              "external_code_executed",
+              "external_code_downloaded_to_disk"
+            ],
+            "relevant_values": {
+              "test": "External research source availability",
+              "original_notebook_modified": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_helper_source_investigation.json",
+          "size_bytes": 1395,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "repository",
+              "repository_status",
+              "default_branch",
+              "current_commit",
+              "matching_files",
+              "helper_history",
+              "errors",
+              "external_code_executed"
+            ],
+            "relevant_values": {
+              "repository_status": "200"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_historical_helper_recovery.json",
+          "size_bytes": 837,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "repository",
+              "requested_commit",
+              "resolved_commit",
+              "historical_files",
+              "recovered_helper",
+              "source_executed",
+              "original_notebook_modified"
+            ],
+            "relevant_values": {
+              "original_notebook_modified": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_historical_source_compatibility.json",
+          "size_bytes": 2700,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "historical_commit",
+              "historical_sources",
+              "wsindy_version_comparison",
+              "source_executed",
+              "original_notebook_modified"
+            ],
+            "relevant_values": {
+              "wsindy_version_comparison": "{'identical': False, 'historical_sha256': '1b74dfa508b84381a786aad24f9b616cbe0d66d919fbb9cff72b59afab2a859a', 'current_sha256': '336df558ff0ced7023c123e9c86627b7bb09907a97eb6e7ef9bd3e1f90976092', 'diff_line_count': 29}",
+              "original_notebook_modified": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_kde_import_order_test.json",
+          "size_bytes": 3478,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "orders",
+              "original_data_sha256",
+              "scientific_operation",
+              "original_notebook_modified",
+              "environment_modified",
+              "unsafe_duplicate_runtime_override_used",
+              "full_notebook_executed",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Safe import-order recovery of first KDE calculation",
+              "original_notebook_modified": "False",
+              "environment_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_kde_operation_diagnostic.json",
+          "size_bytes": 1646,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "selected_cells",
+              "instrumented_kde_call_sites",
+              "notebook_sha256",
+              "execution",
+              "original_notebook_modified",
+              "environment_modified",
+              "unsafe_openmp_override_used",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Gaussian KDE operation-level diagnostic",
+              "original_notebook_modified": "False",
+              "environment_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_model_fitting_inspection.json",
+          "size_bytes": 8454,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "notebook_sha256",
+              "inspected_cells",
+              "scientific_code_executed",
+              "original_notebook_modified",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Original model fitting static inspection",
+              "original_notebook_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_model_prerequisite_inspection.json",
+          "size_bytes": 26163,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "notebook_cells_inspected",
+              "matching_cells",
+              "original_notebook_modified",
+              "scientific_code_executed"
+            ],
+            "relevant_values": {
+              "test": "WSINDy model prerequisite inspection",
+              "original_notebook_modified": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_notebook_screening.json",
+          "size_bytes": 1527,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "zenodo_record_id",
+              "files",
+              "all_checksums_verified",
+              "notebook_total_cells",
+              "code_cells",
+              "markdown_cells",
+              "import_roots",
+              "syntax_failures",
+              "runtime_executed",
+              "eligibility_status"
+            ],
+            "relevant_values": {
+              "eligibility_status": "pending_workflow_assessment"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_numerical_runtime_isolation.json",
+          "size_bytes": 2878,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "tests",
+              "original_notebook_modified",
+              "environment_modified",
+              "unsafe_openmp_override_used",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Numerical runtime isolation",
+              "tests": "{'numpy_covariance_only': {'status': 'PASS', 'exit_code': 0, 'seconds': 1.272, 'stdout': 'Particles: (2, 130)\\nIMPORTS COMPLETE\\nSTART covariance\\nCOVARIANCE PASS: (2, 2)\\n', 'stderr': ''}, 'scipy_kde_without_torch': {'status': 'PASS', 'exit_code': 0, 'seconds': 3.352, 'stdout': 'Particles: (2, 130)\\nIMPORTS COMPLETE\\nSTART KDE constructor\\nKDE CONSTRUCTOR PASS\\n', 'stderr': ''}, 'scipy_kde_with_torch': {'status': 'FAIL', 'exit_code': 3, 'seconds': 7.331, 'stdout': 'Particles: (2, 130)\\nIMPORTS ",
+              "original_notebook_modified": "False",
+              "environment_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_openmp_diagnostic.json",
+          "size_bytes": 7243,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "python",
+              "packages",
+              "diagnostics",
+              "environment_modified",
+              "unsafe_duplicate_runtime_override_used",
+              "scientific_model_executed"
+            ],
+            "relevant_values": {
+              "test": "OpenMP import-order diagnostic",
+              "environment_modified": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_openmp_failure_isolation.json",
+          "size_bytes": 2327,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "stages",
+              "original_notebook_modified",
+              "environment_modified",
+              "unsafe_openmp_override_used",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "OpenMP scientific-operation failure isolation",
+              "original_notebook_modified": "False",
+              "environment_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_runtime_readiness.json",
+          "size_bytes": 3121,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "python_version",
+              "python_executable",
+              "dependencies",
+              "code_cells",
+              "external_resource_references",
+              "original_notebook_modified",
+              "notebook_executed",
+              "assessment"
+            ],
+            "relevant_values": {
+              "original_notebook_modified": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_scientific_workflow_inspection.json",
+          "size_bytes": 50589,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "workflow_cells",
+              "notebook_executed",
+              "original_notebook_modified"
+            ],
+            "relevant_values": {
+              "test": "Scientific workflow static inspection",
+              "original_notebook_modified": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test10_potential_library.json",
+          "size_bytes": 2997,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "executed_additional_cell",
+              "expected_terms",
+              "notebook_sha256",
+              "execution",
+              "original_notebook_modified",
+              "scientific_calculations_modified",
+              "model_fitting_executed",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Original WSINDy potential-function library",
+              "original_notebook_modified": "False",
+              "scientific_calculations_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test11_sparse_model_fitting.json",
+          "size_bytes": 4014,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "additional_cells",
+              "notebook_sha256",
+              "execution",
+              "original_notebook_modified",
+              "scientific_calculations_modified",
+              "model_fitting_attempted",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Original WSINDy sparse model fitting",
+              "original_notebook_modified": "False",
+              "scientific_calculations_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test12_utf8_model_fitting.json",
+          "size_bytes": 4255,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "test",
+              "status",
+              "exit_code",
+              "elapsed_seconds",
+              "stdout",
+              "stderr",
+              "scientific_code_modified",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "E08 UTF-8 sparse model fitting recovery",
+              "status": "PASS",
+              "scientific_code_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test1_data_path_recovery.json",
+          "size_bytes": 2349,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "original_notebook_sha256",
+              "original_notebook_modified",
+              "baseline",
+              "local_path_recovery",
+              "source_change",
+              "full_notebook_executed",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Notebook cell 8 data-loading operation",
+              "original_notebook_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test2_dependency_import.json",
+          "size_bytes": 2691,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "python_version",
+              "historical_commit",
+              "source_copies",
+              "baseline",
+              "installation",
+              "recovery",
+              "symengine_version_after_test",
+              "original_notebook_modified",
+              "full_notebook_executed",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Historical module import",
+              "symengine_version_after_test": "0.15.0",
+              "original_notebook_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test3_data_preparation.json",
+          "size_bytes": 1109,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "selected_cells",
+              "modification",
+              "notebook_sha256",
+              "original_notebook_modified",
+              "execution",
+              "wsindy_model_executed",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Original scientific data-preparation cells",
+              "original_notebook_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test3_data_preparation_corrected.json",
+          "size_bytes": 1160,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "selected_notebook_cells",
+              "scientific_code_changed_from_previous_test",
+              "validation_changed",
+              "previous_failure_classification",
+              "corrected_script_sha256",
+              "execution",
+              "original_notebook_modified",
+              "wsindy_model_executed",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Corrected original data-preparation validation",
+              "scientific_code_changed_from_previous_test": "False",
+              "original_notebook_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test4_kde_interpolation.json",
+          "size_bytes": 1331,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "selected_notebook_cells",
+              "modification",
+              "notebook_sha256",
+              "execution",
+              "original_notebook_modified",
+              "wsindy_model_executed",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Original KDE and temporal interpolation",
+              "original_notebook_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test5_original_kde_recovery.json",
+          "size_bytes": 1626,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "selected_original_cells",
+              "recovery",
+              "environment_settings",
+              "original_notebook_sha256",
+              "original_data_sha256",
+              "execution",
+              "original_notebook_modified",
+              "scientific_calculations_modified",
+              "unsafe_duplicate_runtime_override_used",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Original KDE and interpolation workflow recovery",
+              "original_notebook_modified": "False",
+              "scientific_calculations_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test6_wsindy_initialization.json",
+          "size_bytes": 1763,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "selected_cells",
+              "historical_source_commit",
+              "notebook_sha256",
+              "data_sha256",
+              "execution",
+              "original_notebook_modified",
+              "scientific_model_fitting_executed",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "WSINDy model initialization",
+              "original_notebook_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test7_library_construction.json",
+          "size_bytes": 2150,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "selected_cells",
+              "notebook_sha256",
+              "data_sha256",
+              "execution",
+              "original_notebook_modified",
+              "model_fitting_executed",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "WSINDy library construction",
+              "original_notebook_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test7_library_construction_corrected.json",
+          "size_bytes": 2082,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "correction",
+              "original_script_sha256",
+              "corrected_script_sha256",
+              "execution",
+              "archived_notebook_modified",
+              "scientific_calculations_modified",
+              "model_fitting_executed",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "WSINDy library construction with corrected harness",
+              "archived_notebook_modified": "False",
+              "scientific_calculations_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test8_library_matrix_validation.json",
+          "size_bytes": 2664,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "source_script_sha256",
+              "validation_script_sha256",
+              "execution",
+              "original_notebook_modified",
+              "scientific_calculations_modified",
+              "model_fitting_executed",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Independent WSINDy library matrix validation",
+              "original_notebook_modified": "False",
+              "scientific_calculations_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_test9_trimmed_library.json",
+          "size_bytes": 2445,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "executed_additional_cells",
+              "notebook_sha256",
+              "execution",
+              "original_notebook_modified",
+              "scientific_calculations_modified",
+              "model_fitting_executed",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Original trimmed WSINDy library",
+              "original_notebook_modified": "False",
+              "scientific_calculations_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "repositories\\results\\E08_threading_recovery_test.json",
+          "size_bytes": 3050,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "original_data_sha256",
+              "configurations",
+              "original_notebook_modified",
+              "packages_modified",
+              "unsafe_duplicate_runtime_override_used",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "test": "Safe threading configuration recovery",
+              "original_notebook_modified": "False",
+              "packages_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "results\\E08_original_results_inspection.json",
+          "size_bytes": 2017,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "notebook",
+              "findings",
+              "publication_results_compared"
+            ],
+            "relevant_values": {
+              "test": "Original notebook reported-results inspection"
+            }
+          }
+        },
+        {
+          "path": "results\\E08_recovered_scientific_results.json",
+          "size_bytes": 1365,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "execution_status",
+              "scientific_stage",
+              "pde",
+              "metrics",
+              "library_terms",
+              "coefficients",
+              "original_scientific_code_modified",
+              "published_results_reproduced"
+            ],
+            "relevant_values": {
+              "execution_status": "PASS",
+              "original_scientific_code_modified": "False",
+              "published_results_reproduced": "False"
+            }
+          }
+        },
+        {
+          "path": "results\\E08_reproduction_comparison.json",
+          "size_bytes": 1199,
+          "inspection": {
+            "type": "dict",
+            "keys": [
+              "archive_id",
+              "test",
+              "notebook_sha256",
+              "comparison",
+              "all_displayed_results_match",
+              "comparison_basis",
+              "published_paper_independently_verified",
+              "original_notebook_modified"
+            ],
+            "relevant_values": {
+              "test": "Archived notebook output reproduction",
+              "comparison": "{'pde': {'original': 'u_{t} = + 8.61(u)_{xx} + 9.08(u)_{yy} - 5.55∇·(u∇V_{14}) - 7.21∇·(u∇V_{15}) + 0.23∇·(u∇V_{52})', 'recovered': 'u_{t} = + 8.61(u)_{xx} + 9.08(u)_{yy} - 5.55∇·(u∇V_{14}) - 7.21∇·(u∇V_{15}) + 0.23∇·(u∇V_{52})', 'match': True}, 'nonzero_terms': {'original': 5, 'recovered': 5, 'match': True}, 'relative_l2_error': {'original': 0.575, 'recovered': 0.575, 'match': True}, 'r_squared': {'original': 0.669, 'recovered': 0.669, 'match': True}, 'lambda': {'original': 0.08685, 'recovered'",
+              "comparison_basis": "saved notebook cell 51 output",
+              "original_notebook_modified": "False"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

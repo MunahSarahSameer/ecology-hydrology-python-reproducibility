@@ -1,0 +1,41 @@
+{
+  "archive_id": "E08",
+  "test": "Archived notebook output reproduction",
+  "notebook_sha256": "7b393428100cbea66b84cce4401f38f50d6eb7d5f3127b8580ba661b397abf93",
+  "comparison": {
+    "pde": {
+      "original": "u_{t} = + 8.61(u)_{xx} + 9.08(u)_{yy} - 5.55∇·(u∇V_{14}) - 7.21∇·(u∇V_{15}) + 0.23∇·(u∇V_{52})",
+      "recovered": "u_{t} = + 8.61(u)_{xx} + 9.08(u)_{yy} - 5.55∇·(u∇V_{14}) - 7.21∇·(u∇V_{15}) + 0.23∇·(u∇V_{52})",
+      "match": true
+    },
+    "nonzero_terms": {
+      "original": 5,
+      "recovered": 5,
+      "match": true
+    },
+    "relative_l2_error": {
+      "original": 0.575,
+      "recovered": 0.575,
+      "match": true
+    },
+    "r_squared": {
+      "original": 0.669,
+      "recovered": 0.669,
+      "match": true
+    },
+    "lambda": {
+      "original": 0.08685,
+      "recovered": 0.08685,
+      "match": true
+    },
+    "loss": {
+      "original": 0.276,
+      "recovered": 0.276,
+      "match": true
+    }
+  },
+  "all_displayed_results_match": true,
+  "comparison_basis": "saved notebook cell 51 output",
+  "published_paper_independently_verified": false,
+  "original_notebook_modified": false
+}

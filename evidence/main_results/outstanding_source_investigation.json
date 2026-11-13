@@ -1,0 +1,194 @@
+{
+  "step": 173,
+  "records": [
+    {
+      "package_id": "E06",
+      "candidate_folder_exists": true,
+      "local_zip_files": [
+        "Code_Figures.zip"
+      ],
+      "source_urls": [],
+      "doi_references": [],
+      "evidence_files": [],
+      "external_identity_verified": false,
+      "archive_date_verified": false
+    },
+    {
+      "package_id": "E08",
+      "candidate_folder_exists": true,
+      "local_zip_files": [],
+      "source_urls": [
+        "http://www.intel.com/software/products/support/.\\n",
+        "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/d43b25a6106b0d459f44948b1f05e3e6e162312e/helper_fcns.py",
+        "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/d43b25a6106b0d459f44948b1f05e3e6e162312e/wsindy.py",
+        "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/main/helper_fcns.py",
+        "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/main/wsindy.py",
+        "https://zenodo.org/api/records/17156064/files/DATASET_README.txt/content",
+        "https://zenodo.org/api/records/17156064/files/caterpillars.csv/content",
+        "https://zenodo.org/api/records/17156064/files/sensitivity_analysis.csv/content",
+        "https://zenodo.org/api/records/17156064/files/wsindy_for_dispersal.ipynb/content"
+      ],
+      "doi_references": [
+        "10.5281/zenodo.17156064"
+      ],
+      "evidence_files": [
+        {
+          "file": "repositories\\results\\E08_candidate_metadata.json",
+          "urls": [
+            "https://zenodo.org/api/records/17156064/files/DATASET_README.txt/content",
+            "https://zenodo.org/api/records/17156064/files/caterpillars.csv/content",
+            "https://zenodo.org/api/records/17156064/files/sensitivity_analysis.csv/content",
+            "https://zenodo.org/api/records/17156064/files/wsindy_for_dispersal.ipynb/content"
+          ],
+          "dois": [
+            "10.5281/zenodo.17156064"
+          ]
+        },
+        {
+          "file": "repositories\\results\\E08_external_source_availability.json",
+          "urls": [
+            "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/main/helper_fcns.py",
+            "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/main/wsindy.py"
+          ],
+          "dois": []
+        },
+        {
+          "file": "repositories\\results\\E08_historical_source_compatibility.json",
+          "urls": [
+            "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/d43b25a6106b0d459f44948b1f05e3e6e162312e/helper_fcns.py",
+            "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/d43b25a6106b0d459f44948b1f05e3e6e162312e/wsindy.py"
+          ],
+          "dois": []
+        },
+        {
+          "file": "repositories\\results\\E08_kde_import_order_test.json",
+          "urls": [
+            "http://www.intel.com/software/products/support/.\\n"
+          ],
+          "dois": []
+        },
+        {
+          "file": "repositories\\results\\E08_kde_operation_diagnostic.json",
+          "urls": [
+            "http://www.intel.com/software/products/support/.\\n"
+          ],
+          "dois": []
+        },
+        {
+          "file": "repositories\\results\\E08_numerical_runtime_isolation.json",
+          "urls": [
+            "http://www.intel.com/software/products/support/.\\n"
+          ],
+          "dois": []
+        },
+        {
+          "file": "repositories\\results\\E08_openmp_failure_isolation.json",
+          "urls": [
+            "http://www.intel.com/software/products/support/.\\n"
+          ],
+          "dois": []
+        },
+        {
+          "file": "repositories\\results\\E08_runtime_readiness.json",
+          "urls": [
+            "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/main/helper_fcns.py",
+            "https://raw.githubusercontent.com/SethMinor/PyWSINDy-for-PDEs/main/wsindy.py"
+          ],
+          "dois": []
+        },
+        {
+          "file": "repositories\\results\\E08_test4_kde_interpolation.json",
+          "urls": [
+            "http://www.intel.com/software/products/support/.\\n"
+          ],
+          "dois": []
+        },
+        {
+          "file": "repositories\\results\\E08_threading_recovery_test.json",
+          "urls": [
+            "http://www.intel.com/software/products/support/.\\n"
+          ],
+          "dois": []
+        }
+      ],
+      "external_identity_verified": false,
+      "archive_date_verified": false
+    },
+    {
+      "package_id": "E10",
+      "candidate_folder_exists": true,
+      "local_zip_files": [],
+      "source_urls": [
+        "https://github.com/NLeSC/mcfly"
+      ],
+      "doi_references": [
+        "10.5281/zenodo.11552636"
+      ],
+      "evidence_files": [
+        {
+          "file": "results\\E10_consolidated_assessment.json",
+          "urls": [],
+          "dois": [
+            "10.5281/zenodo.11552636"
+          ]
+        },
+        {
+          "file": "results\\E10_data_availability.json",
+          "urls": [],
+          "dois": [
+            "10.5281/zenodo.11552636"
+          ]
+        },
+        {
+          "file": "results\\E10_external_data_investigation.json",
+          "urls": [],
+          "dois": [
+            "10.5281/zenodo.11552636"
+          ]
+        },
+        {
+          "file": "results\\E10_initial_screening.json",
+          "urls": [],
+          "dois": [
+            "10.5281/zenodo.11552636"
+          ]
+        },
+        {
+          "file": "results\\E10_runtime_requirements.json",
+          "urls": [
+            "https://github.com/NLeSC/mcfly"
+          ],
+          "dois": []
+        },
+        {
+          "file": "results\\E10_source_audit.json",
+          "urls": [],
+          "dois": [
+            "10.5281/zenodo.11552636"
+          ]
+        }
+      ],
+      "external_identity_verified": false,
+      "archive_date_verified": false
+    },
+    {
+      "package_id": "H06",
+      "candidate_folder_exists": true,
+      "local_zip_files": [
+        "S4D_rainfall_runoff_simulations.zip"
+      ],
+      "source_urls": [],
+      "doi_references": [],
+      "evidence_files": [],
+      "external_identity_verified": false,
+      "archive_date_verified": false
+    }
+  ],
+  "notes": [
+    "This is a local evidence search, not external verification.",
+    "DOIs and URLs may refer to dependencies or cited studies.",
+    "No source association or publication date is inferred.",
+    "No original archives or scientific code were modified."
+  ],
+  "generated_at_utc": "2026-11-11T03:00:51.311614+00:00"
+}

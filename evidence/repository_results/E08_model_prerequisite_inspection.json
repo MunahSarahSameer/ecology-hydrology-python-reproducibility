@@ -1,0 +1,169 @@
+{
+  "archive_id": "E08",
+  "test": "WSINDy model prerequisite inspection",
+  "notebook_cells_inspected": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "matching_cells": [
+    {
+      "cell_index": 13,
+      "matches": [
+        "U_h",
+        "linspace"
+      ],
+      "source": "# Bins in (x,y)\n#(Nx, Ny) = (40, 40)\n#(Nx, Ny) = (50, 50)\n(Nx, Ny) = (80, 80)\n\n# Create a 2D histogram for each time\nhists = []\nhists_SG = [[] for _ in range(2)]\nhists_NI = [[] for _ in range(2)]\nhists_n = [[] for _ in range(4)]\n\nfor tn in t:\n  df = cats[cats['Time'] == tn]\n  hist,_ = np.histogramdd(\n    df[['X', 'Y']].to_numpy(),\n    bins = (Nx, Ny),\n    range = ((0,175),(0,175)),\n    #density = False)\n    density = True)\n  hists.append(hist)\n\n  # Different plant types\n  for n,cats_n in enumerate([cats_S, cats_G]):\n    df = cats_n[cats_n['Time'] == tn]\n    hist,_ = np.histogramdd(\n      df[['X', 'Y']].to_numpy(),\n      bins = (Nx, Ny),\n      range = ((0, 175), (0, 175)),\n      #density = False)\n      density = True)\n    hists_SG[n].append(hist)\n\n  # Infection status\n  for n,cats_n in enumerate([cats_N, cats_I]):\n    df = cats_n[cats_n['Time'] == tn]\n    hist,_ = np.histogramdd(\n      df[['X', 'Y']].to_numpy(),\n      bins = (Nx, Ny),\n      range = ((0, 175), (0, 175)),\n      #density = False)\n      density = True)\n    hists_NI[n].append(hist)\n\n  # Separate control populations\n  for n,cats_n in enumerate([cats1, cats2, cats3, cats4]):\n    df = cats_n[cats_n['Time'] == tn]\n    hist,_ = np.histogramdd(\n      df[['X', 'Y']].to_numpy(),\n      bins = (Nx, Ny),\n      range = ((0, 175), (0, 175)),\n      #density = False)\n      density = True)\n    hists_n[n].append(hist)\n\n# Convert to torch tensor\nU_h = torch.tensor(np.array(hists)).permute(1,2,0)\n[UN_h, UI_h] = [torch.tensor(np.array(hists_NI[n])).permute(1,2,0) for n in range(2)]\n[US_h, UG_h] = [torch.tensor(np.array(hists_SG[n])).permute(1,2,0) for n in range(2)]\n[U1_h, U2_h, U3_h, U4_h] = [torch.tensor(np.array(hists_n[n])).permute(1,2,0) for n in range(4)]\nprint(\"Shape of U_h:\", U_h.shape)\n\n# Space and time\nx = torch.linspace(0, 175, Nx, dtype=torch.float64)\ny = torch.linspace(0, 175, Ny, dtype=torch.float64)\nX,Y = np.meshgrid(x, y, indexing='ij')\n[dx, dy] = [x.diff()[0], y.diff()[0]]\ndtau = np.diff(tau)[0]\n\ndel tn, df, hist, _, hists, hists_SG, hists_NI, hists_n, n, cats_n",
+      "line_count": 69
+    },
+    {
+      "cell_index": 14,
+      "matches": [
+        "U_h"
+      ],
+      "source": "# Check normalization\nprint((dx*dy*U_h[:,:,0]).sum().item())\n\nplt.figure(figsize=(3,4))\nplt.pcolormesh(X, Y, U_h[:,:,0], cmap='Reds')\nplt.colorbar(orientation='horizontal')\nplt.scatter(cats[cats['Time'] == 0]['X'], cats[cats['Time'] == 0]['Y'], s=1, color='k')\nplt.show()\n\nplt.figure(figsize=(3,4))\nplt.pcolormesh(X, Y, U_h[:,:,-1], cmap='Reds')\nplt.colorbar(orientation='horizontal')\nplt.scatter(cats[cats['Time'] == 48]['X'], cats[cats['Time'] == 48]['Y'], s=1, color='k')\nplt.show()",
+      "line_count": 14
+    },
+    {
+      "cell_index": 17,
+      "matches": [
+        "Gaussian_KDE"
+      ],
+      "source": "from scipy.stats import gaussian_kde\n\ndef Gaussian_KDE(X, Y, particles):\n  G = np.zeros_like(X)\n  kernel = gaussian_kde(particles)\n  positions = np.vstack([X.ravel(), Y.ravel()])\n  G = kernel(positions).reshape(X.shape)\n  return G",
+      "line_count": 8
+    },
+    {
+      "cell_index": 18,
+      "matches": [
+        "Gaussian_KDE"
+      ],
+      "source": "# GAUSSIAN KDE\n# Bins in (x,y)\n#(Nx, Ny) = (50, 50)\n(Nx, Ny) = (80, 80)\n\n# KDE evaluation at each time\nkdes = []\nkdes_SG = [[] for _ in range(2)]\nkdes_NI = [[] for _ in range(2)]\nkdes_n = [[] for _ in range(4)]\nkdes_n_march = [[] for _ in range(4)]\nkdes_n_april = [[] for _ in range(4)]\n\nfor tn in t:\n  df = cats[cats['Time'] == tn]\n  particles = np.vstack([df['X'], df['Y']])\n  G = Gaussian_KDE(X, Y, particles)\n  kdes.append(G)\n\n  # Plant type\n  for n,cats_n in enumerate([cats_S, cats_G]):\n    df = cats_n[cats_n['Time'] == tn]\n    particles = np.vstack([df['X'], df['Y']])\n    G = Gaussian_KDE(X, Y, particles)\n    kdes_SG[n].append(G)\n\n  # Infection status\n  for n,cats_n in enumerate([cats_N, cats_I]):\n    df = cats_n[cats_n['Time'] == tn]\n    particles = np.vstack([df['X'], df['Y']])\n    G = Gaussian_KDE(X, Y, particles)\n    kdes_NI[n].append(G)\n\n  # Separate control populations\n  for n,cats_n in enumerate([cats1, cats2, cats3, cats4]):\n    df = cats_n[cats_n['Time'] == tn]\n    particles = np.vstack([df['X'], df['Y']])\n    G = Gaussian_KDE(X, Y, particles)\n    kdes_n[n].append(G)\n\n  # Separate control populations by run\n  for n,cats_n in enumerate([cats1_march, cats2_march, cats3_march, cats4_march]):\n    df = cats_n[cats_n['Time'] == tn]\n    particles = np.vstack([df['X'], df['Y']])\n    G = Gaussian_KDE(X, Y, particles)\n    kdes_n_march[n].append(G)\n\n  for n,cats_n in enumerate([cats1_april, cats2_april, cats3_april, cats4_april]):\n    df = cats_n[cats_n['Time'] == tn]\n    particles = np.vstack([df['X'], df['Y']])\n    G = Gaussian_KDE(X, Y, particles)\n    kdes_n_april[n].append(G)\n\n# Convert to torch tensor\nU = torch.tensor(np.array(kdes)).permute(1,2,0)\n[US, UG] = [torch.tensor(np.array(kdes_SG[n])).permute(1,2,0) for n in range(2)]\n[UN, UI] = [torch.tensor(np.array(kdes_NI[n])).permute(1,2,0) for n in range(2)]\n[U1, U2, U3, U4] = [torch.tensor(np.array(kdes_n[n])).permute(1,2,0) for n in range(4)]\n[U1_march, U2_march, U3_march, U4_march] = [torch.tensor(np.array(kdes_n_march[n])).permute(1,2,0) for n in range(4)]\n[U1_april, U2_april, U3_april, U4_april] = [torch.tensor(np.array(kdes_n_april[n])).permute(1,2,0) for n in range(4)]\nprint(f'Shape of U: {U.shape}')\n\ndel G, kdes, kdes_SG, kdes_NI, kdes_n, kdes_n_march, kdes_n_april, particles, tn, df, n, cats_n",
+      "line_count": 63
+    },
+    {
+      "cell_index": 19,
+      "matches": [
+        "U_h"
+      ],
+      "source": "# Histogram comparison\nthyme = 1\n\nfig,ax = plt.subplots(1,2, figsize=(8, 4.6))\npcm0 = ax[0].pcolormesh(X, Y, U_h[:,:,thyme], cmap='hot')\nplt.colorbar(pcm0, orientation='horizontal')\nax[0].set_xlabel('$x$')\nax[0].set_ylabel('$y$')\nax[0].set_title('Histogram')\n\npcm1 = ax[1].pcolormesh(X, Y, U[:,:,thyme], cmap='hot', vmax=U_h[:,:,thyme].max())\nplt.colorbar(pcm1, orientation='horizontal')\nax[1].set_xlabel('$x$')\nax[1].set_ylabel('$y$')\nax[1].set_title('Ensemble KDE')\n\ndel fig, ax, pcm0, pcm1, thyme",
+      "line_count": 17
+    },
+    {
+      "cell_index": 22,
+      "matches": [
+        "t_new",
+        "linspace"
+      ],
+      "source": "# Finer time grid\nt_new = np.linspace(t[0], t[-1], 49*2)\ndt = np.diff(t_new)[0]",
+      "line_count": 3
+    },
+    {
+      "cell_index": 23,
+      "matches": [
+        "U_interp",
+        "t_new",
+        "interpolate",
+        "interp"
+      ],
+      "source": "# Spline interpolation\nfrom scipy.interpolate import make_interp_spline\n\nt_spline = make_interp_spline(t, U.numpy(), k=1, axis=2)\nU_interp = torch.from_numpy(np.maximum(t_spline(t_new),0))\n\n# Plant type\nUSG_interp = []\nfor u in [US, UG]:\n  t_spline = make_interp_spline(t, u.numpy(), k=1, axis=2)\n  USG_interp.append(torch.from_numpy(np.maximum(t_spline(t_new),0)))\nUS_interp, UG_interp = USG_interp\n\n# Infection status\nUNI_interp = []\nfor u in [UN, UI]:\n  t_spline = make_interp_spline(t, u.numpy(), k=1, axis=2)\n  UNI_interp.append(torch.from_numpy(np.maximum(t_spline(t_new),0)))\nUN_interp, UI_interp = UNI_interp\n\n# Control populations\nUi_interp = []\nfor u in [U1, U2, U3, U4]:\n  t_spline = make_interp_spline(t, u.numpy(), k=1, axis=2)\n  Ui_interp.append(torch.from_numpy(np.maximum(t_spline(t_new),0)))\nU1_interp, U2_interp, U3_interp, U4_interp = Ui_interp\n\n# Control populations by run\nUi_march_interp = []\nfor u in [U1_march, U2_march, U3_march, U4_march]:\n  t_spline = make_interp_spline(t, u.numpy(), k=1, axis=2)\n  Ui_march_interp.append(torch.from_numpy(np.maximum(t_spline(t_new),0)))\nU1_march_interp, U2_march_interp, U3_march_interp, U4_march_interp = Ui_march_interp\n\nUi_april_interp = []\nfor u in [U1_april, U2_april, U3_april, U4_april]:\n  t_spline = make_interp_spline(t, u.numpy(), k=1, axis=2)\n  Ui_april_interp.append(torch.from_numpy(np.maximum(t_spline(t_new),0)))\nU1_april_interp, U2_april_interp, U3_april_interp, U4_april_interp = Ui_april_interp\n\n# Check normalization\nprint((dx*dy*U_interp[:,:,0]).sum().item())\n\nprint(U.shape)\nprint(U_interp.shape)\n\ndel USG_interp, UNI_interp, Ui_interp, Ui_march_interp, Ui_april_interp",
+      "line_count": 47
+    },
+    {
+      "cell_index": 24,
+      "matches": [
+        "U_interp",
+        "t_new",
+        "interpolate",
+        "interp"
+      ],
+      "source": "# LOCAL AVERAGES\ndef local_average(U, xi, yi, r):\n  local = U[max(xi-r,0):min(xi+r+1,U.shape[0]), max(yi-r,0):min(yi+r+1,U.shape[1]), :]\n  return local.mean(dim=(0,1))\n\nradius = 0 # No averaging\npoints = [(40,40), (40,41), (40,42), (40,43), (40,44), (40,45)]\n#points = [(40,40), (41,40), (42,40), (43,40), (44,40), (45,40)]\n\nfor ind,u in enumerate([U,U_interp]):\n  plt.figure(figsize=(8, 4))\n  for (xi, yi) in points:\n    local = local_average(u, xi, yi, radius)\n    plt.plot([t, t_new][ind], local, '.--', label=f'$(x_0,y_0) \\\\approx ({xi},{yi})$')\n  plt.axhline(y=0, color='k', alpha=0.6)\n  plt.legend(fontsize=10)\n  plt.grid(True)\n  plt.title(['Empirical', 'Interpolated'][ind])\n  plt.xlabel(r'Time, $t$')\n  plt.ylabel(r'$\\bar{u}(x_0,y_0,t)$')\n  plt.show()",
+      "line_count": 21
+    },
+    {
+      "cell_index": 25,
+      "matches": [
+        "U_interp",
+        "t_new",
+        "interpolate",
+        "interp"
+      ],
+      "source": "# INTERPOLATED SNAPSHOTS\nfig, axes = plt.subplots(5, 5, figsize=(9, 9))\nvmax = U_interp.max()\n\nfor i in range(25):\n  ax = axes[i // 5, i % 5]\n  im = ax.imshow(U_interp[:, :, 4*i], cmap='gnuplot', vmin=0, vmax=vmax)\n  ax.set_title(f'$t={t_new[4*i]:.2f}$')\n  ax.axis('off')\nplt.tight_layout()\nplt.show()",
+      "line_count": 11
+    },
+    {
+      "cell_index": 28,
+      "matches": [
+        "Gaussian_KDE",
+        "linspace"
+      ],
+      "source": "# Make a density plot of the data?\nPLOTME = False\n\nif PLOTME == True:\n  from mpl_toolkits.mplot3d import Axes3D\n  from scipy.stats import gaussian_kde\n\n  plt.rcParams['mathtext.fontset'] = 'cm'\n  plt.rcParams['font.family'] = 'STIXGeneral'\n  fig = plt.figure(figsize=(16, 10))\n\n  # Loop through each time and create a subplot\n  for i, thyme in enumerate(t.tolist()):\n\n    # Extract (x,y,z) coords\n    df = cats[cats['Time'] == thyme]\n    X = df['X']\n    Y = df['Y']\n    Z = df['Z']\n\n    # Create a grid for KDE\n    (Nx, Ny, Nz) = (80, 80, 61)\n    xgrid = np.linspace(0, 175, Nx)\n    ygrid = np.linspace(0, 175, Ny)\n    zgrid = np.linspace(0, 60, Nz)\n    xmesh, ymesh, zmesh = np.meshgrid(xgrid, ygrid, zgrid)\n    grid_coords = np.vstack([xmesh.ravel(), ymesh.ravel(), zmesh.ravel()])\n\n    # KDE evaluation\n    kde = gaussian_kde(np.vstack([X, Y, Z]), bw_method=0.25)\n    density = kde(grid_coords).reshape((Nx, Ny, Nz))\n    density_threshold = 1e-7\n    x_dense, y_dense, z_dense = xmesh[density > density_threshold], \\\n                                ymesh[density > density_threshold], \\\n                                zmesh[density > density_threshold]\n    density = density[density > density_threshold]\n\n    # Scatter plot\n    ax = fig.add_subplot(2,4, i+1, projection='3d')\n    ax.scatter(x_dense, y_dense, z_dense, c=density, cmap='Reds', alpha=0.02,\n               s=5, vmin=density_threshold, vmax=5e-5)\n    ax.scatter(X, Y, Z, '.', color='black', s=10, linewidth=0.5)\n\n    ax.set_xlim(0, 175)\n    ax.set_ylim(0, 175)\n    ax.set_zlim(0, 60)\n    ax.set_xlabel('$x$', fontsize=20)\n    ax.set_ylabel('$y$', fontsize=20)\n    ax.set_title(f'$t = {thyme}$ hr', pad=0, fontsize=20)\n\n    ax.xaxis.pane.fill = False\n    ax.yaxis.pane.fill = False\n    ax.zaxis.pane.fill = False\n    ax.xaxis.pane.set_edgecolor('w')\n    ax.yaxis.pane.set_edgecolor('w')\n    ax.zaxis.pane.set_edgecolor('w')\n    ax.tick_params(axis='both', which='major', labelsize=13)\n\n  plt.tight_layout()\n  plt.show()\n\ndel PLOTME",
+      "line_count": 62
+    },
+    {
+      "cell_index": 35,
+      "matches": [
+        "t_new"
+      ],
+      "source": "# DIFFUSION CURVES AND FITS\nfrom scipy import stats\n\n# Choose from: ['horizontal', 'X', 'Y', 'XY' 'Z']\ndirection = 'horizontal'\n\n# Choose from: [Deffs, DXs, DYs, DXYs]\nD_list = Deffs\n\n# Make plot?\nPLOTME = False\n\nif PLOTME:\n  datasets = [cats1, cats2, cats3, cats4]\n  titles   = ['Not Infected (Stonewall)', 'Not Infected (Gasoy)',\n              'Infected (Stonewall)', 'Infected (Gasoy)']\n  colors = ['Blue', 'Blue', 'Green', 'Green']\n  styles = ['-', '--', '-', '--']\n\n  fig, axes = plt.subplots(2,2, figsize=(10,6), sharex=True, sharey=True)\n  zipper = zip(axes.flat, datasets, titles, colors, styles, D_list)\n\n  for ax, df, title, color, style, D_pm in zipper:\n    df = df.sort_values('Time')\n    means = []\n    CIs_low = []\n    CIs_high = []\n\n    # Compute means and bootstrapped CIs\n    for ti in t:\n      if direction == 'horizontal':\n        data = df[df['Time']==ti][direction].dropna().values\n      elif (direction == 'X') or (direction == 'Y'):\n        data = np.abs(df[df['Time'] == ti][direction].dropna() - 175/2)\n      elif direction == 'XY':\n        data_x = df[df['Time']==ti]['X'].dropna() - 175/2\n        data_y = df[df['Time']==ti]['Y'].dropna() - 175/2\n        data = data_x * data_y\n      elif direction == 'Z':\n        data = df[(df['Time'] == ti) & (df['Z'] <= 70)]['Z'].dropna()\n      m = data.mean()\n      means.append(m)\n\n      # Bootstrap\n      boots = 1000\n      samp = np.random.choice(data, (len(data), boots))\n      boot_means = samp.mean(axis=0)\n      low, high = np.percentile(boot_means, [2.5, 97.5])\n      CIs_low.append(m - low)\n      CIs_high.append(high - m)\n\n    # Multiplication factor\n    if direction == 'horizontal':\n      C0 = np.pi\n    else:\n      C0 = 4/np.pi\n\n    # Fit empirical diffusion coefficients\n    errs = np.vstack([CIs_low, CIs_high])\n    if direction == 'XY':\n      D_fit,sigma_D = diffusion_fit(t, means-means[0], errs.tolist(), C0, model='2Dt')\n      print(f'Direction = {direction}, Case = {title}')\n      print(f'Fitted Dij = {D_fit:.3f} \u00b1 {sigma_D:.3e}\\n')\n    elif direction != 'Z':\n      D_fit,sigma_D = diffusion_fit(t, means-means[0], errs.tolist(), C0)\n      print(f'Direction = {direction}, Case = {title}')\n      print(f'Fitted Dij = {D_fit:.3f} \u00b1 {sigma_D:.3e}\\n')\n\n    # Diffusion curves (main panel)\n    ax.axhline(y=0, ls='--', color='gray', alpha=0.8, label='Mean ($t=0$)')\n    ax.errorbar(t, means-means[0], yerr=errs, fmt='o'+style, color=color, capsize=2,\n                linewidth=1, markersize=5, ecolor='gray', label='Data $\\pm\\,2\\sigma$')\n\n    # Plot continuous fitted models\n    if (direction=='horizontal') or (direction=='X') or ((direction=='Y')):\n\n      # Fitted empirical model\n      y_c = np.sqrt(C0*D_fit*t_new)\n      y_high = np.sqrt(C0*(D_fit+sigma_D)*t_new)\n      y_low = np.sqrt(C0*(D_fit-sigma_D)*t_new)\n      ax.plot(t_new, y_c, color='gray', lw=1)\n      ax.fill_between(t_new, y_low, y_high, color=color, alpha=0.3, label='Empirical Model')\n\n      # Weak-form PDE model\n      [Di, two_sigma] = D_pm\n      y_c = np.sqrt(C0*Di*t_new)\n      y_high = np.sqrt(C0*(Di+two_sigma)*t_new)\n      y_low = np.sqrt(C0*(Di-two_sigma)*t_new)\n      ax.plot(t_new, y_c, color='gray', lw=1)\n      ax.fill_between(t_new, y_low, y_high, color='orange', alpha=0.6, label='PDE Model')\n\n    elif direction == 'XY':\n\n      # Fitted empirical model\n      y_c = 2*D_fit*t_new\n      y_high = 2*(D_fit+sigma_D)*t_new\n      y_low = 2*(D_fit-sigma_D)*t_new\n      ax.plot(t_new, y_c, color='gray', lw=1)\n      ax.fill_between(t_new, y_low, y_high, color=color, alpha=0.3, label='Empirical Model')\n\n      # Weak-form PDE model\n      [Di, two_sigma] = D_pm\n      y_c = 2*Di*t_new\n      y_high = 2*(Di+two_sigma)*t_new\n      y_low = 2*(Di-two_sigma)*t_new\n      ax.plot(t_new, y_c, color='gray', lw=1)\n      ax.fill_between(t_new, y_low, y_high, color='orange', alpha=0.6, label='PDE Model')\n\n    ax.grid(True, which='both', linestyle='-', lw=0.5, alpha=0.4)\n    ax.set_xlim(-1, max(t)+3)\n    ax.legend(loc='upper right', framealpha=0.4, fontsize=10)\n\n    # Print case\n    bbox=dict(facecolor='white', edgecolor='k', boxstyle='round,pad=0.3', alpha=0.7)\n    ax.text(0.98, 0.09, title, transform=ax.transAxes, fontsize=10,\n            va='top', ha='right', bbox=bbox)\n\n    # Violin plots (inset panel)\n    inset_ax = ax.inset_axes([0.014, 0.68, 0.55, 0.3]) # [x0, y0, W, H]\n    inset_ax.axhline(y=means[0], ls='--', lw=0.7, color='gray', alpha=0.8)\n\n    for i, ti in enumerate(t):\n      if direction == 'horizontal':\n        data = df[df['Time']==ti][direction].dropna().values\n      elif (direction == 'X') or (direction == 'Y'):\n        data = np.abs(df[df['Time'] == ti][direction].dropna() - 175/2)\n      elif direction == 'XY':\n        data_x = df[df['Time']==ti]['X'].dropna() - 175/2\n        data_y = df[df['Time']==ti]['Y'].dropna() - 175/2\n        data = data_x * data_y\n      elif direction == 'Z':\n        data = df[(df['Time'] == ti) & (df['Z'] <= 70)]['Z'].dropna()\n\n      # Clip outliers?\n      lower, upper = np.percentile(data, [0, 99.5])\n      clean = data[(data>=lower) & (data<=upper)]\n      parts = inset_ax.violinplot(clean, [tau[i]], widths=1, showmeans=True,\n                                  showextrema=True, side='high', points=20)\n      for pc in parts['bodies']:\n        pc.set_facecolor(color)\n        pc.set_edgecolor('gray')\n        pc.set_alpha(0.6)\n      for key in ['cmins','cmeans','cmaxes','cbars']:\n        parts[key].set_color('gray')\n        parts[key].set_alpha(0.6)\n\n    inset_ax.grid(True, alpha=0.3)\n    inset_ax.set_xlim(min(tau)-0.2, max(tau)+0.7)\n    inset_ax.set_xticks([])\n    inset_ax.yaxis.tick_right()\n    if direction == 'XY':\n      inset_ax.yaxis.set_tick_params(labelsize=6)\n      inset_ax.set_yscale('symlog')\n    else:\n      inset_ax.yaxis.set_tick_params(labelsize=9)\n    inset_ax.set_xlabel('Snapshot, $n$', fontsize=9, loc='left')\n\n    if direction == 'horizontal':\n      ax.set_ylim(-2.5, 75)\n      inset_ax.set_ylim(-1, 90)\n    elif direction == 'X':\n      ax.set_ylim(-2.5, 50)\n      inset_ax.set_ylim(-1, 75)\n    elif direction == 'Y':\n      ax.set_ylim(-2.5, 50)\n      inset_ax.set_ylim(-1, 75)\n    elif direction == 'XY':\n      ax.set_ylim(-1.2e3, 1.5e3)\n      inset_ax.set_ylim(-4.5e3, 4.5e3)\n    elif direction == 'Z':\n      ax.set_ylim(-8, 30)\n      inset_ax.set_ylim(-2, 60)\n\n  # Global labels\n  if direction == 'horizontal':\n    s1 = r'$\\langle|\\mathbf{x}_t-\\boldsymbol{\\mu}|\\rangle$'\n    s2 = r'$-\\langle|\\mathbf{x}_0-\\boldsymbol{\\mu}|\\rangle$'\n    fig.text(0.035, 0.5, 'Average Displacement, '+s1+s2+' (cm)',\n            va='center', rotation='vertical')\n  elif direction == 'X':\n    s1 = r'$\\langle|x_t-\\mu_x|\\rangle$'\n    s2 = r'$-\\langle|x_0-\\mu_x|\\rangle$'\n    fig.text(0.035, 0.5, 'Average Displacement, '+s1+s2+' (cm)',\n            va='center', rotation='vertical')\n  elif direction == 'Y':\n    s1 = r'$\\langle|y_t-\\mu_y|\\rangle$'\n    s2 = r'$-\\langle|y_0-\\mu_y|\\rangle$'\n    fig.text(0.035, 0.5, 'Average Displacement, '+s1+s2+' (cm)',\n            va='center', rotation='vertical')\n  elif direction == 'XY':\n    s1 = r'$\\langle(x_t-\\mu_x)(y_t-\\mu_y)\\rangle$'\n    s2 = r'$-\\langle(x_0-\\mu_x)(y_0-\\mu_y)\\rangle$'\n    fig.text(0.035, 0.53, 'Average Displacement, '+s1+s2+r' $(\\text{cm}^2)$',\n            va='center', rotation='vertical')\n  elif direction == 'Z':\n    s1 = r'$\\langle|z_t-\\mu_z|\\rangle$'\n    s2 = r'$-\\langle|z_0-\\mu_z|\\rangle$'\n    fig.text(0.035, 0.5, 'Average Displacement, '+s1+s2+' (cm)',\n            va='center', rotation='vertical')\n\n  fig.text(0.53, 0.04, 'Time, $t_n$ (hours)', ha='center')\n  plt.tight_layout(rect=[0.05, 0.05, 1, 1])\n  plt.show()\n\ndel PLOTME",
+      "line_count": 205
+    },
+    {
+      "cell_index": 37,
+      "matches": [
+        "t_new"
+      ],
+      "source": "# Make plot?\nPLOTME = False\n\nif PLOTME:\n  datasets = [cats1, cats2, cats3, cats4]\n  titles = ['Not Infected (Stonewall)', 'Not Infected (Gasoy)',\n            'Infected (Stonewall)', 'Infected (Gasoy)']\n  #styles = ['-', '--', '-', '--']\n\n  fig, axes = plt.subplots(2,2, figsize=(10,6), sharex=True, sharey=True)\n\n  for ax, df, title in zip(axes.flat, datasets, titles):\n    df = df.sort_values('Time')\n\n    means_x = []\n    CIs_low_x = []\n    CIs_high_x = []\n\n    means_y = []\n    CIs_low_y = []\n    CIs_high_y = []\n\n    for i, ti in enumerate(t):\n      data_x = np.abs(df[df['Time'] == ti]['X'].dropna() - 175/2)\n      data_y = np.abs(df[df['Time'] == ti]['Y'].dropna() - 175/2)\n\n      m_x = data_x.mean()\n      m_y = data_y.mean()\n      means_x.append(m_x)\n      means_y.append(m_y)\n\n      # Boostrap confidence intervals\n      boots = 1000\n\n      samp_x = np.random.choice(data_x, (len(data_x), boots))\n      boot_means_x = samp_x.mean(axis=0)\n      low_x, high_x = np.percentile(boot_means_x, [2.5, 97.5])\n      CIs_low_x.append(m_x - low_x)\n      CIs_high_x.append(high_x - m_x)\n\n      samp_y = np.random.choice(data_y, (len(data_y), boots))\n      boot_means_y = samp_y.mean(axis=0)\n      low_y, high_y = np.percentile(boot_means_y, [2.5, 97.5])\n      CIs_low_y.append(m_y - low_y)\n      CIs_high_y.append(high_y - m_y)\n\n    # Fit empirical diffusion coefficients\n    C0 = 4/np.pi\n    errs_x = np.vstack([CIs_low_x, CIs_high_x])\n    errs_y = np.vstack([CIs_low_y, CIs_high_y])\n    Dx_fit,sigma_Dx = diffusion_fit(t, means_x-means_x[0], errs_x.tolist(), C0)\n    Dy_fit,sigma_Dy = diffusion_fit(t, means_y-means_y[0], errs_y.tolist(), C0)\n\n    # Plot diffusion curves\n    y_c = np.sqrt(C0*Dx_fit*t_new)\n    y_high = np.sqrt(C0*(Dx_fit + sigma_Dx)*t_new)\n    y_low = np.sqrt(C0*(Dx_fit - sigma_Dx)*t_new)\n    ax.plot(t_new, y_c, color='blue', lw=1, alpha=0.6)\n    ax.fill_between(t_new, y_low, y_high, color='blue', alpha=0.3, label='Empirical Model ($x$)')\n\n    y_c = np.sqrt(C0*Dy_fit*t_new)\n    y_high = np.sqrt(C0*(Dy_fit + sigma_Dy)*t_new)\n    y_low = np.sqrt(C0*(Dy_fit - sigma_Dy)*t_new)\n    ax.plot(t_new, y_c, color='green', lw=1, alpha=0.6)\n    ax.fill_between(t_new, y_low, y_high, color='green', alpha=0.3, label='Empirical Model ($y$)')\n\n    # Plot fitted empirical models\n    ax.axhline(y=0, ls='--', color='gray', alpha=0.8)\n    ax.errorbar(t-0.25, means_x-means_x[0], yerr=errs_x, fmt='o', color='blue', capsize=1.5,\n                lw=1, ms=4, ecolor='gray', label='Data $\\pm\\, 2\\sigma$ $(x)$')\n    ax.errorbar(t+0.25, means_y-means_y[0], yerr=errs_y, fmt='^', color='green', capsize=1.5,\n                lw=1, ms=4, ecolor='gray', label='Data $\\pm\\, 2\\sigma$ $(y)$')\n\n    # Print case\n    bbox=dict(facecolor='white', edgecolor='k', boxstyle='round,pad=0.3', alpha=0.7)\n    ax.text(0.98, 0.09, title, transform=ax.transAxes, fontsize=10, va='top', ha='right', bbox=bbox)\n    ax.grid(True, which='both', linestyle='-', lw=0.5, alpha=0.4)\n\n    if title == 'Not Infected (Stonewall)':\n      ax.legend(loc='upper left', framealpha=0.6, fontsize=9)\n\n  fig.text(0.04, 0.5, r'Average Displacement, $x$ vs. $y$ (cm)', va='center', rotation='vertical')\n  fig.text(0.5, 0.04, r'Time, $t_n$ (hours)', va='center')\n  plt.tight_layout(rect=[0.05, 0.05, 1, 1])\n  plt.show()",
+      "line_count": 85
+    },
+    {
+      "cell_index": 39,
+      "matches": [
+        "U_interp",
+        "t_new",
+        "torch.meshgrid",
+        "interp"
+      ],
+      "source": "# PICK DATASET\nU_ws = U_interp.clone() # Ensemble\n\n# Grouped by plant type or infection status\n#U_ws = US_interp.clone() # Plant type = S\n#U_ws = UG_interp.clone() # Plant type = G\n#U_ws = UN_interp.clone() # Infection = N\n#U_ws = UI_interp.clone() # Infection = I\n\n# Separate control populations\n#U_ws = U1_interp.clone() # S,N\n#U_ws = U2_interp.clone() # G,N\n#U_ws = U3_interp.clone() # S,I\n#U_ws = U4_interp.clone() # G,I\n\n# Separate control populations by run\n#U_ws = U1_march_interp.clone() # S,N (march)\n#U_ws = U2_march_interp.clone() # G,N (march)\n#U_ws = U3_march_interp.clone() # S,I (march)\n#U_ws = U4_march_interp.clone() # G,I (march)\n\n#U_ws = U1_april_interp.clone() # S,N (april)\n#U_ws = U2_april_interp.clone() # G,N (april)\n#U_ws = U3_april_interp.clone() # S,I (april)\n#U_ws = U4_april_interp.clone() # G,I (april)\n\n# Grid\ntry:\n  t = torch.from_numpy(t)\n  t_new = torch.from_numpy(t_new)\nexcept:\n  pass\n\nX2,Y2 = torch.meshgrid(x,y, indexing='ij')\nX,Y,T = torch.meshgrid(x,y,t_new, indexing='ij')",
+      "line_count": 35
+    },
+    {
+      "cell_index": 41,
+      "matches": [
+        "t_new",
+        "WSINDy("
+      ],
+      "source": "coords = [x, y, t_new]\nvars = []\nnames = ['u']\n\nm = [10, 10, 6]\ns = [1, 1, 1]\n\n# Derivatives for test fcns\nalpha = [[0,0,1], # d/dt (lhs)\n         [0,0,0], # 1\n         [1,0,0], # d/dx\n         [2,0,0], # d^2/dx^2\n         [0,1,0], # d/dy\n         [0,2,0], # d^2/dy^2\n         [1,1,0]] # d^2/dxdy\n\n# Powers for homogeneous fcns\nbeta = [[0],[1]]\n\n# Hyper-params\nparams = {'V':vars, 'names':names, 'm':m, 's':s, 'rescale':False}\n\nmodel = WSINDy(U_ws, alpha, beta, coords, **params)",
+      "line_count": 23
+    }
+  ],
+  "original_notebook_modified": false,
+  "scientific_code_executed": false
+}

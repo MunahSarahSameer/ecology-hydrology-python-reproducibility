@@ -1,0 +1,18 @@
+{
+  "repository_id": "H05",
+  "experiment_id": "H05_pandas_203",
+  "repository": "NeuralHydrology v1.2.3",
+  "selected_test": "test/test_datautils.py",
+  "python": "3.10.22",
+  "pandas": "2.0.3",
+  "pytest": "9.2.0",
+  "tests_collected": 3,
+  "tests_passed": 3,
+  "tests_failed": 0,
+  "exit_code": 0,
+  "elapsed_seconds": 2.95,
+  "source_modified": false,
+  "published_results_reproduced": false,
+  "human_recovery_time_measured": false,
+  "interpretation": "All three selected archived tests passed with Python 3.10.22 and pandas 2.0.3. The same tests had two failures under pandas 2.3.3."
+}

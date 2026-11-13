@@ -1,0 +1,259 @@
+{
+  "step": 118,
+  "package_id": "H07",
+  "test_type": "static_scientific_test_screening",
+  "test_files": [
+    {
+      "filename": "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_continuity/continuity_tests.py",
+      "sha256": "617f4753bad82db09d116e3bd5ddc18edfcf67d86af58a6f3a6d1b89050e15c5",
+      "imports": [
+        "configparser",
+        "h5py",
+        "numpy",
+        "os",
+        "pytopkapi"
+      ],
+      "functions": [
+        {
+          "name": "read_hdf5_array",
+          "line": 12,
+          "calls": [
+            "h5file.close",
+            "h5py.File"
+          ]
+        },
+        {
+          "name": "compute_precip_volume",
+          "line": 19,
+          "calls": [
+            "data.sum",
+            "read_hdf5_array"
+          ]
+        },
+        {
+          "name": "compute_evapot_volume",
+          "line": 32,
+          "calls": [
+            "data.sum",
+            "read_hdf5_array"
+          ]
+        },
+        {
+          "name": "compute_evap_volume",
+          "line": 42,
+          "calls": [
+            "data.sum",
+            "h5file.close",
+            "h5py.File"
+          ]
+        },
+        {
+          "name": "compute_storage",
+          "line": 55,
+          "calls": [
+            "final.sum",
+            "h5file.close",
+            "h5py.File",
+            "initial.sum"
+          ]
+        },
+        {
+          "name": "compute_channel_runoff",
+          "line": 86,
+          "calls": [
+            "flows.sum",
+            "h5file.close",
+            "h5py.File"
+          ]
+        },
+        {
+          "name": "compute_overland_runoff",
+          "line": 97,
+          "calls": [
+            "flows.sum",
+            "h5file.close",
+            "h5py.File"
+          ]
+        },
+        {
+          "name": "compute_soil_drainage",
+          "line": 108,
+          "calls": [
+            "flows.sum",
+            "h5file.close",
+            "h5py.File"
+          ]
+        },
+        {
+          "name": "compute_down_drainage",
+          "line": 118,
+          "calls": [
+            "flows.sum",
+            "h5file.close",
+            "h5py.File"
+          ]
+        },
+        {
+          "name": "continuity_error",
+          "line": 128,
+          "calls": [
+            "SafeConfigParser",
+            "abs",
+            "compute_channel_runoff",
+            "compute_down_drainage",
+            "compute_evap_volume",
+            "compute_evapot_volume",
+            "compute_overland_runoff",
+            "compute_precip_volume",
+            "compute_soil_drainage",
+            "compute_storage",
+            "config.get",
+            "config.read",
+            "os.remove",
+            "print",
+            "pytopkapi.run"
+          ]
+        },
+        {
+          "name": "setup",
+          "line": 195,
+          "calls": [
+            "np.seterr",
+            "os.chdir",
+            "os.getcwd",
+            "os.path.join"
+          ]
+        },
+        {
+          "name": "teardown",
+          "line": 201,
+          "calls": [
+            "np.seterr",
+            "os.chdir"
+          ]
+        },
+        {
+          "name": "test_4cell_continuity",
+          "line": 206,
+          "calls": [
+            "continuity_error"
+          ]
+        },
+        {
+          "name": "test_d8_continuity",
+          "line": 224,
+          "calls": [
+            "continuity_error"
+          ]
+        },
+        {
+          "name": "test_lieb_continuity",
+          "line": 245,
+          "calls": [
+            "continuity_error"
+          ]
+        }
+      ],
+      "file_references": [
+        "4cells.ini",
+        "D8.ini",
+        "lieb.ini"
+      ],
+      "source_executed": false
+    },
+    {
+      "filename": "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_infiltration.py",
+      "sha256": "0bda57069eebab077d0138f6c4dad4bbdc18d6a8a31dfc76e566b60f7ef69d42",
+      "imports": [
+        "numpy",
+        "pytopkapi.infiltration",
+        "scipy.optimize"
+      ],
+      "functions": [
+        {
+          "name": "test_basic_green_ampt",
+          "line": 10,
+          "calls": [
+            "fsolve",
+            "np.allclose"
+          ]
+        },
+        {
+          "name": "test_cum_green_ampt_variable_rainfall",
+          "line": 34,
+          "calls": [
+            "F.append",
+            "green_ampt_cum_infiltration",
+            "np.allclose",
+            "np.array",
+            "np.concatenate",
+            "np.cumsum"
+          ]
+        }
+      ],
+      "file_references": [],
+      "source_executed": false
+    },
+    {
+      "filename": "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_parameter_utils.py",
+      "sha256": "d92a83c3433da5404f8fbf192324d36aa588130623de2a432b110381c0d3ef40",
+      "imports": [
+        "networkx",
+        "numpy",
+        "osgeo",
+        "pytopkapi.parameter_utils.create_file"
+      ],
+      "functions": [
+        {
+          "name": "test_strahler_simple",
+          "line": 12,
+          "calls": [
+            "G.add_edges_from",
+            "G.add_nodes_from",
+            "_make_strahler_dicts",
+            "np.arange",
+            "nx.DiGraph",
+            "strahler_stream_order"
+          ]
+        },
+        {
+          "name": "test_strahler_complex",
+          "line": 28,
+          "calls": [
+            "G.add_edges_from",
+            "G.add_nodes_from",
+            "_make_strahler_dicts",
+            "np.arange",
+            "nx.DiGraph",
+            "strahler_stream_order"
+          ]
+        },
+        {
+          "name": "test_outlet_on_boundary",
+          "line": 46,
+          "calls": [
+            "cell_connectivity",
+            "dset.ReadAsArray",
+            "gdal.Open",
+            "np.all",
+            "np.load"
+          ]
+        }
+      ],
+      "file_references": [
+        "pytopkapi/tests/test_data/flow_dir.flt",
+        "pytopkapi/tests/test_data/mask.flt"
+      ],
+      "source_executed": false
+    }
+  ],
+  "original_archive_modified": false,
+  "original_code_executed": false,
+  "dependencies_installed": false,
+  "limitations": [
+    "Static inspection cannot establish test executability.",
+    "Functions may depend on global state or external data.",
+    "File-reference detection is not exhaustive.",
+    "Scientific correctness has not been verified."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "archive_id": "E08",
+  "test": "Safe threading configuration recovery",
+  "original_data_sha256": "b6a7a16cf59535cb0c7eb8cdb27565b02b35a5feeec1e34aeaf9a87acf46cecc",
+  "configurations": {
+    "default": {
+      "status": "FAIL",
+      "exit_code": 3,
+      "elapsed_seconds": 8.153,
+      "settings": {},
+      "stdout": "IMPORTS COMPLETE\nParticles: (2, 130)\nSTART covariance\n",
+      "stderr": "OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.\nOMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. As an unsafe, unsupported, undocumented workaround you can set the environment variable KMP_DUPLICATE_LIB_OK=TRUE to allow the program to continue to execute, but that may cause crashes or silently produce incorrect results. For more information, please see http://www.intel.com/software/products/support/.\n"
+    },
+    "single_thread": {
+      "status": "FAIL",
+      "exit_code": 3,
+      "elapsed_seconds": 6.028,
+      "settings": {
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      },
+      "stdout": "IMPORTS COMPLETE\nParticles: (2, 130)\nSTART covariance\n",
+      "stderr": "OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.\nOMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. As an unsafe, unsupported, undocumented workaround you can set the environment variable KMP_DUPLICATE_LIB_OK=TRUE to allow the program to continue to execute, but that may cause crashes or silently produce incorrect results. For more information, please see http://www.intel.com/software/products/support/.\n"
+    },
+    "sequential_mkl": {
+      "status": "PASS",
+      "exit_code": 0,
+      "elapsed_seconds": 6.834,
+      "settings": {
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "MKL_THREADING_LAYER": "SEQUENTIAL"
+      },
+      "stdout": "IMPORTS COMPLETE\nParticles: (2, 130)\nSTART covariance\nCOVARIANCE PASS\nSTART Cholesky\nCHOLESKY PASS\nSTART KDE constructor\nKDE CONSTRUCTOR PASS\nSTART KDE evaluation\nKDE EVALUATION PASS\nVALIDATION: PASS\n",
+      "stderr": ""
+    }
+  },
+  "original_notebook_modified": false,
+  "packages_modified": false,
+  "unsafe_duplicate_runtime_override_used": false,
+  "published_results_reproduced": false
+}

@@ -1,0 +1,181 @@
+{
+  "step": 215,
+  "reference_date": "2026-11-12",
+  "generated_at_utc": "2026-11-11T23:10:00.788149+00:00",
+  "statistical_test_performed": false,
+  "candidates": [
+    {
+      "candidate_id": "E01",
+      "domain": "Ecology",
+      "baseline_status": "UNKNOWN",
+      "verified_archive_date": "2024-10-24",
+      "archive_age_days": 749,
+      "archive_age_years": 2.051,
+      "verified_provenance": true,
+      "potentially_eligible": false,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "E02",
+      "domain": "Ecology",
+      "baseline_status": "PASS",
+      "verified_archive_date": "2026-06-10",
+      "archive_age_days": 155,
+      "archive_age_years": 0.424,
+      "verified_provenance": true,
+      "potentially_eligible": true,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "E03",
+      "domain": "Ecology",
+      "baseline_status": "UNKNOWN",
+      "verified_archive_date": "2026-07-19",
+      "archive_age_days": 116,
+      "archive_age_years": 0.318,
+      "verified_provenance": true,
+      "potentially_eligible": false,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "E06",
+      "domain": "Ecology",
+      "baseline_status": "FAIL",
+      "verified_archive_date": null,
+      "archive_age_days": null,
+      "archive_age_years": null,
+      "verified_provenance": false,
+      "potentially_eligible": false,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "E07",
+      "domain": "Ecology",
+      "baseline_status": "FAIL",
+      "verified_archive_date": "2025-01-15",
+      "archive_age_days": 666,
+      "archive_age_years": 1.823,
+      "verified_provenance": true,
+      "potentially_eligible": true,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "E08",
+      "domain": "Ecology",
+      "baseline_status": "FAIL",
+      "verified_archive_date": null,
+      "archive_age_days": null,
+      "archive_age_years": null,
+      "verified_provenance": false,
+      "potentially_eligible": false,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "E10",
+      "domain": "Ecology",
+      "baseline_status": "UNKNOWN",
+      "verified_archive_date": null,
+      "archive_age_days": null,
+      "archive_age_years": null,
+      "verified_provenance": false,
+      "potentially_eligible": false,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "H01",
+      "domain": "Hydrology",
+      "baseline_status": "FAIL",
+      "verified_archive_date": "2024-09-13",
+      "archive_age_days": 790,
+      "archive_age_years": 2.163,
+      "verified_provenance": true,
+      "potentially_eligible": true,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "H02",
+      "domain": "Hydrology",
+      "baseline_status": "FAIL",
+      "verified_archive_date": "2024-04-10",
+      "archive_age_days": 946,
+      "archive_age_years": 2.59,
+      "verified_provenance": true,
+      "potentially_eligible": true,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "H03",
+      "domain": "Hydrology",
+      "baseline_status": "FAIL",
+      "verified_archive_date": "2023-11-10",
+      "archive_age_days": 1098,
+      "archive_age_years": 3.006,
+      "verified_provenance": true,
+      "potentially_eligible": true,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "H05",
+      "domain": "Hydrology",
+      "baseline_status": "FAIL",
+      "verified_archive_date": "2022-03-03",
+      "archive_age_days": 1715,
+      "archive_age_years": 4.696,
+      "verified_provenance": true,
+      "potentially_eligible": true,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "H06",
+      "domain": "Hydrology",
+      "baseline_status": "NOT_ATTEMPTED",
+      "verified_archive_date": null,
+      "archive_age_days": null,
+      "archive_age_years": null,
+      "verified_provenance": false,
+      "potentially_eligible": false,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "H07",
+      "domain": "Hydrology",
+      "baseline_status": "UNKNOWN",
+      "verified_archive_date": "2017-06-28",
+      "archive_age_days": 3424,
+      "archive_age_years": 9.375,
+      "verified_provenance": true,
+      "potentially_eligible": false,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "H08",
+      "domain": "Hydrology",
+      "baseline_status": "UNKNOWN",
+      "verified_archive_date": "2022-04-18",
+      "archive_age_days": 1669,
+      "archive_age_years": 4.57,
+      "verified_provenance": true,
+      "potentially_eligible": false,
+      "scope_comparability_verified": false
+    },
+    {
+      "candidate_id": "H09",
+      "domain": "Hydrology",
+      "baseline_status": "UNKNOWN",
+      "verified_archive_date": "2022-03-02",
+      "archive_age_days": 1716,
+      "archive_age_years": 4.698,
+      "verified_provenance": true,
+      "potentially_eligible": false,
+      "scope_comparability_verified": false
+    }
+  ],
+  "potentially_eligible_count": 6,
+  "limitations": [
+    "Archive age is measured from verified Zenodo archive dates.",
+    "Only PASS/FAIL baselines are potentially eligible.",
+    "Baseline testing scopes have not yet been established as comparable.",
+    "The sample is small and purposively selected.",
+    "No statistical association or causal relationship is claimed."
+  ]
+}

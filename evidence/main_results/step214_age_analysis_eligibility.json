@@ -1,0 +1,298 @@
+{
+  "step": 214,
+  "generated_at_utc": "2026-11-11T23:09:03.925774+00:00",
+  "reference_date": "2026-11-12",
+  "execution_attempted": false,
+  "statistical_test_performed": false,
+  "provenance_columns": [
+    "package_id",
+    "verified_source_title",
+    "verified_source_doi",
+    "verified_source_url",
+    "verified_archive_date",
+    "source_checksum_sha256",
+    "provenance_verification_status",
+    "archive_age_years",
+    "publication_results_reproduced"
+  ],
+  "provenance_rows": [
+    {
+      "package_id": "E01",
+      "verified_source_title": "Data and code for manuscript: The performance and potential of deep learning for predicting species distributions",
+      "verified_source_doi": "10.5281/zenodo.13986364",
+      "verified_source_url": "https://zenodo.org/records/13986364",
+      "verified_archive_date": "2024-10-24",
+      "source_checksum_sha256": "5965a9254dfe5aba382f8c6b28508955edae407d1e94e3185c382c8654a4b439",
+      "provenance_verification_status": "ZENODO_CHECKSUM_MATCH",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "E02",
+      "verified_source_title": "Characterizing the ecological niche of insertion sequences",
+      "verified_source_doi": "10.5281/zenodo.20623700",
+      "verified_source_url": "https://zenodo.org/records/20623700",
+      "verified_archive_date": "2026-06-10",
+      "source_checksum_sha256": "2d59a8fbd841d0685a23f4849b70e5127df14b876457d9395b5292075d55b7f5",
+      "provenance_verification_status": "ZENODO_CHECKSUM_MATCH",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "E03",
+      "verified_source_title": "Ecological role structures community function more than species identity in synthetic sourdough communities",
+      "verified_source_doi": "10.5281/zenodo.21440293",
+      "verified_source_url": "https://zenodo.org/records/21440293",
+      "verified_archive_date": "2026-07-19",
+      "source_checksum_sha256": "e68a186a507d8036b7b63f750c702ba3f780fcc7724be2fc19cb4f09097349b3",
+      "provenance_verification_status": "ZENODO_CHECKSUM_MATCH",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "E06",
+      "verified_source_title": "",
+      "verified_source_doi": "",
+      "verified_source_url": "",
+      "verified_archive_date": "",
+      "source_checksum_sha256": "",
+      "provenance_verification_status": "AWAITING_EXTERNAL_VERIFICATION",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "E07",
+      "verified_source_title": "FOR-species20K code",
+      "verified_source_doi": "10.5281/zenodo.14650218",
+      "verified_source_url": "https://zenodo.org/records/14650218",
+      "verified_archive_date": "2025-01-15",
+      "source_checksum_sha256": "d92ba64f52d6ee2c3927c21926adf1d6878438da46445f0b5f6370fb5a762300",
+      "provenance_verification_status": "ZENODO_CHECKSUM_MATCH",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "E08",
+      "verified_source_title": "",
+      "verified_source_doi": "",
+      "verified_source_url": "",
+      "verified_archive_date": "",
+      "source_checksum_sha256": "",
+      "provenance_verification_status": "AWAITING_EXTERNAL_VERIFICATION",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "E10",
+      "verified_source_title": "",
+      "verified_source_doi": "",
+      "verified_source_url": "",
+      "verified_archive_date": "",
+      "source_checksum_sha256": "",
+      "provenance_verification_status": "AWAITING_EXTERNAL_VERIFICATION",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H01",
+      "verified_source_title": "Data and codes",
+      "verified_source_doi": "10.5281/zenodo.13756951",
+      "verified_source_url": "https://zenodo.org/records/13756951",
+      "verified_archive_date": "2024-09-13",
+      "source_checksum_sha256": "c2d553af0e4e09c48b295861da6afc95afa051adeb46371abaa035b65d5eb4ac",
+      "provenance_verification_status": "ZENODO_CHECKSUM_MATCH",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H02",
+      "verified_source_title": "FloodSformer: Python code",
+      "verified_source_doi": "10.5281/zenodo.10953060",
+      "verified_source_url": "https://zenodo.org/records/10953060",
+      "verified_archive_date": "2024-04-10",
+      "source_checksum_sha256": "d2eb9e48371bc33d81a9342caa9a320abde455d311ce9964ea8a34bdcd7ffb24",
+      "provenance_verification_status": "ZENODO_CHECKSUM_MATCH",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H03",
+      "verified_source_title": "Hydrological controls of slope response to precipitation - Code and Data",
+      "verified_source_doi": "10.5281/zenodo.10107351",
+      "verified_source_url": "https://zenodo.org/records/10107351",
+      "verified_archive_date": "2023-11-10",
+      "source_checksum_sha256": "b1161def37fee0e68ec7d5981c0f67840a06ba420776adb13e0346886938cc30",
+      "provenance_verification_status": "ZENODO_CHECKSUM_MATCH",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H05",
+      "verified_source_title": "NeuralHydrology v1.2.3",
+      "verified_source_doi": "10.5281/zenodo.6326394",
+      "verified_source_url": "https://zenodo.org/records/6326394",
+      "verified_archive_date": "2022-03-03",
+      "source_checksum_sha256": "9506b996065c52a60bc4a74797069f9be603d1e6a39e2a3514c5133b67891e5b",
+      "provenance_verification_status": "ZENODO_CHECKSUM_MATCH",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H06",
+      "verified_source_title": "",
+      "verified_source_doi": "",
+      "verified_source_url": "",
+      "verified_archive_date": "",
+      "source_checksum_sha256": "",
+      "provenance_verification_status": "AWAITING_EXTERNAL_VERIFICATION",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H07",
+      "verified_source_title": "PyTOPKAPI v0.4.0",
+      "verified_source_doi": "10.5281/zenodo.820640",
+      "verified_source_url": "https://zenodo.org/records/820640",
+      "verified_archive_date": "2017-06-28",
+      "source_checksum_sha256": "a48773b6b044dd2b4f01ddeb62b8ffbacd84f04dba7effd1644f102fb537e159",
+      "provenance_verification_status": "ZENODO_CHECKSUM_MATCH",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H08",
+      "verified_source_title": "Integrated hydrologic model development and postprocessing for GSFLOW using pyGSFLOW",
+      "verified_source_doi": "10.5281/zenodo.6468426",
+      "verified_source_url": "https://zenodo.org/records/6468426",
+      "verified_archive_date": "2022-04-18",
+      "source_checksum_sha256": "ebbc960c11470056493b1c82ae461f266f333240e1ec6dcc4c85ba9e0f10568b",
+      "provenance_verification_status": "ZENODO_CHECKSUM_MATCH",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    },
+    {
+      "package_id": "H09",
+      "verified_source_title": "swatpy: A set of python modules to work with SWAT2012 models",
+      "verified_source_doi": "10.5281/zenodo.6322023",
+      "verified_source_url": "https://zenodo.org/records/6322023",
+      "verified_archive_date": "2022-03-02",
+      "source_checksum_sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+      "provenance_verification_status": "ZENODO_CHECKSUM_MATCH",
+      "archive_age_years": "",
+      "publication_results_reproduced": "NOT_VERIFIED"
+    }
+  ],
+  "candidate_baselines": [
+    {
+      "candidate_id": "E01",
+      "domain": "Ecology",
+      "baseline_status": "UNKNOWN",
+      "baseline_eligibility": "EXCLUDE_FROM_BINARY_BASELINE_ANALYSIS",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "E02",
+      "domain": "Ecology",
+      "baseline_status": "PASS",
+      "baseline_eligibility": "POTENTIALLY_ELIGIBLE",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "E03",
+      "domain": "Ecology",
+      "baseline_status": "UNKNOWN",
+      "baseline_eligibility": "EXCLUDE_FROM_BINARY_BASELINE_ANALYSIS",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "E06",
+      "domain": "Ecology",
+      "baseline_status": "FAIL",
+      "baseline_eligibility": "POTENTIALLY_ELIGIBLE",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "E07",
+      "domain": "Ecology",
+      "baseline_status": "FAIL",
+      "baseline_eligibility": "POTENTIALLY_ELIGIBLE",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "E08",
+      "domain": "Ecology",
+      "baseline_status": "FAIL",
+      "baseline_eligibility": "POTENTIALLY_ELIGIBLE",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "E10",
+      "domain": "Ecology",
+      "baseline_status": "UNKNOWN",
+      "baseline_eligibility": "EXCLUDE_FROM_BINARY_BASELINE_ANALYSIS",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "H01",
+      "domain": "Hydrology",
+      "baseline_status": "FAIL",
+      "baseline_eligibility": "POTENTIALLY_ELIGIBLE",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "H02",
+      "domain": "Hydrology",
+      "baseline_status": "FAIL",
+      "baseline_eligibility": "POTENTIALLY_ELIGIBLE",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "H03",
+      "domain": "Hydrology",
+      "baseline_status": "FAIL",
+      "baseline_eligibility": "POTENTIALLY_ELIGIBLE",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "H05",
+      "domain": "Hydrology",
+      "baseline_status": "FAIL",
+      "baseline_eligibility": "POTENTIALLY_ELIGIBLE",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "H06",
+      "domain": "Hydrology",
+      "baseline_status": "NOT_ATTEMPTED",
+      "baseline_eligibility": "EXCLUDE_FROM_BINARY_BASELINE_ANALYSIS",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "H07",
+      "domain": "Hydrology",
+      "baseline_status": "UNKNOWN",
+      "baseline_eligibility": "EXCLUDE_FROM_BINARY_BASELINE_ANALYSIS",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "H08",
+      "domain": "Hydrology",
+      "baseline_status": "UNKNOWN",
+      "baseline_eligibility": "EXCLUDE_FROM_BINARY_BASELINE_ANALYSIS",
+      "requires_scope_comparability_review": true
+    },
+    {
+      "candidate_id": "H09",
+      "domain": "Hydrology",
+      "baseline_status": "UNKNOWN",
+      "baseline_eligibility": "EXCLUDE_FROM_BINARY_BASELINE_ANALYSIS",
+      "requires_scope_comparability_review": true
+    }
+  ],
+  "notes": [
+    "Archive age must be calculated from a verified archive release date.",
+    "Repository creation and paper publication dates are not substitutes.",
+    "UNKNOWN and NOT_ATTEMPTED are not baseline failures.",
+    "Different execution scopes may prevent valid direct comparisons."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "step": 164,
+  "records": {
+    "H03": {
+      "archive": "repositories\\H03\\Hydrological-controls---Code-and-Data-Hydrology.zip",
+      "archive_sha256": "b1161def37fee0e68ec7d5981c0f67840a06ba420776adb13e0346886938cc30",
+      "metadata_title": "Pywr-DRB/Pywr-DRB: Code and Data for Pywr-DRB paper (Hamilton et al, 2024, EMS)",
+      "metadata_doi": "10.5281/zenodo.13214630",
+      "identity_verified": false,
+      "documentation": [
+        {
+          "path": "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/README.md",
+          "sha256": "3fe212d2530d4a15bc41ea8ddd7611e10aac84699245abcd220ed7ecb3803bcd",
+          "preview": "# Hydrological-controls---Code-and-Data\nThis repository contains the dataset and codes used in the study of sloping soil response to precipitation through machine learning analysis.\nThe dataset includes synthetic data of precipitation, soil moisture, and groundwater level mimicking field observations conducted in a experimental field.\nThe codes include scripts for data preprocessing, analysis, and visualization.\nHere you will find: The dataset used to build a random forest (RF) model (01_RF_dataset.csv), the script for building the model (01_RF_model.py) using the sciki-learn library in Python (https://scikit-learn.org/stable/index.html), the dataset for the cluster analysis (SyntheticData.mat) and the script for the analysis using the k-means clustering technique implemented in Matlab (https://it.mathworks.com/help/stats/kmeans.html).\n"
+        }
+      ],
+      "tested_script_comparison": {
+        "zip_member": "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/01_RF_model.py",
+        "original_sha256": "8a9e38d303568e3a2b7624c9556cba407527e98f8af2274d9e3ed15aa4a74c51",
+        "tested_sha256": "8a9e38d303568e3a2b7624c9556cba407527e98f8af2274d9e3ed15aa4a74c51",
+        "exact_match": true
+      }
+    },
+    "H05": {
+      "archive": "repositories\\H05\\neuralhydrology-v.1.2.3.zip",
+      "archive_sha256": "9506b996065c52a60bc4a74797069f9be603d1e6a39e2a3514c5133b67891e5b",
+      "metadata_title": "The Effect of Available Data on the Worth of Future Observations for Groundwater Modelling - Code and Data",
+      "metadata_doi": "10.5281/zenodo.17700057",
+      "identity_verified": false,
+      "documentation": [
+        {
+          "path": "neuralhydrology-v.1.2.3/README.md",
+          "sha256": "c2a980458abb70f536b9ab34122884f4e518f1b631d998a55793d710daa429c7",
+          "preview": "![#](docs/source/_static/img/neural-hyd-logo-black.png)\n\nPython library to train neural networks with a strong focus on hydrological applications.\n\nThis package has been used extensively in research over the last years and was used in various academic publications. \nThe core idea of this package is modularity in all places to allow easy integration of new datasets, new model \narchitectures or any training-related aspects (e.g. loss functions, optimizer, regularization). \nOne of the core concepts of this code base are configuration files, which let anyone train neural networks without\ntouching the code itself. The NeuralHydrology package is built on top of the deep learning framework \n[PyTorch](https://pytorch.org/), since it has proven to be the most flexible and useful for research purposes.\n\nWe (the AI for Earth Science group at the Institute for Machine Learning, Johannes Kepler University, Linz, Austria) are using\nthis code in our day-to-day research and will continue to integrate our new research findings into this public repository.\n\n- Documentation: [neuralhydrology.readthedocs.io](https://neuralhydrology.readthedocs.io)\n- Research Blog: [neuralhydrology.github.io](https://neuralhydrology.github.io)\n- Bug reports/Feature requests [https://github.com/neuralhydrology/neuralhydrology/issues](https://github.com/neuralhydrology/neuralhydrology/issues)\n\n\n# Contact\n\nFor questions or comments regarding the usage of this repository, please use the [discussion section](https://github.com/neuralhydrology/neuralhydrology/discussions) on Github. For bug reports and feature requests, please open an [issue](https://github.com/neuralhydrology/neuralhydrology/issues) on GitHub.\nIn special cases, you can also reach out to us by email: neuralhydrology(at)googlegroups.com\n"
+        },
+        {
+          "path": "neuralhydrology-v.1.2.3/setup.py",
+          "sha256": "0b8a66c739b9ee4d88e2ead78aaab7854c53d45b907db58afbebe2263b32121c",
+          "preview": "from pathlib import Path\n\nfrom setuptools import setup\n\n# read the description from the README.md\nreadme_file = Path(__file__).absolute().parent / \"README.md\"\nwith readme_file.open(\"r\") as fp:\n    long_description = fp.read()\n\nabout = {}\nwith open(\"neuralhydrology/__about__.py\", \"r\") as fp:\n    exec(fp.read(), about)\n\nsetup(name='neuralhydrology',\n      version=about[\"__version__\"],\n      packages=[\n          'neuralhydrology', 'neuralhydrology.datasetzoo', 'neuralhydrology.datautils', 'neuralhydrology.utils',\n          'neuralhydrology.modelzoo', 'neuralhydrology.training', 'neuralhydrology.evaluation'\n      ],\n      url='https://neuralhydrology.readthedocs.io',\n      project_urls={\n          'Documentation': 'https://neuralhydrology.readthedocs.io',\n          'Source': 'https://github.com/neuralhydrology/neuralhydrology',\n          'Research Blog': 'https://neuralhydrology.github.io/'\n      },\n      author='Frederik Kratzert, Daniel Klotz, Martin Gauch',\n      author_email='[EMAIL_REDACTED]',\n      description='Library for training deep learning models with environmental focus',\n      long_description=long_description,\n      long_description_content_type='text/markdown',\n      entry_points={\n          'console_scripts': [\n              'nh-schedule-runs=neuralhydrology.nh_run_scheduler:_main', 'nh-run=neuralhydrology.nh_run:_main',\n              'nh-results-ensemble=neuralhydrology.utils.nh_results_ensemble:_main'\n          ]\n      },\n      python_requires='>=3.7',\n      install_requires=[\n          'matplotlib',\n          'numba',\n          'numpy',\n          'pandas',\n          'ruamel.yaml',\n          'torch',\n          'scipy',\n          'tensorboard',\n          'tqdm',\n          'xarray',\n      ],\n      classifiers=[\n          'Programming Language :: Python :: 3',\n          'Operating System :: OS Independent',\n          'Topic :: Scientific/Engineering :: Artificial Intelligence',\n          'Topic :: Scientific/Engineering :: Hydrology',\n          'License :: OSI Approved :: BSD License',\n      ],\n      keywords='deep learning hydrology lstm neural network streamflow discharge rainfall-runoff')\n"
+        },
+        {
+          "path": "neuralhydrology-v.1.2.3/test/test_data/camels_us/camels_attributes_v2.0/readme.txt",
+          "sha256": "fcdd3169b6b7c026358d605aee7acff419c332038fe41969afb93e4edac7370f",
+          "preview": "### CAMELS ATTRIBUTES HISTORY\n\n# VERSION 2.0\n\nData described in the published HESS paper - https://doi.org/10.5194/hess-2017-169\n\nMajor changes/additions:\n- geological attributes added -> camels_geol\n\nMinor changes:\n- camels_loc_topo split into camels_name and camels_topo\n- all occurrences of \"gage\" changed to \"gauge\"\n- the name of a few variables slightly changed to increase consistency throughout the data set\n\n# VERSION 1.0\n\nData described in the HESSD manuscript - https://doi.org/10.5194/hess-2017-169\n\n### DATA USAGE AND CITATION\n\nBy using the CAMELS attributes in your publication(s), you agree to cite:\n\nAddor, N., Newman, A. J., Mizukami, N. and Clark, M. P.: The CAMELS data set: catchment attributes and meteorology for large-sample studies, Hydrology and Earth System Sciences, doi:10.5194/hess-2017-169, 2017.\n\nBy using the CAMELS time series in your publication(s), you agree to cite:\n\nNewman, A. J., Clark, M. P., Sampson, K., Wood, A., Hay, L. E., Bock, A., Viger, R., Blodgett, D., Brekke, L., Arnold, J. R., Hopson, T. and Duan, Q.: Development of a large-sample watershed-scale hydrometeorological dataset for the contiguous USA: dataset characteristics and assessment of regional variability in hydrologic model performance, Hydrology and Earth System Sciences, 19, 209–223, doi:10.5194/hess-19-209-2015, 2015.\n\n### CONTRIBUTE TO CAMELS\n\nIf you are working with a data set covering the CONUS and would like to produce catchment averages for CAMELS, please get in touch.\n\nWe are doing our best to identify and correct errors. If you find unrealistic/suspicious values, please let us know ASAP. Thank you.\n\nContacts: Nans Addor ([EMAIL_REDACTED]) & Andy Newman ([EMAIL_REDACTED])\n"
+        }
+      ],
+      "tested_script_comparison": null
+    }
+  },
+  "limitations": [
+    "Local documentation cannot independently verify an external DOI.",
+    "An exact source hash confirms file identity, not publication association.",
+    "No original archive was modified.",
+    "Publication independence remains unverified."
+  ],
+  "generated_at_utc": "2026-11-11T02:48:11.455065+00:00"
+}

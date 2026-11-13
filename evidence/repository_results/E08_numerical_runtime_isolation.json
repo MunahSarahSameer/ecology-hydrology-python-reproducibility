@@ -1,0 +1,45 @@
+{
+  "archive_id": "E08",
+  "test": "Numerical runtime isolation",
+  "tests": {
+    "numpy_covariance_only": {
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 1.272,
+      "stdout": "Particles: (2, 130)\nIMPORTS COMPLETE\nSTART covariance\nCOVARIANCE PASS: (2, 2)\n",
+      "stderr": ""
+    },
+    "scipy_kde_without_torch": {
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 3.352,
+      "stdout": "Particles: (2, 130)\nIMPORTS COMPLETE\nSTART KDE constructor\nKDE CONSTRUCTOR PASS\n",
+      "stderr": ""
+    },
+    "scipy_kde_with_torch": {
+      "status": "FAIL",
+      "exit_code": 3,
+      "seconds": 7.331,
+      "stdout": "Particles: (2, 130)\nIMPORTS COMPLETE\nSTART KDE constructor\n",
+      "stderr": "OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.\nOMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. As an unsafe, unsupported, undocumented workaround you can set the environment variable KMP_DUPLICATE_LIB_OK=TRUE to allow the program to continue to execute, but that may cause crashes or silently produce incorrect results. For more information, please see http://www.intel.com/software/products/support/.\n"
+    },
+    "scipy_cholesky_without_torch": {
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 2.133,
+      "stdout": "Particles: (2, 130)\nIMPORTS COMPLETE\nSTART Cholesky\nCHOLESKY PASS: (2, 2)\n",
+      "stderr": ""
+    },
+    "scipy_cholesky_with_torch": {
+      "status": "FAIL",
+      "exit_code": 3,
+      "seconds": 5.052,
+      "stdout": "Particles: (2, 130)\nIMPORTS COMPLETE\nSTART Cholesky\n",
+      "stderr": "OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.\nOMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. As an unsafe, unsupported, undocumented workaround you can set the environment variable KMP_DUPLICATE_LIB_OK=TRUE to allow the program to continue to execute, but that may cause crashes or silently produce incorrect results. For more information, please see http://www.intel.com/software/products/support/.\n"
+    }
+  },
+  "original_notebook_modified": false,
+  "environment_modified": false,
+  "unsafe_openmp_override_used": false,
+  "published_results_reproduced": false
+}

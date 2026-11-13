@@ -1,0 +1,417 @@
+{
+  "step": 153,
+  "assessment_type": "SAMPLE_WIDE_EVIDENCE_INVENTORY",
+  "sample_size": 15,
+  "domain_counts": {
+    "ecology": 7,
+    "hydrology": 8
+  },
+  "candidates_with_archives": 13,
+  "candidates_with_json_evidence": 5,
+  "total_json_evidence_files": 59,
+  "cross_package_identical_zip_groups": [],
+  "packages": [
+    {
+      "package_id": "E01",
+      "domain": "ecology",
+      "repository_directory_exists": true,
+      "archive_count": 1,
+      "archives": [
+        {
+          "path": "repositories\\E01\\code.zip",
+          "size_bytes": 3687724,
+          "sha256": "5965a9254dfe5aba382f8c6b28508955edae407d1e94e3185c382c8654a4b439",
+          "zip_integrity": "PASS",
+          "python_files": 63
+        }
+      ],
+      "evidence_file_count": 0,
+      "evidence_files": [],
+      "known_consolidated_assessment": null,
+      "consolidated_assessment_found": false,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": true
+    },
+    {
+      "package_id": "E02",
+      "domain": "ecology",
+      "repository_directory_exists": true,
+      "archive_count": 1,
+      "archives": [
+        {
+          "path": "repositories\\E02\\is_niches.zip",
+          "size_bytes": 66293378,
+          "sha256": "2d59a8fbd841d0685a23f4849b70e5127df14b876457d9395b5292075d55b7f5",
+          "zip_integrity": "PASS",
+          "python_files": 102
+        }
+      ],
+      "evidence_file_count": 0,
+      "evidence_files": [],
+      "known_consolidated_assessment": null,
+      "consolidated_assessment_found": false,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": true
+    },
+    {
+      "package_id": "E03",
+      "domain": "ecology",
+      "repository_directory_exists": true,
+      "archive_count": 1,
+      "archives": [
+        {
+          "path": "repositories\\E03\\FermentomeII_package_code.zip",
+          "size_bytes": 11379435,
+          "sha256": "e68a186a507d8036b7b63f750c702ba3f780fcc7724be2fc19cb4f09097349b3",
+          "zip_integrity": "PASS",
+          "python_files": 21
+        }
+      ],
+      "evidence_file_count": 0,
+      "evidence_files": [],
+      "known_consolidated_assessment": null,
+      "consolidated_assessment_found": false,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": true
+    },
+    {
+      "package_id": "E06",
+      "domain": "ecology",
+      "repository_directory_exists": true,
+      "archive_count": 1,
+      "archives": [
+        {
+          "path": "repositories\\E06\\Code_Figures.zip",
+          "size_bytes": 42724364,
+          "sha256": "aa130db55efdf430f3d603f9e4be1baef8686368d9c9e9718bfbc92bf96392d7",
+          "zip_integrity": "PASS",
+          "python_files": 1
+        }
+      ],
+      "evidence_file_count": 0,
+      "evidence_files": [],
+      "known_consolidated_assessment": null,
+      "consolidated_assessment_found": false,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": true
+    },
+    {
+      "package_id": "E07",
+      "domain": "ecology",
+      "repository_directory_exists": true,
+      "archive_count": 1,
+      "archives": [
+        {
+          "path": "repositories\\E07\\FORspecies20K.zip",
+          "size_bytes": 20117984,
+          "sha256": "d92ba64f52d6ee2c3927c21926adf1d6878438da46445f0b5f6370fb5a762300",
+          "zip_integrity": "PASS",
+          "python_files": 0
+        }
+      ],
+      "evidence_file_count": 0,
+      "evidence_files": [],
+      "known_consolidated_assessment": null,
+      "consolidated_assessment_found": false,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": true
+    },
+    {
+      "package_id": "E08",
+      "domain": "ecology",
+      "repository_directory_exists": true,
+      "archive_count": 0,
+      "archives": [],
+      "evidence_file_count": 3,
+      "evidence_files": [
+        "E08_original_results_inspection.json",
+        "E08_recovered_scientific_results.json",
+        "E08_reproduction_comparison.json"
+      ],
+      "known_consolidated_assessment": null,
+      "consolidated_assessment_found": false,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": true
+    },
+    {
+      "package_id": "E10",
+      "domain": "ecology",
+      "repository_directory_exists": true,
+      "archive_count": 0,
+      "archives": [],
+      "evidence_file_count": 13,
+      "evidence_files": [
+        "E10_auc_corrected_validation.json",
+        "E10_auc_function_validation.json",
+        "E10_consolidated_assessment.json",
+        "E10_data_availability.json",
+        "E10_dependency_readiness.json",
+        "E10_external_data_investigation.json",
+        "E10_function_execution.json",
+        "E10_function_testability.json",
+        "E10_import_baseline.json",
+        "E10_independence_audit.json",
+        "E10_initial_screening.json",
+        "E10_runtime_requirements.json",
+        "E10_source_audit.json"
+      ],
+      "known_consolidated_assessment": "E10_consolidated_assessment.json",
+      "consolidated_assessment_found": true,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": true
+    },
+    {
+      "package_id": "H01",
+      "domain": "hydrology",
+      "repository_directory_exists": true,
+      "archive_count": 1,
+      "archives": [
+        {
+          "path": "repositories\\H01\\Data and codes.zip",
+          "size_bytes": 1399022,
+          "sha256": "c2d553af0e4e09c48b295861da6afc95afa051adeb46371abaa035b65d5eb4ac",
+          "zip_integrity": "PASS",
+          "python_files": 9
+        }
+      ],
+      "evidence_file_count": 0,
+      "evidence_files": [],
+      "known_consolidated_assessment": null,
+      "consolidated_assessment_found": false,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": true
+    },
+    {
+      "package_id": "H02",
+      "domain": "hydrology",
+      "repository_directory_exists": true,
+      "archive_count": 1,
+      "archives": [
+        {
+          "path": "repositories\\H02\\FloodSformer-v1.0.1.zip",
+          "size_bytes": 3753224,
+          "sha256": "d2eb9e48371bc33d81a9342caa9a320abde455d311ce9964ea8a34bdcd7ffb24",
+          "zip_integrity": "PASS",
+          "python_files": 41
+        }
+      ],
+      "evidence_file_count": 0,
+      "evidence_files": [],
+      "known_consolidated_assessment": null,
+      "consolidated_assessment_found": false,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": true
+    },
+    {
+      "package_id": "H03",
+      "domain": "hydrology",
+      "repository_directory_exists": true,
+      "archive_count": 1,
+      "archives": [
+        {
+          "path": "repositories\\H03\\Hydrological-controls---Code-and-Data-Hydrology.zip",
+          "size_bytes": 5678528,
+          "sha256": "b1161def37fee0e68ec7d5981c0f67840a06ba420776adb13e0346886938cc30",
+          "zip_integrity": "PASS",
+          "python_files": 1
+        }
+      ],
+      "evidence_file_count": 0,
+      "evidence_files": [],
+      "known_consolidated_assessment": null,
+      "consolidated_assessment_found": false,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": true
+    },
+    {
+      "package_id": "H05",
+      "domain": "hydrology",
+      "repository_directory_exists": true,
+      "archive_count": 1,
+      "archives": [
+        {
+          "path": "repositories\\H05\\neuralhydrology-v.1.2.3.zip",
+          "size_bytes": 5905672,
+          "sha256": "9506b996065c52a60bc4a74797069f9be603d1e6a39e2a3514c5133b67891e5b",
+          "zip_integrity": "PASS",
+          "python_files": 63
+        }
+      ],
+      "evidence_file_count": 0,
+      "evidence_files": [],
+      "known_consolidated_assessment": null,
+      "consolidated_assessment_found": false,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": true
+    },
+    {
+      "package_id": "H06",
+      "domain": "hydrology",
+      "repository_directory_exists": true,
+      "archive_count": 1,
+      "archives": [
+        {
+          "path": "repositories\\H06\\S4D_rainfall_runoff_simulations.zip",
+          "size_bytes": 430765,
+          "sha256": "cc77736c1b3574fc7b89a4240bb4272a4cbf03e3775f38050f6983419a0f92bc",
+          "zip_integrity": "PASS",
+          "python_files": 96
+        }
+      ],
+      "evidence_file_count": 0,
+      "evidence_files": [],
+      "known_consolidated_assessment": null,
+      "consolidated_assessment_found": false,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": true
+    },
+    {
+      "package_id": "H07",
+      "domain": "hydrology",
+      "repository_directory_exists": true,
+      "archive_count": 1,
+      "archives": [
+        {
+          "path": "repositories\\H07\\PyTOPKAPI-v0.4.0-original.zip",
+          "size_bytes": 8000741,
+          "sha256": "a48773b6b044dd2b4f01ddeb62b8ffbacd84f04dba7effd1644f102fb537e159",
+          "zip_integrity": "PASS",
+          "python_files": 29
+        }
+      ],
+      "evidence_file_count": 14,
+      "evidence_files": [
+        "H07_complete_syntax_recovery.json",
+        "H07_consolidated_assessment.json",
+        "H07_dependency_audit.json",
+        "H07_independence_audit.json",
+        "H07_infiltration_numerical_repeatability.json",
+        "H07_infiltration_source_inspection.json",
+        "H07_initial_screening.json",
+        "H07_original_infiltration_execution.json",
+        "H07_runtime_dependency_baseline.json",
+        "H07_scientific_test_screening.json",
+        "H07_syntax_dependency_baseline.json",
+        "H07_syntax_failure_investigation.json",
+        "H07_syntax_recovery.json",
+        "H07_syntax_recovery_step115.json"
+      ],
+      "known_consolidated_assessment": "H07_consolidated_assessment.json",
+      "consolidated_assessment_found": true,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": false
+    },
+    {
+      "package_id": "H08",
+      "domain": "hydrology",
+      "repository_directory_exists": true,
+      "archive_count": 1,
+      "archives": [
+        {
+          "path": "repositories\\H08\\pygflow_1.0.2-original.zip",
+          "size_bytes": 23908624,
+          "sha256": "ebbc960c11470056493b1c82ae461f266f333240e1ec6dcc4c85ba9e0f10568b",
+          "zip_integrity": "PASS",
+          "python_files": 70
+        }
+      ],
+      "evidence_file_count": 15,
+      "evidence_files": [
+        "H08_archive_metadata_screening.json",
+        "H08_ast_match_investigation.json",
+        "H08_candidate_discovery.json",
+        "H08_consolidated_assessment.json",
+        "H08_dependency_availability.json",
+        "H08_final_independence_classification.json",
+        "H08_independence_audit.json",
+        "H08_initial_archive_inspection.json",
+        "H08_original_prms_record_execution.json",
+        "H08_original_test_screening.json",
+        "H08_prms_implementation_dependency_trace.json",
+        "H08_prms_record_test_inspection.json",
+        "H08_prms_test_repeatability.json",
+        "H08_supporting_module_dependency_trace.json",
+        "H08_syntax_dependency_baseline.json"
+      ],
+      "known_consolidated_assessment": "H08_consolidated_assessment.json",
+      "consolidated_assessment_found": true,
+      "assessment_error": null,
+      "reported_execution_classification": null,
+      "reported_sample_inclusion": null,
+      "requires_manual_review": false
+    },
+    {
+      "package_id": "H09",
+      "domain": "hydrology",
+      "repository_directory_exists": true,
+      "archive_count": 1,
+      "archives": [
+        {
+          "path": "repositories\\H09\\swatpy-v0.2-original.zip",
+          "size_bytes": 2049625,
+          "sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+          "zip_integrity": "PASS",
+          "python_files": 8
+        }
+      ],
+      "evidence_file_count": 14,
+      "evidence_files": [
+        "H09_archive_metadata_screening.json",
+        "H09_consolidated_assessment.json",
+        "H09_dependency_availability.json",
+        "H09_hydrological_efficiency_inspection.json",
+        "H09_initial_archive_inspection.json",
+        "H09_masked_array_numerical_diagnostic.json",
+        "H09_masked_reduction_verification.json",
+        "H09_missing_data_investigation.json",
+        "H09_original_efficiency_execution.json",
+        "H09_original_efficiency_execution_recheck.json",
+        "H09_original_efficiency_repeatability.json",
+        "H09_original_function_screening.json",
+        "H09_source_independence_audit.json",
+        "H09_syntax_dependency_baseline.json"
+      ],
+      "known_consolidated_assessment": "H09_consolidated_assessment.json",
+      "consolidated_assessment_found": true,
+      "assessment_error": null,
+      "reported_execution_classification": "PARTIALLY_EXECUTABLE_COMPONENT_LEVEL",
+      "reported_sample_inclusion": "PROVISIONALLY_INCLUDED",
+      "requires_manual_review": false
+    }
+  ],
+  "limitations": [
+    "This is an evidence inventory, not a final eligibility decision.",
+    "Only four known consolidated report filenames are registered.",
+    "Unregistered assessments are not treated as absent experiments.",
+    "No publication-level independence verification is performed.",
+    "Missing evidence is not classified as execution failure.",
+    "Archive age and execution success are not yet statistically analysed."
+  ],
+  "generated_at_utc": "2026-11-11T02:30:45.971938+00:00"
+}

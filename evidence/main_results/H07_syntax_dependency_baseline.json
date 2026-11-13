@@ -1,0 +1,195 @@
+{
+  "step": 112,
+  "package_id": "H07",
+  "python_version": "3.11.18",
+  "syntax_results": [
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/create_distributions.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/docs/source/conf.py",
+      "status": "FAIL",
+      "error": "invalid syntax at line 175"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/example_simulation/run_example.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/__init__.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/__version.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/arcfltgrid.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/evap.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/fluxes.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/infiltration.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/interpolation.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/model.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/ode.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/GIS_treatment.py",
+      "status": "FAIL",
+      "error": "invalid syntax. Perhaps you forgot a comma? at line 282"
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/__init__.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/common.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/create_file.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/map_param.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/modify_file.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/pretreatment.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/results_analysis/__init__.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/results_analysis/plot_Qsim_Qobs_Rain.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/results_analysis/plot_soil_moisture_maps.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/results_analysis/sim_result_tools.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_continuity/continuity_tests.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_infiltration.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/tests/test_parameter_utils.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/utils.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/scripts/extract-tertiary.py",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/setup.py",
+      "status": "PASS",
+      "error": null
+    }
+  ],
+  "syntax_pass": 27,
+  "syntax_total": 29,
+  "dependencies": [
+    {
+      "dependency": "numpy",
+      "distribution": "numpy",
+      "status": "INSTALLED",
+      "version": "2.4.6"
+    },
+    {
+      "dependency": "scipy",
+      "distribution": "scipy",
+      "status": "INSTALLED",
+      "version": "1.17.1"
+    },
+    {
+      "dependency": "h5py",
+      "distribution": "h5py",
+      "status": "NOT FOUND",
+      "version": null
+    },
+    {
+      "dependency": "networkx",
+      "distribution": "networkx",
+      "status": "INSTALLED",
+      "version": "3.6.1"
+    },
+    {
+      "dependency": "GDAL (osgeo)",
+      "distribution": "GDAL",
+      "status": "NOT FOUND",
+      "version": null
+    }
+  ],
+  "source_code_executed": false,
+  "dependencies_installed": false,
+  "generated_at_utc": "2026-11-11T01:19:33.283084+00:00",
+  "limitations": [
+    "Syntax validation does not establish runtime compatibility.",
+    "Distribution metadata does not establish import success.",
+    "Missing dependencies are not proof of code decay.",
+    "Full hydrological simulation was not attempted."
+  ]
+}

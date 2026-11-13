@@ -1,0 +1,65 @@
+{
+  "step": 166,
+  "records": [
+    {
+      "package_id": "H03",
+      "original_metadata_title": "Pywr-DRB/Pywr-DRB: Code and Data for Pywr-DRB paper (Hamilton et al, 2024, EMS)",
+      "original_metadata_doi": "10.5281/zenodo.13214630",
+      "archive_path": "repositories\\H03\\Hydrological-controls---Code-and-Data-Hydrology.zip",
+      "archive_sha256": "b1161def37fee0e68ec7d5981c0f67840a06ba420776adb13e0346886938cc30",
+      "confirmed_project": "Hydrological-controls---Code-and-Data",
+      "confirmed_software": "01_RF_model.py",
+      "confirmed_version": null,
+      "correct_source_url": null,
+      "correct_source_doi": null,
+      "original_metadata_association": "UNVERIFIED_MISMATCH",
+      "source_identity_status": "LOCAL_SOURCE_CONFIRMED",
+      "release_date_status": "UNVERIFIED",
+      "source_links_extracted": [
+        "https://it.mathworks.com/help/stats/kmeans.html",
+        "https://scikit-learn.org/stable/index.html"
+      ],
+      "tested_script_exact_match": true,
+      "action_required": "Identify the original repository or publication for Hydrological-controls and verify its release date.",
+      "classification_final": false
+    },
+    {
+      "package_id": "H05",
+      "original_metadata_title": "The Effect of Available Data on the Worth of Future Observations for Groundwater Modelling - Code and Data",
+      "original_metadata_doi": "10.5281/zenodo.17700057",
+      "archive_path": "repositories\\H05\\neuralhydrology-v.1.2.3.zip",
+      "archive_sha256": "9506b996065c52a60bc4a74797069f9be603d1e6a39e2a3514c5133b67891e5b",
+      "confirmed_project": "NeuralHydrology",
+      "confirmed_software": "neuralhydrology",
+      "confirmed_version": "1.2.3",
+      "correct_source_url": "https://github.com/neuralhydrology/neuralhydrology",
+      "correct_source_doi": null,
+      "original_metadata_association": "UNVERIFIED_MISMATCH",
+      "source_identity_status": "LOCAL_SOURCE_CONFIRMED",
+      "release_date_status": "UNVERIFIED",
+      "source_links_extracted": [
+        "https://doi.org/10.5194/hess-2017-169",
+        "https://github.com/neuralhydrology/neuralhydrology",
+        "https://github.com/neuralhydrology/neuralhydrology/discussions",
+        "https://github.com/neuralhydrology/neuralhydrology/issues",
+        "https://neuralhydrology.github.io",
+        "https://neuralhydrology.github.io/",
+        "https://neuralhydrology.readthedocs.io",
+        "https://pytorch.org/"
+      ],
+      "tested_script_exact_match": null,
+      "action_required": "Verify the release date and authoritative source for NeuralHydrology version 1.2.3.",
+      "classification_final": false
+    }
+  ],
+  "notes": [
+    "Original metadata files have not been modified.",
+    "Corrected project identities are based on local archive documentation.",
+    "An unverified DOI association is not automatically a proven false attribution.",
+    "The H03 tested source matched its archived source in Step 164.",
+    "H05 version 1.2.3 was identified from package metadata.",
+    "Release dates and publication associations require external verification.",
+    "No archive age has been calculated."
+  ],
+  "generated_at_utc": "2026-11-11T02:50:20.682269+00:00"
+}

@@ -1,0 +1,80 @@
+{
+  "candidate": "H03",
+  "step": 205,
+  "model_training_attempted": false,
+  "generated_at_utc": "2026-11-11T22:59:40.436455+00:00",
+  "dataset": {
+    "rows": 53061,
+    "columns": 17,
+    "column_names": [
+      "ID",
+      "Rainfall",
+      "Duration",
+      "Intensity",
+      "Storage_prev_6",
+      "Storage_end_6",
+      "Storage_prev_100",
+      "Storage_end_100",
+      "DS_100",
+      "DS_100H",
+      "Storage_prev_200",
+      "Storage_end_200",
+      "DS_200",
+      "DS_200H",
+      "Falda_prev",
+      "Leakage",
+      "Cluster_ID"
+    ],
+    "missing_values": 0
+  },
+  "grid_search": {
+    "parameters": {
+      "n_estimators": [
+        5,
+        10,
+        20,
+        30
+      ],
+      "max_features": [
+        1,
+        2,
+        3
+      ],
+      "min_samples_leaf": [
+        15,
+        20,
+        25
+      ],
+      "max_depth": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "combinations": 180
+  },
+  "configuration_lines": [
+    {
+      "line": 53,
+      "text": "skf= KFold(n_splits=10, shuffle=True, random_state=42)"
+    },
+    {
+      "line": 73,
+      "text": "for ntrees in trees_grid:"
+    },
+    {
+      "line": 111,
+      "text": "for max_depth in max_depth_grid:"
+    },
+    {
+      "line": 147,
+      "text": "for min_samples_leaf in min_samples_leaf_grid:"
+    },
+    {
+      "line": 221,
+      "text": "gcv = GridSearchCV(rfc, parameters, n_jobs=-1, cv=skf, verbose=1)"
+    }
+  ]
+}

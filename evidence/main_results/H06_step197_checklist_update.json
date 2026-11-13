@@ -1,0 +1,37 @@
+{
+  "step": 197,
+  "candidate": "H06",
+  "previous_record": {
+    "candidate_id": "H06",
+    "discipline": "Hydrology",
+    "project_name": "S4D rainfall-runoff",
+    "baseline_status": "NOT_ATTEMPTED",
+    "recovered_status": "NOT_ATTEMPTED",
+    "previous_finding": "External datasets and checkpoints missing",
+    "evidence_files_found": "repositories\\results\\H06_assessment.json",
+    "evidence_files_missing": "",
+    "evidence_reviewed_in_step_182": "NO",
+    "full_scientific_workflow_verified": "NO",
+    "published_results_reproduced": "NOT_VERIFIED",
+    "next_action": "Determine whether a safe isolated test is feasible",
+    "testing_review_status": "PENDING_REVIEW"
+  },
+  "updated_record": {
+    "candidate_id": "H06",
+    "discipline": "Hydrology",
+    "project_name": "S4D rainfall-runoff",
+    "baseline_status": "PASS_LIMITED",
+    "recovered_status": "PASS_LIMITED",
+    "previous_finding": "Original H06 hydrological evaluation functions nse, kge and bias executed successfully using synthetic discharge data. Eight of eight validation checks passed. All 96 archived Python files passed syntax inspection. No source modification or dependency installation was required for these tests. Full S4D model training and published scientific result reproduction remain unverified.",
+    "evidence_files_found": "repositories\\results\\H06_assessment.json; results/H06_step193_execution_target_discovery.json; results/H06_step194_metric_inspection.json; results/H06_step195_metric_execution.json",
+    "evidence_files_missing": "",
+    "evidence_reviewed_in_step_182": "NO",
+    "full_scientific_workflow_verified": "NO",
+    "published_results_reproduced": "NOT_VERIFIED",
+    "next_action": "Document component-level metric execution; assess whether original S4D model execution is feasible without external CAMELS data.",
+    "testing_review_status": "H06_COMPONENT_VERIFIED"
+  },
+  "validation_checks_passed": 8,
+  "syntax_files_passed": 96,
+  "generated_at_utc": "2026-11-11T22:48:46.363176+00:00"
+}

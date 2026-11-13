@@ -1,0 +1,155 @@
+{
+  "candidate": "H01",
+  "step": 202,
+  "test_type": "independent_nse_validation",
+  "checks": [
+    {
+      "station": "xiantao",
+      "period": "1991-2000",
+      "scenario": "NAT",
+      "original_output": -1.2728288071283789,
+      "independent_calculation": -1.2728288071283789,
+      "pass": true
+    },
+    {
+      "station": "xiantao",
+      "period": "1991-2000",
+      "scenario": "HUM",
+      "original_output": 0.3539549709545131,
+      "independent_calculation": 0.3539549709545131,
+      "pass": true
+    },
+    {
+      "station": "xiantao",
+      "period": "2001-2012",
+      "scenario": "NAT",
+      "original_output": -0.11482366856558879,
+      "independent_calculation": -0.11482366856558879,
+      "pass": true
+    },
+    {
+      "station": "xiantao",
+      "period": "2001-2012",
+      "scenario": "HUM",
+      "original_output": 0.7038936987350153,
+      "independent_calculation": 0.7038936987350153,
+      "pass": true
+    },
+    {
+      "station": "xiantao",
+      "period": "2013-2022",
+      "scenario": "NAT",
+      "original_output": -1.777654696000282,
+      "independent_calculation": -1.777654696000282,
+      "pass": true
+    },
+    {
+      "station": "xiantao",
+      "period": "2013-2022",
+      "scenario": "HUM",
+      "original_output": -0.0692994982788453,
+      "independent_calculation": -0.0692994982788453,
+      "pass": true
+    },
+    {
+      "station": "yichang",
+      "period": "1991-2000",
+      "scenario": "NAT",
+      "original_output": 0.9583869600757011,
+      "independent_calculation": 0.9583869600757011,
+      "pass": true
+    },
+    {
+      "station": "yichang",
+      "period": "1991-2000",
+      "scenario": "HUM",
+      "original_output": 0.9620018528049256,
+      "independent_calculation": 0.9620018528049256,
+      "pass": true
+    },
+    {
+      "station": "yichang",
+      "period": "2001-2012",
+      "scenario": "NAT",
+      "original_output": 0.870660941871966,
+      "independent_calculation": 0.870660941871966,
+      "pass": true
+    },
+    {
+      "station": "yichang",
+      "period": "2001-2012",
+      "scenario": "HUM",
+      "original_output": 0.9283128465725112,
+      "independent_calculation": 0.9283128465725112,
+      "pass": true
+    },
+    {
+      "station": "yichang",
+      "period": "2013-2022",
+      "scenario": "NAT",
+      "original_output": 0.595718840021378,
+      "independent_calculation": 0.595718840021378,
+      "pass": true
+    },
+    {
+      "station": "yichang",
+      "period": "2013-2022",
+      "scenario": "HUM",
+      "original_output": 0.91262329425915,
+      "independent_calculation": 0.91262329425915,
+      "pass": true
+    },
+    {
+      "station": "datong",
+      "period": "1991-2000",
+      "scenario": "NAT",
+      "original_output": 0.9770995246566062,
+      "independent_calculation": 0.9770995246566062,
+      "pass": true
+    },
+    {
+      "station": "datong",
+      "period": "1991-2000",
+      "scenario": "HUM",
+      "original_output": 0.9705019404850651,
+      "independent_calculation": 0.9705019404850651,
+      "pass": true
+    },
+    {
+      "station": "datong",
+      "period": "2001-2012",
+      "scenario": "NAT",
+      "original_output": 0.9219291277866988,
+      "independent_calculation": 0.9219291277866988,
+      "pass": true
+    },
+    {
+      "station": "datong",
+      "period": "2001-2012",
+      "scenario": "HUM",
+      "original_output": 0.9476223956266825,
+      "independent_calculation": 0.9476223956266825,
+      "pass": true
+    },
+    {
+      "station": "datong",
+      "period": "2013-2022",
+      "scenario": "NAT",
+      "original_output": 0.8510112697809752,
+      "independent_calculation": 0.8510112697809752,
+      "pass": true
+    },
+    {
+      "station": "datong",
+      "period": "2013-2022",
+      "scenario": "HUM",
+      "original_output": 0.9596528522095702,
+      "independent_calculation": 0.9596528522095702,
+      "pass": true
+    }
+  ],
+  "passed": 18,
+  "total": 18,
+  "generated_at_utc": "2026-11-11T22:55:57.052665+00:00",
+  "outcome": "PASS"
+}

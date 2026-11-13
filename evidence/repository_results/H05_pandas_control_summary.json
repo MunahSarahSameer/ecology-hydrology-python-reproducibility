@@ -1,0 +1,34 @@
+{
+  "repository_id": "H05",
+  "experiment_id": "H05_pandas_control",
+  "repository": "NeuralHydrology v1.2.3",
+  "selected_test": "test/test_datautils.py",
+  "intervention": "Upgrade pandas in cloned recovery environment",
+  "recovery_environment": {
+    "python": "3.10.22",
+    "pandas": "1.5.3",
+    "passed": 3,
+    "failed": 0
+  },
+  "controlled_environment": {
+    "python": "3.10.22",
+    "pandas": "2.3.3",
+    "passed": 1,
+    "failed": 2,
+    "warnings": 10,
+    "exit_code": 1,
+    "execution_seconds": 2.5
+  },
+  "failed_tests": [
+    "test_sort_frequencies",
+    "test_get_frequency_factor"
+  ],
+  "passed_tests": [
+    "test_infer_frequency"
+  ],
+  "confirmed_error": "Units 'M', 'Y' and 'y' do not represent unambiguous timedelta values",
+  "classification": "dependency_api_incompatibility",
+  "interpretation": "Archived tests passed with pandas 1.5.3 but two failed with pandas 2.3.3 under Python 3.10.22.",
+  "published_results_reproduced": false,
+  "human_remediation_time_measured": false
+}

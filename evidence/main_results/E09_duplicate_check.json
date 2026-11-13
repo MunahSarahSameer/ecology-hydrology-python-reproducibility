@@ -1,0 +1,28 @@
+{
+  "candidate": "E09",
+  "doi": "10.5281/zenodo.13986364",
+  "candidate_sha256": "5965a9254dfe5aba382f8c6b28508955edae407d1e94e3185c382c8654a4b439",
+  "comparisons": [
+    {
+      "package_id": "E01",
+      "path": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E01\\code.zip",
+      "sha256": "5965a9254dfe5aba382f8c6b28508955edae407d1e94e3185c382c8654a4b439",
+      "identical": true
+    },
+    {
+      "package_id": "E04",
+      "path": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E04\\code.zip",
+      "sha256": "5965a9254dfe5aba382f8c6b28508955edae407d1e94e3185c382c8654a4b439",
+      "identical": true
+    },
+    {
+      "package_id": "E04",
+      "path": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E04\\data.zip",
+      "sha256": "fe5a51b7124f8eb828f2dcbd1a29e3dc4bf4d6df81c1b230168ab3194cb9cae1",
+      "identical": false
+    }
+  ],
+  "exact_duplicate_found": true,
+  "independent_package_count_increment": 0,
+  "action": "Exclude E09 if confirmed duplicate"
+}

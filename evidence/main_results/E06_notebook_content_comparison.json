@@ -1,0 +1,599 @@
+{
+  "step": 180,
+  "candidate": "E06",
+  "github_commit": "cdf69eb782a572000d12509aa3a5367ca2efe41e",
+  "local_notebooks": 25,
+  "remote_notebooks": 10,
+  "exact_byte_matches": 2,
+  "exact_source_matches": 2,
+  "comparisons": [
+    {
+      "local_path": "Code_Figures/FigS10_MangroveDisturbanceRates.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Decadal dynamics of global mangrove disturbance rates (1984-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.9941
+        },
+        {
+          "remote_path": "Figure 4.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.4867
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3445
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS11_DisturbanceTrends40Years.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Global trends in mangrove degradation and loss rates (1980s-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.972
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.8901
+        },
+        {
+          "remote_path": "Figure 4.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.4208
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS12_RecentDisturbanceRates.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.9675
+        },
+        {
+          "remote_path": "Global trends in mangrove degradation and loss rates (1980s-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.8901
+        },
+        {
+          "remote_path": "Figure 4.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.4214
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS13_RecentLoss.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Figure 3.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3092
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3033
+        },
+        {
+          "remote_path": "Global trends in mangrove degradation and loss rates (1980s-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2949
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS14_RelativeChangeClosedMangrove.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.4946
+        },
+        {
+          "remote_path": "Global trends in mangrove degradation and loss rates (1980s-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.4705
+        },
+        {
+          "remote_path": "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.438
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS16_ComparisonGMW.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Ten biogeographic regions and classification units.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2899
+        },
+        {
+          "remote_path": "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2629
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2389
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS18_LandsatQuantile.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.4093
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3147
+        },
+        {
+          "remote_path": "Ten biogeographic regions and classification units.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3095
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS19-S20_CompositeYears.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Ten biogeographic regions and classification units.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3724
+        },
+        {
+          "remote_path": "Figure 3.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2578
+        },
+        {
+          "remote_path": "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2442
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS21_PixelCount1980s.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2901
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.1964
+        },
+        {
+          "remote_path": "Ten biogeographic regions and classification units.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.189
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS23_ThinCloudmask.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Ten biogeographic regions and classification units.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3003
+        },
+        {
+          "remote_path": "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2618
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2612
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS24-25_FCCvalidation.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Ten biogeographic regions and classification units.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2163
+        },
+        {
+          "remote_path": "Figure 3.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2128
+        },
+        {
+          "remote_path": "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2111
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS26-29_TrainingSamples.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Figure 5.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.1506
+        },
+        {
+          "remote_path": "Figure 3.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.1006
+        },
+        {
+          "remote_path": "Global trends in mangrove degradation and loss rates (1980s-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.0835
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS2_4CanopyTypes.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Ten biogeographic regions and classification units.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3457
+        },
+        {
+          "remote_path": "Figure 3.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3127
+        },
+        {
+          "remote_path": "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3122
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS30_ValidRatio.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.5298
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2969
+        },
+        {
+          "remote_path": "Ten biogeographic regions and classification units.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2958
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS4_SpatialUnits.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Ten biogeographic regions and classification units.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.9472
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3483
+        },
+        {
+          "remote_path": "Global trends in mangrove degradation and loss rates (1980s-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3366
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS5_Top10TimeSeries.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.913
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.362
+        },
+        {
+          "remote_path": "Global trends in mangrove degradation and loss rates (1980s-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3443
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS7_Myanmar.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3093
+        },
+        {
+          "remote_path": "Global trends in mangrove degradation and loss rates (1980s-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3004
+        },
+        {
+          "remote_path": "Ten biogeographic regions and classification units.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2896
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS8_SchematicFigure.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.1955
+        },
+        {
+          "remote_path": "Ten biogeographic regions and classification units.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.1812
+        },
+        {
+          "remote_path": "Figure 3.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.1696
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/FigS9_CycloneExamples.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2563
+        },
+        {
+          "remote_path": "Global trends in mangrove degradation and loss rates (1980s-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2507
+        },
+        {
+          "remote_path": "Decadal dynamics of global mangrove disturbance rates (1984-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.245
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/Figure 1.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Figure 1.ipynb",
+          "exact_bytes": true,
+          "exact_notebook_source": true,
+          "source_similarity": 1.0
+        },
+        {
+          "remote_path": "Ten biogeographic regions and classification units.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.262
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2121
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/Figure 2.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Figure 2.ipynb",
+          "exact_bytes": true,
+          "exact_notebook_source": true,
+          "source_similarity": 1.0
+        },
+        {
+          "remote_path": "Figure 3.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2233
+        },
+        {
+          "remote_path": "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2085
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/Figure 3.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Figure 3.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.9798
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.4191
+        },
+        {
+          "remote_path": "Global trends in mangrove degradation and loss rates (1980s-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.4162
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/Figure 4.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Figure 4.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.9998
+        },
+        {
+          "remote_path": "Decadal dynamics of global mangrove disturbance rates (1984-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.4915
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.4266
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/Figure 5.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Figure 5.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.9996
+        },
+        {
+          "remote_path": "Figure 3.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3086
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2445
+        }
+      ]
+    },
+    {
+      "local_path": "Code_Figures/SummaryFig.ipynb",
+      "top_matches": [
+        {
+          "remote_path": "Temporal dynamics of mangrove area in the ten major mangrove-holding countries.ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.3987
+        },
+        {
+          "remote_path": "Global trends in mangrove degradation and loss rates (1980s-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2542
+        },
+        {
+          "remote_path": "Global average annual rates of mangrove degradation and loss (2018-2023).ipynb",
+          "exact_bytes": false,
+          "exact_notebook_source": false,
+          "source_similarity": 0.2504
+        }
+      ]
+    }
+  ],
+  "errors": [
+    "Remote Case studies of tropical cyclone-induced mangrove degradation.ipynb: Expecting value: line 2 column 1 (char 2)",
+    "Remote Local examples of mangrove deforestation events after 2020.ipynb: Expecting value: line 2 column 1 (char 2)"
+  ],
+  "source_archive_version_verified": false,
+  "archive_publication_date_verified": false,
+  "notes": [
+    "Remote notebooks were retrieved from a fixed GitHub commit.",
+    "Source comparisons ignore notebook outputs and execution counts.",
+    "Similarity is exploratory and does not establish archive identity.",
+    "No original ZIP files or scientific code were modified."
+  ],
+  "generated_at_utc": "2026-11-11T04:00:11.830997+00:00"
+}

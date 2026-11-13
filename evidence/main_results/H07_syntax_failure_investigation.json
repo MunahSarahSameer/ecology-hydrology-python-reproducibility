@@ -1,0 +1,233 @@
+{
+  "step": 113,
+  "package_id": "H07",
+  "investigation": "original_syntax_failure_context",
+  "records": [
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/docs/source/conf.py",
+      "reported_line": 175,
+      "syntax_error": {
+        "message": "invalid syntax",
+        "line": 175,
+        "column": 30
+      },
+      "source_context": [
+        {
+          "line": 163,
+          "source": "# Options for LaTeX output"
+        },
+        {
+          "line": 164,
+          "source": "# ------------------------"
+        },
+        {
+          "line": 165,
+          "source": ""
+        },
+        {
+          "line": 166,
+          "source": "# The paper size ('letter' or 'a4')."
+        },
+        {
+          "line": 167,
+          "source": "#latex_paper_size = 'letter'"
+        },
+        {
+          "line": 168,
+          "source": ""
+        },
+        {
+          "line": 169,
+          "source": "# The font size ('10pt', '11pt' or '12pt')."
+        },
+        {
+          "line": 170,
+          "source": "#latex_font_size = '10pt'"
+        },
+        {
+          "line": 171,
+          "source": ""
+        },
+        {
+          "line": 172,
+          "source": "# Grouping the document tree into LaTeX files. List of tuples"
+        },
+        {
+          "line": 173,
+          "source": "# (source start file, target name, title, author, document class [howto/manual])."
+        },
+        {
+          "line": 174,
+          "source": "latex_documents = ["
+        },
+        {
+          "line": 175,
+          "source": "  ('index', 'TOPKAPI.tex', ur'TOPKAPI Documentation',"
+        },
+        {
+          "line": 176,
+          "source": "   ur'Theo Vischel, Scott Sinclair and Geoff Pegram', 'manual'),"
+        },
+        {
+          "line": 177,
+          "source": "]"
+        },
+        {
+          "line": 178,
+          "source": ""
+        },
+        {
+          "line": 179,
+          "source": "# The name of an image file (relative to this directory) to place at the top of"
+        },
+        {
+          "line": 180,
+          "source": "# the title page."
+        },
+        {
+          "line": 181,
+          "source": "#latex_logo = None"
+        },
+        {
+          "line": 182,
+          "source": ""
+        },
+        {
+          "line": 183,
+          "source": "# For \"manual\" documents, if this is true, then toplevel headings are parts,"
+        },
+        {
+          "line": 184,
+          "source": "# not chapters."
+        },
+        {
+          "line": 185,
+          "source": "#latex_use_parts = False"
+        },
+        {
+          "line": 186,
+          "source": ""
+        },
+        {
+          "line": 187,
+          "source": "# Additional stuff for the LaTeX preamble."
+        }
+      ]
+    },
+    {
+      "file": "sahg-PyTOPKAPI-6d8183b/pytopkapi/parameter_utils/GIS_treatment.py",
+      "reported_line": 282,
+      "syntax_error": {
+        "message": "invalid syntax. Perhaps you forgot a comma?",
+        "line": 282,
+        "column": 66
+      },
+      "source_context": [
+        {
+          "line": 270,
+          "source": "                    dist=Xcell*(2**0.5)"
+        },
+        {
+          "line": 271,
+          "source": "                    x=i+1"
+        },
+        {
+          "line": 272,
+          "source": "                    y=j-1"
+        },
+        {
+          "line": 273,
+          "source": ""
+        },
+        {
+          "line": 274,
+          "source": "                if tab_label[x,y] >= 0:"
+        },
+        {
+          "line": 275,
+          "source": "                    if dem[x,y] < dem[i,j]:"
+        },
+        {
+          "line": 276,
+          "source": "                        tab_slope_degree[i,j] = np.arctan((dem[i,j]-dem[x,y])"
+        },
+        {
+          "line": 277,
+          "source": "                                                          /dist) * 180./np.pi"
+        },
+        {
+          "line": 278,
+          "source": "                    if dem[x,y] == dem[i,j]:"
+        },
+        {
+          "line": 279,
+          "source": "                        tab_slope_degree[i,j] = 0.0"
+        },
+        {
+          "line": 280,
+          "source": "                    if dem[x,y] > dem[i,j]:"
+        },
+        {
+          "line": 281,
+          "source": "                        print('Negative slope cell', tab_label[i,j], \\"
+        },
+        {
+          "line": 282,
+          "source": "                            direction, tab_label[x,y], dem[i,j], dem[x,y]"
+        },
+        {
+          "line": 283,
+          "source": "                        tab_slope_degree[i,j] = np.arctan((dem[i,j]-dem[x,y])"
+        },
+        {
+          "line": 284,
+          "source": "                                                          /dist) * 180./np.pi)"
+        },
+        {
+          "line": 285,
+          "source": "                else:"
+        },
+        {
+          "line": 286,
+          "source": "                    tab_slope_degree[i,j] = -9999"
+        },
+        {
+          "line": 287,
+          "source": "                    print('Downslope cell external to the catchment...')"
+        },
+        {
+          "line": 288,
+          "source": "                    print(tab_label[i,j], direction, \\"
+        },
+        {
+          "line": 289,
+          "source": "                          tab_label[x,y], dem[i,j], dem[x,y])"
+        },
+        {
+          "line": 290,
+          "source": ""
+        },
+        {
+          "line": 291,
+          "source": "    # write slope file"
+        },
+        {
+          "line": 292,
+          "source": "    tab_slope_degree.tofile(file_slope_degree)"
+        },
+        {
+          "line": 293,
+          "source": ""
+        },
+        {
+          "line": 294,
+          "source": "    if file_DEM[-4:] == '.flt':"
+        }
+      ]
+    }
+  ],
+  "source_modified": false,
+  "source_executed": false,
+  "dependencies_installed": false,
+  "note": "Static inspection only. Error classification requires reviewing the original source context."
+}

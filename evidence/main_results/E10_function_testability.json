@@ -1,0 +1,70 @@
+{
+  "step": 102,
+  "package_id": "E10",
+  "assessment": "static_function_level_screening",
+  "files": [
+    {
+      "filename": "Best_model_predictions.py",
+      "functions": [],
+      "classes": []
+    },
+    {
+      "filename": "Deep_learning_loop_all_species.py",
+      "functions": [
+        {
+          "name": "auc_score",
+          "line": 83,
+          "end_line": 87,
+          "calls": [
+            "len",
+            "np.unique",
+            "roc_auc_score"
+          ]
+        },
+        {
+          "name": "auc_roc",
+          "line": 88,
+          "end_line": 89,
+          "calls": [
+            "tf.py_function"
+          ]
+        },
+        {
+          "name": "get_shuffled_indices",
+          "line": 94,
+          "end_line": 97,
+          "calls": [
+            "len",
+            "list",
+            "random.shuffle",
+            "range"
+          ]
+        }
+      ],
+      "classes": []
+    },
+    {
+      "filename": "Raw_preds.py",
+      "functions": [
+        {
+          "name": "get_shuffled_indices",
+          "line": 70,
+          "end_line": 73,
+          "calls": [
+            "len",
+            "list",
+            "random.shuffle",
+            "range"
+          ]
+        }
+      ],
+      "classes": []
+    }
+  ],
+  "research_code_executed": false,
+  "limitations": [
+    "Function presence does not prove independent testability.",
+    "Functions may depend on global variables or external files.",
+    "No scientific results were reproduced."
+  ]
+}

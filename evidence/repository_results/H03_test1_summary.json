@@ -1,0 +1,28 @@
+{
+  "repository_id": "H03",
+  "domain": "Hydrology",
+  "script": "01_RF_model.py",
+  "dataset_rows": 53061,
+  "dataset_columns": 17,
+  "missing_values": 0,
+  "original_script_sha256": "8a9e38d303568e3a2b7624c9556cba407527e98f8af2274d9e3ed15aa4a74c51",
+  "resource_limited_script_sha256": "60c35780681389ba36e2ef766470b473c79d0d4ef03c7d6734b1ac2b411c2008",
+  "baseline_status": "failed_missing_dependency",
+  "dependency_recovery_status": "failed_filename_mismatch",
+  "filename_recovery_status": "timeout_30_seconds",
+  "resource_limited_status": "timeout_180_seconds",
+  "partial_output": "-0.140 RMSE, standard deviation 0.011",
+  "workflow_completed": false,
+  "result_reproduced": false,
+  "classification": "partial_execution_computational_limit",
+  "recovery_interventions": [
+    "Installed scikit-learn",
+    "Provided CSV under filename expected by original script",
+    "Changed n_jobs=-1 to n_jobs=2 in separate recovery copy"
+  ],
+  "limitations": [
+    "Full hyperparameter search did not complete",
+    "No published-result comparison",
+    "Recovery effort in minutes not measured"
+  ]
+}

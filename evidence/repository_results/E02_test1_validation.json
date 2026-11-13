@@ -1,0 +1,20 @@
+{
+  "archive": "E02",
+  "workflow": "fitting_RAC.ipynb, first four code cells",
+  "baseline_exit_code": 0,
+  "rank_count": 17,
+  "finite_observations": true,
+  "finite_lognormal_predictions": true,
+  "finite_powerlaw_predictions": true,
+  "lognormal_parameters": {
+    "mu": -3.935101552093692,
+    "sigma": 1.7646471545491629,
+    "S0": 21.435487744440138
+  },
+  "powerlaw_parameters": {
+    "A": 0.3876402750350272,
+    "lambda": -1.0969476425803721
+  },
+  "lognormal_rmse": 0.0025774548890802437,
+  "powerlaw_rmse": 0.011251681291668538
+}

@@ -1,0 +1,36 @@
+{
+  "step": 125,
+  "candidate_id": "H08",
+  "record_id": "6468426",
+  "title": "Integrated hydrologic model development and postprocessing for GSFLOW using pyGSFLOW",
+  "doi": "10.5281/zenodo.6468426",
+  "publication_date": "2022-04-18",
+  "resource_type": {
+    "title": "Software",
+    "type": "software"
+  },
+  "creators": [
+    "Joshua D Larsen",
+    "Ayman Alzraiee",
+    "Richard G Niswonger"
+  ],
+  "description": "<p>pyGSFLOW is a Python package designed to create new GSFLOW integrated hydrologic&nbsp;models, read existing models, edit model input data, run GSFLOW models, process&nbsp;output, and visualize model data.</p>\n\n<p>This archive accompanies the Journal of Open Source Software article &quot;Integrated hydrologic model development and postprocessing for GSFLOW using pyGSFLOW&quot;.</p>\n\n<p>Official pyGSFLOW code releases can be found at&nbsp;https://code.usgs.gov/water/pyGSFLOW</p>",
+  "files": [
+    {
+      "name": "pygflow_1.0.2.zip",
+      "size_bytes": 23908624,
+      "checksum": "md5:75e7c270dcd85e6a2ad81246663cf56e",
+      "download_url": "https://zenodo.org/api/records/6468426/files/pygflow_1.0.2.zip/content"
+    }
+  ],
+  "candidate_status": "ARCHIVE_AVAILABLE",
+  "generated_at_utc": "2026-11-11T01:47:55.063202+00:00",
+  "archive_downloaded": false,
+  "source_executed": false,
+  "limitations": [
+    "Archive contents have not yet been inspected.",
+    "Code availability within the ZIP is unverified.",
+    "Scientific executability has not been tested.",
+    "Publication-level independence remains unverified."
+  ]
+}

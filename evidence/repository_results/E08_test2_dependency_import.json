@@ -1,0 +1,41 @@
+{
+  "archive_id": "E08",
+  "test": "Historical module import",
+  "python_version": "3.11.18",
+  "historical_commit": "d43b25a6106b0d459f44948b1f05e3e6e162312e",
+  "source_copies": {
+    "wsindy.py": {
+      "sha256": "1b74dfa508b84381a786aad24f9b616cbe0d66d919fbb9cff72b59afab2a859a",
+      "test_path": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\test2\\wsindy.py"
+    },
+    "helper_fcns.py": {
+      "sha256": "05d813af6b1f87d3d05ea4f9dc060ee5b0a70302751c7f5f6186028e97f30796",
+      "test_path": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\test2\\helper_fcns.py"
+    }
+  },
+  "baseline": {
+    "status": "FAIL",
+    "exit_code": 1,
+    "elapsed_seconds": 0.079,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E08\\test2\\import_test.py\", line 1, in <module>\n    import symengine\nModuleNotFoundError: No module named 'symengine'\n"
+  },
+  "installation": {
+    "attempted": true,
+    "status": "PASS",
+    "exit_code": 0,
+    "stdout": "Collecting symengine\n  Downloading symengine-0.15.0-cp311-abi3-win_amd64.whl.metadata (5.0 kB)\nDownloading symengine-0.15.0-cp311-abi3-win_amd64.whl (19.1 MB)\n   ---------------------------------------- 0.0/19.1 MB ? eta -:--:--\n   ---- ----------------------------------- 2.1/19.1 MB 13.0 MB/s eta 0:00:02\n   -------- ------------------------------- 4.2/19.1 MB 11.4 MB/s eta 0:00:02\n   --------------- ------------------------ 7.3/19.1 MB 11.9 MB/s eta 0:00:01\n   ------------------- -------------------- 9.4/19.1 MB 11.7 MB/s eta 0:00:01\n   ------------------------ --------------- 11.5/19.1 MB 11.6 MB/s eta 0:00:01\n   ---------------------------- ----------- 13.6/19.1 MB 11.3 MB/s eta 0:00:01\n   ---------------------------------- ----- 16.3/19.1 MB 11.1 MB/s eta 0:00:01\n   ---------------------------------------  18.9/19.1 MB 11.5 MB/s eta 0:00:01\n   ---------------------------------------- 19.1/19.1 MB 10.6 MB/s  0:00:01\nInstalling collected packages: symengine\nSuccessfully installed symengine-0.15.0\n",
+    "stderr": ""
+  },
+  "recovery": {
+    "status": "PASS",
+    "exit_code": 0,
+    "elapsed_seconds": 7.036,
+    "stdout": "symengine: PASS\nhelper_fcns: PASS\nwsindy: PASS\nWSINDy class: True\n",
+    "stderr": ""
+  },
+  "symengine_version_after_test": "0.15.0",
+  "original_notebook_modified": false,
+  "full_notebook_executed": false,
+  "published_results_reproduced": false
+}

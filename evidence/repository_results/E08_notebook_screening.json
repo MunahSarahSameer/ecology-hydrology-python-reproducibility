@@ -1,0 +1,61 @@
+{
+  "archive_id": "E08",
+  "zenodo_record_id": "17156064",
+  "files": [
+    {
+      "filename": "wsindy_for_dispersal.ipynb",
+      "size_bytes": 3843814,
+      "md5_verified": true,
+      "sha256": "7b393428100cbea66b84cce4401f38f50d6eb7d5f3127b8580ba661b397abf93"
+    },
+    {
+      "filename": "sensitivity_analysis.csv",
+      "size_bytes": 29863,
+      "md5_verified": true,
+      "sha256": "68b0e1afc24cd2e358392ff9eabdf883bdafab665ab32b6875c43c6646609bf5"
+    },
+    {
+      "filename": "caterpillars.csv",
+      "size_bytes": 52992,
+      "md5_verified": true,
+      "sha256": "b6a7a16cf59535cb0c7eb8cdb27565b02b35a5feeec1e34aeaf9a87acf46cecc"
+    },
+    {
+      "filename": "DATASET_README.txt",
+      "size_bytes": 3359,
+      "md5_verified": true,
+      "sha256": "362e34bbecff85965528230a152299428aac233fdc1821bc7664762c9a9c2e8d"
+    }
+  ],
+  "all_checksums_verified": true,
+  "notebook_total_cells": 86,
+  "code_cells": 58,
+  "markdown_cells": 28,
+  "import_roots": [
+    "IPython",
+    "helper_fcns",
+    "itertools",
+    "matplotlib",
+    "mpl_toolkits",
+    "numpy",
+    "os",
+    "pandas",
+    "scipy",
+    "symengine",
+    "torch",
+    "tqdm",
+    "wsindy"
+  ],
+  "syntax_failures": [
+    {
+      "cell_index": 3,
+      "error": "invalid syntax (<unknown>, line 1)"
+    },
+    {
+      "cell_index": 5,
+      "error": "invalid syntax (<unknown>, line 3)"
+    }
+  ],
+  "runtime_executed": false,
+  "eligibility_status": "pending_workflow_assessment"
+}

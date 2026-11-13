@@ -1,0 +1,59 @@
+{
+  "step": 227,
+  "generated_at_utc": "2026-11-11T23:55:17.066141+00:00",
+  "working_title": "Evaluating Component-Level Executability and Recovery Barriers in Archived Python Research Code from Ecology and Hydrology",
+  "study_design": "Exploratory multiple-case study using purposively selected archived repositories",
+  "research_aim": "To examine the executability of selected archived scientific Python components, document observed execution barriers and recovery interventions, and evaluate limitations in interpreting archive age and execution outcomes.",
+  "research_questions": {
+    "RQ1": "To what extent can selected components of archived Python research code in ecology and hydrology be executed in a contemporary computing environment?",
+    "RQ2": "What dependency, compatibility, configuration and source-code barriers are observed, and which documented interventions enable limited recovery?",
+    "RQ3": "What methodological limitations arise when interpreting archive age and execution outcomes across heterogeneous repositories?"
+  },
+  "operational_distinctions": {
+    "code_availability": "Archived source code can be accessed.",
+    "component_executability": "A selected original function, test, cell or script executes under documented conditions.",
+    "workflow_executability": "The complete intended computational workflow executes under documented conditions.",
+    "result_reproduction": "Reported scientific outputs are independently regenerated and compared against the relevant publication or authoritative reference."
+  },
+  "potential_contributions": [
+    "A scope-sensitive classification of execution outcomes.",
+    "A documented taxonomy of observed execution barriers.",
+    "Case-level evidence of limited recovery interventions.",
+    "An explicit distinction between component execution and scientific result reproduction.",
+    "An assessment of why heterogeneous baseline tests limit archive-age comparisons."
+  ],
+  "verified_descriptive_results": {
+    "sample_size": 15,
+    "ecology_candidates": 7,
+    "hydrology_candidates": 8,
+    "baseline_pass": 1,
+    "baseline_fail": 7,
+    "baseline_unknown": 6,
+    "baseline_not_attempted": 1,
+    "later_pass": 2,
+    "later_pass_limited": 13,
+    "verified_archive_ages": 11,
+    "evidence_reviewed_classifications": 6,
+    "provisional_classifications": 9
+  },
+  "publication_claims_not_supported": [
+    "All 15 full workflows were successfully executed.",
+    "Published results were reproduced for all candidates.",
+    "Archive age causes code failure.",
+    "A statistically reliable archive-age relationship has been established.",
+    "Missing dependencies prove temporal code decay.",
+    "Human recovery effort was measured in minutes.",
+    "The purposive sample represents all ecology and hydrology research software."
+  ],
+  "literature_review_themes": [
+    "Computational reproducibility of scientific software",
+    "Executability of archived Jupyter notebooks",
+    "Software dependency and environment preservation",
+    "Reproducibility debt and software maintenance",
+    "Reproducibility in ecology and hydrology",
+    "Research software archiving and provenance"
+  ],
+  "reference_verification_status": "PENDING_INDEPENDENT_BIBLIOGRAPHIC_VERIFICATION",
+  "novelty_status": "POTENTIAL_CONTRIBUTION_NOT_YET_ESTABLISHED AGAINST_PRIOR_LITERATURE",
+  "original_experimental_evidence_modified": false
+}

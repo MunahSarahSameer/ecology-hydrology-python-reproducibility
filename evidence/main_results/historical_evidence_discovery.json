@@ -1,0 +1,2060 @@
+{
+  "step": 154,
+  "assessment_type": "HISTORICAL_EVIDENCE_DISCOVERY",
+  "project_root": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay",
+  "total_files_indexed": 266,
+  "extension_counts": {
+    ".ipynb": 21,
+    ".zip": 17,
+    ".json": 124,
+    ".csv": 27,
+    ".md": 3,
+    ".txt": 74
+  },
+  "candidate_summary": {
+    "E01": {
+      "matching_files": 2,
+      "files": [
+        {
+          "path": "repositories\\E01\\code.zip",
+          "extension": ".zip",
+          "size_bytes": 3687724,
+          "candidate_matches": [
+            "E01"
+          ]
+        },
+        {
+          "path": "repositories\\E01\\metadata.json",
+          "extension": ".json",
+          "size_bytes": 5549,
+          "candidate_matches": [
+            "E01"
+          ]
+        }
+      ]
+    },
+    "E02": {
+      "matching_files": 6,
+      "files": [
+        {
+          "path": "repositories\\E02\\is_niches.zip",
+          "extension": ".zip",
+          "size_bytes": 66293378,
+          "candidate_matches": [
+            "E02"
+          ]
+        },
+        {
+          "path": "repositories\\E02\\metadata.json",
+          "extension": ".json",
+          "size_bytes": 5682,
+          "candidate_matches": [
+            "E02"
+          ]
+        },
+        {
+          "path": "repositories\\E02\\test1\\source\\is_niches\\bin\\2_is_distrib_across_genomes\\fitting_RAC.ipynb",
+          "extension": ".ipynb",
+          "size_bytes": 214231,
+          "candidate_matches": [
+            "E02"
+          ]
+        },
+        {
+          "path": "repositories\\E02\\test1\\source\\is_niches\\bin\\2_is_distrib_across_genomes\\data\\abundance.csv",
+          "extension": ".csv",
+          "size_bytes": 233455,
+          "candidate_matches": [
+            "E02"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E02_test1_baseline_log.txt",
+          "extension": ".txt",
+          "size_bytes": 512,
+          "candidate_matches": [
+            "E02"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E02_test1_validation.json",
+          "extension": ".json",
+          "size_bytes": 560,
+          "candidate_matches": [
+            "E02"
+          ]
+        }
+      ]
+    },
+    "E03": {
+      "matching_files": 13,
+      "files": [
+        {
+          "path": "repositories\\E03\\FermentomeII_package_code.zip",
+          "extension": ".zip",
+          "size_bytes": 11379435,
+          "candidate_matches": [
+            "E03"
+          ]
+        },
+        {
+          "path": "repositories\\E03\\metadata.json",
+          "extension": ".json",
+          "size_bytes": 6450,
+          "candidate_matches": [
+            "E03"
+          ]
+        },
+        {
+          "path": "repositories\\E03\\test1\\reference\\permanova_results.csv",
+          "extension": ".csv",
+          "size_bytes": 1103,
+          "candidate_matches": [
+            "E03"
+          ]
+        },
+        {
+          "path": "repositories\\E03\\test1\\reference\\perturbation_design_table.csv",
+          "extension": ".csv",
+          "size_bytes": 2426,
+          "candidate_matches": [
+            "E03"
+          ]
+        },
+        {
+          "path": "repositories\\E03\\test1\\run1\\data\\ko_clr_matrix.csv",
+          "extension": ".csv",
+          "size_bytes": 118361,
+          "candidate_matches": [
+            "E03"
+          ]
+        },
+        {
+          "path": "repositories\\E03\\test1\\run1\\data\\syncom_composition_long.csv",
+          "extension": ".csv",
+          "size_bytes": 7283,
+          "candidate_matches": [
+            "E03"
+          ]
+        },
+        {
+          "path": "repositories\\E03\\test1\\run1\\output\\permanova_results.csv",
+          "extension": ".csv",
+          "size_bytes": 1106,
+          "candidate_matches": [
+            "E03"
+          ]
+        },
+        {
+          "path": "repositories\\E03\\test1\\run1\\output\\perturbation_design_table.csv",
+          "extension": ".csv",
+          "size_bytes": 2426,
+          "candidate_matches": [
+            "E03"
+          ]
+        },
+        {
+          "path": "repositories\\E03\\test1\\source\\data\\ko_clr_matrix.csv",
+          "extension": ".csv",
+          "size_bytes": 118361,
+          "candidate_matches": [
+            "E03"
+          ]
+        },
+        {
+          "path": "repositories\\E03\\test1\\source\\data\\syncom_composition_long.csv",
+          "extension": ".csv",
+          "size_bytes": 7283,
+          "candidate_matches": [
+            "E03"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E03_test1_comparison.json",
+          "extension": ".json",
+          "size_bytes": 333,
+          "candidate_matches": [
+            "E03"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E03_test1_manifest.csv",
+          "extension": ".csv",
+          "size_bytes": 718,
+          "candidate_matches": [
+            "E03"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E03_test1_packages.txt",
+          "extension": ".txt",
+          "size_bytes": 86,
+          "candidate_matches": [
+            "E03"
+          ]
+        }
+      ]
+    },
+    "E06": {
+      "matching_files": 6,
+      "files": [
+        {
+          "path": "repositories\\E06\\Code_Figures.zip",
+          "extension": ".zip",
+          "size_bytes": 42724364,
+          "candidate_matches": [
+            "E06"
+          ]
+        },
+        {
+          "path": "repositories\\E06\\test1\\source\\FigS8_SchematicFigure.ipynb",
+          "extension": ".ipynb",
+          "size_bytes": 244187,
+          "candidate_matches": [
+            "E06"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E06_notebook_feasibility.csv",
+          "extension": ".csv",
+          "size_bytes": 4881,
+          "candidate_matches": [
+            "E06"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E06_test1_after_seaborn_log.txt",
+          "extension": ".txt",
+          "size_bytes": 600,
+          "candidate_matches": [
+            "E06"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E06_test1_baseline_log.txt",
+          "extension": ".txt",
+          "size_bytes": 424,
+          "candidate_matches": [
+            "E06"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E06_test1_recovery_log.txt",
+          "extension": ".txt",
+          "size_bytes": 207,
+          "candidate_matches": [
+            "E06"
+          ]
+        }
+      ]
+    },
+    "E07": {
+      "matching_files": 10,
+      "files": [
+        {
+          "path": "repositories\\E07\\FORspecies20K.zip",
+          "extension": ".zip",
+          "size_bytes": 20117984,
+          "candidate_matches": [
+            "E07"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_consolidated_evidence.json",
+          "extension": ".json",
+          "size_bytes": 622,
+          "candidate_matches": [
+            "E07"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_download_record.json",
+          "extension": ".json",
+          "size_bytes": 327,
+          "candidate_matches": [
+            "E07"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_master_evidence_row.csv",
+          "extension": ".csv",
+          "size_bytes": 411,
+          "candidate_matches": [
+            "E07"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_original_source_syntax_audit.json",
+          "extension": ".json",
+          "size_bytes": 16756,
+          "candidate_matches": [
+            "E07"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_runtime_readiness.json",
+          "extension": ".json",
+          "size_bytes": 417,
+          "candidate_matches": [
+            "E07"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_test1_syntax_repair.json",
+          "extension": ".json",
+          "size_bytes": 531,
+          "candidate_matches": [
+            "E07"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_test2_read_las_baseline.json",
+          "extension": ".json",
+          "size_bytes": 744,
+          "candidate_matches": [
+            "E07"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_test2_read_las_recovery.json",
+          "extension": ".json",
+          "size_bytes": 652,
+          "candidate_matches": [
+            "E07"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E07_third_layer_screening.json",
+          "extension": ".json",
+          "size_bytes": 1937,
+          "candidate_matches": [
+            "E07"
+          ]
+        }
+      ]
+    },
+    "E08": {
+      "matching_files": 38,
+      "files": [
+        {
+          "path": "repositories\\E08\\caterpillars.csv",
+          "extension": ".csv",
+          "size_bytes": 52992,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\E08\\DATASET_README.txt",
+          "extension": ".txt",
+          "size_bytes": 3359,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\E08\\sensitivity_analysis.csv",
+          "extension": ".csv",
+          "size_bytes": 29863,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\E08\\wsindy_for_dispersal.ipynb",
+          "extension": ".ipynb",
+          "size_bytes": 3843814,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_candidate_metadata.json",
+          "extension": ".json",
+          "size_bytes": 1327,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_external_source_availability.json",
+          "extension": ".json",
+          "size_bytes": 837,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_helper_source_investigation.json",
+          "extension": ".json",
+          "size_bytes": 1395,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_historical_helper_recovery.json",
+          "extension": ".json",
+          "size_bytes": 837,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_historical_source_compatibility.json",
+          "extension": ".json",
+          "size_bytes": 2700,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_kde_import_order_test.json",
+          "extension": ".json",
+          "size_bytes": 3478,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_kde_operation_diagnostic.json",
+          "extension": ".json",
+          "size_bytes": 1646,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_model_fitting_inspection.json",
+          "extension": ".json",
+          "size_bytes": 8454,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_model_prerequisite_inspection.json",
+          "extension": ".json",
+          "size_bytes": 26163,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_notebook_screening.json",
+          "extension": ".json",
+          "size_bytes": 1527,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_numerical_runtime_isolation.json",
+          "extension": ".json",
+          "size_bytes": 2878,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_openmp_diagnostic.json",
+          "extension": ".json",
+          "size_bytes": 7243,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_openmp_failure_isolation.json",
+          "extension": ".json",
+          "size_bytes": 2327,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_runtime_readiness.json",
+          "extension": ".json",
+          "size_bytes": 3121,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_scientific_workflow_inspection.json",
+          "extension": ".json",
+          "size_bytes": 50589,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test10_potential_library.json",
+          "extension": ".json",
+          "size_bytes": 2997,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test11_sparse_model_fitting.json",
+          "extension": ".json",
+          "size_bytes": 4014,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test12_utf8_model_fitting.json",
+          "extension": ".json",
+          "size_bytes": 4255,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test1_data_path_recovery.json",
+          "extension": ".json",
+          "size_bytes": 2349,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test2_dependency_import.json",
+          "extension": ".json",
+          "size_bytes": 2691,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test3_data_preparation.json",
+          "extension": ".json",
+          "size_bytes": 1109,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test3_data_preparation_corrected.json",
+          "extension": ".json",
+          "size_bytes": 1160,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test4_kde_interpolation.json",
+          "extension": ".json",
+          "size_bytes": 1331,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test5_original_kde_recovery.json",
+          "extension": ".json",
+          "size_bytes": 1626,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test6_wsindy_initialization.json",
+          "extension": ".json",
+          "size_bytes": 1763,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test7_library_construction.json",
+          "extension": ".json",
+          "size_bytes": 2150,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test7_library_construction_corrected.json",
+          "extension": ".json",
+          "size_bytes": 2082,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test8_library_matrix_validation.json",
+          "extension": ".json",
+          "size_bytes": 2664,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_test9_trimmed_library.json",
+          "extension": ".json",
+          "size_bytes": 2445,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "repositories\\results\\E08_threading_recovery_test.json",
+          "extension": ".json",
+          "size_bytes": 3050,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "results\\E08_original_results_inspection.json",
+          "extension": ".json",
+          "size_bytes": 2017,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "results\\E08_recovered_coefficients.csv",
+          "extension": ".csv",
+          "size_bytes": 704,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "results\\E08_recovered_scientific_results.json",
+          "extension": ".json",
+          "size_bytes": 1365,
+          "candidate_matches": [
+            "E08"
+          ]
+        },
+        {
+          "path": "results\\E08_reproduction_comparison.json",
+          "extension": ".json",
+          "size_bytes": 1199,
+          "candidate_matches": [
+            "E08"
+          ]
+        }
+      ]
+    },
+    "E10": {
+      "matching_files": 13,
+      "files": [
+        {
+          "path": "results\\E10_auc_corrected_validation.json",
+          "extension": ".json",
+          "size_bytes": 1076,
+          "candidate_matches": [
+            "E10"
+          ]
+        },
+        {
+          "path": "results\\E10_auc_function_validation.json",
+          "extension": ".json",
+          "size_bytes": 1354,
+          "candidate_matches": [
+            "E10"
+          ]
+        },
+        {
+          "path": "results\\E10_consolidated_assessment.json",
+          "extension": ".json",
+          "size_bytes": 1852,
+          "candidate_matches": [
+            "E10"
+          ]
+        },
+        {
+          "path": "results\\E10_data_availability.json",
+          "extension": ".json",
+          "size_bytes": 3336,
+          "candidate_matches": [
+            "E10"
+          ]
+        },
+        {
+          "path": "results\\E10_dependency_readiness.json",
+          "extension": ".json",
+          "size_bytes": 3703,
+          "candidate_matches": [
+            "E10"
+          ]
+        },
+        {
+          "path": "results\\E10_external_data_investigation.json",
+          "extension": ".json",
+          "size_bytes": 1602,
+          "candidate_matches": [
+            "E10"
+          ]
+        },
+        {
+          "path": "results\\E10_function_execution.json",
+          "extension": ".json",
+          "size_bytes": 2504,
+          "candidate_matches": [
+            "E10"
+          ]
+        },
+        {
+          "path": "results\\E10_function_testability.json",
+          "extension": ".json",
+          "size_bytes": 1560,
+          "candidate_matches": [
+            "E10"
+          ]
+        },
+        {
+          "path": "results\\E10_import_baseline.json",
+          "extension": ".json",
+          "size_bytes": 3739,
+          "candidate_matches": [
+            "E10"
+          ]
+        },
+        {
+          "path": "results\\E10_independence_audit.json",
+          "extension": ".json",
+          "size_bytes": 500,
+          "candidate_matches": [
+            "E10"
+          ]
+        },
+        {
+          "path": "results\\E10_initial_screening.json",
+          "extension": ".json",
+          "size_bytes": 996,
+          "candidate_matches": [
+            "E10"
+          ]
+        },
+        {
+          "path": "results\\E10_runtime_requirements.json",
+          "extension": ".json",
+          "size_bytes": 20287,
+          "candidate_matches": [
+            "E10"
+          ]
+        },
+        {
+          "path": "results\\E10_source_audit.json",
+          "extension": ".json",
+          "size_bytes": 4010,
+          "candidate_matches": [
+            "E10"
+          ]
+        }
+      ]
+    },
+    "H01": {
+      "matching_files": 5,
+      "files": [
+        {
+          "path": "repositories\\H01\\Data and codes.zip",
+          "extension": ".zip",
+          "size_bytes": 1399022,
+          "candidate_matches": [
+            "H01"
+          ]
+        },
+        {
+          "path": "repositories\\H01\\metadata.json",
+          "extension": ".json",
+          "size_bytes": 4604,
+          "candidate_matches": [
+            "H01"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H01_test1_baseline_log.txt",
+          "extension": ".txt",
+          "size_bytes": 190,
+          "candidate_matches": [
+            "H01"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H01_test1_packages.txt",
+          "extension": ".txt",
+          "size_bytes": 248,
+          "candidate_matches": [
+            "H01"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H01_test1_with_dependencies_log.txt",
+          "extension": ".txt",
+          "size_bytes": 1165,
+          "candidate_matches": [
+            "H01"
+          ]
+        }
+      ]
+    },
+    "H02": {
+      "matching_files": 13,
+      "files": [
+        {
+          "path": "repositories\\H02\\FloodSformer-v1.0.1.zip",
+          "extension": ".zip",
+          "size_bytes": 3753224,
+          "candidate_matches": [
+            "H02"
+          ]
+        },
+        {
+          "path": "repositories\\H02\\metadata.json",
+          "extension": ".json",
+          "size_bytes": 6626,
+          "candidate_matches": [
+            "H02"
+          ]
+        },
+        {
+          "path": "repositories\\H02\\test1\\source\\mpianforini-FloodSformer-3a06265\\README.md",
+          "extension": ".md",
+          "size_bytes": 5679,
+          "candidate_matches": [
+            "H02"
+          ]
+        },
+        {
+          "path": "repositories\\H02\\test1\\source\\mpianforini-FloodSformer-3a06265\\docs\\Dataset&Checkpoint.md",
+          "extension": ".md",
+          "size_bytes": 5683,
+          "candidate_matches": [
+            "H02"
+          ]
+        },
+        {
+          "path": "repositories\\H02\\test1\\source\\mpianforini-FloodSformer-3a06265\\docs\\demo\\Demo_FS.ipynb",
+          "extension": ".ipynb",
+          "size_bytes": 9730,
+          "candidate_matches": [
+            "H02"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H02_test1_after_fvcore_log.txt",
+          "extension": ".txt",
+          "size_bytes": 1935,
+          "candidate_matches": [
+            "H02"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H02_test1_after_simplejson_log.txt",
+          "extension": ".txt",
+          "size_bytes": 1045,
+          "candidate_matches": [
+            "H02"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H02_test1_baseline_log.txt",
+          "extension": ".txt",
+          "size_bytes": 1439,
+          "candidate_matches": [
+            "H02"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H02_test1_cpu_5d_recovery_log.txt",
+          "extension": ".txt",
+          "size_bytes": 951,
+          "candidate_matches": [
+            "H02"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H02_test1_cpu_forward_pass_log.txt",
+          "extension": ".txt",
+          "size_bytes": 583,
+          "candidate_matches": [
+            "H02"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H02_test1_cpu_pythonpath_recovery_log.txt",
+          "extension": ".txt",
+          "size_bytes": 1963,
+          "candidate_matches": [
+            "H02"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H02_test1_readme_recovery_log.txt",
+          "extension": ".txt",
+          "size_bytes": 13509,
+          "candidate_matches": [
+            "H02"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H02_test1_validation.json",
+          "extension": ".json",
+          "size_bytes": 1614,
+          "candidate_matches": [
+            "H02"
+          ]
+        }
+      ]
+    },
+    "H03": {
+      "matching_files": 10,
+      "files": [
+        {
+          "path": "repositories\\H03\\Hydrological-controls---Code-and-Data-Hydrology.zip",
+          "extension": ".zip",
+          "size_bytes": 5678528,
+          "candidate_matches": [
+            "H03"
+          ]
+        },
+        {
+          "path": "repositories\\H03\\metadata.json",
+          "extension": ".json",
+          "size_bytes": 4906,
+          "candidate_matches": [
+            "H03"
+          ]
+        },
+        {
+          "path": "repositories\\H03\\test1\\recovery1\\RF_dataset.csv",
+          "extension": ".csv",
+          "size_bytes": 8824482,
+          "candidate_matches": [
+            "H03"
+          ]
+        },
+        {
+          "path": "repositories\\H03\\test1\\recovery2\\RF_dataset.csv",
+          "extension": ".csv",
+          "size_bytes": 8824482,
+          "candidate_matches": [
+            "H03"
+          ]
+        },
+        {
+          "path": "repositories\\H03\\test1\\source\\01_RF_dataset.csv",
+          "extension": ".csv",
+          "size_bytes": 8824482,
+          "candidate_matches": [
+            "H03"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H03_test1_after_sklearn_log.txt",
+          "extension": ".txt",
+          "size_bytes": 1553,
+          "candidate_matches": [
+            "H03"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H03_test1_baseline_log.txt",
+          "extension": ".txt",
+          "size_bytes": 462,
+          "candidate_matches": [
+            "H03"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H03_test1_filename_recovery_probe.txt",
+          "extension": ".txt",
+          "size_bytes": 211,
+          "candidate_matches": [
+            "H03"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H03_test1_resource_limited_log.txt",
+          "extension": ".txt",
+          "size_bytes": 260,
+          "candidate_matches": [
+            "H03"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H03_test1_summary.json",
+          "extension": ".json",
+          "size_bytes": 1129,
+          "candidate_matches": [
+            "H03"
+          ]
+        }
+      ]
+    },
+    "H05": {
+      "matching_files": 53,
+      "files": [
+        {
+          "path": "repositories\\H05\\metadata.json",
+          "extension": ".json",
+          "size_bytes": 5462,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\neuralhydrology-v.1.2.3.zip",
+          "extension": ".zip",
+          "size_bytes": 5905672,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\1_basin_test_set.txt",
+          "extension": ".txt",
+          "size_bytes": 9,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\4_basins_test_set.txt",
+          "extension": ".txt",
+          "size_bytes": 36,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\daymet\\01022500_lump_cida_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 86231,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\daymet\\01547700_lump_cida_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 64729,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\daymet\\02064000_lump_cida_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 64922,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\daymet\\03015500_lump_cida_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 64727,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\maurer\\01022500_lump_maurer_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 64579,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\maurer\\01547700_lump_maurer_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 64599,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\maurer\\02064000_lump_maurer_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 64718,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\maurer\\03015500_lump_maurer_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 64611,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\maurer_extended\\01022500_lump_maurer_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 60887,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\maurer_extended\\01547700_lump_maurer_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 60611,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\maurer_extended\\02064000_lump_maurer_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 60795,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\maurer_extended\\03015500_lump_maurer_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 60919,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\nldas\\01022500_lump_nldas_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 64665,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\nldas\\01547700_lump_nldas_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 64702,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\nldas\\02064000_lump_nldas_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 64882,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\basin_mean_forcing\\nldas\\03015500_lump_nldas_forcing_leap.txt",
+          "extension": ".txt",
+          "size_bytes": 64728,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\camels_attributes_v2.0\\camels_clim.txt",
+          "extension": ".txt",
+          "size_bytes": 100673,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\camels_attributes_v2.0\\camels_geol.txt",
+          "extension": ".txt",
+          "size_bytes": 71583,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\camels_attributes_v2.0\\camels_hydro.txt",
+          "extension": ".txt",
+          "size_bytes": 122799,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\camels_attributes_v2.0\\camels_name.txt",
+          "extension": ".txt",
+          "size_bytes": 30417,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\camels_attributes_v2.0\\camels_soil.txt",
+          "extension": ".txt",
+          "size_bytes": 109125,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\camels_attributes_v2.0\\camels_topo.txt",
+          "extension": ".txt",
+          "size_bytes": 38677,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\camels_attributes_v2.0\\camels_vege.txt",
+          "extension": ".txt",
+          "size_bytes": 107970,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\camels_attributes_v2.0\\readme.txt",
+          "extension": ".txt",
+          "size_bytes": 1704,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\usgs_streamflow\\01022500_streamflow_qc.txt",
+          "extension": ".txt",
+          "size_bytes": 34426,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\usgs_streamflow\\01547700_streamflow_qc.txt",
+          "extension": ".txt",
+          "size_bytes": 34004,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\usgs_streamflow\\02064000_streamflow_qc.txt",
+          "extension": ".txt",
+          "size_bytes": 34190,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\H05\\test1\\source\\test\\test_data\\camels_us\\usgs_streamflow\\03015500_streamflow_qc.txt",
+          "extension": ".txt",
+          "size_bytes": 34156,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_control_environment_creation_log.txt",
+          "extension": ".txt",
+          "size_bytes": 6840,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_environment_creation_log.txt",
+          "extension": ".txt",
+          "size_bytes": 5195,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_203_clone_log.txt",
+          "extension": ".txt",
+          "size_bytes": 6828,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_203_install_log.txt",
+          "extension": ".txt",
+          "size_bytes": 8581,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_203_packages.txt",
+          "extension": ".txt",
+          "size_bytes": 1091,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_203_summary.json",
+          "extension": ".json",
+          "size_bytes": 609,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_203_test_log.txt",
+          "extension": ".txt",
+          "size_bytes": 910,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_control_install_log.txt",
+          "extension": ".txt",
+          "size_bytes": 9058,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_control_packages.txt",
+          "extension": ".txt",
+          "size_bytes": 1091,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_control_summary.json",
+          "extension": ".json",
+          "size_bytes": 1044,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_pandas_control_test_log.txt",
+          "extension": ".txt",
+          "size_bytes": 9909,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_recovery_dependencies_log.txt",
+          "extension": ".txt",
+          "size_bytes": 7080,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_recovery_packages.txt",
+          "extension": ".txt",
+          "size_bytes": 1130,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_test1_after_pytest_log.txt",
+          "extension": ".txt",
+          "size_bytes": 867,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_test1_after_ruamel_log.txt",
+          "extension": ".txt",
+          "size_bytes": 2265,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_test1_after_xarray_log.txt",
+          "extension": ".txt",
+          "size_bytes": 9569,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_test1_baseline_log.txt",
+          "extension": ".txt",
+          "size_bytes": 190,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_test1_compatibility_assessment.json",
+          "extension": ".json",
+          "size_bytes": 778,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_test1_final_summary.json",
+          "extension": ".json",
+          "size_bytes": 1217,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_test1_recovery_environment_log.txt",
+          "extension": ".txt",
+          "size_bytes": 914,
+          "candidate_matches": [
+            "H05"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H05_version_comparison.json",
+          "extension": ".json",
+          "size_bytes": 387,
+          "candidate_matches": [
+            "H05"
+          ]
+        }
+      ]
+    },
+    "H06": {
+      "matching_files": 2,
+      "files": [
+        {
+          "path": "repositories\\H06\\S4D_rainfall_runoff_simulations.zip",
+          "extension": ".zip",
+          "size_bytes": 430765,
+          "candidate_matches": [
+            "H06"
+          ]
+        },
+        {
+          "path": "repositories\\results\\H06_assessment.json",
+          "extension": ".json",
+          "size_bytes": 865,
+          "candidate_matches": [
+            "H06"
+          ]
+        }
+      ]
+    },
+    "H07": {
+      "matching_files": 15,
+      "files": [
+        {
+          "path": "repositories\\H07\\PyTOPKAPI-v0.4.0-original.zip",
+          "extension": ".zip",
+          "size_bytes": 8000741,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_complete_syntax_recovery.json",
+          "extension": ".json",
+          "size_bytes": 13655,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_consolidated_assessment.json",
+          "extension": ".json",
+          "size_bytes": 3021,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_dependency_audit.json",
+          "extension": ".json",
+          "size_bytes": 4469,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_independence_audit.json",
+          "extension": ".json",
+          "size_bytes": 1413,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_infiltration_numerical_repeatability.json",
+          "extension": ".json",
+          "size_bytes": 4915,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_infiltration_source_inspection.json",
+          "extension": ".json",
+          "size_bytes": 2842,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_initial_screening.json",
+          "extension": ".json",
+          "size_bytes": 2696,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_original_infiltration_execution.json",
+          "extension": ".json",
+          "size_bytes": 1340,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_runtime_dependency_baseline.json",
+          "extension": ".json",
+          "size_bytes": 2586,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_scientific_test_screening.json",
+          "extension": ".json",
+          "size_bytes": 6513,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_syntax_dependency_baseline.json",
+          "extension": ".json",
+          "size_bytes": 5193,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_syntax_failure_investigation.json",
+          "extension": ".json",
+          "size_bytes": 6291,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_syntax_recovery.json",
+          "extension": ".json",
+          "size_bytes": 2678,
+          "candidate_matches": [
+            "H07"
+          ]
+        },
+        {
+          "path": "results\\H07_syntax_recovery_step115.json",
+          "extension": ".json",
+          "size_bytes": 3652,
+          "candidate_matches": [
+            "H07"
+          ]
+        }
+      ]
+    },
+    "H08": {
+      "matching_files": 16,
+      "files": [
+        {
+          "path": "repositories\\H08\\pygflow_1.0.2-original.zip",
+          "extension": ".zip",
+          "size_bytes": 23908624,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_archive_metadata_screening.json",
+          "extension": ".json",
+          "size_bytes": 1598,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_ast_match_investigation.json",
+          "extension": ".json",
+          "size_bytes": 6299,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_candidate_discovery.json",
+          "extension": ".json",
+          "size_bytes": 38745,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_consolidated_assessment.json",
+          "extension": ".json",
+          "size_bytes": 2634,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_dependency_availability.json",
+          "extension": ".json",
+          "size_bytes": 4656,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_final_independence_classification.json",
+          "extension": ".json",
+          "size_bytes": 1127,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_independence_audit.json",
+          "extension": ".json",
+          "size_bytes": 5383,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_initial_archive_inspection.json",
+          "extension": ".json",
+          "size_bytes": 4704,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_original_prms_record_execution.json",
+          "extension": ".json",
+          "size_bytes": 2204,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_original_test_screening.json",
+          "extension": ".json",
+          "size_bytes": 28907,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_prms_implementation_dependency_trace.json",
+          "extension": ".json",
+          "size_bytes": 4783,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_prms_record_test_inspection.json",
+          "extension": ".json",
+          "size_bytes": 6864,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_prms_test_repeatability.json",
+          "extension": ".json",
+          "size_bytes": 4389,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_supporting_module_dependency_trace.json",
+          "extension": ".json",
+          "size_bytes": 9030,
+          "candidate_matches": [
+            "H08"
+          ]
+        },
+        {
+          "path": "results\\H08_syntax_dependency_baseline.json",
+          "extension": ".json",
+          "size_bytes": 16472,
+          "candidate_matches": [
+            "H08"
+          ]
+        }
+      ]
+    },
+    "H09": {
+      "matching_files": 15,
+      "files": [
+        {
+          "path": "repositories\\H09\\swatpy-v0.2-original.zip",
+          "extension": ".zip",
+          "size_bytes": 2049625,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_archive_metadata_screening.json",
+          "extension": ".json",
+          "size_bytes": 1680,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_consolidated_assessment.json",
+          "extension": ".json",
+          "size_bytes": 2761,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_dependency_availability.json",
+          "extension": ".json",
+          "size_bytes": 2431,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_hydrological_efficiency_inspection.json",
+          "extension": ".json",
+          "size_bytes": 12975,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_initial_archive_inspection.json",
+          "extension": ".json",
+          "size_bytes": 1697,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_masked_array_numerical_diagnostic.json",
+          "extension": ".json",
+          "size_bytes": 1291,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_masked_reduction_verification.json",
+          "extension": ".json",
+          "size_bytes": 2952,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_missing_data_investigation.json",
+          "extension": ".json",
+          "size_bytes": 2538,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_original_efficiency_execution.json",
+          "extension": ".json",
+          "size_bytes": 1435,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_original_efficiency_execution_recheck.json",
+          "extension": ".json",
+          "size_bytes": 3493,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_original_efficiency_repeatability.json",
+          "extension": ".json",
+          "size_bytes": 2208,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_original_function_screening.json",
+          "extension": ".json",
+          "size_bytes": 49261,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_source_independence_audit.json",
+          "extension": ".json",
+          "size_bytes": 3290,
+          "candidate_matches": [
+            "H09"
+          ]
+        },
+        {
+          "path": "results\\H09_syntax_dependency_baseline.json",
+          "extension": ".json",
+          "size_bytes": 6030,
+          "candidate_matches": [
+            "H09"
+          ]
+        }
+      ]
+    }
+  },
+  "unassigned_archives": [
+    {
+      "path": "repositories\\code.zip",
+      "extension": ".zip",
+      "size_bytes": 3687724,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\code.zip",
+      "extension": ".zip",
+      "size_bytes": 3687724,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\data.zip",
+      "extension": ".zip",
+      "size_bytes": 82450220,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E09\\code.zip",
+      "extension": ".zip",
+      "size_bytes": 3687724,
+      "candidate_matches": []
+    }
+  ],
+  "unassigned_json": [
+    {
+      "path": "repositories\\E04\\metadata.json",
+      "extension": ".json",
+      "size_bytes": 15302,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E05\\metadata.json",
+      "extension": ".json",
+      "size_bytes": 8770,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\H04\\metadata.json",
+      "extension": ".json",
+      "size_bytes": 6082,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\results\\additional_archive_manifest.json",
+      "extension": ".json",
+      "size_bytes": 481,
+      "candidate_matches": []
+    },
+    {
+      "path": "results\\E09_duplicate_check.json",
+      "extension": ".json",
+      "size_bytes": 1207,
+      "candidate_matches": []
+    },
+    {
+      "path": "results\\E09_initial_screening.json",
+      "extension": ".json",
+      "size_bytes": 4657,
+      "candidate_matches": []
+    },
+    {
+      "path": "results\\final_sample_evidence_audit.json",
+      "extension": ".json",
+      "size_bytes": 14790,
+      "candidate_matches": []
+    },
+    {
+      "path": "results\\hydrology_candidate_discovery.json",
+      "extension": ".json",
+      "size_bytes": 11956,
+      "candidate_matches": []
+    },
+    {
+      "path": "results\\research_package_inventory.json",
+      "extension": ".json",
+      "size_bytes": 2188,
+      "candidate_matches": []
+    },
+    {
+      "path": "results\\research_sample_audit.json",
+      "extension": ".json",
+      "size_bytes": 3028,
+      "candidate_matches": []
+    }
+  ],
+  "notebooks": [
+    {
+      "path": "00_Research_Setup.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 4930,
+      "candidate_matches": []
+    },
+    {
+      "path": "01_Archive_Discovery.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 2312007,
+      "candidate_matches": []
+    },
+    {
+      "path": ".ipynb_checkpoints\\00_Research_Setup-checkpoint.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 4930,
+      "candidate_matches": []
+    },
+    {
+      "path": ".ipynb_checkpoints\\01_Archive_Discovery-checkpoint.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 1585951,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E02\\test1\\source\\is_niches\\bin\\2_is_distrib_across_genomes\\fitting_RAC.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 214231,
+      "candidate_matches": [
+        "E02"
+      ]
+    },
+    {
+      "path": "repositories\\E04\\test1\\source\\code\\deepSDM\\notebooks\\auc_plots_detail.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 2428,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\test1\\source\\code\\deepSDM\\notebooks\\calc_num_obs.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 10362,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\test1\\source\\code\\deepSDM\\notebooks\\calc_split_properties.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 103372,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\test1\\source\\code\\deepSDM\\notebooks\\compare_across_splits.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 98735,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\test1\\source\\code\\deepSDM\\notebooks\\compare_across_taxa.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 636567,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\test1\\source\\code\\deepSDM\\notebooks\\compare_num_obs.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 3303,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\test1\\source\\code\\deepSDM\\notebooks\\compare_results.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 2059161,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\test1\\source\\code\\deepSDM\\notebooks\\compare_species_dists.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 50606,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\test1\\source\\code\\deepSDM\\notebooks\\consolidate_results.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 9553,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\test1\\source\\code\\deepSDM\\notebooks\\performance_correlation.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 1024802,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\test1\\source\\code\\deepSDM\\notebooks\\visualise_results.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 23357,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\test1\\source\\code\\deepSDM\\notebooks\\visualise_results_old.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 617599,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E04\\test1\\source\\code\\deepSDM\\notebooks\\vis_results_ablation_frac.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 246279,
+      "candidate_matches": []
+    },
+    {
+      "path": "repositories\\E06\\test1\\source\\FigS8_SchematicFigure.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 244187,
+      "candidate_matches": [
+        "E06"
+      ]
+    },
+    {
+      "path": "repositories\\E08\\wsindy_for_dispersal.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 3843814,
+      "candidate_matches": [
+        "E08"
+      ]
+    },
+    {
+      "path": "repositories\\H02\\test1\\source\\mpianforini-FloodSformer-3a06265\\docs\\demo\\Demo_FS.ipynb",
+      "extension": ".ipynb",
+      "size_bytes": 9730,
+      "candidate_matches": [
+        "H02"
+      ]
+    }
+  ],
+  "scan_errors": [],
+  "limitations": [
+    "Filename matching does not establish evidence relevance.",
+    "Notebook contents were not inspected.",
+    "File contents were not executed.",
+    "Only files under the current project root were searched.",
+    "No missing files were recreated or downloaded."
+  ],
+  "generated_at_utc": "2026-11-11T02:31:51.348015+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "case": "E03",
+  "test": "test2_controlled_execution",
+  "started_utc": "2026-11-12T23:11:50.036156+00:00",
+  "finished_utc": "2026-11-12T23:12:35.738657+00:00",
+  "command": [
+    "C:\\Users/REDACTED\\anaconda3\\python.exe",
+    "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E03\\test2\\01_permanova.py"
+  ],
+  "cwd": "C:\\Users/REDACTED\\Downloads\\Computer Science Project testing for ecology and Hydrology Code Decay\\repositories\\E03\\test2",
+  "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+  "python_executable": "C:\\Users/REDACTED\\anaconda3\\python.exe",
+  "numpy": "2.4.6",
+  "pandas": "3.0.3",
+  "duration_seconds": 45.702515,
+  "return_code": 0,
+  "timeout_seconds": 180,
+  "stdout": "                            test                                       term  pct_variance         F  df  p_perm                            method\n          1. primary role (n=18) primary_role (Dominant vs Subdominant LAB)     38.705453  8.379131   1  0.0006            Monte Carlo, 9999 perm\n          1. primary role (n=18)                        secondary_condition      3.343043  0.361859   2  0.9262            Monte Carlo, 9999 perm\n          1. primary role (n=18)               role x secondary interaction      2.520285  0.272801   2  0.9858            Monte Carlo, 9999 perm\n          1. primary role (n=18)                                   residual     55.431218       NaN  12     NaN                                  \n  2. Dominant LAB identity (n=6)  identity (plantarum vs fermentum removed)     87.669178 28.439038   1  0.1000 exact, all C(6,3)=20 arrangements\n3. Subdominant LAB rescue (n=12)    origin (rossiae vs pentosaceus removed)     40.587653  8.290375   1  0.0001            Monte Carlo, 9999 perm\n3. Subdominant LAB rescue (n=12)           replacement (brevis vs curvatus)     13.533562  2.764346   1  0.0362            Monte Carlo, 9999 perm\n3. Subdominant LAB rescue (n=12)           origin x replacement interaction      6.712736  1.371134   1  0.1508            Monte Carlo, 9999 perm\n3. Subdominant LAB rescue (n=12)                                   residual     39.166048       NaN   8     NaN                                  \n",
+  "stderr": "",
+  "outputs": [
+    {
+      "file": "output\\permanova_results.csv",
+      "bytes": 1116,
+      "sha256": "593d7775607dceb95769a96d571d5119149d5ad98d30de85c9187713ff6884af"
+    },
+    {
+      "file": "output\\perturbation_design_table.csv",
+      "bytes": 2446,
+      "sha256": "e65b3bc10218c7dd15d7bd6a5d7dda0e9503318ac572322f188029f59fd47930"
+    }
+  ]
+}

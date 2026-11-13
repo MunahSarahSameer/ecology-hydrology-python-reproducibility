@@ -1,0 +1,114 @@
+{
+  "step": 90,
+  "inventory": [
+    {
+      "package_id": "E01",
+      "python_files": 0,
+      "notebooks": 0,
+      "archives": 1
+    },
+    {
+      "package_id": "E02",
+      "python_files": 1,
+      "notebooks": 1,
+      "archives": 1
+    },
+    {
+      "package_id": "E03",
+      "python_files": 2,
+      "notebooks": 0,
+      "archives": 1
+    },
+    {
+      "package_id": "E04",
+      "python_files": 63,
+      "notebooks": 13,
+      "archives": 2
+    },
+    {
+      "package_id": "E05",
+      "python_files": 0,
+      "notebooks": 0,
+      "archives": 0
+    },
+    {
+      "package_id": "E06",
+      "python_files": 3,
+      "notebooks": 1,
+      "archives": 1
+    },
+    {
+      "package_id": "E07",
+      "python_files": 3,
+      "notebooks": 0,
+      "archives": 1
+    },
+    {
+      "package_id": "E08",
+      "python_files": 35,
+      "notebooks": 1,
+      "archives": 0
+    },
+    {
+      "package_id": "E09",
+      "python_files": 0,
+      "notebooks": 0,
+      "archives": 0
+    },
+    {
+      "package_id": "E10",
+      "python_files": 0,
+      "notebooks": 0,
+      "archives": 0
+    },
+    {
+      "package_id": "H01",
+      "python_files": 2,
+      "notebooks": 0,
+      "archives": 1
+    },
+    {
+      "package_id": "H02",
+      "python_files": 43,
+      "notebooks": 1,
+      "archives": 1
+    },
+    {
+      "package_id": "H03",
+      "python_files": 3,
+      "notebooks": 0,
+      "archives": 1
+    },
+    {
+      "package_id": "H04",
+      "python_files": 0,
+      "notebooks": 0,
+      "archives": 0
+    },
+    {
+      "package_id": "H05",
+      "python_files": 61,
+      "notebooks": 0,
+      "archives": 1
+    },
+    {
+      "package_id": "H06",
+      "python_files": 0,
+      "notebooks": 0,
+      "archives": 1
+    },
+    {
+      "package_id": "H07",
+      "python_files": 0,
+      "notebooks": 0,
+      "archives": 0
+    },
+    {
+      "package_id": "H08",
+      "python_files": 0,
+      "notebooks": 0,
+      "archives": 0
+    }
+  ],
+  "note": "Directory inventory only. Folder counts do not establish independent research package counts."
+}

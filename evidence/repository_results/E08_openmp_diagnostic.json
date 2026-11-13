@@ -1,0 +1,75 @@
+{
+  "archive_id": "E08",
+  "test": "OpenMP import-order diagnostic",
+  "python": "3.11.18 | packaged by Anaconda, Inc. | (main, Oct 26 2026, 18:13:29) [MSC v.1942 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "torch": "2.15.0+cpu",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "threadpoolctl": "3.8.0",
+    "symengine": "0.15.0"
+  },
+  "diagnostics": {
+    "numpy_only": {
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.47,
+      "stdout": "IMPORTS: PASS\nTHREADPOOLS: [{\"user_api\": \"blas\", \"internal_api\": \"mkl\", \"num_threads\": 8, \"prefix\": \"mkl_rt\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Library\\\\bin\\\\mkl_rt.2.dll\", \"version\": \"2025.0-Product\", \"threading_layer\": \"intel\"}]\n",
+      "stderr": ""
+    },
+    "torch_only": {
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 3.684,
+      "stdout": "IMPORTS: PASS\nTHREADPOOLS: [{\"user_api\": \"openmp\", \"internal_api\": \"openmp\", \"num_threads\": 8, \"prefix\": \"libiomp\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\site-packages\\\\torch\\\\lib\\\\libiomp5md.dll\", \"version\": null}, {\"user_api\": \"openmp\", \"internal_api\": \"openmp\", \"num_threads\": 1, \"prefix\": \"libiomp\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\site-packages\\\\torch\\\\lib\\\\libiompstubs5md.dll\", \"version\": null}, {\"user_api\": \"blas\", \"internal_api\": \"mkl\", \"num_threads\": 8, \"prefix\": \"mkl_rt\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Library\\\\bin\\\\mkl_rt.2.dll\", \"version\": \"2025.0-Product\", \"threading_layer\": \"intel\"}]\n",
+      "stderr": ""
+    },
+    "scipy_only": {
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.475,
+      "stdout": "IMPORTS: PASS\nTHREADPOOLS: [{\"user_api\": \"blas\", \"internal_api\": \"mkl\", \"num_threads\": 8, \"prefix\": \"mkl_rt\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Library\\\\bin\\\\mkl_rt.2.dll\", \"version\": \"2025.0-Product\", \"threading_layer\": \"intel\"}]\n",
+      "stderr": ""
+    },
+    "numpy_then_torch": {
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 4.792,
+      "stdout": "IMPORTS: PASS\nTHREADPOOLS: [{\"user_api\": \"blas\", \"internal_api\": \"mkl\", \"num_threads\": 8, \"prefix\": \"mkl_rt\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Library\\\\bin\\\\mkl_rt.2.dll\", \"version\": \"2025.0-Product\", \"threading_layer\": \"intel\"}, {\"user_api\": \"openmp\", \"internal_api\": \"openmp\", \"num_threads\": 8, \"prefix\": \"libiomp\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\site-packages\\\\torch\\\\lib\\\\libiomp5md.dll\", \"version\": null}, {\"user_api\": \"openmp\", \"internal_api\": \"openmp\", \"num_threads\": 1, \"prefix\": \"libiomp\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\site-packages\\\\torch\\\\lib\\\\libiompstubs5md.dll\", \"version\": null}]\n",
+      "stderr": ""
+    },
+    "torch_then_numpy": {
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 4.798,
+      "stdout": "IMPORTS: PASS\nTHREADPOOLS: [{\"user_api\": \"openmp\", \"internal_api\": \"openmp\", \"num_threads\": 8, \"prefix\": \"libiomp\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\site-packages\\\\torch\\\\lib\\\\libiomp5md.dll\", \"version\": null}, {\"user_api\": \"openmp\", \"internal_api\": \"openmp\", \"num_threads\": 1, \"prefix\": \"libiomp\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\site-packages\\\\torch\\\\lib\\\\libiompstubs5md.dll\", \"version\": null}, {\"user_api\": \"blas\", \"internal_api\": \"mkl\", \"num_threads\": 8, \"prefix\": \"mkl_rt\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Library\\\\bin\\\\mkl_rt.2.dll\", \"version\": \"2025.0-Product\", \"threading_layer\": \"intel\"}]\n",
+      "stderr": ""
+    },
+    "numpy_scipy_torch": {
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 4.077,
+      "stdout": "IMPORTS: PASS\nTHREADPOOLS: [{\"user_api\": \"blas\", \"internal_api\": \"mkl\", \"num_threads\": 8, \"prefix\": \"mkl_rt\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Library\\\\bin\\\\mkl_rt.2.dll\", \"version\": \"2025.0-Product\", \"threading_layer\": \"intel\"}, {\"user_api\": \"openmp\", \"internal_api\": \"openmp\", \"num_threads\": 8, \"prefix\": \"libiomp\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\site-packages\\\\torch\\\\lib\\\\libiomp5md.dll\", \"version\": null}, {\"user_api\": \"openmp\", \"internal_api\": \"openmp\", \"num_threads\": 1, \"prefix\": \"libiomp\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\site-packages\\\\torch\\\\lib\\\\libiompstubs5md.dll\", \"version\": null}]\n",
+      "stderr": ""
+    },
+    "torch_numpy_scipy": {
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 4.779,
+      "stdout": "IMPORTS: PASS\nTHREADPOOLS: [{\"user_api\": \"openmp\", \"internal_api\": \"openmp\", \"num_threads\": 8, \"prefix\": \"libiomp\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\site-packages\\\\torch\\\\lib\\\\libiomp5md.dll\", \"version\": null}, {\"user_api\": \"openmp\", \"internal_api\": \"openmp\", \"num_threads\": 1, \"prefix\": \"libiomp\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\site-packages\\\\torch\\\\lib\\\\libiompstubs5md.dll\", \"version\": null}, {\"user_api\": \"blas\", \"internal_api\": \"mkl\", \"num_threads\": 8, \"prefix\": \"mkl_rt\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Library\\\\bin\\\\mkl_rt.2.dll\", \"version\": \"2025.0-Product\", \"threading_layer\": \"intel\"}]\n",
+      "stderr": ""
+    },
+    "original_test_imports": {
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 5.207,
+      "stdout": "IMPORTS: PASS\nTHREADPOOLS: [{\"user_api\": \"blas\", \"internal_api\": \"mkl\", \"num_threads\": 8, \"prefix\": \"mkl_rt\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Library\\\\bin\\\\mkl_rt.2.dll\", \"version\": \"2025.0-Product\", \"threading_layer\": \"intel\"}, {\"user_api\": \"openmp\", \"internal_api\": \"openmp\", \"num_threads\": 8, \"prefix\": \"libiomp\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\site-packages\\\\torch\\\\lib\\\\libiomp5md.dll\", \"version\": null}, {\"user_api\": \"openmp\", \"internal_api\": \"openmp\", \"num_threads\": 1, \"prefix\": \"libiomp\", \"filepath\": \"C:\\\\Users/REDACTED\\\\miniconda3\\\\envs\\\\code_decay\\\\Lib\\\\site-packages\\\\torch\\\\lib\\\\libiompstubs5md.dll\", \"version\": null}]\n",
+      "stderr": ""
+    }
+  },
+  "environment_modified": false,
+  "unsafe_duplicate_runtime_override_used": false,
+  "scientific_model_executed": false
+}

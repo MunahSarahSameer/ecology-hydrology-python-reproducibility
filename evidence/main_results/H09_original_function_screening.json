@@ -1,0 +1,1010 @@
+{
+  "step": 143,
+  "package_id": "H09",
+  "package_name": "swatpy",
+  "version": "v0.2",
+  "source_inventory": [
+    {
+      "file": "allixender-swatpy-0d47bfa/data/scripts/convert_from_swatcup.py",
+      "functions": [
+        {
+          "name": "guess_text_encoding",
+          "line": 28,
+          "end_line": 49,
+          "arguments": [
+            "infile"
+          ],
+          "source": "def guess_text_encoding(infile):\n    f = open(infile, \"rb\")\n    detector = chardet.UniversalDetector()\n    detector.reset()\n    for line in f:\n        detector.feed(line)\n    f.close()\n    detector.close()\n    print(detector.result)\n    enc = detector.result[\"encoding\"]\n    redirects = [\"\", \"ascii\"]\n    if enc is None:\n        enc = \"latin-1\"\n        print(f\"model text encoding unclear, assuming {enc}\")\n        return enc\n    elif enc in redirects:\n        enc = \"latin-1\"\n        print(f\"model text encoding unlikely, assuming {enc}\")\n        return enc\n    else:\n        print(f\"model text encoding set to {enc}\")\n        return enc"
+        },
+        {
+          "name": "parse",
+          "line": 52,
+          "end_line": 148,
+          "arguments": [
+            "infile",
+            "outfile"
+          ],
+          "source": "def parse(infile, outfile):\n    # dtype = [(\"f0\", \"|U30\"), (\"f1\", \"<f8\"), (\"f2\", \"<f8\")]\n    # par_file_load = np.genfromtxt(par_file_name, dtype=dtype, encoding=\"utf-8\")\n    enc = guess_text_encoding(infile)\n\n    with open(infile, \"r\", encoding=enc) as f:\n        line_counter = 0\n        work_pars = []\n\n        for line in f.readlines():\n            line_counter += 1\n            trim = line.strip()\n            if trim.startswith(\"#\") or trim.strip().startswith(\"//\") or len(trim) == 0:\n                continue\n            else:\n                for tp in allowed_endings:\n\n                    if trim.find(\".\" + tp) > -1 or trim.find(\".\" + tp.upper()) > -1:\n                        print(f\"woring with {tp} -> {trim}\")\n\n                        trim_a = trim.replace(\".\" + tp, \"__\" + tp)\n                        trim_u = trim_a.replace(\".\" + tp.upper(), \"__\" + tp)\n\n                        if trim_u.startswith(\"V__\"):\n                            trim_u = trim_u.replace(\"V__\", \"v__\", 1)\n                        if trim_u.startswith(\"A__\"):\n                            trim_u = trim_u.replace(\"A__\", \"v__\", 1)\n                        if trim_u.startswith(\"R__\"):\n                            trim_u = trim_u.replace(\"R__\", \"v__\", 1)\n\n                        if trim_u.find(\"()\") > -1:\n                            trim_u = trim_u.replace(\"()\", \"\")\n\n                        paramlist = (\n                            list(FileEdit.bsnManipulator.parInfo.keys())\n                            + list(FileEdit.gwManipulator.parInfo.keys())\n                            + list(FileEdit.mgtManipulator.parInfo.keys())\n                            + list(FileEdit.subManipulator.parInfo.keys())\n                            + list(FileEdit.hruManipulator.parInfo.keys())\n                            + list(FileEdit.solManipulator.parInfo.keys())\n                            + list(FileEdit.rteManipulator.parInfo.keys())\n                        )\n\n                        try:\n                            field_list = trim_u.split(\" \")[0].strip().split(\"__\")\n                            how = field_list[0]\n                            param_field = field_list[1]\n                            manip_ext = field_list[2]\n                            if len(field_list) > 3:\n                                hydrp = field_list[3]\n                            if len(field_list) > 4:\n                                soltext = field_list[4]\n                            if len(field_list) > 5:\n                                landuse = field_list[5]\n                            if len(field_list) > 6:\n                                subbsn = field_list[6]\n                            if len(field_list) > 7:\n                                slope = field_list[7]\n\n                            if not how in [\"v\", \"a\", \"r\"]:\n                                print(\n                                    f\"error, line {line_counter} not correct modifier {how} not in ['v', 'a', 'r']\"\n                                )\n                                continue\n                            if not param_field in paramlist:\n                                print(\n                                    f\"error, line {line_counter} param_field {param_field} not known\"\n                                )\n                                continue\n                            if not manip_ext in allowed_endings:\n                                print(\n                                    f\"error, line {line_counter} file type {manip_ext} not in {allowed_endings}\"\n                                )\n                                continue\n\n                            already_used_params = [t[0] for t in work_pars]\n\n                            if not param_field in already_used_params:\n                                work_pars.append((param_field, trim_u))\n                            else:\n                                print(\n                                    f\"error, line {line_counter} param field {param_field} already used before\"\n                                )\n                                continue\n                        except Exception as e:\n                            print(\"error parsing\")\n                            print(trim_u)\n                            print(repr(e))\n                    else:\n                        continue\n                # print(trim)\n                # print(trim_u)\n        for t in work_pars:\n            print(t)\n        with open(outfile, \"w\", encoding=enc) as outf:\n            for t in work_pars:\n                outf.write(t[1] + \"\\n\")"
+        },
+        {
+          "name": "main",
+          "line": 151,
+          "end_line": 172,
+          "arguments": [
+            "argv"
+          ],
+          "source": "def main(argv):\n    infile = \"\"\n    outfile = \"\"\n    try:\n        opts, args = getopt.getopt(argv, \"hi:o:\", [\"infile=\", \"outfile=\"])\n    except getopt.GetoptError:\n        print(\"test.py -i <infile> -o <outfile>\")\n        sys.exit(2)\n    for opt, arg in opts:\n        if opt == \"-h\":\n            print(\"test.py -i <infile> -o <outfile>\")\n            sys.exit()\n        elif opt in (\"-i\", \"--infile\"):\n            infile = arg\n\n        elif opt in (\"-o\", \"--outfile\"):\n            outfile = arg\n\n    print(\"Infile is \" + infile)\n    print(\"Outfile is \" + outfile)\n\n    parse(infile, outfile)"
+        }
+      ],
+      "classes": []
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/data/scripts/main.py",
+      "functions": [
+        {
+          "name": "demo3",
+          "line": 45,
+          "end_line": 77,
+          "arguments": [],
+          "source": "def demo3():\n\n    results = []\n    spot_setup = rosenspot_setup()\n    rep = 1000\n    timeout = 10  # Given in Seconds\n\n    parallel = \"seq\"\n    dbformat = \"csv\"\n\n    sampler = spotpy.algorithms.lhs(\n        spot_setup,\n        parallel=parallel,\n        dbname=\"DemoRosenLHS\",\n        dbformat=dbformat,\n        sim_timeout=timeout,\n    )\n\n    sampler.sample(rep)\n\n    results.append(sampler.getdata())\n\n    print(type(results[0]))\n    print(len(results))\n    print(results[0].shape)\n\n    algorithms = [\"lhs\"]\n    spotpy.analyser.plot_parametertrace_algorithms(results, algorithms, spot_setup)\n\n    sampler = spotpy.algorithms.fast(\n        spot_setup, dbname=\"DemoRosenFAST\", dbformat=dbformat\n    )\n    sampler.sample(rep)"
+        },
+        {
+          "name": "demo1",
+          "line": 80,
+          "end_line": 156,
+          "arguments": [],
+          "source": "def demo1():\n\n    model3 = SimManage.SwatModel.loadModelFromDirectory(\"demo_callib2\")\n    print(model3.working_dir)\n\n    print(f\"is it runnable: {model3.is_runnable()}\")\n\n    # ret_val = model3.run(capture_logs=True, silent=False)\n    # print(f\"returns {ret_val} - vs {model3.last_run_succesful}\")\n    # print(model3.last_run_logs)\n\n    temp_dir = \"swat_21347e0a-d724-11ea-8ddc-54e1ad562245\"\n    model3.enrichModelMeta()\n\n    subbasins = [1]\n\n    print(\"reader1 rch 1\")\n    reader1 = ReadOut.rchOutputManipulator(\n        [\"FLOW_OUT\"],\n        subbasins,\n        \"indi\",\n        False,\n        0,\n        model3.working_dir,\n        iprint=\"month\",\n        stats_dir=temp_dir,\n    )\n    print(reader1.outValues[\"FLOW_OUT\"][subbasins[0]])\n\n    outvalues = len(reader1.outValues[\"FLOW_OUT\"][subbasins[0]])\n    print(f\"num sim points: {outvalues}\")\n\n    print(\"reader1 efficiency\")\n    # TODO: add logic for observed data?\n    fileName = os.path.join(\n        \"data\", os.path.join(\"observed\", \"pori_flow_monthly_2003-2010.txt\")\n    )\n    efficiency = ReadOut.efficiency(\n        output=\"FLOW_OUT\",\n        area=subbasins[0],\n        observed=fileName,\n        fileColumn=3,\n        daysSkip=0,\n        working_dir=model3.working_dir,\n        iprint=\"month\",\n    )\n\n    print(f\"efficiency.obs.min() {efficiency.obs.min()}\")\n\n    # TODO: add nodata handling/masking to ReadOut and stats module\n    import numpy.ma as ma\n\n    obs_ma = ma.masked_where(efficiency.obs == -9999.0, efficiency.obs)\n    print(f\" obs ma masked mean {np.mean(obs_ma)}\")\n\n    print(f\" obs_ma.min() {obs_ma.min()}\")\n\n    print(f\" len(efficiency.obs) {len(efficiency.obs)}\")\n    print(f\" len(obs_ma) {len(obs_ma)}\")\n\n    print(f\" efficiency.nash() {efficiency.nash()}\")\n\n    print(\"reader2 sub 1\")\n    reader2 = ReadOut.subOutputManipulator(\n        [\"SURQ\", \"GW_Q\", \"LAT_Q\", \"PRECIP\"],\n        subbasins,\n        \"indi\",\n        False,\n        0,\n        model3.working_dir,\n        stats_dir=temp_dir,\n    )\n    print(reader2.outValues)\n\n    print(\"fluxes sub 1\")\n    fluxes = ReadOut.fluxes(\"SURQ\", subbasins, 1, model3.working_dir)\n    print(fluxes.result())"
+        },
+        {
+          "name": "demo2",
+          "line": 159,
+          "end_line": 211,
+          "arguments": [],
+          "source": "def demo2():\n\n    model3 = SimManage.SwatModel.loadModelFromDirectory(\"demo_callib2\")\n    print(model3.working_dir)\n\n    manipulators = model3.getFileManipulators()\n\n    \"\"\"\n    Instruction to edit SLSOIL\n\n\tThe variable \"SLSOIL\" within hru table of project.mdb will be having a value of \"0\" by default.\n    This column needs to be replaced with the values in the variable \"SLSUBBSN\".\n    \"\"\"\n\n    # hrufiles SLSUBBSN -> SLSOIL\n    for hruMan in manipulators[\"hru\"]:\n        if hruMan.filename == \"000060001.hru\":\n            print(\n                f\"{hruMan.filename} SLSUBBSN {hruMan.parValue['SLSUBBSN'][0]} -> SLSOIL {hruMan.parValue['SLSOIL'][0]}; LAT_TTIME {hruMan.parValue['LAT_TTIME'][0]}\"\n            )\n    #     hruMan.setChangePar(\"SLSOIL\",hruMan.parValue['SLSUBBSN'][0],\"s\")\n    #     hruMan.finishChangePar()\n\n    # print(\"after finishChangePar()\")\n    # print(f\"{hruMan.filename} SLSUBBSN {hruMan.parValue['SLSUBBSN'][0]} -> SLSOIL {hruMan.parValue['SLSOIL'][0]}\")\n\n    # print(\"after reload()\")\n    # manip2 = model3.reloadFileManipulators()\n    # hruMan = manip2['hru'][-1]\n    # print(f\"{hruMan.filename} SLSUBBSN {hruMan.parValue['SLSUBBSN'][0]} -> SLSOIL {hruMan.parValue['SLSOIL'][0]}\")\n\n    for subMan in manipulators[\"sub\"]:\n        if subMan.filename == \"000060000.sub\":\n            print(subMan.parValue)\n\n    model3.enrichModelMeta()\n\n    \"\"\"\n    Instruction to edit LAT_TTIME\n\n\tThe variable \"LAT_TTIME\" will also be having a default value of \"0\".\n    This needs to be replaced with the values of \"LAT_TTIME\" estimated using the equation provided in SWAT theoretical documentation.\n    - LAT_TTIME   (TTlag ): Lateral flow travel time (days)\n    - SLSOIL   (Lhill): Hillslope length (m)\n    - SOL_K   Ksat: Saturated hydraulic conductivity (mm/hr)\n    - If drainage tiles are present in the HRU, lateral flow travel time or TTlag is calculated as :\n        〖TT〗_(lag )= 〖tile〗_lag/24. Where tilelag is the drain tile lag time (hrs)\n        〖TT〗_(lag  )=10.4  L_hill/K_(sat,mx)   (Page 163, SWAT 2009 theory)\n        〖TT〗_(lag  )is the lateral flow travel time (days), L_hill is the hillslope length (m) (SLSOIL)\n    K_(sat,mx) is the highest layer saturated hydraulic conductivity in the soil profile (mm/hr) (Obtain it from the SOL table from the database by finding the soil layer for each HRU that has the highest hydraulic conductivity)\n\n    After replacing the values of SLSOIL and LAT_TTIME, rewrite the hru file before running SWAT.\n    \"\"\""
+        },
+        {
+          "name": "demo_callib",
+          "line": 407,
+          "end_line": 492,
+          "arguments": [],
+          "source": "def demo_callib():\n\n    model4 = {}\n\n    try:\n        model4 = SimManage.SwatModel.initFromTxtInOut(\n            txtInOut=os.path.join(os.getcwd(), os.path.join(\"data\", \"TxtInOut\")),\n            copy=True,\n            target_dir=\"demo_callib2\",\n            force=False,\n        )\n    except ValueError:\n        model4 = SimManage.SwatModel.loadModelFromDirectory(\"demo_callib2\")\n\n    model4.enrichModelMeta()\n    print(f\"is it runnable: {model4.is_runnable()}\")\n\n    # ret_val = model4.run(capture_logs=True, silent=True)\n    # print(f\"returns {ret_val} - vs {model4.last_run_succesful}\")\n    # print(model4.last_run_logs)\n\n    temp_dir = \"swat_b7c411b6-d727-11ea-b9a4-54e1ad562245\"\n\n    # simulated data\n    # reader1 = ReadOut.rchOutputManipulator([\"FLOW_OUT\"], subbasins,\"skip\",False,0, model4.working_dir, iprint='month', stats_dir=temp_dir)\n    # sim_flow_1 = reader1.outValues[\"FLOW_OUT\"][subbasins[0]]\n\n    # observed data\n    obs_filename = os.path.join(\n        \"data\", os.path.join(\"observed\", \"pori_flow_monthly_2003-2010.txt\")\n    )\n    f = open(obs_filename, \"r\")\n    lines = f.readlines()\n    f.close()\n    measured = []\n    for i in lines:\n        measured.append(i.split(\";\")[2].strip())\n\n    obs = np.array([float(i) for i in measured])\n\n    obs_masked = np.ma.masked_where(obs == -9999.0, obs)\n\n    # print(efficiency.obs)\n    # print(efficiency.obs_masked)\n\n    # import functools\n\n    # if functools.reduce(lambda i, j : i and j, map(lambda m, k: m == k, efficiency.outValues, efficiency.obs_masked), True) :\n    #     print (\"The lists are identical\")\n    # else :\n    #     print (\"The lists are not identical\")\n\n    # run spotpy callib sampling and sensitivity\n\n    # delimiter=' ' n-consecutive whitespace is default\n    # dtype U utf8 string\n\n    par_file_name = os.path.join(\"data\", os.path.join(\"params\", \"par_inf2.txt\"))\n    print(f\"loading parameter file {par_file_name}\")\n\n    dtype = [(\"f0\", \"|U30\"), (\"f1\", \"<f8\"), (\"f2\", \"<f8\")]\n    par_file_load = np.genfromtxt(par_file_name, dtype=dtype, encoding=\"utf-8\")\n\n    parallel = \"seq\"\n    spot_setup = swat_callib_setup(\n        model4, obs_masked, par_file_load, parallel=parallel, temp_dir=temp_dir\n    )\n\n    repetitions = 5\n\n    dbformat = \"csv\"\n\n    lhs_calibrator_sampler = spotpy.algorithms.lhs(\n        spot_setup, parallel=parallel, dbname=\"Demo4SwatLHS\", dbformat=dbformat\n    )\n\n    lhs_calibrator_sampler.sample(repetitions)\n\n    callib_results = lhs_calibrator_sampler.getdata()\n\n    print(spotpy.analyser.get_best_parameterset(callib_results))\n\n    spotpy.analyser.plot_parameterInteraction(callib_results)\n    spotpy.analyser.plot_parametertrace_algorithms(\n        result_lists=[callib_results], algorithmnames=[\"lhs\"], spot_setup=spot_setup\n    )"
+        }
+      ],
+      "classes": [
+        {
+          "name": "rosenspot_setup",
+          "line": 15,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 16,
+              "end_line": 21,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "parameters",
+              "line": 23,
+              "end_line": 24,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "evaluation",
+              "line": 27,
+              "end_line": 29,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "simulation",
+              "line": 32,
+              "end_line": 37,
+              "arguments": [
+                "self",
+                "vector"
+              ]
+            },
+            {
+              "name": "objectivefunction",
+              "line": 40,
+              "end_line": 42,
+              "arguments": [
+                "self",
+                "simulation",
+                "evaluation"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "swat_callib_setup",
+          "line": 216,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 217,
+              "end_line": 247,
+              "arguments": [
+                "self",
+                "swat_model",
+                "observed_data",
+                "param_defs",
+                "parallel",
+                "temp_dir"
+              ]
+            },
+            {
+              "name": "onerror",
+              "line": 249,
+              "end_line": 257,
+              "arguments": [
+                "self",
+                "func",
+                "path",
+                "exc_info"
+              ]
+            },
+            {
+              "name": "prep_temp_model_dir",
+              "line": 259,
+              "end_line": 287,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "remove_temp_model_dir",
+              "line": 289,
+              "end_line": 297,
+              "arguments": [
+                "self",
+                "model"
+              ]
+            },
+            {
+              "name": "manipulate_model_params",
+              "line": 299,
+              "end_line": 352,
+              "arguments": [
+                "self",
+                "model",
+                "parameters"
+              ]
+            },
+            {
+              "name": "parameters",
+              "line": 354,
+              "end_line": 355,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "evaluation",
+              "line": 358,
+              "end_line": 360,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "simulation",
+              "line": 363,
+              "end_line": 392,
+              "arguments": [
+                "self",
+                "parameters"
+              ]
+            },
+            {
+              "name": "objectivefunction",
+              "line": 395,
+              "end_line": 404,
+              "arguments": [
+                "self",
+                "simulation",
+                "evaluation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/data/scripts/run_for.py",
+      "functions": [
+        {
+          "name": "update_SLSOIL",
+          "line": 33,
+          "end_line": 65,
+          "arguments": [
+            "mpath"
+          ],
+          "source": "def update_SLSOIL(mpath):\n\n    model3 = SimManage.SwatModel.initFromTxtInOut(\n        mpath, copy=False, target_dir=None, swat_version=\"2012\", force=True\n    )\n    logger.info(model3.working_dir)\n\n    manipulators = model3.getFileManipulators()\n\n    \"\"\"\n    Instruction to edit SLSOIL\n\n\tThe variable \"SLSOIL\" within hru table of project.mdb will be having a value of \"0\" by default.\n    This column needs to be replaced with the values in the variable \"SLSUBBSN\".\n    \"\"\"\n\n    # hrufiles SLSUBBSN -> SLSOIL\n    for hruMan in manipulators[\"hru\"]:\n        hruMan.setChangePar(\"SLSOIL\", hruMan.parValue[\"SLSUBBSN\"][0], \"s\")\n        hruMan.finishChangePar()\n\n    logger.info(\"after reload()\")\n    manip2 = model3.reloadFileManipulators()\n    hruMan = manip2[\"hru\"][-1]\n    logger.info(\n        f\"{hruMan.filename} SLSUBBSN {hruMan.parValue['SLSUBBSN'][0]} -> SLSOIL {hruMan.parValue['SLSOIL'][0]}\"\n    )\n\n    model3.swat_exec = swat_bin\n    model3.enrichModelMeta()\n    model3.is_runnable()\n\n    model3.run()"
+        },
+        {
+          "name": "update_LAT_TTIME",
+          "line": 68,
+          "end_line": 122,
+          "arguments": [
+            "mpath"
+          ],
+          "source": "def update_LAT_TTIME(mpath):\n\n    model3 = SimManage.SwatModel.initFromTxtInOut(\n        mpath, copy=False, target_dir=None, swat_version=\"2012\", force=True\n    )\n    logger.info(model3.working_dir)\n\n    manipulators = model3.getFileManipulators()\n    \"\"\"\n    Instruction to edit LAT_TTIME\n\n\tThe variable \"LAT_TTIME\" will also be having a default value of \"0\".\n    This needs to be replaced with the values of \"LAT_TTIME\" estimated using the equation provided in SWAT theoretical documentation.\n    - LAT_TTIME   (TTlag ): Lateral flow travel time (days)\n    - SLSOIL   (Lhill): Hillslope length (m)\n    - SOL_K   Ksat: Saturated hydraulic conductivity (mm/hr)\n    - If drainage tiles are present in the HRU, lateral flow travel time or TTlag is calculated as :\n        〖TT〗_(lag )= 〖tile〗_lag/24. Where tilelag is the drain tile lag time (hrs)\n        〖TT〗_(lag  )=10.4  L_hill/K_(sat,max)   (Page 163, SWAT 2009 theory)\n        〖TT〗_(lag  )is the lateral flow travel time (days), L_hill is the hillslope length (m) (SLSOIL)\n    K_(sat,mx) is the highest layer saturated hydraulic conductivity in the soil profile (mm/hr) (Obtain it from the SOL table from the database by finding the soil layer for each HRU that has the highest hydraulic conductivity)\n\n    After replacing the values of SLSOIL and LAT_TTIME, rewrite the hru file before running SWAT.\n    \"\"\"\n\n    # hrufiles set LAT_TTIME\n    for hruMan in manipulators[\"hru\"]:\n        hru_id = hruMan.filename.strip().split(\".\")[0]\n        SLSOIL_val = hruMan.parValue[\"SLSOIL\"][0]\n        LAT_TTIME_val = hruMan.parValue[\"LAT_TTIME\"][0]\n\n        SOL_K_MAX = 1\n        for solMan in manipulators[\"sol\"]:\n            sol_id = solMan.filename.strip().split(\".\")[0]\n            if sol_id == hru_id:\n                SOL_K = solMan.parValue[\"SOL_K\"]\n                SOL_K_MAX = np.array(SOL_K).max()\n\n        LAT_TTIME_val_new = 10.4 * (SLSOIL_val / SOL_K_MAX)\n\n        hruMan.setChangePar(\"LAT_TTIME\", LAT_TTIME_val_new, \"s\")\n        hruMan.finishChangePar()\n\n    logger.info(\"after reload()\")\n    manip2 = model3.reloadFileManipulators()\n    hruMan = manip2[\"hru\"][-1]\n    logger.info(\n        f\"{hruMan.filename} LAT_TTIME_val_new {hruMan.parValue['LAT_TTIME'][0]} -> LAT_TTIME_val_old {LAT_TTIME_val}\"\n    )\n\n    model3.swat_exec = swat_bin\n    model3.enrichModelMeta()\n    model3.is_runnable()\n\n    model3.run()"
+        },
+        {
+          "name": "model_callib",
+          "line": 323,
+          "end_line": 419,
+          "arguments": [
+            "model",
+            "mpath",
+            "param_file",
+            "sampler",
+            "repetitions",
+            "parallel"
+          ],
+          "source": "def model_callib(model, mpath, param_file, sampler, repetitions, parallel):\n\n    target_dir = f\"/tmp/callib_{model}_{sampler}_{uuid.uuid4()}\"\n    # target_dir = os.path.join(os.getcwd(), f\"callib_{model}_{sampler}_{uuid.uuid4()}\")\n\n    model4 = SimManage.SwatModel.initFromTxtInOut(\n        txtInOut=mpath,\n        copy=True,\n        target_dir=os.path.join(target_dir, \"TxtInOut\"),\n        force=False,\n    )\n    temp_dir = target_dir\n\n    obs_filename = os.path.join(\"observed\", \"pori_flow_monthly_2003-2010.txt\")\n    f = open(obs_filename, \"r\")\n    lines = f.readlines()\n    f.close()\n    measured = []\n    for i in lines:\n        measured.append(i.split(\";\")[2].strip())\n\n    obs = np.array([float(i) for i in measured])\n\n    obs_masked = np.ma.masked_where(obs == -9999.0, obs)\n\n    par_file_name = param_file\n    logger.info(f\"loading parameter file {par_file_name}\")\n\n    dtype = [(\"f0\", \"|U30\"), (\"f1\", \"<f8\"), (\"f2\", \"<f8\")]\n    par_file_load = np.genfromtxt(par_file_name, dtype=dtype, encoding=\"utf-8\")\n\n    model4.swat_exec = swat_bin\n    spot_setup = swat_callib_setup(\n        model4, obs_masked, par_file_load, parallel=parallel, temp_dir=temp_dir\n    )\n\n    dbformat = \"csv\"\n\n    kwargs = {\n        \"spot_setup\": spot_setup,\n        \"parallel\": parallel,\n        \"dbname\": f\"{model}_{sampler}_{repetitions}_pid{os.getpid()}\",\n        \"dbformat\": dbformat,\n    }\n    spot_sampler = None\n\n    if sampler == \"LHS\":\n        spot_sampler = spotpy.algorithms.lhs(**kwargs)\n\n    if sampler == \"MC\":\n        spot_sampler = spotpy.algorithms.mc(**kwargs)\n\n    if sampler == \"ROPE\":\n        spot_sampler = spotpy.algorithms.rope(**kwargs)\n\n    if sampler == \"MCMC\":\n        spot_sampler = spotpy.algorithms.mcmc(**kwargs)\n\n    if sampler == \"SA\":\n        spot_sampler = spotpy.algorithms.sa(**kwargs)\n\n    if sampler == \"MLE\":\n        spot_sampler = spotpy.algorithms.mle(**kwargs)\n\n    if sampler == \"DEMCZ\":\n        spot_sampler = spotpy.algorithms.demcz(**kwargs)\n\n    if sampler == \"SCEUA\":\n        spot_sampler = spotpy.algorithms.sceua(**kwargs)\n\n    if sampler == \"ABC\":\n        spot_sampler = spotpy.algorithms.abc(**kwargs)\n\n    if sampler == \"FSCABC\":\n        spot_sampler = spotpy.algorithms.fscabc(**kwargs)\n\n    if sampler == \"DREAM\":\n        spot_sampler = spotpy.algorithms.dream(**kwargs)\n\n    if sampler == \"FAST\":\n        spot_sampler = spotpy.algorithms.fast(**kwargs)\n\n    spot_sampler.sample(repetitions)\n\n    try:\n        shutil.rmtree(target_dir)\n    except Exception as e:\n        logger.info(\n            f\"error removing old calibration workdir: {str(target_dir)} | {repr(e)}\"\n        )\n\n    # this might break in mpi parallel mode\n    if parallel == \"seq\":\n        callib_results = spot_sampler.getdata()\n\n        if not sampler == \"FAST\":\n            logger.info(spotpy.analyser.get_best_parameterset(callib_results))"
+        },
+        {
+          "name": "main",
+          "line": 461,
+          "end_line": 539,
+          "arguments": [
+            "argv"
+          ],
+          "source": "def main(argv):\n    my_pid = os.getpid()\n    model = \"\"\n    sampler = \"\"\n    repetitions = 0\n    parallel = \"seq\"\n    try:\n        opts, args = getopt.getopt(\n            argv, \"hm:s:r:p:\", [\"model=\", \"sample=\", \"reps=\", \"parallel=\"]\n        )\n        logger.info(f\"opts {opts} args ({args})\")\n    except getopt.GetoptError:\n        logger.info(\"test.py -m <model> -s <sampler> -r <reps> -p <parallel>\")\n        sys.exit(2)\n    for opt, arg in opts:\n        if opt == \"-h\":\n            logger.info(\"test.py -m <model> -s <sampler> -r <reps> -p <parallel>\")\n            sys.exit()\n        elif opt in (\"-m\", \"--model\"):\n            model = arg\n            if not model in models:\n                logger.info(f\"{model} not in models, abort ({models})\")\n                sys.exit()\n        elif opt in (\"-s\", \"--sampler\"):\n            sampler = arg\n            if not sampler in all_algorithms:\n                logger.info(f\"{sampler} not in models, abort ({all_algorithms})\")\n                sys.exit()\n        elif opt in (\"-r\", \"--reps\"):\n            repetitions = int(arg)\n            if repetitions <= 0:\n                logger.info(f\"invalid number of repetitions ({repetitions}), abort\")\n                sys.exit()\n        elif opt in (\"-p\", \"--parallel\"):\n            if arg in [\"seq\", \"mpi\"]:\n                parallel = arg\n                if parallel == \"mpi\":\n                    try:\n                        import mpi4py\n                    except ImportError:\n                        logger.info(\n                            f\"mpi4py can't imported but is needed for ({parallel}), abort\"\n                        )\n                        sys.exit()\n                    if not sampler in parallel_samplers:\n                        logger.info(\n                            f\"{sampler} not parallelizable, abort ({parallel_samplers})\"\n                        )\n                        sys.exit()\n            else:\n                logger.info(f\"{arg} not seq or mpi, abort\")\n                sys.exit()\n\n    fh = logging.FileHandler(f\"{model}_{sampler}_{repetitions}_{my_pid}_output.log\")\n    fh.setFormatter(formatter)\n    logger.addHandler(fh)\n\n    logger.info(\"Model is \" + model)\n    logger.info(\"Sampler is \" + sampler)\n    logger.info(\"Repetitions is \" + str(repetitions))\n    logger.info(\"Parallel is \" + parallel)\n\n    mpath = os.path.join(os.getcwd(), os.path.join(model, config[model][\"path\"]))\n    logger.info(f\"model init path is: {mpath}\")\n\n    param_file = os.path.join(\n        os.getcwd(), os.path.join(\"params\", model + \"_par_inf_spotpy.txt\")\n    )\n    # update_SLSOIL(os.path.join(model, config[model][\"path\"]))\n    # update_LAT_TTIME(os.path.join(model, config[model][\"path\"]))\n\n    model_callib(\n        model=model,\n        mpath=mpath,\n        param_file=param_file,\n        sampler=sampler,\n        repetitions=repetitions,\n        parallel=parallel,\n    )"
+        }
+      ],
+      "classes": [
+        {
+          "name": "swat_callib_setup",
+          "line": 125,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 126,
+              "end_line": 156,
+              "arguments": [
+                "self",
+                "swat_model",
+                "observed_data",
+                "param_defs",
+                "parallel",
+                "temp_dir"
+              ]
+            },
+            {
+              "name": "onerror",
+              "line": 158,
+              "end_line": 165,
+              "arguments": [
+                "self",
+                "func",
+                "path",
+                "exc_info"
+              ]
+            },
+            {
+              "name": "prep_temp_model_dir",
+              "line": 167,
+              "end_line": 199,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "remove_temp_model_dir",
+              "line": 201,
+              "end_line": 209,
+              "arguments": [
+                "self",
+                "model"
+              ]
+            },
+            {
+              "name": "manipulate_model_params",
+              "line": 211,
+              "end_line": 265,
+              "arguments": [
+                "self",
+                "model",
+                "parameters"
+              ]
+            },
+            {
+              "name": "parameters",
+              "line": 267,
+              "end_line": 268,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "evaluation",
+              "line": 271,
+              "end_line": 273,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "simulation",
+              "line": 276,
+              "end_line": 308,
+              "arguments": [
+                "self",
+                "parameters"
+              ]
+            },
+            {
+              "name": "objectivefunction",
+              "line": 311,
+              "end_line": 320,
+              "arguments": [
+                "self",
+                "simulation",
+                "evaluation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/setup.py",
+      "functions": [],
+      "classes": []
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/swatpy/FileEdit.py",
+      "functions": [],
+      "classes": [
+        {
+          "name": "InputFileManipulator",
+          "line": 101,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 104,
+              "end_line": 116,
+              "arguments": [
+                "self",
+                "filename",
+                "parList",
+                "working_dir",
+                "encoding"
+              ]
+            },
+            {
+              "name": "initParValue",
+              "line": 119,
+              "end_line": 123,
+              "arguments": [
+                "self",
+                "parList"
+              ]
+            },
+            {
+              "name": "prepareChangePar",
+              "line": 125,
+              "end_line": 126,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "setChangePar",
+              "line": 129,
+              "end_line": 130,
+              "arguments": [
+                "self",
+                "namePar",
+                "changePar",
+                "changeHow"
+              ]
+            },
+            {
+              "name": "setChangeParLay",
+              "line": 133,
+              "end_line": 134,
+              "arguments": [
+                "self",
+                "namePar",
+                "changePar",
+                "changeHow"
+              ]
+            },
+            {
+              "name": "changePar",
+              "line": 138,
+              "end_line": 155,
+              "arguments": [
+                "self",
+                "namePar",
+                "changePar",
+                "changeHow",
+                "offsetRow",
+                "offsetCol",
+                "index"
+              ]
+            },
+            {
+              "name": "finishChangePar",
+              "line": 158,
+              "end_line": 166,
+              "arguments": [
+                "self"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "bsnManipulator",
+          "line": 174,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 297,
+              "end_line": 415,
+              "arguments": [
+                "self",
+                "filename",
+                "parList",
+                "working_dir",
+                "encoding"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "gwManipulator",
+          "line": 423,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 445,
+              "end_line": 465,
+              "arguments": [
+                "self",
+                "filename",
+                "parList",
+                "working_dir",
+                "encoding"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mgtManipulator",
+          "line": 473,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 501,
+              "end_line": 526,
+              "arguments": [
+                "self",
+                "filename",
+                "parList",
+                "working_dir",
+                "encoding"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "subManipulator",
+          "line": 534,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 549,
+              "end_line": 559,
+              "arguments": [
+                "self",
+                "filename",
+                "parList",
+                "working_dir",
+                "encoding"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "hruManipulator",
+          "line": 567,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 613,
+              "end_line": 663,
+              "arguments": [
+                "self",
+                "filename",
+                "parList",
+                "working_dir",
+                "encoding"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "solManipulator",
+          "line": 671,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 694,
+              "end_line": 749,
+              "arguments": [
+                "self",
+                "filename",
+                "parList",
+                "working_dir",
+                "encoding"
+              ]
+            },
+            {
+              "name": "initParValue",
+              "line": 752,
+              "end_line": 763,
+              "arguments": [
+                "self",
+                "parList"
+              ]
+            },
+            {
+              "name": "setChangePar",
+              "line": 766,
+              "end_line": 773,
+              "arguments": [
+                "self",
+                "namePar",
+                "changePar",
+                "changeHow"
+              ]
+            },
+            {
+              "name": "setChangeParLay",
+              "line": 775,
+              "end_line": 782,
+              "arguments": [
+                "self",
+                "namePar",
+                "changePar",
+                "changeHow",
+                "layer"
+              ]
+            },
+            {
+              "name": "calculateParValueMean",
+              "line": 785,
+              "end_line": 798,
+              "arguments": [
+                "self",
+                "parList"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "solManipulationCorrection",
+          "line": 801,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 803,
+              "end_line": 813,
+              "arguments": [
+                "self",
+                "filename",
+                "working_dir",
+                "encoding"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "solManipulationCheck",
+          "line": 816,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 818,
+              "end_line": 826,
+              "arguments": [
+                "self",
+                "filename",
+                "working_dir",
+                "encoding"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rteManipulator",
+          "line": 829,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 858,
+              "end_line": 883,
+              "arguments": [
+                "self",
+                "filename",
+                "parList",
+                "working_dir",
+                "encoding"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "fileCioManipulator",
+          "line": 886,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 896,
+              "end_line": 901,
+              "arguments": [
+                "self",
+                "filename",
+                "parList",
+                "working_dir",
+                "encoding"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/swatpy/ReadOut.py",
+      "functions": [],
+      "classes": [
+        {
+          "name": "OutputFileManipulator",
+          "line": 51,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 55,
+              "end_line": 81,
+              "arguments": [
+                "self",
+                "outList",
+                "areasList",
+                "method",
+                "onlyStatistics",
+                "daysSkip",
+                "working_dir",
+                "iprint",
+                "stats_dir",
+                "encoding"
+              ]
+            },
+            {
+              "name": "readAreaSizes",
+              "line": 83,
+              "end_line": 97,
+              "arguments": [
+                "self",
+                "areasList"
+              ]
+            },
+            {
+              "name": "readValues",
+              "line": 99,
+              "end_line": 113,
+              "arguments": [
+                "self",
+                "outList",
+                "areasList"
+              ]
+            },
+            {
+              "name": "write",
+              "line": 115,
+              "end_line": 170,
+              "arguments": [
+                "self",
+                "method",
+                "onlyStatistics",
+                "daysSkip"
+              ]
+            },
+            {
+              "name": "calculateStatistics",
+              "line": 172,
+              "end_line": 182,
+              "arguments": [
+                "self",
+                "numValues",
+                "daysSkip"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rchOutputManipulator",
+          "line": 185,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 236,
+              "end_line": 238,
+              "arguments": [
+                "self",
+                "outList",
+                "areasList",
+                "method",
+                "onlyStatistics",
+                "daysSkip",
+                "working_dir",
+                "iprint",
+                "stats_dir",
+                "encoding"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "subOutputManipulator",
+          "line": 241,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 267,
+              "end_line": 269,
+              "arguments": [
+                "self",
+                "outList",
+                "areasList",
+                "method",
+                "onlyStatistics",
+                "daysSkip",
+                "working_dir",
+                "iprint",
+                "stats_dir",
+                "encoding"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "hruOutputManipulator",
+          "line": 272,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 352,
+              "end_line": 354,
+              "arguments": [
+                "self",
+                "outList",
+                "areasList",
+                "method",
+                "onlyStatistics",
+                "daysSkip",
+                "working_dir",
+                "stats_dir",
+                "encoding"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "efficiency",
+          "line": 357,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 359,
+              "end_line": 394,
+              "arguments": [
+                "self",
+                "output",
+                "area",
+                "observed",
+                "fileColumn",
+                "daysSkip",
+                "working_dir",
+                "iprint",
+                "nodata",
+                "encoding"
+              ]
+            },
+            {
+              "name": "nash",
+              "line": 397,
+              "end_line": 407,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "agr",
+              "line": 409,
+              "end_line": 418,
+              "arguments": [
+                "self"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "fluxes",
+          "line": 421,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 423,
+              "end_line": 435,
+              "arguments": [
+                "self",
+                "output",
+                "areasList",
+                "daysSkip",
+                "working_dir",
+                "iprint",
+                "stats_dir",
+                "encoding"
+              ]
+            },
+            {
+              "name": "result",
+              "line": 437,
+              "end_line": 438,
+              "arguments": [
+                "self"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/swatpy/SimManage.py",
+      "functions": [],
+      "classes": [
+        {
+          "name": "SwatModel",
+          "line": 17,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 19,
+              "end_line": 27,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "is_runnable",
+              "line": 30,
+              "end_line": 53,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "guess_model_text_encoding",
+              "line": 56,
+              "end_line": 77,
+              "arguments": [
+                "model_dir"
+              ]
+            },
+            {
+              "name": "initFromTxtInOut",
+              "line": 82,
+              "end_line": 186,
+              "arguments": [
+                "txtInOut",
+                "copy",
+                "target_dir",
+                "swat_version",
+                "force"
+              ]
+            },
+            {
+              "name": "loadModelFromDirectory",
+              "line": 190,
+              "end_line": 245,
+              "arguments": [
+                "target_dir"
+              ]
+            },
+            {
+              "name": "run",
+              "line": 248,
+              "end_line": 289,
+              "arguments": [
+                "self",
+                "capture_logs",
+                "silent"
+              ]
+            },
+            {
+              "name": "read_output",
+              "line": 292,
+              "end_line": 297,
+              "arguments": [
+                "self",
+                "out_types"
+              ]
+            },
+            {
+              "name": "toAvro",
+              "line": 302,
+              "end_line": 306,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "fromAvro",
+              "line": 311,
+              "end_line": 316,
+              "arguments": [
+                "avro_model",
+                "target_dir"
+              ]
+            },
+            {
+              "name": "getFileManipulators",
+              "line": 319,
+              "end_line": 385,
+              "arguments": [
+                "self",
+                "force_update"
+              ]
+            },
+            {
+              "name": "reloadFileManipulators",
+              "line": 388,
+              "end_line": 389,
+              "arguments": [
+                "self"
+              ]
+            },
+            {
+              "name": "enrichModelMeta",
+              "line": 392,
+              "end_line": 458,
+              "arguments": [
+                "self",
+                "verbose",
+                "update_meta"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "allixender-swatpy-0d47bfa/swatpy/__init__.py",
+      "functions": [],
+      "classes": []
+    }
+  ],
+  "python_files": 8,
+  "top_level_functions": 11,
+  "classes": 21,
+  "class_methods": 69,
+  "source_executed": false,
+  "original_archive_modified": false,
+  "assessment": "STATIC_FUNCTION_SCREENING_ONLY",
+  "limitations": [
+    "Function presence does not establish executability.",
+    "Methods may require external model files.",
+    "Some functions may depend on unavailable packages.",
+    "Dynamic dependencies and runtime behaviour are not assessed."
+  ],
+  "generated_at_utc": "2026-11-11T02:16:30.602656+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "step": 101,
+  "package_id": "E10",
+  "doi": "10.5281/zenodo.11552636",
+  "description": "Species distribution models (SDMs) are widely used to gain ecological understanding and guide conservation decisions. These models are developed with a wide variety of algorithms - from statistic-based approaches to machine learning approaches - but a requirement almost all share is the use of predictor variables that strongly simplify the temporal variability of driving factors. Conversely, novel architectures of deep learning neural networks allow dealing with fully explicit spatiotemporal dynamics and thus fitting SDMs without the need to simplify the temporal and spatial dimension of predictor data. We present and demonstrate a deep learning based SDM approach that uses time series of spatial data as predictors using distribution data for 74 species from a well-established benchmark dataset. The deep learning approach provided consistently accurate models, directly using time series of predictor data and thus avoiding the use of pre-processed predictor sets that can obscure relevant aspects of environmental variation.",
+  "related_identifiers": [],
+  "external_links": [],
+  "access_right": "open",
+  "license": {
+    "id": "cc-by-4.0"
+  },
+  "keywords": [
+    "Environmental niche model",
+    "WorldClim",
+    "Spatiotemporal dynamics",
+    "Convolutional neural networks",
+    "Temporal ecology"
+  ],
+  "execution_attempted": false,
+  "note": "Metadata and link discovery only. External data availability is not established until relevant resources are inspected."
+}
