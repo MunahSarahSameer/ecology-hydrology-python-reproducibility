@@ -1,0 +1,116 @@
+Jupyter detected...
+3 channel Terms of Service accepted
+Channels:
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: C:\Users\REDACTED\miniconda3\envs\h05_recovery
+
+  added / updated specs:
+    - pandas=1.5.3
+    - pip
+    - python=3.10
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    bottleneck-1.6.0           |  py310h18b77b3_0         122 KB
+    ca-certificates-2026.11.5  |       h382c6e5_0         113 KB
+    mkl-service-2.9.0          |  py310h1b35211_0         108 KB
+    mkl_fft-2.4.0              |  py310h65213df_0         165 KB
+    mkl_random-1.5.0           |  py310hf6ff4c0_0         323 KB
+    numexpr-2.14.1             |  py310h5dbb76a_1         182 KB
+    numpy-1.26.4               |  py310h12f7302_1          14 KB
+    numpy-base-1.26.4          |  py310he4e2855_1         8.8 MB
+    packaging-26.3             |  py310haa95532_0         326 KB
+    pandas-1.5.3               |  py310h4ed8f06_0        10.6 MB
+    python-3.10.22             |       hb00fc5c_1        14.8 MB
+    python-dateutil-2.9.0post0 |  py310haa95532_2         281 KB
+    pytz-2026.5                |  py310haa95532_0         215 KB
+    setuptools-84.2.1          |  py310haa95532_0         1.0 MB
+    six-1.17.0                 |  py310haa95532_0          32 KB
+    wheel-0.48.0               |  py310haa95532_0          83 KB
+    ------------------------------------------------------------
+                                           Total:        37.1 MB
+
+The following NEW packages will be INSTALLED:
+
+  blas               pkgs/main/win-64::blas-1.0-mkl 
+  bottleneck         pkgs/main/win-64::bottleneck-1.6.0-py310h18b77b3_0 
+  bzip2              pkgs/main/win-64::bzip2-1.0.8-h2bbff1b_6 
+  ca-certificates    pkgs/main/noarch::ca-certificates-2026.11.5-h382c6e5_0 
+  intel-openmp       pkgs/main/win-64::intel-openmp-2025.0.0-haa95532_1165 
+  libexpat           pkgs/main/win-64::libexpat-2.10.0-hd7fb8db_0 
+  libffi             pkgs/main/win-64::libffi-3.4.8-h42d73b9_3 
+  libhwloc           pkgs/main/win-64::libhwloc-2.12.1-default_hfa10c62_1000 
+  libiconv           pkgs/main/win-64::libiconv-1.18-hc89ec93_0 
+  libxml2            pkgs/main/win-64::libxml2-2.13.9-h6201b9f_0 
+  libzlib            pkgs/main/win-64::libzlib-1.3.2-h1c6eee0_0 
+  mkl                pkgs/main/win-64::mkl-2025.0.0-h585ebfc_931 
+  mkl-service        pkgs/main/win-64::mkl-service-2.9.0-py310h1b35211_0 
+  mkl_fft            pkgs/main/win-64::mkl_fft-2.4.0-py310h65213df_0 
+  mkl_random         pkgs/main/win-64::mkl_random-1.5.0-py310hf6ff4c0_0 
+  numexpr            pkgs/main/win-64::numexpr-2.14.1-py310h5dbb76a_1 
+  numpy              pkgs/main/win-64::numpy-1.26.4-py310h12f7302_1 
+  numpy-base         pkgs/main/win-64::numpy-base-1.26.4-py310he4e2855_1 
+  openssl            pkgs/main/win-64::openssl-3.5.9-hbb43b14_0 
+  packaging          pkgs/main/win-64::packaging-26.3-py310haa95532_0 
+  pandas             pkgs/main/win-64::pandas-1.5.3-py310h4ed8f06_0 
+  pip                pkgs/main/noarch::pip-26.2.2-pyhc872135_0 
+  python             pkgs/main/win-64::python-3.10.22-hb00fc5c_1 
+  python-dateutil    pkgs/main/win-64::python-dateutil-2.9.0post0-py310haa95532_2 
+  pytz               pkgs/main/win-64::pytz-2026.5-py310haa95532_0 
+  setuptools         pkgs/main/win-64::setuptools-84.2.1-py310haa95532_0 
+  six                pkgs/main/win-64::six-1.17.0-py310haa95532_0 
+  sqlite             pkgs/main/win-64::sqlite-3.53.4-hee5a0db_0 
+  tbb                pkgs/main/win-64::tbb-2022.3.0-h90c84d6_0 
+  tbb-devel          pkgs/main/win-64::tbb-devel-2022.3.0-h90c84d6_0 
+  tk                 pkgs/main/win-64::tk-8.6.15-hf199647_0 
+  tzdata             pkgs/main/noarch::tzdata-2026c-he532380_0 
+  ucrt               pkgs/main/win-64::ucrt-10.0.22621.0-haa95532_0 
+  vc                 pkgs/main/win-64::vc-14.3-h2df5915_12 
+  vc14_runtime       pkgs/main/win-64::vc14_runtime-14.44.35208-h4927774_12 
+  vs2015_runtime     pkgs/main/win-64::vs2015_runtime-14.44.35208-ha6b5a95_12 
+  wheel              pkgs/main/win-64::wheel-0.48.0-py310haa95532_0 
+  xz                 pkgs/main/win-64::xz-5.8.4-hb851c79_0 
+  zlib               pkgs/main/win-64::zlib-1.3.2-h1c6eee0_0 
+
+
+
+Downloading and Extracting Packages: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use
+#
+#     $ conda activate h05_recovery
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 26.9.4
+    latest version: 26.10.0
+
+Please update conda by running
+
+    $ conda self update
+
+
+WARNING conda.conda_pypi.main:notify_conda_pypi_tip(158): 
+  Did you know? You can install many PyPI packages with conda
+  using conda-pypi. Get started:
+    https://bit.ly/4xXYt0B
+
+

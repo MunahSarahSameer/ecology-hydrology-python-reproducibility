@@ -1,0 +1,16 @@
+Status: 0
+Elapsed: 2.8 seconds
+Recovery Python: C:\Users\REDACTED\miniconda3\envs\h05_recovery\python.exe
+
+[1m============================= test session starts =============================[0m
+platform win32 -- Python 3.10.22, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\REDACTED\miniconda3\envs\h05_recovery\python.exe
+rootdir: C:\Users\REDACTED\Downloads\Computer Science Project testing for ecology and Hydrology Code Decay\repositories\H05\test1\source
+[1mcollecting ... [0mcollected 3 items
+
+test/test_datautils.py::test_sort_frequencies [32mPASSED[0m[32m                     [ 33%][0m
+test/test_datautils.py::test_infer_frequency [32mPASSED[0m[32m                      [ 66%][0m
+test/test_datautils.py::test_get_frequency_factor [32mPASSED[0m[32m                 [100%][0m
+
+[32m============================== [32m[1m3 passed[0m[32m in 0.36s[0m[32m ==============================[0m
+
+
