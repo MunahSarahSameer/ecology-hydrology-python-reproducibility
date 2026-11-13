@@ -1,0 +1,437 @@
+{
+  "step": 163,
+  "records": [
+    {
+      "package_id": "E01",
+      "metadata_doi": "10.5281/zenodo.13986364",
+      "metadata_title": "Data and code for manuscript: The performance and potential of deep learning for predicting species distributions",
+      "metadata_created": "2024-10-24T10:31:46.507801+00:00",
+      "archives": [
+        {
+          "filename": "code.zip",
+          "sha256": "5965a9254dfe5aba382f8c6b28508955edae407d1e94e3185c382c8654a4b439",
+          "sample_members": [
+            "code/.DS_Store",
+            "code/LICENSE",
+            "code/requirements.txt",
+            "code/README.md",
+            "code/.gitignore",
+            "code/deepSDM/.DS_Store",
+            "code/deepSDM/predict.py",
+            "code/deepSDM/__init__.py",
+            "code/deepSDM/fit_predict_model.py",
+            "code/deepSDM/evaluate_old.py",
+            "code/deepSDM/train.py",
+            "code/deepSDM/evaluate.py"
+          ],
+          "python_files": 63,
+          "notebook_files": 13,
+          "member_count": 270
+        }
+      ],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "E02",
+      "metadata_doi": "10.5281/zenodo.20623700",
+      "metadata_title": "Characterizing the ecological niche of insertion sequences",
+      "metadata_created": "2026-06-11T08:43:36.324736+00:00",
+      "archives": [
+        {
+          "filename": "is_niches.zip",
+          "sha256": "2d59a8fbd841d0685a23f4849b70e5127df14b876457d9395b5292075d55b7f5",
+          "sample_members": [
+            "is_niches/README.md",
+            "is_niches/bin/1_data_processing/1_make_IS_table.py",
+            "is_niches/bin/1_data_processing/2_make_list_empty_genomes.py",
+            "is_niches/bin/1_data_processing/3_make_replicon_table.py",
+            "is_niches/bin/1_data_processing/4_make_genomes_table.py",
+            "is_niches/bin/1_data_processing/5_group_genomes_table_by_species.py",
+            "is_niches/bin/1_data_processing/6_extract_IS_seq_and_ins_site.py",
+            "is_niches/bin/2_is_distrib_across_genomes/data/abundance.csv",
+            "is_niches/bin/2_is_distrib_across_genomes/fitting_RAC.ipynb",
+            "is_niches/bin/3_local_context/clusters/IS_clusters.ipynb",
+            "is_niches/bin/3_local_context/clusters/data/list_clusters_closest_neighbor_chromosomes.csv",
+            "is_niches/bin/3_local_context/clusters/data/list_clusters_plasmids_closest_neighbors.csv"
+          ],
+          "python_files": 102,
+          "notebook_files": 12,
+          "member_count": 120
+        }
+      ],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "E03",
+      "metadata_doi": "10.5281/zenodo.21440293",
+      "metadata_title": "Ecological role structures community function more than species identity in synthetic sourdough communities",
+      "metadata_created": "2026-08-03T10:17:56.703728+00:00",
+      "archives": [
+        {
+          "filename": "FermentomeII_package_code.zip",
+          "sha256": "e68a186a507d8036b7b63f750c702ba3f780fcc7724be2fc19cb4f09097349b3",
+          "sample_members": [
+            "FermentomeII_package/05_invitro_voc/04_plot_top_compounds.py",
+            "FermentomeII_package/05_invitro_voc/01_voc_module_reference_centred_analysis.py",
+            "FermentomeII_package/05_invitro_voc/output/voc_reference_envelope_barplot.png",
+            "FermentomeII_package/05_invitro_voc/output/voc_module_score_boxplot.png",
+            "FermentomeII_package/05_invitro_voc/output/voc_module_score_boxplot.pdf",
+            "FermentomeII_package/05_invitro_voc/output/voc_top_compounds_barplot.png",
+            "FermentomeII_package/05_invitro_voc/output/voc_reference_envelope_barplot.pdf",
+            "FermentomeII_package/05_invitro_voc/output/voc_individual_compound_stats.csv",
+            "FermentomeII_package/05_invitro_voc/output/module_score_sample_table.csv",
+            "FermentomeII_package/05_invitro_voc/output/reference_distance_stats.csv",
+            "FermentomeII_package/05_invitro_voc/output/reference_envelope_summary.csv",
+            "FermentomeII_package/05_invitro_voc/output/audit_expanded_VOC_modules.csv"
+          ],
+          "python_files": 21,
+          "notebook_files": 0,
+          "member_count": 106
+        }
+      ],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "E06",
+      "metadata_doi": null,
+      "metadata_title": null,
+      "metadata_created": null,
+      "archives": [
+        {
+          "filename": "Code_Figures.zip",
+          "sha256": "aa130db55efdf430f3d603f9e4be1baef8686368d9c9e9718bfbc92bf96392d7",
+          "sample_members": [
+            "Code_Figures/FigS10_MangroveDisturbanceRates.ipynb",
+            "Code_Figures/FigS11_DisturbanceTrends40Years.ipynb",
+            "Code_Figures/FigS12_RecentDisturbanceRates.ipynb",
+            "Code_Figures/FigS13_RecentLoss.ipynb",
+            "Code_Figures/FigS14_RelativeChangeClosedMangrove.ipynb",
+            "Code_Figures/FigS16_ComparisonGMW.ipynb",
+            "Code_Figures/FigS18_LandsatQuantile.ipynb",
+            "Code_Figures/FigS19-S20_CompositeYears.ipynb",
+            "Code_Figures/FigS21_PixelCount1980s.ipynb",
+            "Code_Figures/FigS23_ThinCloudmask.ipynb",
+            "Code_Figures/FigS24-25_FCCvalidation.ipynb",
+            "Code_Figures/FigS26-29_TrainingSamples.ipynb"
+          ],
+          "python_files": 1,
+          "notebook_files": 25,
+          "member_count": 27
+        }
+      ],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "E07",
+      "metadata_doi": null,
+      "metadata_title": null,
+      "metadata_created": null,
+      "archives": [
+        {
+          "filename": "FORspecies20K.zip",
+          "sha256": "d92ba64f52d6ee2c3927c21926adf1d6878438da46445f0b5f6370fb5a762300",
+          "sample_members": [
+            "FOR-species-main/README.md",
+            "FOR-species-main/code.zip"
+          ],
+          "python_files": 0,
+          "notebook_files": 0,
+          "member_count": 2
+        }
+      ],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "E08",
+      "metadata_doi": null,
+      "metadata_title": null,
+      "metadata_created": null,
+      "archives": [],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "E10",
+      "metadata_doi": null,
+      "metadata_title": null,
+      "metadata_created": null,
+      "archives": [],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H01",
+      "metadata_doi": "10.5281/zenodo.13756951",
+      "metadata_title": "Data and codes",
+      "metadata_created": "2024-09-13T08:36:26.542258+00:00",
+      "archives": [
+        {
+          "filename": "Data and codes.zip",
+          "sha256": "c2d553af0e4e09c48b295861da6afc95afa051adeb46371abaa035b65d5eb4ac",
+          "sample_members": [
+            "Data and codes/codes/Fig. 11_poyang_impact.py",
+            "Data and codes/codes/Fig. 2_monthly_streamflow.py",
+            "Data and codes/codes/Fig. 3_daily_streamflow.py",
+            "Data and codes/codes/Fig. 6_irrigation.py",
+            "Data and codes/codes/Fig. 7_poyang_simulation.py",
+            "Data and codes/codes/Fig. 8_multiyear_streamflow_impact.py",
+            "Data and codes/codes/Fig. 9_flood.py",
+            "Data and codes/codes/Fig. S5_flood_events.py",
+            "Data and codes/codes/Fig. S5_flood_impact.py",
+            "Data and codes/data/daily_streamflow_HUM.xlsx",
+            "Data and codes/data/daily_streamflow_NAT.xlsx",
+            "Data and codes/data/daily_streamflow_OBS.xlsx"
+          ],
+          "python_files": 9,
+          "notebook_files": 0,
+          "member_count": 20
+        }
+      ],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H02",
+      "metadata_doi": "10.5281/zenodo.10953060",
+      "metadata_title": "FloodSformer: Python code",
+      "metadata_created": "2024-04-10T09:39:37.708759+00:00",
+      "archives": [
+        {
+          "filename": "FloodSformer-v1.0.1.zip",
+          "sha256": "d2eb9e48371bc33d81a9342caa9a320abde455d311ce9964ea8a34bdcd7ffb24",
+          "sample_members": [
+            "mpianforini-FloodSformer-3a06265/.gitignore",
+            "mpianforini-FloodSformer-3a06265/LICENSE",
+            "mpianforini-FloodSformer-3a06265/README.md",
+            "mpianforini-FloodSformer-3a06265/configs/Dam_break/DB_parabolic_testFS.yaml",
+            "mpianforini-FloodSformer-3a06265/configs/Dam_break/DB_parabolic_trainAE.yaml",
+            "mpianforini-FloodSformer-3a06265/configs/Dam_break/DB_parabolic_trainVPTR.yaml",
+            "mpianforini-FloodSformer-3a06265/configs/Dam_break/DB_tank_testFS.yaml",
+            "mpianforini-FloodSformer-3a06265/configs/Dam_break/DB_tank_trainAE.yaml",
+            "mpianforini-FloodSformer-3a06265/configs/Dam_break/DB_tank_trainVPTR.yaml",
+            "mpianforini-FloodSformer-3a06265/docs/Dataset&Checkpoint.md",
+            "mpianforini-FloodSformer-3a06265/docs/demo/Demo_FS.ipynb",
+            "mpianforini-FloodSformer-3a06265/docs/demo/demo_utils.py"
+          ],
+          "python_files": 41,
+          "notebook_files": 1,
+          "member_count": 60
+        }
+      ],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H03",
+      "metadata_doi": "10.5281/zenodo.13214630",
+      "metadata_title": "Pywr-DRB/Pywr-DRB: Code and Data for Pywr-DRB paper (Hamilton et al, 2024, EMS)",
+      "metadata_created": "2024-08-04T21:00:25.689505+00:00",
+      "archives": [
+        {
+          "filename": "Hydrological-controls---Code-and-Data-Hydrology.zip",
+          "sha256": "b1161def37fee0e68ec7d5981c0f67840a06ba420776adb13e0346886938cc30",
+          "sample_members": [
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/01_RF_dataset.csv",
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/01_RF_model.py",
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/LICENSE",
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/README.md",
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/SyntheticData.mat",
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/kmeansClustering.m"
+          ],
+          "python_files": 1,
+          "notebook_files": 0,
+          "member_count": 6,
+          "matching_test_script_members": [
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/01_RF_model.py"
+          ],
+          "matching_dataset_members": [
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/01_RF_dataset.csv"
+          ],
+          "relevant_members": [
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/01_RF_dataset.csv",
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/01_RF_model.py",
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/LICENSE",
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/README.md",
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/SyntheticData.mat",
+            "dromanq-Hydrological-controls---Code-and-Data-a9d3bba/kmeansClustering.m"
+          ]
+        }
+      ],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H05",
+      "metadata_doi": "10.5281/zenodo.17700057",
+      "metadata_title": "The Effect of Available Data on the Worth of Future Observations for Groundwater Modelling - Code and Data",
+      "metadata_created": "2025-11-24T13:04:22.012387+00:00",
+      "archives": [
+        {
+          "filename": "neuralhydrology-v.1.2.3.zip",
+          "sha256": "9506b996065c52a60bc4a74797069f9be603d1e6a39e2a3514c5133b67891e5b",
+          "sample_members": [
+            "neuralhydrology-v.1.2.3/.github/ISSUE_TEMPLATE/bug_report.md",
+            "neuralhydrology-v.1.2.3/.github/ISSUE_TEMPLATE/feature_request.md",
+            "neuralhydrology-v.1.2.3/.github/workflows/docs-ci.yml",
+            "neuralhydrology-v.1.2.3/.github/workflows/package-install.yml",
+            "neuralhydrology-v.1.2.3/.github/workflows/publish-pypi.yml",
+            "neuralhydrology-v.1.2.3/.github/workflows/pytest-ci.yml",
+            "neuralhydrology-v.1.2.3/.gitignore",
+            "neuralhydrology-v.1.2.3/.style.yapf",
+            "neuralhydrology-v.1.2.3/CODEOWNERS",
+            "neuralhydrology-v.1.2.3/CONTRIBUTING.rst",
+            "neuralhydrology-v.1.2.3/LICENSE",
+            "neuralhydrology-v.1.2.3/README.md"
+          ],
+          "python_files": 63,
+          "notebook_files": 7,
+          "member_count": 202
+        }
+      ],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H06",
+      "metadata_doi": null,
+      "metadata_title": null,
+      "metadata_created": null,
+      "archives": [
+        {
+          "filename": "S4D_rainfall_runoff_simulations.zip",
+          "sha256": "cc77736c1b3574fc7b89a4240bb4272a4cbf03e3775f38050f6983419a0f92bc",
+          "sample_members": [
+            "S4D_rainfall_runoff_simulations-main/README.md",
+            "S4D_rainfall_runoff_simulations-main/analysis/combine_sacsma_pkfiles.py",
+            "S4D_rainfall_runoff_simulations-main/analysis/main_performance_ensemble_only.py",
+            "S4D_rainfall_runoff_simulations-main/analysis/performance_functions.py",
+            "S4D_rainfall_runoff_simulations-main/data/basin_list.txt",
+            "S4D_rainfall_runoff_simulations-main/main_pub.py",
+            "S4D_rainfall_runoff_simulations-main/main_with_train_val.py",
+            "S4D_rainfall_runoff_simulations-main/papercode/SSM_test.py",
+            "S4D_rainfall_runoff_simulations-main/papercode/__init__.py",
+            "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/SSM_test.cpython-312.pyc",
+            "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/SSM_test.cpython-39.pyc",
+            "S4D_rainfall_runoff_simulations-main/papercode/__pycache__/__init__.cpython-312.pyc"
+          ],
+          "python_files": 96,
+          "notebook_files": 1,
+          "member_count": 292
+        }
+      ],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H07",
+      "metadata_doi": null,
+      "metadata_title": null,
+      "metadata_created": null,
+      "archives": [
+        {
+          "filename": "PyTOPKAPI-v0.4.0-original.zip",
+          "sha256": "a48773b6b044dd2b4f01ddeb62b8ffbacd84f04dba7effd1644f102fb537e159",
+          "sample_members": [
+            "sahg-PyTOPKAPI-6d8183b/.gitignore",
+            "sahg-PyTOPKAPI-6d8183b/LICENSE",
+            "sahg-PyTOPKAPI-6d8183b/README.md",
+            "sahg-PyTOPKAPI-6d8183b/RELEASE-NOTES",
+            "sahg-PyTOPKAPI-6d8183b/change_log",
+            "sahg-PyTOPKAPI-6d8183b/conda-env.yaml",
+            "sahg-PyTOPKAPI-6d8183b/create_distributions.py",
+            "sahg-PyTOPKAPI-6d8183b/docs/HOWTO_RELEASE.rst",
+            "sahg-PyTOPKAPI-6d8183b/docs/Makefile",
+            "sahg-PyTOPKAPI-6d8183b/docs/TOPKAPI_Manual.doc",
+            "sahg-PyTOPKAPI-6d8183b/docs/infiltration-changes.txt",
+            "sahg-PyTOPKAPI-6d8183b/docs/source/_static/figures/cell-params.png"
+          ],
+          "python_files": 29,
+          "notebook_files": 0,
+          "member_count": 116
+        }
+      ],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H08",
+      "metadata_doi": null,
+      "metadata_title": null,
+      "metadata_created": null,
+      "archives": [
+        {
+          "filename": "pygflow_1.0.2-original.zip",
+          "sha256": "ebbc960c11470056493b1c82ae461f266f333240e1ec6dcc4c85ba9e0f10568b",
+          "sample_members": [
+            "_config.yml",
+            "autotest/__init__.py",
+            "autotest/test_000.py",
+            "autotest/test_001.py",
+            "autotest/test_002.py",
+            "autotest/test_003.py",
+            "autotest/test_004.py",
+            "autotest/test_005.py",
+            "autotest/test_006.py",
+            "autotest/test_007.py",
+            "autotest/test_008.py",
+            "autotest/test_009.py"
+          ],
+          "python_files": 70,
+          "notebook_files": 10,
+          "member_count": 248
+        }
+      ],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H09",
+      "metadata_doi": null,
+      "metadata_title": null,
+      "metadata_created": null,
+      "archives": [
+        {
+          "filename": "swatpy-v0.2-original.zip",
+          "sha256": "880ac7a0dd3d4000a932e116fe87bf3b8a221867b6e9c6ee0649c41904e698ce",
+          "sample_members": [
+            "allixender-swatpy-0d47bfa/.gitignore",
+            "allixender-swatpy-0d47bfa/CITATION.cff",
+            "allixender-swatpy-0d47bfa/FAST_sensitivity.png",
+            "allixender-swatpy-0d47bfa/LICENSE",
+            "allixender-swatpy-0d47bfa/README.md",
+            "allixender-swatpy-0d47bfa/data/observed/discharge2.txt",
+            "allixender-swatpy-0d47bfa/data/observed/pori_flow_monthly_2003-2010.txt",
+            "allixender-swatpy-0d47bfa/data/params/input_wwr_hp.txt",
+            "allixender-swatpy-0d47bfa/data/params/par_inf1.txt",
+            "allixender-swatpy-0d47bfa/data/params/par_inf2.txt",
+            "allixender-swatpy-0d47bfa/data/params/pori3_par_inf.txt",
+            "allixender-swatpy-0d47bfa/data/params/pori3_par_inf_spotpy.txt"
+          ],
+          "python_files": 8,
+          "notebook_files": 5,
+          "member_count": 32
+        }
+      ],
+      "publication_identity_verified": false,
+      "manual_review_required": true
+    }
+  ],
+  "h03_tested_script_paths": [
+    "repositories\\H03\\test1\\recovery1\\01_RF_model.py",
+    "repositories\\H03\\test1\\recovery2\\01_RF_model.py",
+    "repositories\\H03\\test1\\source\\01_RF_model.py"
+  ],
+  "limitations": [
+    "Matching names and checksums establish local file identity, not publication independence.",
+    "A metadata DOI is not automatically proof that the local ZIP belongs to that record.",
+    "H03 requires special attention because metadata and tested archive names differ.",
+    "No external DOI metadata has been queried.",
+    "Original archives remain unchanged."
+  ],
+  "generated_at_utc": "2026-11-11T02:46:27.002228+00:00"
+}

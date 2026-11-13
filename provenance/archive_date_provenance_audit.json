@@ -1,0 +1,584 @@
+{
+  "step": 161,
+  "assessment_type": "ARCHIVE_DATE_PROVENANCE_AUDIT",
+  "records": [
+    {
+      "package_id": "E01",
+      "domain": "ecology",
+      "metadata_records": [
+        {
+          "source": "repositories\\E01\\metadata.json",
+          "date_fields": {
+            "created": "2024-10-24T10:31:46.507801+00:00"
+          },
+          "provenance_fields": {
+            "doi": "10.5281/zenodo.13986364",
+            "title": "Data and code for manuscript: The performance and potential of deep learning for predicting species distributions"
+          }
+        }
+      ],
+      "archives": [
+        {
+          "filename": "code.zip",
+          "path": "repositories\\E01\\code.zip",
+          "zip_valid": true,
+          "earliest_internal_timestamp": "2024-10-24T11:05:48",
+          "latest_internal_timestamp": "2024-10-24T11:28:34",
+          "file_count": 270
+        }
+      ],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "E02",
+      "domain": "ecology",
+      "metadata_records": [
+        {
+          "source": "repositories\\E02\\metadata.json",
+          "date_fields": {
+            "created": "2026-06-11T08:43:36.324736+00:00"
+          },
+          "provenance_fields": {
+            "doi": "10.5281/zenodo.20623700",
+            "title": "Characterizing the ecological niche of insertion sequences"
+          }
+        }
+      ],
+      "archives": [
+        {
+          "filename": "is_niches.zip",
+          "path": "repositories\\E02\\is_niches.zip",
+          "zip_valid": true,
+          "earliest_internal_timestamp": "2025-02-25T09:54:06",
+          "latest_internal_timestamp": "2026-06-10T17:57:38",
+          "file_count": 120
+        }
+      ],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "E03",
+      "domain": "ecology",
+      "metadata_records": [
+        {
+          "source": "repositories\\E03\\metadata.json",
+          "date_fields": {
+            "created": "2026-08-03T10:17:56.703728+00:00"
+          },
+          "provenance_fields": {
+            "doi": "10.5281/zenodo.21440293",
+            "title": "Ecological role structures community function more than species identity in synthetic sourdough communities"
+          }
+        }
+      ],
+      "archives": [
+        {
+          "filename": "FermentomeII_package_code.zip",
+          "path": "repositories\\E03\\FermentomeII_package_code.zip",
+          "zip_valid": true,
+          "earliest_internal_timestamp": "2026-07-19T09:56:18",
+          "latest_internal_timestamp": "2026-07-19T09:56:18",
+          "file_count": 106
+        }
+      ],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "E06",
+      "domain": "ecology",
+      "metadata_records": [],
+      "archives": [
+        {
+          "filename": "Code_Figures.zip",
+          "path": "repositories\\E06\\Code_Figures.zip",
+          "zip_valid": true,
+          "earliest_internal_timestamp": "2025-09-26T12:59:38",
+          "latest_internal_timestamp": "2026-01-06T05:56:02",
+          "file_count": 27
+        }
+      ],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "E07",
+      "domain": "ecology",
+      "metadata_records": [
+        {
+          "source": "repositories\\results\\E07_download_record.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "title": "FOR-species20K code",
+            "doi": "10.5281/zenodo.14650218"
+          }
+        }
+      ],
+      "archives": [
+        {
+          "filename": "FORspecies20K.zip",
+          "path": "repositories\\E07\\FORspecies20K.zip",
+          "zip_valid": true,
+          "earliest_internal_timestamp": "2023-12-14T06:11:56",
+          "latest_internal_timestamp": "2024-08-21T11:55:46",
+          "file_count": 2
+        }
+      ],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "E08",
+      "domain": "ecology",
+      "metadata_records": [
+        {
+          "source": "repositories\\results\\E08_candidate_metadata.json",
+          "date_fields": {
+            "publication_date": "2025-09-19"
+          },
+          "provenance_fields": {
+            "title": "Experimental Data and Code for \"Weak Form Learning for Mean-Field Partial Differential Equations: an Application to Insect Movement\"",
+            "doi": "10.5281/zenodo.17156064"
+          }
+        }
+      ],
+      "archives": [],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "E10",
+      "domain": "ecology",
+      "metadata_records": [
+        {
+          "source": "results\\E10_data_availability.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "doi": "10.5281/zenodo.11552636"
+          }
+        },
+        {
+          "source": "results\\E10_external_data_investigation.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "doi": "10.5281/zenodo.11552636"
+          }
+        },
+        {
+          "source": "results\\E10_initial_screening.json",
+          "date_fields": {
+            "publication_date": "2024-06-10"
+          },
+          "provenance_fields": {
+            "title": "Incorporating environmental time series into species distribution models",
+            "doi": "10.5281/zenodo.11552636"
+          }
+        },
+        {
+          "source": "results\\E10_source_audit.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "doi": "10.5281/zenodo.11552636"
+          }
+        }
+      ],
+      "archives": [],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H01",
+      "domain": "hydrology",
+      "metadata_records": [
+        {
+          "source": "repositories\\H01\\metadata.json",
+          "date_fields": {
+            "created": "2024-09-13T08:36:26.542258+00:00"
+          },
+          "provenance_fields": {
+            "doi": "10.5281/zenodo.13756951",
+            "title": "Data and codes"
+          }
+        }
+      ],
+      "archives": [
+        {
+          "filename": "Data and codes.zip",
+          "path": "repositories\\H01\\Data and codes.zip",
+          "zip_valid": true,
+          "earliest_internal_timestamp": "2024-03-18T10:23:10",
+          "latest_internal_timestamp": "2024-09-13T16:25:02",
+          "file_count": 20
+        }
+      ],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H02",
+      "domain": "hydrology",
+      "metadata_records": [
+        {
+          "source": "repositories\\H02\\metadata.json",
+          "date_fields": {
+            "created": "2024-04-10T09:39:37.708759+00:00"
+          },
+          "provenance_fields": {
+            "doi": "10.5281/zenodo.10953060",
+            "title": "FloodSformer: Python code"
+          }
+        },
+        {
+          "source": "repositories\\results\\H02_test1_validation.json",
+          "date_fields": {
+            "publication_year": 2024
+          },
+          "provenance_fields": {}
+        }
+      ],
+      "archives": [
+        {
+          "filename": "FloodSformer-v1.0.1.zip",
+          "path": "repositories\\H02\\FloodSformer-v1.0.1.zip",
+          "zip_valid": true,
+          "earliest_internal_timestamp": "2024-04-10T02:07:18",
+          "latest_internal_timestamp": "2024-04-10T02:07:18",
+          "file_count": 60
+        }
+      ],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H03",
+      "domain": "hydrology",
+      "metadata_records": [
+        {
+          "source": "repositories\\H03\\metadata.json",
+          "date_fields": {
+            "created": "2024-08-04T21:00:25.689505+00:00"
+          },
+          "provenance_fields": {
+            "doi": "10.5281/zenodo.13214630",
+            "title": "Pywr-DRB/Pywr-DRB: Code and Data for Pywr-DRB paper (Hamilton et al, 2024, EMS)"
+          }
+        }
+      ],
+      "archives": [
+        {
+          "filename": "Hydrological-controls---Code-and-Data-Hydrology.zip",
+          "path": "repositories\\H03\\Hydrological-controls---Code-and-Data-Hydrology.zip",
+          "zip_valid": true,
+          "earliest_internal_timestamp": "2023-11-10T09:51:50",
+          "latest_internal_timestamp": "2023-11-10T09:51:50",
+          "file_count": 6
+        }
+      ],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H05",
+      "domain": "hydrology",
+      "metadata_records": [
+        {
+          "source": "repositories\\H05\\metadata.json",
+          "date_fields": {
+            "created": "2025-11-24T13:04:22.012387+00:00"
+          },
+          "provenance_fields": {
+            "doi": "10.5281/zenodo.17700057",
+            "title": "The Effect of Available Data on the Worth of Future Observations for Groundwater Modelling - Code and Data"
+          }
+        }
+      ],
+      "archives": [
+        {
+          "filename": "neuralhydrology-v.1.2.3.zip",
+          "path": "repositories\\H05\\neuralhydrology-v.1.2.3.zip",
+          "zip_valid": true,
+          "earliest_internal_timestamp": "2022-03-03T12:51:34",
+          "latest_internal_timestamp": "2022-03-03T12:51:34",
+          "file_count": 202
+        }
+      ],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H06",
+      "domain": "hydrology",
+      "metadata_records": [],
+      "archives": [
+        {
+          "filename": "S4D_rainfall_runoff_simulations.zip",
+          "path": "repositories\\H06\\S4D_rainfall_runoff_simulations.zip",
+          "zip_valid": true,
+          "earliest_internal_timestamp": "2025-08-28T10:50:24",
+          "latest_internal_timestamp": "2025-08-28T10:50:24",
+          "file_count": 292
+        }
+      ],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H07",
+      "domain": "hydrology",
+      "metadata_records": [
+        {
+          "source": "results\\H07_consolidated_assessment.json",
+          "date_fields": {
+            "archive_year": 2017
+          },
+          "provenance_fields": {}
+        },
+        {
+          "source": "results\\H07_dependency_audit.json",
+          "date_fields": {
+            "publication_date": "2017-06-28"
+          },
+          "provenance_fields": {
+            "doi": "10.5281/zenodo.820640"
+          }
+        },
+        {
+          "source": "results\\H07_initial_screening.json",
+          "date_fields": {
+            "publication_date": "2017-06-28"
+          },
+          "provenance_fields": {
+            "doi": "10.5281/zenodo.820640"
+          }
+        }
+      ],
+      "archives": [
+        {
+          "filename": "PyTOPKAPI-v0.4.0-original.zip",
+          "path": "repositories\\H07\\PyTOPKAPI-v0.4.0-original.zip",
+          "zip_valid": true,
+          "earliest_internal_timestamp": "2017-06-28T09:12:00",
+          "latest_internal_timestamp": "2017-06-28T09:12:00",
+          "file_count": 116
+        }
+      ],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H08",
+      "domain": "hydrology",
+      "metadata_records": [
+        {
+          "source": "results\\H08_archive_metadata_screening.json",
+          "date_fields": {
+            "publication_date": "2022-04-18"
+          },
+          "provenance_fields": {
+            "title": "Integrated hydrologic model development and postprocessing for GSFLOW using pyGSFLOW",
+            "doi": "10.5281/zenodo.6468426"
+          }
+        },
+        {
+          "source": "results\\H08_consolidated_assessment.json",
+          "date_fields": {
+            "archive_year": 2022
+          },
+          "provenance_fields": {
+            "version": "1.0.2",
+            "doi": "10.5281/zenodo.6468426"
+          }
+        },
+        {
+          "source": "results\\H08_final_independence_classification.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "1.0.2",
+            "doi": "10.5281/zenodo.6468426"
+          }
+        },
+        {
+          "source": "results\\H08_independence_audit.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "1.0.2"
+          }
+        },
+        {
+          "source": "results\\H08_initial_archive_inspection.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "1.0.2",
+            "doi": "10.5281/zenodo.6468426"
+          }
+        }
+      ],
+      "archives": [
+        {
+          "filename": "pygflow_1.0.2-original.zip",
+          "path": "repositories\\H08\\pygflow_1.0.2-original.zip",
+          "zip_valid": true,
+          "earliest_internal_timestamp": "2022-03-24T12:49:50",
+          "latest_internal_timestamp": "2022-04-18T12:08:48",
+          "file_count": 248
+        }
+      ],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    },
+    {
+      "package_id": "H09",
+      "domain": "hydrology",
+      "metadata_records": [
+        {
+          "source": "results\\H09_archive_metadata_screening.json",
+          "date_fields": {
+            "publication_date": "2022-03-02"
+          },
+          "provenance_fields": {
+            "doi": "10.5281/zenodo.6322023",
+            "version": "v0.2"
+          }
+        },
+        {
+          "source": "results\\H09_consolidated_assessment.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "v0.2"
+          }
+        },
+        {
+          "source": "results\\H09_dependency_availability.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "v0.2"
+          }
+        },
+        {
+          "source": "results\\H09_hydrological_efficiency_inspection.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "v0.2"
+          }
+        },
+        {
+          "source": "results\\H09_initial_archive_inspection.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "v0.2",
+            "doi": "10.5281/zenodo.6322023"
+          }
+        },
+        {
+          "source": "results\\H09_masked_reduction_verification.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "v0.2"
+          }
+        },
+        {
+          "source": "results\\H09_missing_data_investigation.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "v0.2"
+          }
+        },
+        {
+          "source": "results\\H09_original_efficiency_execution.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "v0.2"
+          }
+        },
+        {
+          "source": "results\\H09_original_efficiency_execution_recheck.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "v0.2"
+          }
+        },
+        {
+          "source": "results\\H09_original_efficiency_repeatability.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "v0.2"
+          }
+        },
+        {
+          "source": "results\\H09_original_function_screening.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "v0.2"
+          }
+        },
+        {
+          "source": "results\\H09_source_independence_audit.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "v0.2"
+          }
+        },
+        {
+          "source": "results\\H09_syntax_dependency_baseline.json",
+          "date_fields": {},
+          "provenance_fields": {
+            "version": "v0.2"
+          }
+        }
+      ],
+      "archives": [
+        {
+          "filename": "swatpy-v0.2-original.zip",
+          "path": "repositories\\H09\\swatpy-v0.2-original.zip",
+          "zip_valid": true,
+          "earliest_internal_timestamp": "2022-01-28T11:29:36",
+          "latest_internal_timestamp": "2022-01-28T11:29:36",
+          "file_count": 32
+        }
+      ],
+      "verified_archive_date": null,
+      "verified_publication_year": null,
+      "date_verification_status": "PENDING",
+      "manual_review_required": true
+    }
+  ],
+  "limitations": [
+    "Metadata fields are extracted, not independently verified.",
+    "ZIP internal timestamps are not publication dates.",
+    "File creation dates may reflect repackaging.",
+    "No age-related statistical analysis is performed.",
+    "No external archive metadata was queried.",
+    "Original repositories and evidence remain unchanged."
+  ],
+  "generated_at_utc": "2026-11-11T02:44:27.688500+00:00"
+}
