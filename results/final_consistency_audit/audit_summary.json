@@ -1,0 +1,22 @@
+{
+  "generated_utc": "2026-11-14T00:22:45.650455+08:00",
+  "matrix": "data\\manuscript_ready_15_case_matrix_v2.csv",
+  "case_count": 15,
+  "baseline_counts": {
+    "UNKNOWN": 6,
+    "PASS": 1,
+    "FAIL": 7,
+    "NOT_ATTEMPTED": 1
+  },
+  "later_counts": {
+    "PASS_LIMITED": 13,
+    "PASS": 2
+  },
+  "checks": {
+    "PASS": 150,
+    "FAIL": 0,
+    "WARNING": 0
+  },
+  "issues": [],
+  "scope_warning": "PASS_LIMITED does not establish full original workflow or published scientific result reproduction."
+}
